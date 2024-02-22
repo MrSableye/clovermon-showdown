@@ -1,4 +1,4 @@
-export const Items: { [k: string]: ModdedItemData; } = {
+export const Items: { [k: string]: ModdedItemData } = {
 	/* Disabled items */
 	abilityshield: {
 		inherit: true,
@@ -4935,235 +4935,235 @@ export const Items: { [k: string]: ModdedItemData; } = {
 	/* Enabled items */
 	berryjuice: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	cheriberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	chestoberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	pechaberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	rawstberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	aspearberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	leppaberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	oranberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	persimberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	lumberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	sitrusberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	figyberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	wikiberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	magoberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	aguavberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	iapapaberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	liechiberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	ganlonberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	salacberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	petayaberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	apicotberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	lansatberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	starfberry: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	brightpowder: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	whiteherb: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	machobrace: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	quickclaw: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	mentalherb: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	choiceband: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	kingsrock: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	silverpowder: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	focusband: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	scopelens: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	metalcoat: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	leftovers: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	lightball: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	softsand: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	hardstone: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	miracleseed: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	blackglasses: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	blackbelt: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	magnet: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	mysticwater: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	sharpbeak: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	poisonbarb: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	nevermeltice: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	spelltag: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	twistedspoon: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	charcoal: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	dragonfang: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	silkscarf: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	upgrade: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	shellbell: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	seaincense: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	laxincense: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	luckypunch: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	metalpowder: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	thickclub: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	stick: {
 		inherit: true,
@@ -5177,30 +5177,30 @@ export const Items: { [k: string]: ModdedItemData; } = {
 	},
 	choicespecs: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	choicescarf: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	lifeorb: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	rockyhelmet: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	blacksludge: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	assaultvest: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	eviolite: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 };

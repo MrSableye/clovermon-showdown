@@ -88,7 +88,7 @@ export class Item extends BasicEffect implements Readonly<BasicEffect> {
 	readonly isGem: boolean;
 	/** Is this item a Pokeball? */
 	readonly isPokeball: boolean;
-		/** Rating from -1 Detrimental to +5 Essential; see `data/abilities.ts` for details. */
+	/** Rating from -1 Detrimental to +5 Essential; see `data/abilities.ts` for details. */
 	readonly rating: number;
 
 	declare readonly condition?: ConditionData;

@@ -8326,7 +8326,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 388,
 		onTakeItem: false,
 		onStart(pokemon) {
-			pokemon.setType('???');
+			pokemon.setType('???', false, pokemon, this.effect);
 			this.add('-start', pokemon, 'typechange', '???');
 		},
 		onModifyMove(move, pokemon) {
@@ -9541,7 +9541,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onModifyDefPriority: 2,
 		onModifyDef(def, pokemon) {
 			if (pokemon.species.name === 'Blobbos-Spamton') {
-				return this.chainModify(2);
+				return this.chainModify(1.5);
 			}
 		},
 		itemUser: ["Blobbos-Spamton"],
@@ -10036,6 +10036,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	radishorb: {
+		name: "Radish Orb",
+		spritenum: 530,
+		fling: {
+			basePower: 30,
+			status: 'radish',
+		},
+		onResidualOrder: 28,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			pokemon.trySetStatus('radish', pokemon);
+		},
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	missingvoirite: {
 		name: "Missingvoirite",
 		spritenum: 587,
@@ -10172,6 +10187,55 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 236,
 		isNonstandard: "Future",
 		rating: 1,
+	},
+	eyedropper: {
+		name: "Eye Dropper",
+		onStart(pokemon) {
+			if (pokemon.species.name !== 'Blobbos-Chroma') return;
+			const typeTotals: Record<string, number> = {};
+			for (const ally of pokemon.side.pokemon) {
+				if (pokemon === ally) continue;
+				for (const type of ally.getTypes()) {
+					if (!typeTotals[type]) typeTotals[type] = 0;
+					typeTotals[type]++;
+				}
+			}
+			const primaryType = Object.entries(typeTotals).sort((a, b) => b[1] - a[1])[0];
+			if (!primaryType) return;
+			const enemyTypes: Record<string, number> = {};
+			for (const foe of pokemon.foes()) {
+				for (const type of foe.getTypes()) {
+					enemyTypes[type] = 0;
+				}
+			}
+			let maxResists = -1;
+			let maxResistedType = '';
+			for (const type of this.dex.types.all()) {
+				if (type.name === primaryType[0]) continue; // Always get a secondary type
+				let totalResists = 0;
+				for (const [enemyType] of Object.entries(enemyTypes)) {
+					if (!this.dex.getImmunity(enemyType, [primaryType[0], type.name])) {
+						totalResists += 1.5;
+					} else if (this.dex.getEffectiveness(enemyType, [primaryType[0], type.name]) < 0) {
+						totalResists++;
+					}
+				}
+				if (totalResists > maxResists) {
+					maxResists = totalResists;
+					maxResistedType = type.name;
+				}
+			}
+			const types = [primaryType[0]];
+			if (maxResistedType.length) {
+				types.push(maxResistedType);
+			}
+
+			if (!pokemon.setType(types)) return;
+			this.add('-start', pokemon, 'typechange', types.join('/'), '[from] item: Eye Dropper');
+		},
+		onTakeItem: false,
+		isNonstandard: "Future",
+		itemUser: ["Blobbos-Chroma"],
 	},
 	glalite: {
 		name: "Glalite",
@@ -11735,7 +11799,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	bouncectarmor: {  /* TODO introduce Mega interaction **/
+	bouncectarmor: {/* TODO introduce Mega interaction **/
 		name: "Bouncect Armor",
 		spritenum: 0,
 		onModifyMove(move, pokemon, target) {
@@ -12567,7 +12631,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	icyseed: {	/* TODO when icy terrain is introduced **/
+	icyseed: {/* TODO when icy terrain is introduced **/
 		name: "Icy Seed",
 		spritenum: 0,
 		num: 66979,
@@ -12877,21 +12941,19 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		onTryHit(target, source, move) {
-			if (target !== source && ((move.flags['bullet'] || move.flags['above'] || move.flags['contact'])
-			|| (move.type === 'Divine' || move.type === 'Virus' || move.type === 'Fighting' || move.type === 'Ghost' || 
-			move.type === 'Dark' || move.type === 'Poison' || move.type === 'Chaos' || move.type === 'Qmarks' || 
-			move.type === 'Light' || move.type === 'Normal'))) 
-			{
+			if (target !== source && ((move.flags['bullet'] || move.flags['above'] || move.flags['contact']) ||
+			(move.type === 'Divine' || move.type === 'Virus' || move.type === 'Fighting' || move.type === 'Ghost' ||
+			move.type === 'Dark' || move.type === 'Poison' || move.type === 'Chaos' || move.type === 'Qmarks' ||
+			move.type === 'Light' || move.type === 'Normal'))) {
 				this.add('-immune', target, '[from] item: Antiplebshield');
 				return null;
 			}
 		},
 		onAllyTryHitSide(target, source, move) {
-			if ((move.flags['bullet'] || move.flags['above'] || move.flags['contact'])
-			|| (move.type === 'Divine' || move.type === 'Virus' || move.type === 'Fighting' || move.type === 'Ghost' || 
-			move.type === 'Dark' || move.type === 'Poison' || move.type === 'Chaos' || move.type === 'Qmarks' || 
-			move.type === 'Light' || move.type === 'Normal')) 
-			{
+			if ((move.flags['bullet'] || move.flags['above'] || move.flags['contact']) ||
+			(move.type === 'Divine' || move.type === 'Virus' || move.type === 'Fighting' || move.type === 'Ghost' ||
+			move.type === 'Dark' || move.type === 'Poison' || move.type === 'Chaos' || move.type === 'Qmarks' ||
+			move.type === 'Light' || move.type === 'Normal')) {
 				this.add('-immune', this.effectState.target, '[from] item: Antiplebshield');
 			}
 		},
@@ -13367,7 +13429,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	poweredfan: {	/* TODO when Tempest is introduced **/
+	poweredfan: {/* TODO when Tempest is introduced **/
 		name: "Powered Fan",
 		spritenum: 0,
 		num: 67091,
@@ -13986,7 +14048,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 2,
 	},
-	minigalaxy: {	/* TODO when Starfield is introduced **/
+	minigalaxy: {/* TODO when Starfield is introduced **/
 		name: "Mini Galaxy",
 		spritenum: 0,
 		num: 67134,
@@ -14020,7 +14082,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move && move.type === 'Fire') {
-				return this.chainModify(1.65)
+				return this.chainModify(1.65);
 			}
 		},
 		num: 67137,
@@ -14035,7 +14097,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move && move.type === 'Food') {
-				return this.chainModify(1.65)
+				return this.chainModify(1.65);
 			}
 		},
 		num: 67138,
@@ -14126,8 +14188,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Sturdy Pebbles",
 		onModifySpDPriority: 1,
 		onModifySpD(spd, pokemon) {
-			if (pokemon.hasType('Ground') || pokemon.hasType('Rock'))
-			return this.chainModify(2);
+			if (pokemon.hasType('Ground') || pokemon.hasType('Rock')) { return this.chainModify(2); }
 		},
 		spritenum: 0,
 		num: 67143,
@@ -14141,7 +14202,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			basePower: 30,
 		},
 		onDamagingHit(damage, target, source, move) {
-			target.useItem()
+			target.useItem();
 			this.field.setWeather('sandstorm');
 		},
 		num: 67144,
@@ -14155,7 +14216,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			basePower: 30,
 		},
 		onDamagingHit(damage, target, source, move) {
-			target.useItem()
+			target.useItem();
 			this.field.setWeather('raindance');
 		},
 		num: 67145,
@@ -14169,7 +14230,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			basePower: 30,
 		},
 		onDamagingHit(damage, target, source, move) {
-			target.useItem()
+			target.useItem();
 			this.field.setWeather('hail');
 		},
 		num: 67146,
@@ -14183,7 +14244,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			basePower: 30,
 		},
 		onDamagingHit(damage, target, source, move) {
-			target.useItem()
+			target.useItem();
 			this.field.setWeather('sunnyday');
 		},
 		num: 67147,
@@ -14672,7 +14733,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			basePower: 30,
 		},
 		onDamagingHit(damage, target, source, move) {
-			target.useItem()
+			target.useItem();
 			this.field.setWeather('midnight');
 		},
 		num: 67167,
@@ -14686,7 +14747,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			basePower: 30,
 		},
 		onDamagingHit(damage, target, source, move) {
-			target.useItem()
+			target.useItem();
 			this.field.setWeather('acidrain');
 		},
 		num: 67168,
@@ -14702,7 +14763,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onSourceModifyDamage(damage, source, target, move) {
 			if (target.hasType('Fire') && target.hasType('Flying')) {
 				if (move && (move.type === 'Rock' || move.type === 'Wind')) {
-					return this.chainModify(0.4)
+					return this.chainModify(0.4);
 				}
 			}
 		},
@@ -14731,7 +14792,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 3,
 	},
-	falloutcapsule: { /*TODO when Fallout is introduced **/
+	falloutcapsule: {/* TODO when Fallout is introduced **/
 		name: "Fallout Capsule",
 		spritenum: 0,
 		num: 67171,
@@ -14742,8 +14803,8 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Grassy Capsule",
 		spritenum: 0,
 		onDamagingHit(damage, target, source, move) {
-			target.useItem()
-			this.field.setTerrain('grassyterrain')
+			target.useItem();
+			this.field.setTerrain('grassyterrain');
 		},
 		num: 67172,
 		isNonstandard: "Future",
@@ -14753,8 +14814,8 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Misty Capsule",
 		spritenum: 0,
 		onDamagingHit(damage, target, source, move) {
-			target.useItem()
-			this.field.setTerrain('mistyterrain')
+			target.useItem();
+			this.field.setTerrain('mistyterrain');
 		},
 		num: 67173,
 		isNonstandard: "Future",
@@ -14764,8 +14825,8 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Electric Capsule",
 		spritenum: 0,
 		onDamagingHit(damage, target, source, move) {
-			target.useItem()
-			this.field.setTerrain('electricterrain')
+			target.useItem();
+			this.field.setTerrain('electricterrain');
 		},
 		num: 67174,
 		isNonstandard: "Future",
@@ -14775,56 +14836,56 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Psychic Capsule",
 		spritenum: 0,
 		onDamagingHit(damage, target, source, move) {
-			target.useItem()
-			this.field.setTerrain('psychicterrain')
+			target.useItem();
+			this.field.setTerrain('psychicterrain');
 		},
 		num: 67175,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	icycapsule: { /* TODO when introduced **/
+	icycapsule: {/* TODO when introduced **/
 		name: "Icy Capsule",
 		spritenum: 0,
 		num: 67176,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	marshycapsule: { /* TODO when introduced **/
+	marshycapsule: {/* TODO when introduced **/
 		name: "Marshy Capsule",
 		spritenum: 0,
 		num: 67177,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	wizardcapsule: { /* TODO when introduced **/
+	wizardcapsule: {/* TODO when introduced **/
 		name: "Wizard Capsule",
 		spritenum: 0,
 		num: 67178,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	volcaniccapsule: { /* TODO when introduced **/
+	volcaniccapsule: {/* TODO when introduced **/
 		name: "Volcanic Capsule",
 		spritenum: 0,
 		num: 67179,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	starfieldcapsule: { /* TODO when introduced **/
+	starfieldcapsule: {/* TODO when introduced **/
 		name: "Starfield Capsule",
 		spritenum: 0,
 		num: 67180,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	librarycapsule: { /* TODO when introduced **/
+	librarycapsule: {/* TODO when introduced **/
 		name: "Library Capsule",
 		spritenum: 0,
 		num: 67181,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	comfypillow: {	/* Used in data/mod/wack/condition.ts **/
+	comfypillow: {/* Used in data/mod/wack/condition.ts **/
 		name: "Comfy Pillow",
 		spritenum: 0,
 		num: 67182,
@@ -14899,7 +14960,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	vrheadset: {	/* TODO: Rooms for Vr Helmet to be later defined in data/mod/wack/moves.ts **/
+	vrheadset: {/* TODO: Rooms for Vr Helmet to be later defined in data/mod/wack/moves.ts **/
 		name: "Vr Headset",
 		spritenum: 0,
 		fling: {
@@ -14995,14 +15056,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	skates: {	/* TODO when Icy Terrain is introduced **/
+	skates: {/* TODO when Icy Terrain is introduced **/
 		name: "Skates",
 		spritenum: 0,
 		num: 67195,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	snowshoes: {	/* TODO Add Icy Terrain condition **/
+	snowshoes: {/* TODO Add Icy Terrain condition **/
 		name: "Snowshoes",
 		spritenum: 0,
 		onTryBoost(boost, target, source, effect) {
@@ -15020,28 +15081,28 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	hazmatsuit: {	/* TODO Add Fallout and other conditions **/
+	hazmatsuit: {/* TODO Add Fallout and other conditions **/
 		name: "Hazmat Suit",
 		spritenum: 0,
 		num: 67197,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	librarycard: { /* TODO when Library is introduced **/
+	librarycard: {/* TODO when Library is introduced **/
 		name: "Library Card",
 		spritenum: 0,
 		num: 67198,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	saunaheater: { /* TODO when Sauna is introduced **/
+	saunaheater: {/* TODO when Sauna is introduced **/
 		name: "Sauna Heater",
 		spritenum: 0,
 		num: 67199,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	foggysteamer: { /* TODO when Sauna is introduced **/
+	foggysteamer: {/* TODO when Sauna is introduced **/
 		name: "Foggy Steamer",
 		spritenum: 0,
 		num: 67200,
@@ -15063,14 +15124,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	volcanicseed: { /* TODO when Volcano Terrain is introduced **/
+	volcanicseed: {/* TODO when Volcano Terrain is introduced **/
 		name: "Volcanic Seed",
 		spritenum: 0,
 		num: 67202,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	marshyseed: { /* TODO when Marshy Terrain is introduced **/
+	marshyseed: {/* TODO when Marshy Terrain is introduced **/
 		name: "Marshy Seed",
 		spritenum: 0,
 		num: 67203,
@@ -15117,7 +15178,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	coagberry: {	/* TODO when Bleeding is introduced */
+	coagberry: {/* TODO when Bleeding is introduced */
 		name: "Coag Berry",
 		spritenum: 0,
 		num: 67206,
@@ -15229,28 +15290,28 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	bandaid: {	/* TODO when Bleeding is introduced **/
+	bandaid: {/* TODO when Bleeding is introduced **/
 		name: "Bandaid",
 		spritenum: 0,
 		num: 67212,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	librarybinding: {	/* TODO when Library is introduced **/
+	librarybinding: {/* TODO when Library is introduced **/
 		name: "Library Binding",
 		spritenum: 0,
 		num: 67213,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	cyberspacecapsule: {	/* TODO when Cyberspace is introduced **/
+	cyberspacecapsule: {/* TODO when Cyberspace is introduced **/
 		name: "Cyberspace Capsule",
 		spritenum: 0,
 		num: 67214,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	gallerycapsule: { /* TODO when Art Gallery is introduced **/
+	gallerycapsule: {/* TODO when Art Gallery is introduced **/
 		name: "Gallery Capsule",
 		spritenum: 0,
 		num: 67215,
@@ -15344,7 +15405,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		onEat(pokemon) {
 			this.heal(pokemon.baseMaxhp / 2);
-			pokemon.trySetStatus('psn', pokemon)
+			pokemon.trySetStatus('psn', pokemon);
 		},
 		num: 67219,
 		isNonstandard: "Future",
@@ -15368,7 +15429,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		onEat(pokemon) {
 			this.heal(pokemon.baseMaxhp / 2);
-			pokemon.trySetStatus('brn', pokemon)
+			pokemon.trySetStatus('brn', pokemon);
 		},
 		num: 67220,
 		isNonstandard: "Future",
@@ -15392,7 +15453,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		onEat(pokemon) {
 			this.heal(pokemon.baseMaxhp / 2);
-			pokemon.trySetStatus('par', pokemon)
+			pokemon.trySetStatus('par', pokemon);
 		},
 		num: 67221,
 		isNonstandard: "Future",
@@ -15409,8 +15470,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Normal';
 			}
@@ -15430,8 +15491,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Water';
 			}
@@ -15451,8 +15512,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Fire';
 			}
@@ -15472,8 +15533,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Grass';
 			}
@@ -15493,8 +15554,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Fighting';
 			}
@@ -15514,8 +15575,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Flying';
 			}
@@ -15535,8 +15596,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Poison';
 			}
@@ -15556,8 +15617,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Ground';
 			}
@@ -15577,8 +15638,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Rock';
 			}
@@ -15598,8 +15659,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Bug';
 			}
@@ -15619,8 +15680,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Ghost';
 			}
@@ -15640,8 +15701,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Electric';
 			}
@@ -15661,8 +15722,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Psychic';
 			}
@@ -15682,8 +15743,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Ice';
 			}
@@ -15703,8 +15764,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Steel';
 			}
@@ -15724,8 +15785,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Dark';
 			}
@@ -15745,8 +15806,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Dragon';
 			}
@@ -15766,8 +15827,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Fairy';
 			}
@@ -15787,8 +15848,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Wood';
 			}
@@ -15808,8 +15869,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Magma';
 			}
@@ -15829,8 +15890,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Steam';
 			}
@@ -15850,8 +15911,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Wind';
 			}
@@ -15871,8 +15932,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Paper';
 			}
@@ -15892,8 +15953,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Tech';
 			}
@@ -15913,8 +15974,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Rubber';
 			}
@@ -15934,8 +15995,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Fear';
 			}
@@ -15955,8 +16016,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Magic';
 			}
@@ -15976,8 +16037,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Light';
 			}
@@ -15997,8 +16058,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Cosmic';
 			}
@@ -16018,8 +16079,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Sound';
 			}
@@ -16039,8 +16100,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Food';
 			}
@@ -16060,8 +16121,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Zombie';
 			}
@@ -16081,8 +16142,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Nuclear';
 			}
@@ -16102,8 +16163,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Virus';
 			}
@@ -16123,8 +16184,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Cyber';
 			}
@@ -16144,8 +16205,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Glass';
 			}
@@ -16165,8 +16226,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Plastic';
 			}
@@ -16186,8 +16247,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Fabric';
 			}
@@ -16207,8 +16268,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Chaos';
 			}
@@ -16228,8 +16289,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Divine';
 			}
@@ -16249,8 +16310,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Time';
 			}
@@ -16270,8 +16331,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Paint';
 			}
@@ -16291,8 +16352,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Crystal';
 			}
@@ -16312,8 +16373,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Meme';
 			}
@@ -16333,8 +16394,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Blood';
 			}
@@ -16354,8 +16415,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Greasy';
 			}
@@ -16375,8 +16436,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Heart';
 			}
@@ -16396,8 +16457,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Ogre';
 			}
@@ -16417,8 +16478,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Qmarks';
 			}
@@ -16438,8 +16499,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') 
-			&& !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+			if (!noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') &&
+			!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				pokemon.useItem();
 				move.type = 'Shadow';
 			}
@@ -16459,7 +16520,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (move.type === 'Water' && !noModifyType.includes(move.id) && 
+			if (move.type === 'Water' && !noModifyType.includes(move.id) &&
 				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				move.type = 'Ice';
 			}
@@ -16484,7 +16545,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	gravitymodule: {	/* Used in data/mod/wack/moves.ts **/
+	gravitymodule: {/* Used in data/mod/wack/moves.ts **/
 		name: "Gravity Module",
 		spritenum: 0,
 		num: 67274,
@@ -16551,7 +16612,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Water Balloon",
 		spritenum: 0,
 		onDamagingHit(damage, target, source, move) {
-			target.useItem()
+			target.useItem();
 			this.field.addPseudoWeather('watersport');
 		},
 		num: 67278,
@@ -16562,7 +16623,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Mud Balloon",
 		spritenum: 0,
 		onDamagingHit(damage, target, source, move) {
-			target.useItem()
+			target.useItem();
 			this.field.addPseudoWeather('mudsport');
 		},
 		num: 67279,
@@ -16597,7 +16658,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	steamballoon: { /* TODO when Steam Sport is introduced **/
+	steamballoon: {/* TODO when Steam Sport is introduced **/
 		name: "Steam Balloon",
 		spritenum: 0,
 		num: 67281,
@@ -16764,11 +16825,10 @@ export const Items: {[itemid: string]: ItemData} = {
 					move.ignoreImmunity['Fighting'] = true;
 					move.ignoreImmunity['Normal'] = true;
 					move.ignoreImmunity['Blood'] = true;
-					pokemon.eatItem()
-				}
-				else if (!target?.hasType('Zombie') && move.type === 'Fear') {
+					pokemon.eatItem();
+				} else if (!target?.hasType('Zombie') && move.type === 'Fear') {
 					move.ignoreImmunity['Fear'] = true;
-					pokemon.eatItem()
+					pokemon.eatItem();
 				}
 			}
 		},
@@ -16790,7 +16850,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Poison'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67292,
@@ -16810,7 +16870,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true && !target?.hasType('Rubber')) {
 				move.ignoreImmunity['Electric'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67293,
@@ -16830,7 +16890,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Dragon'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67294,
@@ -16850,7 +16910,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Dark'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67295,
@@ -16870,7 +16930,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Flying'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67296,
@@ -16890,7 +16950,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Normal'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67297,
@@ -16968,7 +17028,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Bug'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67299,
@@ -16988,7 +17048,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Psychic'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67300,
@@ -17008,7 +17068,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Dragon'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67301,
@@ -17028,7 +17088,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Rubber'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67302,
@@ -17048,7 +17108,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Cosmic'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67303,
@@ -17068,7 +17128,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Food'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67304,
@@ -17088,7 +17148,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Fear'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67305,
@@ -17108,7 +17168,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Glass'] = true;
-				pokemon.eatItem()
+				pokemon.eatItem();
 			}
 		},
 		num: 67306,
@@ -17151,7 +17211,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		onDamagingHit(damage, target, source, move) {
 			this.field.addPseudoWeather('gravity');
-			target.useItem()
+			target.useItem();
 		},
 		num: 67309,
 		isNonstandard: "Future",
@@ -17167,154 +17227,154 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	flyingballoon: {	/* TODO when introduced **/
+	flyingballoon: {/* TODO when introduced **/
 		name: "Flying Balloon",
 		spritenum: 0,
 		num: 67311,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	pandemiccapsule: {	/* TODO when introduced **/
+	pandemiccapsule: {/* TODO when introduced **/
 		name: "Pandemic Capsule",
 		spritenum: 0,
 		num: 67312,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	aethercapsule: {	/* TODO when introduced **/
+	aethercapsule: {/* TODO when introduced **/
 		name: "Aether Capsule",
 		spritenum: 0,
 		num: 67313,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	steamyrock: {	/* TODO when introduced **/
+	steamyrock: {/* TODO when introduced **/
 		name: "Steamy Rock",
 		spritenum: 0,
 		num: 67314,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	featherrock: {	/* TODO when introduced **/
+	featherrock: {/* TODO when introduced **/
 		name: "Feather Rock",
 		spritenum: 0,
 		num: 67315,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	erodedrock: {	/* TODO when introduced **/
+	erodedrock: {/* TODO when introduced **/
 		name: "Eroded Rock",
 		spritenum: 0,
 		num: 67316,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	scalyrock: {	/* TODO when introduced **/
+	scalyrock: {/* TODO when introduced **/
 		name: "Scaly Rock",
 		spritenum: 0,
 		num: 67317,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	chargedrock: { /* Implemented in data/mod/wack/moves.ts **/
+	chargedrock: {/* Implemented in data/mod/wack/moves.ts **/
 		name: "Charged Rock",
 		spritenum: 0,
 		num: 67318,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	brightrock: { /* TODO when introduced **/
+	brightrock: {/* TODO when introduced **/
 		name: "Bright Rock",
 		spritenum: 0,
 		num: 67319,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	mossyrock: { /* Implemented in data/mod/wack/moves.ts **/
+	mossyrock: {/* Implemented in data/mod/wack/moves.ts **/
 		name: "Mossy Rock",
 		spritenum: 0,
 		num: 67320,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	weirdrock: { /* Implemented in data/mod/wack/moves.ts **/
+	weirdrock: {/* Implemented in data/mod/wack/moves.ts **/
 		name: "Weird Rock",
 		spritenum: 0,
 		num: 67321,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	virtualrock: { /* TODO when introduced **/
+	virtualrock: {/* TODO when introduced **/
 		name: "Virtual Rock",
 		spritenum: 0,
 		num: 67322,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	reflectiverock: { /* TODO when introduced **/
+	reflectiverock: {/* TODO when introduced **/
 		name: "Reflective Rock",
 		spritenum: 0,
 		num: 67323,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	radioactiverock: { /* TODO when introduced **/
+	radioactiverock: {/* TODO when introduced **/
 		name: "Radioactive Rock",
 		spritenum: 0,
 		num: 67324,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	paperrock: { /* TODO when introduced **/
+	paperrock: {/* TODO when introduced **/
 		name: "Paper Rock",
 		spritenum: 0,
 		num: 67325,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	sweetrock: { /* TODO when introduced **/
+	sweetrock: {/* TODO when introduced **/
 		name: "Sweet Rock",
 		spritenum: 0,
 		num: 67326,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	viralrock: { /* TODO when introduced **/
+	viralrock: {/* TODO when introduced **/
 		name: "Viral Rock",
 		spritenum: 0,
 		num: 67327,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	woodenrock: { /* TODO when introduced **/
+	woodenrock: {/* TODO when introduced **/
 		name: "Woodenrock",
 		spritenum: 0,
 		num: 67328,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	echorock: { /* TODO when introduced **/
+	echorock: {/* TODO when introduced **/
 		name: "Echo Rock",
 		spritenum: 0,
 		num: 67329,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	clasticrock: { /* TODO when introduced **/
+	clasticrock: {/* TODO when introduced **/
 		name: "Clastic Rock",
 		spritenum: 0,
 		num: 67330,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	swarmedrock: { /* TODO when introduced **/
+	swarmedrock: {/* TODO when introduced **/
 		name: "Swarmed Rock",
 		spritenum: 0,
 		num: 67331,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	chromerock: { /* TODO when introduced **/
+	chromerock: {/* TODO when introduced **/
 		name: "Chrome Rock",
 		spritenum: 0,
 		num: 67332,
@@ -17517,56 +17577,56 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 4,
 	},
-	rottedrock: {	/* TODO when introduced **/
+	rottedrock: {/* TODO when introduced **/
 		name: "Rotted Rock",
 		spritenum: 0,
 		num: 67347,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	feastcapsule: {	/* TODO when introduced **/
+	feastcapsule: {/* TODO when introduced **/
 		name: "Feast Capsule",
 		spritenum: 0,
 		num: 67348,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	mirrorcapsule: {	/* TODO when introduced **/
+	mirrorcapsule: {/* TODO when introduced **/
 		name: "Mirror Capsule",
 		spritenum: 0,
 		num: 67349,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	plainrock: {	/* TODO when introduced **/
+	plainrock: {/* TODO when introduced **/
 		name: "Plain Rock",
 		spritenum: 0,
 		num: 67350,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	graveyardcapsule: {	/* TODO when introduced **/
+	graveyardcapsule: {/* TODO when introduced **/
 		name: "Graveyard Capsule",
 		spritenum: 0,
 		num: 67351,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	iceballoon: {	/* TODO when introduced **/
+	iceballoon: {/* TODO when introduced **/
 		name: "Ice Balloon",
 		spritenum: 0,
 		num: 67352,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	arboreumcapsule: {	/* TODO when introduced **/
+	arboreumcapsule: {/* TODO when introduced **/
 		name: "Arboreum Capsule",
 		spritenum: 0,
 		num: 67353,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	saunacapsule: {	/* TODO when introduced **/
+	saunacapsule: {/* TODO when introduced **/
 		name: "Sauna Capsule",
 		spritenum: 0,
 		num: 67354,
@@ -17601,21 +17661,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	blaringspeaker: {	/* TODO when introduced **/
+	blaringspeaker: {/* TODO when introduced **/
 		name: "Blaring Speaker",
 		spritenum: 0,
 		num: 67357,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	factorycapsule: {	/* TODO when introduced **/
+	factorycapsule: {/* TODO when introduced **/
 		name: "Factory Capsule",
 		spritenum: 0,
 		num: 67358,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	recyclecapsule: {	/* TODO when introduced **/
+	recyclecapsule: {/* TODO when introduced **/
 		name: "Recycle Capsule",
 		spritenum: 0,
 		num: 67359,
@@ -17627,7 +17687,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		onModifyPriority(priority, source, target, move) {
 			if (move.category === 'Status') {
-				source.useItem()
+				source.useItem();
 				return priority + 1;
 			}
 		},
@@ -17643,7 +17703,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
-			if (move.type === 'Dark' && !noModifyType.includes(move.id) && 
+			if (move.type === 'Dark' && !noModifyType.includes(move.id) &&
 				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				move.type = 'Light';
 			}
@@ -17652,7 +17712,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	plasticrock: {  /* TODO when introduced **/
+	plasticrock: {/* TODO when introduced **/
 		name: "Plastic Rock",
 		spritenum: 0,
 		num: 67362,
@@ -17710,7 +17770,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		onUpdate(pokemon) {
 			if (pokemon.volatiles['torment']) {
-				pokemon.removeVolatile('torment')
+				pokemon.removeVolatile('torment');
 			}
 		},
 		num: 67367,
@@ -17731,7 +17791,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	manarock: {	/* TODO when Manaverse introduced **/
+	manarock: {/* TODO when Manaverse introduced **/
 		name: "Mana Rock",
 		spritenum: 0,
 		num: 67370,
@@ -17745,7 +17805,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	darkballoon: {	/* TODO when Dark Spot introduced **/
+	darkballoon: {/* TODO when Dark Spot introduced **/
 		name: "Dark Balloon",
 		spritenum: 0,
 		num: 67372,
@@ -17787,7 +17847,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Toilet Paper",
 		spritenum: 0,
 		onDamagingHit(damage, target, source, move) {
-			if (move.type === 'Ground' || move.type === 'Poison' ) {
+			if (move.type === 'Ground' || move.type === 'Poison') {
 				target.useItem();
 			}
 		},
@@ -17798,7 +17858,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	swarmcapsule: {	/* TODO When introduced **/
+	swarmcapsule: {/* TODO When introduced **/
 		name: "Swarm Capsule",
 		spritenum: 0,
 		num: 67377,
@@ -17819,35 +17879,35 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	steadywindcapsule: {  /* TODO When introduced **/
+	steadywindcapsule: {/* TODO When introduced **/
 		name: "Steadywind Capsule",
 		spritenum: 0,
 		num: 67380,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	tempestcapsule: {  /* TODO When introduced **/
+	tempestcapsule: {/* TODO When introduced **/
 		name: "Tempest Capsule",
 		spritenum: 0,
 		num: 67381,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	invertedcapsule: {  /* TODO When introduced **/
+	invertedcapsule: {/* TODO When introduced **/
 		name: "Inverted Capsule",
 		spritenum: 0,
 		num: 67382,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	bouncycapsule: {  /* TODO When introduced **/
+	bouncycapsule: {/* TODO When introduced **/
 		name: "Bouncy Capsule",
 		spritenum: 0,
 		num: 67383,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	manaversecapsule: {  /* TODO When introduced **/
+	manaversecapsule: {/* TODO When introduced **/
 		name: "Manaverse Capsule",
 		spritenum: 0,
 		num: 67384,
@@ -17919,10 +17979,9 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		onAfterMoveSecondarySelf(source, target, move) {
 			if (target.hasAbility('liquidooze') && move && move.flags['bite']) {
-				this.damage(source.baseMaxhp / 8, source, target)
-			}
-			else if (source && source !== target && move && move.flags['bite'] && !source.forceSwitchFlag) {
-				this.heal(source.baseMaxhp / 8, source, source)
+				this.damage(source.baseMaxhp / 8, source, target);
+			} else if (source && source !== target && move && move.flags['bite'] && !source.forceSwitchFlag) {
+				this.heal(source.baseMaxhp / 8, source, source);
 			}
 		},
 		num: 67392,
@@ -17977,7 +18036,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	battlewhip: {	/* Only exists in the PBS, not the game's code**/
+	battlewhip: {/* Only exists in the PBS, not the game's code**/
 		name: "Battle Whip",
 		spritenum: 0,
 		num: 67396,
@@ -17994,8 +18053,8 @@ export const Items: {[itemid: string]: ItemData} = {
 				move.secondaries.push({
 					chance: 40,
 					boosts: {
-						atk: -1
-					}
+						atk: -1,
+					},
 				});
 			}
 		},
@@ -18013,8 +18072,8 @@ export const Items: {[itemid: string]: ItemData} = {
 				move.secondaries.push({
 					chance: 40,
 					boosts: {
-						def: -1
-					}
+						def: -1,
+					},
 				});
 			}
 		},
@@ -18032,8 +18091,8 @@ export const Items: {[itemid: string]: ItemData} = {
 				move.secondaries.push({
 					chance: 40,
 					boosts: {
-						spa: -1
-					}
+						spa: -1,
+					},
 				});
 			}
 		},
@@ -18051,8 +18110,8 @@ export const Items: {[itemid: string]: ItemData} = {
 				move.secondaries.push({
 					chance: 40,
 					boosts: {
-						spd: -1
-					}
+						spd: -1,
+					},
 				});
 			}
 		},
@@ -18070,8 +18129,8 @@ export const Items: {[itemid: string]: ItemData} = {
 				move.secondaries.push({
 					chance: 40,
 					boosts: {
-						spe: -1
-					}
+						spe: -1,
+					},
 				});
 			}
 		},
@@ -18089,8 +18148,8 @@ export const Items: {[itemid: string]: ItemData} = {
 				move.secondaries.push({
 					chance: 40,
 					boosts: {
-						accuracy: -1
-					}
+						accuracy: -1,
+					},
 				});
 			}
 		},
@@ -18108,8 +18167,8 @@ export const Items: {[itemid: string]: ItemData} = {
 				move.secondaries.push({
 					chance: 40,
 					boosts: {
-						evasion: -1
-					}
+						evasion: -1,
+					},
 				});
 			}
 		},
@@ -18132,7 +18191,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	gigadrill: {  /* Only exists in the PBS, not the game's code**/
+	gigadrill: {/* Only exists in the PBS, not the game's code**/
 		name: "Giga Drill",
 		spritenum: 0,
 		num: 67405,
@@ -18143,7 +18202,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Sheriff Hat",
 		spritenum: 0,
 		onModifyPriority(priority, source, target, move) {
-			if (source.activeMoveActions == 0) {
+			if (source.activeMoveActions === 0) {
 				return priority + 1;
 			}
 		},
@@ -18176,7 +18235,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 3,
 	},
-	wildwestcapsule: {	/* TODO when Wild West is introduced **/
+	wildwestcapsule: {/* TODO when Wild West is introduced **/
 		name: "Wildwest Capsule",
 		spritenum: 0,
 		num: 67408,
@@ -18296,9 +18355,9 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		onDamagingHit(damage, target, source, move) {
 			if (!target.fainted && target.hp > 0 && target.hp <= target.maxhp / 4) {
-				target.useItem()
+				target.useItem();
 				this.heal(target.baseMaxhp / 7);
-				source.trySetStatus('psn', target, this.effect)
+				source.trySetStatus('psn', target, this.effect);
 			}
 		},
 		num: 67426,
@@ -18312,7 +18371,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (pokemon.hp <= pokemon.maxhp / 4) {
 				pokemon.eatItem();
 				this.heal(pokemon.baseMaxhp / 6);
-				return pokemon.weighthg += 50;
+				pokemon.weighthg += 50;
 			}
 		},
 		num: 67427,
@@ -18324,16 +18383,16 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		onDamagingHit(damage, target, source, move) {
 			if (!target.fainted && target.hp > 0 && target.hp <= target.maxhp / 4) {
-				target.useItem()
+				target.useItem();
 				this.heal(target.baseMaxhp / 7);
-				source.trySetStatus('brn', target, this.effect)
+				source.trySetStatus('brn', target, this.effect);
 			}
 		},
 		num: 67428,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	saladmix: {	/* TODO when Grass-type Charge move is introduced **/
+	saladmix: {/* TODO when Grass-type Charge move is introduced **/
 		name: "Salad Mix",
 		spritenum: 0,
 		num: 67429,
@@ -18514,10 +18573,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Brittle Bones",
 		spritenum: 0,
 		onSourceModifyDamage(damage, source, target, move) {
-			return this.chainModify(1.2)
+			return this.chainModify(1.2);
 		},
 		onModifySpe(spe, pokemon) {
-			return this.chainModify(1.2)
+			return this.chainModify(1.2);
 		},
 		num: 67436,
 		isNonstandard: "Future",
@@ -18544,7 +18603,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		onUpdate(pokemon) {
 			if (pokemon.hp <= pokemon.maxhp / 4) {
-				pokemon.useItem()
+				pokemon.useItem();
 			}
 		},
 		boosts: {
@@ -18560,7 +18619,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		onUpdate(pokemon) {
 			if (pokemon.hp <= pokemon.maxhp / 4) {
-				pokemon.useItem()
+				pokemon.useItem();
 			}
 		},
 		boosts: {
@@ -18685,8 +18744,8 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Banhammer",
 		spritenum: 0,
 		onAfterMoveSecondary(target, source, move) {
-			if (this.randomChance(4,10) && move.type === 'Cyber') {
-				source.addVolatile('volatile', target, this.effect)
+			if (this.randomChance(4, 10) && move.type === 'Cyber') {
+				source.addVolatile('volatile', target, this.effect);
 			}
 		},
 		num: 67466,
@@ -18698,26 +18757,26 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		onSourceModifyDamage(damage, source, target, move) {
 			if (target.hasType('Cosmic')) {
-				return this.chainModify(0.8)
+				return this.chainModify(0.8);
 			}
 		},
 		onModifySpe(spe, pokemon) {
 			if (pokemon.hasType('Cosmic')) {
-				return this.chainModify(0.8)
+				return this.chainModify(0.8);
 			}
 		},
 		num: 67467,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	virusbuster: {	/* TODO when Anti-Virus is included **/
+	virusbuster: {/* TODO when Anti-Virus is included **/
 		name: "Virus Buster",
 		spritenum: 0,
 		num: 67468,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	necronomicon: { /* TODO when Graveyard is included **/
+	necronomicon: {/* TODO when Graveyard is included **/
 		name: "Necronomicon",
 		spritenum: 0,
 		num: 67469,
@@ -18795,14 +18854,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	limbershoes: {	/* Used in data/mod/wack/condition.ts **/
+	limbershoes: {/* Used in data/mod/wack/condition.ts **/
 		name: "Limber Shoes",
 		spritenum: 0,
 		num: 67473,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	coldpack: {  /* Used in sim/battle-actions.ts **/
+	coldpack: {/* Used in sim/battle-actions.ts **/
 		name: "Cold Pack",
 		spritenum: 0,
 		num: 67474,
@@ -18863,14 +18922,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	bunnysuit: {  /* TODO when move effect is introduced **/
+	bunnysuit: {/* TODO when move effect is introduced **/
 		name: "Bunny Suit",
 		spritenum: 0,
 		num: 67478,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	catears: {	/* TODO when move effect is introduced **/
+	catears: {/* TODO when move effect is introduced **/
 		name: "Cat Ears",
 		spritenum: 0,
 		num: 67479,

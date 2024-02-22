@@ -1,4 +1,4 @@
-export const Abilities: { [k: string]: ModdedAbilityData; } = {
+export const Abilities: { [k: string]: ModdedAbilityData } = {
 	/* Disabled abilities */
 	noability: {
 		inherit: true,
@@ -1176,7 +1176,7 @@ export const Abilities: { [k: string]: ModdedAbilityData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	bigbrain: {
+	brainpower: {
 		inherit: true,
 		isNonstandard: "Past",
 	},

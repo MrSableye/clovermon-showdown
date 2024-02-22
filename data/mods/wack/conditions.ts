@@ -162,8 +162,8 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 		},
 	},
-	//Pokemon innate ability
-	//Destiny Bond and Perish Song immunities are handled in data/mod/wack/moves.ts
+	// Pokemon innate ability
+	// Destiny Bond and Perish Song immunities are handled in data/mod/wack/moves.ts
 	tapukoko: {
 		onSwitchIn(pokemon) {
 			if (!this.field.isTerrain('electricterrain')) {
@@ -213,7 +213,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 		},
 	},
-	himg: { //TODO: Add Pollen Season interaction
+	himg: { // TODO: Add Pollen Season interaction
 		onSwitchIn(pokemon) {
 			if (!this.field.isTerrain('grassyterrain')) {
 				this.field.setTerrain('grassyterrain');
@@ -364,12 +364,12 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather()) && pokemon.ability === "filter") {
 				return this.chainModify(1.5);
 			}
-		}
+		},
 	},
 	tanktopmastah: {
 		onSwitchIn(pokemon) {
 			pokemon.side.addSideCondition('safeguard');
-		}
+		},
 	},
 	metaknight: {
 		onSourceDamagingHit(damage, target, source, move) {
@@ -417,7 +417,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 			if (pokemon.hp <= pokemon.maxhp / 2 && pokemon.species.forme !== "Zen") {
 				pokemon.addVolatile('zenmode');
-			} else if (pokemon.hp == pokemon.maxhp && pokemon.species.forme === "Zen") {
+			} else if (pokemon.hp === pokemon.maxhp && pokemon.species.forme === "Zen") {
 				pokemon.addVolatile('zenmode'); // in case of base Borosu-Zen
 				pokemon.removeVolatile('zenmode');
 			}
@@ -825,7 +825,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 	bersecules: {
 		onModifyAtkPriority: 3,
 		onModifyAtk(basePower, pokemon, target, move) {
-			if (pokemon.activeMoveActions == 0) {
+			if (pokemon.activeMoveActions === 0) {
 				return this.chainModify(0.5);
 			}
 		},
@@ -859,13 +859,13 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 		},
 	},
-}
-	/**
+};
+/**
 	 * TODO:
 	 * - AMARIANTOINETTE: Changes form based on Massacre stacks (form 1 at 6+, form 2 at 12+), gains 1 massacre if it does damage
 	 * - DMCDANTE: Changes form based on Massacre (10+), nothing seems to indicate how it gains massacre stacks
 	 * - FGOTIAMAT for Sea of Life if Rain of Fire isn't active
-	 * 
+	 *
 	 * - HIMF for Rain of Fire and Heat Up
 	 * - HIMNUCLEAR for Fallout
 	 * - HIMCYBER for Cyberspace

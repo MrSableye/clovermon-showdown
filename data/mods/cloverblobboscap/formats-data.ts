@@ -2592,11 +2592,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	sepulture: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-		},
+	},
 	ibask: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-		},
+	},
 	dirtybis: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -3300,16 +3300,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	blobboswack: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "Uber",
-	},
-	blobboswackmega: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "Uber",
-	},
 	blobboscup: {
 		inherit: true,
 		isNonstandard: null,
@@ -3670,11 +3660,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	blobboskorea: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	blobbosperi: {
 		inherit: true,
 		isNonstandard: null,
@@ -3736,11 +3721,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobboshomestuck: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	blobbosnihonjin: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -3956,6 +3936,66 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbosflask: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospuddle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosscrying: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdragonfly: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmedusa: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmoogle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosminesweeper: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosraiju: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscaterpillar: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosladybug: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscolony: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscolonycolonized: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboschroma: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

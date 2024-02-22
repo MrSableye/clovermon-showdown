@@ -84,15 +84,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "LC",
 	},
-    ibask: {
-	inherit: true,
-	isNonstandard: null,
-	tier: "OU",
+	ibask: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
-    dirtybis: {
-	inherit: true,
-	isNonstandard: null,
-	tier: "LC",
+	dirtybis: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
 	},
 	inkrow: {
 		inherit: true,

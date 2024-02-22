@@ -47,6 +47,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	dustcannon: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	matingpress: {
 		inherit: true,
 		isNonstandard: null,
@@ -470,30 +474,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	waterpledge: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	glassing: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	meltedplastic: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	recycleray: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	plasticterrain: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	fadereflection: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	plasticblaze: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1287,30 +1267,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	abeblast: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	harajukushuffle: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	hokkaidosnowstorm: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	blessingofyakushima: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	eminenceofkinkakuji: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	kamiswrath: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	cumblast: {
 		inherit: true,
 		isNonstandard: null,
@@ -1472,10 +1428,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	battlecry: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	scavenge: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1779,6 +1731,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	scryingwish: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	meteor: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	unload: {
 		inherit: true,
 		isNonstandard: null,
 	},

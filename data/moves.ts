@@ -2077,7 +2077,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		self: {
 			onHit(pokemon) {
-				pokemon.setType(pokemon.getTypes(true).map(type => type === "Fire" ? "???" : type));
+				pokemon.setType(pokemon.getTypes(true).map(type => type === "Fire" ? "???" : type), false, pokemon, this.effect);
 				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Burn Up');
 			},
 		},
@@ -2133,7 +2133,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
-		onHit(target) {
+		onHit(target, source) {
 			let newType = 'Normal';
 			if (this.field.isTerrain('electricterrain')) {
 				newType = 'Electric';
@@ -2145,7 +2145,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				newType = 'Psychic';
 			}
 
-			if (target.getTypes().join() === newType || !target.setType(newType)) return false;
+			if (target.getTypes().join() === newType || !target.setType(newType, false, source, this.effect)) return false;
 			this.add('-start', target, 'typechange', newType);
 		},
 		secondary: null,
@@ -2786,9 +2786,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 30,
 		priority: 0,
 		flags: {snatch: 1},
-		onHit(target) {
+		onHit(target, source) {
 			const type = this.dex.moves.get(target.moveSlots[0].id).type;
-			if (target.hasType(type) || !target.setType(type)) return false;
+			if (target.hasType(type) || !target.setType(type, false, source, this.effect)) return false;
 			this.add('-start', target, 'typechange', type);
 		},
 		secondary: null,
@@ -2825,7 +2825,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			const randomType = this.sample(possibleTypes);
 
-			if (!source.setType(randomType)) return false;
+			if (!source.setType(randomType, false, source, this.effect)) return false;
 			this.add('-start', source, 'typechange', randomType);
 		},
 		secondary: null,
@@ -3471,12 +3471,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 			let success = false;
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
 			const removeTarget = [
-				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
 			];
 			const removeAll = [
-				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
 			];
 			for (const targetCondition of removeTarget) {
 				if (target.side.removeSideCondition(targetCondition)) {
@@ -6158,9 +6158,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
-		onHit(target) {
+		onHit(target, source) {
 			if (target.hasType('Grass')) return false;
-			if (!target.addType('Grass')) return false;
+			if (!target.addType('Grass', source, this.effect)) return false;
 			this.add('-start', target, 'typeadd', 'Grass', '[from] move: Forest\'s Curse');
 		},
 		secondary: null,
@@ -7603,11 +7603,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onHit(source) {
 				let success = false;
 				const removeTarget = [
-					'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'luckyroll', 
-					'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'
+					'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'luckyroll',
+					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
 				];
-				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 				for (const targetCondition of removeTarget) {
 					if (source.side.foe.removeSideCondition(targetCondition)) {
 						if (!removeAll.includes(targetCondition)) continue;
@@ -12522,8 +12522,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Mortal Spin', '[of] ' + pokemon);
 				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 				for (const condition of sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Mortal Spin', '[of] ' + pokemon);
@@ -12539,8 +12539,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Mortal Spin', '[of] ' + pokemon);
 				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 				for (const condition of sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Mortal Spin', '[of] ' + pokemon);
@@ -15007,8 +15007,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 				for (const condition of sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -15024,8 +15024,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 				for (const condition of sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -15211,7 +15211,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			}
 			this.add('-start', source, 'typechange', '[from] move: Reflect Type', '[of] ' + target);
-			source.setType(newBaseTypes);
+			source.setType(newBaseTypes, false, source, this.effect);
 			source.addedType = target.addedType;
 			source.knownType = target.isAlly(source) && target.knownType;
 			if (!source.knownType) source.apparentType = oldApparentType;
@@ -17648,8 +17648,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
-		onHit(target) {
-			if (target.getTypes().join() === 'Water' || !target.setType('Water')) {
+		onHit(target, source) {
+			if (target.getTypes().join() === 'Water' || !target.setType('Water', false, source, this.effect)) {
 				// Soak should animate even when it fails.
 				// Returning false would suppress the animation.
 				this.add('-fail', target);
@@ -20075,8 +20075,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			for (const active of this.getAllActive()) {
 				if (active.removeVolatile('substitute')) success = true;
 			}
-			const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			const sides = [pokemon.side, ...pokemon.side.foeSidesWithConditions()];
 			for (const side of sides) {
 				for (const sideCondition of removeAll) {
@@ -20376,9 +20376,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
-		onHit(target) {
+		onHit(target, source) {
 			if (target.hasType('Ghost')) return false;
-			if (!target.addType('Ghost')) return false;
+			if (!target.addType('Ghost', source, this.effect)) return false;
 			this.add('-start', target, 'typeadd', 'Ghost', '[from] move: Trick-or-Treat');
 
 			if (target.side.active.length === 2 && target.position === 1) {
@@ -22122,7 +22122,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				'luckyroll',
 				'magictrap',
 				'pillowpile',
-				'wiretap',
+				'wiretrap',
 				'mines',
 				'brambles',
 				'icicles',
@@ -23211,8 +23211,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -23465,8 +23465,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onHit(target, source, move) {
 			let success = false;
 			const removeAll = [
-				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const sideCondition of removeAll) {
 				if (target.side.removeSideCondition(sideCondition)) {
 					if (!removeAll.includes(sideCondition)) continue;
@@ -24858,81 +24858,81 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	prisonroots: {
-        accuracy: 85,
-        basePower: 75,
-        category: "Physical",
-        name: "Prison Roots",
-        pp: 5,
-        priority: 0,
-        flags: {protect: 1, mustpressure: 1},
-        volatileStatus: 'imprison',
-        condition: {
-            noCopy: true,
-            onStart(target) {
-                this.add('-start', target, 'move: Prison Roots');
-            },
-            onFoeDisableMove(pokemon) {
-                for (const moveSlot of this.effectState.source.moveSlots) {
-                    if (moveSlot.id === 'struggle') continue;
-                    pokemon.disableMove(moveSlot.id, 'hidden');
-                }
-                pokemon.maybeDisabled = true;
-            },
-            onFoeBeforeMovePriority: 4,
-            onFoeBeforeMove(attacker, defender, move) {
-                if (move.id !== 'struggle' && this.effectState.source.hasMove(move.id) && !move.isZ && !move.isMax) {
-                    this.add('cant', attacker, 'move: Prison Roots', move);
-                    return false;
-                }
-            },
-        },
-        onHit(target, source, move) {
-            return target.addVolatile('trapped', source, move, 'trapper');
-        },
-        secondary: null,
-        target: "self",
-        type: "Grass",
-        contestType: "Clever",
-        isNonstandard: "Future",
-    },
+		accuracy: 85,
+		basePower: 75,
+		category: "Physical",
+		name: "Prison Roots",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mustpressure: 1},
+		volatileStatus: 'imprison',
+		condition: {
+			noCopy: true,
+			onStart(target) {
+				this.add('-start', target, 'move: Prison Roots');
+			},
+			onFoeDisableMove(pokemon) {
+				for (const moveSlot of this.effectState.source.moveSlots) {
+					if (moveSlot.id === 'struggle') continue;
+					pokemon.disableMove(moveSlot.id, 'hidden');
+				}
+				pokemon.maybeDisabled = true;
+			},
+			onFoeBeforeMovePriority: 4,
+			onFoeBeforeMove(attacker, defender, move) {
+				if (move.id !== 'struggle' && this.effectState.source.hasMove(move.id) && !move.isZ && !move.isMax) {
+					this.add('cant', attacker, 'move: Prison Roots', move);
+					return false;
+				}
+			},
+		},
+		onHit(target, source, move) {
+			return target.addVolatile('trapped', source, move, 'trapper');
+		},
+		secondary: null,
+		target: "self",
+		type: "Grass",
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
 	blazingwheel: {
-        accuracy: 100,
-        basePower: 80,
-        category: "Physical",
-        name: "Blazing Wheel",
-        pp: 10,
-        priority: 0,
-        flags: {protect: 1, mirror: 1, defrost: 1},
-        secondary: {
-            chance: 100,
-            self: {
-                boosts: {
-                    spe: 1,
-                },
-            },
-        },
-        target: "normal",
-        type: "Fire",
-        contestType: "Tough",
-        isNonstandard: "Future",
-    },
-oceanhorn: {
-        accuracy: 85,
-        basePower: 100,
-        category: "Physical",
-        name: "Ocean Horn",
-        pp: 10,
-        priority: 0,
-        flags: {protect: 1, mirror: 1, contact: 1},
-        secondary: {
-            chance: 50,
-            volatileStatus: 'flinch',
-        },
-        target: "any",
-        type: "Water",
-        contestType: "Cool",
-        isNonstandard: "Future",
-    },
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Blazing Wheel",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fire",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	oceanhorn: {
+		accuracy: 85,
+		basePower: 100,
+		category: "Physical",
+		name: "Ocean Horn",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		secondary: {
+			chance: 50,
+			volatileStatus: 'flinch',
+		},
+		target: "any",
+		type: "Water",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
 	blackbomb: {
 		accuracy: 100,
 		basePower: 110,
@@ -25765,7 +25765,7 @@ oceanhorn: {
 	yiikout: {
 		num: 69010,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 40,
 		category: "Special",
 		name: "Yiik Out",
 		pp: 10,
@@ -26873,7 +26873,7 @@ oceanhorn: {
 	},
 	deepfry: {
 		accuracy: 100,
-		basePower: 75,
+		basePower: 50,
 		category: "Physical",
 		name: "Deep Fry",
 		pp: 20,
@@ -29961,93 +29961,6 @@ oceanhorn: {
 		type: "Dark",
 		isNonstandard: "Future",
 	},
-	abeblast: {
-		accuracy: 100,
-		basePower: 100,
-		category: "Special",
-		name: "Abe Blast",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, bullet: 1},
-		onHit() {
-			this.add('-message', '「安倍のブラスト！」！！');
-		},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Steel",
-		isNonstandard: "Future",
-	},
-	harajukushuffle: {
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Harajuku Shuffle",
-		pp: 10,
-		priority: 0,
-		flags: {snatch: 1, dance: 1},
-		beforeMoveCallback(pokemon) {
-			if (pokemon.hasType('Fairy')) return false;
-			if (!pokemon.addType('Fairy')) return false;
-			this.add('-start', pokemon, 'typeadd', 'Fairy', '[from] move: Harajuku Shuffle');
-		},
-		boosts: {
-			atk: 1,
-			spa: 1,
-			spe: 1,
-		},
-		secondary: null,
-		target: "self",
-		type: "Fairy",
-		zMove: {effect: 'clearnegativeboost'},
-		contestType: "Beautiful",
-		isNonstandard: "Future",
-	},
-	hokkaidosnowstorm: {
-		accuracy: 100,
-		basePower: 60,
-		category: "Special",
-		name: "Hokkaido Snowstorm",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, wind: 1},
-		beforeMoveCallback(pokemon) {
-			if (pokemon.hasType('Ice')) return false;
-			if (!pokemon.addType('Ice')) return false;
-			this.add('-start', pokemon, 'typeadd', 'Ice', '[from] move: Hokkaido Snowstorm');
-		},
-		secondary: {
-			chance: 10,
-			status: 'frz',
-		},
-		weather: 'hail',
-		target: "allAdjacentFoes",
-		type: "Ice",
-		contestType: "Beautiful",
-		isNonstandard: "Future",
-	},
-	blessingofyakushima: {
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Blessing of Yakushima",
-		pp: 10,
-		priority: 0,
-		flags: {},
-		beforeMoveCallback(pokemon) {
-			if (pokemon.hasType('Grass')) return false;
-			if (!pokemon.addType('Grass')) return false;
-			this.add('-start', pokemon, 'typeadd', 'Grass', '[from] move: Blessing of Yakushima');
-		},
-		heal: [1, 3],
-		terrain: 'grassyterrain',
-		secondary: null,
-		target: "self",
-		type: "Grass",
-		zMove: {boost: {def: 1}},
-		contestType: "Tough",
-		isNonstandard: "Future",
-	},
 	cumblast: {
 		accuracy: 100,
 		basePower: 95,
@@ -30278,6 +30191,7 @@ oceanhorn: {
 		target: "normal",
 		type: "Rock",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	ultima: {
 		num: 1125,
@@ -31912,50 +31826,50 @@ oceanhorn: {
 		type: "Steel",
 	},
 	alberspin: {
-        accuracy: 100,
-        basePower: 50,
-        category: "Physical",
-        name: "Alber Spin",
-        pp: 40,
-        priority: 0,
-        flags: {contact: 1, protect: 1, mirror: 1},
-        onAfterHit(target, pokemon, move) {
-            if (!move.hasSheerForce) {
-                if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
-                    this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
-                }
-                const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
-                for (const condition of sideConditions) {
-                    if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
-                        this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
-                    }
-                }
-                if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
-                    pokemon.removeVolatile('partiallytrapped');
-                }
-            }
-        },
-        onAfterSubDamage(damage, target, pokemon, move) {
-            if (!move.hasSheerForce) {
-                if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
-                    this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
-                }
-                const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
-                for (const condition of sideConditions) {
-                    if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
-                        this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
-                    }
-                }
-                if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
-                    pokemon.removeVolatile('partiallytrapped');
-                }
-            }
-        },
-        secondary: null,
-        target: "normal",
-        type: "Dragon",
-        isNonstandard: "Future",
-    },
+		accuracy: 100,
+		basePower: 50,
+		category: "Physical",
+		name: "Alber Spin",
+		pp: 40,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+					}
+				}
+				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+					pokemon.removeVolatile('partiallytrapped');
+				}
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon, move) {
+			if (!move.hasSheerForce) {
+				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+					}
+				}
+				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+					pokemon.removeVolatile('partiallytrapped');
+				}
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+		isNonstandard: "Future",
+	},
 	crustaceancombat: {
 		num: 42012,
 		accuracy: 100,
@@ -32392,7 +32306,7 @@ oceanhorn: {
 			duration: 4,
 			onTryBoost(boost, target, source, effect) {
 				if (effect.id === 'combatorders') return;
-				const anyPositiveBoost = Object.values(boost).some((boost) => boost > 0);
+				const anyPositiveBoost = Object.values(boost).some((currentBoost) => currentBoost > 0);
 				if (!anyPositiveBoost) return;
 
 				const stats: BoostID[] = [];
@@ -32404,9 +32318,9 @@ oceanhorn: {
 				}
 				if (stats.length) {
 					const randomStat = this.sample(stats);
-					const boost: SparseBoostsTable = {};
-					boost[randomStat] = 1;
-					this.boost(boost);
+					const boosts: SparseBoostsTable = {};
+					boosts[randomStat] = 1;
+					this.boost(boosts);
 				}
 			},
 			onSideResidualOrder: 26,
@@ -32854,7 +32768,7 @@ oceanhorn: {
 				stats[secondStat] = (stats[secondStat] || 1) - 1;
 				if ((stats[secondStat] || 0) <= 0) delete stats[secondStat];
 
-				let unmaxedStats: BoostID[] = [];
+				const unmaxedStats: BoostID[] = [];
 				for (stat in stats) {
 					if (target.boosts[stat] < 6) {
 						unmaxedStats.push(stat);
@@ -32914,7 +32828,7 @@ oceanhorn: {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		basePowerCallback(pokemon, target, move) {
 			if (target && target.species.baseStats.hp > 100) {
-				return move.basePower * 2; 
+				return move.basePower * 2;
 			}
 
 			return move.basePower;
@@ -33090,136 +33004,136 @@ oceanhorn: {
 			const numberEffects = 37;
 			const effect: number = this.random(numberEffects);
 			switch (effect) {
-				case 0:
-					target.setStatus('psn', source, this.effect);
-					break;
-				case 1:
-					target.setStatus('brn', source, this.effect);
-					break;
-				case 2:
-					target.setStatus('frz', source, this.effect);
-					break;
-				case 3:
-					target.setStatus('par', source, this.effect);
-					break;
-				case 4:
-					target.addVolatile('confusion', source, this.effect);
-					break;
-				case 5:
-					source.setStatus('psn', source, this.effect);
-					break;
-				case 6:
-					source.setStatus('brn', source, this.effect);
-					break;
-				case 7:
-					source.setStatus('frz', source, this.effect);
-					break;
-				case 8:
-					source.setStatus('par', source, this.effect);
-					break;
-				case 9:
-					source.addVolatile('confusion', source, this.effect);
-					break;
-				case 10:
-					source.faint(source, this.effect);
-					break;
-				case 11:
-					target.faint(source, this.effect);
-					break;
-				case 12:
-					var randomStat: StatIDExceptHP = this.sample(['atk', 'def', 'spa', 'spd', 'spe']);
-					this.boost({ [randomStat]: 6 }, target, source, this.effect);
-					return;
-				case 13:
-					var randomStat: StatIDExceptHP = this.sample(['atk', 'def', 'spa', 'spd', 'spe']);
-					this.boost({ [randomStat]: 6 }, source, source, this.effect);
-					return;
-				case 14:
-					this.boost({
-						atk: 1,
-						def: 1,
-						spa: 1,
-						spd: 1,
-						spe: 1,
-					}, source, source);
-					break;
-				case 15:
-					this.boost({
-						atk: 1,
-						def: 1,
-						spa: 1,
-						spd: 1,
-						spe: 1,
-					}, target, source, this.effect);
-					break;
-				case 17:
-					source.addVolatile('taunt', source, this.effect);
-					break;
-				case 18:
-					const terrain = this.sample(['grassyterrain', 'electricterrain', 'mistyterrain', 'psychicterrain']);
-					this.field.setTerrain(terrain, source, this.effect);
-					break;
-				case 19:
-					const weather = this.sample(['sunnyday', 'raindance', 'sandstorm', 'hail']);
-					this.field.setWeather(weather, source, this.effect);
-					break;
-				case 20:
-					this.actions.useMove('poisongas', source, target, this.effect);
-					break;
-				case 21:
-					this.actions.useMove('fling', source, target, this.effect);
-					break;
-				case 22:
-					this.heal(target.baseMaxhp, source, source, this.effect);
-					break;
-				case 23:
-					this.heal(target.baseMaxhp, target, source, this.effect);
-					break;
-				case 24:
-					const ohkoMove = this.sample(['fissure', 'guillotine', 'horndrill', 'sheercold']);
-					this.actions.useMove(ohkoMove, source, target);
-					break;
-				case 25:
-					this.actions.useMove('metronome', source, source, this.effect);
-					break;
-				case 26:
-					source.addVolatile('torment', source, this.effect);
-					break;
-				case 27:
-					target.addVolatile('torment', source, this.effect);
-					break;
-				case 28:
-					this.win(target.side);
-					break;
-				case 29:
-					this.win(source.side);
-					break;
-				case 30:
-					const item = target.takeItem();
-					if (item) {
-						this.add('-enditem', target, item.name, '[from] move: Banana', '[of] ' + source);
-					}
-					break;
-				case 31:
-					target.switchFlag = true;
-					// TODO: Message
-					break;
-				case 32:
-					source.switchFlag = true;
-					// TODO: Message
-					break;
-				case 33:
-					source.transformInto(target);
-					break;
-				case 34:
-					this.actions.useMove('banana', source, target, this.effect);
-					break;
-				case 35:
-					target.addVolatile('telekinesis');
-					break;
-				case 36:
-					source.addVolatile('telekinesis');
-					break;
+			case 0:
+				target.setStatus('psn', source, this.effect);
+				break;
+			case 1:
+				target.setStatus('brn', source, this.effect);
+				break;
+			case 2:
+				target.setStatus('frz', source, this.effect);
+				break;
+			case 3:
+				target.setStatus('par', source, this.effect);
+				break;
+			case 4:
+				target.addVolatile('confusion', source, this.effect);
+				break;
+			case 5:
+				source.setStatus('psn', source, this.effect);
+				break;
+			case 6:
+				source.setStatus('brn', source, this.effect);
+				break;
+			case 7:
+				source.setStatus('frz', source, this.effect);
+				break;
+			case 8:
+				source.setStatus('par', source, this.effect);
+				break;
+			case 9:
+				source.addVolatile('confusion', source, this.effect);
+				break;
+			case 10:
+				source.faint(source, this.effect);
+				break;
+			case 11:
+				target.faint(source, this.effect);
+				break;
+			case 12:
+				var randomStat: StatIDExceptHP = this.sample(['atk', 'def', 'spa', 'spd', 'spe']);
+				this.boost({[randomStat]: 6}, target, source, this.effect);
+				return;
+			case 13:
+				var randomStat: StatIDExceptHP = this.sample(['atk', 'def', 'spa', 'spd', 'spe']);
+				this.boost({[randomStat]: 6}, source, source, this.effect);
+				return;
+			case 14:
+				this.boost({
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				}, source, source);
+				break;
+			case 15:
+				this.boost({
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				}, target, source, this.effect);
+				break;
+			case 17:
+				source.addVolatile('taunt', source, this.effect);
+				break;
+			case 18:
+				const terrain = this.sample(['grassyterrain', 'electricterrain', 'mistyterrain', 'psychicterrain']);
+				this.field.setTerrain(terrain, source, this.effect);
+				break;
+			case 19:
+				const weather = this.sample(['sunnyday', 'raindance', 'sandstorm', 'hail']);
+				this.field.setWeather(weather, source, this.effect);
+				break;
+			case 20:
+				this.actions.useMove('poisongas', source, target, this.effect);
+				break;
+			case 21:
+				this.actions.useMove('fling', source, target, this.effect);
+				break;
+			case 22:
+				this.heal(target.baseMaxhp, source, source, this.effect);
+				break;
+			case 23:
+				this.heal(target.baseMaxhp, target, source, this.effect);
+				break;
+			case 24:
+				const ohkoMove = this.sample(['fissure', 'guillotine', 'horndrill', 'sheercold']);
+				this.actions.useMove(ohkoMove, source, target);
+				break;
+			case 25:
+				this.actions.useMove('metronome', source, source, this.effect);
+				break;
+			case 26:
+				source.addVolatile('torment', source, this.effect);
+				break;
+			case 27:
+				target.addVolatile('torment', source, this.effect);
+				break;
+			case 28:
+				this.win(target.side);
+				break;
+			case 29:
+				this.win(source.side);
+				break;
+			case 30:
+				const item = target.takeItem();
+				if (item) {
+					this.add('-enditem', target, item.name, '[from] move: Banana', '[of] ' + source);
+				}
+				break;
+			case 31:
+				target.switchFlag = true;
+				// TODO: Message
+				break;
+			case 32:
+				source.switchFlag = true;
+				// TODO: Message
+				break;
+			case 33:
+				source.transformInto(target);
+				break;
+			case 34:
+				this.actions.useMove('banana', source, target, this.effect);
+				break;
+			case 35:
+				target.addVolatile('telekinesis');
+				break;
+			case 36:
+				source.addVolatile('telekinesis');
+				break;
 			}
 			// You can use Any of the Dance moves.
 			// You can give any of the 18 types+Nuclear, Plastic and glass on your opponent or yourself.
@@ -33516,7 +33430,7 @@ oceanhorn: {
 		target: "normal",
 		type: "Fairy",
 		onAfterHit(target, source) {
-			this.boost({ atk: 1, spa: 1 });
+			this.boost({atk: 1, spa: 1});
 		},
 		flags: {protect: 1, mirror: 1},
 		isNonstandard: "Future",
@@ -33605,9 +33519,9 @@ oceanhorn: {
 					this.debug('doubling secondary chance');
 					for (const secondary of move.secondaries) {
 						if (!secondary.chance) return;
-						secondary.chance = secondary.chance >= 50
-							? 100
-							: 0;
+						secondary.chance = secondary.chance >= 50 ?
+							100 :
+							0;
 					}
 				}
 
@@ -33836,7 +33750,7 @@ oceanhorn: {
 				}
 			}
 			if (stats.length) {
-				const boostsToPass = { ...target.boosts };
+				const boostsToPass = {...target.boosts};
 				if (!target.side.addSlotCondition(target, 'investment')) return false;
 				target.clearBoosts();
 				Object.assign(target.side.slotConditions[target.position]['investment'], {
@@ -34061,39 +33975,60 @@ oceanhorn: {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		onModifyMove (move, pokemon, target) {
+		onModifyMove(move, pokemon, target) {
 			if (!target) return;
 			const action = this.queue.willMove(target);
 			if (!action) return false;
 			const targetMove = this.dex.getActiveMove(action.move.id);
-				if (target.newlySwitched) {
+			if (target.newlySwitched) {
 				move.overrideDefensiveStat = 'spe';
 			}
-			if (targetMove.category === 'Status'||move.category === 'Status') {
+			if (targetMove.category === 'Status' || move.category === 'Status') {
 				move.overrideDefensiveStat = 'spe';
 			}
-			
-			if (targetMove.category === 'Special'||move.category === 'Special') {
+
+			if (targetMove.category === 'Special' || move.category === 'Special') {
 				move.overrideDefensiveStat = 'def';
 			}
-			if (targetMove.category === 'Physical'||move.category === 'Physical') {
+			if (targetMove.category === 'Physical' || move.category === 'Physical') {
 				move.overrideDefensiveStat = 'spd';
 			}
 			const priormove = target.lastMove;
-				if (priormove?.category === 'Special' ) {
-					move.overrideDefensiveStat = 'def';
-				}
-				if (priormove?.category === 'Status' ) {
-					move.overrideDefensiveStat = 'spe';
-				}
-				if (priormove?.category === 'Physical' ) {
-					move.overrideDefensiveStat = 'spd';
-				}			
+			if (priormove?.category === 'Special') {
+				move.overrideDefensiveStat = 'def';
+			}
+			if (priormove?.category === 'Status') {
+				move.overrideDefensiveStat = 'spe';
+			}
+			if (priormove?.category === 'Physical') {
+				move.overrideDefensiveStat = 'spd';
+			}
 		},
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
 		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	unload: {
+		num: 131,
+		accuracy: 100,
+		basePower: 25,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Unload",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+		maxMove: {basePower: 120},
+		contestType: "Cool",
+		self: {
+			volatileStatus: 'focusenergy',
+		},
 	},
 	tornadocab: {
 		num: 173,
@@ -35044,8 +34979,8 @@ oceanhorn: {
 			return null;
 		},
 		onBasePower(basePower, pokemon, target) {
-			if (pokemon.effectiveWeather()
-			&& !['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+			if (pokemon.effectiveWeather() &&
+			!['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
 				this.debug('weakened by weather');
 				return this.chainModify(0.5);
 			}
@@ -36109,14 +36044,10 @@ oceanhorn: {
 				if (this.field.getPseudoWeather('fabricworld')) {
 					this.boost({
 						def: -2,
-						
 					});
-					
-				} else {
-						
-					};
 				}
 			},
+		},
 		pp: 30,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
@@ -36135,7 +36066,7 @@ oceanhorn: {
 		flags: {protect: 1, mirror: 1, defrost: 1},
 		secondary: {
 			chance: 20,
-			volatileStatus: 'brn',
+			status: 'brn',
 		},
 		target: "normal",
 		type: "Fabric",
@@ -36590,7 +36521,7 @@ oceanhorn: {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		recoil: [1,4],
+		recoil: [1, 4],
 		secondary: null,
 		target: "normal",
 		type: "Nuclear",
@@ -36703,7 +36634,7 @@ oceanhorn: {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-		recoil: [1,3],
+		recoil: [1, 3],
 		secondary: {
 			chance: 10,
 			status: 'brn',
@@ -36796,7 +36727,7 @@ oceanhorn: {
 		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 33,
-			volatileStatus: 'confusion',	
+			volatileStatus: 'confusion',
 		},
 		target: "normal",
 		type: "Chaos",
@@ -36900,7 +36831,7 @@ oceanhorn: {
 		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 35,
-			volatileStatus: 'confusion',	
+			volatileStatus: 'confusion',
 		},
 		target: "normal",
 		type: "Chaos",
@@ -37088,7 +37019,7 @@ oceanhorn: {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		recoil: [1,3],
+		recoil: [1, 3],
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -37234,7 +37165,7 @@ oceanhorn: {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		multihit: [2,5],
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -37367,7 +37298,7 @@ oceanhorn: {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bullet: 1},
-		multihit: [2,5],
+		multihit: [2, 5],
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -37621,7 +37552,7 @@ oceanhorn: {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, bite: 1, above: 1},
-		drain: [1,2],
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Rock",
@@ -37879,7 +37810,7 @@ oceanhorn: {
 		pp: 5,
 		priority: 1,
 		flags: {protect: 1, mirror: 1},
-		recoil: [1,3],
+		recoil: [1, 3],
 		secondary: null,
 		target: "normal",
 		type: "Glass",
@@ -38218,7 +38149,7 @@ oceanhorn: {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bite: 1},
-		drain: [1,2],
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -38508,7 +38439,7 @@ oceanhorn: {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		drain: [1,2],
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -38709,7 +38640,7 @@ oceanhorn: {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		drain: [1,2],
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -38724,7 +38655,7 @@ oceanhorn: {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		recoil: [1,3],
+		recoil: [1, 3],
 		secondary: {
 			chance: 15,
 			status: 'psn',
@@ -38742,7 +38673,7 @@ oceanhorn: {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		recoil: [1,3],
+		recoil: [1, 3],
 		secondary: {
 			chance: 15,
 			status: 'frz',
@@ -38830,7 +38761,7 @@ oceanhorn: {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		multihit: [2,5],
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -38924,7 +38855,7 @@ oceanhorn: {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
-		multihit: [2,5],
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Sound",
@@ -39164,6 +39095,7 @@ oceanhorn: {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
+		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -39197,7 +39129,7 @@ oceanhorn: {
 			chance: 30,
 			self: {
 				sideCondition: 'tailwind',
-			}
+			},
 		},
 		target: "normal",
 		type: "Flying",
@@ -39319,7 +39251,7 @@ oceanhorn: {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		drain: [1,2],
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Magic",
@@ -39473,7 +39405,7 @@ oceanhorn: {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		multihit: [2,5],
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Wind",
@@ -39927,7 +39859,7 @@ oceanhorn: {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-		recoil: [1,3],
+		recoil: [1, 3],
 		secondary: {
 			chance: 5,
 			status: 'brn',
@@ -40562,7 +40494,7 @@ oceanhorn: {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		multihit: [2,5],
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -40760,7 +40692,7 @@ oceanhorn: {
 		type: "Nuclear",
 		isNonstandard: "Future",
 	},
-	beacon: {	//TODO: Stops Fog
+	beacon: {	// TODO: Stops Fog
 		num: 666975,
 		accuracy: 90,
 		basePower: 80,
@@ -40774,8 +40706,8 @@ oceanhorn: {
 			self: {
 				boosts: {
 					accuracy: 2,
-				}
-			}
+				},
+			},
 		},
 		target: "normal",
 		type: "Light",
@@ -41168,7 +41100,7 @@ oceanhorn: {
 		type: "Ice",
 		isNonstandard: "Future",
 	},
-	magmasport: { //TODO: Interactions with Volcanic Terrain, Heat Up and Floor is lava
+	magmasport: { // TODO: Interactions with Volcanic Terrain, Heat Up and Floor is lava
 		num: 666997,
 		accuracy: true,
 		basePower: 0,
@@ -41810,7 +41742,23 @@ oceanhorn: {
 		name: "Worm",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Virus",
@@ -42072,6 +42020,11 @@ oceanhorn: {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -42227,7 +42180,7 @@ oceanhorn: {
 			}
 			return move.basePower;
 		},
-beforeTurnCallback(pokemon) {
+		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
 				side.addSideCondition('pursuit', pokemon);
@@ -42560,7 +42513,7 @@ beforeTurnCallback(pokemon) {
 		name: "Magic Wand",
 		pp: 15,
 		priority: 0,
-		flags: {},onHit(target, source, effect) {
+		flags: {}, onHit(target, source, effect) {
 			const moves = this.dex.moves.all().filter(move => (
 				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
 				!move.realMove && !move.isZ && !move.isMax &&
@@ -43464,8 +43417,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Charge Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Charge Spin', '[of] ' + pokemon);
@@ -43479,8 +43432,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Charge Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Charge Spin', '[of] ' + pokemon);
@@ -43503,7 +43456,23 @@ beforeTurnCallback(pokemon) {
 		name: "Smoke Lunge",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Magic",
@@ -44280,7 +44249,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -44695,7 +44667,7 @@ beforeTurnCallback(pokemon) {
 		name: "Zipper Hole",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -44725,7 +44697,7 @@ beforeTurnCallback(pokemon) {
 		name: "Zipper Strike",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -44771,7 +44743,7 @@ beforeTurnCallback(pokemon) {
 			duration: 2,
 			onInvulnerability: false,
 		},
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Fabric",
@@ -45382,8 +45354,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Bowl Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -45397,8 +45369,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Bowl Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Bowl Spin', '[of] ' + pokemon);
@@ -45657,6 +45629,22 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
 		secondary: null,
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -45671,6 +45659,22 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
 		secondary: null,
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
@@ -45717,12 +45721,12 @@ beforeTurnCallback(pokemon) {
 			let success = false;
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
 			const removeTarget = [
-				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
 			];
 			const removeAll = [
-				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
 			];
 			for (const targetCondition of removeTarget) {
 				if (target.side.removeSideCondition(targetCondition)) {
@@ -47036,7 +47040,7 @@ beforeTurnCallback(pokemon) {
 		name: "Time Warp",
 		pp: 5,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -47193,8 +47197,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Wind Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Wind Spin', '[of] ' + pokemon);
@@ -47208,8 +47212,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Wind Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Wind Spin', '[of] ' + pokemon);
@@ -47880,7 +47884,23 @@ beforeTurnCallback(pokemon) {
 		name: "Portal Burst",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
@@ -48067,7 +48087,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
-			if (type === 'Fairy' || type === 'Chaos'|| type === 'Ghost'|| type === 'Dragon'|| type === 'Zombie') return 1;
+			if (type === 'Fairy' || type === 'Chaos' || type === 'Ghost' || type === 'Dragon' || type === 'Zombie') return 1;
 		},
 		secondary: null,
 		target: "normal",
@@ -48400,7 +48420,7 @@ beforeTurnCallback(pokemon) {
 			}
 			return move.basePower;
 		},
-beforeTurnCallback(pokemon) {
+		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
 				side.addSideCondition('pursuit', pokemon);
@@ -48773,7 +48793,15 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 1,
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -48898,15 +48926,15 @@ beforeTurnCallback(pokemon) {
 				if (this.field.getPseudoWeather('artgallery')) {
 					this.boost({
 						def: -4,
-						spd: -4
+						spd: -4,
 					});
 				} else {
 					this.boost({
-						
+
 					});
 				}
+			},
 		},
-	},
 		target: "normal",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -49309,7 +49337,7 @@ beforeTurnCallback(pokemon) {
 				});
 			} else {
 				this.boost({
-				
+
 				});
 			}
 		},
@@ -49338,7 +49366,7 @@ beforeTurnCallback(pokemon) {
 					});
 				} else {
 					this.boost({
-						
+
 					});
 				}
 			},
@@ -50124,6 +50152,22 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -51780,7 +51824,7 @@ beforeTurnCallback(pokemon) {
 		secondary: null,
 		target: "self",
 		onHit(target) {
-			if (target.hp <= target.maxhp / 2 || target.boosts.atk >= 6 || target.boosts.spa >= 6 ||  target.maxhp === 1) { // Shedinja clause
+			if (target.hp <= target.maxhp / 2 || target.boosts.atk >= 6 || target.boosts.spa >= 6 || target.maxhp === 1) { // Shedinja clause
 				return false;
 			}
 			this.directDamage(target.maxhp / 2);
@@ -52398,7 +52442,7 @@ beforeTurnCallback(pokemon) {
 			}
 			return move.basePower;
 		},
-beforeTurnCallback(pokemon) {
+		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
 				side.addSideCondition('pursuit', pokemon);
@@ -52497,7 +52541,7 @@ beforeTurnCallback(pokemon) {
 			}
 			return move.basePower;
 		},
-beforeTurnCallback(pokemon) {
+		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
 				side.addSideCondition('pursuit', pokemon);
@@ -53164,7 +53208,10 @@ beforeTurnCallback(pokemon) {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Shadow",
 		isNonstandard: "Future",
@@ -53192,7 +53239,10 @@ beforeTurnCallback(pokemon) {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Shadow",
 		isNonstandard: "Future",
@@ -53206,7 +53256,10 @@ beforeTurnCallback(pokemon) {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Shadow",
 		isNonstandard: "Future",
@@ -53569,7 +53622,14 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 70,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -56175,7 +56235,7 @@ beforeTurnCallback(pokemon) {
 		name: "Schizo Boost",
 		pp: 5,
 		priority: 0,
-		onHit (pokemon) {
+		onHit(pokemon) {
 			let stats: BoostID[] = [];
 			const boost: SparseBoostsTable = {};
 			let statPlus: BoostID;
@@ -56978,7 +57038,10 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -57850,7 +57913,7 @@ beforeTurnCallback(pokemon) {
 			},
 			onEntryHazard(pokemon) {
 				if (!pokemon.isGrounded()) return;
-				if (pokemon.hasType('Electric') || pokemon.hasType('Rubber') || pokemon.hasType('Ground') || pokemon.hasType('Tech') ) {
+				if (pokemon.hasType('Electric') || pokemon.hasType('Rubber') || pokemon.hasType('Ground') || pokemon.hasType('Tech')) {
 					this.add('-sideend', pokemon.side, 'move: Wire Trap', '[of] ' + pokemon);
 					pokemon.side.removeSideCondition('wiretrap');
 				} else if (pokemon.hasItem('heavydutyboots')) {
@@ -58189,8 +58252,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Jailbreak', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Jailbreak', '[of] ' + pokemon);
@@ -58204,8 +58267,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Jailbreak', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Jailbreak', '[of] ' + pokemon);
@@ -58352,7 +58415,7 @@ beforeTurnCallback(pokemon) {
 			onFieldRestart(target, source) {
 				this.field.removePseudoWeather('paddedroom');
 			},
-			
+
 			onDisableMove(pokemon) {
 				for (const moveSlot of pokemon.moveSlots) {
 					const move = this.dex.moves.get(moveSlot.id);
@@ -58368,7 +58431,7 @@ beforeTurnCallback(pokemon) {
 					return false;
 				}
 			},
-			
+
 		},
 		secondary: null,
 		target: "scripted",
@@ -59048,12 +59111,12 @@ beforeTurnCallback(pokemon) {
 			let success = false;
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({});
 			const removeTarget = [
-				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
 			];
 			const removeAll = [
-				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
 			];
 			for (const targetCondition of removeTarget) {
 				if (target.side.removeSideCondition(targetCondition)) {
@@ -59097,10 +59160,9 @@ beforeTurnCallback(pokemon) {
 				if (pokemon.hasType('Poison')) {
 					this.add('-sideend', pokemon.side, 'move: Acid Trap', '[of] ' + pokemon);
 					pokemon.side.removeSideCondition('acidtrap');
-					
 				} else if (pokemon.hasItem('heavydutyboots')) {
 					return;
-				} else if (pokemon.hasType('Food') ) {
+				} else if (pokemon.hasType('Food')) {
 					const typeMod = this.clampIntRange(pokemon.runEffectiveness(this.dex.getActiveMove('acidtrap')), -6, 6);
 					this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 8);
 				} else {
@@ -60041,7 +60103,7 @@ beforeTurnCallback(pokemon) {
 		name: "Special Order",
 		pp: 15,
 		priority: 0,
-		flags: {},onHit(target, source, effect) {
+		flags: {}, onHit(target, source, effect) {
 			const moves = this.dex.moves.all().filter(move => (
 				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
 				!move.realMove && !move.isZ && !move.isMax &&
@@ -62543,20 +62605,15 @@ beforeTurnCallback(pokemon) {
 		},
 		secondary: {
 			chance: 100,
-			
 			onHit(target) {
 				if (this.field.getPseudoWeather('artgallery')) {
 					this.boost({
 						def: -2,
-						spd: -2
-						
+						spd: -2,
 					});
-					
-				} else {
-						
-					};
 				}
 			},
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		target: "normal",
 		type: "Paint",
@@ -62578,15 +62635,11 @@ beforeTurnCallback(pokemon) {
 				if (this.field.getPseudoWeather('artgallery')) {
 					this.boost({
 						def: -1,
-						
 					});
-					
-				} else {
-						
-					};
 				}
 			},
-		
+		},
+
 		target: "normal",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -62606,14 +62659,14 @@ beforeTurnCallback(pokemon) {
 			onHit(target) {
 				if (this.field.getPseudoWeather('artgallery')) {
 					this.boost({
-						spd: -1
+						spd: -1,
 					});
 				} else {
 					this.boost({
-						
+
 					});
 				}
-		},
+			},
 		},
 		target: "allAdjacent",
 		type: "Paint",
@@ -63333,7 +63386,7 @@ beforeTurnCallback(pokemon) {
 			}
 			return move.basePower;
 		},
-beforeTurnCallback(pokemon) {
+		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
 				side.addSideCondition('pursuit', pokemon);
@@ -63943,12 +63996,12 @@ beforeTurnCallback(pokemon) {
 			let success = false;
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
 			const removeTarget = [
-				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
 			];
 			const removeAll = [
-				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-				'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
 			];
 			for (const targetCondition of removeTarget) {
 				if (target.side.removeSideCondition(targetCondition)) {
@@ -64630,7 +64683,12 @@ beforeTurnCallback(pokemon) {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			onHit(target, source, move) {
+				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+			},
+		},
 		target: "normal",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -64941,7 +64999,7 @@ beforeTurnCallback(pokemon) {
 			}
 			return move.basePower;
 		},
-beforeTurnCallback(pokemon) {
+		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
 				side.addSideCondition('pursuit', pokemon);
@@ -65865,7 +65923,7 @@ beforeTurnCallback(pokemon) {
 		name: "Necrochannel",
 		pp: 15,
 		priority: 0,
-		flags: {},onHit(target, source, effect) {
+		flags: {}, onHit(target, source, effect) {
 			const moves = this.dex.moves.all().filter(move => (
 				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
 				!move.realMove && !move.isZ && !move.isMax &&
@@ -66033,7 +66091,12 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			boosts: {
+				spa: -1,
+			},
+		},
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -66061,7 +66124,10 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, moon: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -66372,6 +66438,22 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -66385,7 +66467,23 @@ beforeTurnCallback(pokemon) {
 		name: "DimensionShamble",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -66437,7 +66535,7 @@ beforeTurnCallback(pokemon) {
 			}
 			return move.basePower;
 		},
-beforeTurnCallback(pokemon) {
+		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
 				side.addSideCondition('pursuit', pokemon);
@@ -66892,8 +66990,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Clearing Wind', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Clearing Wind', '[of] ' + pokemon);
@@ -66907,8 +67005,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Clearing Wind', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Clearing Wind', '[of] ' + pokemon);
@@ -67189,7 +67287,7 @@ beforeTurnCallback(pokemon) {
 		condition: {
 			duration: 5,
 			durationCallback(target, source, effect) {
-				if (source?.hasItem('paintedrock') ) {
+				if (source?.hasItem('paintedrock')) {
 					return 10;
 				}
 				return 5;
@@ -67204,7 +67302,7 @@ beforeTurnCallback(pokemon) {
 					return this.chainModify([1.5]);
 				}
 			},
-			
+
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 4,
 			onFieldEnd() {
@@ -67693,7 +67791,12 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -68096,8 +68199,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -68111,8 +68214,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -68212,8 +68315,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -68227,8 +68330,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -68636,7 +68739,7 @@ beforeTurnCallback(pokemon) {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	invertedroom: {	/* TODO **/
+	invertedroom: {/* TODO **/
 		num: 668843,
 		accuracy: true,
 		basePower: 0,
@@ -69378,6 +69481,20 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onAfterHit(target, source, move) {
+			if (!move.hasSheerForce && source.hp) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('scrapmetal');
+				}
+			}
+		},
+		onAfterSubDamage(damage, target, source, move) {
+			if (!move.hasSheerForce && source.hp) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('scrapmetal');
+				}
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -69646,7 +69763,13 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Flying', type);
+		},
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -70023,7 +70146,10 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'pacify',
+		},
 		target: "allAdjacent",
 		type: "Water",
 		isNonstandard: "Future",
@@ -70145,8 +70271,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -70160,8 +70286,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -70509,6 +70635,7 @@ beforeTurnCallback(pokemon) {
 		name: "Freezing Kiss",
 		pp: 5,
 		priority: 0,
+		status: 'frz',
 		flags: {contact: 1, protect: 1, mirror: 1, kiss: 1},
 		secondary: null,
 		target: "normal",
@@ -71024,7 +71151,7 @@ beforeTurnCallback(pokemon) {
 			}
 			return move.basePower;
 		},
-beforeTurnCallback(pokemon) {
+		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
 				side.addSideCondition('pursuit', pokemon);
@@ -72647,10 +72774,10 @@ beforeTurnCallback(pokemon) {
 			},
 			onModifySpDPriority: 10,
 			onModifySpD(spd, pokemon) {
-			if (pokemon.hasType('Cosmic')) {
-				return this.chainModify([1.5]);
-			}			
-		},
+				if (pokemon.hasType('Cosmic')) {
+					return this.chainModify([1.5]);
+				}
+			},
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 4,
 			onFieldEnd() {
@@ -73182,7 +73309,14 @@ beforeTurnCallback(pokemon) {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			self: {
+				boosts: {
+					def: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Grass",
 		isNonstandard: "Future",
@@ -73299,7 +73433,7 @@ beforeTurnCallback(pokemon) {
 		condition: {
 			duration: 5,
 			durationCallback(target, source, effect) {
-				if (source?.hasItem('woodenrock') ) {
+				if (source?.hasItem('woodenrock')) {
 					return 10;
 				}
 				return 5;
@@ -73316,10 +73450,10 @@ beforeTurnCallback(pokemon) {
 			},
 			onModifyDefPriority: 10,
 			onModifyDef(def, pokemon) {
-			if (pokemon.hasType('Wood')) {
-				return this.chainModify([1.5]);
-			}			
-		},
+				if (pokemon.hasType('Wood')) {
+					return this.chainModify([1.5]);
+				}
+			},
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 4,
 			onFieldEnd() {
@@ -73950,6 +74084,26 @@ beforeTurnCallback(pokemon) {
 		name: "Rest in Peace",
 		pp: 10,
 		priority: 0,
+		onTry(source) {
+			if (source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')) return false;
+
+			if (source.hp === source.maxhp) {
+				this.add('-fail', source, 'heal');
+				return null;
+			}
+			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+				return null;
+			}
+		},
+		onHit(target, source, move) {
+			const result = target.setStatus('slp', source, move);
+			if (!result) return result;
+			target.statusState.time = 3;
+			target.statusState.startTime = 3;
+			this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+		},
+		selfdestruct: "always",
 		flags: {snatch: 1, bite: 1},
 		secondary: null,
 		target: "self",
@@ -74007,10 +74161,10 @@ beforeTurnCallback(pokemon) {
 			},
 			onModifySpDPriority: 10,
 			onModifySpD(spd, pokemon) {
-			if (pokemon.hasType('Cyber')) {
-				return this.chainModify([1.5]);
-			}			
-		},
+				if (pokemon.hasType('Cyber')) {
+					return this.chainModify([1.5]);
+				}
+			},
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 4,
 			onFieldEnd() {
@@ -74069,7 +74223,7 @@ beforeTurnCallback(pokemon) {
 		onHit(target) {
 			if (target?.volatiles['bleed']) this.boost({def: -1}, target);
 		},
-		
+
 		secondary: null,
 		target: "normal",
 		type: "Blood",
@@ -74194,7 +74348,49 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
-		secondary: null,
+		onHitField(target, source, move) {
+			let result = false;
+			let message = false;
+			for (const pokemon of this.getAllActive()) {
+				if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
+					this.add('-miss', source, pokemon);
+					result = true;
+				} else if (this.runEvent('TryHit', pokemon, source, move) === null) {
+					result = true;
+				} else if (!pokemon.volatiles['perishsong']) {
+					pokemon.addVolatile('perishsong');
+					this.add('-start', pokemon, 'perish1', '[silent]');
+					result = true;
+					message = true;
+				}
+			}
+			if (!result) return false;
+			if (message) this.add('-fieldactivate', 'move: Perish Song');
+		},
+		condition: {
+			duration: 2,
+			onEnd(target) {
+				this.add('-start', target, 'perish0');
+				target.faint();
+			},
+			onResidualOrder: 24,
+			onResidual(pokemon) {
+				const duration = pokemon.volatiles['perishsong'].duration;
+				this.add('-start', pokemon, 'perish' + duration);
+				
+			},
+			onTrapPokemon(pokemon) {
+				pokemon.tryTrap();
+			},
+		},
+		
+		boosts: {
+			atk: 12,
+			def: 12,
+			spa: 12,
+			spd: 12,
+			spe: 12,
+		},
 		target: "self",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -74579,7 +74775,7 @@ beforeTurnCallback(pokemon) {
 			}
 			return move.basePower;
 		},
-beforeTurnCallback(pokemon) {
+		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
 				side.addSideCondition('pursuit', pokemon);
@@ -74780,10 +74976,10 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onHit(pokemon) {
-				if (pokemon.hasType('Ghost')){
+			if (pokemon.hasType('Ghost')) {
 				pokemon.setType(pokemon.getTypes(true).map(type => type === "Ghost" ? "???" : type));
 				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Exocise');
-				}
+			}
 		},
 		secondary: null,
 		target: "normal",
@@ -75289,6 +75485,10 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Chaos' || !target.setType('Chaos')) return false;
+			this.add('-start', target, 'typechange', 'Chaos');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
@@ -75359,6 +75559,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Ice' || !target.setType('Ice')) return false;
+			this.add('-start', target, 'typechange', 'Ice');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -75373,6 +75577,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Poison' || !target.setType('Poison')) return false;
+			this.add('-start', target, 'typechange', 'Poison');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -75387,6 +75595,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Normal' || !target.setType('Normal')) return false;
+			this.add('-start', target, 'typechange', 'Normal');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -75401,6 +75613,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Fire' || !target.setType('Fire')) return false;
+			this.add('-start', target, 'typechange', 'Fire');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -75415,6 +75631,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Fear' || !target.setType('Fear')) return false;
+			this.add('-start', target, 'typechange', 'Fear');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fear",
@@ -75457,6 +75677,10 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			accuracy: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Sound",
@@ -75825,7 +76049,10 @@ beforeTurnCallback(pokemon) {
 		pp: 25,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -75839,6 +76066,15 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
+		secondaries: [
+			{
+				chance: 10,
+				status: 'frz',
+			}, {
+				chance: 10,
+				volatileStatus: 'flinch',
+			},
+		],
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -75853,7 +76089,10 @@ beforeTurnCallback(pokemon) {
 		pp: 30,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -75867,7 +76106,10 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			status: 'par',
+		},
 		target: "allAdjacentFoes",
 		type: "Rubber",
 		isNonstandard: "Future",
@@ -75923,7 +76165,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			volatileStatus: 'attract',
+		},
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -75932,6 +76177,16 @@ beforeTurnCallback(pokemon) {
 		num: 669331,
 		accuracy: 100,
 		basePower: 60,
+		basePowerCallback(pokemon, target, move) {
+			const damagedByTarget = pokemon.attackedBy.some(
+				p => p.source === target && p.damage > 0 && p.thisTurn
+			);
+			if (damagedByTarget) {
+				this.debug('BP doubled for getting hit by ' + target);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Special",
 		name: "Raging Scales",
 		pp: 10,
@@ -76026,6 +76281,7 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -76259,7 +76515,35 @@ beforeTurnCallback(pokemon) {
 		name: "KnightOfOwner",
 		pp: 10,
 		priority: -1,
-		flags: {protect: 1},
+			flags: {
+			protect: 1, bypasssub: 1, allyanim: 1,
+			failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1,
+		},
+		onHit(target, source) {
+			const move = target.lastMove;
+			if (source.transformed || !move || move.flags['failmimic'] || source.moves.includes(move.id)) {
+				return false;
+			}
+			if (move.isZ || move.isMax) return false;
+			const mimicIndex = source.moves.indexOf('mimic');
+			if (mimicIndex < 0) return false;
+
+			source.moveSlots[mimicIndex] = {
+				move: move.name,
+				id: move.id,
+				pp: move.pp,
+				maxpp: move.pp,
+				target: move.target,
+				disabled: false,
+				used: false,
+				virtual: true,
+			};
+			this.add('-start', source, 'Mimic', move.name);
+		},
+		self: {
+			volatileStatus: 'focusenergy',
+		},
+		volatileStatus: 'disable',
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
@@ -77637,7 +77921,7 @@ beforeTurnCallback(pokemon) {
 		condition: {
 			duration: 5,
 			durationCallback(target, source, effect) {
-				if (source?.hasItem('rottedrock') ) {
+				if (source?.hasItem('rottedrock')) {
 					return 10;
 				}
 				return 5;
@@ -77654,10 +77938,10 @@ beforeTurnCallback(pokemon) {
 			},
 			onModifyDefPriority: 10,
 			onModifyDef(def, pokemon) {
-			if (pokemon.hasType('fabric')) {
-				return this.chainModify([1.5]);
-			}			
-		},
+				if (pokemon.hasType('fabric')) {
+					return this.chainModify([1.5]);
+				}
+			},
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 4,
 			onFieldEnd() {
@@ -78021,7 +78305,14 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, snatch: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -78077,7 +78368,12 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			boosts: {
+				spe: -2,
+			},
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -78304,7 +78600,7 @@ beforeTurnCallback(pokemon) {
 		name: "Frequency",
 		pp: 15,
 		priority: 0,
-		flags: {},onHit(target, source, effect) {
+		flags: {}, onHit(target, source, effect) {
 			const moves = this.dex.moves.all().filter(move => (
 				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
 				!move.realMove && !move.isZ && !move.isMax &&
@@ -78718,8 +79014,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -78733,8 +79029,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -79690,10 +79986,8 @@ beforeTurnCallback(pokemon) {
 			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
 			for (const ally of allies) {
 				if (ally.cureStatus()) success = true;
-				
 			}
 			return success;
-
 		},
 		priority: 0,
 		flags: {snatch: 1, sound: 1},
@@ -79887,8 +80181,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Hat Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Hat Spin', '[of] ' + pokemon);
@@ -79902,8 +80196,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Hat Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Hat Spin', '[of] ' + pokemon);
@@ -80071,6 +80365,13 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
+		basePowerCallback(pokemon, target, move) {
+			if (target.gender === 'F') {
+				this.debug('BP doubled on female target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		target: "normal",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -81034,7 +81335,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onBasePower(basePower, pokemon) {
-			if (pokemon.volatiles[ 'perishsong']) {
+			if (pokemon.volatiles['perishsong']) {
 				return this.chainModify(1.5);
 			}
 		},
@@ -81562,8 +81863,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -81577,8 +81878,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -82088,7 +82389,23 @@ beforeTurnCallback(pokemon) {
 		name: "Bloodport",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Blood",
@@ -83009,8 +83326,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -83024,8 +83341,8 @@ beforeTurnCallback(pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll', 
-			'magictrap', 'pillowpile', 'wiretap', 'mines', 'brambles', 'icicles','scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -83073,7 +83390,7 @@ beforeTurnCallback(pokemon) {
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		onEffectiveness(typeMod, target, type) {
-			if (type === 'Fairy' || type === 'Chaos'|| type === 'Ghost'|| type === 'Dragon'|| type === 'Zombie') return 1;
+			if (type === 'Fairy' || type === 'Chaos' || type === 'Ghost' || type === 'Dragon' || type === 'Zombie') return 1;
 		},
 		critRatio: 2,
 		target: "normal",
@@ -83447,7 +83764,7 @@ beforeTurnCallback(pokemon) {
 		pp: 20,
 		priority: 0,
 
-		
+
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "allAdjacentFoes",
@@ -83569,11 +83886,11 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onHit(pokemon) {
-			if (pokemon.hasType('Divine')){
-			pokemon.setType(pokemon.getTypes(true).map(type => type === "Divine" ? "???" : type));
-			this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Exocise');
+			if (pokemon.hasType('Divine')) {
+				pokemon.setType(pokemon.getTypes(true).map(type => type === "Divine" ? "???" : type));
+				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Exocise');
 			}
-	},
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -84901,6 +85218,7 @@ beforeTurnCallback(pokemon) {
 		target: "allAdjacent",
 		type: "Ground",
 		contestType: "Tough",
+		isNonstandard: "Future",
 	},
 	brainfreeze: {
 		num: 42011,
@@ -84919,28 +85237,29 @@ beforeTurnCallback(pokemon) {
 		target: "normal",
 		type: "Ice",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	solarhunger: {
-        num: 42009,
-        accuracy: 100,
-        basePower: 80,
-        category: "Special",
-        isNonstandard: "Future",
-        name: "Solar Hunger", // DIE
-        pp: 15,
-        priority: 0,
-        flags: {protect: 1, mirror: 1},
-        onModifyMove(move, pokemon) {
-            switch (pokemon.effectiveWeather()) {
-            case 'sunnyday':
-            case 'desolateland':
-            case 'densefog':
-                move.basePower *= 1.5;
-                break;
-            }
-        },
-        secondary: null,
-        target: "normal",
-        type: "Grass",
-    },
+		num: 42009,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Solar Hunger", // DIE
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+			case 'densefog':
+				move.basePower *= 1.5;
+				break;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+	},
 };

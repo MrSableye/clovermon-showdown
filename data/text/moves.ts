@@ -7846,7 +7846,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Earth Shatter",
 		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
 		shortDesc: "Has 33% recoil.",
-		},
+	},
 	brainfreeze: {
 		name: "Brain Freeze",
 		desc: "Has 33% recoil. Nullifies the foe's Ability.",
@@ -8335,6 +8335,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	butterflykick: {
 		name: "Butterfly Kick",
 		shortDesc: "Combines Fighting in its type effectiveness.",
+	},
+	unload: {
+		name: "Unload",
+		shortDesc: "Hits 2-5 times. Applies Focus Energy to the user after the first hit.",
 	},
 	toxicbeam: {
 		name: "Toxic Beam",
@@ -9029,31 +9033,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Strife: Dicekind",
 		desc: "Physical if user's Atk > Sp. Atk. Hits 8 times. Each hit can miss. 4% to permanently improve's the user's side's luck by 5% up to 3 times. +1 crit at 3 stacks.",
 	},
-	abeblast: {
-		name: "Abe Blast",
-		desc: "Has a higher chance for a critical hit.",
-		shortDesc: "High critical hit ratio.",
-	},
-	harajukushuffle: {
-		name: "Harajuku Shuffle",
-		shortDesc: "Adds Fairy to the user's type(s). Raises the user's Attack, Sp. Atk, and Speed by 1.",
-	},
-	hokkaidosnowstorm: {
-		name: "Hokkaido Snowstorm",
-		shortDesc: "Adds Ice to the user's type(s). Sets Hail. 10% chance to Freeze."
-	},
-	blessingofyakushima: {
-		name: "Blessing of Yakushima",
-		shortDesc: "Adds Grass to the user's type(s). Sets Grassy Terrain. Heals 1/3 of the user's HP.",
-	},
-	eminenceofkinkakuji: {
-		name: "Eminence of Kinkaku-ji",
-		shortDesc: "Adds Steel to the user's type(s). Sets Lucky Chant. Clears the user's negative boosts.",
-	},
-	kamiswrath: {
-		name: "Kami's Wrath",
-		shortDesc: "Type varies based on the user's last type.",
-	},
 	cumblast: {
 		name: "Cum Blast",
 		desc: "Has a 100% chance to lower the target's Speed by 2 stages.",
@@ -9532,7 +9511,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	reroll: {
 		name: "Reroll",
-		desc: "Randomly reroll all boosts and deboosts (not acc/eva), always adding 3 total boosts."
+		desc: "Randomly reroll all boosts and deboosts (not acc/eva), always adding 3 total boosts.",
 	},
 	skillroom: {
 		name: "Skill Room",
@@ -24904,7 +24883,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	bonelance: {
 		name: "Bone Lance",
 		desc: "Raises its Attack in the first turn, then rams the foe on the next turn.",
-		shortDesc: "2-turn attack. Raises Attack on first turn."
+		shortDesc: "2-turn attack. Raises Attack on first turn.",
 	},
 	bonetired: {
 		name: "Bone Tired",
@@ -24938,7 +24917,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	flashball: {
 		name: "Flash Ball",
-		desc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat."
+		desc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat.",
 	},
 	soporous: {
 		name: "Soporous",

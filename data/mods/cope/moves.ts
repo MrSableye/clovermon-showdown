@@ -224,8 +224,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
-		chance: 100,
-		volatileStatus: 'flinch',
+			chance: 100,
+			volatileStatus: 'flinch',
 		},
 		target: "normal",
 		type: "Normal",
@@ -4004,6 +4004,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	yiikout: {
 		inherit: true,
+		basePower: 60,
 		isNonstandard: null,
 	},
 	roidflex: {
@@ -4603,11 +4604,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	bitterblade: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	spinout: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	bloodmoon: {
 		inherit: true,
 		isNonstandard: null,
@@ -4615,7 +4616,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	icespinner: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	brainfreeze: {
 		inherit: true,
 		isNonstandard: null,
@@ -4623,11 +4624,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	silktrap: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	mindbreak: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	glaiverush: {
 		inherit: true,
 		isNonstandard: null,
@@ -4639,7 +4640,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	trailblaze: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	flowertrick: {
 		inherit: true,
 		isNonstandard: null,

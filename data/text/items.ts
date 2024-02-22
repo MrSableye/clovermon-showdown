@@ -2755,7 +2755,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	loadeddisk: {
 		name: "Loaded Disk",
-		desc: "DIDN'T YOU KNOW [Blobbos-Spamton] IS FAMOUS FOR ITS [Doubled] DEFENSE [while holding]!?",
+		desc: "DIDN'T YOU KNOW [Blobbos-Spamton] IS FAMOUS FOR ITS [1.5x] DEFENSE [while holding]!?",
 	},
 	propellerhat: {
 		name: "Propeller Hat",
@@ -2852,13 +2852,17 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Alcohol",
 		desc: "Has adverse effects to Pokemon without extreme alcohol tolerance.",
 	},
+	radishorb: {
+		name: "Radish Orb",
+		desc: "At the end of every turn, this item attempts to radish the holder.",
+	},
 	missingvoirite: {
 		name: "Missinvoirite",
 		desc: "If held by a Missingvoir, this item allows it to Mega Evolve in battle.",
 	},
 	powerrush: {
 		name: "Power Rush",
-		desc: "If held by a Blobbos-Paper and it has 1/4 or less of its max HP, its Attack and Special Attack are doubled."
+		desc: "If held by a Blobbos-Paper and it has 1/4 or less of its max HP, its Attack and Special Attack are doubled.",
 	},
 	mesosack: {
 		name: "Meso Sack",
@@ -2899,6 +2903,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 	mascotsorb: {
 		name: "Mascot's Orb",
 		desc: "If held by Blobbos-Pika, its Attack and Special Attack are doubled.",
+	},
+	eyedropper: {
+		name: "Eye Dropper",
+		desc: "If held by a Blobbos-Chroma, sets it primary type to your team's most common type and its secondary type to a type that resists the most amount of enemy STABs.",
 	},
 	/* New Wack items **/
 	glalite: {
@@ -3063,7 +3071,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	fluffycoat: {
 		name: "Fluffy Coat",
-		desc: "An item to be held by a Pokémon. A thick coat of fur that slightly reduces ice type damage."
+		desc: "An item to be held by a Pokémon. A thick coat of fur that slightly reduces ice type damage.",
 	},
 	ancienthelm: {
 		name: "Ancient Helm",

@@ -1,4 +1,4 @@
-import { Tags } from "../../tags";
+import {Tags} from "../../tags";
 
 export const Rulesets: {[k: string]: ModdedFormatData} = {
 	multitier: {

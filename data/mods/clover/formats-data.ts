@@ -3752,6 +3752,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	taurospaldeacombat: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	tinglu: {
 		inherit: true,
 		isNonstandard: "Past",

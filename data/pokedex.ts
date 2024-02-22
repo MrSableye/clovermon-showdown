@@ -32806,6 +32806,36 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		battleOnly: "Acufront",
 		gen: 8,
 	},
+	acufronts: {
+		num: 69351,
+		name: "Acufront-S",
+		baseSpecies: "Acufront",
+		forme: "S",
+		types: [
+			"Rock",
+		],
+		baseStats: {
+			hp: 100,
+			atk: 50,
+			def: 85,
+			spa: 110,
+			spd: 95,
+			spe: 70,
+		},
+		abilities: {
+			0: "Presage",
+		},
+		heightm: 0.6,
+		weightkg: 1.6,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Fairy",
+		],
+		requiredAbility: "Presage",
+		battleOnly: "Acufront",
+		gen: 8,
+	},
 	militant: {
 		num: 69352,
 		name: "Militant",
@@ -34020,6 +34050,30 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 0.7,
 		weightkg: 51.9,
 		color: "Red",
+		eggGroups: [
+			"Undiscovered",
+		],
+		gen: 8,
+	},
+	mech: {
+		num: 69420,
+		name: "Mech",
+		types: ["Steel", "???"],
+		gender: "N",
+		baseStats: {
+			hp: 245,
+			atk: 235,
+			def: 255,
+			spa: 205,
+			spd: 230,
+			spe: 80,
+		},
+		abilities: {
+			0: "Artificial"
+		},
+		heightm: 21,
+		weightkg: 1000,
+		color: "Gray",
 		eggGroups: [
 			"Undiscovered",
 		],
@@ -35994,7 +36048,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Psychic"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 82, atk: 80, def: 80, spa: 85, spd: 95, spe: 78},
-		abilities: {0: "Swift Swim", 1: "Synchronize", H: "Inversion", S: "Big Brain"},
+		abilities: {0: "Swift Swim", 1: "Synchronize", H: "Inversion", S: "Brain Power"},
 		heightm: 1.7,
 		weightkg: 76.6,
 		color: "Yellow",
@@ -36785,7 +36839,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	tsuchinokoinsular: {
 	   num: -42703,
 	   name: "Tsuchinoko-Insular",
-	   types: ["Normal","Ground"],
+	   types: ["Normal", "Ground"],
 	   gender: "N",
 	   baseStats: {hp: 111, atk: 83, def: 59, spa: 66, spd: 69, spe: 77},
 	   abilities: {0: "Fake", H: "Intimidate", S: "Run Away"},
@@ -36814,172 +36868,172 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   eggGroups: ["Monster", "Water 2"],
 	   gen: 8,
 	},
-sludge: {
-	num: -8203,
-	name: "sludge",
-	types: ["Poison"],
-	genderRatio: {M: 0.5, F: 0.5},
-	baseStats: {hp: 1, atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
-	abilities: {0: "No Ability", H: "Flame Body", S: "Perish Body"},
-	heightm: 0.82,
-	weightkg: 400.3,
-	color: "Pink",
-	prevo: "Slub",
-	evoLevel: 1,
-	eggGroups: ["Monster", "Water 2"],
-	gen: 8,
-},
-impostree: {
-   num: -8204,
-   name: "Impostree",
-   types: ["Dragon", "Ground"],
-   genderRatio: {M: 0.5, F: 0.5},
-   baseStats: {hp: 70, atk: 120, def: 66, spa: 91, spd: 91, spe: 111},
-   abilities: {0: "Skill Link", H: "Moxie", S: "Infiltrator"},
-   heightm: 15.3,
-   weightkg: 557.7,
-   color: "Brown",
-   eggGroups: ["Dragon", "Field"],
-   gen: 8,
-},
-walkietalkie: {
-   num: -8205,
-   name: "Walkie Talkie",
-   types: ["Dragon", "Grass"],
-   gender: "N",
-   baseStats: {hp: 83, atk: 79, def: 81, spa: 135, spd: 83, spe: 129},
-   abilities: {0: "Chlorophyll", H: "Protosynthesis", S: "Solar Power"},
-   heightm: 3.2,
-   weightkg: 250.1,
-   color: "Green",
-   eggGroups: ["Undiscovered"],
-   gen: 8,
-},
-ponderselo: {
-   num: -8206,
-   name: "Ponderselo",
-   types: ["Psychic", "Steel"],
-   genderRatio: {M: 0.5, F: 0.5},
-   baseStats: {hp: 99, atk: 99, def: 88, spa: 123, spd: 77, spe: 69},
-   abilities: {0: "Super Luck", 1: "Serene Grace", H: "Skill Link", S: "Good as Gold"},
-   heightm: 2.2,
-   weightkg: 100.1,
-   color: "White",
-   eggGroups: ["Field"],
-   gen: 8,
-},
-azumarite: {
-   num: -8207,
-   name: "Azumarite",
-   types: ["Rock", "Dark"],
-   genderRatio: {M: 0.5, F: 0.5},
-   baseStats: {hp: 90, atk: 55, def: 120, spa: 115, spd: 95, spe: 75},
-   abilities: {0: "Huge Power", H: "Solid Rock", S: "Sand Force"},
-   heightm: 2.2,
-   weightkg: 100.1,
-   color: "Black",
-   eggGroups: ["Mineral"],
-   gen: 8,
-},
-meteoriik: {
-	num: -8224,
-	name: "Meteoriik",
-	types: ["Rock", "Fairy"],
-	gender: 'M',
-	baseStats: {hp: 72, atk: 99, def: 84, spa: 104, spd: 54, spe: 125},
-	abilities: {0: "Flame Body", H: "Long Reach", S: "Big Guy"},
-	heightm: 2000,
-	weightkg: 9999999999,
-	color: "Purple",
-	eggGroups: ["Mineral", "Fairy"],
-	gen: 8,
-},
-parmiausan: {
-	num: -8225,
-	name: "Parmiausan",
-	types: ["Normal"],
-	genderRatio: {M: 0.5, F: 0.5},
-	baseStats: {hp: 115, atk: 80, def: 72, spa: 50, spd: 72, spe: 105},
-	abilities: {0: "Aroma Veil", 1: "Pickup", H: "Well-Baked Body", S: "Cute Charm"},
-	heightm: 0.5,
-	weightkg: 5,
-	color: "Yellow",
-	eggGroups: ["Field", "Fairy"],
-	gen: 8,
-},
-gojifiend: {
-	num: -8226,
-	name: "Gojifiend",
-	types: ["Dragon","Normal"],
-	genderRatio: {M: 0.5, F: 0.5},
-	baseStats: {hp: 100, atk: 55, def: 85, spa: 120, spd: 85, spe: 35},
-	abilities: {0: "Tinted Lens", 1: "Soundproof", H: "He Will Be Dragon", S: "Thermal Exchange"},
-	heightm: 5.5,
-	weightkg: 555,
-	color: "Blue",
-	eggGroups: ["Field", "Monster"],
-	gen: 8,
-},
-snurl: {
-	num: -8227,
-	name: "Snurl",
-	types: ["Grass"],
-	genderRatio: {M: 0.5, F: 0.5},
-	baseStats: {hp: 65, atk: 50, def: 30, spa: 0, spd: 30, spe: 100},
-	abilities: {0: "Harvest", H: "Ripen", S: "Run Away"},
-	heightm: 0.8,
-	weightkg: 10,
-	evos: ["Snuroyal"],
-	color: "Pink",
-	eggGroups: ["Grass"],
-	gen: 8,
-},
-snuroyal: {
-	num: -8228,
-	name: "Snuroyal",
-	types: ["Steel"],
-	genderRatio: {M: 0.5, F: 0.5},
-	baseStats: {hp: 177, atk: 240, def: 61, spa: 1, spd: 61, spe: 60},
-	abilities: {0: "Harvest", H: "Grassy Surge", S: "Full Metal Body"},
-	heightm: 1.6,
-	weightkg: 206,
-	prevo: "Snurl",
-	evoLevel: 58,
-	color: "Yellow",
-	eggGroups: ["Grass"],
-	gen: 8,
-},
-sphare: {
-	num: -8229,
-	name: "Sphare",
-	types: ["Rock", "Fighting"],
-	gender: 'M',
-	baseStats: {hp: 71, atk: 120, def: 75, spa: 55, spd: 36, spe: 90},
-	abilities: {0: "Rock Head", 1: "Iron Fist", H: "Baller", S: "Mold Breaker"},
-	heightm: 0.5,
-	weightkg: 616,
-	evos: ["Costrike"],
-	color: "Brown",
-	eggGroups: ["Mineral"],
-	gen: 8,
-},
-costrike: { // that one guy who reflects physical
-	num: -8230,
-	name: "Costrike",
-	types: ["Rock", "Ghost"],
-	gender: 'M',
-	baseStats: {hp: 91, atk: 60, def: 168, spa: 115, spd: 41, spe: 62},
-	abilities: {0: "Clear Body", 1: "Striker", H: "Baller", S: "Mold Breaker"},
-	heightm: 2.4,
-	weightkg: 710,
-	prevo: "Sphare",
-	evoType: "useItem",
-	evoItem: "Marked Stone",
-	color: "Brown",
-	eggGroups: ["Mineral"],
-	gen: 8,
+	sludge: {
+		num: -8203,
+		name: "sludge",
+		types: ["Poison"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 1, atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+		abilities: {0: "No Ability", H: "Flame Body", S: "Perish Body"},
+		heightm: 0.82,
+		weightkg: 400.3,
+		color: "Pink",
+		prevo: "Slub",
+		evoLevel: 1,
+		eggGroups: ["Monster", "Water 2"],
+		gen: 8,
 	},
-hookling: {
+	impostree: {
+		num: -8204,
+		name: "Impostree",
+		types: ["Dragon", "Ground"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 70, atk: 120, def: 66, spa: 91, spd: 91, spe: 111},
+		abilities: {0: "Skill Link", H: "Moxie", S: "Infiltrator"},
+		heightm: 15.3,
+		weightkg: 557.7,
+		color: "Brown",
+		eggGroups: ["Dragon", "Field"],
+		gen: 8,
+	},
+	walkietalkie: {
+		num: -8205,
+		name: "Walkie Talkie",
+		types: ["Dragon", "Grass"],
+		gender: "N",
+		baseStats: {hp: 83, atk: 79, def: 81, spa: 135, spd: 83, spe: 129},
+		abilities: {0: "Chlorophyll", H: "Protosynthesis", S: "Solar Power"},
+		heightm: 3.2,
+		weightkg: 250.1,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+		gen: 8,
+	},
+	ponderselo: {
+		num: -8206,
+		name: "Ponderselo",
+		types: ["Psychic", "Steel"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 99, atk: 99, def: 88, spa: 123, spd: 77, spe: 69},
+		abilities: {0: "Super Luck", 1: "Serene Grace", H: "Skill Link", S: "Good as Gold"},
+		heightm: 2.2,
+		weightkg: 100.1,
+		color: "White",
+		eggGroups: ["Field"],
+		gen: 8,
+	},
+	azumarite: {
+		num: -8207,
+		name: "Azumarite",
+		types: ["Rock", "Dark"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 90, atk: 55, def: 120, spa: 115, spd: 95, spe: 75},
+		abilities: {0: "Huge Power", H: "Solid Rock", S: "Sand Force"},
+		heightm: 2.2,
+		weightkg: 100.1,
+		color: "Black",
+		eggGroups: ["Mineral"],
+		gen: 8,
+	},
+	meteoriik: {
+		num: -8224,
+		name: "Meteoriik",
+		types: ["Rock", "Fairy"],
+		gender: 'M',
+		baseStats: {hp: 72, atk: 99, def: 84, spa: 104, spd: 54, spe: 125},
+		abilities: {0: "Flame Body", H: "Long Reach", S: "Big Guy"},
+		heightm: 2000,
+		weightkg: 9999999999,
+		color: "Purple",
+		eggGroups: ["Mineral", "Fairy"],
+		gen: 8,
+	},
+	parmiausan: {
+		num: -8225,
+		name: "Parmiausan",
+		types: ["Normal"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 115, atk: 80, def: 72, spa: 50, spd: 72, spe: 105},
+		abilities: {0: "Aroma Veil", 1: "Pickup", H: "Well-Baked Body", S: "Cute Charm"},
+		heightm: 0.5,
+		weightkg: 5,
+		color: "Yellow",
+		eggGroups: ["Field", "Fairy"],
+		gen: 8,
+	},
+	gojifiend: {
+		num: -8226,
+		name: "Gojifiend",
+		types: ["Dragon", "Normal"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 100, atk: 55, def: 85, spa: 120, spd: 85, spe: 35},
+		abilities: {0: "Tinted Lens", 1: "Soundproof", H: "He Will Be Dragon", S: "Thermal Exchange"},
+		heightm: 5.5,
+		weightkg: 555,
+		color: "Blue",
+		eggGroups: ["Field", "Monster"],
+		gen: 8,
+	},
+	snurl: {
+		num: -8227,
+		name: "Snurl",
+		types: ["Grass"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 65, atk: 50, def: 30, spa: 0, spd: 30, spe: 100},
+		abilities: {0: "Harvest", H: "Ripen", S: "Run Away"},
+		heightm: 0.8,
+		weightkg: 10,
+		evos: ["Snuroyal"],
+		color: "Pink",
+		eggGroups: ["Grass"],
+		gen: 8,
+	},
+	snuroyal: {
+		num: -8228,
+		name: "Snuroyal",
+		types: ["Steel"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 177, atk: 240, def: 61, spa: 1, spd: 61, spe: 60},
+		abilities: {0: "Harvest", H: "Grassy Surge", S: "Full Metal Body"},
+		heightm: 1.6,
+		weightkg: 206,
+		prevo: "Snurl",
+		evoLevel: 58,
+		color: "Yellow",
+		eggGroups: ["Grass"],
+		gen: 8,
+	},
+	sphare: {
+		num: -8229,
+		name: "Sphare",
+		types: ["Rock", "Fighting"],
+		gender: 'M',
+		baseStats: {hp: 71, atk: 120, def: 75, spa: 55, spd: 36, spe: 90},
+		abilities: {0: "Rock Head", 1: "Iron Fist", H: "Baller", S: "Mold Breaker"},
+		heightm: 0.5,
+		weightkg: 616,
+		evos: ["Costrike"],
+		color: "Brown",
+		eggGroups: ["Mineral"],
+		gen: 8,
+	},
+	costrike: { // that one guy who reflects physical
+		num: -8230,
+		name: "Costrike",
+		types: ["Rock", "Ghost"],
+		gender: 'M',
+		baseStats: {hp: 91, atk: 60, def: 168, spa: 115, spd: 41, spe: 62},
+		abilities: {0: "Clear Body", 1: "Striker", H: "Baller", S: "Mold Breaker"},
+		heightm: 2.4,
+		weightkg: 710,
+		prevo: "Sphare",
+		evoType: "useItem",
+		evoItem: "Marked Stone",
+		color: "Brown",
+		eggGroups: ["Mineral"],
+		gen: 8,
+	},
+	hookling: {
 		num: -8232,
 		name: "Hookling",
 		types: ["Dragon"],
@@ -36989,27 +37043,27 @@ hookling: {
 		heightm: 0.5,
 		weightkg: 1.7,
 		color: "Red",
-        evos: ["Fractyvern"],
-		eggGroups: ["Dragon","Monster"],
+		evos: ["Fractyvern"],
+		eggGroups: ["Dragon", "Monster"],
 		gen: 8,
 	},
 	fractyvern: {
 		num: -8233,
 		name: "Fractyvern",
-		types: ["Psychic","Electric"],
+		types: ["Psychic", "Electric"],
 		gender: "N",
 		baseStats: {hp: 84, atk: 56, def: 65, spa: 126, spd: 78, spe: 107},
 		abilities: {0: "Unnerve", 1: "Static", H: "Levitate", S: "Madman"},
 		heightm: 9.1,
 		weightkg: 837.6,
 		color: "Red",
-        prevo: "Hookling",
-        evoType: "useItem",
+		prevo: "Hookling",
+		evoType: "useItem",
 		evoItem: "Thunder Stone",
-		eggGroups: ["Dragon","Monster"],
+		eggGroups: ["Dragon", "Monster"],
 		gen: 8,
 	},
-        sleepsy: {
+	sleepsy: {
 		num: -8234,
 		name: "Sleepsy",
 		types: ["Psychic", "Dark"],
@@ -37019,8 +37073,8 @@ hookling: {
 		heightm: 0.5,
 		weightkg: 1.7,
 		color: "White",
-        evos: ["Psycheyend"],
-		eggGroups: ["Dragon","Monster"],
+		evos: ["Psycheyend"],
+		eggGroups: ["Dragon", "Monster"],
 		gen: 8,
 	},
 	    psycheyend: {
@@ -37028,14 +37082,14 @@ hookling: {
 		name: "Psycheyend",
 		types: ["Psychic", "Dark"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 81, atk: 85, def: 51, spa: 107, spd: 113, spe: 82}, 
+		baseStats: {hp: 81, atk: 85, def: 51, spa: 107, spd: 113, spe: 82},
 		abilities: {0: "Keen Eye", 1: "Levitate", H: "Omniscience", S: "Mind's Eye"},
 		heightm: 10.1,
 		weightkg: 837.6,
 		color: "White",
-        prevo: "Sleepsy",
-        evoLevel: 44,
-		eggGroups: ["Dragon","Monster"],
+		prevo: "Sleepsy",
+		evoLevel: 44,
+		eggGroups: ["Dragon", "Monster"],
 		gen: 8,
 },
 rasstord: {
@@ -38716,7 +38770,7 @@ iwik: {
 			spe: 51,
 		},
 		abilities: {
-			0: "Big Brain",
+			0: "Brain Power",
 			1: "Inversion",
 			H: "Vital Spirit",
 			S: "Fur Coat",
@@ -38778,6 +38832,7 @@ iwik: {
 		num: 69132,
 		name: "Blobbos-Sus",
 		baseSpecies: "Blobbos",
+		baseForme: "Sus-Red",
 		forme: "Sus",
 		types: ["???"],
 		gender: "N",
@@ -39686,7 +39741,7 @@ iwik: {
 		formeOrder: ["Blobbos-Omori", "Blobbos-Omori-Happy"],
 		gen: 8,
 	},
-	
+
 	blobbosomorihappy: {
 		num: 69132,
 		name: "Blobbos-Omori-Happy",
@@ -40644,7 +40699,7 @@ iwik: {
 		types: ["Grass", "Poison"],
 		gender: "N",
 		baseStats: {
-			hp: 98,
+			hp: 108,
 			atk: 79,
 			def: 76,
 			spa: 83,
@@ -41414,11 +41469,11 @@ iwik: {
 		types: ["Grass", "Water"],
 		gender: "N",
 		baseStats: {
-			hp: 80,
-			atk: 50,
-			def: 80,
-			spa: 90,
-			spd: 90,
+			hp: 90,
+			atk: 60,
+			def: 90,
+			spa: 100,
+			spd: 100,
 			spe: 20,
 		},
 		abilities: {
@@ -42780,12 +42835,12 @@ iwik: {
 		types: ["Dark", "Bug"],
 		gender: "N",
 		baseStats: {
-			hp: 78,
+			hp: 58,
 			atk: 108,
-			def: 78,
+			def: 68,
 			spa: 108,
-			spd: 78,
-			spe: 118,
+			spd: 58,
+			spe: 108,
 		},
 		abilities: {
 			0: "Plundered Luck",
@@ -42793,7 +42848,7 @@ iwik: {
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
-		color: "Blue",
+		color: "Black",
 		eggGroups: [
 			"Ditto",
 		],
@@ -42820,33 +42875,7 @@ iwik: {
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
-		color: "Blue",
-		eggGroups: [
-			"Ditto",
-		],
-		gen: 8,
-		creator: "Mr. Sableye",
-	},
-	blobbosnihonjin: {
-		num: 69132,
-		name: "Blobbos-Nihonjin",
-		forme: "Nihonjin",
-		types: ["Electric", "Normal"],
-		gender: "N",
-		baseStats: {
-			hp: 80,
-			atk: 60,
-			def: 90,
-			spa: 105,
-			spd: 60,
-			spe: 50,
-		},
-		abilities: {
-			0: "Homogeneity",
-		},
-		heightm: 0.4,
-		weightkg: 5.7,
-		color: "Blue",
+		color: "Black",
 		eggGroups: [
 			"Ditto",
 		],
@@ -43867,14 +43896,14 @@ iwik: {
 			H: "Full Metal Body",
 			S: "Levitate",
 		},
-		heightm: 11.2 ,
-		weightkg: 2587.5 ,
+		heightm: 11.2,
+		weightkg: 2587.5,
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Flame Sword",
 		changesFrom: "Blobbos-Mech",
-	}, 
-blobbosmechice: {
+	},
+	blobbosmechice: {
 		num: 69132,
 		name: "Blobbos-Mech-Ice",
 		baseSpecies: "Blobbos-Mech",
@@ -43888,14 +43917,14 @@ blobbosmechice: {
 			H: "Full Metal Body",
 			S: "Levitate",
 		},
-		heightm: 11.2 ,
-		weightkg: 2587.5 ,
+		heightm: 11.2,
+		weightkg: 2587.5,
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Frost Sword",
 		changesFrom: "Blobbos-Mech",
-	}, 
-blobbosmechwater: {
+	},
+	blobbosmechwater: {
 		num: 69132,
 		name: "Blobbos-Mech-Water",
 		baseSpecies: "Blobbos-Mech",
@@ -43909,14 +43938,14 @@ blobbosmechwater: {
 			H: "Full Metal Body",
 			S: "Levitate",
 		},
-		heightm: 11.2 ,
-		weightkg: 2587.5 ,
+		heightm: 11.2,
+		weightkg: 2587.5,
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Splash Sword",
 		changesFrom: "Blobbos-Mech",
-	}, 
-blobbosmechelectric: {
+	},
+	blobbosmechelectric: {
 		num: 69132,
 		name: "Blobbos-Mech-Electric",
 		baseSpecies: "Blobbos-Mech",
@@ -43930,8 +43959,8 @@ blobbosmechelectric: {
 			H: "Full Metal Body",
 			S: "Levitate",
 		},
-		heightm: 11.2 ,
-		weightkg: 2587.5 ,
+		heightm: 11.2,
+		weightkg: 2587.5,
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Spark Sword",
@@ -43943,7 +43972,7 @@ blobbosmechelectric: {
 		baseSpecies: "Blobbos",
 		forme: "Dragon Maid",
 		types: ["Dragon", "Fairy"],
-		gender: "F", 
+		gender: "F",
 		baseStats: {
 			hp: 85,
 			atk: 75,
@@ -43954,9 +43983,9 @@ blobbosmechelectric: {
 		},
 		abilities: {
 			0: "Screen Cleaner",
-                        1: "Supportive",
-                        H: "Pastel Veil",
-                        S: "Natural Cure",
+			1: "Supportive",
+			H: "Pastel Veil",
+			S: "Natural Cure",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
@@ -43983,7 +44012,7 @@ blobbosmechelectric: {
 		},
 		abilities: {
 			0: "Multiscale",
-                      
+
 		},
 		heightm: 12.19,
 		weightkg: 500.7,
@@ -44237,7 +44266,7 @@ blobbosmechelectric: {
 		},
 		abilities: {
 			0: "Frosty Surge",
-                        H: "Telepathy",
+			H: "Telepathy",
 		},
 		heightm: 0.6,
 		weightkg: 15.7,
@@ -44248,7 +44277,7 @@ blobbosmechelectric: {
 		gen: 8,
 	},
 
-blobbosblackmage: {
+	blobbosblackmage: {
 		num: 69132,
 		name: "Blobbos-Black Mage",
 		baseSpecies: "Blobbos",
@@ -44265,9 +44294,9 @@ blobbosblackmage: {
 		},
 		abilities: {
 			0: "Technician",
-                        1: "Magician",
-                        H: "Stall",
-                        S: "Magic Bounce",
+			1: "Magician",
+			H: "Stall",
+			S: "Magic Bounce",
 		},
 		heightm: 0.4,
 		weightkg: 23.7,
@@ -44278,7 +44307,7 @@ blobbosblackmage: {
 		gen: 8,
 	},
 
-blobboshotpot: {
+	blobboshotpot: {
 		num: 69132,
 		name: "Blobbos-Hotpot",
 		baseSpecies: "Blobbos",
@@ -44295,9 +44324,9 @@ blobboshotpot: {
 		},
 		abilities: {
 			0: "Download",
-                        1: "Vital Spirit",
-                        H: "Fog Of War",
-                        S: "Sheer Force",
+			1: "Vital Spirit",
+			H: "Fog Of War",
+			S: "Sheer Force",
 		},
 		heightm: 3.9,
 		weightkg: 9.07,
@@ -44308,7 +44337,7 @@ blobboshotpot: {
 		gen: 8,
 	},
 
-blobboscreampuff: {
+	blobboscreampuff: {
 		num: 69132,
 		name: "Blobbos-Creampuff",
 		baseSpecies: "Blobbos",
@@ -44325,9 +44354,9 @@ blobboscreampuff: {
 		},
 		abilities: {
 			0: "Sweet Veil",
-                        1: "Fluffy",
-                        H: "Aroma Veil",
-                        S: "Cake Veil",
+			1: "Fluffy",
+			H: "Aroma Veil",
+			S: "Cake Veil",
 		},
 		heightm: 0.15,
 		weightkg: 2.26,
@@ -44338,7 +44367,7 @@ blobboscreampuff: {
 		gen: 8,
 	},
 
-blobbosyarn: {
+	blobbosyarn: {
 		num: 69132,
 		name: "Blobbos-Yarn",
 		baseSpecies: "Blobbos",
@@ -44355,9 +44384,9 @@ blobbosyarn: {
 		},
 		abilities: {
 			0: "Fluffy",
-                        1: "Super Luck",
-                        H: "Cute Charm",
-                        S: "Seed Sower",
+			1: "Super Luck",
+			H: "Cute Charm",
+			S: "Seed Sower",
 		},
 		heightm: 2.4,
 		weightkg: 0.1,
@@ -44368,7 +44397,7 @@ blobbosyarn: {
 		gen: 8,
 	},
 
-blobbosparasite: {
+	blobbosparasite: {
 		num: 69132,
 		name: "Blobbos-Parasite",
 		baseSpecies: "Blobbos",
@@ -44385,20 +44414,20 @@ blobbosparasite: {
 		},
 		abilities: {
 			0: "Liquid Ooze",
-                        1: "Shed Skin",
-                        H: "Brainwash",
-                        S: "Leech",
+			1: "Shed Skin",
+			H: "Brainwash",
+			S: "Leech",
 		},
 		heightm: 3.4,
 		weightkg: 123.6,
 		color: "Black",
 		eggGroups: [
-			"Bug", "Amorphous"
+			"Bug", "Amorphous",
 		],
 		gen: 8,
 	},
 
-blobbosplasma: {
+	blobbosplasma: {
 		num: 69132,
 		name: "Blobbos-Plasma",
 		baseSpecies: "Blobbos",
@@ -44415,9 +44444,9 @@ blobbosplasma: {
 		},
 		abilities: {
 			0: "Plus",
-                        1: "Minus",
-                        H: "Static",
-                        S: "Turboblaze",
+			1: "Minus",
+			H: "Static",
+			S: "Turboblaze",
 		},
 		heightm: 0.4,
 		weightkg: 0.1,
@@ -44427,7 +44456,7 @@ blobbosplasma: {
 		],
 		gen: 8,
 	},
-blobbosminion: {
+	blobbosminion: {
 		num: 69132,
 		name: "Blobbos-Minion",
 		baseSpecies: "Blobbos",
@@ -44444,19 +44473,19 @@ blobbosminion: {
 		},
 		abilities: {
 			0: "Berserk",
-                        1: "Oblivious",
-                        H: "Immunity",
-                      
+			1: "Oblivious",
+			H: "Immunity",
+
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
 		color: "Yellow",
 		eggGroups: [
-			"Fairy", "Field"
+			"Fairy", "Field",
 		],
 		gen: 8,
 	},
-blobbosgeno: {
+	blobbosgeno: {
 		num: 69132,
 		name: "Blobbos-Geno",
 		baseSpecies: "Blobbos",
@@ -44473,16 +44502,16 @@ blobbosgeno: {
 		},
 		abilities: {
 			0: "Wandering Spirit",
-                        1: "Wooden Guard",
-                        H: "Magic Guard",
-                        S: "Beam Boost",
-                      
+			1: "Wooden Guard",
+			H: "Magic Guard",
+			S: "Beam Boost",
+
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
 		color: "Yellow",
 		eggGroups: [
-			"Fairy", "Field"
+			"Fairy", "Field",
 		],
 		gen: 8,
 	},
@@ -44503,16 +44532,16 @@ blobbosgeno: {
 		},
 		abilities: {
 			0: "Flame Body",
-                        1: "Clear Body",
-                        H: "Thermal Fumes",
-						S: "Phantasma",
-                      
+			1: "Clear Body",
+			H: "Thermal Fumes",
+			S: "Phantasma",
+
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
 		color: "Purple",
 		eggGroups: [
-			"Fairy", "Field"
+			"Fairy", "Field",
 		],
 		gen: 8,
 	},
@@ -44561,6 +44590,256 @@ blobbosgeno: {
 		requiredAbility: "Cell Construct",
 		battleOnly: "Blobbos-Mitosis",
 	},
+	blobbospuddle: {
+		num: 69132,
+		name: "Blobbos-Puddle",
+		baseSpecies: "Blobbos",
+		forme: "Puddle",
+		types: ["Water"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 71,
+			atk: 49,
+			def: 73,
+			spa: 64,
+			spd: 126,
+			spe: 40,
+		},
+		abilities: {
+			0: "Damp",
+			1: "Water Absorb",
+			H: "Water Bubble",
+		},
+		heightm: 0.4,
+		weightkg: 1.7,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+		],
+		gen: 8,
+	},
+	blobbosscrying: {
+		num: 69132,
+		name: "Blobbos-Scrying",
+		baseSpecies: "Blobbos",
+		forme: "Scrying",
+		types: ["Psychic", "Water"],
+		gender: "N",
+		baseStats: {
+			hp: 83,
+			atk: 57,
+			def: 98,
+			spa: 136,
+			spd: 117,
+			spe: 42,
+		},
+		abilities: {
+			0: "Forewarn",
+			1: "Rain Dish",
+			H: "Telepathy",
+			S: "Omniscience",
+		},
+		heightm: 0.6,
+		weightkg: 0.9,
+		color: "Blue",
+		eggGroups: ["Mineral", "Water 3"],
+		gen: 8,
+	},
+	blobbosdragonfly: {
+		num: 69132,
+		name: "Blobbos-Dragonfly",
+		baseSpecies: "Blobbos",
+		forme: "Dragonfly",
+		types: ["Bug", "Dragon"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 78,
+			atk: 71,
+			def: 66,
+			spa: 89,
+			spd: 73,
+			spe: 116,
+		},
+		abilities: {
+			0: "Levitate",
+			1: "Compound Eyes",
+			H: "Speed Boost",
+		},
+		heightm: 0.6,
+		weightkg: 0.7,
+		color: "Blue",
+		eggGroups: ["Dragon", "Bug"],
+		gen: 8,
+	},
+	blobbosmedusa: {
+		num: 69132,
+		name: "Blobbos-Medusa",
+		baseSpecies: "Blobbos",
+		forme: "Medusa",
+		types: ["Dragon", "Rock"],
+		gender: "F",
+		baseStats: {
+			hp: 85,
+			atk: 108,
+			def: 75,
+			spa: 95,
+			spd: 85,
+			spe: 72,
+		},
+		abilities: {
+			0: "Tough Claws",
+			1: "Keen Eye",
+			H: "Medusa's Curse",
+		},
+		heightm: 0.6,
+		weightkg: 5.4,
+		color: "Green",
+		eggGroups: ["Dragon", "Monster"],
+		gen: 8,
+	},
+	blobbosmoogle: {
+		num: 69132,
+		name: "Blobbos-Moogle",
+		baseSpecies: "Blobbos",
+		forme: "Moogle",
+		types: ["Fairy", "Ground"],
+		gender: "N",
+		baseStats: {
+			hp: 70,
+			atk: 55,
+			def: 75,
+			spa: 105,
+			spd: 115,
+			spe: 85,
+		},
+		abilities: {
+			0: "Friend Guard",
+			1: "Technician",
+			H: "Levitate",
+			S: "Magician",
+
+		},
+		heightm: 0.7,
+		weightkg: 5.4,
+		color: "White",
+		eggGroups: ["Fairy", "Monster"],
+		gen: 8,
+	},
+	blobbosminesweeper: {
+		num: 69132,
+		name: "Blobbos-Minesweeper",
+		baseSpecies: "Blobbos",
+		forme: "Minesweeper",
+		types: ["Ground", "Psychic"],
+		gender: "N",
+		baseStats: {
+			hp: 121,
+			atk: 103,
+			def: 61,
+			spa: 123,
+			spd: 61,
+			spe: 42,
+		},
+		abilities: {
+			0: "Forewarn",
+			1: "Aftermath",
+			H: "Detonator",
+			S: "Unnerve",
+		},
+		heightm: 0.4,
+		weightkg: 5.7,
+		color: "Grey",
+		eggGroups: [
+			"Mineral",
+		],
+		gen: 8,
+	},
+	blobbosraiju: {
+		num: 69132,
+		name: "Blobbos-Raiju",
+		baseSpecies: "Blobbos",
+		forme: "Raiju",
+		types: ["Electric", "Dragon"],
+		gender: "N",
+		baseStats: {
+			hp: 86,
+			atk: 121,
+			def: 103,
+			spa: 68,
+			spd: 72,
+			spe: 90,
+		},
+		abilities: {
+			0: "Wonder Skin",
+			1: "Galvanize",
+			H: "Intimidate",
+			S: "Air Lock",
+		},
+		heightm: 1.9,
+		weightkg: 178,
+		color: "Blue",
+		eggGroups: [
+			"Field", "Monster",
+		],
+		gen: 8,
+	},
+	blobboscaterpillar: {
+		num: 69132,
+		name: "Blobbos-Caterpillar",
+		baseSpecies: "Blobbos",
+		forme: "Caterpillar",
+		types: ["Bug"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 80,
+			atk: 55,
+			def: 65,
+			spa: 90,
+			spd: 100,
+			spe: 30,
+		},
+		abilities: {
+			0: "Run Away",
+			1: "Shield Dust",
+			H: "Compound Eyes",
+			S: "String Power",
+		},
+		heightm: 0.3,
+		weightkg: 2.9,
+		color: "Green",
+		eggGroups: [
+			"Bug",
+		],
+		gen: 8,
+	},
+	blobbosladybug: {
+		num: 69132,
+		name: "Blobbos-Ladybug",
+		baseSpecies: "Blobbos",
+		forme: "Ladybug",
+		types: ["Fighting", "Bug"],
+		gender: "N",
+		baseStats: {
+			hp: 70,
+			atk: 90,
+			def: 70,
+			spa: 90,
+			spd: 70,
+			spe: 101,
+		},
+		abilities: {
+			0: "Sniper",
+			1: "Skill Link",
+			H: "Codename",
+		},
+		heightm: 0.4,
+		weightkg: 5.7,
+		color: "Pink",
+		eggGroups: [
+			"Bug",
+		],
+		gen: 8,
+	},
 	antiblob: {
 		num: 69132,
 		name: "Antiblob",
@@ -44590,6 +44869,50 @@ blobbosgeno: {
 			"Ditto",
 		],
 		gen: 8,
+	},
+	blobboscolony: {
+		num: 69132,
+		name: "Blobbos-Colony",
+		baseSpecies: "Blobbos",
+		baseForme: "Solo",
+		forme: "Colony",
+		types: ["Bug", "Ground"],
+		baseStats: {hp: 80, atk: 80, def: 55, spa: 40, spd: 55, spe: 90},
+		abilities: {0: "Tinted Lens", 1: "Defeatist", S: "Colonization"},
+		heightm: 0.0254,
+		weightkg: 0.01,
+		color: "Green",
+		eggGroups: ["Bug"],
+		otherFormes: ["Blobbos-Colony-Colonized"],
+		formeOrder: ["Blobbos-Colony", "Blobbos-Colony-Colonized"],
+	},
+	blobboscolonycolonized: {
+		num: 69132,
+		name: "Blobbos-Colony-Colonized",
+		baseSpecies: "Blobbos-Colony",
+		forme: "Colonized",
+		types: ["Bug", "Ground"],
+		baseStats: {hp: 80, atk: 145, def: 120, spa: 130, spd: 120, spe: 35},
+		abilities: {0: "Colonization"},
+		heightm: 7.62,
+		weightkg: 1000,
+		color: "Green",
+		eggGroups: ["Bug"],
+		requiredAbility: "Colonization",
+		battleOnly: "Blobbos-Colony",
+	},
+	blobboschroma: {
+		num: 69132,
+		name: "Blobbos-Chroma",
+		baseSpecies: "Blobbos",
+		forme: "Chroma",
+		types: ["Normal"],
+		baseStats: {hp: 90, atk: 90, def: 95, spa: 90, spd: 95, spe: 90},
+		abilities: {0: "Homogeneity"},
+		heightm: 0.0254,
+		weightkg: 0.01,
+		color: "Blue",
+		eggGroups: ["Bug"],
 	},
 	infected: {
 		num: 42999,
@@ -44765,7 +45088,7 @@ blobbosgeno: {
 		types: ["Grass", "Fire", "Fighting"],
 		gender: "F",
 		baseStats: {hp: 120, atk: 167, def: 100, spa: 167, spd: 100, spe: 146},
-		abilities: {0: "Huge Power", H: "Big Brain", S: "Protean"},
+		abilities: {0: "Huge Power", H: "Brain Power", S: "Protean"},
 		heightm: 1.6,
 		weightkg: 60,
 		color: "Brown",
@@ -46061,7 +46384,7 @@ blobbosgeno: {
 	cellgar: {
 		num: -42767,
 		name: "Cellgar",
-		types: ["Bug","Poison"],
+		types: ["Bug", "Poison"],
 		gender: "M",
 		baseStats: {hp: 95, atk: 65, def: 60, spa: 130, spd: 75, spe: 110},
 		abilities: {0: "Anger Point", 1: "Levitate", H: "Huge Power", S: "Regenerator"},
@@ -46073,14 +46396,14 @@ blobbosgeno: {
 	izuriri: {
 		num: -42528,
 		name: "Izuriri",
-		types: ["Normal","Grass"],
+		types: ["Normal", "Grass"],
 		gender: "F",
 		baseStats: {hp: 118, atk: 57, def: 84, spa: 82, spd: 87, spe: 47},
 		abilities: {0: "Super Luck", H: "Victory Star", S: "Prankster"},
 		heightm: 0.6,
 		weightkg: 11.33,
 		color: "Brown",
-    	eggGroups: ["Fairy","Field"],
+		eggGroups: ["Fairy", "Field"],
 		creator: "Mr. Sableye",
 	},
 	saccestoda: {
@@ -46293,7 +46616,7 @@ blobbosgeno: {
 		name: "Stowlet",
 		types: ["Dark", "Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 44, atk: 58, def: 42, spa: 65, spd:49, spe: 76},
+		baseStats: {hp: 44, atk: 58, def: 42, spa: 65, spd: 49, spe: 76},
 		abilities: {0: "Limber", 1: "Magician", H: "Unburden", S: "Speed Boost"},
 		heightm: 0.4,
 		weightkg: 4.8,
@@ -46324,7 +46647,7 @@ blobbosgeno: {
 		name: "Inkrow",
 		types: ["Flying", "Poison"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 30, atk: 40, def: 60, spa: 55, spd:51, spe: 30},
+		baseStats: {hp: 30, atk: 40, def: 60, spa: 55, spd: 51, spe: 30},
 		abilities: {0: "Liquid Ooze", 1: "Sticky Hold", H: "Trace", S: "Curious Medicine"},
 		heightm: 0.3,
 		weightkg: 3.4,
@@ -46372,13 +46695,13 @@ blobbosgeno: {
 		name: "Larvatrice",
 		types: ["Dark", "Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 43, atk: 63, def: 33, spa: 51, spd:33, spe: 77},
+		baseStats: {hp: 43, atk: 63, def: 33, spa: 51, spd: 33, spe: 77},
 		abilities: {0: "Reckless", 1: "Keen Eye", H: "Hustle", S: "Dragon's Maw"},
 		heightm: 0.6,
 		weightkg: 20.8,
 		color: "Black",
 		evos: ["Brashilisk"],
-		eggGroups: ["Flying","Monster"],
+		eggGroups: ["Flying", "Monster"],
 		gen: 8,
 		creator: "Kaiju",
 	},
@@ -46395,7 +46718,7 @@ blobbosgeno: {
 		prevo: "Larvatrice",
 		evoLevel: 32,
 		evos: ["Kokaiju", "Levititan"],
-		eggGroups: ["Flying","Monster"],
+		eggGroups: ["Flying", "Monster"],
 		gen: 8,
 		creator: "Kaiju",
 	},
@@ -46412,7 +46735,7 @@ blobbosgeno: {
 		prevo: "Brashalisk",
 		evoType: "levelHold",
 		evoItem: "Life Orb",
-		eggGroups: ["Flying","Monster"],
+		eggGroups: ["Flying", "Monster"],
 		gen: 8,
 		creator: "Kaiju",
 	},
@@ -46429,7 +46752,7 @@ blobbosgeno: {
 		prevo: "Brashalisk",
 		evoType: "levelHold",
 		evoItem: "Sharp Beak",
-		eggGroups: ["Flying","Monster"],
+		eggGroups: ["Flying", "Monster"],
 		gen: 8,
 		creator: "Kaiju",
 	},
@@ -46444,7 +46767,7 @@ blobbosgeno: {
 		weightkg: 15.8,
 		color: "Black",
 		evos: ["Sepulture"],
-		eggGroups: ["Flying","Monster"],
+		eggGroups: ["Flying", "Monster"],
 		gen: 8,
 		creator: "Seraphim",
 	},
@@ -46460,7 +46783,7 @@ blobbosgeno: {
 		color: "Black",
 		prevo: "Flockarrion",
 		evoLevel: 38,
-		eggGroups: ["Flying","Monster"],
+		eggGroups: ["Flying", "Monster"],
 		gen: 8,
 		creator: "Seraphim",
 	},
@@ -46475,7 +46798,7 @@ blobbosgeno: {
 		weightkg: 14.4,
 		color: "Brown",
 		evos: ["Ibask"],
-		eggGroups: ["Flying","Field"],
+		eggGroups: ["Flying", "Field"],
 		gen: 8,
 		creator: "Sylph",
 	},
@@ -46491,7 +46814,7 @@ blobbosgeno: {
 		color: "Brown",
 		prevo: "Dirtybis",
 		evoLevel: 41,
-		eggGroups: ["Flying","Field"],
+		eggGroups: ["Flying", "Field"],
 		gen: 8,
 		creator: "Sylph",
 	},
@@ -61113,7 +61436,7 @@ blobbosgeno: {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		otherFormes: ["Sarieangel-Zen"],
-		formeOrder: ["Sarieangel", "Sarieangel-Zen"]
+		formeOrder: ["Sarieangel", "Sarieangel-Zen"],
 	},
 	sarieangelzen: {
 		num: 666972,
@@ -65688,7 +66011,7 @@ blobbosgeno: {
 		color: "Brown",
 		eggGroups: ["Amorphous"],
 		otherFormes: ["Emptyanne-Zen"],
-		formeOrder: ["Emptyanne","Emptyanne-Zen"],
+		formeOrder: ["Emptyanne", "Emptyanne-Zen"],
 	},
 	emptyannezen: {
 		num: 667362,
@@ -65703,7 +66026,7 @@ blobbosgeno: {
 		color: "Brown",
 		eggGroups: ["Amorphous"],
 		requiredAbility: "Clear Body",
-		battleOnly: "Emptyanne"
+		battleOnly: "Emptyanne",
 	},
 	anneoo: {
 		num: 667363,
@@ -81105,7 +81428,7 @@ blobbosgeno: {
 		num: 668644,
 		name: "Bouquetke",
 		types: ["Virus", "Divine"],
-		baseStats: {hp: 77, atk: 76, def: 69, spa: 131, spd: 113 , spe: 84},
+		baseStats: {hp: 77, atk: 76, def: 69, spa: 131, spd: 113, spe: 84},
 		abilities: {0: "Sadist", 1: "Balance", H: "Pride"},
 		heightm: 20.9,
 		weightkg: 69.7,
@@ -81351,7 +81674,7 @@ blobbosgeno: {
 		prevo: "Tdarumaka",
 		eggGroups: ["Field"],
 		otherFormes: ["Tdarmanitan-Zen"],
-		formeOrder: ["Tdarmanitan", "Tdarmanitan-Zen"]
+		formeOrder: ["Tdarmanitan", "Tdarmanitan-Zen"],
 	},
 	tdarmanitanzen: {
 		num: 668664,
@@ -95759,7 +96082,7 @@ blobbosgeno: {
 		num: 413001,
 		name: "Baby John",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 40,
@@ -95767,30 +96090,30 @@ blobbosgeno: {
 			def: 68,
 			spa: 60,
 			spd: 35,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Cloud Nine",
-			1: "Cloud Nine"
+			1: "Cloud Nine",
 		},
 		heightm: 0.5,
 		weightkg: 3.7,
 		color: "Blue",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		evos: [
 			"John",
-			"Poppop"
-		]
+			"Poppop",
+		],
 	},
 	john: {
 		num: 413002,
 		name: "John",
 		types: [
 			"Normal",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 60,
@@ -95798,32 +96121,32 @@ blobbosgeno: {
 			def: 85,
 			spa: 75,
 			spd: 50,
-			spe: 73
+			spe: 73,
 		},
 		abilities: {
 			0: "Cloud Nine",
-			1: "Prankster"
+			1: "Prankster",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Blue",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		evos: [
 			"GT John",
-			"TrkstrJohn"
+			"TrkstrJohn",
 		],
 		prevo: "Baby John",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtjohn: {
 		num: 413003,
 		name: "GT John",
 		types: [
 			"Normal",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 73,
@@ -95831,27 +96154,27 @@ blobbosgeno: {
 			def: 106,
 			spa: 84,
 			spd: 66,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Air Lock",
-			1: "Prankster"
+			1: "Prankster",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Blue",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		prevo: "John",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	babydave: {
 		num: 413004,
 		name: "Baby Dave",
 		types: [
-			"Fire"
+			"Fire",
 		],
 		baseStats: {
 			hp: 45,
@@ -95859,29 +96182,29 @@ blobbosgeno: {
 			def: 35,
 			spa: 62,
 			spd: 56,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
-			0: "Blaze"
+			0: "Blaze",
 		},
 		heightm: 1.4,
 		weightkg: 63,
 		color: "Red",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		evos: [
 			"Dave",
-			"Dirk's Bro"
-		]
+			"Dirk's Bro",
+		],
 	},
 	dave: {
 		num: 413005,
 		name: "Dave",
 		types: [
 			"Fire",
-			"Steel"
+			"Steel",
 		],
 		baseStats: {
 			hp: 60,
@@ -95889,32 +96212,32 @@ blobbosgeno: {
 			def: 50,
 			spa: 82,
 			spd: 75,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
-			0: "Blaze"
+			0: "Blaze",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Red",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		evos: [
 			"GT Dave",
 			"Davesprite",
-			"Davepeta"
+			"Davepeta",
 		],
 		prevo: "Baby Dave",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtdave: {
 		num: 413006,
 		name: "GT Dave",
 		types: [
 			"Fire",
-			"Steel"
+			"Steel",
 		],
 		baseStats: {
 			hp: 75,
@@ -95922,27 +96245,27 @@ blobbosgeno: {
 			def: 68,
 			spa: 101,
 			spd: 95,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
-			0: "Flash Fire"
+			0: "Flash Fire",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Red",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		prevo: "Dave",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	babyrose: {
 		num: 413007,
 		name: "Baby Rose",
 		types: [
 			"Psychic",
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 52,
@@ -95950,29 +96273,29 @@ blobbosgeno: {
 			def: 48,
 			spa: 50,
 			spd: 66,
-			spe: 53
+			spe: 53,
 		},
 		abilities: {
-			0: "Water Veil"
+			0: "Water Veil",
 		},
 		heightm: 0.5,
 		weightkg: 3.7,
 		color: "Purple",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		evos: [
 			"Rose",
-			"Roxy's Mom"
-		]
+			"Roxy's Mom",
+		],
 	},
 	rose: {
 		num: 413008,
 		name: "Rose",
 		types: [
 			"Psychic",
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 62,
@@ -95980,32 +96303,32 @@ blobbosgeno: {
 			def: 58,
 			spa: 70,
 			spd: 90,
-			spe: 63
+			spe: 63,
 		},
 		abilities: {
-			0: "Water Veil"
+			0: "Water Veil",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Purple",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		evos: [
 			"GT Rose",
 			"GrmdrkRose",
-			"Jasprose"
+			"Jasprose",
 		],
 		prevo: "Baby Rose",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtrose: {
 		num: 413009,
 		name: "GT Rose",
 		types: [
 			"Psychic",
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 87,
@@ -96013,27 +96336,27 @@ blobbosgeno: {
 			def: 83,
 			spa: 85,
 			spd: 100,
-			spe: 98
+			spe: 98,
 		},
 		abilities: {
-			0: "Synchronize"
+			0: "Synchronize",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Purple",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		prevo: "Rose",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	babyjane: {
 		num: 413010,
 		name: "Baby Jane",
 		types: [
 			"Normal",
-			"Grass"
+			"Grass",
 		],
 		baseStats: {
 			hp: 70,
@@ -96041,30 +96364,30 @@ blobbosgeno: {
 			def: 53,
 			spa: 34,
 			spd: 51,
-			spe: 54
+			spe: 54,
 		},
 		abilities: {
 			0: "Keen Eye",
-			1: "Keen Eye"
+			1: "Keen Eye",
 		},
 		heightm: 0.5,
 		weightkg: 3.7,
 		color: "Blue",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		evos: [
 			"Jane",
-			"Nanna"
-		]
+			"Nanna",
+		],
 	},
 	jane: {
 		num: 413011,
 		name: "Jane",
 		types: [
 			"Normal",
-			"Grass"
+			"Grass",
 		],
 		baseStats: {
 			hp: 88,
@@ -96072,32 +96395,32 @@ blobbosgeno: {
 			def: 71,
 			spa: 43,
 			spd: 69,
-			spe: 72
+			spe: 72,
 		},
 		abilities: {
 			0: "Keen Eye",
-			1: "Regenerator"
+			1: "Regenerator",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Blue",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		evos: [
 			"GT Jane",
-			"TrkstrJane"
+			"TrkstrJane",
 		],
 		prevo: "Baby Jane",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtjane: {
 		num: 413012,
 		name: "GT Jane",
 		types: [
 			"Normal",
-			"Grass"
+			"Grass",
 		],
 		baseStats: {
 			hp: 111,
@@ -96105,27 +96428,27 @@ blobbosgeno: {
 			def: 89,
 			spa: 63,
 			spd: 87,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Keen Eye",
-			1: "Regenerator"
+			1: "Regenerator",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Blue",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		prevo: "Jane",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	babydirk: {
 		num: 413013,
 		name: "Baby Dirk",
 		types: [
-			"Ice"
+			"Ice",
 		],
 		baseStats: {
 			hp: 38,
@@ -96133,30 +96456,30 @@ blobbosgeno: {
 			def: 33,
 			spa: 72,
 			spd: 71,
-			spe: 38
+			spe: 38,
 		},
 		abilities: {
 			0: "Technician",
-			1: "Synchronize"
+			1: "Synchronize",
 		},
 		heightm: 0.8,
 		weightkg: 3.7,
 		color: "Yellow",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		evos: [
 			"Dirk",
-			"Bro"
-		]
+			"Bro",
+		],
 	},
 	dirk: {
 		num: 413014,
 		name: "Dirk",
 		types: [
 			"Ice",
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 50,
@@ -96164,32 +96487,32 @@ blobbosgeno: {
 			def: 47,
 			spa: 92,
 			spd: 92,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Technician",
-			1: "Synchronize"
+			1: "Synchronize",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Yellow",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		evos: [
 			"GT Dirk",
-			"TrkstrDirk"
+			"TrkstrDirk",
 		],
 		prevo: "Baby Dirk",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtdirk: {
 		num: 413015,
 		name: "GT Dirk",
 		types: [
 			"Ice",
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 70,
@@ -96197,27 +96520,27 @@ blobbosgeno: {
 			def: 65,
 			spa: 111,
 			spd: 111,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Technician",
-			1: "Synchronize"
+			1: "Synchronize",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Yellow",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		prevo: "Dirk",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	babyroxy: {
 		num: 413016,
 		name: "Baby Roxy",
 		types: [
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 40,
@@ -96225,30 +96548,30 @@ blobbosgeno: {
 			def: 35,
 			spa: 55,
 			spd: 61,
-			spe: 67
+			spe: 67,
 		},
 		abilities: {
 			0: "Download",
-			1: "Hustle"
+			1: "Hustle",
 		},
 		heightm: 0.5,
 		weightkg: 3.7,
 		color: "Pink",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		evos: [
 			"Roxy",
-			"Mom"
-		]
+			"Mom",
+		],
 	},
 	roxy: {
 		num: 413017,
 		name: "Roxy",
 		types: [
 			"Water",
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 55,
@@ -96256,32 +96579,32 @@ blobbosgeno: {
 			def: 50,
 			spa: 70,
 			spd: 81,
-			spe: 86
+			spe: 86,
 		},
 		abilities: {
 			0: "Download",
-			1: "Hustle"
+			1: "Hustle",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Pink",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		evos: [
 			"GT Roxy",
-			"TrkstrRoxy"
+			"TrkstrRoxy",
 		],
 		prevo: "Baby Roxy",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtroxy: {
 		num: 413018,
 		name: "GT Roxy",
 		types: [
 			"Water",
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 70,
@@ -96289,27 +96612,27 @@ blobbosgeno: {
 			def: 65,
 			spa: 90,
 			spd: 101,
-			spe: 111
+			spe: 111,
 		},
 		abilities: {
 			0: "Download",
-			1: "Own Tempo"
+			1: "Own Tempo",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Pink",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		prevo: "Roxy",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	babyjake: {
 		num: 413019,
 		name: "Baby Jake",
 		types: [
-			"Bug"
+			"Bug",
 		],
 		baseStats: {
 			hp: 55,
@@ -96317,30 +96640,30 @@ blobbosgeno: {
 			def: 40,
 			spa: 72,
 			spd: 40,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Oblivious",
-			1: "Cute Charm"
+			1: "Cute Charm",
 		},
 		heightm: 0.5,
 		weightkg: 3.7,
 		color: "Green",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		evos: [
 			"Jake",
-			"Grandpa"
-		]
+			"Grandpa",
+		],
 	},
 	jake: {
 		num: 413020,
 		name: "Jake",
 		types: [
 			"Bug",
-			"Rock"
+			"Rock",
 		],
 		baseStats: {
 			hp: 75,
@@ -96348,32 +96671,32 @@ blobbosgeno: {
 			def: 55,
 			spa: 91,
 			spd: 50,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Oblivious",
-			1: "Cute Charm"
+			1: "Cute Charm",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Green",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		evos: [
 			"GT Jake",
-			"TrkstrJake"
+			"TrkstrJake",
 		],
 		prevo: "Baby Jake",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtjake: {
 		num: 413021,
 		name: "GT Jake",
 		types: [
 			"Bug",
-			"Rock"
+			"Rock",
 		],
 		baseStats: {
 			hp: 95,
@@ -96381,27 +96704,27 @@ blobbosgeno: {
 			def: 75,
 			spa: 111,
 			spd: 65,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Oblivious",
-			1: "Cute Charm"
+			1: "Cute Charm",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Green",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		prevo: "Jake",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubkarkat: {
 		num: 413022,
 		name: "GrubKarkat",
 		types: [
-			"Fire"
+			"Fire",
 		],
 		baseStats: {
 			hp: 50,
@@ -96409,29 +96732,29 @@ blobbosgeno: {
 			def: 60,
 			spa: 50,
 			spd: 45,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
-			0: "Insomnia"
+			0: "Insomnia",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
-			"Karkat"
-		]
+			"Karkat",
+		],
 	},
 	karkat: {
 		num: 413023,
 		name: "Karkat",
 		types: [
 			"Fire",
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 69,
@@ -96439,31 +96762,31 @@ blobbosgeno: {
 			def: 76,
 			spa: 69,
 			spd: 60,
-			spe: 53
+			spe: 53,
 		},
 		abilities: {
-			0: "Insomnia"
+			0: "Insomnia",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
-			"GT Karkat"
+			"GT Karkat",
 		],
 		prevo: "GrubKarkat",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtkarkat: {
 		num: 413024,
 		name: "GT Karkat",
 		types: [
 			"Fire",
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 84,
@@ -96471,28 +96794,28 @@ blobbosgeno: {
 			def: 96,
 			spa: 84,
 			spd: 80,
-			spe: 69
+			spe: 69,
 		},
 		abilities: {
-			0: "Vital Spirit"
+			0: "Vital Spirit",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "Karkat",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubaradia: {
 		num: 413025,
 		name: "GrubAradia",
 		types: [
 			"Normal",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 44,
@@ -96500,30 +96823,30 @@ blobbosgeno: {
 			def: 40,
 			spa: 40,
 			spd: 70,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Pickup",
-			1: "Keen Eye"
+			1: "Keen Eye",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
-			"Aradia"
-		]
+			"Aradia",
+		],
 	},
 	aradia: {
 		num: 413026,
 		name: "Aradia",
 		types: [
 			"Normal",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 66,
@@ -96531,34 +96854,34 @@ blobbosgeno: {
 			def: 52,
 			spa: 60,
 			spd: 85,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Pickup",
-			1: "Keen Eye"
+			1: "Keen Eye",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
 			"GT Aradia",
 			"DeadAradia",
-			"Aradiabot"
+			"Aradiabot",
 		],
 		prevo: "GrubAradia",
-		evoLevel: 18
+		evoLevel: 18,
 	},
 	gtaradia: {
 		num: 413027,
 		name: "GT Aradia",
 		types: [
 			"Fairy",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 88,
@@ -96566,28 +96889,28 @@ blobbosgeno: {
 			def: 73,
 			spa: 85,
 			spd: 110,
-			spe: 108
+			spe: 108,
 		},
 		abilities: {
 			0: "Trace",
-			1: "Levitate"
+			1: "Levitate",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Aradia",
-		evoLevel: 35
+		evoLevel: 35,
 	},
 	grubtavros: {
 		num: 413028,
 		name: "GrubTavros",
 		types: [
-			"Ground"
+			"Ground",
 		],
 		baseStats: {
 			hp: 60,
@@ -96595,28 +96918,28 @@ blobbosgeno: {
 			def: 69,
 			spa: 35,
 			spd: 40,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
-			0: "Oblivious"
+			0: "Oblivious",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Brown",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
-			"Tavros"
-		]
+			"Tavros",
+		],
 	},
 	tavros: {
 		num: 413029,
 		name: "Tavros",
 		types: [
-			"Ground"
+			"Ground",
 		],
 		baseStats: {
 			hp: 80,
@@ -96624,33 +96947,33 @@ blobbosgeno: {
 			def: 88,
 			spa: 50,
 			spd: 55,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
-			0: "Oblivious"
+			0: "Oblivious",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Brown",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
 			"GT Tavros",
 			"Tavris",
-			"GCaTavros"
+			"GCaTavros",
 		],
 		prevo: "GrubTavros",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gttavros: {
 		num: 413030,
 		name: "GT Tavros",
 		types: [
 			"Ground",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 100,
@@ -96658,27 +96981,27 @@ blobbosgeno: {
 			def: 114,
 			spa: 75,
 			spd: 70,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
-			0: "Oblivious"
+			0: "Oblivious",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Brown",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "Tavros",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubsollux: {
 		num: 413031,
 		name: "GrubSollux",
 		types: [
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 45,
@@ -96686,30 +97009,30 @@ blobbosgeno: {
 			def: 45,
 			spa: 64,
 			spd: 75,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Lightningrod",
-			1: "Guts"
+			1: "Guts",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Yellow",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
-			"Sollux"
-		]
+			"Sollux",
+		],
 	},
 	sollux: {
 		num: 413032,
 		name: "Sollux",
 		types: [
 			"Psychic",
-			"Electric"
+			"Electric",
 		],
 		baseStats: {
 			hp: 60,
@@ -96717,33 +97040,33 @@ blobbosgeno: {
 			def: 60,
 			spa: 78,
 			spd: 95,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Lightningrod",
-			1: "Tinted Lens"
+			1: "Tinted Lens",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Yellow",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
 			"GT Sollux",
-			"Erisol"
+			"Erisol",
 		],
 		prevo: "GrubSollux",
-		evoLevel: 18
+		evoLevel: 18,
 	},
 	gtsollux: {
 		num: 413033,
 		name: "GT Sollux",
 		types: [
 			"Psychic",
-			"Electric"
+			"Electric",
 		],
 		baseStats: {
 			hp: 80,
@@ -96751,28 +97074,28 @@ blobbosgeno: {
 			def: 80,
 			spa: 104,
 			spd: 120,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Lightningrod",
-			1: "Tinted Lens"
+			1: "Tinted Lens",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Yellow",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "Sollux",
-		evoLevel: 39
+		evoLevel: 39,
 	},
 	grubnepeta: {
 		num: 413034,
 		name: "GrubNepeta",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 50,
@@ -96780,29 +97103,29 @@ blobbosgeno: {
 			def: 45,
 			spa: 70,
 			spd: 40,
-			spe: 48
+			spe: 48,
 		},
 		abilities: {
 			0: "Cute Charm",
-			1: "Scrappy"
+			1: "Scrappy",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
-			"Nepeta"
-		]
+			"Nepeta",
+		],
 	},
 	nepeta: {
 		num: 413035,
 		name: "Nepeta",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 70,
@@ -96810,33 +97133,33 @@ blobbosgeno: {
 			def: 55,
 			spa: 90,
 			spd: 60,
-			spe: 58
+			spe: 58,
 		},
 		abilities: {
 			0: "Cute Charm",
-			1: "Scrappy"
+			1: "Scrappy",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
 			"GT Nepeta",
 			"Fefeta",
-			"Davepeta"
+			"Davepeta",
 		],
 		prevo: "GrubNepeta",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtnepeta: {
 		num: 413036,
 		name: "GT Nepeta",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 85,
@@ -96844,29 +97167,29 @@ blobbosgeno: {
 			def: 70,
 			spa: 120,
 			spd: 80,
-			spe: 74
+			spe: 74,
 		},
 		abilities: {
 			0: "Cute Charm",
-			1: "Scrappy"
+			1: "Scrappy",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Nepeta",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubkanaya: {
 		num: 413037,
 		name: "GrubKanaya",
 		types: [
 			"Grass",
-			"Fairy"
+			"Fairy",
 		],
 		baseStats: {
 			hp: 40,
@@ -96874,30 +97197,30 @@ blobbosgeno: {
 			def: 60,
 			spa: 55,
 			spd: 52,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Serene Grace",
-			1: "Early Bird"
+			1: "Early Bird",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
-			"Kanaya"
-		]
+			"Kanaya",
+		],
 	},
 	kanaya: {
 		num: 413038,
 		name: "Kanaya",
 		types: [
 			"Grass",
-			"Fairy"
+			"Fairy",
 		],
 		baseStats: {
 			hp: 50,
@@ -96905,32 +97228,32 @@ blobbosgeno: {
 			def: 74,
 			spa: 70,
 			spd: 72,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Serene Grace",
-			1: "Early Bird"
+			1: "Early Bird",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
-			"GT Kanaya"
+			"GT Kanaya",
 		],
 		prevo: "GrubKanaya",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtkanaya: {
 		num: 413039,
 		name: "GT Kanaya",
 		types: [
 			"Grass",
-			"Fairy"
+			"Fairy",
 		],
 		baseStats: {
 			hp: 68,
@@ -96938,28 +97261,28 @@ blobbosgeno: {
 			def: 95,
 			spa: 90,
 			spd: 93,
-			spe: 105
+			spe: 105,
 		},
 		abilities: {
 			0: "Serene Grace",
-			1: "Early Bird"
+			1: "Early Bird",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Kanaya",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubterezi: {
 		num: 413040,
 		name: "GrubTerezi",
 		types: [
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 54,
@@ -96967,29 +97290,29 @@ blobbosgeno: {
 			def: 45,
 			spa: 25,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Keen Eye",
-			1: "Analytic"
+			1: "Analytic",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
-			"Terezi"
-		]
+			"Terezi",
+		],
 	},
 	terezi: {
 		num: 413041,
 		name: "Terezi",
 		types: [
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 68,
@@ -96997,31 +97320,31 @@ blobbosgeno: {
 			def: 60,
 			spa: 35,
 			spd: 80,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Keen Eye",
-			1: "Analytic"
+			1: "Analytic",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
-			"GT Terezi"
+			"GT Terezi",
 		],
 		prevo: "GrubTerezi",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtterezi: {
 		num: 413042,
 		name: "GT Terezi",
 		types: [
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 88,
@@ -97029,29 +97352,29 @@ blobbosgeno: {
 			def: 80,
 			spa: 50,
 			spd: 103,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Keen Eye",
-			1: "Analytic"
+			1: "Analytic",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Terezi",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubvriska: {
 		num: 413043,
 		name: "GrubVriska",
 		types: [
 			"Bug",
-			"Dark"
+			"Dark",
 		],
 		baseStats: {
 			hp: 39,
@@ -97059,30 +97382,30 @@ blobbosgeno: {
 			def: 50,
 			spa: 73,
 			spd: 51,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Compoundeyes",
-			1: "Super Luck"
+			1: "Super Luck",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
-			"Vriska"
-		]
+			"Vriska",
+		],
 	},
 	vriska: {
 		num: 413044,
 		name: "Vriska",
 		types: [
 			"Bug",
-			"Dark"
+			"Dark",
 		],
 		baseStats: {
 			hp: 54,
@@ -97090,33 +97413,33 @@ blobbosgeno: {
 			def: 65,
 			spa: 93,
 			spd: 66,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Compoundeyes",
-			1: "Super Luck"
+			1: "Super Luck",
 		},
 		heightm: 1.6,
 		weightkg: 63.1,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
 			"GT Vriska",
-			"Tavris"
+			"Tavris",
 		],
 		prevo: "GrubVriska",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	horuss: {
 		num: 413083,
 		name: "Horuss",
 		types: [
 			"Fighting",
-			"Steel"
+			"Steel",
 		],
 		baseStats: {
 			hp: 80,
@@ -97124,31 +97447,31 @@ blobbosgeno: {
 			def: 100,
 			spa: 42,
 			spd: 44,
-			spe: 62
+			spe: 62,
 		},
 		abilities: {
 			0: "Technician",
-			1: "Battle Armor"
+			1: "Battle Armor",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
-			"GT Horuss"
+			"GT Horuss",
 		],
 		prevo: "GrubHoruss",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	grubequius: {
 		num: 413046,
 		name: "GrubEquius",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 65,
@@ -97156,29 +97479,29 @@ blobbosgeno: {
 			def: 67,
 			spa: 37,
 			spd: 30,
-			spe: 38
+			spe: 38,
 		},
 		abilities: {
 			0: "Iron Fist",
-			1: "Damp"
+			1: "Damp",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
-			"Equius"
-		]
+			"Equius",
+		],
 	},
 	equius: {
 		num: 413047,
 		name: "Equius",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 80,
@@ -97186,32 +97509,32 @@ blobbosgeno: {
 			def: 82,
 			spa: 52,
 			spd: 45,
-			spe: 52
+			spe: 52,
 		},
 		abilities: {
 			0: "Iron Fist",
-			1: "Damp"
+			1: "Damp",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
 			"GT Equius",
-			"ARquius"
+			"ARquius",
 		],
 		prevo: "GrubEquius",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtequius: {
 		num: 413048,
 		name: "GT Equius",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 95,
@@ -97219,29 +97542,29 @@ blobbosgeno: {
 			def: 97,
 			spa: 72,
 			spd: 55,
-			spe: 72
+			spe: 72,
 		},
 		abilities: {
 			0: "Iron Fist",
-			1: "Damp"
+			1: "Damp",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "Equius",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubgamzee: {
 		num: 413049,
 		name: "GrubGamzee",
 		types: [
 			"Poison",
-			"Grass"
+			"Grass",
 		],
 		baseStats: {
 			hp: 74,
@@ -97249,30 +97572,30 @@ blobbosgeno: {
 			def: 53,
 			spa: 30,
 			spd: 40,
-			spe: 51
+			spe: 51,
 		},
 		abilities: {
 			0: "Liquid Ooze",
-			1: "Hustle"
+			1: "Hustle",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Purple",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
-			"Gamzee"
-		]
+			"Gamzee",
+		],
 	},
 	gamzee: {
 		num: 413050,
 		name: "Gamzee",
 		types: [
 			"Poison",
-			"Grass"
+			"Grass",
 		],
 		baseStats: {
 			hp: 92,
@@ -97280,32 +97603,32 @@ blobbosgeno: {
 			def: 68,
 			spa: 60,
 			spd: 50,
-			spe: 66
+			spe: 66,
 		},
 		abilities: {
 			0: "Liquid Ooze",
-			1: "Hustle"
+			1: "Hustle",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Purple",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
-			"GT Gamzee"
+			"GT Gamzee",
 		],
 		prevo: "GrubGamzee",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtgamzee: {
 		num: 413051,
 		name: "GT Gamzee",
 		types: [
 			"Poison",
-			"Dark"
+			"Dark",
 		],
 		baseStats: {
 			hp: 112,
@@ -97313,28 +97636,28 @@ blobbosgeno: {
 			def: 88,
 			spa: 70,
 			spd: 60,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Intimidate",
-			1: "Own Tempo"
+			1: "Own Tempo",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Purple",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "Gamzee",
-		evoLevel: 32
+		evoLevel: 32,
 	},
 	gruberidan: {
 		num: 413052,
 		name: "GrubEridan",
 		types: [
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 20,
@@ -97342,30 +97665,30 @@ blobbosgeno: {
 			def: 40,
 			spa: 72,
 			spd: 64,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Torrent",
-			1: "Oblivious"
+			1: "Oblivious",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Purple",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
 		gender: "M",
 		evos: [
-			"Eridan"
-		]
+			"Eridan",
+		],
 	},
 	eridan: {
 		num: 413053,
 		name: "Eridan",
 		types: [
 			"Water",
-			"Dark"
+			"Dark",
 		],
 		baseStats: {
 			hp: 35,
@@ -97373,33 +97696,33 @@ blobbosgeno: {
 			def: 55,
 			spa: 81,
 			spd: 110,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Torrent",
-			1: "Oblivious"
+			1: "Oblivious",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Purple",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
 		gender: "M",
 		evos: [
 			"GT Eridan",
-			"Erisol"
+			"Erisol",
 		],
 		prevo: "GrubEridan",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gteridan: {
 		num: 413054,
 		name: "GT Eridan",
 		types: [
 			"Water",
-			"Dark"
+			"Dark",
 		],
 		baseStats: {
 			hp: 55,
@@ -97407,28 +97730,28 @@ blobbosgeno: {
 			def: 75,
 			spa: 102,
 			spd: 120,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Torrent",
-			1: "Oblivious"
+			1: "Oblivious",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Purple",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
 		gender: "M",
 		prevo: "Eridan",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubfeferi: {
 		num: 413055,
 		name: "GrubFeferi",
 		types: [
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 70,
@@ -97436,29 +97759,29 @@ blobbosgeno: {
 			def: 35,
 			spa: 56,
 			spd: 54,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Swift Swim",
-			1: "Natural Cure"
+			1: "Natural Cure",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Pink",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
 		gender: "F",
 		evos: [
-			"Feferi"
-		]
+			"Feferi",
+		],
 	},
 	feferi: {
 		num: 413056,
 		name: "Feferi",
 		types: [
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 90,
@@ -97466,32 +97789,32 @@ blobbosgeno: {
 			def: 50,
 			spa: 73,
 			spd: 70,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Swift Swim",
-			1: "Natural Cure"
+			1: "Natural Cure",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Pink",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
 		gender: "F",
 		evos: [
 			"GT Feferi",
-			"Fefeta"
+			"Fefeta",
 		],
 		prevo: "GrubFeferi",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtfeferi: {
 		num: 413057,
 		name: "GT Feferi",
 		types: [
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 120,
@@ -97499,28 +97822,28 @@ blobbosgeno: {
 			def: 65,
 			spa: 94,
 			spd: 90,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Swift Swim",
-			1: "Natural Cure"
+			1: "Natural Cure",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Pink",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
 		gender: "F",
 		prevo: "Feferi",
-		evoLevel: 34
+		evoLevel: 34,
 	},
 	grubkankri: {
 		num: 413058,
 		name: "GrubKankri",
 		types: [
-			"Ground"
+			"Ground",
 		],
 		baseStats: {
 			hp: 56,
@@ -97528,30 +97851,30 @@ blobbosgeno: {
 			def: 69,
 			spa: 45,
 			spd: 49,
-			spe: 63
+			spe: 63,
 		},
 		abilities: {
-			0: "Arena Trap"
+			0: "Arena Trap",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
 			"Kankri",
-			"Signless"
-		]
+			"Signless",
+		],
 	},
 	kankri: {
 		num: 413059,
 		name: "Kankri",
 		types: [
 			"Ground",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 66,
@@ -97559,31 +97882,31 @@ blobbosgeno: {
 			def: 96,
 			spa: 50,
 			spd: 59,
-			spe: 76
+			spe: 76,
 		},
 		abilities: {
-			0: "Arena Trap"
+			0: "Arena Trap",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
-			"GT Kankri"
+			"GT Kankri",
 		],
 		prevo: "GrubKankri",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtkankri: {
 		num: 413060,
 		name: "GT Kankri",
 		types: [
 			"Ground",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 86,
@@ -97591,28 +97914,28 @@ blobbosgeno: {
 			def: 126,
 			spa: 61,
 			spd: 79,
-			spe: 96
+			spe: 96,
 		},
 		abilities: {
-			0: "Clear Body"
+			0: "Clear Body",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "Kankri",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubdamara: {
 		num: 413061,
 		name: "GrubDamara",
 		types: [
 			"Ice",
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 59,
@@ -97620,30 +97943,30 @@ blobbosgeno: {
 			def: 30,
 			spa: 55,
 			spd: 74,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
-			0: "Pressure"
+			0: "Pressure",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
 			"Damara",
-			"Handmaid"
-		]
+			"Handmaid",
+		],
 	},
 	damara: {
 		num: 413062,
 		name: "Damara",
 		types: [
 			"Ice",
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 79,
@@ -97651,31 +97974,31 @@ blobbosgeno: {
 			def: 45,
 			spa: 70,
 			spd: 96,
-			spe: 67
+			spe: 67,
 		},
 		abilities: {
-			0: "Pressure"
+			0: "Pressure",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
-			"GT Damara"
+			"GT Damara",
 		],
 		prevo: "GrubDamara",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtdamara: {
 		num: 413063,
 		name: "GT Damara",
 		types: [
 			"Ice",
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 99,
@@ -97683,27 +98006,27 @@ blobbosgeno: {
 			def: 65,
 			spa: 90,
 			spd: 117,
-			spe: 87
+			spe: 87,
 		},
 		abilities: {
-			0: "Pressure"
+			0: "Pressure",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Damara",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubrufioh: {
 		num: 413064,
 		name: "GrubRufioh",
 		types: [
-			"Electric"
+			"Electric",
 		],
 		baseStats: {
 			hp: 45,
@@ -97711,31 +98034,31 @@ blobbosgeno: {
 			def: 35,
 			spa: 55,
 			spd: 47,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Air Lock",
-			1: "Cute Charm"
+			1: "Cute Charm",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Brown",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
 			"Rufioh",
-			"Summoner"
-		]
+			"Summoner",
+		],
 	},
 	rufioh: {
 		num: 413065,
 		name: "Rufioh",
 		types: [
 			"Electric",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 60,
@@ -97743,33 +98066,33 @@ blobbosgeno: {
 			def: 50,
 			spa: 70,
 			spd: 62,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Air Lock",
-			1: "Cute Charm"
+			1: "Cute Charm",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Brown",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
 			"GT Rufioh",
-			"RoboRufioh"
+			"RoboRufioh",
 		],
 		prevo: "GrubRufioh",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtrufioh: {
 		num: 413066,
 		name: "GT Rufioh",
 		types: [
 			"Electric",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 80,
@@ -97777,28 +98100,28 @@ blobbosgeno: {
 			def: 70,
 			spa: 90,
 			spd: 83,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Air Lock",
-			1: "Cute Charm"
+			1: "Cute Charm",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Brown",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "Rufioh",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubmituna: {
 		num: 413067,
 		name: "GrubMituna",
 		types: [
-			"Fire"
+			"Fire",
 		],
 		baseStats: {
 			hp: 45,
@@ -97806,31 +98129,31 @@ blobbosgeno: {
 			def: 55,
 			spa: 52,
 			spd: 62,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Guts",
-			1: "Blaze"
+			1: "Blaze",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Yellow",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
 			"Mituna",
-			"Psiioniic"
-		]
+			"Psiioniic",
+		],
 	},
 	mituna: {
 		num: 413068,
 		name: "Mituna",
 		types: [
 			"Fire",
-			"Rock"
+			"Rock",
 		],
 		baseStats: {
 			hp: 66,
@@ -97838,32 +98161,32 @@ blobbosgeno: {
 			def: 90,
 			spa: 66,
 			spd: 62,
-			spe: 67
+			spe: 67,
 		},
 		abilities: {
 			0: "Rock Head",
-			1: "Reckless"
+			1: "Reckless",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Yellow",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
-			"GT Mituna"
+			"GT Mituna",
 		],
 		prevo: "GrubMituna",
-		evoLevel: 14
+		evoLevel: 14,
 	},
 	gtmituna: {
 		num: 413069,
 		name: "GT Mituna",
 		types: [
 			"Fire",
-			"Rock"
+			"Rock",
 		],
 		baseStats: {
 			hp: 83,
@@ -97871,28 +98194,28 @@ blobbosgeno: {
 			def: 110,
 			spa: 100,
 			spd: 77,
-			spe: 87
+			spe: 87,
 		},
 		abilities: {
 			0: "Rock Head",
-			1: "Reckless"
+			1: "Reckless",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Yellow",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "Mituna",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubmeulin: {
 		num: 413070,
 		name: "GrubMeulin",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 64,
@@ -97900,30 +98223,30 @@ blobbosgeno: {
 			def: 50,
 			spa: 66,
 			spd: 40,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
-			0: "Cute Charm"
+			0: "Cute Charm",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
 			"Meulin",
-			"Disciple"
-		]
+			"Disciple",
+		],
 	},
 	meulin: {
 		num: 413071,
 		name: "Meulin",
 		types: [
 			"Normal",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 80,
@@ -97931,31 +98254,31 @@ blobbosgeno: {
 			def: 63,
 			spa: 90,
 			spd: 55,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Soundproof"
+			0: "Soundproof",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
-			"GT Meulin"
+			"GT Meulin",
 		],
 		prevo: "GrubMeulin",
-		evoLevel: 14
+		evoLevel: 14,
 	},
 	gtmeulin: {
 		num: 413072,
 		name: "GT Meulin",
 		types: [
 			"Normal",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 100,
@@ -97963,27 +98286,27 @@ blobbosgeno: {
 			def: 84,
 			spa: 110,
 			spd: 75,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
-			0: "Soundproof"
+			0: "Soundproof",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Meulin",
-		evoLevel: 33
+		evoLevel: 33,
 	},
 	grubporrim: {
 		num: 413073,
 		name: "GrubPorrim",
 		types: [
-			"Grass"
+			"Grass",
 		],
 		baseStats: {
 			hp: 59,
@@ -97991,30 +98314,30 @@ blobbosgeno: {
 			def: 55,
 			spa: 40,
 			spd: 55,
-			spe: 64
+			spe: 64,
 		},
 		abilities: {
 			0: "Chlorophyll",
-			1: "Early Bird"
+			1: "Early Bird",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
 			"Porrim",
-			"Dolorosa"
-		]
+			"Dolorosa",
+		],
 	},
 	porrim: {
 		num: 413074,
 		name: "Porrim",
 		types: [
-			"Grass"
+			"Grass",
 		],
 		baseStats: {
 			hp: 79,
@@ -98022,31 +98345,31 @@ blobbosgeno: {
 			def: 73,
 			spa: 50,
 			spd: 73,
-			spe: 82
+			spe: 82,
 		},
 		abilities: {
 			0: "Chlorophyll",
-			1: "Early Bird"
+			1: "Early Bird",
 		},
 		heightm: 1.6,
 		weightkg: 63,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
-			"GT Porrim"
+			"GT Porrim",
 		],
 		prevo: "GrubPorrim",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtporrim: {
 		num: 413075,
 		name: "GT Porrim",
 		types: [
-			"Grass"
+			"Grass",
 		],
 		baseStats: {
 			hp: 99,
@@ -98054,28 +98377,28 @@ blobbosgeno: {
 			def: 93,
 			spa: 65,
 			spd: 93,
-			spe: 108
+			spe: 108,
 		},
 		abilities: {
 			0: "Chlorophyll",
-			1: "Early Bird"
+			1: "Early Bird",
 		},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Porrim",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grublatula: {
 		num: 413076,
 		name: "GrubLatula",
 		types: [
-			"Electric"
+			"Electric",
 		],
 		baseStats: {
 			hp: 40,
@@ -98083,31 +98406,31 @@ blobbosgeno: {
 			def: 34,
 			spa: 68,
 			spd: 60,
-			spe: 47
+			spe: 47,
 		},
 		abilities: {
 			0: "Guts",
-			1: "Keen Eye"
+			1: "Keen Eye",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
 			"Latula",
-			"Redglare"
-		]
+			"Redglare",
+		],
 	},
 	latula: {
 		num: 413077,
 		name: "Latula",
 		types: [
 			"Electric",
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 55,
@@ -98115,32 +98438,32 @@ blobbosgeno: {
 			def: 49,
 			spa: 88,
 			spd: 75,
-			spe: 62
+			spe: 62,
 		},
 		abilities: {
 			0: "Guts",
-			1: "Keen Eye"
+			1: "Keen Eye",
 		},
 		heightm: 1,
 		weightkg: 30,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
-			"GT Latula"
+			"GT Latula",
 		],
 		prevo: "GrubLatula",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtlatula: {
 		num: 413078,
 		name: "GT Latula",
 		types: [
 			"Electric",
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 75,
@@ -98148,29 +98471,29 @@ blobbosgeno: {
 			def: 64,
 			spa: 108,
 			spd: 100,
-			spe: 82
+			spe: 82,
 		},
 		abilities: {
 			0: "Guts",
-			1: "Keen Eye"
+			1: "Keen Eye",
 		},
 		heightm: 1.7,
 		weightkg: 95,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Latula",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubaranea: {
 		num: 413079,
 		name: "GrubAranea",
 		types: [
 			"Bug",
-			"Electric"
+			"Electric",
 		],
 		baseStats: {
 			hp: 50,
@@ -98178,31 +98501,31 @@ blobbosgeno: {
 			def: 40,
 			spa: 50,
 			spd: 62,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Serene Grace",
-			1: "Healer"
+			1: "Healer",
 		},
 		heightm: 1.2,
 		weightkg: 36,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
 			"Aranea",
-			"Mindfang"
-		]
+			"Mindfang",
+		],
 	},
 	aranea: {
 		num: 413080,
 		name: "Aranea",
 		types: [
 			"Bug",
-			"Electric"
+			"Electric",
 		],
 		baseStats: {
 			hp: 70,
@@ -98210,32 +98533,32 @@ blobbosgeno: {
 			def: 55,
 			spa: 65,
 			spd: 81,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Serene Grace",
-			1: "Healer"
+			1: "Healer",
 		},
 		heightm: 1.6,
 		weightkg: 78.5,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
-			"GT Aranea"
+			"GT Aranea",
 		],
 		prevo: "GrubAranea",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtaranea: {
 		num: 413081,
 		name: "GT Aranea",
 		types: [
 			"Bug",
-			"Electric"
+			"Electric",
 		],
 		baseStats: {
 			hp: 90,
@@ -98243,28 +98566,28 @@ blobbosgeno: {
 			def: 70,
 			spa: 80,
 			spd: 107,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Serene Grace",
-			1: "Healer"
+			1: "Healer",
 		},
 		heightm: 0.3,
 		weightkg: 6,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Aranea",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubhoruss: {
 		num: 413082,
 		name: "GrubHoruss",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 60,
@@ -98272,31 +98595,31 @@ blobbosgeno: {
 			def: 70,
 			spa: 34,
 			spd: 25,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Damp",
-			1: "Guts"
+			1: "Guts",
 		},
 		heightm: 1,
 		weightkg: 60,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
 			"Horuss",
-			"Darkleer"
-		]
+			"Darkleer",
+		],
 	},
 	gtvriska: {
 		num: 413045,
 		name: "GT Vriska",
 		types: [
 			"Bug",
-			"Dark"
+			"Dark",
 		],
 		baseStats: {
 			hp: 74,
@@ -98304,29 +98627,29 @@ blobbosgeno: {
 			def: 85,
 			spa: 113,
 			spd: 86,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Compoundeyes",
-			1: "Super Luck"
+			1: "Super Luck",
 		},
 		heightm: 1.2,
 		weightkg: 18.6,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Vriska",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	gthoruss: {
 		num: 413084,
 		name: "GT Horuss",
 		types: [
 			"Fighting",
-			"Steel"
+			"Steel",
 		],
 		baseStats: {
 			hp: 100,
@@ -98334,28 +98657,28 @@ blobbosgeno: {
 			def: 120,
 			spa: 62,
 			spd: 65,
-			spe: 82
+			spe: 82,
 		},
 		abilities: {
 			0: "Technician",
-			1: "Battle Armor"
+			1: "Battle Armor",
 		},
 		heightm: 1.4,
 		weightkg: 39.2,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "Horuss",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubkurloz: {
 		num: 413085,
 		name: "GrubKurloz",
 		types: [
-			"Dark"
+			"Dark",
 		],
 		baseStats: {
 			hp: 40,
@@ -98363,30 +98686,30 @@ blobbosgeno: {
 			def: 27,
 			spa: 55,
 			spd: 75,
-			spe: 27
+			spe: 27,
 		},
 		abilities: {
-			0: "Pressure"
+			0: "Pressure",
 		},
 		heightm: 1.8,
 		weightkg: 85.2,
 		color: "Purple",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
 			"Kurloz",
-			"Highblood"
-		]
+			"Highblood",
+		],
 	},
 	kurloz: {
 		num: 413086,
 		name: "Kurloz",
 		types: [
 			"Dark",
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 60,
@@ -98394,31 +98717,31 @@ blobbosgeno: {
 			def: 39,
 			spa: 70,
 			spd: 100,
-			spe: 39
+			spe: 39,
 		},
 		abilities: {
-			0: "Intimidate"
+			0: "Intimidate",
 		},
 		heightm: 1.1,
 		weightkg: 90,
 		color: "Purple",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
-			"GT Kurloz"
+			"GT Kurloz",
 		],
 		prevo: "GrubKurloz",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtkurloz: {
 		num: 413087,
 		name: "GT Kurloz",
 		types: [
 			"Dark",
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 80,
@@ -98426,28 +98749,28 @@ blobbosgeno: {
 			def: 54,
 			spa: 90,
 			spd: 126,
-			spe: 54
+			spe: 54,
 		},
 		abilities: {
-			0: "Intimidate"
+			0: "Intimidate",
 		},
 		heightm: 1.7,
 		weightkg: 120,
 		color: "Purple",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "Kurloz",
-		evoLevel: 34
+		evoLevel: 34,
 	},
 	grubcronus: {
 		num: 413088,
 		name: "GrubCronus",
 		types: [
 			"Water",
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 20,
@@ -98455,30 +98778,30 @@ blobbosgeno: {
 			def: 60,
 			spa: 50,
 			spd: 60,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
-			0: "Oblivious"
+			0: "Oblivious",
 		},
 		heightm: 0.9,
 		weightkg: 30,
 		color: "Purple",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
 		gender: "M",
 		evos: [
 			"Cronus",
-			"Dualscar"
-		]
+			"Dualscar",
+		],
 	},
 	cronus: {
 		num: 413089,
 		name: "Cronus",
 		types: [
 			"Water",
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 39,
@@ -98486,31 +98809,31 @@ blobbosgeno: {
 			def: 79,
 			spa: 69,
 			spd: 79,
-			spe: 69
+			spe: 69,
 		},
 		abilities: {
-			0: "Oblivious"
+			0: "Oblivious",
 		},
 		heightm: 1.2,
 		weightkg: 30,
 		color: "Purple",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
 		gender: "M",
 		evos: [
-			"GT Cronus"
+			"GT Cronus",
 		],
 		prevo: "GrubCronus",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtcronus: {
 		num: 413090,
 		name: "GT Cronus",
 		types: [
 			"Water",
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 54,
@@ -98518,27 +98841,27 @@ blobbosgeno: {
 			def: 94,
 			spa: 79,
 			spd: 94,
-			spe: 89
+			spe: 89,
 		},
 		abilities: {
-			0: "Oblivious"
+			0: "Oblivious",
 		},
 		heightm: 0.3,
 		weightkg: 4,
 		color: "Purple",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
 		gender: "M",
 		prevo: "Cronus",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	grubmeenah: {
 		num: 413091,
 		name: "GrubMeenah",
 		types: [
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 50,
@@ -98546,30 +98869,30 @@ blobbosgeno: {
 			def: 40,
 			spa: 57,
 			spd: 56,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Swift Swim",
-			1: "Guts"
+			1: "Guts",
 		},
 		heightm: 1.5,
 		weightkg: 132.5,
 		color: "Pink",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
 		gender: "F",
 		evos: [
-			"Meenah"
-		]
+			"Meenah",
+		],
 	},
 	meenah: {
 		num: 413092,
 		name: "Meenah",
 		types: [
 			"Water",
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 70,
@@ -98577,32 +98900,32 @@ blobbosgeno: {
 			def: 50,
 			spa: 77,
 			spd: 76,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Swift Swim",
-			1: "Guts"
+			1: "Guts",
 		},
 		heightm: 1.3,
 		weightkg: 0.1,
 		color: "Pink",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
 		gender: "F",
 		evos: [
-			"GT Meenah"
+			"GT Meenah",
 		],
 		prevo: "GrubMeenah",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtmeenah: {
 		num: 413093,
 		name: "GT Meenah",
 		types: [
 			"Water",
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 90,
@@ -98610,28 +98933,28 @@ blobbosgeno: {
 			def: 70,
 			spa: 97,
 			spd: 96,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Swift Swim",
-			1: "Guts"
+			1: "Guts",
 		},
 		heightm: 1.6,
 		weightkg: 0.1,
 		color: "Pink",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
 		gender: "F",
 		prevo: "Meenah",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	babycherub: {
 		num: 413094,
 		name: "BabyCherub",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 50,
@@ -98639,29 +98962,29 @@ blobbosgeno: {
 			def: 35,
 			spa: 50,
 			spd: 35,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
-			0: "Shed Skin"
+			0: "Shed Skin",
 		},
 		heightm: 1.5,
 		weightkg: 40.5,
 		color: "Green",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		evos: [
 			"Caliborn",
 			"Calliope",
-			"Caliborn"
-		]
+			"Caliborn",
+		],
 	},
 	calliope: {
 		num: 413095,
 		name: "Calliope",
 		types: [
 			"Ghost",
-			"Grass"
+			"Grass",
 		],
 		baseStats: {
 			hp: 80,
@@ -98669,17 +98992,17 @@ blobbosgeno: {
 			def: 88,
 			spa: 50,
 			spd: 80,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
-			0: "Magic Guard"
+			0: "Magic Guard",
 		},
 		heightm: 8.8,
 		weightkg: 210,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Water 1"
+			"Water 1",
 		],
 		gender: "F",
 		evos: [
@@ -98687,14 +99010,14 @@ blobbosgeno: {
 		],
 		prevo: "BabyCherub",
 		evoLevel: 20,
-		evoCondition: "with an Atk stat < its Def stat"
+		evoCondition: "with an Atk stat < its Def stat",
 	},
 	caliborn: {
 		num: 413096,
 		name: "Caliborn",
 		types: [
 			"Dark",
-			"Fire"
+			"Fire",
 		],
 		baseStats: {
 			hp: 50,
@@ -98702,17 +99025,17 @@ blobbosgeno: {
 			def: 80,
 			spa: 80,
 			spd: 88,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
-			0: "Reckless"
+			0: "Reckless",
 		},
 		heightm: 1,
 		weightkg: 32.4,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Water 1"
+			"Water 1",
 		],
 		gender: "M",
 		evos: [
@@ -98720,13 +99043,13 @@ blobbosgeno: {
 		],
 		prevo: "BabyCherub",
 		evoLevel: 20,
-		evoCondition: "with an Atk stat > its Def stat"
+		evoCondition: "with an Atk stat > its Def stat",
 	},
 	shaleimp: {
 		num: 413097,
 		name: "Shale Imp",
 		types: [
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 40,
@@ -98734,26 +99057,26 @@ blobbosgeno: {
 			def: 65,
 			spa: 40,
 			spd: 45,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
-			0: "Liquid Ooze"
+			0: "Liquid Ooze",
 		},
 		heightm: 1.6,
 		weightkg: 75.6,
 		color: "Black",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		evos: [
-			"Crude Ogre"
-		]
+			"Crude Ogre",
+		],
 	},
 	shalelich: {
 		num: 413099,
 		name: "Shale Lich",
 		types: [
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 30,
@@ -98761,29 +99084,29 @@ blobbosgeno: {
 			def: 90,
 			spa: 50,
 			spd: 25,
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Hyper Cutter",
-			1: "Shell Armor"
+			1: "Shell Armor",
 		},
 		heightm: 1.3,
 		weightkg: 60,
 		color: "Red",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.49609375,
-			M: 0.50390625
-		}
+			M: 0.50390625,
+		},
 	},
 	crudeogre: {
 		num: 413098,
 		name: "Crude Ogre",
 		types: [
 			"Rock",
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 75,
@@ -98791,25 +99114,25 @@ blobbosgeno: {
 			def: 100,
 			spa: 50,
 			spd: 70,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Intimidate"
+			0: "Intimidate",
 		},
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Black",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		prevo: "Shale Imp",
-		evoLevel: 23
+		evoLevel: 23,
 	},
 	minihoof: {
 		num: 413100,
 		name: "Minihoof",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 55,
@@ -98817,28 +99140,28 @@ blobbosgeno: {
 			def: 40,
 			spa: 75,
 			spd: 15,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Pickup",
-			1: "Cute Charm"
+			1: "Cute Charm",
 		},
 		heightm: 0.5,
 		weightkg: 10.4,
 		color: "White",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "F",
 		evos: [
-			"Maplehoof"
-		]
+			"Maplehoof",
+		],
 	},
 	maplehoof: {
 		num: 413101,
 		name: "Maplehoof",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 80,
@@ -98846,28 +99169,28 @@ blobbosgeno: {
 			def: 65,
 			spa: 100,
 			spd: 40,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Pickup",
-			1: "Cute Charm"
+			1: "Cute Charm",
 		},
 		heightm: 1.2,
 		weightkg: 66.6,
 		color: "White",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "F",
 		prevo: "Minihoof",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	ramlusus: {
 		num: 413102,
 		name: "Ram Lusus",
 		types: [
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 80,
@@ -98875,25 +99198,25 @@ blobbosgeno: {
 			def: 65,
 			spa: 90,
 			spd: 65,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
-			0: "Synchronize"
+			0: "Synchronize",
 		},
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "White",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
-		gender: "F"
+		gender: "F",
 	},
 	tinkerbull: {
 		num: 413103,
 		name: "Tinkerbull",
 		types: [
 			"Fairy",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 50,
@@ -98901,30 +99224,30 @@ blobbosgeno: {
 			def: 30,
 			spa: 70,
 			spd: 30,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Oblivious",
-			1: "Cute Charm"
+			1: "Cute Charm",
 		},
 		heightm: 2,
 		weightkg: 120,
 		color: "White",
 		eggGroups: [
 			"Water 1",
-			"Grass"
+			"Grass",
 		],
 		gender: "M",
 		evos: [
-			"Bullsprite"
-		]
+			"Bullsprite",
+		],
 	},
 	bullsprite: {
 		num: 413104,
 		name: "Bullsprite",
 		types: [
 			"Fairy",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 80,
@@ -98932,30 +99255,30 @@ blobbosgeno: {
 			def: 50,
 			spa: 100,
 			spd: 50,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Oblivious",
-			1: "Cute Charm"
+			1: "Cute Charm",
 		},
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Brown",
 		eggGroups: [
 			"Water 1",
-			"Grass"
+			"Grass",
 		],
 		gender: "M",
 		prevo: "Tinkerbull",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	bicyclops: {
 		num: 413105,
 		name: "Bicyclops",
 		types: [
 			"Normal",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 83,
@@ -98963,29 +99286,29 @@ blobbosgeno: {
 			def: 60,
 			spa: 20,
 			spd: 85,
-			spe: 77
+			spe: 77,
 		},
 		abilities: {
 			0: "Lightningrod",
-			1: "Thick Fat"
+			1: "Thick Fat",
 		},
 		heightm: 1,
 		weightkg: 45,
 		color: "White",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		gender: "M",
 		evos: [
-			"Bisprite"
-		]
+			"Bisprite",
+		],
 	},
 	bisprite: {
 		num: 413106,
 		name: "Bisprite",
 		types: [
 			"Normal",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 98,
@@ -98993,29 +99316,29 @@ blobbosgeno: {
 			def: 70,
 			spa: 50,
 			spd: 105,
-			spe: 92
+			spe: 92,
 		},
 		abilities: {
 			0: "Lightningrod",
-			1: "Thick Fat"
+			1: "Thick Fat",
 		},
 		heightm: 1.5,
 		weightkg: 49.8,
 		color: "Yellow",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		gender: "M",
 		prevo: "Bicyclops",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	crabdad: {
 		num: 413107,
 		name: "Crabdad",
 		types: [
 			"Bug",
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 60,
@@ -99023,30 +99346,30 @@ blobbosgeno: {
 			def: 80,
 			spa: 55,
 			spd: 55,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Insomnia",
-			1: "Shell Armor"
+			1: "Shell Armor",
 		},
 		heightm: 1.4,
 		weightkg: 50.2,
 		color: "White",
 		eggGroups: [
 			"Water 1",
-			"Mineral"
+			"Mineral",
 		],
 		gender: "M",
 		evos: [
-			"Crabsprite"
-		]
+			"Crabsprite",
+		],
 	},
 	crabsprite: {
 		num: 413108,
 		name: "Crabsprite",
 		types: [
 			"Bug",
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 80,
@@ -99054,29 +99377,29 @@ blobbosgeno: {
 			def: 100,
 			spa: 55,
 			spd: 75,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Insomnia",
-			1: "Shell Armor"
+			1: "Shell Armor",
 		},
 		heightm: 1.2,
 		weightkg: 65.5,
 		color: "Red",
 		eggGroups: [
 			"Water 1",
-			"Mineral"
+			"Mineral",
 		],
 		gender: "M",
 		prevo: "Crabdad",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	pounce: {
 		num: 413109,
 		name: "Pounce",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 65,
@@ -99084,28 +99407,28 @@ blobbosgeno: {
 			def: 55,
 			spa: 95,
 			spd: 50,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Own Tempo",
-			1: "Limber"
+			1: "Limber",
 		},
 		heightm: 0.6,
 		weightkg: 1,
 		color: "White",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		gender: "F",
 		evos: [
-			"Pounsprite"
-		]
+			"Pounsprite",
+		],
 	},
 	pounsprite: {
 		num: 413110,
 		name: "Pounsprite",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 85,
@@ -99113,29 +99436,29 @@ blobbosgeno: {
 			def: 65,
 			spa: 125,
 			spd: 60,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Own Tempo",
-			1: "Limber"
+			1: "Limber",
 		},
 		heightm: 1.2,
 		weightkg: 9.5,
 		color: "Green",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		gender: "F",
 		prevo: "Pounce",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	mothergrub: {
 		num: 413111,
 		name: "Mothergrub",
 		types: [
 			"Bug",
-			"Fairy"
+			"Fairy",
 		],
 		baseStats: {
 			hp: 80,
@@ -99143,29 +99466,29 @@ blobbosgeno: {
 			def: 65,
 			spa: 65,
 			spd: 65,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
-			0: "Serene Grace"
+			0: "Serene Grace",
 		},
 		heightm: 1,
 		weightkg: 115,
 		color: "White",
 		eggGroups: [
 			"Water 1",
-			"Grass"
+			"Grass",
 		],
 		gender: "F",
 		evos: [
-			"Mthrsprite"
-		]
+			"Mthrsprite",
+		],
 	},
 	mthrsprite: {
 		num: 413112,
 		name: "Mthrsprite",
 		types: [
 			"Bug",
-			"Fairy"
+			"Fairy",
 		],
 		baseStats: {
 			hp: 105,
@@ -99173,29 +99496,29 @@ blobbosgeno: {
 			def: 77,
 			spa: 78,
 			spd: 78,
-			spe: 112
+			spe: 112,
 		},
 		abilities: {
-			0: "Serene Grace"
+			0: "Serene Grace",
 		},
 		heightm: 1.9,
 		weightkg: 120,
 		color: "Green",
 		eggGroups: [
 			"Water 1",
-			"Grass"
+			"Grass",
 		],
 		gender: "F",
 		prevo: "Mothergrub",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	dragonmom: {
 		num: 413113,
 		name: "Dragonmom",
 		types: [
 			"Dragon",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 58,
@@ -99203,29 +99526,29 @@ blobbosgeno: {
 			def: 60,
 			spa: 84,
 			spd: 66,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
-			0: "Keen Eye"
+			0: "Keen Eye",
 		},
 		heightm: 1.1,
 		weightkg: 34.6,
 		color: "White",
 		eggGroups: [
 			"Water 1",
-			"Undiscovered"
+			"Undiscovered",
 		],
 		gender: "F",
 		evos: [
-			"Drgnsprite"
-		]
+			"Drgnsprite",
+		],
 	},
 	drgnsprite: {
 		num: 413114,
 		name: "Drgnsprite",
 		types: [
 			"Dragon",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 78,
@@ -99233,29 +99556,29 @@ blobbosgeno: {
 			def: 70,
 			spa: 99,
 			spd: 91,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
-			0: "Keen Eye"
+			0: "Keen Eye",
 		},
 		heightm: 1,
 		weightkg: 35,
 		color: "Green",
 		eggGroups: [
 			"Water 1",
-			"Undiscovered"
+			"Undiscovered",
 		],
 		gender: "F",
 		prevo: "Dragonmom",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	spidermom: {
 		num: 413115,
 		name: "Spidermom",
 		types: [
 			"Bug",
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 80,
@@ -99263,30 +99586,30 @@ blobbosgeno: {
 			def: 75,
 			spa: 60,
 			spd: 45,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Compoundeyes",
-			1: "Intimidate"
+			1: "Intimidate",
 		},
 		heightm: 2.2,
 		weightkg: 80,
 		color: "White",
 		eggGroups: [
 			"Water 1",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		evos: [
-			"Spdrsprite"
-		]
+			"Spdrsprite",
+		],
 	},
 	spdrsprite: {
 		num: 413116,
 		name: "Spdrsprite",
 		types: [
 			"Bug",
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 95,
@@ -99294,29 +99617,29 @@ blobbosgeno: {
 			def: 85,
 			spa: 70,
 			spd: 65,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Compoundeyes",
-			1: "Intimidate"
+			1: "Intimidate",
 		},
 		heightm: 0.4,
 		weightkg: 8,
 		color: "Blue",
 		eggGroups: [
 			"Water 1",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Spidermom",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	aurthour: {
 		num: 413117,
 		name: "Aurthour",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 70,
@@ -99324,27 +99647,27 @@ blobbosgeno: {
 			def: 80,
 			spa: 80,
 			spd: 40,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
-			0: "Guts"
+			0: "Guts",
 		},
 		heightm: 1.2,
 		weightkg: 25,
 		color: "White",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		gender: "M",
 		evos: [
-			"Aursprite"
-		]
+			"Aursprite",
+		],
 	},
 	aursprite: {
 		num: 413118,
 		name: "Aursprite",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 80,
@@ -99352,28 +99675,28 @@ blobbosgeno: {
 			def: 100,
 			spa: 100,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Guts"
+			0: "Guts",
 		},
 		heightm: 0.6,
 		weightkg: 15,
 		color: "Blue",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		gender: "M",
 		prevo: "Aurthour",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	goatdad: {
 		num: 413119,
 		name: "Goatdad",
 		types: [
 			"Normal",
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 80,
@@ -99381,30 +99704,30 @@ blobbosgeno: {
 			def: 62,
 			spa: 60,
 			spd: 70,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Own Tempo",
-			1: "Hustle"
+			1: "Hustle",
 		},
 		heightm: 1.3,
 		weightkg: 39,
 		color: "White",
 		eggGroups: [
 			"Water 1",
-			"Bug"
+			"Bug",
 		],
 		gender: "M",
 		evos: [
-			"Goatsprite"
-		]
+			"Goatsprite",
+		],
 	},
 	goatsprite: {
 		num: 413120,
 		name: "Goatsprite",
 		types: [
 			"Normal",
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 90,
@@ -99412,29 +99735,29 @@ blobbosgeno: {
 			def: 72,
 			spa: 80,
 			spd: 90,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Own Tempo",
-			1: "Hustle"
+			1: "Hustle",
 		},
 		heightm: 0.8,
 		weightkg: 34.5,
 		color: "Purple",
 		eggGroups: [
 			"Water 1",
-			"Bug"
+			"Bug",
 		],
 		gender: "M",
 		prevo: "Goatdad",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	shorsedad: {
 		num: 413121,
 		name: "Shorsedad",
 		types: [
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 40,
@@ -99442,29 +99765,29 @@ blobbosgeno: {
 			def: 65,
 			spa: 90,
 			spd: 95,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Torrent",
-			1: "Levitate"
+			1: "Levitate",
 		},
 		heightm: 1.1,
 		weightkg: 80,
 		color: "White",
 		eggGroups: [
 			"Water 1",
-			"Bug"
+			"Bug",
 		],
 		gender: "M",
 		evos: [
-			"Shorsprite"
-		]
+			"Shorsprite",
+		],
 	},
 	shorsprite: {
 		num: 413122,
 		name: "Shorsprite",
 		types: [
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 55,
@@ -99472,30 +99795,30 @@ blobbosgeno: {
 			def: 85,
 			spa: 105,
 			spd: 110,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Torrent",
-			1: "Levitate"
+			1: "Levitate",
 		},
 		heightm: 1.3,
 		weightkg: 54.5,
 		color: "Purple",
 		eggGroups: [
 			"Water 1",
-			"Bug"
+			"Bug",
 		],
 		gender: "M",
 		prevo: "Shorsedad",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	glbgolyb: {
 		num: 413123,
 		name: "Gl'bgolyb",
 		types: [
 			"Water",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 90,
@@ -99503,29 +99826,29 @@ blobbosgeno: {
 			def: 60,
 			spa: 54,
 			spd: 90,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Natural Cure",
-			1: "Pressure"
+			1: "Pressure",
 		},
 		heightm: 1.5,
 		weightkg: 56,
 		color: "White",
 		eggGroups: [
 			"Water 1",
-			"Mineral"
+			"Mineral",
 		],
 		evos: [
-			"Gl'bsprite"
-		]
+			"Gl'bsprite",
+		],
 	},
 	glbsprite: {
 		num: 413124,
 		name: "Gl'bsprite",
 		types: [
 			"Water",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 100,
@@ -99533,29 +99856,29 @@ blobbosgeno: {
 			def: 80,
 			spa: 54,
 			spd: 115,
-			spe: 155
+			spe: 155,
 		},
 		abilities: {
 			0: "Natural Cure",
-			1: "Pressure"
+			1: "Pressure",
 		},
 		heightm: 1.4,
 		weightkg: 40.6,
 		color: "Purple",
 		eggGroups: [
 			"Water 1",
-			"Mineral"
+			"Mineral",
 		],
 		prevo: "Gl'bgolyb",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	babybec: {
 		num: 413125,
 		name: "Baby Bec",
 		types: [
 			"Dragon",
-			"Electric"
+			"Electric",
 		],
 		baseStats: {
 			hp: 58,
@@ -99563,29 +99886,29 @@ blobbosgeno: {
 			def: 58,
 			spa: 90,
 			spd: 80,
-			spe: 58
+			spe: 58,
 		},
 		abilities: {
-			0: "Pressure"
+			0: "Pressure",
 		},
 		heightm: 1.1,
 		weightkg: 30,
 		color: "White",
 		eggGroups: [
 			"Fairy",
-			"Undiscovered"
+			"Undiscovered",
 		],
 		gender: "M",
 		evos: [
-			"Becquerel"
-		]
+			"Becquerel",
+		],
 	},
 	becquerel: {
 		num: 413126,
 		name: "Becquerel",
 		types: [
 			"Dragon",
-			"Electric"
+			"Electric",
 		],
 		baseStats: {
 			hp: 82,
@@ -99593,31 +99916,31 @@ blobbosgeno: {
 			def: 82,
 			spa: 113,
 			spd: 103,
-			spe: 82
+			spe: 82,
 		},
 		abilities: {
-			0: "Pressure"
+			0: "Pressure",
 		},
 		heightm: 1.3,
 		weightkg: 44.5,
 		color: "White",
 		eggGroups: [
 			"Fairy",
-			"Undiscovered"
+			"Undiscovered",
 		],
 		gender: "M",
 		evos: [
-			"Becsprite"
+			"Becsprite",
 		],
 		prevo: "Baby Bec",
-		evoLevel: 35
+		evoLevel: 35,
 	},
 	becsprite: {
 		num: 413127,
 		name: "Becsprite",
 		types: [
 			"Dragon",
-			"Electric"
+			"Electric",
 		],
 		baseStats: {
 			hp: 92,
@@ -99625,28 +99948,28 @@ blobbosgeno: {
 			def: 92,
 			spa: 122,
 			spd: 112,
-			spe: 92
+			spe: 92,
 		},
 		abilities: {
-			0: "Pressure"
+			0: "Pressure",
 		},
 		heightm: 1.5,
 		weightkg: 55,
 		color: "White",
 		eggGroups: [
 			"Fairy",
-			"Undiscovered"
+			"Undiscovered",
 		],
 		gender: "M",
 		prevo: "Becquerel",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	nanna: {
 		num: 413128,
 		name: "Nanna",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 100,
@@ -99654,31 +99977,31 @@ blobbosgeno: {
 			def: 80,
 			spa: 65,
 			spd: 65,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
-			0: "Prankster"
+			0: "Prankster",
 		},
 		heightm: 1.4,
 		weightkg: 88.4,
 		color: "Blue",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		evos: [
-			"Nanasprite"
+			"Nanasprite",
 		],
 		prevo: "Baby Jane",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	nanasprite: {
 		num: 413129,
 		name: "Nanasprite",
 		types: [
 			"Normal",
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 100,
@@ -99686,28 +100009,28 @@ blobbosgeno: {
 			def: 80,
 			spa: 70,
 			spd: 95,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
-			0: "Prankster"
+			0: "Prankster",
 		},
 		heightm: 0.9,
 		weightkg: 10,
 		color: "Blue",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		prevo: "Nanna",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	mom: {
 		num: 413130,
 		name: "Mom",
 		types: [
 			"Water",
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 70,
@@ -99715,29 +100038,29 @@ blobbosgeno: {
 			def: 80,
 			spa: 83,
 			spd: 97,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Hydration",
-			1: "Storm Drain"
+			1: "Storm Drain",
 		},
 		heightm: 6.5,
 		weightkg: 235,
 		color: "Pink",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		prevo: "Baby Roxy",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	bro: {
 		num: 413131,
 		name: "Bro",
 		types: [
 			"Ice",
-			"Steel"
+			"Steel",
 		],
 		baseStats: {
 			hp: 70,
@@ -99745,28 +100068,28 @@ blobbosgeno: {
 			def: 60,
 			spa: 145,
 			spd: 75,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Snow Warning",
-			1: "Snow Warning"
+			1: "Snow Warning",
 		},
 		heightm: 2.5,
 		weightkg: 220,
 		color: "Black",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		prevo: "Baby Dirk",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	poppop: {
 		num: 413165,
 		name: "Poppop",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 65,
@@ -99774,28 +100097,28 @@ blobbosgeno: {
 			def: 90,
 			spa: 65,
 			spd: 65,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Normalize",
-			1: "Adaptability"
+			1: "Adaptability",
 		},
 		heightm: 1,
 		weightkg: 10.8,
 		color: "Blue",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		prevo: "Baby John",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	jaspers: {
 		num: 413133,
 		name: "Jaspers",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 60,
@@ -99803,29 +100126,29 @@ blobbosgeno: {
 			def: 47,
 			spa: 85,
 			spd: 53,
-			spe: 47
+			spe: 47,
 		},
 		abilities: {
 			0: "Limber",
-			1: "Own Tempo"
+			1: "Own Tempo",
 		},
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Black",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "M",
 		evos: [
-			"Jaspsprite"
-		]
+			"Jaspsprite",
+		],
 	},
 	jaspsprite: {
 		num: 413134,
 		name: "Jaspsprite",
 		types: [
 			"Normal",
-			"Fairy"
+			"Fairy",
 		],
 		baseStats: {
 			hp: 85,
@@ -99833,32 +100156,32 @@ blobbosgeno: {
 			def: 67,
 			spa: 95,
 			spd: 93,
-			spe: 67
+			spe: 67,
 		},
 		abilities: {
 			0: "Limber",
-			1: "Own Tempo"
+			1: "Own Tempo",
 		},
 		heightm: 1,
 		weightkg: 29,
 		color: "Pink",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "M",
 		evos: [
-			"Jasprose"
+			"Jasprose",
 		],
 		prevo: "Jaspers",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	crow: {
 		num: 413135,
 		name: "Crow",
 		types: [
 			"Dark",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 50,
@@ -99866,32 +100189,32 @@ blobbosgeno: {
 			def: 47,
 			spa: 85,
 			spd: 63,
-			spe: 47
+			spe: 47,
 		},
 		abilities: {
-			0: "Vital Spirit"
+			0: "Vital Spirit",
 		},
 		heightm: 0.8,
 		weightkg: 24.5,
 		color: "Black",
 		eggGroups: [
 			"Fairy",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
+			M: 0.5,
 		},
 		evos: [
-			"Crowsprite"
-		]
+			"Crowsprite",
+		],
 	},
 	crowsprite: {
 		num: 413136,
 		name: "Crowsprite",
 		types: [
 			"Fire",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 70,
@@ -99899,32 +100222,32 @@ blobbosgeno: {
 			def: 67,
 			spa: 105,
 			spd: 93,
-			spe: 67
+			spe: 67,
 		},
 		abilities: {
-			0: "Vital Spirit"
+			0: "Vital Spirit",
 		},
 		heightm: 0.9,
 		weightkg: 25,
 		color: "Yellow",
 		eggGroups: [
 			"Fairy",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
+			M: 0.5,
 		},
 		prevo: "Crow",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	lilcal: {
 		num: 413137,
 		name: "Lil Cal",
 		types: [
 			"Normal",
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 80,
@@ -99932,23 +100255,23 @@ blobbosgeno: {
 			def: 75,
 			spa: 90,
 			spd: 75,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
-			0: "Shadow Tag"
+			0: "Shadow Tag",
 		},
 		heightm: 0.8,
 		weightkg: 36.5,
 		color: "Red",
 		eggGroups: [
-			"Undiscovered"
-		]
+			"Undiscovered",
+		],
 	},
 	jacknoir: {
 		num: 413139,
 		name: "Jack Noir",
 		types: [
-			"Dark"
+			"Dark",
 		],
 		baseStats: {
 			hp: 75,
@@ -99956,31 +100279,31 @@ blobbosgeno: {
 			def: 65,
 			spa: 85,
 			spd: 95,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
-			0: "Hyper Cutter"
+			0: "Hyper Cutter",
 		},
 		heightm: 1,
 		weightkg: 35,
 		color: "Black",
 		eggGroups: [
 			"Flying",
-			"Water 1"
+			"Water 1",
 		],
 		gender: "M",
 		evos: [
 			"Jackspers",
 			"RoboJack",
-			"Union Jack"
-		]
+			"Union Jack",
+		],
 	},
 	jackspers: {
 		num: 413140,
 		name: "Jackspers",
 		types: [
 			"Dark",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 80,
@@ -99988,31 +100311,31 @@ blobbosgeno: {
 			def: 70,
 			spa: 100,
 			spd: 115,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
-			0: "Hyper Cutter"
+			0: "Hyper Cutter",
 		},
 		heightm: 0.5,
 		weightkg: 11.5,
 		color: "Black",
 		eggGroups: [
 			"Flying",
-			"Water 1"
+			"Water 1",
 		],
 		gender: "M",
 		evos: [
-			"Bec Noir"
+			"Bec Noir",
 		],
 		prevo: "Jack Noir",
-		evoLevel: 33
+		evoLevel: 33,
 	},
 	unionjack: {
 		num: 413143,
 		name: "Union Jack",
 		types: [
 			"Dark",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 80,
@@ -100020,29 +100343,29 @@ blobbosgeno: {
 			def: 55,
 			spa: 100,
 			spd: 120,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
-			0: "Filter"
+			0: "Filter",
 		},
 		heightm: 2.1,
 		weightkg: 460,
 		color: "Black",
 		eggGroups: [
 			"Flying",
-			"Water 1"
+			"Water 1",
 		],
 		gender: "M",
 		prevo: "Jack Noir",
 		evoType: "useItem",
-		evoItem: "Horror Stone"
+		evoItem: "Horror Stone",
 	},
 	robojack: {
 		num: 413142,
 		name: "RoboJack",
 		types: [
 			"Dark",
-			"Steel"
+			"Steel",
 		],
 		baseStats: {
 			hp: 80,
@@ -100050,29 +100373,29 @@ blobbosgeno: {
 			def: 115,
 			spa: 100,
 			spd: 70,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
-			0: "Clear Body"
+			0: "Clear Body",
 		},
 		heightm: 1.8,
 		weightkg: 59,
 		color: "Black",
 		eggGroups: [
 			"Flying",
-			"Water 1"
+			"Water 1",
 		],
 		gender: "M",
 		prevo: "Jack Noir",
 		evoType: "useItem",
-		evoItem: "Robo Stone "
+		evoItem: "Robo Stone ",
 	},
 	becnoir: {
 		num: 413141,
 		name: "Bec Noir",
 		types: [
 			"Dark",
-			"Dragon"
+			"Dragon",
 		],
 		baseStats: {
 			hp: 85,
@@ -100080,28 +100403,28 @@ blobbosgeno: {
 			def: 75,
 			spa: 115,
 			spd: 135,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
-			0: "Hyper Cutter"
+			0: "Hyper Cutter",
 		},
 		heightm: 1.3,
 		weightkg: 40.5,
 		color: "Black",
 		eggGroups: [
 			"Flying",
-			"Water 1"
+			"Water 1",
 		],
 		gender: "M",
 		prevo: "Jackspers",
-		evoLevel: 55
+		evoLevel: 55,
 	},
 	sweetbro: {
 		num: 413144,
 		name: "Sweet Bro",
 		types: [
 			"Normal",
-			"Fire"
+			"Fire",
 		],
 		baseStats: {
 			hp: 93,
@@ -100109,25 +100432,25 @@ blobbosgeno: {
 			def: 75,
 			spa: 122,
 			spd: 100,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
-			0: "Serene Grace"
+			0: "Serene Grace",
 		},
 		heightm: 1.7,
 		weightkg: 55.4,
 		color: "Red",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "M"
+		gender: "M",
 	},
 	hellajeff: {
 		num: 413145,
 		name: "Hella Jeff",
 		types: [
 			"Normal",
-			"Ice"
+			"Ice",
 		],
 		baseStats: {
 			hp: 78,
@@ -100135,25 +100458,25 @@ blobbosgeno: {
 			def: 85,
 			spa: 92,
 			spd: 120,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
-			0: "Serene Grace"
+			0: "Serene Grace",
 		},
 		heightm: 1.6,
 		weightkg: 52.6,
 		color: "Blue",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "M"
+		gender: "M",
 	},
 	geromy: {
 		num: 413146,
 		name: "Geromy",
 		types: [
 			"Normal",
-			"Electric"
+			"Electric",
 		],
 		baseStats: {
 			hp: 113,
@@ -100161,25 +100484,25 @@ blobbosgeno: {
 			def: 110,
 			spa: 77,
 			spd: 85,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
-			0: "Serene Grace"
+			0: "Serene Grace",
 		},
 		heightm: 2,
 		weightkg: 60,
 		color: "Yellow",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "M"
+		gender: "M",
 	},
 	dad: {
 		num: 413147,
 		name: "Dad",
 		types: [
 			"Normal",
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 80,
@@ -100187,24 +100510,24 @@ blobbosgeno: {
 			def: 80,
 			spa: 65,
 			spd: 65,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
-			0: "Limber"
+			0: "Limber",
 		},
 		heightm: 1.8,
 		weightkg: 3.3,
 		color: "White",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
-		gender: "M"
+		gender: "M",
 	},
 	nothin: {
 		num: 413148,
 		name: "nothin",
 		types: [
-			"Dragon"
+			"Dragon",
 		],
 		baseStats: {
 			hp: 61,
@@ -100212,30 +100535,30 @@ blobbosgeno: {
 			def: 65,
 			spa: 70,
 			spd: 70,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Shed Skin",
-			1: "Marvel Scale"
+			1: "Marvel Scale",
 		},
 		heightm: 4,
 		weightkg: 16.5,
 		color: "Blue",
 		eggGroups: [
 			"Bug",
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.49609375,
-			M: 0.50390625
-		}
+			M: 0.50390625,
+		},
 	},
 	roborufioh: {
 		num: 413149,
 		name: "RoboRufioh",
 		types: [
 			"Electric",
-			"Steel"
+			"Steel",
 		],
 		baseStats: {
 			hp: 70,
@@ -100243,30 +100566,30 @@ blobbosgeno: {
 			def: 100,
 			spa: 90,
 			spd: 83,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Inner Focus",
-			1: "Inner Focus"
+			1: "Inner Focus",
 		},
 		heightm: 2.2,
 		weightkg: 210,
 		color: "Gray",
 		eggGroups: [
 			"Water 3",
-			"Amorphous"
+			"Amorphous",
 		],
 		gender: "M",
 		prevo: "Rufioh",
 		evoType: "useItem",
-		evoItem: "Robo Stone "
+		evoItem: "Robo Stone ",
 	},
 	gtcaliborn: {
 		num: 413150,
 		name: "GTCaliborn",
 		types: [
 			"Dark",
-			"Fire"
+			"Fire",
 		],
 		baseStats: {
 			hp: 60,
@@ -100274,28 +100597,28 @@ blobbosgeno: {
 			def: 100,
 			spa: 99,
 			spd: 111,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Reckless"
+			0: "Reckless",
 		},
 		heightm: 2,
 		weightkg: 122,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Water 1"
+			"Water 1",
 		],
 		gender: "M",
 		prevo: "Caliborn",
-		evoLevel: 40
+		evoLevel: 40,
 	},
 	gtcalliope: {
 		num: 413151,
 		name: "GTCalliope",
 		types: [
 			"Grass",
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 99,
@@ -100303,28 +100626,28 @@ blobbosgeno: {
 			def: 111,
 			spa: 60,
 			spd: 100,
-			spe: 125
+			spe: 125,
 		},
 		abilities: {
-			0: "Magic Guard"
+			0: "Magic Guard",
 		},
 		heightm: 0.4,
 		weightkg: 4,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Water 1"
+			"Water 1",
 		],
 		gender: "F",
 		prevo: "Calliope",
-		evoLevel: 40
+		evoLevel: 40,
 	},
 	babyjade: {
 		num: 413152,
 		name: "Baby Jade",
 		types: [
 			"Grass",
-			"Ground"
+			"Ground",
 		],
 		baseStats: {
 			hp: 60,
@@ -100332,30 +100655,30 @@ blobbosgeno: {
 			def: 50,
 			spa: 42,
 			spd: 55,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Own Tempo",
-			1: "Own Tempo"
+			1: "Own Tempo",
 		},
 		heightm: 0.9,
 		weightkg: 6.4,
 		color: "Green",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		evos: [
 			"Jade",
-			"Grandma"
-		]
+			"Grandma",
+		],
 	},
 	jade: {
 		num: 413153,
 		name: "Jade",
 		types: [
 			"Grass",
-			"Ground"
+			"Ground",
 		],
 		baseStats: {
 			hp: 80,
@@ -100363,32 +100686,32 @@ blobbosgeno: {
 			def: 70,
 			spa: 75,
 			spd: 85,
-			spe: 52
+			spe: 52,
 		},
 		abilities: {
 			0: "Own Tempo",
-			1: "Own Tempo"
+			1: "Own Tempo",
 		},
 		heightm: 1.2,
 		weightkg: 15.8,
 		color: "Green",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		evos: [
 			"GT Jade",
-			"Jadesprite"
+			"Jadesprite",
 		],
 		prevo: "Baby Jade",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	gtjade: {
 		num: 413154,
 		name: "GT Jade",
 		types: [
 			"Grass",
-			"Ground"
+			"Ground",
 		],
 		baseStats: {
 			hp: 80,
@@ -100396,28 +100719,28 @@ blobbosgeno: {
 			def: 70,
 			spa: 97,
 			spd: 115,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Natural Cure",
-			1: "Natural Cure"
+			1: "Natural Cure",
 		},
 		heightm: 1.8,
 		weightkg: 100.5,
 		color: "Green",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		prevo: "Jade",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	jadesprite: {
 		num: 413155,
 		name: "Jadesprite",
 		types: [
 			"Grass",
-			"Dragon"
+			"Dragon",
 		],
 		baseStats: {
 			hp: 75,
@@ -100425,30 +100748,30 @@ blobbosgeno: {
 			def: 65,
 			spa: 102,
 			spd: 105,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Natural Cure",
-			1: "Levitate"
+			1: "Levitate",
 		},
 		heightm: 0.5,
 		weightkg: 7.9,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Fairy"
+			"Fairy",
 		],
 		gender: "F",
 		prevo: "Jade",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	trkstrjohn: {
 		num: 413156,
 		name: "TrkstrJohn",
 		types: [
 			"Fairy",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 95,
@@ -100456,28 +100779,28 @@ blobbosgeno: {
 			def: 85,
 			spa: 104,
 			spd: 65,
-			spe: 104
+			spe: 104,
 		},
 		abilities: {
-			0: "Prankster"
+			0: "Prankster",
 		},
 		heightm: 0.9,
 		weightkg: 19,
 		color: "Blue",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "M",
 		prevo: "John",
 		evoType: "useItem",
-		evoItem: "Sucker Stone"
+		evoItem: "Sucker Stone",
 	},
 	grmdrkrose: {
 		num: 413157,
 		name: "GrmdrkRose",
 		types: [
 			"Psychic",
-			"Dark"
+			"Dark",
 		],
 		baseStats: {
 			hp: 67,
@@ -100485,28 +100808,28 @@ blobbosgeno: {
 			def: 63,
 			spa: 100,
 			spd: 115,
-			spe: 73
+			spe: 73,
 		},
 		abilities: {
-			0: "Dark Aura"
+			0: "Dark Aura",
 		},
 		heightm: 1.7,
 		weightkg: 79.5,
 		color: "Black",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		prevo: "Rose",
 		evoType: "useItem",
-		evoItem: "Horror Stone"
+		evoItem: "Horror Stone",
 	},
 	davesprite: {
 		num: 413158,
 		name: "Davesprite",
 		types: [
 			"Fire",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 75,
@@ -100514,30 +100837,30 @@ blobbosgeno: {
 			def: 63,
 			spa: 110,
 			spd: 95,
-			spe: 63
+			spe: 63,
 		},
 		abilities: {
 			0: "Magma Armor",
-			1: "Hyper Cutter"
+			1: "Hyper Cutter",
 		},
 		heightm: 0.6,
 		weightkg: 9.5,
 		color: "Yellow",
 		eggGroups: [
 			"Water 3",
-			"Field"
+			"Field",
 		],
 		gender: "M",
 		prevo: "Dave",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	trkstrjane: {
 		num: 413159,
 		name: "TrkstrJane",
 		types: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
 		baseStats: {
 			hp: 173,
@@ -100545,30 +100868,30 @@ blobbosgeno: {
 			def: 80,
 			spa: 65,
 			spd: 75,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Pixilate",
-			1: "Pixilate"
+			1: "Pixilate",
 		},
 		heightm: 1.1,
 		weightkg: 25,
 		color: "Yellow",
 		eggGroups: [
 			"Water 3",
-			"Grass"
+			"Grass",
 		],
 		gender: "F",
 		prevo: "Jane",
 		evoType: "useItem",
-		evoItem: "Sucker Stone"
+		evoItem: "Sucker Stone",
 	},
 	trkstrroxy: {
 		num: 413160,
 		name: "TrkstrRoxy",
 		types: [
 			"Fairy",
-			"Poison"
+			"Poison",
 		],
 		baseStats: {
 			hp: 80,
@@ -100576,30 +100899,30 @@ blobbosgeno: {
 			def: 122,
 			spa: 90,
 			spd: 70,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Hydration",
-			1: "Hydration"
+			1: "Hydration",
 		},
 		heightm: 2.3,
 		weightkg: 88.8,
 		color: "Pink",
 		eggGroups: [
 			"Water 3",
-			"Grass"
+			"Grass",
 		],
 		gender: "F",
 		prevo: "Roxy",
 		evoType: "useItem",
-		evoItem: "Sucker Stone"
+		evoItem: "Sucker Stone",
 	},
 	trkstrdirk: {
 		num: 413161,
 		name: "TrkstrDirk",
 		types: [
 			"Fairy",
-			"Ice"
+			"Ice",
 		],
 		baseStats: {
 			hp: 70,
@@ -100607,30 +100930,30 @@ blobbosgeno: {
 			def: 55,
 			spa: 112,
 			spd: 116,
-			spe: 73
+			spe: 73,
 		},
 		abilities: {
 			0: "Synchronize",
-			1: "Technician"
+			1: "Technician",
 		},
 		heightm: 0.8,
 		weightkg: 6,
 		color: "Yellow",
 		eggGroups: [
 			"Water 3",
-			"Grass"
+			"Grass",
 		],
 		gender: "M",
 		prevo: "Dirk",
 		evoType: "useItem",
-		evoItem: "Sucker Stone"
+		evoItem: "Sucker Stone",
 	},
 	trkstrjake: {
 		num: 413162,
 		name: "TrkstrJake",
 		types: [
 			"Fairy",
-			"Rock"
+			"Rock",
 		],
 		baseStats: {
 			hp: 55,
@@ -100638,30 +100961,30 @@ blobbosgeno: {
 			def: 65,
 			spa: 171,
 			spd: 75,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Fairy Aura",
-			1: "Fairy Aura"
+			1: "Fairy Aura",
 		},
 		heightm: 1.8,
 		weightkg: 32.5,
 		color: "Yellow",
 		eggGroups: [
 			"Water 3",
-			"Grass"
+			"Grass",
 		],
 		gender: "M",
 		prevo: "Jake",
 		evoType: "useItem",
-		evoItem: "Sucker Stone"
+		evoItem: "Sucker Stone",
 	},
 	deadaradia: {
 		num: 413163,
 		name: "DeadAradia",
 		types: [
 			"Ghost",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 55,
@@ -100669,30 +100992,30 @@ blobbosgeno: {
 			def: 60,
 			spa: 110,
 			spd: 120,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Levitate",
-			1: "Clear Body"
+			1: "Clear Body",
 		},
 		heightm: 0.7,
 		weightkg: 21.2,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Aradia",
 		evoType: "useItem",
-		evoItem: "Horror Stone"
+		evoItem: "Horror Stone",
 	},
 	aradiabot: {
 		num: 413164,
 		name: "Aradiabot",
 		types: [
 			"Steel",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 77,
@@ -100700,29 +101023,29 @@ blobbosgeno: {
 			def: 115,
 			spa: 50,
 			spd: 86,
-			spe: 108
+			spe: 108,
 		},
 		abilities: {
 			0: "Levitate",
-			1: "Battle Armor"
+			1: "Battle Armor",
 		},
 		heightm: 1.6,
 		weightkg: 40.8,
 		color: "Gray",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Aradia",
 		evoType: "useItem",
-		evoItem: "Robo Stone "
+		evoItem: "Robo Stone ",
 	},
 	grandpa: {
 		num: 413132,
 		name: "Grandpa",
 		types: [
-			"Rock"
+			"Rock",
 		],
 		baseStats: {
 			hp: 90,
@@ -100730,28 +101053,28 @@ blobbosgeno: {
 			def: 80,
 			spa: 65,
 			spd: 65,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Sniper",
-			1: "Sniper"
+			1: "Sniper",
 		},
 		heightm: 0.3,
 		weightkg: 4,
 		color: "White",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		prevo: "Baby Jake",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	roxysmom: {
 		num: 413166,
 		name: "Roxy's Mom",
 		types: [
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 83,
@@ -100759,29 +101082,29 @@ blobbosgeno: {
 			def: 70,
 			spa: 70,
 			spd: 90,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Magic Guard",
-			1: "Magic Guard"
+			1: "Magic Guard",
 		},
 		heightm: 1.4,
 		weightkg: 35.6,
 		color: "Purple",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		prevo: "Baby Rose",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	dirksbro: {
 		num: 413167,
 		name: "Dirk's Bro",
 		types: [
 			"Fire",
-			"Ice"
+			"Ice",
 		],
 		baseStats: {
 			hp: 70,
@@ -100789,28 +101112,28 @@ blobbosgeno: {
 			def: 70,
 			spa: 105,
 			spd: 95,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Speed Boost",
-			1: "Speed Boost"
+			1: "Speed Boost",
 		},
 		heightm: 0.5,
 		weightkg: 8.5,
 		color: "Red",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "M",
 		prevo: "Baby Dave",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	grandma: {
 		num: 413168,
 		name: "Grandma",
 		types: [
-			"Ground"
+			"Ground",
 		],
 		baseStats: {
 			hp: 100,
@@ -100818,29 +101141,29 @@ blobbosgeno: {
 			def: 80,
 			spa: 65,
 			spd: 65,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Sand Force",
-			1: "Sand Force"
+			1: "Sand Force",
 		},
 		heightm: 1.1,
 		weightkg: 33.5,
 		color: "Green",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		prevo: "Baby Jade",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	signless: {
 		num: 413169,
 		name: "Signless",
 		types: [
 			"Fighting",
-			"Ground"
+			"Ground",
 		],
 		baseStats: {
 			hp: 96,
@@ -100848,29 +101171,29 @@ blobbosgeno: {
 			def: 99,
 			spa: 69,
 			spd: 59,
-			spe: 89
+			spe: 89,
 		},
 		abilities: {
-			0: "Sand Veil"
+			0: "Sand Veil",
 		},
 		heightm: 1.8,
 		weightkg: 75,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "GrubKankri",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	handmaid: {
 		num: 413170,
 		name: "Handmaid",
 		types: [
 			"Ice",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 70,
@@ -100878,28 +101201,28 @@ blobbosgeno: {
 			def: 60,
 			spa: 99,
 			spd: 127,
-			spe: 73
+			spe: 73,
 		},
 		abilities: {
-			0: "Cursed Body"
+			0: "Cursed Body",
 		},
 		heightm: 0.5,
 		weightkg: 12,
 		color: "Red",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		gender: "F",
 		prevo: "GrubDamara",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	summoner: {
 		num: 413171,
 		name: "Summoner",
 		types: [
 			"Electric",
-			"Ground"
+			"Ground",
 		],
 		baseStats: {
 			hp: 100,
@@ -100907,28 +101230,28 @@ blobbosgeno: {
 			def: 70,
 			spa: 80,
 			spd: 70,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
-			0: "Levitate"
+			0: "Levitate",
 		},
 		heightm: 1.2,
 		weightkg: 22.5,
 		color: "Brown",
 		eggGroups: [
-			"Ditto"
+			"Ditto",
 		],
 		gender: "M",
 		prevo: "GrubRufioh",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	psiioniic: {
 		num: 413172,
 		name: "Psiioniic",
 		types: [
 			"Fire",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 75,
@@ -100936,28 +101259,28 @@ blobbosgeno: {
 			def: 94,
 			spa: 84,
 			spd: 108,
-			spe: 84
+			spe: 84,
 		},
 		abilities: {
 			0: "Guts",
-			1: "Blaze"
+			1: "Blaze",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Yellow",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		gender: "M",
 		prevo: "GrubMituna",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	disciple: {
 		num: 413173,
 		name: "Disciple",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 97,
@@ -100965,30 +101288,30 @@ blobbosgeno: {
 			def: 78,
 			spa: 100,
 			spd: 60,
-			spe: 83
+			spe: 83,
 		},
 		abilities: {
 			0: "Limber",
-			1: "Limber"
+			1: "Limber",
 		},
 		heightm: 0.3,
 		weightkg: 3,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "GrubMeulin",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	dolorosa: {
 		num: 413174,
 		name: "Dolorosa",
 		types: [
 			"Grass",
-			"Dark"
+			"Dark",
 		],
 		baseStats: {
 			hp: 90,
@@ -100996,30 +101319,30 @@ blobbosgeno: {
 			def: 75,
 			spa: 65,
 			spd: 95,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Chlorophyll",
-			1: "Chlorophyll"
+			1: "Chlorophyll",
 		},
 		heightm: 0.3,
 		weightkg: 1,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "GrubPorrim",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	redglare: {
 		num: 413175,
 		name: "Redglare",
 		types: [
 			"Electric",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 72,
@@ -101027,30 +101350,30 @@ blobbosgeno: {
 			def: 70,
 			spa: 85,
 			spd: 108,
-			spe: 81
+			spe: 81,
 		},
 		abilities: {
 			0: "Arena Trap",
-			1: "Arena Trap"
+			1: "Arena Trap",
 		},
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "GrubLatula",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	mindfang: {
 		num: 413176,
 		name: "Mindfang",
 		types: [
 			"Bug",
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 80,
@@ -101058,30 +101381,30 @@ blobbosgeno: {
 			def: 70,
 			spa: 80,
 			spd: 90,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Aftermath",
-			1: "Aftermath"
+			1: "Aftermath",
 		},
 		heightm: 0.6,
 		weightkg: 3.2,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "GrubAranea",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	darkleer: {
 		num: 413177,
 		name: "Darkleer",
 		types: [
 			"Fighting",
-			"Dark"
+			"Dark",
 		],
 		baseStats: {
 			hp: 99,
@@ -101089,29 +101412,29 @@ blobbosgeno: {
 			def: 105,
 			spa: 56,
 			spd: 66,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Sheer Force",
-			1: "Sheer Force"
+			1: "Sheer Force",
 		},
 		heightm: 0.2,
 		weightkg: 2,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "GrubHoruss",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	highblood: {
 		num: 413178,
 		name: "Highblood",
 		types: [
-			"Dark"
+			"Dark",
 		],
 		baseStats: {
 			hp: 95,
@@ -101119,29 +101442,29 @@ blobbosgeno: {
 			def: 74,
 			spa: 90,
 			spd: 72,
-			spe: 44
+			spe: 44,
 		},
 		abilities: {
 			0: "Intimidate",
-			1: "Intimidate"
+			1: "Intimidate",
 		},
 		heightm: 1.5,
 		weightkg: 15,
 		color: "Purple",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		gender: "M",
 		prevo: "GrubKurloz",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	dualscar: {
 		num: 413179,
 		name: "Dualscar",
 		types: [
 			"Dark",
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 60,
@@ -101149,30 +101472,30 @@ blobbosgeno: {
 			def: 95,
 			spa: 90,
 			spd: 100,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Hydration",
-			1: "Hydration"
+			1: "Hydration",
 		},
 		heightm: 0.6,
 		weightkg: 7.8,
 		color: "Purple",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
 		gender: "M",
 		prevo: "GrubCronus",
 		evoType: "useItem",
-		evoItem: "ScratchStone"
+		evoItem: "ScratchStone",
 	},
 	condesce: {
 		num: 413180,
 		name: "Condesce",
 		types: [
 			"Water",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 110,
@@ -101180,27 +101503,27 @@ blobbosgeno: {
 			def: 80,
 			spa: 70,
 			spd: 130,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Intimidate",
-			1: "Intimidate"
+			1: "Intimidate",
 		},
 		heightm: 0.8,
 		weightkg: 13.3,
 		color: "Pink",
 		eggGroups: [
 			"Water 3",
-			"Bug"
+			"Bug",
 		],
-		gender: "F"
+		gender: "F",
 	},
 	gcat: {
 		num: 413181,
 		name: "GCat",
 		types: [
 			"Dragon",
-			"Electric"
+			"Electric",
 		],
 		baseStats: {
 			hp: 82,
@@ -101208,25 +101531,25 @@ blobbosgeno: {
 			def: 72,
 			spa: 123,
 			spd: 103,
-			spe: 82
+			spe: 82,
 		},
 		abilities: {
-			0: "Pressure"
+			0: "Pressure",
 		},
 		heightm: 1.4,
 		weightkg: 61.5,
 		color: "White",
 		eggGroups: [
 			"Fairy",
-			"Undiscovered"
-		]
+			"Undiscovered",
+		],
 	},
 	tavris: {
 		num: 413182,
 		name: "Tavris",
 		types: [
 			"Ground",
-			"Bug"
+			"Bug",
 		],
 		baseStats: {
 			hp: 94,
@@ -101234,28 +101557,28 @@ blobbosgeno: {
 			def: 98,
 			spa: 75,
 			spd: 73,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Damp"
+			0: "Damp",
 		},
 		heightm: 0.4,
 		weightkg: 5.8,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		prevo: "Tavros",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	erisol: {
 		num: 413183,
 		name: "Erisol",
 		types: [
 			"Water",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 60,
@@ -101263,30 +101586,30 @@ blobbosgeno: {
 			def: 80,
 			spa: 100,
 			spd: 125,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Torrent",
-			1: "Lightningrod"
+			1: "Lightningrod",
 		},
 		heightm: 0.4,
 		weightkg: 8.5,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "Sollux",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	fefeta: {
 		num: 413184,
 		name: "Fefeta",
 		types: [
 			"Normal",
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 110,
@@ -101294,30 +101617,30 @@ blobbosgeno: {
 			def: 60,
 			spa: 105,
 			spd: 90,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Scrappy",
-			1: "Skill Link"
+			1: "Skill Link",
 		},
 		heightm: 0.8,
 		weightkg: 28.5,
 		color: "Pink",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		prevo: "Nepeta",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	arquius: {
 		num: 413185,
 		name: "ARquius",
 		types: [
 			"Ice",
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 86,
@@ -101325,30 +101648,30 @@ blobbosgeno: {
 			def: 100,
 			spa: 80,
 			spd: 62,
-			spe: 62
+			spe: 62,
 		},
 		abilities: {
 			0: "Iron Fist",
-			1: "Technician"
+			1: "Technician",
 		},
 		heightm: 1.2,
 		weightkg: 38,
 		color: "Red",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "Equius",
 		evoType: "useItem",
-		evoItem: "Kernel Stone"
+		evoItem: "Kernel Stone",
 	},
 	ddroog: {
 		num: 413186,
 		name: "D. Droog",
 		types: [
 			"Dark",
-			"Ice"
+			"Ice",
 		],
 		baseStats: {
 			hp: 70,
@@ -101356,26 +101679,26 @@ blobbosgeno: {
 			def: 70,
 			spa: 75,
 			spd: 95,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
-			0: "Snow Cloak"
+			0: "Snow Cloak",
 		},
 		heightm: 1.1,
 		weightkg: 33.9,
 		color: "Black",
 		eggGroups: [
 			"Flying",
-			"Water 1"
+			"Water 1",
 		],
-		gender: "M"
+		gender: "M",
 	},
 	hboxcars: {
 		num: 413187,
 		name: "H. Boxcars",
 		types: [
 			"Dark",
-			"Rock"
+			"Rock",
 		],
 		baseStats: {
 			hp: 80,
@@ -101383,27 +101706,27 @@ blobbosgeno: {
 			def: 95,
 			spa: 65,
 			spd: 50,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Solid Rock",
-			1: "Sand Stream"
+			1: "Sand Stream",
 		},
 		heightm: 0.4,
 		weightkg: 0.5,
 		color: "Black",
 		eggGroups: [
 			"Flying",
-			"Water 1"
+			"Water 1",
 		],
-		gender: "M"
+		gender: "M",
 	},
 	cdeuce: {
 		num: 413188,
 		name: "C. Deuce",
 		types: [
 			"Normal",
-			"Fire"
+			"Fire",
 		],
 		baseStats: {
 			hp: 65,
@@ -101411,25 +101734,25 @@ blobbosgeno: {
 			def: 80,
 			spa: 95,
 			spd: 95,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Tangled Feet"
+			0: "Tangled Feet",
 		},
 		heightm: 0.6,
 		weightkg: 1,
 		color: "Black",
 		eggGroups: [
 			"Flying",
-			"Water 1"
+			"Water 1",
 		],
-		gender: "M"
+		gender: "M",
 	},
 	pm: {
 		num: 413189,
 		name: "PM",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 90,
@@ -101437,29 +101760,29 @@ blobbosgeno: {
 			def: 80,
 			spa: 66,
 			spd: 35,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
-			0: "Pickup"
+			0: "Pickup",
 		},
 		heightm: 0.8,
 		weightkg: 3,
 		color: "White",
 		eggGroups: [
 			"Flying",
-			"Water 1"
+			"Water 1",
 		],
 		gender: "F",
 		evos: [
-			"BecBlanche"
-		]
+			"BecBlanche",
+		],
 	},
 	becblanche: {
 		num: 413190,
 		name: "BecBlanche",
 		types: [
 			"Normal",
-			"Dragon"
+			"Dragon",
 		],
 		baseStats: {
 			hp: 110,
@@ -101467,28 +101790,28 @@ blobbosgeno: {
 			def: 80,
 			spa: 116,
 			spd: 105,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
-			0: "Victory Star"
+			0: "Victory Star",
 		},
 		heightm: 0.8,
 		weightkg: 11.5,
 		color: "White",
 		eggGroups: [
 			"Flying",
-			"Field"
+			"Field",
 		],
 		gender: "F",
 		prevo: "PM",
-		evoLevel: 40
+		evoLevel: 40,
 	},
 	wv: {
 		num: 413191,
 		name: "WV",
 		types: [
 			"Normal",
-			"Ground"
+			"Ground",
 		],
 		baseStats: {
 			hp: 90,
@@ -101496,26 +101819,26 @@ blobbosgeno: {
 			def: 75,
 			spa: 66,
 			spd: 35,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
-			0: "Sturdy"
+			0: "Sturdy",
 		},
 		heightm: 0.3,
 		weightkg: 1.8,
 		color: "Brown",
 		eggGroups: [
 			"Flying",
-			"Water 1"
+			"Water 1",
 		],
-		gender: "M"
+		gender: "M",
 	},
 	ar: {
 		num: 413192,
 		name: "AR",
 		types: [
 			"Normal",
-			"Rock"
+			"Rock",
 		],
 		baseStats: {
 			hp: 85,
@@ -101523,25 +101846,25 @@ blobbosgeno: {
 			def: 70,
 			spa: 66,
 			spd: 55,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
-			0: "Hustle"
+			0: "Hustle",
 		},
 		heightm: 0.8,
 		weightkg: 8.5,
 		color: "Yellow",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
-		gender: "M"
+		gender: "M",
 	},
 	salamander: {
 		num: 413193,
 		name: "Salamander",
 		types: [
 			"Normal",
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 90,
@@ -101549,28 +101872,28 @@ blobbosgeno: {
 			def: 75,
 			spa: 40,
 			spd: 70,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
-			0: "Water Absorb"
+			0: "Water Absorb",
 		},
 		heightm: 1.2,
 		weightkg: 38,
 		color: "Yellow",
 		eggGroups: [
 			"Fairy",
-			"Ditto"
+			"Ditto",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	turtle: {
 		num: 413194,
 		name: "Turtle",
 		types: [
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 70,
@@ -101578,28 +101901,28 @@ blobbosgeno: {
 			def: 90,
 			spa: 40,
 			spd: 70,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
-			0: "Shell Armor"
+			0: "Shell Armor",
 		},
 		heightm: 0.4,
 		weightkg: 8.5,
 		color: "Pink",
 		eggGroups: [
 			"Fairy",
-			"Ditto"
+			"Ditto",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	crocodile: {
 		num: 413195,
 		name: "Crocodile",
 		types: [
-			"Fire"
+			"Fire",
 		],
 		baseStats: {
 			hp: 80,
@@ -101607,28 +101930,28 @@ blobbosgeno: {
 			def: 70,
 			spa: 40,
 			spd: 75,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Strong Jaw"
+			0: "Strong Jaw",
 		},
 		heightm: 1.4,
 		weightkg: 75,
 		color: "Red",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	iguana: {
 		num: 413196,
 		name: "Iguana",
 		types: [
 			"Normal",
-			"Ice"
+			"Ice",
 		],
 		baseStats: {
 			hp: 70,
@@ -101636,29 +101959,29 @@ blobbosgeno: {
 			def: 70,
 			spa: 40,
 			spd: 80,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
-			0: "Snow Cloak"
+			0: "Snow Cloak",
 		},
 		heightm: 0.9,
 		weightkg: 26.5,
 		color: "Blue",
 		eggGroups: [
 			"Fairy",
-			"Ditto"
+			"Ditto",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	casey: {
 		num: 413197,
 		name: "Casey",
 		types: [
 			"Dark",
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 70,
@@ -101666,28 +101989,28 @@ blobbosgeno: {
 			def: 65,
 			spa: 90,
 			spd: 90,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Magic Bounce"
+			0: "Magic Bounce",
 		},
 		heightm: 1,
 		weightkg: 27,
 		color: "Yellow",
 		eggGroups: [
 			"Fairy",
-			"Ditto"
+			"Ditto",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cabunny: {
 		num: 413198,
 		name: "C.A. Bunny",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 65,
@@ -101695,27 +102018,27 @@ blobbosgeno: {
 			def: 45,
 			spa: 20,
 			spd: 20,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
-			0: "Run Away"
+			0: "Run Away",
 		},
 		heightm: 0.5,
 		weightkg: 2.1,
 		color: "Brown",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		evos: [
 			"Knit Bunny",
-			"Lil Seb"
-		]
+			"Lil Seb",
+		],
 	},
 	knitbunny: {
 		num: 413199,
 		name: "Knit Bunny",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 80,
@@ -101723,29 +102046,29 @@ blobbosgeno: {
 			def: 55,
 			spa: 50,
 			spd: 50,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
-			0: "Run Away"
+			0: "Run Away",
 		},
 		heightm: 2,
 		weightkg: 79.5,
 		color: "Purple",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		evos: [
-			"Liv Tyler"
+			"Liv Tyler",
 		],
 		prevo: "C.A. Bunny",
-		evoLevel: 22
+		evoLevel: 22,
 	},
 	livtyler: {
 		num: 413200,
 		name: "Liv Tyler",
 		types: [
 			"Normal",
-			"Steel"
+			"Steel",
 		],
 		baseStats: {
 			hp: 80,
@@ -101753,28 +102076,28 @@ blobbosgeno: {
 			def: 80,
 			spa: 70,
 			spd: 105,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
-			0: "MegaLauncher"
+			0: "MegaLauncher",
 		},
 		heightm: 0.7,
 		weightkg: 1,
 		color: "Purple",
 		eggGroups: [
 			"Undiscovered",
-			"Fairy"
+			"Fairy",
 		],
 		gender: "F",
 		prevo: "Knit Bunny",
 		evoType: "useItem",
-		evoItem: "Robo Stone "
+		evoItem: "Robo Stone ",
 	},
 	squiddle: {
 		num: 413201,
 		name: "Squiddle",
 		types: [
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 78,
@@ -101782,27 +102105,27 @@ blobbosgeno: {
 			def: 69,
 			spa: 70,
 			spd: 77,
-			spe: 69
+			spe: 69,
 		},
 		abilities: {
-			0: "Swift Swim"
+			0: "Swift Swim",
 		},
 		heightm: 0.5,
 		weightkg: 5,
 		color: "White",
 		eggGroups: [
-			"Ditto"
+			"Ditto",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	squarewave: {
 		num: 413202,
 		name: "Squarewave",
 		types: [
-			"Steel"
+			"Steel",
 		],
 		baseStats: {
 			hp: 70,
@@ -101810,23 +102133,23 @@ blobbosgeno: {
 			def: 105,
 			spa: 75,
 			spd: 75,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
-			0: "Bulletproof"
+			0: "Bulletproof",
 		},
 		heightm: 1.3,
 		weightkg: 28.5,
 		color: "Gray",
 		eggGroups: [
-			"Amorphous"
-		]
+			"Amorphous",
+		],
 	},
 	sawtooth: {
 		num: 413203,
 		name: "Sawtooth",
 		types: [
-			"Steel"
+			"Steel",
 		],
 		baseStats: {
 			hp: 60,
@@ -101834,23 +102157,23 @@ blobbosgeno: {
 			def: 85,
 			spa: 95,
 			spd: 85,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
-			0: "Bulletproof"
+			0: "Bulletproof",
 		},
 		heightm: 1.5,
 		weightkg: 41.5,
 		color: "Black",
 		eggGroups: [
-			"Amorphous"
-		]
+			"Amorphous",
+		],
 	},
 	chalkimp: {
 		num: 413204,
 		name: "Chalk Imp",
 		types: [
-			"Ground"
+			"Ground",
 		],
 		baseStats: {
 			hp: 40,
@@ -101858,28 +102181,28 @@ blobbosgeno: {
 			def: 65,
 			spa: 40,
 			spd: 45,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
-			0: "Immunity"
+			0: "Immunity",
 		},
 		heightm: 0.6,
 		weightkg: 7.2,
 		color: "White",
 		eggGroups: [
 			"Water 1",
-			"Amorphous"
+			"Amorphous",
 		],
 		evos: [
-			"Caulk Lich"
-		]
+			"Caulk Lich",
+		],
 	},
 	caulklich: {
 		num: 413205,
 		name: "Caulk Lich",
 		types: [
 			"Ground",
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 60,
@@ -101887,26 +102210,26 @@ blobbosgeno: {
 			def: 65,
 			spa: 80,
 			spd: 105,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
-			0: "Mummy"
+			0: "Mummy",
 		},
 		heightm: 1.2,
 		weightkg: 125.8,
 		color: "White",
 		eggGroups: [
 			"Water 1",
-			"Amorphous"
+			"Amorphous",
 		],
 		prevo: "Chalk Imp",
-		evoLevel: 23
+		evoLevel: 23,
 	},
 	amberimp: {
 		num: 413206,
 		name: "Amber Imp",
 		types: [
-			"Rock"
+			"Rock",
 		],
 		baseStats: {
 			hp: 40,
@@ -101914,28 +102237,28 @@ blobbosgeno: {
 			def: 65,
 			spa: 40,
 			spd: 45,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
-			0: "Rock Head"
+			0: "Rock Head",
 		},
 		heightm: 1.5,
 		weightkg: 14,
 		color: "Yellow",
 		eggGroups: [
 			"Water 1",
-			"Amorphous"
+			"Amorphous",
 		],
 		evos: [
-			"RubyGiclop"
-		]
+			"RubyGiclop",
+		],
 	},
 	rubygiclop: {
 		num: 413207,
 		name: "RubyGiclop",
 		types: [
 			"Rock",
-			"Fire"
+			"Fire",
 		],
 		baseStats: {
 			hp: 90,
@@ -101943,27 +102266,27 @@ blobbosgeno: {
 			def: 110,
 			spa: 40,
 			spd: 50,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Magma Armor"
+			0: "Magma Armor",
 		},
 		heightm: 1.1,
 		weightkg: 64.8,
 		color: "Red",
 		eggGroups: [
 			"Water 1",
-			"Amorphous"
+			"Amorphous",
 		],
 		prevo: "Amber Imp",
-		evoLevel: 23
+		evoLevel: 23,
 	},
 	tarbasilis: {
 		num: 413208,
 		name: "TarBasilis",
 		types: [
 			"Poison",
-			"Dark"
+			"Dark",
 		],
 		baseStats: {
 			hp: 70,
@@ -101971,24 +102294,24 @@ blobbosgeno: {
 			def: 67,
 			spa: 92,
 			spd: 90,
-			spe: 67
+			spe: 67,
 		},
 		abilities: {
-			0: "Poison Point"
+			0: "Poison Point",
 		},
 		heightm: 9.2,
 		weightkg: 400,
 		color: "Black",
 		eggGroups: [
 			"Water 1",
-			"Amorphous"
-		]
+			"Amorphous",
+		],
 	},
 	uraniumimp: {
 		num: 413209,
 		name: "UraniumImp",
 		types: [
-			"Dragon"
+			"Dragon",
 		],
 		baseStats: {
 			hp: 60,
@@ -101996,24 +102319,24 @@ blobbosgeno: {
 			def: 75,
 			spa: 110,
 			spd: 90,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
-			0: "Inner Focus"
+			0: "Inner Focus",
 		},
 		heightm: 0.6,
 		weightkg: 7.8,
 		color: "Green",
 		eggGroups: [
 			"Water 1",
-			"Amorphous"
-		]
+			"Amorphous",
+		],
 	},
 	skelimp: {
 		num: 413210,
 		name: "Skel. Imp",
 		types: [
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 45,
@@ -102021,24 +102344,24 @@ blobbosgeno: {
 			def: 150,
 			spa: 15,
 			spd: 65,
-			spe: 150
+			spe: 150,
 		},
 		abilities: {
-			0: "Rough Skin"
+			0: "Rough Skin",
 		},
 		heightm: 1.4,
 		weightkg: 48.7,
 		color: "Gray",
 		eggGroups: [
 			"Water 1",
-			"Amorphous"
-		]
+			"Amorphous",
+		],
 	},
 	psleuth: {
 		num: 413211,
 		name: "P. Sleuth",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 82,
@@ -102046,29 +102369,29 @@ blobbosgeno: {
 			def: 75,
 			spa: 88,
 			spd: 70,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
-			0: "Keen Eye"
+			0: "Keen Eye",
 		},
 		heightm: 0.5,
 		weightkg: 3.9,
 		color: "White",
 		eggGroups: [
-			"Ditto"
+			"Ditto",
 		],
 		gender: "M",
 		evos: [
 			"CCV PS",
-			"Sep. PS"
-		]
+			"Sep. PS",
+		],
 	},
 	ccvps: {
 		num: 413212,
 		name: "CCV PS",
 		types: [
 			"Normal",
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 62,
@@ -102076,28 +102399,28 @@ blobbosgeno: {
 			def: 65,
 			spa: 128,
 			spd: 75,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Immunity"
+			0: "Immunity",
 		},
 		heightm: 1.8,
 		weightkg: 118,
 		color: "Black",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "P. Sleuth",
 		evoType: "useItem",
-		evoItem: "Horror Stone"
+		evoItem: "Horror Stone",
 	},
 	sepps: {
 		num: 413213,
 		name: "Sep. PS",
 		types: [
 			"Normal",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 82,
@@ -102105,26 +102428,26 @@ blobbosgeno: {
 			def: 75,
 			spa: 118,
 			spd: 100,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
-			0: "Aerilate"
+			0: "Aerilate",
 		},
 		heightm: 0.6,
 		weightkg: 20.5,
 		color: "Green",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "P. Sleuth",
-		evoLevel: 42
+		evoLevel: 42,
 	},
 	adick: {
 		num: 413214,
 		name: "A. Dick",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 110,
@@ -102132,29 +102455,29 @@ blobbosgeno: {
 			def: 85,
 			spa: 65,
 			spd: 55,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
-			0: "Moxie"
+			0: "Moxie",
 		},
 		heightm: 1.5,
 		weightkg: 54,
 		color: "White",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
 			"GWZ AD",
-			"Fiesta AD"
-		]
+			"Fiesta AD",
+		],
 	},
 	gwzad: {
 		num: 413215,
 		name: "GWZ AD",
 		types: [
 			"Fighting",
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 150,
@@ -102162,28 +102485,28 @@ blobbosgeno: {
 			def: 85,
 			spa: 65,
 			spd: 40,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
-			0: "Gooey"
+			0: "Gooey",
 		},
 		heightm: 0.9,
 		weightkg: 28,
 		color: "Gray",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "M",
 		prevo: "A. Dick",
 		evoType: "useItem",
-		evoItem: "Horror Stone"
+		evoItem: "Horror Stone",
 	},
 	fiestaad: {
 		num: 413216,
 		name: "Fiesta AD",
 		types: [
 			"Fighting",
-			"Fire"
+			"Fire",
 		],
 		baseStats: {
 			hp: 120,
@@ -102191,27 +102514,27 @@ blobbosgeno: {
 			def: 85,
 			spa: 45,
 			spd: 65,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Pickup",
-			1: "Quick Feet"
+			1: "Quick Feet",
 		},
 		heightm: 0.6,
 		weightkg: 8.8,
 		color: "Red",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "M",
 		prevo: "A. Dick",
-		evoLevel: 38
+		evoLevel: 38,
 	},
 	pinspctr: {
 		num: 413217,
 		name: "P.Inspctr",
 		types: [
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 65,
@@ -102219,30 +102542,30 @@ blobbosgeno: {
 			def: 65,
 			spa: 78,
 			spd: 122,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Own Tempo",
-			1: "Trace"
+			1: "Trace",
 		},
 		heightm: 1.8,
 		weightkg: 125.8,
 		color: "White",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "M",
 		evos: [
 			"GPI",
-			"TRF PI"
-		]
+			"TRF PI",
+		],
 	},
 	trfpi: {
 		num: 413218,
 		name: "TRF PI",
 		types: [
 			"Psychic",
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 95,
@@ -102250,29 +102573,29 @@ blobbosgeno: {
 			def: 95,
 			spa: 18,
 			spd: 82,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Own Tempo",
-			1: "Hustle"
+			1: "Hustle",
 		},
 		heightm: 0.7,
 		weightkg: 35,
 		color: "Green",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		gender: "M",
 		prevo: "P.Inspctr",
 		evoType: "useItem",
-		evoItem: "Horror Stone"
+		evoItem: "Horror Stone",
 	},
 	gpi: {
 		num: 413219,
 		name: "GPI",
 		types: [
 			"Psychic",
-			"Grass"
+			"Grass",
 		],
 		baseStats: {
 			hp: 105,
@@ -102280,27 +102603,27 @@ blobbosgeno: {
 			def: 95,
 			spa: 108,
 			spd: 152,
-			spe: 140
+			spe: 140,
 		},
 		abilities: {
-			0: "Truant"
+			0: "Truant",
 		},
 		heightm: 0.8,
 		weightkg: 55,
 		color: "White",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		gender: "M",
 		prevo: "P.Inspctr",
-		evoLevel: 40
+		evoLevel: 40,
 	},
 	lilseb: {
 		num: 413223,
 		name: "Lil Seb",
 		types: [
 			"Normal",
-			"Steel"
+			"Steel",
 		],
 		baseStats: {
 			hp: 70,
@@ -102308,27 +102631,27 @@ blobbosgeno: {
 			def: 85,
 			spa: 90,
 			spd: 85,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Quick Feet"
+			0: "Quick Feet",
 		},
 		heightm: 0.6,
 		weightkg: 12,
 		color: "Gray",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "M",
 		prevo: "C.A. Bunny",
 		evoType: "useItem",
-		evoItem: "Robo Stone "
+		evoItem: "Robo Stone ",
 	},
 	ectoslime: {
 		num: 413224,
 		name: "Ectoslime",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		baseStats: {
 			hp: 48,
@@ -102336,24 +102659,24 @@ blobbosgeno: {
 			def: 48,
 			spa: 88,
 			spd: 48,
-			spe: 48
+			spe: 48,
 		},
 		abilities: {
 			0: "Liquid Ooze",
-			1: "Liquid Ooze"
+			1: "Liquid Ooze",
 		},
 		heightm: 0.9,
 		weightkg: 28.5,
 		color: "Green",
 		eggGroups: [
-			"Dragon"
-		]
+			"Dragon",
+		],
 	},
 	grubmierfa: {
 		num: 413225,
 		name: "GrubMierfa",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 45,
@@ -102361,29 +102684,29 @@ blobbosgeno: {
 			def: 45,
 			spa: 75,
 			spd: 65,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
-			0: "Reckless"
+			0: "Reckless",
 		},
 		heightm: 0.9,
 		weightkg: 16,
 		color: "Red",
 		eggGroups: [
 			"Bug",
-			"Fairy"
+			"Fairy",
 		],
 		gender: "F",
 		evos: [
-			"Mierfa"
-		]
+			"Mierfa",
+		],
 	},
 	mierfa: {
 		num: 413226,
 		name: "Mierfa",
 		types: [
 			"Water",
-			"Flying"
+			"Flying",
 		],
 		baseStats: {
 			hp: 65,
@@ -102391,30 +102714,30 @@ blobbosgeno: {
 			def: 70,
 			spa: 70,
 			spd: 80,
-			spe: 140
+			spe: 140,
 		},
 		abilities: {
-			0: "Reckless"
+			0: "Reckless",
 		},
 		heightm: 2.1,
 		weightkg: 220,
 		color: "Purple",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.49609375,
-			M: 0.50390625
+			M: 0.50390625,
 		},
 		prevo: "GrubMierfa",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	grubnektan: {
 		num: 413227,
 		name: "GrubNektan",
 		types: [
 			"Water",
-			"Steel"
+			"Steel",
 		],
 		baseStats: {
 			hp: 65,
@@ -102422,29 +102745,29 @@ blobbosgeno: {
 			def: 140,
 			spa: 70,
 			spd: 40,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Water Veil"
+			0: "Water Veil",
 		},
 		heightm: 1.7,
 		weightkg: 50.5,
 		color: "Gray",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		evos: [
-			"Nektan"
-		]
+			"Nektan",
+		],
 	},
 	nektan: {
 		num: 413228,
 		name: "Nektan",
 		types: [
 			"Water",
-			"Steel"
+			"Steel",
 		],
 		baseStats: {
 			hp: 45,
@@ -102452,28 +102775,28 @@ blobbosgeno: {
 			def: 30,
 			spa: 65,
 			spd: 80,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
-			0: "Water Veil"
+			0: "Water Veil",
 		},
 		heightm: 0.6,
 		weightkg: 10.8,
 		color: "Black",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		prevo: "GrubNektan",
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	jasprose: {
 		num: 413229,
 		name: "Jasprose",
 		types: [
 			"Fairy",
-			"Psychic"
+			"Psychic",
 		],
 		baseStats: {
 			hp: 95,
@@ -102481,29 +102804,29 @@ blobbosgeno: {
 			def: 95,
 			spa: 95,
 			spd: 105,
-			spe: 105
+			spe: 105,
 		},
 		abilities: {
-			0: "Magic Bounce"
+			0: "Magic Bounce",
 		},
 		heightm: 1.4,
 		weightkg: 35,
 		color: "Pink",
 		eggGroups: [
 			"Water 3",
-			"Fairy"
+			"Fairy",
 		],
 		gender: "F",
 		prevo: "Rose",
 		evoType: "useItem",
-		evoItem: "KernelStone2"
+		evoItem: "KernelStone2",
 	},
 	davepeta: {
 		num: 413230,
 		name: "Davepeta",
 		types: [
 			"Normal",
-			"Fire"
+			"Fire",
 		],
 		baseStats: {
 			hp: 90,
@@ -102511,29 +102834,29 @@ blobbosgeno: {
 			def: 75,
 			spa: 125,
 			spd: 90,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Hyper Cutter",
-			1: "Scrappy"
+			1: "Scrappy",
 		},
 		heightm: 1.8,
 		weightkg: 152,
 		color: "Green",
 		eggGroups: [
 			"Water 3",
-			"Flying"
+			"Flying",
 		],
 		prevo: "Dave",
 		evoType: "useItem",
-		evoItem: "KernelStone2"
+		evoItem: "KernelStone2",
 	},
 	gcatavros: {
 		num: 413231,
 		name: "GCaTavros",
 		types: [
 			"Ground",
-			"Dragon"
+			"Dragon",
 		],
 		baseStats: {
 			hp: 110,
@@ -102541,30 +102864,30 @@ blobbosgeno: {
 			def: 135,
 			spa: 75,
 			spd: 80,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Oblivious",
-			1: "Pressure"
+			1: "Pressure",
 		},
 		heightm: 0.5,
 		weightkg: 33.5,
 		color: "Blue",
 		eggGroups: [
 			"Water 3",
-			"Fairy"
+			"Fairy",
 		],
 		gender: "M",
 		prevo: "Tavros",
 		evoType: "useItem",
-		evoItem: "KernelStone2"
+		evoItem: "KernelStone2",
 	},
 	skelconsrt: {
 		num: 413237,
 		name: "SkelConsrt",
 		types: [
 			"Ground",
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 55,
@@ -102572,24 +102895,24 @@ blobbosgeno: {
 			def: 130,
 			spa: 15,
 			spd: 55,
-			spe: 120
+			spe: 120,
 		},
 		abilities: {
-			0: "Battle Armor"
+			0: "Battle Armor",
 		},
 		heightm: 1.4,
 		weightkg: 48,
 		color: "Gray",
 		eggGroups: [
 			"Amorphous",
-			"Water 1"
-		]
+			"Water 1",
+		],
 	},
 	mutini: {
 		num: 413238,
 		name: "Mutini",
 		types: [
-			"Fairy"
+			"Fairy",
 		],
 		baseStats: {
 			hp: 35,
@@ -102597,29 +102920,29 @@ blobbosgeno: {
 			def: 55,
 			spa: 100,
 			spd: 40,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Pickup",
-			1: "Pickup"
+			1: "Pickup",
 		},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Pink",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	hopeangel: {
 		num: 413239,
 		name: "Hope Angel",
 		types: [
 			"Electric",
-			"Ghost"
+			"Ghost",
 		],
 		baseStats: {
 			hp: 120,
@@ -102627,24 +102950,24 @@ blobbosgeno: {
 			def: 70,
 			spa: 90,
 			spd: 75,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Aftermath"
+			0: "Aftermath",
 		},
 		heightm: 0.6,
 		weightkg: 23.5,
 		color: "White",
 		eggGroups: [
-			"Undiscovered"
-		]
+			"Undiscovered",
+		],
 	},
 	horsaponi: {
 		num: 413240,
 		name: "Horsaponi",
 		types: [
 			"Poison",
-			"Bug"
+			"Bug",
 		],
 		baseStats: {
 			hp: 56,
@@ -102652,31 +102975,31 @@ blobbosgeno: {
 			def: 51,
 			spa: 62,
 			spd: 30,
-			spe: 56
+			spe: 56,
 		},
 		abilities: {
-			0: "Intimidate"
+			0: "Intimidate",
 		},
 		heightm: 0.7,
 		weightkg: 21.4,
 		color: "Purple",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
+			M: 0.5,
 		},
 		evos: [
-			"Horsaroni"
-		]
+			"Horsaroni",
+		],
 	},
 	horsaroni: {
 		num: 413241,
 		name: "Horsaroni",
 		types: [
 			"Poison",
-			"Fighting"
+			"Fighting",
 		],
 		baseStats: {
 			hp: 86,
@@ -102684,30 +103007,30 @@ blobbosgeno: {
 			def: 71,
 			spa: 102,
 			spd: 50,
-			spe: 86
+			spe: 86,
 		},
 		abilities: {
-			0: "Intimidate"
+			0: "Intimidate",
 		},
 		heightm: 1.2,
 		weightkg: 75.5,
 		color: "Purple",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
+			M: 0.5,
 		},
 		prevo: "Horsaponi",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	trex: {
 		num: 413253,
 		name: "T-Rex",
 		types: [
 			"Grass",
-			"Rock"
+			"Rock",
 		],
 		baseStats: {
 			hp: 100,
@@ -102715,29 +103038,29 @@ blobbosgeno: {
 			def: 105,
 			spa: 55,
 			spd: 65,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Strong Jaw"
+			0: "Strong Jaw",
 		},
 		heightm: 0.9,
 		weightkg: 21.6,
 		color: "Green",
 		eggGroups: [
 			"Water 1",
-			"Undiscovered"
+			"Undiscovered",
 		],
 		gender: "M",
 		evos: [
-			"Utahraptor"
+			"Utahraptor",
 		],
-		evoLevel: 16
+		evoLevel: 16,
 	},
 	utahraptor: {
 		num: 413255,
 		name: "Utahraptor",
 		types: [
-			"Ground"
+			"Ground",
 		],
 		baseStats: {
 			hp: 95,
@@ -102745,30 +103068,30 @@ blobbosgeno: {
 			def: 80,
 			spa: 95,
 			spd: 55,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
-			0: "Tough Claws"
+			0: "Tough Claws",
 		},
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Red",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "M",
 		evos: [
-			"Dromec."
+			"Dromec.",
 		],
 		prevo: "T-Rex",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	dromec: {
 		num: 413257,
 		name: "Dromec.",
 		types: [
 			"Normal",
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 75,
@@ -102776,19 +103099,19 @@ blobbosgeno: {
 			def: 60,
 			spa: 105,
 			spd: 95,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
-			0: "Regenerator"
+			0: "Regenerator",
 		},
 		heightm: 1.9,
 		weightkg: 52,
 		color: "Red",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "F",
-		evoLevel: 36
+		evoLevel: 36,
 	},
 	/* Sweet mons */
 	brownisaur: {
@@ -102796,7 +103119,7 @@ blobbosgeno: {
 		name: "Brownisaur",
 		types: [
 			"Cherry",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 45,
@@ -102804,7 +103127,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 65,
 			spd: 65,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -102814,19 +103137,19 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chocosaur: {
 		num: 999002,
 		name: "Chocosaur",
 		types: [
 			"Cherry",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 60,
@@ -102834,7 +103157,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 85,
 			spd: 85,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -102844,19 +103167,19 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	fudgasaur: {
 		num: 999003,
 		name: "Fudgasaur",
 		types: [
 			"Cherry",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -102864,7 +103187,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 100,
 			spd: 100,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -102874,18 +103197,18 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	strawander: {
 		num: 999004,
 		name: "Strawander",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 40,
@@ -102893,7 +103216,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 65,
 			spd: 55,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Heatproof",
@@ -102903,18 +103226,18 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	straweleon: {
 		num: 999005,
 		name: "Straweleon",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 65,
@@ -102922,7 +103245,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 85,
 			spd: 65,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Heatproof",
@@ -102932,18 +103255,18 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.125,
-			M: 0.875
-		}
+			M: 0.875,
+		},
 	},
 	strawizard: {
 		num: 999006,
 		name: "Strawizard",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 75,
@@ -102951,7 +103274,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 110,
 			spd: 85,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Heatproof",
@@ -102961,18 +103284,18 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	squirpie: {
 		num: 999007,
 		name: "Squirpie",
 		types: [
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 45,
@@ -102980,7 +103303,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 50,
 			spd: 65,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Shell Armor",
@@ -102990,18 +103313,18 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	tartortle: {
 		num: 999008,
 		name: "Tartortle",
 		types: [
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 60,
@@ -103009,7 +103332,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 65,
 			spd: 85,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Shell Armor",
@@ -103019,18 +103342,18 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Monster",
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	piestoise: {
 		num: 999009,
 		name: "Piestoise",
 		types: [
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 80,
@@ -103038,7 +103361,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 85,
 			spd: 105,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Shell Armor",
@@ -103048,19 +103371,19 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Monster",
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	panzeal: {
 		num: 999010,
 		name: "Panzeal",
 		types: [
 			"Lime",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 70,
@@ -103068,7 +103391,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 50,
 			spd: 50,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Overgrow",
@@ -103077,19 +103400,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	simizeal: {
 		num: 999011,
 		name: "Simizeal",
 		types: [
 			"Lime",
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 80,
@@ -103097,7 +103420,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 75,
 			spd: 75,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Overgrow",
@@ -103106,18 +103429,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	panspritz: {
 		num: 999012,
 		name: "Panspritz",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 60,
@@ -103125,7 +103448,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 60,
 			spd: 65,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Torrent",
@@ -103134,19 +103457,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	simispritz: {
 		num: 999013,
 		name: "Simispritz",
 		types: [
 			"Blueberry",
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 80,
@@ -103154,7 +103477,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 70,
 			spd: 70,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Torrent",
@@ -103163,19 +103486,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	pancott: {
 		num: 999014,
 		name: "Pancott",
 		types: [
 			"Orange",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 75,
@@ -103183,7 +103506,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 55,
 			spd: 50,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Blaze",
@@ -103192,19 +103515,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	simicott: {
 		num: 999015,
 		name: "Simicott",
 		types: [
 			"Orange",
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 65,
@@ -103212,7 +103535,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 80,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Blaze",
@@ -103221,18 +103544,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	starberry: {
 		num: 999016,
 		name: "Starberry",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 60,
@@ -103240,7 +103563,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 45,
 			spd: 45,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Sheer Force",
@@ -103249,18 +103572,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	berravia: {
 		num: 999017,
 		name: "Berravia",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 85,
@@ -103268,7 +103591,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 60,
 			spd: 60,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Sheer Force",
@@ -103277,18 +103600,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	berraptor: {
 		num: 999018,
 		name: "Berraptor",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 100,
@@ -103296,7 +103619,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 80,
 			spd: 80,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Sheer Force",
@@ -103305,19 +103628,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	rattatart: {
 		num: 999019,
 		name: "Rattatart",
 		types: [
 			"Strawberry",
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -103325,7 +103648,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 45,
 			spd: 45,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Guts",
@@ -103334,19 +103657,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	raticake: {
 		num: 999020,
 		name: "Raticake",
 		types: [
 			"Strawberry",
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -103354,7 +103677,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 80,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Guts",
@@ -103363,19 +103686,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	spearnana: {
 		num: 999021,
 		name: "Spearnana",
 		types: [
 			"Vanilla",
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 70,
@@ -103383,7 +103706,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 40,
 			spd: 40,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Regenerator",
@@ -103392,19 +103715,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	fearnana: {
 		num: 999022,
 		name: "Fearnana",
 		types: [
 			"Vanilla",
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 65,
@@ -103412,7 +103735,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 65,
 			spd: 65,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Regenerator",
@@ -103421,19 +103744,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	migum: {
 		num: 999023,
 		name: "Migum",
 		types: [
 			"Lime",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 55,
@@ -103441,7 +103764,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 50,
 			spd: 65,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Intimidate",
@@ -103451,19 +103774,19 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Field",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	goman: {
 		num: 999024,
 		name: "Goman",
 		types: [
 			"Orange",
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 60,
@@ -103471,7 +103794,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 70,
 			spd: 85,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Intimidate",
@@ -103481,18 +103804,18 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Field",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	popsichu: {
 		num: 999025,
 		name: "Popsichu",
 		types: [
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 55,
@@ -103500,7 +103823,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 50,
 			spd: 50,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Static",
@@ -103510,18 +103833,18 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	raicicle: {
 		num: 999026,
 		name: "Raicicle",
 		types: [
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 60,
@@ -103529,7 +103852,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 80,
 			spd: 80,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Static",
@@ -103539,18 +103862,18 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	shrewberry: {
 		num: 999027,
 		name: "Shrewberry",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 60,
@@ -103558,7 +103881,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 40,
 			spd: 40,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Analytic",
@@ -103567,18 +103890,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	slashberry: {
 		num: 999028,
 		name: "Slashberry",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 75,
@@ -103586,7 +103909,7 @@ blobbosgeno: {
 			def: 110,
 			spa: 45,
 			spd: 55,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Analytic",
@@ -103595,19 +103918,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	angeirian: {
 		num: 999029,
 		name: "Angeirian",
 		types: [
 			"Vanilla",
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 65,
@@ -103615,7 +103938,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 45,
 			spd: 40,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Poison Point",
@@ -103625,19 +103948,19 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	angeino: {
 		num: 999030,
 		name: "Angeino",
 		types: [
 			"Vanilla",
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 90,
@@ -103645,7 +103968,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 55,
 			spd: 55,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Poison Point",
@@ -103654,19 +103977,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	angequeen: {
 		num: 999031,
 		name: "Angequeen",
 		types: [
 			"Vanilla",
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 100,
@@ -103674,7 +103997,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 85,
 			spd: 85,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Poison Point",
@@ -103683,18 +104006,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	devirian: {
 		num: 999032,
 		name: "Devirian",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 60,
@@ -103702,7 +104025,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 50,
 			spd: 50,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Poison Point",
@@ -103712,18 +104035,18 @@ blobbosgeno: {
 		color: "Purple",
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	devino: {
 		num: 999033,
 		name: "Devino",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -103731,7 +104054,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 55,
 			spd: 55,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Poison Point",
@@ -103741,18 +104064,18 @@ blobbosgeno: {
 		color: "Purple",
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	deviking: {
 		num: 999034,
 		name: "Deviking",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 100,
@@ -103760,7 +104083,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 85,
 			spd: 75,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Poison Point",
@@ -103770,18 +104093,18 @@ blobbosgeno: {
 		color: "Purple",
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cupfairy: {
 		num: 999035,
 		name: "Cupfairy",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 70,
@@ -103789,7 +104112,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 60,
 			spd: 65,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Bulletproof",
@@ -103798,18 +104121,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cupfable: {
 		num: 999036,
 		name: "Cupfable",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 80,
@@ -103817,7 +104140,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 80,
 			spd: 90,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Bulletproof",
@@ -103826,18 +104149,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	vulpie: {
 		num: 999037,
 		name: "Vulpie",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 60,
@@ -103845,7 +104168,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 60,
 			spd: 65,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Drought",
@@ -103854,18 +104177,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	pietails: {
 		num: 999038,
 		name: "Pietails",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 60,
@@ -103873,7 +104196,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 70,
 			spd: 100,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Drought",
@@ -103882,18 +104205,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	creampuff: {
 		num: 999039,
 		name: "Creampuff",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 125,
@@ -103901,7 +104224,7 @@ blobbosgeno: {
 			def: 40,
 			spa: 50,
 			spd: 40,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Cute Charm",
@@ -103910,18 +104233,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	creamtuff: {
 		num: 999040,
 		name: "Creamtuff",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 140,
@@ -103929,7 +104252,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 75,
 			spd: 60,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Cute Charm",
@@ -103938,19 +104261,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.7490196078431373,
-			M: 0.25098039215686274
-		}
+			M: 0.25098039215686274,
+		},
 	},
 	sherbat: {
 		num: 999041,
 		name: "Sherbat",
 		types: [
 			"Vanilla",
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 65,
@@ -103958,7 +104281,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 50,
 			spd: 50,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Download",
@@ -103967,19 +104290,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	shervern: {
 		num: 999042,
 		name: "Shervern",
 		types: [
 			"Vanilla",
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 75,
@@ -103987,7 +104310,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 60,
 			spd: 75,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Download",
@@ -103996,19 +104319,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	offin: {
 		num: 999043,
 		name: "Offin",
 		types: [
 			"Chocolate",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 50,
@@ -104016,7 +104339,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 75,
 			spd: 65,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -104025,19 +104348,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	muffoom: {
 		num: 999044,
 		name: "Muffoom",
 		types: [
 			"Chocolate",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 70,
@@ -104045,7 +104368,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 95,
 			spd: 75,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -104054,19 +104377,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	vilefinn: {
 		num: 999045,
 		name: "Vilefinn",
 		types: [
 			"Chocolate",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 95,
@@ -104074,7 +104397,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 100,
 			spd: 90,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -104083,19 +104406,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cupras: {
 		num: 999046,
 		name: "Cupras",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 65,
@@ -104103,7 +104426,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 60,
 			spd: 55,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Effect Spore",
@@ -104113,19 +104436,19 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Bug",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	paracake: {
 		num: 999047,
 		name: "Paracake",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -104133,7 +104456,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 60,
 			spd: 80,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Effect Spore",
@@ -104143,18 +104466,18 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Bug",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cottonat: {
 		num: 999048,
 		name: "Cottonat",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -104162,7 +104485,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 60,
 			spd: 55,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Compound Eyes",
@@ -104171,18 +104494,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cottomoth: {
 		num: 999049,
 		name: "Cottomoth",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -104190,7 +104513,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 90,
 			spd: 75,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Compound Eyes",
@@ -104199,18 +104522,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	diggum: {
 		num: 999050,
 		name: "Diggum",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 30,
@@ -104218,7 +104541,7 @@ blobbosgeno: {
 			def: 40,
 			spa: 55,
 			spd: 55,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Solar Power",
@@ -104227,18 +104550,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	dugdrop: {
 		num: 999051,
 		name: "Dugdrop",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 50,
@@ -104246,7 +104569,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 80,
-			spe: 120
+			spe: 120,
 		},
 		abilities: {
 			0: "Solar Power",
@@ -104255,18 +104578,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	meowffin: {
 		num: 999052,
 		name: "Meowffin",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 75,
@@ -104274,7 +104597,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 40,
 			spd: 40,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Pickup",
@@ -104283,18 +104606,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cupcat: {
 		num: 999053,
 		name: "Cupcat",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 75,
@@ -104302,7 +104625,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 65,
 			spd: 65,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Pickup",
@@ -104311,18 +104634,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	pieduck: {
 		num: 999054,
 		name: "Pieduck",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 50,
@@ -104330,7 +104653,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 65,
 			spd: 60,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Damp",
@@ -104340,18 +104663,18 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Water 1",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	golpie: {
 		num: 999055,
 		name: "Golpie",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -104359,7 +104682,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 80,
 			spd: 80,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Damp",
@@ -104369,19 +104692,19 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Water 1",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cottgrape: {
 		num: 999056,
 		name: "Cottgrape",
 		types: [
 			"Chocolate",
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 50,
@@ -104389,7 +104712,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 55,
 			spd: 45,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Adaptability",
@@ -104398,19 +104721,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	whimsgrape: {
 		num: 999057,
 		name: "Whimsgrape",
 		types: [
 			"Chocolate",
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 60,
@@ -104418,7 +104741,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 70,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Adaptability",
@@ -104427,19 +104750,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	petitcake: {
 		num: 999058,
 		name: "Petitcake",
 		types: [
 			"Strawberry",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 55,
@@ -104447,7 +104770,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 70,
 			spd: 50,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Own Tempo",
@@ -104456,19 +104779,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.24705882352941178,
-			M: 0.7529411764705882
-		}
+			M: 0.7529411764705882,
+		},
 	},
 	lillicake: {
 		num: 999059,
 		name: "Lillicake",
 		types: [
 			"Strawberry",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 80,
@@ -104476,7 +104799,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 70,
 			spd: 70,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Own Tempo",
@@ -104485,18 +104808,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.24705882352941178,
-			M: 0.7529411764705882
-		}
+			M: 0.7529411764705882,
+		},
 	},
 	cinnawag: {
 		num: 999060,
 		name: "Cinnawag",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 65,
@@ -104504,7 +104827,7 @@ blobbosgeno: {
 			def: 40,
 			spa: 40,
 			spd: 40,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Drizzle",
@@ -104513,18 +104836,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cinnawhirl: {
 		num: 999061,
 		name: "Cinnawhirl",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 85,
@@ -104532,7 +104855,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 50,
 			spd: 50,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Drizzle",
@@ -104541,18 +104864,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cinnawrath: {
 		num: 999062,
 		name: "Cinnawrath",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 90,
@@ -104560,7 +104883,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 80,
 			spd: 90,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Drizzle",
@@ -104569,18 +104892,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chabra: {
 		num: 999063,
 		name: "Chabra",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 35,
@@ -104588,7 +104911,7 @@ blobbosgeno: {
 			def: 15,
 			spa: 105,
 			spd: 55,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Inner Focus",
@@ -104597,18 +104920,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chadabra: {
 		num: 999064,
 		name: "Chadabra",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 55,
@@ -104616,7 +104939,7 @@ blobbosgeno: {
 			def: 30,
 			spa: 120,
 			spd: 70,
-			spe: 105
+			spe: 105,
 		},
 		abilities: {
 			0: "Inner Focus",
@@ -104625,18 +104948,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	alakabake: {
 		num: 999065,
 		name: "Alakabake",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 75,
@@ -104644,7 +104967,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 135,
 			spd: 85,
-			spe: 120
+			spe: 120,
 		},
 		abilities: {
 			0: "Inner Focus",
@@ -104653,18 +104976,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.24705882352941178,
-			M: 0.7529411764705882
-		}
+			M: 0.7529411764705882,
+		},
 	},
 	chefchop: {
 		num: 999066,
 		name: "Chefchop",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 90,
@@ -104672,7 +104995,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 35,
 			spd: 35,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Guts",
@@ -104681,18 +105004,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Gray",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.24705882352941178,
-			M: 0.7529411764705882
-		}
+			M: 0.7529411764705882,
+		},
 	},
 	chefchoke: {
 		num: 999067,
 		name: "Chefchoke",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -104700,7 +105023,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 70,
 			spd: 60,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Guts",
@@ -104709,18 +105032,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Gray",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.24705882352941178,
-			M: 0.7529411764705882
-		}
+			M: 0.7529411764705882,
+		},
 	},
 	chefchamp: {
 		num: 999068,
 		name: "Chefchamp",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 90,
@@ -104728,7 +105051,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 85,
 			spd: 85,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Guts",
@@ -104737,18 +105060,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Gray",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.24705882352941178,
-			M: 0.7529411764705882
-		}
+			M: 0.7529411764705882,
+		},
 	},
 	bellnut: {
 		num: 999069,
 		name: "Bellnut",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 65,
@@ -104756,7 +105079,7 @@ blobbosgeno: {
 			def: 35,
 			spa: 70,
 			spd: 40,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -104765,18 +105088,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	weepeanut: {
 		num: 999070,
 		name: "Weepeanut",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 85,
@@ -104784,7 +105107,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 85,
 			spd: 60,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -104793,18 +105116,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	victrenut: {
 		num: 999071,
 		name: "Victrenut",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 95,
@@ -104812,7 +105135,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 100,
 			spd: 80,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -104821,19 +105144,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	icefish: {
 		num: 999072,
 		name: "Icefish",
 		types: [
 			"Vanilla",
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 40,
@@ -104841,7 +105164,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 50,
 			spd: 100,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Gooey",
@@ -104850,19 +105173,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cweamicent: {
 		num: 999073,
 		name: "Cweamicent",
 		types: [
 			"Vanilla",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -104870,7 +105193,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 60,
 			spd: 120,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Gooey",
@@ -104879,18 +105202,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	berrydude: {
 		num: 999074,
 		name: "Berrydude",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 65,
@@ -104898,7 +105221,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 30,
 			spd: 30,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -104907,18 +105230,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	berryler: {
 		num: 999075,
 		name: "Berryler",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -104926,7 +105249,7 @@ blobbosgeno: {
 			def: 115,
 			spa: 55,
 			spd: 55,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -104935,18 +105258,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	berrem: {
 		num: 999076,
 		name: "Berrem",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 90,
@@ -104954,7 +105277,7 @@ blobbosgeno: {
 			def: 130,
 			spa: 65,
 			spd: 65,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -104963,18 +105286,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	pawnsour: {
 		num: 999077,
 		name: "Pawnsour",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 50,
@@ -104982,7 +105305,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 45,
 			spd: 45,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Hyper Cutter",
@@ -104991,18 +105314,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	bisour: {
 		num: 999078,
 		name: "Bisour",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 65,
@@ -105010,7 +105333,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 80,
-			spe: 105
+			spe: 105,
 		},
 		abilities: {
 			0: "Hyper Cutter",
@@ -105019,19 +105342,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	canesal: {
 		num: 999079,
 		name: "Canesal",
 		types: [
 			"Cherry",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 90,
@@ -105039,7 +105362,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 40,
 			spd: 40,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Own Tempo",
@@ -105049,19 +105372,19 @@ blobbosgeno: {
 		color: "Pink",
 		eggGroups: [
 			"Monster",
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	weacane: {
 		num: 999080,
 		name: "Weacane",
 		types: [
 			"Cherry",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 75,
@@ -105069,7 +105392,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 100,
 			spd: 80,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Own Tempo",
@@ -105079,18 +105402,18 @@ blobbosgeno: {
 		color: "Pink",
 		eggGroups: [
 			"Monster",
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	strawink: {
 		num: 999081,
 		name: "Strawink",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 25,
@@ -105098,7 +105421,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 95,
 			spd: 55,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "No Guard",
@@ -105107,18 +105430,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Gray",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	strawxio: {
 		num: 999082,
 		name: "Strawxio",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 50,
@@ -105126,7 +105449,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 100,
 			spd: 60,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "No Guard",
@@ -105135,18 +105458,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Gray",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	luxberry: {
 		num: 999083,
 		name: "Luxberry",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 75,
@@ -105154,7 +105477,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 110,
 			spd: 80,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "No Guard",
@@ -105164,19 +105487,19 @@ blobbosgeno: {
 		color: "Gray",
 		eggGroups: [
 			"Flying",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	puffduo: {
 		num: 999084,
 		name: "Puffduo",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 45,
@@ -105184,7 +105507,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 45,
 			spd: 45,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Early Bird",
@@ -105193,19 +105516,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	puffdrio: {
 		num: 999085,
 		name: "Puffdrio",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 60,
@@ -105213,7 +105536,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 60,
 			spd: 60,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Early Bird",
@@ -105222,18 +105545,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	phangum: {
 		num: 999086,
 		name: "Phangum",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 90,
@@ -105241,7 +105564,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 45,
 			spd: 70,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Thick Fat",
@@ -105251,18 +105574,18 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Water 1",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gumminant: {
 		num: 999087,
 		name: "Gumminant",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 80,
@@ -105270,7 +105593,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 70,
 			spd: 95,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Thick Fat",
@@ -105280,19 +105603,19 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Water 1",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	puddmer: {
 		num: 999088,
 		name: "Puddmer",
 		types: [
 			"Chocolate",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 85,
@@ -105300,7 +105623,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 45,
 			spd: 55,
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Sticky Hold",
@@ -105309,19 +105632,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	ginddup: {
 		num: 999089,
 		name: "Ginddup",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 85,
@@ -105329,7 +105652,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 65,
 			spd: 90,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Sticky Hold",
@@ -105338,18 +105661,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	mintay: {
 		num: 999090,
 		name: "Mintay",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 60,
@@ -105357,7 +105680,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 45,
 			spd: 40,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Shell Armor",
@@ -105366,18 +105689,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	malamint: {
 		num: 999091,
 		name: "Malamint",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 50,
@@ -105385,7 +105708,7 @@ blobbosgeno: {
 			def: 150,
 			spa: 60,
 			spd: 45,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Shell Armor",
@@ -105394,19 +105717,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gascream: {
 		num: 999092,
 		name: "Gascream",
 		types: [
 			"Grape",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 45,
@@ -105414,7 +105737,7 @@ blobbosgeno: {
 			def: 30,
 			spa: 100,
 			spd: 35,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Adaptability",
@@ -105423,19 +105746,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	hauntice: {
 		num: 999093,
 		name: "Hauntice",
 		types: [
 			"Grape",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 65,
@@ -105443,7 +105766,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 115,
 			spd: 55,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Adaptability",
@@ -105452,19 +105775,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	creamgar: {
 		num: 999094,
 		name: "Creamgar",
 		types: [
 			"Grape",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 85,
@@ -105472,7 +105795,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 130,
 			spd: 75,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Adaptability",
@@ -105481,18 +105804,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	emolpie: {
 		num: 999095,
 		name: "Emolpie",
 		types: [
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 50,
@@ -105500,7 +105823,7 @@ blobbosgeno: {
 			def: 160,
 			spa: 30,
 			spd: 45,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Vital Spirit",
@@ -105509,19 +105832,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	flanzee: {
 		num: 999096,
 		name: "Flanzee",
 		types: [
 			"Orange",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 60,
@@ -105529,7 +105852,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 60,
 			spd: 90,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Insomnia",
@@ -105538,19 +105861,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	hypflan: {
 		num: 999097,
 		name: "Hypflan",
 		types: [
 			"Orange",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 80,
@@ -105558,7 +105881,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 70,
 			spd: 100,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Insomnia",
@@ -105567,19 +105890,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	lolliby: {
 		num: 999098,
 		name: "Lolliby",
 		types: [
 			"Lemon",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 30,
@@ -105587,7 +105910,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 40,
 			spd: 35,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Shell Armor",
@@ -105596,19 +105919,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	suckler: {
 		num: 999099,
 		name: "Suckler",
 		types: [
 			"Lemon",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 55,
@@ -105616,7 +105939,7 @@ blobbosgeno: {
 			def: 105,
 			spa: 50,
 			spd: 50,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Shell Armor",
@@ -105625,18 +105948,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	caratorb: {
 		num: 999100,
 		name: "Caratorb",
 		types: [
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 40,
@@ -105644,7 +105967,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 60,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Soundproof",
@@ -105653,15 +105976,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	caratrode: {
 		num: 999101,
 		name: "Caratrode",
 		types: [
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 60,
@@ -105669,7 +105992,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 70,
 			spd: 70,
-			spe: 140
+			spe: 140,
 		},
 		abilities: {
 			0: "Soundproof",
@@ -105678,15 +106001,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	exemel: {
 		num: 999102,
 		name: "Exemel",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 65,
@@ -105694,7 +106017,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 65,
 			spd: 45,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -105703,18 +106026,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	exeramel: {
 		num: 999103,
 		name: "Exeramel",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -105722,7 +106045,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 100,
 			spd: 60,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -105731,18 +106054,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cupop: {
 		num: 999104,
 		name: "Cupop",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 60,
@@ -105750,7 +106073,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 50,
 			spd: 50,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -105759,18 +106082,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	lolliwak: {
 		num: 999105,
 		name: "Lolliwak",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 70,
@@ -105778,7 +106101,7 @@ blobbosgeno: {
 			def: 110,
 			spa: 50,
 			spd: 80,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -105787,19 +106110,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	panpuff: {
 		num: 999106,
 		name: "Panpuff",
 		types: [
 			"Chocolate",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 50,
@@ -105807,7 +106130,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 30,
 			spd: 70,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Limber",
@@ -105816,19 +106139,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cangoro: {
 		num: 999107,
 		name: "Cangoro",
 		types: [
 			"Chocolate",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 50,
@@ -105836,7 +106159,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 35,
 			spd: 110,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Limber",
@@ -105845,18 +106168,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	panfisk: {
 		num: 999108,
 		name: "Panfisk",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 90,
@@ -105864,7 +106187,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 60,
 			spd: 75,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Own Tempo",
@@ -105873,18 +106196,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cherring: {
 		num: 999109,
 		name: "Cherring",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 50,
@@ -105892,7 +106215,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 60,
 			spd: 45,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Sniper",
@@ -105901,18 +106224,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cherrzing: {
 		num: 999110,
 		name: "Cherrzing",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 65,
@@ -105920,7 +106243,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 65,
 			spd: 70,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Sniper",
@@ -105929,19 +106252,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	creamhorn: {
 		num: 999111,
 		name: "Creamhorn",
 		types: [
 			"Vanilla",
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 85,
@@ -105949,7 +106272,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 30,
 			spd: 30,
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -105959,19 +106282,19 @@ blobbosgeno: {
 		color: "Gray",
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	creamdon: {
 		num: 999112,
 		name: "Creamdon",
 		types: [
 			"Strawberry",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 100,
@@ -105979,7 +106302,7 @@ blobbosgeno: {
 			def: 120,
 			spa: 35,
 			spd: 35,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -105989,18 +106312,18 @@ blobbosgeno: {
 		color: "Gray",
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	vinegla: {
 		num: 999113,
 		name: "Vinegla",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 80,
@@ -106008,7 +106331,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 35,
 			spd: 75,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -106017,18 +106340,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	licogrowth: {
 		num: 999114,
 		name: "Licogrowth",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 80,
@@ -106036,7 +106359,7 @@ blobbosgeno: {
 			def: 115,
 			spa: 100,
 			spd: 40,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -106045,19 +106368,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	kangascake: {
 		num: 999115,
 		name: "Kangascake",
 		types: [
 			"Chocolate",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 80,
@@ -106065,7 +106388,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 40,
 			spd: 70,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Early Bird",
@@ -106074,19 +106397,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	trubbint: {
 		num: 999116,
 		name: "Trubbint",
 		types: [
 			"Cherry",
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 50,
@@ -106094,7 +106417,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 70,
 			spd: 50,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Regenerator",
@@ -106104,19 +106427,19 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Water 1",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	mintodor: {
 		num: 999117,
 		name: "Mintodor",
 		types: [
 			"Cherry",
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 65,
@@ -106124,7 +106447,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 95,
 			spd: 45,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Regenerator",
@@ -106134,19 +106457,19 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Water 1",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cookeen: {
 		num: 999118,
 		name: "Cookeen",
 		types: [
 			"Strawberry",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 45,
@@ -106154,7 +106477,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 35,
 			spd: 50,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Swift Swim",
@@ -106163,19 +106486,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	seakie: {
 		num: 999119,
 		name: "Seakie",
 		types: [
 			"Strawberry",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 80,
@@ -106183,7 +106506,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 65,
 			spd: 80,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Swift Swim",
@@ -106192,18 +106515,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	carobyu: {
 		num: 999120,
 		name: "Carobyu",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 40,
@@ -106211,7 +106534,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 70,
 			spd: 55,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Illuminate",
@@ -106220,16 +106543,16 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	carobmie: {
 		num: 999121,
 		name: "Carobmie",
 		types: [
 			"Blueberry",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 50,
@@ -106237,7 +106560,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 90,
 			spd: 75,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Illuminate",
@@ -106246,15 +106569,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	berrier: {
 		num: 999122,
 		name: "Berrier",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 40,
@@ -106262,7 +106585,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 90,
 			spd: 110,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Soundproof",
@@ -106271,19 +106594,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	lipsynx: {
 		num: 999123,
 		name: "Lipsynx",
 		types: [
 			"Raspberry",
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 50,
@@ -106291,7 +106614,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 55,
 			spd: 70,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Trace",
@@ -106300,18 +106623,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	rootic: {
 		num: 999124,
 		name: "Rootic",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 50,
@@ -106319,7 +106642,7 @@ blobbosgeno: {
 			def: 35,
 			spa: 75,
 			spd: 75,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Oblivious",
@@ -106328,18 +106651,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	rootantula: {
 		num: 999125,
 		name: "Rootantula",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 65,
@@ -106347,7 +106670,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 85,
 			spd: 85,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Oblivious",
@@ -106356,18 +106679,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	pudino: {
 		num: 999126,
 		name: "Pudino",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 55,
@@ -106375,7 +106698,7 @@ blobbosgeno: {
 			def: 30,
 			spa: 50,
 			spd: 65,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Flame Body",
@@ -106384,18 +106707,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	zweilert: {
 		num: 999127,
 		name: "Zweilert",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 65,
@@ -106403,7 +106726,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 55,
 			spd: 70,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Flame Body",
@@ -106412,18 +106735,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	hygateau: {
 		num: 999128,
 		name: "Hygateau",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 90,
@@ -106431,7 +106754,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 50,
 			spd: 80,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Flame Body",
@@ -106440,18 +106763,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gumble: {
 		num: 999129,
 		name: "Gumble",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 60,
@@ -106459,7 +106782,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 55,
 			spd: 50,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Guts",
@@ -106469,18 +106792,18 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Water 2",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gumballer: {
 		num: 999130,
 		name: "Gumballer",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 85,
@@ -106488,7 +106811,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 60,
 			spd: 60,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Guts",
@@ -106498,18 +106821,18 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Water 2",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	lempras: {
 		num: 999131,
 		name: "Lempras",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 90,
@@ -106517,7 +106840,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Shell Armor",
@@ -106527,18 +106850,18 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Monster",
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	pudditto: {
 		num: 999132,
 		name: "Pudditto",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 100,
@@ -106546,7 +106869,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 60,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Limber",
@@ -106555,16 +106878,16 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Ditto"
+			"Ditto",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	bananaby: {
 		num: 999133,
 		name: "Bananaby",
 		types: [
 			"Banana",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 70,
@@ -106572,7 +106895,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 45,
 			spd: 65,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Magic Bounce",
@@ -106581,19 +106904,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	bananabuzz: {
 		num: 999134,
 		name: "Bananabuzz",
 		types: [
 			"Banana",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 90,
@@ -106601,7 +106924,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 90,
 			spd: 95,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Magic Bounce",
@@ -106610,18 +106933,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	lemospin: {
 		num: 999135,
 		name: "Lemospin",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 45,
@@ -106629,7 +106952,7 @@ blobbosgeno: {
 			def: 40,
 			spa: 60,
 			spd: 75,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Sap Sipper",
@@ -106638,18 +106961,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	quillemon: {
 		num: 999136,
 		name: "Quillemon",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 65,
@@ -106657,7 +106980,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 85,
 			spd: 80,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Sap Sipper",
@@ -106666,18 +106989,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	lemaught: {
 		num: 999137,
 		name: "Lemaught",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 65,
@@ -106685,7 +107008,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 95,
 			spd: 95,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Sap Sipper",
@@ -106694,19 +107017,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	mintanyte: {
 		num: 999138,
 		name: "Mintanyte",
 		types: [
 			"Cherry",
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 35,
@@ -106714,7 +107037,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 90,
 			spd: 50,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Shell Armor",
@@ -106724,19 +107047,19 @@ blobbosgeno: {
 		color: "Black",
 		eggGroups: [
 			"Water 1",
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	mintastar: {
 		num: 999139,
 		name: "Mintastar",
 		types: [
 			"Cherry",
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 70,
@@ -106744,7 +107067,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 95,
 			spd: 70,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Shell Armor",
@@ -106754,18 +107077,18 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Water 1",
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	lemeod: {
 		num: 999140,
 		name: "Lemeod",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 30,
@@ -106773,7 +107096,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 50,
 			spd: 45,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Battle Armor",
@@ -106783,18 +107106,18 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Water 1",
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	odmelon: {
 		num: 999141,
 		name: "Odmelon",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 60,
@@ -106802,7 +107125,7 @@ blobbosgeno: {
 			def: 105,
 			spa: 50,
 			spd: 50,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Battle Armor",
@@ -106812,19 +107135,19 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Water 1",
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	marshlax: {
 		num: 999142,
 		name: "Marshlax",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -106832,7 +107155,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 60,
 			spd: 75,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Thick Fat",
@@ -106841,19 +107164,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	smorelax: {
 		num: 999143,
 		name: "Smorelax",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 110,
@@ -106861,7 +107184,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 65,
 			spd: 90,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Thick Fat",
@@ -106870,18 +107193,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Black",
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	icebox: {
 		num: 999144,
 		name: "Icebox",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 110,
@@ -106889,7 +107212,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 95,
 			spd: 125,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Pressure",
@@ -106898,15 +107221,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	manalime: {
 		num: 999145,
 		name: "Manalime",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 110,
@@ -106914,7 +107237,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 125,
 			spd: 90,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Pressure",
@@ -106923,15 +107246,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	cryorange: {
 		num: 999146,
 		name: "Cryorange",
 		types: [
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 110,
@@ -106939,7 +107262,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 125,
 			spd: 85,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Pressure",
@@ -106948,16 +107271,16 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	creamtini: {
 		num: 999147,
 		name: "Creamtini",
 		types: [
 			"Vanilla",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 50,
@@ -106965,7 +107288,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 55,
 			spd: 55,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Shed Skin",
@@ -106975,19 +107298,19 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Water 1",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	whippinair: {
 		num: 999148,
 		name: "Whippinair",
 		types: [
 			"Vanilla",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 65,
@@ -106995,7 +107318,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 70,
 			spd: 70,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Shed Skin",
@@ -107005,19 +107328,19 @@ blobbosgeno: {
 		color: "White",
 		eggGroups: [
 			"Water 1",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	creamonite: {
 		num: 999149,
 		name: "Creamonite",
 		types: [
 			"Vanilla",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 80,
@@ -107025,7 +107348,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 80,
 			spd: 80,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Shed Skin",
@@ -107035,18 +107358,18 @@ blobbosgeno: {
 		color: "White",
 		eggGroups: [
 			"Water 1",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	twoberry: {
 		num: 999150,
 		name: "Twoberry",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 100,
@@ -107054,7 +107377,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 140,
 			spd: 100,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Pressure",
@@ -107063,15 +107386,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	mewberry: {
 		num: 999151,
 		name: "Mewberry",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 110,
@@ -107079,7 +107402,7 @@ blobbosgeno: {
 			def: 110,
 			spa: 110,
 			spd: 110,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Synchronize",
@@ -107088,16 +107411,16 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	licorita: {
 		num: 999152,
 		name: "Licorita",
 		types: [
 			"Lime",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 45,
@@ -107105,7 +107428,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 50,
 			spd: 65,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Scrappy",
@@ -107115,19 +107438,19 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Monster",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	leaforice: {
 		num: 999153,
 		name: "Leaforice",
 		types: [
 			"Lime",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 60,
@@ -107135,7 +107458,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 65,
 			spd: 85,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Scrappy",
@@ -107145,19 +107468,19 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Monster",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	liganium: {
 		num: 999154,
 		name: "Liganium",
 		types: [
 			"Lime",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 80,
@@ -107165,7 +107488,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 85,
 			spd: 100,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Scrappy",
@@ -107175,18 +107498,18 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Monster",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cyndacake: {
 		num: 999155,
 		name: "Cyndacake",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 40,
@@ -107194,7 +107517,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 65,
 			spd: 55,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Flash Fire",
@@ -107203,18 +107526,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	quinaval: {
 		num: 999156,
 		name: "Quinaval",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 65,
@@ -107222,7 +107545,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 85,
 			spd: 65,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Flash Fire",
@@ -107231,18 +107554,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	typhunnel: {
 		num: 999157,
 		name: "Typhunnel",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 70,
@@ -107250,7 +107573,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 105,
 			spd: 85,
-			spe: 105
+			spe: 105,
 		},
 		abilities: {
 			0: "Flash Fire",
@@ -107259,18 +107582,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	nanadile: {
 		num: 999158,
 		name: "Nanadile",
 		types: [
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 55,
@@ -107278,7 +107601,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 45,
 			spd: 45,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Iron Fist",
@@ -107288,18 +107611,18 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Monster",
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	croconana: {
 		num: 999159,
 		name: "Croconana",
 		types: [
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 65,
@@ -107307,7 +107630,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 65,
 			spd: 65,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Iron Fist",
@@ -107317,18 +107640,18 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Monster",
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	nanagatr: {
 		num: 999160,
 		name: "Nanagatr",
 		types: [
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 85,
@@ -107336,7 +107659,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 80,
 			spd: 80,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Iron Fist",
@@ -107346,18 +107669,18 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Monster",
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.125,
-			M: 0.875
-		}
+			M: 0.875,
+		},
 	},
 	mintret: {
 		num: 999161,
 		name: "Mintret",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 75,
@@ -107365,7 +107688,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 70,
 			spd: 45,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Run Away",
@@ -107374,18 +107697,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	furmint: {
 		num: 999162,
 		name: "Furmint",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 85,
@@ -107393,7 +107716,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 60,
 			spd: 55,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Run Away",
@@ -107402,19 +107725,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	sherzel: {
 		num: 999163,
 		name: "Sherzel",
 		types: [
 			"Vanilla",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 80,
@@ -107422,7 +107745,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 60,
 			spd: 60,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Insomnia",
@@ -107431,19 +107754,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	bertzel: {
 		num: 999164,
 		name: "Bertzel",
 		types: [
 			"Vanilla",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 100,
@@ -107451,7 +107774,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 80,
 			spd: 100,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Insomnia",
@@ -107460,19 +107783,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cookietot: {
 		num: 999165,
 		name: "Cookietot",
 		types: [
 			"Chocolate",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 60,
@@ -107480,7 +107803,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 50,
 			spd: 80,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Early Bird",
@@ -107489,19 +107812,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cookietune: {
 		num: 999166,
 		name: "Cookietune",
 		types: [
 			"Chocolate",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 65,
@@ -107509,7 +107832,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 65,
 			spd: 110,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Early Bird",
@@ -107518,18 +107841,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	spinacake: {
 		num: 999167,
 		name: "Spinacake",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -107537,7 +107860,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 70,
 			spd: 60,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Insomnia",
@@ -107546,18 +107869,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	ariacake: {
 		num: 999168,
 		name: "Ariacake",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 90,
@@ -107565,7 +107888,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 70,
 			spd: 60,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Insomnia",
@@ -107574,19 +107897,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	tortewig: {
 		num: 999169,
 		name: "Tortewig",
 		types: [
 			"Vanilla",
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 65,
@@ -107594,7 +107917,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 60,
 			spd: 50,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Inner Focus",
@@ -107603,19 +107926,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	meringle: {
 		num: 999170,
 		name: "Meringle",
 		types: [
 			"Vanilla",
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 75,
@@ -107623,7 +107946,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 70,
 			spd: 60,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Inner Focus",
@@ -107632,19 +107955,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	torteringe: {
 		num: 999171,
 		name: "Torteringe",
 		types: [
 			"Vanilla",
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 125,
@@ -107652,7 +107975,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 80,
 			spd: 80,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Inner Focus",
@@ -107661,18 +107984,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	banvy: {
 		num: 999172,
 		name: "Banvy",
 		types: [
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 60,
@@ -107680,7 +108003,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 45,
 			spd: 35,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Static",
@@ -107689,18 +108012,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	banvine: {
 		num: 999173,
 		name: "Banvine",
 		types: [
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 80,
@@ -107708,7 +108031,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 55,
 			spd: 50,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Static",
@@ -107717,18 +108040,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	banperior: {
 		num: 999174,
 		name: "Banperior",
 		types: [
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 95,
@@ -107736,7 +108059,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 70,
 			spd: 70,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Static",
@@ -107745,19 +108068,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	airloon: {
 		num: 999175,
 		name: "Airloon",
 		types: [
 			"Cherry",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 75,
@@ -107765,7 +108088,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 75,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Hustle",
@@ -107774,19 +108097,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	airblim: {
 		num: 999176,
 		name: "Airblim",
 		types: [
 			"Cherry",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 75,
@@ -107794,7 +108117,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 80,
 			spd: 105,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Hustle",
@@ -107804,19 +108127,19 @@ blobbosgeno: {
 		color: "White",
 		eggGroups: [
 			"Flying",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	snotree: {
 		num: 999177,
 		name: "Snotree",
 		types: [
 			"Cherry",
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 50,
@@ -107824,7 +108147,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 70,
 			spd: 55,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Synchronize",
@@ -107833,19 +108156,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cantree: {
 		num: 999178,
 		name: "Cantree",
 		types: [
 			"Cherry",
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 55,
@@ -107853,7 +108176,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 95,
 			spd: 70,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Synchronize",
@@ -107862,19 +108185,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chocowool: {
 		num: 999179,
 		name: "Chocowool",
 		types: [
 			"Cherry",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 75,
@@ -107882,7 +108205,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 65,
 			spd: 50,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Static",
@@ -107892,19 +108215,19 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chocofluff: {
 		num: 999180,
 		name: "Chocofluff",
 		types: [
 			"Cherry",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 90,
@@ -107912,7 +108235,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 80,
 			spd: 60,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Static",
@@ -107922,19 +108245,19 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	candaros: {
 		num: 999181,
 		name: "Candaros",
 		types: [
 			"Cherry",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 90,
@@ -107942,7 +108265,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 115,
 			spd: 95,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Static",
@@ -107952,18 +108275,18 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cottibebe: {
 		num: 999182,
 		name: "Cottibebe",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 40,
@@ -107971,7 +108294,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 60,
 			spd: 70,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -107980,18 +108303,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cottiette: {
 		num: 999183,
 		name: "Cottiette",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 70,
@@ -107999,7 +108322,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 80,
 			spd: 85,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -108009,18 +108332,18 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Water 1",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cottiges: {
 		num: 999184,
 		name: "Cottiges",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 105,
@@ -108028,7 +108351,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 100,
 			spd: 80,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -108038,18 +108361,18 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Water 1",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	boncherry: {
 		num: 999185,
 		name: "Boncherry",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 70,
@@ -108057,7 +108380,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 30,
 			spd: 60,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Sturdy",
@@ -108066,18 +108389,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	sudocherry: {
 		num: 999186,
 		name: "Sudocherry",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 60,
@@ -108085,7 +108408,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 60,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Sturdy",
@@ -108094,18 +108417,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	grapig: {
 		num: 999187,
 		name: "Grapig",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 55,
@@ -108113,7 +108436,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 55,
 			spd: 55,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Pure Power",
@@ -108123,18 +108446,18 @@ blobbosgeno: {
 		color: "Purple",
 		eggGroups: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	igrape: {
 		num: 999188,
 		name: "Igrape",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 75,
@@ -108142,7 +108465,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 45,
 			spd: 75,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Pure Power",
@@ -108152,18 +108475,18 @@ blobbosgeno: {
 		color: "Purple",
 		eggGroups: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	wineboar: {
 		num: 999189,
 		name: "Wineboar",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 125,
@@ -108171,7 +108494,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 55,
 			spd: 85,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Pure Power",
@@ -108181,19 +108504,19 @@ blobbosgeno: {
 		color: "Purple",
 		eggGroups: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	pinacha: {
 		num: 999190,
 		name: "Pinacha",
 		types: [
 			"Banana",
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 65,
@@ -108201,7 +108524,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 60,
 			spd: 55,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Magic Bounce",
@@ -108210,18 +108533,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	strawkern: {
 		num: 999191,
 		name: "Strawkern",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 65,
@@ -108229,7 +108552,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 65,
 			spd: 55,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -108238,18 +108561,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	strawflora: {
 		num: 999192,
 		name: "Strawflora",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 85,
@@ -108257,7 +108580,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 105,
 			spd: 85,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -108266,19 +108589,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	dedemolt: {
 		num: 999193,
 		name: "Dedemolt",
 		types: [
 			"Vanilla",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 75,
@@ -108286,7 +108609,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 75,
 			spd: 45,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Speed Boost",
@@ -108295,19 +108618,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	woocrepe: {
 		num: 999194,
 		name: "Woocrepe",
 		types: [
 			"Banana",
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 80,
@@ -108315,7 +108638,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 55,
 			spd: 55,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Damp",
@@ -108325,19 +108648,19 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Water 1",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	crepesire: {
 		num: 999195,
 		name: "Crepesire",
 		types: [
 			"Banana",
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 95,
@@ -108345,7 +108668,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 65,
 			spd: 65,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Damp",
@@ -108355,19 +108678,19 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Water 1",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	skittink: {
 		num: 999196,
 		name: "Skittink",
 		types: [
 			"Vanilla",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 45,
@@ -108375,7 +108698,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 50,
 			spd: 55,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Magnet Pull",
@@ -108384,19 +108707,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	candlang: {
 		num: 999197,
 		name: "Candlang",
 		types: [
 			"Vanilla",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 95,
@@ -108404,7 +108727,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 80,
 			spd: 60,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Magnet Pull",
@@ -108413,19 +108736,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Black",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	klinkandy: {
 		num: 999198,
 		name: "Klinkandy",
 		types: [
 			"Vanilla",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 80,
@@ -108433,7 +108756,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 85,
 			spd: 90,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Magnet Pull",
@@ -108442,18 +108765,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Black",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gligrape: {
 		num: 999199,
 		name: "Gligrape",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 75,
@@ -108461,7 +108784,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 70,
 			spd: 70,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Own Tempo",
@@ -108471,18 +108794,18 @@ blobbosgeno: {
 		color: "Pink",
 		eggGroups: [
 			"Monster",
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	glisgrape: {
 		num: 999200,
 		name: "Glisgrape",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 60,
@@ -108490,7 +108813,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 100,
 			spd: 85,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Own Tempo",
@@ -108499,18 +108822,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Gray",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cookown: {
 		num: 999201,
 		name: "Cookown",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 60,
@@ -108518,7 +108841,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 80,
 			spd: 60,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Pickup",
@@ -108527,16 +108850,16 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	poppuffet: {
 		num: 999202,
 		name: "Poppuffet",
 		types: [
 			"Chocolate",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 190,
@@ -108544,7 +108867,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 35,
 			spd: 55,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Shadow Tag",
@@ -108553,19 +108876,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	tartafarig: {
 		num: 999203,
 		name: "Tartafarig",
 		types: [
 			"Blueberry",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -108573,7 +108896,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 90,
 			spd: 50,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Inner Focus",
@@ -108582,18 +108905,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	ferrolemon: {
 		num: 999204,
 		name: "Ferrolemon",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 70,
@@ -108601,7 +108924,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 65,
 			spd: 45,
-			spe: 15
+			spe: 15,
 		},
 		abilities: {
 			0: "Sturdy",
@@ -108610,19 +108933,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	ferrorange: {
 		num: 999205,
 		name: "Ferrorange",
 		types: [
 			"Lemon",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 75,
@@ -108630,7 +108953,7 @@ blobbosgeno: {
 			def: 125,
 			spa: 60,
 			spd: 60,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Sturdy",
@@ -108639,19 +108962,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	candigon: {
 		num: 999206,
 		name: "Candigon",
 		types: [
 			"Strawberry",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 100,
@@ -108659,7 +108982,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 50,
 			spd: 65,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Rough Skin",
@@ -108668,18 +108991,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	candix: {
 		num: 999207,
 		name: "Candix",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 65,
@@ -108687,7 +109010,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 35,
 			spd: 55,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -108696,18 +109019,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	candilix: {
 		num: 999208,
 		name: "Candilix",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 75,
@@ -108715,7 +109038,7 @@ blobbosgeno: {
 			def: 160,
 			spa: 55,
 			spd: 65,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -108724,18 +109047,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	lickichef: {
 		num: 999209,
 		name: "Lickichef",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 80,
@@ -108743,7 +109066,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 50,
 			spd: 50,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Intimidate",
@@ -108753,18 +109076,18 @@ blobbosgeno: {
 		color: "White",
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	berochef: {
 		num: 999210,
 		name: "Berochef",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 90,
@@ -108772,7 +109095,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 60,
 			spd: 60,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Intimidate",
@@ -108782,18 +109105,18 @@ blobbosgeno: {
 		color: "White",
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.7490196078431373,
-			M: 0.25098039215686274
-		}
+			M: 0.25098039215686274,
+		},
 	},
 	qwilapple: {
 		num: 999211,
 		name: "Qwilapple",
 		types: [
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 65,
@@ -108801,7 +109124,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 45,
 			spd: 45,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Swift Swim",
@@ -108810,19 +109133,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	candino: {
 		num: 999212,
 		name: "Candino",
 		types: [
 			"Vanilla",
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 60,
@@ -108830,7 +109153,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 55,
 			spd: 60,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Snow Cloak",
@@ -108839,18 +109162,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	pinekle: {
 		num: 999213,
 		name: "Pinekle",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 20,
@@ -108858,7 +109181,7 @@ blobbosgeno: {
 			def: 180,
 			spa: 5,
 			spd: 180,
-			spe: 5
+			spe: 5,
 		},
 		abilities: {
 			0: "Sturdy",
@@ -108867,18 +109190,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	teana: {
 		num: 999214,
 		name: "Teana",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -108886,7 +109209,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 40,
 			spd: 65,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Reckless",
@@ -108895,18 +109218,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	teacakes: {
 		num: 999215,
 		name: "Teacakes",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 75,
@@ -108914,7 +109237,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 35,
 			spd: 75,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Reckless",
@@ -108923,18 +109246,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gummiursa: {
 		num: 999216,
 		name: "Gummiursa",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 80,
@@ -108942,7 +109265,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 50,
 			spd: 50,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Sap Sipper",
@@ -108951,18 +109274,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gummaring: {
 		num: 999217,
 		name: "Gummaring",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 90,
@@ -108970,7 +109293,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 65,
 			spd: 55,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Sap Sipper",
@@ -108979,18 +109302,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	doslug: {
 		num: 999218,
 		name: "Doslug",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -108998,7 +109321,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 70,
 			spd: 60,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Flame Body",
@@ -109007,18 +109330,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	slugnut: {
 		num: 999219,
 		name: "Slugnut",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -109026,7 +109349,7 @@ blobbosgeno: {
 			def: 120,
 			spa: 80,
 			spd: 80,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Flame Body",
@@ -109035,19 +109358,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	macaloon: {
 		num: 999220,
 		name: "Macaloon",
 		types: [
 			"Lemon",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 60,
@@ -109055,7 +109378,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 60,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Tangled Feet",
@@ -109064,19 +109387,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	meringue: {
 		num: 999221,
 		name: "Meringue",
 		types: [
 			"Lemon",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 100,
@@ -109084,7 +109407,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 60,
 			spd: 60,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Tangled Feet",
@@ -109093,19 +109416,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	candila: {
 		num: 999222,
 		name: "Candila",
 		types: [
 			"Blueberry",
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 65,
@@ -109113,7 +109436,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 65,
 			spd: 85,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Natural Cure",
@@ -109123,18 +109446,18 @@ blobbosgeno: {
 		color: "Purple",
 		eggGroups: [
 			"Water 1",
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gumchoo: {
 		num: 999223,
 		name: "Gumchoo",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 65,
@@ -109142,7 +109465,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 65,
 			spd: 45,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Hustle",
@@ -109152,18 +109475,18 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Water 1",
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gumtic: {
 		num: 999224,
 		name: "Gumtic",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 65,
@@ -109171,7 +109494,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 105,
 			spd: 65,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Hustle",
@@ -109181,19 +109504,19 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Water 1",
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	jellybird: {
 		num: 999225,
 		name: "Jellybird",
 		types: [
 			"Orange",
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -109201,7 +109524,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 65,
 			spd: 60,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Vital Spirit",
@@ -109211,18 +109534,18 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Water 1",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	pantine: {
 		num: 999226,
 		name: "Pantine",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 60,
@@ -109230,7 +109553,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 80,
 			spd: 100,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Swift Swim",
@@ -109239,19 +109562,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	parfit: {
 		num: 999227,
 		name: "Parfit",
 		types: [
 			"Apple",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 65,
@@ -109259,7 +109582,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 40,
 			spd: 50,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Keen Eye",
@@ -109268,19 +109591,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Gray",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	parfure: {
 		num: 999228,
 		name: "Parfure",
 		types: [
 			"Apple",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 85,
@@ -109288,7 +109611,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 80,
 			spd: 80,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Keen Eye",
@@ -109297,19 +109620,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Black",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	parfelure: {
 		num: 999229,
 		name: "Parfelure",
 		types: [
 			"Apple",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 75,
@@ -109317,7 +109640,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 115,
 			spd: 90,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Keen Eye",
@@ -109326,18 +109649,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Black",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	furfruit: {
 		num: 999230,
 		name: "Furfruit",
 		types: [
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 75,
@@ -109345,7 +109668,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 65,
 			spd: 65,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Mega Launcher",
@@ -109355,18 +109678,18 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Water 1",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	phancake: {
 		num: 999231,
 		name: "Phancake",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 90,
@@ -109374,7 +109697,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 50,
 			spd: 50,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Pickup",
@@ -109383,18 +109706,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	doncake: {
 		num: 999232,
 		name: "Doncake",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 70,
@@ -109402,7 +109725,7 @@ blobbosgeno: {
 			def: 110,
 			spa: 60,
 			spd: 60,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Pickup",
@@ -109411,19 +109734,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Gray",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	duncanion: {
 		num: 999233,
 		name: "Duncanion",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 75,
@@ -109431,7 +109754,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 80,
 			spd: 85,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Trace",
@@ -109440,16 +109763,16 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	mousse: {
 		num: 999234,
 		name: "Mousse",
 		types: [
 			"Cherry",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 70,
@@ -109457,7 +109780,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 70,
 			spd: 50,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Intimidate",
@@ -109466,18 +109789,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	smicing: {
 		num: 999235,
 		name: "Smicing",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 90,
@@ -109485,7 +109808,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 40,
 			spd: 70,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Scrappy",
@@ -109494,18 +109817,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chimana: {
 		num: 999236,
 		name: "Chimana",
 		types: [
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 65,
@@ -109513,7 +109836,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 60,
 			spd: 35,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Guts",
@@ -109522,18 +109845,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	monana: {
 		num: 999237,
 		name: "Monana",
 		types: [
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 50,
@@ -109541,7 +109864,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 35,
 			spd: 80,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Guts",
@@ -109550,18 +109873,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	infernana: {
 		num: 999238,
 		name: "Infernana",
 		types: [
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 125,
@@ -109569,7 +109892,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 85,
 			spd: 70,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Guts",
@@ -109578,18 +109901,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	eggby: {
 		num: 999239,
 		name: "Eggby",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 45,
@@ -109597,7 +109920,7 @@ blobbosgeno: {
 			def: 30,
 			spa: 65,
 			spd: 55,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Natural Cure",
@@ -109606,18 +109929,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	egglove: {
 		num: 999240,
 		name: "Egglove",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 100,
@@ -109625,7 +109948,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 70,
 			spd: 100,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Natural Cure",
@@ -109634,19 +109957,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chocotank: {
 		num: 999241,
 		name: "Chocotank",
 		types: [
 			"Chocolate",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 80,
@@ -109654,7 +109977,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 20,
 			spd: 60,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Thick Fat",
@@ -109663,18 +109986,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	candink: {
 		num: 999242,
 		name: "Candink",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 125,
@@ -109682,7 +110005,7 @@ blobbosgeno: {
 			def: 10,
 			spa: 75,
 			spd: 125,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Clear Body",
@@ -109691,15 +110014,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
-		gender: "F"
+		gender: "F",
 	},
 	rocanrola: {
 		num: 999243,
 		name: "Rocanrola",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -109707,7 +110030,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 40,
 			spd: 40,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Pressure",
@@ -109716,19 +110039,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	candore: {
 		num: 999244,
 		name: "Candore",
 		types: [
 			"Vanilla",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 65,
@@ -109736,7 +110059,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 90,
 			spd: 50,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Pressure",
@@ -109745,19 +110068,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gigalick: {
 		num: 999245,
 		name: "Gigalick",
 		types: [
 			"Vanilla",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 100,
@@ -109765,7 +110088,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 90,
 			spd: 80,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Pressure",
@@ -109774,18 +110097,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	oshacone: {
 		num: 999246,
 		name: "Oshacone",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 50,
@@ -109793,7 +110116,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 45,
 			spd: 50,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Shed Skin",
@@ -109802,18 +110125,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	dewice: {
 		num: 999247,
 		name: "Dewice",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 75,
@@ -109821,7 +110144,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 65,
 			spd: 70,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Shed Skin",
@@ -109830,18 +110153,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	samurcone: {
 		num: 999248,
 		name: "Samurcone",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 90,
@@ -109849,7 +110172,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 95,
 			spd: 90,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Shed Skin",
@@ -109858,18 +110181,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	lemokie: {
 		num: 999249,
 		name: "Lemokie",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 60,
@@ -109877,7 +110200,7 @@ blobbosgeno: {
 			def: 40,
 			spa: 60,
 			spd: 60,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Pressure",
@@ -109886,19 +110209,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	lemodier: {
 		num: 999250,
 		name: "Lemodier",
 		types: [
 			"Orange",
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 80,
@@ -109906,7 +110229,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 65,
 			spd: 70,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Pressure",
@@ -109915,18 +110238,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	leminja: {
 		num: 999251,
 		name: "Leminja",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 100,
@@ -109934,7 +110257,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 75,
 			spd: 100,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Pressure",
@@ -109943,19 +110266,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	minecko: {
 		num: 999252,
 		name: "Minecko",
 		types: [
 			"Lime",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 55,
@@ -109963,7 +110286,7 @@ blobbosgeno: {
 			def: 35,
 			spa: 65,
 			spd: 55,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Technician",
@@ -109973,19 +110296,19 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	leafbit: {
 		num: 999253,
 		name: "Leafbit",
 		types: [
 			"Lime",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 75,
@@ -109993,7 +110316,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 85,
 			spd: 65,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Technician",
@@ -110003,19 +110326,19 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	mintosaur: {
 		num: 999254,
 		name: "Mintosaur",
 		types: [
 			"Lime",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 70,
@@ -110023,7 +110346,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 100,
 			spd: 85,
-			spe: 120
+			spe: 120,
 		},
 		abilities: {
 			0: "Technician",
@@ -110033,19 +110356,19 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	torchoc: {
 		num: 999255,
 		name: "Torchoc",
 		types: [
 			"Chocolate",
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 60,
@@ -110053,7 +110376,7 @@ blobbosgeno: {
 			def: 40,
 			spa: 70,
 			spd: 50,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Early Bird",
@@ -110062,19 +110385,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chocoberry: {
 		num: 999256,
 		name: "Chocoberry",
 		types: [
 			"Strawberry",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -110082,7 +110405,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 85,
 			spd: 60,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Early Bird",
@@ -110091,19 +110414,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	blazeberry: {
 		num: 999257,
 		name: "Blazeberry",
 		types: [
 			"Strawberry",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -110111,7 +110434,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 15,
 			spd: 70,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Early Bird",
@@ -110120,19 +110443,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	mudpie: {
 		num: 999258,
 		name: "Mudpie",
 		types: [
 			"Banana",
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 65,
@@ -110140,7 +110463,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 50,
 			spd: 50,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Sniper",
@@ -110150,19 +110473,19 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	customp: {
 		num: 999259,
 		name: "Customp",
 		types: [
 			"Apple",
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 80,
@@ -110170,7 +110493,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 60,
 			spd: 70,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Sniper",
@@ -110180,19 +110503,19 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	swamptart: {
 		num: 999260,
 		name: "Swamptart",
 		types: [
 			"Banana",
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 100,
@@ -110200,7 +110523,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 85,
 			spd: 90,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Sniper",
@@ -110210,18 +110533,18 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Monster",
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	grapom: {
 		num: 999261,
 		name: "Grapom",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 65,
@@ -110229,7 +110552,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 50,
 			spd: 50,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Sap Sipper",
@@ -110238,18 +110561,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	grapipom: {
 		num: 999262,
 		name: "Grapipom",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 80,
@@ -110257,7 +110580,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 70,
 			spd: 70,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Sap Sipper",
@@ -110266,19 +110589,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cookiegoon: {
 		num: 999263,
 		name: "Cookiegoon",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 60,
@@ -110286,7 +110609,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 50,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Pickup",
@@ -110295,19 +110618,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cookinoone: {
 		num: 999264,
 		name: "Cookinoone",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -110315,7 +110638,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 60,
 			spd: 70,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Pickup",
@@ -110324,18 +110647,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cupvee: {
 		num: 999265,
 		name: "Cupvee",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 65,
@@ -110343,7 +110666,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 30,
 			spd: 30,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Run Away",
@@ -110352,19 +110675,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cherreon: {
 		num: 999266,
 		name: "Cherreon",
 		types: [
 			"Cherry",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 90,
@@ -110372,7 +110695,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 60,
 			spd: 60,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Shed Skin",
@@ -110381,18 +110704,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	lemeon: {
 		num: 999267,
 		name: "Lemeon",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 80,
@@ -110400,7 +110723,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 90,
 			spd: 50,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Sand Force",
@@ -110409,18 +110732,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	vapeareon: {
 		num: 999268,
 		name: "Vapeareon",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 110,
@@ -110428,7 +110751,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 65,
 			spd: 65,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Liquid Ooze",
@@ -110437,19 +110760,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	beigeon: {
 		num: 999269,
 		name: "Beigeon",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 90,
@@ -110457,7 +110780,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 50,
 			spd: 90,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Shield Dust",
@@ -110466,18 +110789,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	plumbreon: {
 		num: 999270,
 		name: "Plumbreon",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 90,
@@ -110485,7 +110808,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 80,
 			spd: 90,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Swift Swim",
@@ -110495,18 +110818,18 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Water 1",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	grapeon: {
 		num: 999271,
 		name: "Grapeon",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 80,
@@ -110514,7 +110837,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 80,
 			spd: 80,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Swift Swim",
@@ -110524,18 +110847,18 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Water 1",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chocoleon: {
 		num: 999272,
 		name: "Chocoleon",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 70,
@@ -110543,7 +110866,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 80,
 			spd: 80,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -110553,18 +110876,18 @@ blobbosgeno: {
 		color: "Brown",
 		eggGroups: [
 			"Field",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	vanilleon: {
 		num: 999273,
 		name: "Vanilleon",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 110,
@@ -110572,7 +110895,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 60,
 			spd: 50,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -110582,19 +110905,19 @@ blobbosgeno: {
 		color: "Brown",
 		eggGroups: [
 			"Field",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	juicemor: {
 		num: 999275,
 		name: "Juicemor",
 		types: [
 			"Orange",
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 90,
@@ -110602,7 +110925,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 50,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -110612,18 +110935,18 @@ blobbosgeno: {
 		color: "Brown",
 		eggGroups: [
 			"Field",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	frubat: {
 		num: 999290,
 		name: "Frubat",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 60,
@@ -110631,7 +110954,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 40,
 			spd: 30,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Speed Boost",
@@ -110640,18 +110963,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Gray",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	golberry: {
 		num: 999291,
 		name: "Golberry",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 60,
@@ -110659,7 +110982,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 70,
 			spd: 60,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Speed Boost",
@@ -110668,18 +110991,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	croberry: {
 		num: 999292,
 		name: "Croberry",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 95,
@@ -110687,7 +111010,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 80,
 			spd: 75,
-			spe: 140
+			spe: 140,
 		},
 		abilities: {
 			0: "Speed Boost",
@@ -110696,18 +111019,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	peepow: {
 		num: 999276,
 		name: "Peepow",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 60,
@@ -110715,7 +111038,7 @@ blobbosgeno: {
 			def: 40,
 			spa: 50,
 			spd: 50,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Guts",
@@ -110724,18 +111047,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	swellpeep: {
 		num: 999277,
 		name: "Swellpeep",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 70,
@@ -110743,7 +111066,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 50,
 			spd: 50,
-			spe: 125
+			spe: 125,
 		},
 		abilities: {
 			0: "Guts",
@@ -110752,18 +111075,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	marmish: {
 		num: 999285,
 		name: "Marmish",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 80,
@@ -110771,7 +111094,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 50,
 			spd: 60,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Effect Spore",
@@ -110781,19 +111104,19 @@ blobbosgeno: {
 		color: "Brown",
 		eggGroups: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	smorloom: {
 		num: 999286,
 		name: "Smorloom",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 60,
@@ -110801,7 +111124,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 60,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Effect Spore",
@@ -110811,18 +111134,18 @@ blobbosgeno: {
 		color: "Brown",
 		eggGroups: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cookbun: {
 		num: 999327,
 		name: "Cookbun",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 70,
@@ -110830,7 +111153,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 60,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Own Tempo",
@@ -110840,18 +111163,18 @@ blobbosgeno: {
 		color: "White",
 		eggGroups: [
 			"Field",
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	candipass: {
 		num: 999278,
 		name: "Candipass",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 70,
@@ -110859,7 +111182,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 55,
 			spd: 40,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Keen Eye",
@@ -110869,18 +111192,18 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Water 1",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	probicandy: {
 		num: 999279,
 		name: "Probicandy",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 80,
@@ -110888,7 +111211,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 85,
 			spd: 70,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Keen Eye",
@@ -110898,18 +111221,18 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Water 1",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chocodos: {
 		num: 999283,
 		name: "Chocodos",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 60,
@@ -110917,7 +111240,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 50,
 			spd: 60,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -110927,18 +111250,18 @@ blobbosgeno: {
 		color: "Brown",
 		eggGroups: [
 			"Water 1",
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chocardos: {
 		num: 999284,
 		name: "Chocardos",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -110946,7 +111269,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 80,
 			spd: 75,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -110956,18 +111279,18 @@ blobbosgeno: {
 		color: "Brown",
 		eggGroups: [
 			"Water 1",
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	crodrupe: {
 		num: 999320,
 		name: "Crodrupe",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 100,
@@ -110975,7 +111298,7 @@ blobbosgeno: {
 			def: 35,
 			spa: 60,
 			spd: 35,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Water Veil",
@@ -110985,19 +111308,19 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Field",
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	sourdrupe: {
 		num: 999321,
 		name: "Sourdrupe",
 		types: [
 			"Blueberry",
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 140,
@@ -111005,7 +111328,7 @@ blobbosgeno: {
 			def: 45,
 			spa: 80,
 			spd: 45,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Water Veil",
@@ -111015,19 +111338,19 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Field",
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	skittart: {
 		num: 999300,
 		name: "Skittart",
 		types: [
 			"Strawberry",
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -111035,7 +111358,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 45,
 			spd: 45,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Cute Charm",
@@ -111045,19 +111368,19 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	delcandy: {
 		num: 999301,
 		name: "Delcandy",
 		types: [
 			"Strawberry",
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 80,
@@ -111065,7 +111388,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 65,
 			spd: 75,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Cute Charm",
@@ -111075,18 +111398,18 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	jelloetta: {
 		num: 999352,
 		name: "Jelloetta",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 50,
@@ -111094,7 +111417,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 50,
 			spd: 120,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Color Change",
@@ -111103,18 +111426,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chocomite: {
 		num: 999343,
 		name: "Chocomite",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 60,
@@ -111122,7 +111445,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 40,
 			spd: 70,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Clear Body",
@@ -111131,18 +111454,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chocolugg: {
 		num: 999344,
 		name: "Chocolugg",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 50,
@@ -111150,7 +111473,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 70,
 			spd: 100,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Clear Body",
@@ -111159,18 +111482,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	diggeaster: {
 		num: 999299,
 		name: "Diggeaster",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -111178,7 +111501,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 95,
 			spd: 90,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Huge Power",
@@ -111187,18 +111510,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Gray",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	tortoal: {
 		num: 999324,
 		name: "Tortoal",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -111206,7 +111529,7 @@ blobbosgeno: {
 			def: 110,
 			spa: 65,
 			spd: 60,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "White Smoke",
@@ -111215,19 +111538,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	candeye: {
 		num: 999302,
 		name: "Candeye",
 		types: [
 			"Raspberry",
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 50,
@@ -111235,7 +111558,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 65,
 			spd: 65,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Keen Eye",
@@ -111244,19 +111567,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	slugnana: {
 		num: 999339,
 		name: "Slugnana",
 		types: [
 			"Chocolate",
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 50,
@@ -111264,7 +111587,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 60,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Healer",
@@ -111273,19 +111596,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	bananos: {
 		num: 999340,
 		name: "Bananos",
 		types: [
 			"Chocolate",
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 110,
@@ -111293,7 +111616,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 70,
 			spd: 70,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Healer",
@@ -111302,19 +111625,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	heartgrape: {
 		num: 999370,
 		name: "Heartgrape",
 		types: [
 			"Vanilla",
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 90,
@@ -111322,7 +111645,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 50,
 			spd: 65,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Swift Swim",
@@ -111331,19 +111654,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Pink",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	lolliphish: {
 		num: 999341,
 		name: "Lolliphish",
 		types: [
 			"Vanilla",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 60,
@@ -111351,7 +111674,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 60,
 			spd: 50,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Hyper Cutter",
@@ -111361,19 +111684,19 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Water 1",
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	crawpop: {
 		num: 999342,
 		name: "Crawpop",
 		types: [
 			"Vanilla",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 60,
@@ -111381,7 +111704,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 90,
 			spd: 55,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Hyper Cutter",
@@ -111391,19 +111714,19 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Water 1",
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	feetart: {
 		num: 999349,
 		name: "Feetart",
 		types: [
 			"Raspberry",
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 60,
@@ -111411,7 +111734,7 @@ blobbosgeno: {
 			def: 40,
 			spa: 60,
 			spd: 65,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Swift Swim",
@@ -111421,19 +111744,19 @@ blobbosgeno: {
 		color: "Brown",
 		eggGroups: [
 			"Water 1",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	alluretic: {
 		num: 999350,
 		name: "Alluretic",
 		types: [
 			"Raspberry",
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 80,
@@ -111441,7 +111764,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 80,
 			spd: 110,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Marvel Scale",
@@ -111451,18 +111774,18 @@ blobbosgeno: {
 		color: "Pink",
 		eggGroups: [
 			"Water 1",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	skitto: {
 		num: 999318,
 		name: "Skitto",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 70,
@@ -111470,7 +111793,7 @@ blobbosgeno: {
 			def: 40,
 			spa: 65,
 			spd: 20,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Rough Skin",
@@ -111479,18 +111802,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gogoart: {
 		num: 999319,
 		name: "Gogoart",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 60,
@@ -111498,7 +111821,7 @@ blobbosgeno: {
 			def: 40,
 			spa: 95,
 			spd: 40,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Rough Skin",
@@ -111507,18 +111830,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	trapple: {
 		num: 999328,
 		name: "Trapple",
 		types: [
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 55,
@@ -111526,7 +111849,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 55,
 			spd: 55,
-			spe: 10
+			spe: 10,
 		},
 		abilities: {
 			0: "Arena Trap",
@@ -111535,18 +111858,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	slicava: {
 		num: 999329,
 		name: "Slicava",
 		types: [
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 65,
@@ -111554,7 +111877,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 60,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Arena Trap",
@@ -111563,18 +111886,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	orchidon: {
 		num: 999330,
 		name: "Orchidon",
 		types: [
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 85,
@@ -111582,7 +111905,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 80,
 			spd: 80,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Arena Trap",
@@ -111591,19 +111914,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gingett: {
 		num: 999296,
 		name: "Gingett",
 		types: [
 			"Chocolate",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 80,
@@ -111611,7 +111934,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 50,
 			spd: 50,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Guts",
@@ -111620,19 +111943,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	golingurk: {
 		num: 999297,
 		name: "Golingurk",
 		types: [
 			"Chocolate",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 120,
@@ -111640,7 +111963,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 40,
 			spd: 60,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Guts",
@@ -111649,19 +111972,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.24705882352941178,
-			M: 0.7529411764705882
-		}
+			M: 0.7529411764705882,
+		},
 	},
 	polyorange: {
 		num: 999309,
 		name: "Polyorange",
 		types: [
 			"Blueberry",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 50,
@@ -111669,7 +111992,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 75,
 			spd: 60,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Static",
@@ -111678,19 +112001,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	polyblue: {
 		num: 999310,
 		name: "Polyblue",
 		types: [
 			"Orange",
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -111698,7 +112021,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 95,
 			spd: 60,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Static",
@@ -111707,19 +112030,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	skornana: {
 		num: 999322,
 		name: "Skornana",
 		types: [
 			"Banana",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -111727,7 +112050,7 @@ blobbosgeno: {
 			def: 40,
 			spa: 80,
 			spd: 45,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Filter",
@@ -111736,19 +112059,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	banapion: {
 		num: 999323,
 		name: "Banapion",
 		types: [
 			"Banana",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 70,
@@ -111756,7 +112079,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 100,
 			spd: 70,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Filter",
@@ -111765,19 +112088,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	puddeal: {
 		num: 999363,
 		name: "Puddeal",
 		types: [
 			"Strawberry",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 70,
@@ -111785,7 +112108,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 65,
 			spd: 60,
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Thick Fat",
@@ -111795,19 +112118,19 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Water 1",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	puddleo: {
 		num: 999364,
 		name: "Puddleo",
 		types: [
 			"Strawberry",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 105,
@@ -111815,7 +112138,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 75,
 			spd: 70,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Thick Fat",
@@ -111825,19 +112148,19 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Water 1",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	flamberein: {
 		num: 999365,
 		name: "Flamberein",
 		types: [
 			"Strawberry",
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 110,
@@ -111845,7 +112168,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 95,
 			spd: 90,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Thick Fat",
@@ -111855,18 +112178,18 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Water 1",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	woocherry: {
 		num: 999331,
 		name: "Woocherry",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 65,
@@ -111874,7 +112197,7 @@ blobbosgeno: {
 			def: 40,
 			spa: 85,
 			spd: 40,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Sand Veil",
@@ -111884,18 +112207,18 @@ blobbosgeno: {
 		color: "Red",
 		eggGroups: [
 			"Grass",
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cherrybat: {
 		num: 999332,
 		name: "Cherrybat",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 70,
@@ -111903,7 +112226,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 115,
 			spd: 60,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Sand Veil",
@@ -111913,19 +112236,19 @@ blobbosgeno: {
 		color: "Green",
 		eggGroups: [
 			"Grass",
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	snocone: {
 		num: 999361,
 		name: "Snocone",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 70,
@@ -111933,7 +112256,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 70,
 			spd: 50,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Moody",
@@ -111943,19 +112266,19 @@ blobbosgeno: {
 		color: "Gray",
 		eggGroups: [
 			"Fairy",
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	glacream: {
 		num: 999362,
 		name: "Glacream",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -111963,7 +112286,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 80,
 			spd: 80,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Moody",
@@ -111973,18 +112296,18 @@ blobbosgeno: {
 		color: "Gray",
 		eggGroups: [
 			"Fairy",
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cherrp: {
 		num: 999337,
 		name: "Cherrp",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 60,
@@ -111992,7 +112315,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 60,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -112001,18 +112324,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cherrysun: {
 		num: 999338,
 		name: "Cherrysun",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 70,
@@ -112020,7 +112343,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 65,
 			spd: 65,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Chlorophyll",
@@ -112029,18 +112352,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	bunolite: {
 		num: 999298,
 		name: "Bunolite",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -112048,7 +112371,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 50,
 			spd: 50,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Huge Power",
@@ -112057,18 +112380,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	espoffin: {
 		num: 999325,
 		name: "Espoffin",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 60,
@@ -112076,7 +112399,7 @@ blobbosgeno: {
 			def: 35,
 			spa: 70,
 			spd: 80,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Own Tempo",
@@ -112085,18 +112408,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Black",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	poffstic: {
 		num: 999326,
 		name: "Poffstic",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -112104,7 +112427,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 90,
 			spd: 110,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Own Tempo",
@@ -112113,19 +112436,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	razle: {
 		num: 999311,
 		name: "Razle",
 		types: [
 			"Raspberry",
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 60,
@@ -112133,7 +112456,7 @@ blobbosgeno: {
 			def: 40,
 			spa: 85,
 			spd: 75,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Scrappy",
@@ -112142,19 +112465,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	limun: {
 		num: 999312,
 		name: "Limun",
 		types: [
 			"Lime",
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 60,
@@ -112162,7 +112485,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 75,
 			spd: 85,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Scrappy",
@@ -112171,18 +112494,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	mawnana: {
 		num: 999303,
 		name: "Mawnana",
 		types: [
-			"Lemon"
+			"Lemon",
 		],
 		baseStats: {
 			hp: 60,
@@ -112190,7 +112513,7 @@ blobbosgeno: {
 			def: 85,
 			spa: 55,
 			spd: 55,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Hyper Cutter",
@@ -112200,18 +112523,18 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	mediblue: {
 		num: 999307,
 		name: "Mediblue",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 50,
@@ -112219,7 +112542,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 60,
 			spd: 65,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Pure Power",
@@ -112228,18 +112551,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	mediberry: {
 		num: 999308,
 		name: "Mediberry",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -112247,7 +112570,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 80,
 			spd: 75,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Pure Power",
@@ -112256,19 +112579,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cottonblu: {
 		num: 999333,
 		name: "Cottonblu",
 		types: [
 			"Blueberry",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 55,
@@ -112276,7 +112599,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 60,
 			spd: 75,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Cloud Nine",
@@ -112286,19 +112609,19 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Flying",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	alcanria: {
 		num: 999334,
 		name: "Alcanria",
 		types: [
 			"Blueberry",
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 75,
@@ -112306,7 +112629,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 60,
 			spd: 105,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Cloud Nine",
@@ -112316,19 +112639,19 @@ blobbosgeno: {
 		color: "Blue",
 		eggGroups: [
 			"Flying",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	velvefox: {
 		num: 999360,
 		name: "Velvefox",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 95,
@@ -112336,7 +112659,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 110,
 			spd: 80,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Synchronize",
@@ -112345,19 +112668,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	riolish: {
 		num: 999355,
 		name: "Riolish",
 		types: [
 			"Cherry",
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 45,
@@ -112365,7 +112688,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 50,
 			spd: 90,
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Serene Grace",
@@ -112374,19 +112697,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	licario: {
 		num: 999356,
 		name: "Licario",
 		types: [
 			"Cherry",
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 40,
@@ -112394,7 +112717,7 @@ blobbosgeno: {
 			def: 130,
 			spa: 60,
 			spd: 130,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Serene Grace",
@@ -112403,19 +112726,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chocorade: {
 		num: 999315,
 		name: "Chocorade",
 		types: [
 			"Apple",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -112423,7 +112746,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 100,
 			spd: 80,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Oblivious",
@@ -112433,18 +112756,18 @@ blobbosgeno: {
 		color: "Purple",
 		eggGroups: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	peepling: {
 		num: 999287,
 		name: "Peepling",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 70,
@@ -112452,7 +112775,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 50,
 			spd: 35,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Early Bird",
@@ -112461,18 +112784,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	peepinder: {
 		num: 999288,
 		name: "Peepinder",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 80,
@@ -112480,7 +112803,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 55,
 			spd: 55,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Early Bird",
@@ -112489,18 +112812,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	talonpeep: {
 		num: 999289,
 		name: "Talonpeep",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 80,
@@ -112508,7 +112831,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 80,
 			spd: 65,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Early Bird",
@@ -112517,18 +112840,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gulple: {
 		num: 999316,
 		name: "Gulple",
 		types: [
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 70,
@@ -112536,7 +112859,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 55,
 			spd: 65,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Sticky Hold",
@@ -112545,18 +112868,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	swalapple: {
 		num: 999317,
 		name: "Swalapple",
 		types: [
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 100,
@@ -112564,7 +112887,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 70,
 			spd: 80,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Sticky Hold",
@@ -112573,18 +112896,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	tropanana: {
 		num: 999357,
 		name: "Tropanana",
 		types: [
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 80,
@@ -112592,7 +112915,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 65,
 			spd: 85,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Heatproof",
@@ -112602,19 +112925,19 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Monster",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	slownana: {
 		num: 999293,
 		name: "Slownana",
 		types: [
 			"Banana",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 75,
@@ -112622,7 +112945,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 55,
 			spd: 50,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Soundproof",
@@ -112632,19 +112955,19 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	slowbagel: {
 		num: 999294,
 		name: "Slowbagel",
 		types: [
 			"Banana",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 100,
@@ -112652,7 +112975,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 80,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Soundproof",
@@ -112662,19 +112985,19 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	donaught: {
 		num: 999295,
 		name: "Donaught",
 		types: [
 			"Banana",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 110,
@@ -112682,7 +113005,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 80,
 			spd: 50,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Soundproof",
@@ -112692,18 +113015,18 @@ blobbosgeno: {
 		color: "Yellow",
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	clamberry: {
 		num: 999366,
 		name: "Clamberry",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 40,
@@ -112711,7 +113034,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 70,
 			spd: 50,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Shell Armor",
@@ -112720,19 +113043,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	hunsour: {
 		num: 999367,
 		name: "Hunsour",
 		types: [
 			"Lime",
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 55,
@@ -112740,7 +113063,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 80,
 			spd: 65,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Swift Swim",
@@ -112749,18 +113072,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	nanabyss: {
 		num: 999368,
 		name: "Nanabyss",
 		types: [
-			"Banana"
+			"Banana",
 		],
 		baseStats: {
 			hp: 55,
@@ -112768,7 +113091,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 100,
 			spd: 75,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Swift Swim",
@@ -112777,19 +113100,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Yellow",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	velvexien: {
 		num: 999359,
 		name: "Velvexien",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 65,
@@ -112797,7 +113120,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 75,
 			spd: 60,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Synchronize",
@@ -112806,18 +113129,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	cornet: {
 		num: 999353,
 		name: "Cornet",
 		types: [
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 55,
@@ -112825,7 +113148,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 65,
 			spd: 55,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Insomnia",
@@ -112834,18 +113157,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Black",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	pumpkinette: {
 		num: 999354,
 		name: "Pumpkinette",
 		types: [
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 65,
@@ -112853,7 +113176,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 80,
 			spd: 60,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Insomnia",
@@ -112862,18 +113185,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Black",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	sevipop: {
 		num: 999336,
 		name: "Sevipop",
 		types: [
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 70,
@@ -112881,7 +113204,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 90,
 			spd: 50,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Shed Skin",
@@ -112891,19 +113214,19 @@ blobbosgeno: {
 		color: "Purple",
 		eggGroups: [
 			"Field",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	flangoose: {
 		num: 999335,
 		name: "Flangoose",
 		types: [
 			"Orange",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 70,
@@ -112911,7 +113234,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 50,
 			spd: 50,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Immunity",
@@ -112920,19 +113243,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	heartisk: {
 		num: 999369,
 		name: "Heartisk",
 		types: [
 			"Vanilla",
-			"Grape"
+			"Grape",
 		],
 		baseStats: {
 			hp: 80,
@@ -112940,29 +113263,29 @@ blobbosgeno: {
 			def: 70,
 			spa: 45,
 			spd: 40,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Swift Swim",
-			1: "Stench"
+			1: "Stench",
 		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
 		eggGroups: [
 			"Water 1",
-			"Water 2"
+			"Water 2",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	lolliplup: {
 		num: 999304,
 		name: "Lolliplup",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 50,
@@ -112970,7 +113293,7 @@ blobbosgeno: {
 			def: 95,
 			spa: 40,
 			spd: 40,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Sturdy",
@@ -112979,18 +113302,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	prinprince: {
 		num: 999305,
 		name: "Prinprince",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 60,
@@ -112998,7 +113321,7 @@ blobbosgeno: {
 			def: 135,
 			spa: 50,
 			spd: 50,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Sturdy",
@@ -113007,18 +113330,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	emposh: {
 		num: 999306,
 		name: "Emposh",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -113026,7 +113349,7 @@ blobbosgeno: {
 			def: 175,
 			spa: 60,
 			spd: 60,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Sturdy",
@@ -113035,18 +113358,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	candform: {
 		num: 999351,
 		name: "Candform",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 60,
@@ -113054,7 +113377,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 70,
 			spd: 70,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Forecast",
@@ -113064,19 +113387,19 @@ blobbosgeno: {
 		color: "White",
 		eggGroups: [
 			"Fairy",
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	rosebud: {
 		num: 999313,
 		name: "Rosebud",
 		types: [
 			"Apple",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 65,
@@ -113084,7 +113407,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 30,
 			spd: 30,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Oblivious",
@@ -113094,19 +113417,19 @@ blobbosgeno: {
 		color: "Gray",
 		eggGroups: [
 			"Bug",
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	appelia: {
 		num: 999314,
 		name: "Appelia",
 		types: [
 			"Apple",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 65,
@@ -113114,7 +113437,7 @@ blobbosgeno: {
 			def: 55,
 			spa: 75,
 			spd: 75,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Oblivious",
@@ -113124,18 +113447,18 @@ blobbosgeno: {
 		color: "Purple",
 		eggGroups: [
 			"Bug",
-			"Human-Like"
+			"Human-Like",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	iceleep: {
 		num: 999345,
 		name: "Iceleep",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 65,
@@ -113143,7 +113466,7 @@ blobbosgeno: {
 			def: 75,
 			spa: 60,
 			spd: 85,
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Suction Cups",
@@ -113152,18 +113475,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.125,
-			M: 0.875
-		}
+			M: 0.875,
+		},
 	},
 	creamdily: {
 		num: 999346,
 		name: "Creamdily",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 70,
@@ -113171,7 +113494,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 80,
 			spd: 100,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Suction Cups",
@@ -113180,18 +113503,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.125,
-			M: 0.875
-		}
+			M: 0.875,
+		},
 	},
 	limeshroom: {
 		num: 999347,
 		name: "Limeshroom",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 45,
@@ -113199,7 +113522,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 40,
 			spd: 50,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Battle Armor",
@@ -113208,18 +113531,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	shroompie: {
 		num: 999348,
 		name: "Shroompie",
 		types: [
-			"Lime"
+			"Lime",
 		],
 		baseStats: {
 			hp: 65,
@@ -113227,7 +113550,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 60,
 			spd: 80,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Battle Armor",
@@ -113236,18 +113559,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Water 3"
+			"Water 3",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	malts: {
 		num: 999280,
 		name: "Malts",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 50,
@@ -113255,7 +113578,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 55,
 			spd: 60,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Synchronize",
@@ -113264,18 +113587,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	kirlicakes: {
 		num: 999281,
 		name: "Kirlicakes",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 60,
@@ -113283,7 +113606,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 85,
 			spd: 80,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Synchronize",
@@ -113292,18 +113615,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	velvevoir: {
 		num: 999282,
 		name: "Velvevoir",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 70,
@@ -113311,7 +113634,7 @@ blobbosgeno: {
 			def: 65,
 			spa: 125,
 			spd: 115,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Synchronize",
@@ -113320,18 +113643,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gelly: {
 		num: 999371,
 		name: "Gelly",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -113339,7 +113662,7 @@ blobbosgeno: {
 			def: 60,
 			spa: 40,
 			spd: 30,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -113348,18 +113671,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gellroo: {
 		num: 999372,
 		name: "Gellroo",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 70,
@@ -113367,7 +113690,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 60,
 			spd: 50,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -113376,18 +113699,18 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	gelldra: {
 		num: 999373,
 		name: "Gelldra",
 		types: [
-			"Blueberry"
+			"Blueberry",
 		],
 		baseStats: {
 			hp: 85,
@@ -113395,7 +113718,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 90,
 			spd: 80,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Rock Head",
@@ -113404,19 +113727,19 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
+			M: 0.5,
+		},
 	},
 	chocolite: {
 		num: 999374,
 		name: "Chocolite",
 		types: [
 			"Chocolate",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 65,
@@ -113424,7 +113747,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 35,
 			spd: 60,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Clear Body",
@@ -113433,16 +113756,16 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	chocolish: {
 		num: 999375,
 		name: "Chocolish",
 		types: [
 			"Chocolate",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 65,
@@ -113450,7 +113773,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 55,
 			spd: 80,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Clear Body",
@@ -113459,16 +113782,16 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	chocoluxe: {
 		num: 999376,
 		name: "Chocoluxe",
 		types: [
 			"Chocolate",
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 80,
@@ -113476,7 +113799,7 @@ blobbosgeno: {
 			def: 110,
 			spa: 60,
 			spd: 90,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Clear Body",
@@ -113485,15 +113808,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	regicandy: {
 		num: 999377,
 		name: "Regicandy",
 		types: [
-			"Cherry"
+			"Cherry",
 		],
 		baseStats: {
 			hp: 80,
@@ -113501,7 +113824,7 @@ blobbosgeno: {
 			def: 200,
 			spa: 70,
 			spd: 100,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Clear Body",
@@ -113510,15 +113833,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Purple",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	reginger: {
 		num: 999378,
 		name: "Reginger",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -113526,7 +113849,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 100,
 			spd: 200,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Clear Body",
@@ -113535,15 +113858,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Brown",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	regiapple: {
 		num: 999379,
 		name: "Regiapple",
 		types: [
-			"Apple"
+			"Apple",
 		],
 		baseStats: {
 			hp: 80,
@@ -113551,7 +113874,7 @@ blobbosgeno: {
 			def: 150,
 			spa: 85,
 			spd: 150,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Clear Body",
@@ -113560,16 +113883,16 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	kyotan: {
 		num: 999382,
 		name: "Kyotan",
 		types: [
 			"Vanilla",
-			"Orange"
+			"Orange",
 		],
 		baseStats: {
 			hp: 110,
@@ -113577,7 +113900,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 130,
 			spd: 130,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Drizzle",
@@ -113586,15 +113909,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	groungerdon: {
 		num: 999383,
 		name: "Groungerdon",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 100,
@@ -113602,7 +113925,7 @@ blobbosgeno: {
 			def: 140,
 			spa: 100,
 			spd: 80,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Drought",
@@ -113611,15 +113934,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	liquaza: {
 		num: 999384,
 		name: "Liquaza",
 		types: [
-			"Strawberry"
+			"Strawberry",
 		],
 		baseStats: {
 			hp: 105,
@@ -113627,7 +113950,7 @@ blobbosgeno: {
 			def: 90,
 			spa: 140,
 			spd: 80,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "None",
@@ -113636,15 +113959,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	cottonbun: {
 		num: 999380,
 		name: "Cottonbun",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 70,
@@ -113652,7 +113975,7 @@ blobbosgeno: {
 			def: 70,
 			spa: 90,
 			spd: 90,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Mega Launcher",
@@ -113661,15 +113984,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Red",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	chocobun: {
 		num: 999381,
 		name: "Chocobun",
 		types: [
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 80,
@@ -113677,7 +114000,7 @@ blobbosgeno: {
 			def: 80,
 			spa: 130,
 			spd: 110,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Mega Launcher",
@@ -113686,15 +114009,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "Blue",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	diancake: {
 		num: 999385,
 		name: "Diancake",
 		types: [
-			"Vanilla"
+			"Vanilla",
 		],
 		baseStats: {
 			hp: 100,
@@ -113702,7 +114025,7 @@ blobbosgeno: {
 			def: 100,
 			spa: 100,
 			spd: 100,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Serene Grace",
@@ -113711,15 +114034,15 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	douna: {
 		num: 999386,
 		name: "Douna",
 		types: [
-			"Raspberry"
+			"Raspberry",
 		],
 		baseStats: {
 			hp: 50,
@@ -113727,7 +114050,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 150,
 			spd: 50,
-			spe: 150
+			spe: 150,
 		},
 		abilities: {
 			0: "Pressure",
@@ -113736,16 +114059,16 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gender: "N"
+		gender: "N",
 	},
 	velvekin: {
 		num: 999358,
 		name: "Velvekin",
 		types: [
 			"Vanilla",
-			"Chocolate"
+			"Chocolate",
 		],
 		baseStats: {
 			hp: 55,
@@ -113753,7 +114076,7 @@ blobbosgeno: {
 			def: 50,
 			spa: 75,
 			spd: 50,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Synchronize",
@@ -113762,11 +114085,11 @@ blobbosgeno: {
 		weightkg: 20,
 		color: "White",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
 		genderRatio: {
 			F: 0.5,
-			M: 0.5
-		}
-	}
+			M: 0.5,
+		},
+	},
 };

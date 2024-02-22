@@ -12,6 +12,6 @@ export const Scripts: ModdedBattleScriptsData = {
 				(enemyUnnerving && recoveryFoods.includes(this.item)) ||
 				this.volatiles['embargo'] || this.battle.field.pseudoWeather['magicroom']
 			);
-		}
+		},
 	},
 };
