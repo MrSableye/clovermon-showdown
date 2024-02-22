@@ -10718,11 +10718,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		},
-	walkietalkie: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
-		},
 	doomsay: {
 		inherit: true,
 		tier: "OU",
