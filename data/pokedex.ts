@@ -37187,9 +37187,9 @@ frostbelum: {
 	eggGroups: ["Monster", "Flying"],
 	gen: 8,
 },
-ephiperor: {
+epipheperor: {
 	num: -8241,
-	name: "Ephiperor",
+	name: "Epipheror",
 	types: ["Psychic", "???"],
 	genderRatio: {M: 0.5, F: 0.5},
 	baseStats: {hp: 119, atk: 52, def: 90, spa: 93, spd: 70, spe: 110},
