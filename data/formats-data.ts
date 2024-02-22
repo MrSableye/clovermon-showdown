@@ -8920,6 +8920,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	doomsay: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	epipheror: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	epilate: {
 		tier: "Illegal",
