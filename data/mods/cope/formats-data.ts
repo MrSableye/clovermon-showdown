@@ -3026,6 +3026,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	ephiperor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	bige: {
 		inherit: true,
 		isNonstandard: null,

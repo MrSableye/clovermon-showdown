@@ -10577,6 +10577,161 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
+		},
+	arctiglobe: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	ephiperor: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	fractyvern: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	epilate: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	clobber: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	lober: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	albermax: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	alberaph: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	alberfectcell: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	alberchamp: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	alberfly: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	albergrab: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	arctiglobefreed: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	frostbelum: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	gharroste: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	gojifiend: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	iwik: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	kiwi: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	parmiausan: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	ponderselo: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	psycheyend: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	pyroshiiva: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	sphare: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	costrike: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	snurl: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	snuroyal: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	smawl: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	theforest: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	tiamat: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	walkietalkie: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	doomsay: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
 	},
 	cellgar: {
 		inherit: true,

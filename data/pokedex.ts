@@ -37087,7 +37087,7 @@ doomsay: {
 	heightm: 1.87,
 	weightkg: 80.37,
 	color: "Brown",
-	eggGroups: ["Monster", "Flying"],
+	eggGroups: ["Monster"],
 	gen: 8,
 },
 arctiglobe: {
@@ -37131,6 +37131,19 @@ frostbelum: {
 	weightkg: 190.37,
 	color: "Blue",
 	eggGroups: ["Monster", "Flying"],
+	gen: 8,
+},
+ephiperor: {
+	num: -8241,
+	name: "Ephiperor",
+	types: ["Psychic", "???"],
+	genderRatio: {M: 0.5, F: 0.5},
+	baseStats: {hp: 119, atk: 52, def: 90, spa: 93, spd: 70, spe: 110},
+	abilities: {0: "Forewarn", 1: "Frisk", H: "Wonder Skin", S: "Concert"},
+	heightm: 1.81,
+	weightkg: 90.91,
+	color: "White",
+	eggGroups: ["Monster", "Field"],
 	gen: 8,
 },
 crolord: {
