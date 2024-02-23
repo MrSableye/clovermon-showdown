@@ -37200,6 +37200,19 @@ epipheror: {
 	eggGroups: ["Monster", "Field"],
 	gen: 8,
 },
+	ttos: {
+		num: -8242,
+		name: "Ttos",
+		types: ["Rock", "Dark"], // oh boy oh boy!! another rock dark!!
+		gender: 'M',
+		baseStats: {hp: 100, atk: 112, def: 95, spa: 75, spd: 88, spe: 71},
+		abilities: {0: "Sand Stream", H: "Shed Skin", S: "False Dark"},
+		heightm: 0.8,
+		weightkg: 13,
+		color: "Black",
+		eggGroups: ["Monster"],
+		gen: 8,
+},
 crolord: {
 	num: -8208,
 	name: "Cro'lord",
