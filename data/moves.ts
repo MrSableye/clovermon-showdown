@@ -54075,6 +54075,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('healblock');
+				target.addVolatile('embargo');
+				target.addVolatile('taunt');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
