@@ -38316,7 +38316,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 40,
 		basePowerCallback(pokemon, target, move) {
-			// You can't get here unless the pursuit succeeds
+			// You can't get here unless the chasebeam succeeds
 			if (target.beingCalledBack || target.switchFlag) {
 				this.debug('Chase Beam damage boost');
 				return move.basePower * 2;
@@ -38331,8 +38331,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
-				side.addSideCondition('pursuit', pokemon);
-				const data = side.getSideConditionData('pursuit');
+				side.addSideCondition('chasebeam', pokemon);
+				const data = side.getSideConditionData('chasebeam');
 				if (!data.sources) {
 					data.sources = [];
 				}
@@ -38343,21 +38343,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
 		},
 		onTryHit(target, pokemon) {
-			target.side.removeSideCondition('pursuit');
+			target.side.removeSideCondition('chasebeam');
 		},
 		condition: {
 			duration: 1,
 			onBeforeSwitchOut(pokemon) {
-				this.debug('Pursuit start');
+				this.debug('Chase Beam start');
 				let alreadyAdded = false;
 				pokemon.removeVolatile('destinybond');
 				for (const source of this.effectState.sources) {
 					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
 					if (!alreadyAdded) {
-						this.add('-activate', pokemon, 'move: Pursuit');
+						this.add('-activate', pokemon, 'move: Chase Beam');
 						alreadyAdded = true;
 					}
-					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// Run through each action in queue to check if the chasebeam user is supposed to Mega Evolve this turn.
 					// If it is, then Mega Evolve before moving.
 					if (source.canMegaEvo || source.canUltraBurst) {
 						for (const [actionIndex, action] of this.queue.entries()) {
@@ -38368,7 +38368,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 							}
 						}
 					}
-					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+					this.actions.runMove('chasebeam', source, source.getLocOf(pokemon));
 				}
 			},
 		},
@@ -42183,8 +42183,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
-				side.addSideCondition('pursuit', pokemon);
-				const data = side.getSideConditionData('pursuit');
+				side.addSideCondition('pursuittackle', pokemon);
+				const data = side.getSideConditionData('pursuittackle');
 				if (!data.sources) {
 					data.sources = [];
 				}
@@ -42195,18 +42195,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
 		},
 		onTryHit(target, pokemon) {
-			target.side.removeSideCondition('pursuit');
+			target.side.removeSideCondition('pursuittackle');
 		},
 		condition: {
 			duration: 1,
 			onBeforeSwitchOut(pokemon) {
-				this.debug('Pursuit start');
+				this.debug('Pursuit Tackle start');
 				let alreadyAdded = false;
 				pokemon.removeVolatile('destinybond');
 				for (const source of this.effectState.sources) {
 					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
 					if (!alreadyAdded) {
-						this.add('-activate', pokemon, 'move: Pursuit');
+						this.add('-activate', pokemon, 'move: Pursuit Tackle');
 						alreadyAdded = true;
 					}
 					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
@@ -42220,7 +42220,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 							}
 						}
 					}
-					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+					this.actions.runMove('pursuittackle', source, source.getLocOf(pokemon));
 				}
 			},
 		},
@@ -43666,6 +43666,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		self: {
+			onHit(source) {
+				this.field.setWeather('hail');
+			},
+		},
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -48413,7 +48418,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		basePowerCallback(pokemon, target, move) {
-			// You can't get here unless the pursuit succeeds
+			// You can't get here unless the soulhound succeeds
 			if (target.beingCalledBack || target.switchFlag) {
 				this.debug('Chase Beam damage boost');
 				return move.basePower * 2;
@@ -48423,8 +48428,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
-				side.addSideCondition('pursuit', pokemon);
-				const data = side.getSideConditionData('pursuit');
+				side.addSideCondition('soulhound', pokemon);
+				const data = side.getSideConditionData('soulhound');
 				if (!data.sources) {
 					data.sources = [];
 				}
@@ -48435,18 +48440,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
 		},
 		onTryHit(target, pokemon) {
-			target.side.removeSideCondition('pursuit');
+			target.side.removeSideCondition('soulhound');
 		},
 		condition: {
 			duration: 1,
 			onBeforeSwitchOut(pokemon) {
-				this.debug('Pursuit start');
+				this.debug('Soul Hound start');
 				let alreadyAdded = false;
 				pokemon.removeVolatile('destinybond');
 				for (const source of this.effectState.sources) {
 					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
 					if (!alreadyAdded) {
-						this.add('-activate', pokemon, 'move: Pursuit');
+						this.add('-activate', pokemon, 'move: Soul Hound');
 						alreadyAdded = true;
 					}
 					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
@@ -48460,7 +48465,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 							}
 						}
 					}
-					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+					this.actions.runMove('soulhound', source, source.getLocOf(pokemon));
 				}
 			},
 		},
@@ -48547,6 +48552,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "HIV",
 		pp: 10,
 		priority: 0,
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['perishsong']) {
+				return this.chainModify(2);
+			}
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -51709,7 +51719,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 80,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Grass",
 		isNonstandard: "Future",
@@ -51863,6 +51876,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		damageCallback(pokemon, target) {
+			return this.clampIntRange(target.getUndynamaxedHP() / 2, 1);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Tech",
@@ -52435,7 +52451,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		basePowerCallback(pokemon, target, move) {
-			// You can't get here unless the pursuit succeeds
+			// You can't get here unless the bloodhound succeeds
 			if (target.beingCalledBack || target.switchFlag) {
 				this.debug('Chase Beam damage boost');
 				return move.basePower * 2;
@@ -52445,8 +52461,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
-				side.addSideCondition('pursuit', pokemon);
-				const data = side.getSideConditionData('pursuit');
+				side.addSideCondition('bloodhound', pokemon);
+				const data = side.getSideConditionData('bloodhound');
 				if (!data.sources) {
 					data.sources = [];
 				}
@@ -52457,21 +52473,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
 		},
 		onTryHit(target, pokemon) {
-			target.side.removeSideCondition('pursuit');
+			target.side.removeSideCondition('bloodhound');
 		},
 		condition: {
 			duration: 1,
 			onBeforeSwitchOut(pokemon) {
-				this.debug('Pursuit start');
+				this.debug('Bloodhound start');
 				let alreadyAdded = false;
 				pokemon.removeVolatile('destinybond');
 				for (const source of this.effectState.sources) {
 					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
 					if (!alreadyAdded) {
-						this.add('-activate', pokemon, 'move: Pursuit');
+						this.add('-activate', pokemon, 'move: Bloodhound');
 						alreadyAdded = true;
 					}
-					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// Run through each action in queue to check if the bloodhound user is supposed to Mega Evolve this turn.
 					// If it is, then Mega Evolve before moving.
 					if (source.canMegaEvo || source.canUltraBurst) {
 						for (const [actionIndex, action] of this.queue.entries()) {
@@ -52482,7 +52498,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 							}
 						}
 					}
-					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+					this.actions.runMove('bloodhound', source, source.getLocOf(pokemon));
 				}
 			},
 		},
@@ -52534,7 +52550,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		basePowerCallback(pokemon, target, move) {
-			// You can't get here unless the pursuit succeeds
+			// You can't get here unless the woodstalk succeeds
 			if (target.beingCalledBack || target.switchFlag) {
 				this.debug('Chase Beam damage boost');
 				return move.basePower * 2;
@@ -52544,8 +52560,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
-				side.addSideCondition('pursuit', pokemon);
-				const data = side.getSideConditionData('pursuit');
+				side.addSideCondition('woodstalk', pokemon);
+				const data = side.getSideConditionData('woodstalk');
 				if (!data.sources) {
 					data.sources = [];
 				}
@@ -52556,21 +52572,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
 		},
 		onTryHit(target, pokemon) {
-			target.side.removeSideCondition('pursuit');
+			target.side.removeSideCondition('woodstalk');
 		},
 		condition: {
 			duration: 1,
 			onBeforeSwitchOut(pokemon) {
-				this.debug('Pursuit start');
+				this.debug('wWodstalk start');
 				let alreadyAdded = false;
 				pokemon.removeVolatile('destinybond');
 				for (const source of this.effectState.sources) {
 					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
 					if (!alreadyAdded) {
-						this.add('-activate', pokemon, 'move: Pursuit');
+						this.add('-activate', pokemon, 'move: Woodstalk');
 						alreadyAdded = true;
 					}
-					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// Run through each action in queue to check if the woodstalk user is supposed to Mega Evolve this turn.
 					// If it is, then Mega Evolve before moving.
 					if (source.canMegaEvo || source.canUltraBurst) {
 						for (const [actionIndex, action] of this.queue.entries()) {
@@ -52581,7 +52597,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 							}
 						}
 					}
-					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+					this.actions.runMove('woodstalk', source, source.getLocOf(pokemon));
 				}
 			},
 		},
@@ -53483,7 +53499,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -54479,6 +54498,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 1,
 		priority: 0,
 		flags: {gravity: 1},
+		onTry(source, target, move) {
+			// Additional Gravity check for Z-move variant
+			if (this.field.getPseudoWeather('Gravity')) {
+				this.add('cant', source, 'move: Gravity', move);
+				return null;
+			}
+		},
+		onTryHit(target, source) {
+			this.add('-nothing');
+		},
 		secondary: null,
 		target: "self",
 		type: "Normal",
@@ -59406,7 +59435,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		condition: {
+			duration: 2,
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Flammable');
+			},
+			onEffectivenessPriority: -2,
+			onEffectiveness(typeMod, target, type, move) {
+				if (move.type !== 'Fire') return;
+				if (!target) return;
+				if (type !== target.getTypes()[0]) return;
+				return typeMod + 1;
+			},
+			onResidualOrder: 22,
+			onEnd(target) {
+				this.add('-end', target, 'Flammable', '[silent]');
+			},
+		},
+		
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				target.addVolatile('flammable');
+			},
+		},
 		target: "normal",
 		type: "Greasy",
 		isNonstandard: "Future",
@@ -63379,7 +63431,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		basePowerCallback(pokemon, target, move) {
-			// You can't get here unless the pursuit succeeds
+			// You can't get here unless the lasso succeeds
 			if (target.beingCalledBack || target.switchFlag) {
 				this.debug('Chase Beam damage boost');
 				return move.basePower * 2;
@@ -63389,8 +63441,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
-				side.addSideCondition('pursuit', pokemon);
-				const data = side.getSideConditionData('pursuit');
+				side.addSideCondition('lasso', pokemon);
+				const data = side.getSideConditionData('lasso');
 				if (!data.sources) {
 					data.sources = [];
 				}
@@ -63401,21 +63453,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
 		},
 		onTryHit(target, pokemon) {
-			target.side.removeSideCondition('pursuit');
+			target.side.removeSideCondition('lasso');
 		},
 		condition: {
 			duration: 1,
 			onBeforeSwitchOut(pokemon) {
-				this.debug('Pursuit start');
+				this.debug('Lasso start');
 				let alreadyAdded = false;
 				pokemon.removeVolatile('destinybond');
 				for (const source of this.effectState.sources) {
 					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
 					if (!alreadyAdded) {
-						this.add('-activate', pokemon, 'move: Pursuit');
+						this.add('-activate', pokemon, 'move: Lasso');
 						alreadyAdded = true;
 					}
-					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// Run through each action in queue to check if the Lasso user is supposed to Mega Evolve this turn.
 					// If it is, then Mega Evolve before moving.
 					if (source.canMegaEvo || source.canUltraBurst) {
 						for (const [actionIndex, action] of this.queue.entries()) {
@@ -63426,7 +63478,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 							}
 						}
 					}
-					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+					this.actions.runMove('lasso', source, source.getLocOf(pokemon));
 				}
 			},
 		},
@@ -64992,7 +65044,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		basePowerCallback(pokemon, target, move) {
-			// You can't get here unless the pursuit succeeds
+			// You can't get here unless the necksnap succeeds
 			if (target.beingCalledBack || target.switchFlag) {
 				this.debug('Chase Beam damage boost');
 				return move.basePower * 2;
@@ -65002,8 +65054,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
-				side.addSideCondition('pursuit', pokemon);
-				const data = side.getSideConditionData('pursuit');
+				side.addSideCondition('necksnap', pokemon);
+				const data = side.getSideConditionData('necksnap');
 				if (!data.sources) {
 					data.sources = [];
 				}
@@ -65014,21 +65066,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
 		},
 		onTryHit(target, pokemon) {
-			target.side.removeSideCondition('pursuit');
+			target.side.removeSideCondition('necksnap');
 		},
 		condition: {
 			duration: 1,
 			onBeforeSwitchOut(pokemon) {
-				this.debug('Pursuit start');
+				this.debug('Neck Snap start');
 				let alreadyAdded = false;
 				pokemon.removeVolatile('destinybond');
 				for (const source of this.effectState.sources) {
 					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
 					if (!alreadyAdded) {
-						this.add('-activate', pokemon, 'move: Pursuit');
+						this.add('-activate', pokemon, 'move: Neck Snap');
 						alreadyAdded = true;
 					}
-					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// Run through each action in queue to check if the Neck Snap user is supposed to Mega Evolve this turn.
 					// If it is, then Mega Evolve before moving.
 					if (source.canMegaEvo || source.canUltraBurst) {
 						for (const [actionIndex, action] of this.queue.entries()) {
@@ -65039,7 +65091,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 							}
 						}
 					}
-					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+					this.actions.runMove('necksnap', source, source.getLocOf(pokemon));
 				}
 			},
 		},
@@ -65549,7 +65601,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		boosts: {
+			accuracy: 2,
+		},
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -65619,7 +65673,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 26,
+			status: 'frz',
+		},
 		target: "allAdjacentFoes",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -66528,7 +66585,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		basePowerCallback(pokemon, target, move) {
-			// You can't get here unless the pursuit succeeds
+			// You can't get here unless the timehound succeeds
 			if (target.beingCalledBack || target.switchFlag) {
 				this.debug('Chase Beam damage boost');
 				return move.basePower * 2;
@@ -66538,8 +66595,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
-				side.addSideCondition('pursuit', pokemon);
-				const data = side.getSideConditionData('pursuit');
+				side.addSideCondition('timehound', pokemon);
+				const data = side.getSideConditionData('timehound');
 				if (!data.sources) {
 					data.sources = [];
 				}
@@ -66550,21 +66607,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
 		},
 		onTryHit(target, pokemon) {
-			target.side.removeSideCondition('pursuit');
+			target.side.removeSideCondition('timehound');
 		},
 		condition: {
 			duration: 1,
 			onBeforeSwitchOut(pokemon) {
-				this.debug('Pursuit start');
+				this.debug('Time Hound start');
 				let alreadyAdded = false;
 				pokemon.removeVolatile('destinybond');
 				for (const source of this.effectState.sources) {
 					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
 					if (!alreadyAdded) {
-						this.add('-activate', pokemon, 'move: Pursuit');
+						this.add('-activate', pokemon, 'move: Time Hound');
 						alreadyAdded = true;
 					}
-					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// Run through each action in queue to check if the Timehound user is supposed to Mega Evolve this turn.
 					// If it is, then Mega Evolve before moving.
 					if (source.canMegaEvo || source.canUltraBurst) {
 						for (const [actionIndex, action] of this.queue.entries()) {
@@ -66575,7 +66632,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 							}
 						}
 					}
-					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+					this.actions.runMove('timehound', source, source.getLocOf(pokemon));
 				}
 			},
 		},
@@ -68050,7 +68107,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'frz',
+		},
 		target: "allAdjacent",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -70072,7 +70132,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -71144,7 +71207,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		basePowerCallback(pokemon, target, move) {
-			// You can't get here unless the pursuit succeeds
+			// You can't get here unless the cyberchase succeeds
 			if (target.beingCalledBack || target.switchFlag) {
 				this.debug('Chase Beam damage boost');
 				return move.basePower * 2;
@@ -71154,8 +71217,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
-				side.addSideCondition('pursuit', pokemon);
-				const data = side.getSideConditionData('pursuit');
+				side.addSideCondition('cyberchase', pokemon);
+				const data = side.getSideConditionData('cyberchase');
 				if (!data.sources) {
 					data.sources = [];
 				}
@@ -71166,21 +71229,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
 		},
 		onTryHit(target, pokemon) {
-			target.side.removeSideCondition('pursuit');
+			target.side.removeSideCondition('cyberchase');
 		},
 		condition: {
 			duration: 1,
 			onBeforeSwitchOut(pokemon) {
-				this.debug('Pursuit start');
+				this.debug('Cyberchase start');
 				let alreadyAdded = false;
 				pokemon.removeVolatile('destinybond');
 				for (const source of this.effectState.sources) {
 					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
 					if (!alreadyAdded) {
-						this.add('-activate', pokemon, 'move: Pursuit');
+						this.add('-activate', pokemon, 'move: Cyberchase');
 						alreadyAdded = true;
 					}
-					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// Run through each action in queue to check if the Cyberchase user is supposed to Mega Evolve this turn.
 					// If it is, then Mega Evolve before moving.
 					if (source.canMegaEvo || source.canUltraBurst) {
 						for (const [actionIndex, action] of this.queue.entries()) {
@@ -71191,7 +71254,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 							}
 						}
 					}
-					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+					this.actions.runMove('cyberchace', source, source.getLocOf(pokemon));
 				}
 			},
 		},
@@ -74768,7 +74831,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		basePowerCallback(pokemon, target, move) {
-			// You can't get here unless the pursuit succeeds
+			// You can't get here unless the skid out succeeds
 			if (target.beingCalledBack || target.switchFlag) {
 				this.debug('Chase Beam damage boost');
 				return move.basePower * 2;
@@ -74778,8 +74841,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
-				side.addSideCondition('pursuit', pokemon);
-				const data = side.getSideConditionData('pursuit');
+				side.addSideCondition('skidout', pokemon);
+				const data = side.getSideConditionData('skidout');
 				if (!data.sources) {
 					data.sources = [];
 				}
@@ -74790,21 +74853,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
 		},
 		onTryHit(target, pokemon) {
-			target.side.removeSideCondition('pursuit');
+			target.side.removeSideCondition('skidout');
 		},
 		condition: {
 			duration: 1,
 			onBeforeSwitchOut(pokemon) {
-				this.debug('Pursuit start');
+				this.debug('Skid Out start');
 				let alreadyAdded = false;
 				pokemon.removeVolatile('destinybond');
 				for (const source of this.effectState.sources) {
 					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
 					if (!alreadyAdded) {
-						this.add('-activate', pokemon, 'move: Pursuit');
+						this.add('-activate', pokemon, 'move: Skid Out');
 						alreadyAdded = true;
 					}
-					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// Run through each action in queue to check if the Skid Out user is supposed to Mega Evolve this turn.
 					// If it is, then Mega Evolve before moving.
 					if (source.canMegaEvo || source.canUltraBurst) {
 						for (const [actionIndex, action] of this.queue.entries()) {
@@ -74815,7 +74878,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 							}
 						}
 					}
-					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+					this.actions.runMove('skidout', source, source.getLocOf(pokemon));
 				}
 			},
 		},
@@ -75545,7 +75608,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, reflectable: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			boosts: {
+				spe: -2,
+			},
+		},
 		target: "normal",
 		type: "Greasy",
 		isNonstandard: "Future",
@@ -78934,12 +79002,74 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 669518,
 		accuracy: 90,
 		basePower: 30,
+		basePowerCallback(pokemon, target, move) {
+			let bp = move.basePower;
+			const rolloutData = pokemon.volatiles['rollout'];
+			if (rolloutData?.hitCount) {
+				bp *= Math.pow(2, rolloutData.contactHitCount);
+			}
+			if (rolloutData && pokemon.status !== 'slp') {
+				rolloutData.hitCount++;
+				rolloutData.contactHitCount++;
+				if (rolloutData.hitCount < 5) {
+					rolloutData.duration = 2;
+				}
+			}
+			if (pokemon.volatiles['defensecurl']) {
+				bp *= 2;
+			}
+			this.debug("BP: " + bp);
+			return bp;
+		},
 		category: "Special",
 		name: "Matzo Ball",
+		onModifyMove(move, pokemon, target) {
+			if (pokemon.volatiles['rollout'] || pokemon.status === 'slp' || !target) return;
+			pokemon.addVolatile('rollout');
+			// @ts-ignore
+			// TS thinks pokemon.volatiles['rollout'] doesn't exist because of the condition on the return above
+			// but it does exist now because addVolatile created it
+			pokemon.volatiles['rollout'].targetSlot = move.sourceEffect ? pokemon.lastMoveTargetLoc : pokemon.getLocOf(target);
+		},
+		onAfterMove(source, target, move) {
+			const rolloutData = source.volatiles["rollout"];
+			if (
+				rolloutData &&
+				rolloutData.hitCount === 5 &&
+				rolloutData.contactHitCount < 5
+				// this conditions can only be met in gen7 and gen8dlc1
+				// see `disguise` and `iceface` abilities in the resp mod folders
+			) {
+				source.addVolatile("rolloutstorage");
+				source.volatiles["rolloutstorage"].contactHitCount =
+					rolloutData.contactHitCount;
+			}
+		},
+		condition: {
+			duration: 1,
+			onLockMove: 'rollout',
+			onStart() {
+				this.effectState.hitCount = 0;
+				this.effectState.contactHitCount = 0;
+			},
+			onResidual(target) {
+				if (target.lastMove && target.lastMove.id === 'struggle') {
+					// don't lock
+					delete target.volatiles['rollout'];
+				}
+			},
+		},
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+			secondary: {
+			chance: 25,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
