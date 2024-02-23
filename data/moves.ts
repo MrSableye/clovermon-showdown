@@ -46188,7 +46188,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'tox',
+		},
 		target: "allAdjacentFoes",
 		type: "Poison",
 		isNonstandard: "Future",
