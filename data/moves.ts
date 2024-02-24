@@ -56308,12 +56308,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {pulse: 1},
-		onTryMove(attacker, defender, move) {
+		onTryMove(attacker, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
 			}
 			this.add('-prepare', attacker, move.name);
-			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+			if (!this.runEvent('ChargeMove', attacker, move)) {
 				return;
 				}
 			},
