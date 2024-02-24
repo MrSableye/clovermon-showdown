@@ -56296,6 +56296,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {pulse: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			},
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			boosts: {
+			att: 1,
+			def: 1,
+			spa: 1,
+			spd: 1,
+			spe: 1,
+				}
+			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Cyber",
@@ -74593,49 +74610,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
-		onHitField(target, source, move) {
-			let result = false;
-			let message = false;
-			for (const pokemon of this.getAllActive()) {
-				if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
-					this.add('-miss', source, pokemon);
-					result = true;
-				} else if (this.runEvent('TryHit', pokemon, source, move) === null) {
-					result = true;
-				} else if (!pokemon.volatiles['perishsong']) {
-					pokemon.addVolatile('perishsong');
-					this.add('-start', pokemon, 'perish1', '[silent]');
-					result = true;
-					message = true;
-				}
-			}
-			if (!result) return false;
-			if (message) this.add('-fieldactivate', 'move: Perish Song');
-		},
-		condition: {
-			duration: 2,
-			onEnd(target) {
-				this.add('-start', target, 'perish0');
-				target.faint();
-			},
-			onResidualOrder: 24,
-			onResidual(pokemon) {
-				const duration = pokemon.volatiles['perishsong'].duration;
-				this.add('-start', pokemon, 'perish' + duration);
-				
-			},
-			onTrapPokemon(pokemon) {
-				pokemon.tryTrap();
-			},
-		},
-		
-		boosts: {
-			atk: 12,
-			def: 12,
-			spa: 12,
-			spd: 12,
-			spe: 12,
-		},
 		target: "self",
 		type: "Divine",
 		isNonstandard: "Future",
