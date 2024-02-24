@@ -56311,21 +56311,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
-			}
+			},
 			this.add('-prepare', attacker, move.name);
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
 				return;
-			}
-			
-			boosts: {
-			att: 1,
-			def: 1,
-			spa: 1,
-			spd: 1,
-			spe: 1,
 				}
-			}
-		},
+			},
+				boosts: {
+				att: 1,
+				def: 1,
+				spa: 1,
+				spd: 1,
+				spe: 1,
+				}
+	   },
 		secondary: null,
 		target: "self",
 		type: "Cyber",
