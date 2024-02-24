@@ -56316,6 +56316,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
 				return;
 			}
+			
 			boosts: {
 			att: 1,
 			def: 1,
