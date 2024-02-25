@@ -3087,6 +3087,38 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Neurotoxin",
 		shortDesc: "Immune to Psychic-type moves; restores 1/4 HP. Poison-type attacks hit Psychic-types super effectively.",
 	},
+	suicidelead: {
+		name: "Suicide Lead",
+		shortDesc: "On switch-in, ability holder uses Explosion.",
+	},
+	inandout: {
+		name: "In and Out",
+		shortDesc: "On switch-in, ability holder uses U-turn.",
+	},
+	onepunch: {
+		name: "One Punch",
+		shortDesc: "On switch-in, ability holder attempts to use Focus Punch.",
+	},
+	invasivethoughts: {
+		name: "Invasive Thoughts",
+		shortDesc: "I AM IN YOUR WALLS.",
+	},
+	forthefunny: {
+		name: "For the Funny",
+		shortDesc: "On switch-in, ability holder uses Metronome for the funny.",
+	},
+	bully: {
+		name: "Bully",
+		shortDesc: "On switch-in, ability holder uses Knock Off.",
+	},
+	leafblower: {
+		name: "Leaf Blower",
+		shortDesc: "On switch-in, ability holder uses Whirlwind.",
+	},
+	imitator: {
+		name: "Imitator",
+		shortDesc: "On switch-in, ability holder uses Copycat.",
+	},
 	metamorphosis: {
 		name: "Metamorphosis",
 		shortDesc: "If this Pokemon is a Blobbos-eedle, switching out makes it change into its True Form.",

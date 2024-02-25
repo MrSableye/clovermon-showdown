@@ -10830,6 +10830,86 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		isNonstandard: "Future",
 	},
+	suicidelead: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('explosion'), pokemon);
+		},
+		name: "Suicide Lead",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	inandout: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('uturn'), pokemon);
+		},
+		name: "In and Out",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	onepunch: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('focuspunch'), pokemon);
+		},
+		name: "One Punch",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	invasivethoughts: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('torment'), pokemon);
+		},
+		name: "Invasive Thoughts",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	forthefunny: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('metronome'), pokemon);
+		},
+		name: "For The Funny",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	bully: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('knockoff'), pokemon);
+		},
+		name: "Bully",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	leafblower: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('whirlwind'), pokemon);
+		},
+		name: "Leaf Blower",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	imitator: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('copycat'), pokemon);
+		},
+		name: "Imitator",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
 	metamorphosis: {
 		onSwitchOut(pokemon) {
 			if (pokemon.species.id !== 'blobboseedle' || pokemon.transformed) return;
