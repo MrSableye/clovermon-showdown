@@ -12,6 +12,20 @@ const saveConfig = () => {
 	FS('config/chat-plugins/tsuchinoko.json').writeUpdate(() => JSON.stringify(configs));
 };
 
+const untransform = (user: string) => {
+	const userId = toID(user);
+	const config = configs[userId];
+	if (config) {
+		delete configs[userId];
+		saveConfig();
+
+		const targetUser = Users.get(userId);
+		if (targetUser) {
+			targetUser.avatar = config.oldAvatar;
+		}
+	}
+};
+
 export const commands: Chat.ChatCommands = {
 	boil: 'tsuchinokoify',
 	tsuchinokoify(target, room, user) {
@@ -28,6 +42,9 @@ export const commands: Chat.ChatCommands = {
 			saveConfig();
 			return this.sendReply(`The curse you have placed on ${targetUser.name} has been lifted.`);
 		} else {
+			setTimeout(() => {
+				untransform(targetUser.id);
+			}, TRANSFORMATION_DURATION);
 			configs[targetUser.id] = {
 				oldAvatar: targetUser.avatar,
 				endTime: now + TRANSFORMATION_DURATION,
