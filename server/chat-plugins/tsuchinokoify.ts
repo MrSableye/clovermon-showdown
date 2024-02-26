@@ -14,15 +14,13 @@ const saveConfig = () => {
 
 const untransform = (user: string) => {
 	const userId = toID(user);
-	const config = configs[userId];
+	const targetUser = Users.get(userId);
+	if (!targetUser) return;
+	const config = configs[targetUser.id];
 	if (config) {
-		delete configs[userId];
+		targetUser.avatar = config.oldAvatar;
+		delete configs[targetUser.id];
 		saveConfig();
-
-		const targetUser = Users.get(userId);
-		if (targetUser) {
-			targetUser.avatar = config.oldAvatar;
-		}
 	}
 };
 
