@@ -48,3 +48,13 @@ export const loginfilter: Chat.LoginFilter = user => {
 		saveConfig();
 	}
 };
+
+export const chatfilter: Chat.ChatFilter = (message, user) => {
+	const config = configs[user.id];
+	if (config && !['!', '/'].some((symbol) => message.startsWith(symbol))) {
+		if (Math.random() > 0.5) {
+			return message + ' *squeak*';
+		}
+	}
+	return message;
+};
