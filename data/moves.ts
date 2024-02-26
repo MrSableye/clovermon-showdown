@@ -29753,7 +29753,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	justmonikat: {
 		accuracy: 100,
-		basePower: 90,
+		basePower: 75,
 		category: "Special",
 		name: "Just Monikat",
 		pp: 5,

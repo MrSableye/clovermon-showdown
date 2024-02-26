@@ -7849,8 +7849,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	brainfreeze: {
 		name: "Brain Freeze",
-		desc: "Has 33% recoil. Nullifies the foe's Ability.",
-		shortDesc: "Has 33% recoil.",
+		desc: "Has 33% recoil. 10% Chance to Freeze",
+		shortDesc: "Has 33% recoil. 10% Chance to Freeze",
 	},
 	solarhunger: {
 		name: "Solar Hunger",
@@ -8819,6 +8819,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	fastpokebeam: {
 		name: "Fastpoke Beam",
 		shortDesc: "Transforms the target into Slowpoke-Galar.",
+		},
+	justmonikat: {
+		name: "Just Monikat",
+		shortDesc: "Transforms the target into Monikat.Lowers Their Speed",
 	},
 	pokemoncenter: {
 		name: "Pokemon Center",

@@ -2780,6 +2780,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+		},
+	grandon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+		},
+	klasicope: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+		},
+	kouprend: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+		},
+	termagnius: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	    walkietalkie: {
 		inherit: true,

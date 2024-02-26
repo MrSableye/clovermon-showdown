@@ -2594,6 +2594,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Frozen Bunker",
 		desc: "Upon taking super-effective daamge, this Pokémon changes into its freed form for the rest of the battle.",
 	},
+	boundary: {
+		name: "Boundary",
+		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.5.",
+		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.5x damage.",
+	},
 	rusepower: {
 		name: "Ruse Power",
 		desc: "This Pokemon's attacking stat is multiplied by 1.2 while using Poison- or Dark-type attacks.",
