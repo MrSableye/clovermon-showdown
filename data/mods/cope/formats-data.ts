@@ -2238,13 +2238,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	jermin: {
 		inherit: true,
-		isNonstandard: "Future",
-		tier: "Illegal",
+		isNonstandard: null,
+		tier: "OU",
 	},
 	jerminswarm: {
 		inherit: true,
-		isNonstandard: "Future",
-		tier: "Illegal",
+		isNonstandard: null,
+		tier: "OU",
 	},
 	smogars: {
 		inherit: true,
