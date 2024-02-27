@@ -29753,7 +29753,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	justmonikat: {
 		accuracy: 100,
-		basePower: 90,
+		basePower: 75,
 		category: "Special",
 		name: "Just Monikat",
 		pp: 5,
@@ -29768,7 +29768,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 100,
 			boosts: {
-				spe: -1,
+			spe: -1,
 			},
 		},
 		target: "normal",

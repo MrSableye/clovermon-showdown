@@ -7679,6 +7679,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isPermanent: true,
 		name: "Frozen Bunker",
 		rating: 4,
+		},
+	boundary: {
+		onModifyDamage(damage, source, target, move) {
+			if (move && target.getMoveHitData(move).typeMod > 0) {
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Boundary",
+		rating: 2.5,
 	},
 	niceface: {
 		onStart(pokemon) {

@@ -8937,6 +8937,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	grandon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	klasicope: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kouprend: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	termagnius: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	hookling: {
 		tier: "Illegal",
 		isNonstandard: "Future",
