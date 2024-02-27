@@ -8819,10 +8819,6 @@ export const MovesText: {[k: string]: MoveText} = {
 	fastpokebeam: {
 		name: "Fastpoke Beam",
 		shortDesc: "Transforms the target into Slowpoke-Galar.",
-		},
-	justmonikat: {
-		name: "Just Monikat",
-		shortDesc: "Transforms the target into Monikat.Lowers Their Speed",
 	},
 	pokemoncenter: {
 		name: "Pokemon Center",
