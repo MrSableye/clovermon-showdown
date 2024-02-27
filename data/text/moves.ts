@@ -8995,10 +8995,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  [PARTY] were surrounded by fire!",
 		damage: "  [POKEMON] is burning up within Blackfire’s flames!",
 	},
-	justmonikat: {
-		name: "Just Monikat",
-		desc: "Transforms the target into a Monikat. Prevents the target from switching out. Drops the target's speed one stage.",
-	},
 	doubleiceblob: {
 		name: "Double Ice Blob",
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. Has a 30% chance to make the target flinch.",
