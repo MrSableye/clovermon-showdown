@@ -1335,7 +1335,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	forestscurse: {
 		inherit: true,
-		accuracy: 0,
+		accuracy: true,
 		isNonstandard: null,
 	},
 	freezedry: {
@@ -2070,7 +2070,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	octolock: {
 		inherit: true,
-		accuracy: 0,
+		accuracy: true,
 		pp: 10,
 		flags: {reflectable: 1, protect: 1, mirror: 1},
 		isNonstandard: null,
@@ -2090,7 +2090,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 0,
 		category: "Status",
-		accuracy: 0,
+		accuracy: true,
 		pp: 20,
 		flags: {snatch: 1},
 		self: undefined,
@@ -2520,7 +2520,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	soak: {
 		inherit: true,
-		accuracy: 0,
+		accuracy: true,
 		onHit(target) {
 			if (!target.setType('Water')) {
 				// Soak should animate even when it fails.
@@ -2686,7 +2686,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	strengthsap: {
 		inherit: true,
-		accuracy: 0,
+		accuracy: true,
 		flags: {protect: 1, reflectable: 1, heal: 1},
 		isNonstandard: null,
 	},
@@ -18357,7 +18357,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		self: {
 			onHit(pokemon) {
-				pokemon.setType(pokemon.getTypes(true).map(type => type === "Fire" ? "???" : type));
+				pokemon.setType(pokemon.getTypes(true).map(type => type === "Grass" ? "???" : type));
 				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Uproot');
 			},
 		},
