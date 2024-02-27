@@ -44871,7 +44871,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return move.basePower;
 		},
 		category: "Physical",
-		isNonstandard: "Past",
 		name: "Pester",
 		pp: 15,
 		priority: 0,
