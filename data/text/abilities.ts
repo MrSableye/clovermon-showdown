@@ -2594,6 +2594,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Frozen Bunker",
 		desc: "Upon taking super-effective daamge, this Pokémon changes into its freed form for the rest of the battle.",
 	},
+	boundary: {
+		name: "Boundary",
+		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.5.",
+		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.5x damage.",
+	},
 	rusepower: {
 		name: "Ruse Power",
 		desc: "This Pokemon's attacking stat is multiplied by 1.2 while using Poison- or Dark-type attacks.",
@@ -3086,6 +3091,38 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	neurotoxin: {
 		name: "Neurotoxin",
 		shortDesc: "Immune to Psychic-type moves; restores 1/4 HP. Poison-type attacks hit Psychic-types super effectively.",
+	},
+	suicidelead: {
+		name: "Suicide Lead",
+		shortDesc: "On switch-in, ability holder uses Explosion.",
+	},
+	inandout: {
+		name: "In and Out",
+		shortDesc: "On switch-in, ability holder uses U-turn.",
+	},
+	onepunch: {
+		name: "One Punch",
+		shortDesc: "On switch-in, ability holder attempts to use Focus Punch.",
+	},
+	invasivethoughts: {
+		name: "Invasive Thoughts",
+		shortDesc: "I AM IN YOUR WALLS.",
+	},
+	forthefunny: {
+		name: "For the Funny",
+		shortDesc: "On switch-in, ability holder uses Metronome for the funny.",
+	},
+	bully: {
+		name: "Bully",
+		shortDesc: "On switch-in, ability holder uses Knock Off.",
+	},
+	leafblower: {
+		name: "Leaf Blower",
+		shortDesc: "On switch-in, ability holder uses Whirlwind.",
+	},
+	imitator: {
+		name: "Imitator",
+		shortDesc: "On switch-in, ability holder uses Copycat.",
 	},
 	metamorphosis: {
 		name: "Metamorphosis",

@@ -2238,13 +2238,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	jermin: {
 		inherit: true,
-		isNonstandard: "Future",
-		tier: "Illegal",
+		isNonstandard: null,
+		tier: "OU",
 	},
 	jerminswarm: {
 		inherit: true,
-		isNonstandard: "Future",
-		tier: "Illegal",
+		isNonstandard: null,
+		tier: "OU",
 	},
 	smogars: {
 		inherit: true,
@@ -2777,6 +2777,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	ponderselo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+		},
+	grandon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+		},
+	klasicope: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+		},
+	kouprend: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+		},
+	termagnius: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

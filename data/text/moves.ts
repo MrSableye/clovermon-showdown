@@ -7849,8 +7849,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	brainfreeze: {
 		name: "Brain Freeze",
-		desc: "Has 33% recoil. Nullifies the foe's Ability.",
-		shortDesc: "Has 33% recoil.",
+		desc: "Has 33% recoil. 10% Chance to Freeze",
+		shortDesc: "Has 33% recoil. 10% Chance to Freeze",
 	},
 	solarhunger: {
 		name: "Solar Hunger",
@@ -8990,10 +8990,6 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		start: "  [PARTY] were surrounded by fire!",
 		damage: "  [POKEMON] is burning up within Blackfire’s flames!",
-	},
-	justmonikat: {
-		name: "Just Monikat",
-		desc: "Transforms the target into a Monikat. Prevents the target from switching out. Drops the target's speed one stage.",
 	},
 	doubleiceblob: {
 		name: "Double Ice Blob",

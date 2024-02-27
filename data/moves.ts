@@ -29753,7 +29753,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	justmonikat: {
 		accuracy: 100,
-		basePower: 90,
+		basePower: 75,
 		category: "Special",
 		name: "Just Monikat",
 		pp: 5,
@@ -29768,7 +29768,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 100,
 			boosts: {
-				spe: -1,
+			spe: -1,
 			},
 		},
 		target: "normal",
@@ -41207,7 +41207,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'slp',
+		},
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future",
@@ -43767,6 +43770,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				atk: 1,
+				def: -2,
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Glass",
@@ -44575,6 +44584,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Blood",
@@ -44852,11 +44862,63 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 667248,
 		accuracy: 100,
 		basePower: 60,
+		basePowerCallback(pokemon, target, move) {
+			// You can't get here unless the pester succeeds
+			if (target.beingCalledBack || target.switchFlag) {
+				this.debug('Pester damage boost');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Physical",
 		name: "Pester",
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		beforeTurnCallback(pokemon) {
+			for (const side of this.sides) {
+				if (side.hasAlly(pokemon)) continue;
+				side.addSideCondition('pester', pokemon);
+				const data = side.getSideConditionData('pester');
+				if (!data.sources) {
+					data.sources = [];
+				}
+				data.sources.push(pokemon);
+			}
+		},
+		onModifyMove(move, source, target) {
+			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
+		},
+		onTryHit(target, pokemon) {
+			target.side.removeSideCondition('pester');
+		},
+		condition: {
+			duration: 1,
+			onBeforeSwitchOut(pokemon) {
+				this.debug('Pester start');
+				let alreadyAdded = false;
+				pokemon.removeVolatile('destinybond');
+				for (const source of this.effectState.sources) {
+					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
+					if (!alreadyAdded) {
+						this.add('-activate', pokemon, 'move: Pester');
+						alreadyAdded = true;
+					}
+					// Run through each action in queue to check if the Pester user is supposed to Mega Evolve this turn.
+					// If it is, then Mega Evolve before moving.
+					if (source.canMegaEvo || source.canUltraBurst) {
+						for (const [actionIndex, action] of this.queue.entries()) {
+							if (action.pokemon === source && action.choice === 'megaEvo') {
+								this.actions.runMegaEvo(source);
+								this.queue.list.splice(actionIndex, 1);
+								break;
+							}
+						}
+					}
+					this.actions.runMove('pester', source, source.getLocOf(pokemon));
+				}
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Bug",
@@ -44871,7 +44933,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future",
@@ -46730,7 +46799,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spa: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -54740,6 +54814,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 667885,
 		accuracy: 85,
 		basePower: 120,
+		basePowerCallback(pokemon, target, move) {
+			if (target.hasType('Rock')) {
+				this.debug('BP doubled on Rock pokemon');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Physical",
 		name: "Piercing Horn",
 		pp: 10,
@@ -55441,6 +55522,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 667943,
 		accuracy: 100,
 		basePower: 95,
+		basePowerCallback(pokemon, target, move) {
+			if (target.hasType('Light')) {
+				this.debug('BP doubled on Light pokemon');
+				return move.basePower * 2;
+			}
+			if (target.hasType('Fabric')) {
+				this.debug('BP Doubled on Fabric pokemon');
+				return move.basePower * 2;
+			}
+			if (target.hasType('Paper')) {
+				this.debug('BP doubled on Paper pokemon');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Physical",
 		name: "Moth Munch",
 		pp: 10,
@@ -58265,6 +58361,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				atk: -1,
+				def: -1,
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Bug",
@@ -61806,6 +61908,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
 		secondary: null,
 		target: "randomNormal",
 		type: "Chaos",
@@ -65252,7 +65362,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 70,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future",
@@ -68312,7 +68425,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future",
@@ -74826,6 +74944,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		boosts: {
+			def: -1,
+			spd: -1,
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Bug",
@@ -81173,7 +81295,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future",
