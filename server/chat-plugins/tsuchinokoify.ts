@@ -2,7 +2,7 @@ import {FS} from '../../lib';
 type TsuchinokoConfig = Record<string, { oldAvatar: string | number, endTime: number }>;
 
 const TSUCHINOKO_AVATAR = 'tsuchinoko';
-const TRANSFORMATION_DURATION = 7 * 60 * 60 * 1000;
+const TRANSFORMATION_DURATION = 7 * 60 * 1000;
 
 export const configs: TsuchinokoConfig = JSON.parse(
 	FS('config/chat-plugins/tsuchinoko.json').readIfExistsSync() || "{}"
