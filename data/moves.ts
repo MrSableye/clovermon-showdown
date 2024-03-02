@@ -33547,6 +33547,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 		isNonstandard: "Future",
 	},
+	finishingtouch: {
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Finishing Touch",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, wind: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(3.125);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		isNonstandard: "Future"
+	},
 	runeofluck: {
 		accuracy: true,
 		basePower: 0,

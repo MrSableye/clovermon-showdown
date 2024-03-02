@@ -1742,4 +1742,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	finishingtouch: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
