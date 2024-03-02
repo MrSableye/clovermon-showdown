@@ -1003,7 +1003,6 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.queue.cancelAction(pokemon);
 		},
 	},
-
 	// Arceus and Silvally's actual typing is implemented here.
 	// Their true typing for all their formes is Normal, and it's only
 	// Multitype and RKS System, respectively, that changes their type,
@@ -1329,6 +1328,15 @@ export const Conditions: {[k: string]: ConditionData} = {
 					pokemon.damage(data.overkillDamage);
 					pokemon.side.removeSlotCondition(pokemon, 'overkill');
 				}
+			}
+		},
+	},
+	blobbosdragonmaid: {
+		name: 'Blobbos-Dragon Maid',
+		onAfterMoveSecondarySelf(source) {
+			if (source.speciesState.mopped) {
+				delete source.speciesState.mopped;
+				source.formeChange('blobbosdragonmaidtrue', this.effect, true);
 			}
 		},
 	},

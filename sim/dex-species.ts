@@ -474,6 +474,13 @@ export class DexSpecies {
 					if (!(key in species)) (species as any)[key] = baseSpeciesStatuses[key];
 				}
 			}
+			const speciesStatuses = this.dex.data.Conditions[toID(species.name)];
+			if ((toID(species.name) !== toID(species.baseSpecies)) && (speciesStatuses !== undefined)) {
+				let key: keyof EffectData;
+				for (key in speciesStatuses) {
+					if (!(key in species)) (species as any)[key] = speciesStatuses[key];
+				}
+			}
 			if (!species.tier && !species.doublesTier && !species.natDexTier && species.baseSpecies !== species.name) {
 				if (species.baseSpecies === 'Mimikyu') {
 					species.tier = this.dex.data.FormatsData[toID(species.baseSpecies)].tier || 'Illegal';

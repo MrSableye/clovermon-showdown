@@ -22110,7 +22110,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "self",
 		type: "Fairy",
 		flags: {},
-		onHit(pokemon) {
+		onHit(pokemon, source) {
 			const sideConditions = [
 				'spikes',
 				'toxicspikes',
@@ -22141,6 +22141,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			if (removedConditions.length > 0) {
 				this.boost({accuracy: 1});
+				source.speciesState.mopped = true;
 			}
 		},
 		isNonstandard: "Future",
