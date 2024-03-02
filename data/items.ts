@@ -19036,4 +19036,18 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	paintedrock: { 
+		name: "Painted Rock",
+		spritenum: 0,
+		num: 67482,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+		bloodyrock: { 
+		name: "Bloody Rock",
+		spritenum: 0,
+		num: 67483,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 };

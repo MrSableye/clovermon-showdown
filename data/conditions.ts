@@ -887,7 +887,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'BladeRain', '[upkeep]');
 			if (this.field.isWeather('bladerain')) this.eachEvent('Weather');
 		},
-		onWeather(target) {
+		onWeather(target) {1
 			this.damage(target.baseMaxhp / 16);
 		},
 		onFieldEnd() {
@@ -903,7 +903,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onResidualOrder: 13,
 		onResidual(pokemon) {
-			this.damage(pokemon.baseMaxhp / (this.field.isWeather('bloddrain') ? 10 : 14));
+			this.damage(pokemon.baseMaxhp / (this.field.getPseudoWeather('bloodrain') ? 10 : 14));
 		},
 		onEnd(pokemon) {
 			this.add('-end', pokemon, 'Bleed');

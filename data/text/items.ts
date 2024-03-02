@@ -5021,6 +5021,14 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Clastic Rock",
 		desc: "Extends the duration of Power Arena used by the holder.",
 	},
+	paintedrock: {
+		name: "Painted Rock",
+		desc: "Extends the duration of Art Gallery used by the holder.",
+	},
+	bloodyrock: {
+		name: "Bloody Rock",
+		desc: "Extends the duration of Blood Rain used by the holder.",
+	},
 	swarmedrock: {
 		name: "Swarmed Rock",
 		desc: "Extends the duration of Swarm used by the holder.",

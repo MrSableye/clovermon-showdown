@@ -18750,7 +18750,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'bleed',
+			status: 'psn',
+		},
+		self: {
+			volatileStatus: 'bleed',
+		},
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",	/** TODO: Code "Bleeding" */
