@@ -44070,7 +44070,7 @@ iwik: {
 		num: 69132,
 		name: "Blobbos-Dragon Maid-True",
 		baseSpecies: "Blobbos-Dragon Maid",
-		forme: "Dragon Maid",
+		forme: "True",
 		types: ["Dragon"],
 		gender: "F",
 		baseStats: {
