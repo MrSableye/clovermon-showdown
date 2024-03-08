@@ -97,3 +97,16 @@ describe('Learnsets', function () {
 		}
 	});
 });
+
+describe('Pokemon', function () {
+	it('should have valid abilities', function () {
+		for (const species of Dex.species.all()) {
+			const abilities = species.abilities;
+			for (const dexAbility of Object.values(abilities)) {
+				if (!dexAbility) continue;
+				const ability = Dex.abilities.get(dexAbility);
+				assert.equal(ability.exists, true, `${species.id}'s ability ${ability} does not exist.`);
+			}
+		}
+	});
+});
