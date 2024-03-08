@@ -4636,6 +4636,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	solarhunger: {
 		inherit: true,
 		isNonstandard: null,
+		,
+	tidyup: {
+		inherit: true,
+		isNonstandard: null,
+		,
+	grandbat: {
+		inherit: true,
+		isNonstandard: null,
+		,
+	mitada: {
+		inherit: true,
+		isNonstandard: null,
 	},
 	trailblaze: {
 		inherit: true,
