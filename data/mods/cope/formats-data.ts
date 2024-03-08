@@ -2789,29 +2789,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	klasicope: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "LC",
+		tier: "OU",
 		},
 	kouprend: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "NFE",
+		tier: "OU",
 		},
 	termagnius: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	raidenetti: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	bolsopeixe: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	firered: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
