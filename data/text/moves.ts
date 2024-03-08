@@ -7857,16 +7857,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "This move's Base Power is multiplied by 1.5x if Sunny Day, Desolate Land, or Dense Fog is active.",
 		shortDesc: "1.5x Power if used in Sun, Desolate Land, or Dense Fog.",
 	},
-grandbat: {
-	name: "Grand Bat",
-	desc: "Forces the target to switch to a random ally.",
-	shortDesc: "If both the user and the target have not fainted, the target is forced to switch out and be replaced with a random unfainted ally. This effect fails if the target used Ingrain previously, has the Suction Cups Ability, or this move hit a substitute.",
-},
-mitada: {
-	name: "Mitada",
-	desc: "Power is equal to 50+(X*50), where X is the total number of times the user has been hit by a damaging attack during the battle, even if the user did not lose HP from the attack. X cannot be greater than 6 and does not reset upon switching out or fainting. Each hit of a multi-hit attack is counted, but confusion damage is not counted.",
-	shortDesc: "+50 power for each time user was hit. Max 200 BP",
-},
 	clobber: {
 		name: "Clobber",
 		desc: "No additional effect",
