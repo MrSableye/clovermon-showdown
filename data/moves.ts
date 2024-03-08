@@ -25353,7 +25353,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	rocketpunch: {
 		accuracy: 100,
-		basePower: 40,
+		basePower: 45,
 		category: "Physical",
 		name: "Rocket Punch",
 		pp: 10,
@@ -85599,6 +85599,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 		contestType: "Cool",
 		isNonstandard: "Future",
+	},
+	grandbat: {
+		accuracy: 85,
+		basePower: 120,
+		category: "Physical",
+		name: "Grand Bat",
+		pp: 10,
+		priority: -6,
+		target: "normal",
+		type: "Rock",
+		flags: {contact: 1, protect: 1},
+		forceSwitch: true,
+		isNonstandard: "Future",
+	},
+	mitada: {
+		accuracy: 100,
+		basePower: 50,
+		basePowerCallback(pokemon) {
+			return Math.min(200, 50 + 50 * pokemon.timesAttacked);
+		},
+		category: "Special",
+		name: "Mitada",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		secondary: null,
+		target: "normal",
+		type: "Water",
 	},
 	solarhunger: {
 		num: 42009,
