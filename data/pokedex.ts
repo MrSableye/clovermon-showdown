@@ -37277,7 +37277,7 @@ epipheror: {
 		types: ["Normal"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 25, atk: 55, def: 15, spa: 20, spd: 15, spe: 100},
-		abilities: {0: "Pickup", 1: "Scrappy", H: "Pickpocket", S: "Dowload"},
+		abilities: {0: "Pickup", 1: "Scrappy", H: "Pickpocket", S: "Download"},
 		heightm: 0.33,
 		weightkg: 1.91,
 		color: "Grey",
@@ -114063,7 +114063,7 @@ iwik: {
 			spe: 95,
 		},
 		abilities: {
-			0: "None",
+			0: "No Ability",
 		},
 		heightm: 1,
 		weightkg: 20,
