@@ -2904,6 +2904,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Mascot's Orb",
 		desc: "If held by Blobbos-Pika, its Attack and Special Attack are doubled.",
 	},
+	kapala: {
+		name: "Kapala",
+		shortDesc: "If held by a Blobbos-Spelunky, user recovers 50% of damage dealt.",
+	},
 	eyedropper: {
 		name: "Eye Dropper",
 		desc: "If held by a Blobbos-Chroma, sets it primary type to your team's most common type and its secondary type to a type that resists the most amount of enemy STABs.",
@@ -5020,6 +5024,14 @@ export const ItemsText: {[k: string]: ItemText} = {
 	clasticrock: {
 		name: "Clastic Rock",
 		desc: "Extends the duration of Power Arena used by the holder.",
+	},
+	paintedrock: {
+		name: "Painted Rock",
+		desc: "Extends the duration of Art Gallery used by the holder.",
+	},
+	bloodyrock: {
+		name: "Bloody Rock",
+		desc: "Extends the duration of Blood Rain used by the holder.",
 	},
 	swarmedrock: {
 		name: "Swarmed Rock",

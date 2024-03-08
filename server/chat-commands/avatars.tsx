@@ -760,6 +760,7 @@ export const OFFICIAL_CLODOWN_AVATARS = new Set([
 	'cap-batherm',
 	'cap-batherf',
 	'cap-fucker',
+	'cope-chavo',
 	/* Wack Avatars*/
 	'wack-mabe',
 	'wack-heli',

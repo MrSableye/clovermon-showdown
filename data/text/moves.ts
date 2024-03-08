@@ -9539,6 +9539,11 @@ mitada: {
 		name: "Genesis Blast",
 		desc: "30% chance to lower the target's accuracy by 1.",
 	},
+	finishingtouch: {
+		name: "Brine",
+		desc: "3.125x power if the target has less than or equal to half of its maximum HP remaining.",
+		shortDesc: "3.125x power doubles if the target's HP is 50% or less.",
+	},
 	runeofluck: {
 		name: "Rune of Luck",
 		shortDesc: "Shields user's party from the next 3 critical hits.",

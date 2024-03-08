@@ -10188,6 +10188,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	kapala: {
+		onModifyMove(move) {
+			if (!move?.flags['contact'] || move.target === 'self') return;
+		},
+		onAfterMoveSecondarySelfPriority: -1,
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (pokemon.species.id !== 'blobbosspelunky') return;
+			if (move.totalDamage) {
+				this.heal(move.totalDamage / 2, pokemon);
+			}
+		},
+		itemUser: ["Blobbos-Spelunky"],
+		name: "Kapala",
+		isNonstandard: "Future",
+	},
 	eyedropper: {
 		name: "Eye Dropper",
 		onStart(pokemon) {
@@ -19033,6 +19048,20 @@ export const Items: {[itemid: string]: ItemData} = {
 			this.heal(pokemon.baseMaxhp / 10);
 		},
 		num: 67480,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	paintedrock: { 
+		name: "Painted Rock",
+		spritenum: 0,
+		num: 67482,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+		bloodyrock: { 
+		name: "Bloody Rock",
+		spritenum: 0,
+		num: 67483,
 		isNonstandard: "Future",
 		rating: 1,
 	},
