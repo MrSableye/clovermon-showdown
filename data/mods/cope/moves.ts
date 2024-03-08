@@ -4641,6 +4641,26 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	grandbat: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mitada: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ceaselessedge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tidyup: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aquacutter: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	flowertrick: {
 		inherit: true,
 		isNonstandard: null,
