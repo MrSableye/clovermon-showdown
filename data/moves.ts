@@ -49459,6 +49459,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Dragon') return 1;
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -57543,6 +57546,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Dark', type);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Magic",
@@ -76053,6 +76059,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		boosts: {
+			def: 2,
+			spe: -2,
+		},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'Thick Fat') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('Thick Fat');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Thick Fat', '[from] move: Self Fatten');
+				return;
+			}
+			return oldAbility as false | null;
+			if (pokemon.weighthg > 1) {
+				pokemon.weighthg = Math.max(1, pokemon.weighthg + 1000);
+				this.add('-start', pokemon, 'Self Fatten');
+			}
+		},
 		secondary: null,
 		target: "self",
 		type: "Greasy",
