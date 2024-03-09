@@ -7105,6 +7105,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		isNonstandard: "Future",
 	},
+	vampiric: {
+		onModifyAtk(atk, pokemon, target, move) {
+			if (move?.flags['heal']) return this.chainModify(1.5);
+		},
+		name: "Vampiric",
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
 	hewillbedragon: {
 		onModifyTypePriority: -1,
 		onModifyType(move, pokemon) {
@@ -13185,6 +13193,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(pokemon) {
 			this.add('-activate', pokemon, 'ability: Wonderland');
 			this.field.addPseudoWeather('wonderroom');
+		},
+		rating: 4,
+		isNonstandard: "Future",
+	},
+	"3d": {
+		name: "3D",
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: 3D');
+			this.field.addPseudoWeather('wonderroom');
+			this.field.addPseudoWeather('trickroom');
+			this.field.addPseudoWeather('magicroom');
 		},
 		rating: 4,
 		isNonstandard: "Future",

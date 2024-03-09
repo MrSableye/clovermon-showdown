@@ -726,4 +726,16 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	vampiric: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	screencleaner: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	"3d": {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

@@ -1667,7 +1667,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	tornadocab: {
+	cuttingwaves: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1743,6 +1743,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	finishingtouch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lasagnatoss: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	needlepulse: {
 		inherit: true,
 		isNonstandard: null,
 	},
