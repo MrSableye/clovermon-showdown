@@ -38631,7 +38631,7 @@ iwik: {
 		gender: "N",
 		baseStats: {
 			hp: 60,
-			atk: 101,
+			atk: 80,
 			def: 69,
 			spa: 50,
 			spd: 60,
