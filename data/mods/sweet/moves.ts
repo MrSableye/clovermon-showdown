@@ -3548,7 +3548,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	tornadocab: {
+	cuttingwaves: {
 		inherit: true,
 		isNonstandard: "Past",
 	},

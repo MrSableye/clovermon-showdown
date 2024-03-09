@@ -8443,9 +8443,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Ninjutsu",
 		shortDesc: "Hits 4 times.",
 	},
-	tornadocab: {
-		name: "Tornado (CAB)",
-		shortDesc: "Summons Strong Winds after this move hits.",
+	cuttingwaves: {
+		name: "Cutting Waves",
+		shortDesc: "Summons Strong Winds after this move hits; for 5 turns.",
 	},
 	groundbomb: {
 		name: "Ground Bomb",
@@ -8504,7 +8504,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	bouncyball: {
 		name: "Bouncy Ball",
-		shortDesc: "No additional effect.",
+		shortDesc: "30% chance to raise speed by 1.",
 	},
 	extremesneed: {
 		name: "Extreme Sneed",
@@ -9205,7 +9205,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mirrorball: {
 		name: "Mirror Ball",
-		desc: "Deals damage, then creates Magic Coat.",
+		desc: "Copies foes stat changes upon hit.",
+	},
+	needlepulse: {
+		name: "Needle Pulse",
+		desc: "Physical if Atk>Sp.Atk.",
 	},
 	trashtalk: {
 		name: "Trash Talk",
@@ -9542,7 +9546,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	finishingtouch: {
 		name: "Brine",
 		desc: "3.125x power if the target has less than or equal to half of its maximum HP remaining.",
-		shortDesc: "3.125x power doubles if the target's HP is 50% or less.",
+		shortDesc: "3.125x power if the target's HP is 50% or less.",
 	},
 	runeofluck: {
 		name: "Rune of Luck",

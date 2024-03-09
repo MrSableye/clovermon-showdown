@@ -26318,6 +26318,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		noSketch: true,
 		isNonstandard: "Future",
 	},
+	needlepulse: {
+		num: 722,
+		accuracy: 90,
+		basePower: 120,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Needle Pulse",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, pulse: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		contestType: "Cool",
+	},
 	fuckyou: {
 		accuracy: 100,
 		basePower: 0,
@@ -27143,6 +27161,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Fairy",
 		contestType: "Cute",
@@ -28206,6 +28232,38 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		contestType: "Cool",
 	},
+	lasagnatoss: {
+		num: 752,
+		accuracy: true,
+		basePower: 60,
+		category: "Physical",
+		name: "Lasagna Toss",
+		pp: 10,
+		priority: 0,
+		flags: {bypasssub: 1},
+		onHitField(target, source, move) {
+			const targets: Pokemon[] = [];
+			for (const pokemon of this.getAllActive()) {
+				if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
+					this.add('-miss', source, pokemon);
+				} else if (this.runEvent('TryHit', pokemon, source, move) && pokemon.getItem().isBerry) {
+					targets.push(pokemon);
+				}
+			}
+			this.add('-fieldactivate', 'move: Teatime');
+			if (!targets.length) {
+				this.add('-fail', source, 'move: Teatime');
+				this.attrLastMove('[still]');
+				return this.NOT_FAIL;
+			}
+			for (const pokemon of targets) {
+				pokemon.eatItem(true);
+			}
+		},
+		secondary: null,
+		target: "all",
+		type: "Normal",
+	},
 	cursedblade: {
 		num: 42017,
 		accuracy: 100,
@@ -28475,7 +28533,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-sidestart', targetSide, 'swamp');
 			},
 			onModifySpe(spe, pokemon) {
-				return this.chainModify(0.80);
+				return this.chainModify(0.50);
 			},
 			onSideResidualOrder: 26,
 			onSideResidualSubOrder: 9,
@@ -31052,8 +31110,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bullet: 1},
-		self: {
-			sideCondition: 'magiccoat',
+		onHit(target, source) {
+			let i: BoostID;
+			for (i in target.boosts) {
+				source.boosts[i] = target.boosts[i];
+			}
+			const volatilesToCopy = ['focusenergy', 'gmaxchistrike', 'laserfocus'];
+			for (const volatile of volatilesToCopy) {
+				if (target.volatiles[volatile]) {
+					source.addVolatile(volatile);
+					if (volatile === 'gmaxchistrike') source.volatiles[volatile].layers = target.volatiles[volatile].layers;
+				} else {
+					source.removeVolatile(volatile);
+				}
+			}
+			this.add('-copyboost', source, target, '[from] move: Psych Up');
 		},
 		secondary: null,
 		target: "normal",
@@ -33290,7 +33361,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 100,
 		category: "Physical",
 		name: "Glomp :3",
-		pp: 25,
+		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type, move) {
@@ -34049,18 +34120,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 			volatileStatus: 'focusenergy',
 		},
 	},
-	tornadocab: {
+	cuttingwaves: {
 		num: 173,
 		accuracy: 100,
 		basePower: 70,
 		category: "Special",
-		name: "Tornado (CAB)",
+		name: "Cutting Waves",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, wind: 1},
 		self: {
 			onHit(source) {
-				this.field.setWeather('deltastream');
+				this.field.setWeather('ultrawind');
 			},
 		},
 		noSketch: true,

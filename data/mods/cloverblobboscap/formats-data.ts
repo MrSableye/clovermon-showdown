@@ -4040,4 +4040,44 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosmythical: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospseudo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboswisp: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosaxolotl: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscactshot: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgarfield: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscooler: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosextradimensional: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

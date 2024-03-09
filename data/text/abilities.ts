@@ -2537,6 +2537,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Colonoscopy",
 		shortDesc: "This Pokemon's draining moves have 1.5x power.",
 	},
+	vampiric: {
+		name: "Vampiric",
+		shortDesc: "This Pokemon's draining moves have 1.5x power.",
+	},
 	detonator: {
 		name: "Detonator",
 		shortDesc: "Bomb attacks have 1.2x power and doubled secondary effect chances.",
@@ -2988,7 +2992,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	swamped: {
 		name: "Swamped",
-		shortDesc: "On switch-in, this Pokemon summons a Swamp.",
+		shortDesc: "On switch-in, summons a swamp that lowers all opponents speed stats by 50% for 4 turns.",
 	},
 	revvingmalice: {
 		name: "Revving Malice",
@@ -3262,6 +3266,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "String Power",
 		shortDesc: "Adds a String Shot to every attack.",
 	},
+	lasagnatoss: {
+		name: "Lasagna Toss",
+		shortDesc: "Upon hitting, makes all users on the field use their current held berry.",
+	},
 	madlad: {
 		name: "Madlad",
 		shortDesc: "Pokemon making contact with this Pokemon will be confused. +1 priority on Status moves.",
@@ -3522,6 +3530,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Dies after landing any damaging move. Takes absurdly reduced damage from all damaging moves.",
 
 		damage: "  [POKEMON] shattered into millions of glass shards!",
+	},
+	"3d": {
+		name: "3D",
+		shortDesc: "On switch-in, summons Magic, Wonder and Trick room at the same time for 5 Turns.",
 	},
 	atlonglast: {
 		name: "At Long Last",
