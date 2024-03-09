@@ -25354,7 +25354,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	rocketpunch: {
 		accuracy: 100,
-		basePower: 40,
+		basePower: 45,
 		category: "Physical",
 		name: "Rocket Punch",
 		pp: 10,
@@ -86223,13 +86223,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 50,
 		basePowerCallback(pokemon) {
-			return Math.min(200, 50 + 50 * pokemon.timesAttacked);
+			return Math.min(300, 50 + 50 * pokemon.timesAttacked);
 		},
 		category: "Special",
 		name: "Mitada",
-		pp: 10,
+		pp: 5,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
 		secondary: null,
 		target: "normal",
 		type: "Water",
