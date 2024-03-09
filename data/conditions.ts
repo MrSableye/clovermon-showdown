@@ -752,6 +752,29 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'none');
 		},
 	},
+	ultrawind: {
+		name: 'Ultrawind',
+		effectType: 'Weather',
+		duration: 5,
+		onEffectivenessPriority: -1,
+		onEffectiveness(typeMod, target, type, move) {
+			if (move && move.effectType === 'Move' && move.category !== 'Status' && type === 'Flying' && typeMod > 0) {
+				this.add('-fieldactivate', 'Delta Stream');
+				return 0;
+			}
+		},
+		onFieldStart(field, source, effect) {
+			this.add('-weather', 'DeltaStream', '[from] ability: ' + effect.name, '[of] ' + source);
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'DeltaStream', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
 	acidicrainfall: {
 		name: 'Acidic Rainfall',
 		effectType: 'Weather',
