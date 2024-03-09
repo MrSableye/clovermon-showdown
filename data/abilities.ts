@@ -7109,6 +7109,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyAtk(atk, pokemon, target, move) {
 			if (move?.flags['heal']) return this.chainModify(1.5);
 		},
+		onModifySpA(atk, pokemon, target, move) {
+			if (move?.flags['heal']) return this.chainModify(1.5);
+		},
 		name: "Vampiric",
 		rating: 3.5,
 		isNonstandard: "Future",
