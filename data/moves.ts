@@ -76161,11 +76161,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-ability', pokemon, 'Thick Fat', '[from] move: Self Fatten');
 				return;
 			}
+			// if (pokemon.weighthg > 1) {
+			// 	pokemon.weighthg = Math.max(1, pokemon.weighthg + 1000);
+			// 	this.add('-start', pokemon, 'Self Fatten');
+			// }
 			return oldAbility as false | null;
-			if (pokemon.weighthg > 1) {
-				pokemon.weighthg = Math.max(1, pokemon.weighthg + 1000);
-				this.add('-start', pokemon, 'Self Fatten');
-			}
 		},
 		secondary: null,
 		target: "self",
@@ -86239,7 +86239,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 50,
 		basePowerCallback(pokemon) {
-			return Math.min(300, 50 + 50 * pokemon.timesAttacked);
+			return Math.min(200, 50 + 50 * pokemon.timesAttacked);
 		},
 		category: "Special",
 		name: "Mitada",
