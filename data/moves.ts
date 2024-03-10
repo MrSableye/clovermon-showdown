@@ -33314,6 +33314,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 		isNonstandard: "Future",
 	},
+	centrifugekick: {
+		accuracy: 90,
+		basePower: 20,
+		category: "Physical",
+		name: "Centrifuge Kick",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		secondary: null,
+		canContinue: true,
+		onModifyMove(move, pokemon) {
+			move.multihit = Math.min(1, pokemon.boosts.spe + 1);
+		},
+		basePowerCallback(pokemon, target, move) {
+			return 20 * move.hit;
+		},
+		onAfterMoveSecondarySelf(source) {
+			this.boost({
+				spe: 1,
+			}, source, source, this.effect);
+		},
+		target: "normal",
+		type: "Fighting",
+		isNonstandard: "Future",
+	},
 	maplewarrior: {
 		isNonstandard: "Future",
 		accuracy: true,

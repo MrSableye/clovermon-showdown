@@ -9511,6 +9511,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Perfect Calculation",
 		desc: "If the sum of this battle's RNG seed mod 40 plus 5 is the same as the current turn, the user's team wins.",
 	},
+	centrifugekick: {
+		name: "Centrifuge Kick",
+		desc: "Hits an additional time for each Speed boost the user has and each additional hit has 20 more BP than the last.",
+	},
 	maplewarrior: {
 		name: "Maple Warrior",
 		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
