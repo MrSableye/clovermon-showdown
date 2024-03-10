@@ -453,7 +453,12 @@ export const Scripts: ModdedBattleScriptsData = {
 				this.battle.damage(this.calcRecoilDamage(move.totalDamage, move, pokemon), pokemon, target, 'recoil');
 			}
 
-			if (target && pokemon !== target) target.gotAttacked(move, damage, pokemon);
+			if (target && pokemon !== target) {
+				target.gotAttacked(move, damage, pokemon);
+				if (typeof move.totalDamage === 'number') {
+					target.timesAttacked += move.hit - 1;
+				}
+			}
 
 			if (move.ohko && !target.hp) this.battle.add('-ohko');
 
