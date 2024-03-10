@@ -8697,6 +8697,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Dousing Flame",
 		shortDesc: "Super effective on Fire.",
 	},
+	lasagnatoss: {
+		name: "Lasagna Toss",
+		desc: "The user and any Pokemon hit eat their items.",
+	},
 	cursedblade: {
 		name: "Cursed Blade",
 		shortDesc: "30% chance to inflict Curse.",

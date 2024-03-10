@@ -28241,27 +28241,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {bypasssub: 1},
-		onHitField(target, source, move) {
-			const targets: Pokemon[] = [];
-			for (const pokemon of this.getAllActive()) {
-				if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
-					this.add('-miss', source, pokemon);
-				} else if (this.runEvent('TryHit', pokemon, source, move) && pokemon.getItem().isBerry) {
-					targets.push(pokemon);
-				}
-			}
-			this.add('-fieldactivate', 'move: Teatime');
-			if (!targets.length) {
-				this.add('-fail', source, 'move: Teatime');
-				this.attrLastMove('[still]');
-				return this.NOT_FAIL;
-			}
-			for (const pokemon of targets) {
-				pokemon.eatItem(true);
+		onHit(target, source, move) {
+			if (this.runEvent('Invulnerability', target, source, move) === false) {
+				this.add('-miss', source, target);
+			} else if (this.runEvent('TryHit', target, source, move)) {
+				target.eatItem(true);
 			}
 		},
+		onAfterMove(source) {
+			source.eatItem();
+		},
 		secondary: null,
-		target: "all",
+		target: "allAdjacent",
 		type: "Normal",
 	},
 	cursedblade: {
