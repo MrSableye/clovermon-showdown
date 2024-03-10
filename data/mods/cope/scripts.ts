@@ -375,8 +375,8 @@ export const Scripts: ModdedBattleScriptsData = {
 			let damage: number | undefined | false = 0;
 			pokemon.lastDamage = 0;
 			let targetHits = move.multihit || 1;
+			let hits = 1;
 			if (move.multihit) {
-				const hits = move.multihit;
 				if (Array.isArray(targetHits)) {
 					// yes, it's hardcoded... meh
 					if (targetHits[0] === 2 && targetHits[1] === 5) {
@@ -394,6 +394,7 @@ export const Scripts: ModdedBattleScriptsData = {
 					}
 				}
 				targetHits = Math.floor(targetHits);
+				hits = targetHits;
 				let nullDamage = true;
 				let moveDamage: number | undefined | false;
 				// There is no need to recursively check the ´sleepUsable´ flag as Sleep Talk can only be used while asleep.
@@ -456,7 +457,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			if (target && pokemon !== target) {
 				target.gotAttacked(move, damage, pokemon);
 				if (typeof move.totalDamage === 'number') {
-					target.timesAttacked += move.hit - 1;
+					target.timesAttacked += hits;
 				}
 			}
 
