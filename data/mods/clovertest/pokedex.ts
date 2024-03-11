@@ -59,4 +59,22 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			"Acufront-S",
 		],
 	},
+	phantash: {
+		inherit: true,
+		abilities: {
+			0: "White Smoke",
+			1: "Flare Heal",
+			H: "Air Lock",
+			S: "Cursed Body",
+		},
+	},
+	mooshock: {
+		inherit: true,
+		abilities: {
+			0: "Magnet Pull",
+			1: "Volt Absorb",
+			H: "Sap Sipper",
+			S: "Reckless",
+		},
+	},
 };
