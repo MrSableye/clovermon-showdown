@@ -56592,6 +56592,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {pulse: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		boosts: {
+			att: 1,
+			def: 1,
+			spa: 1,
+			spd: 1,
+			spe: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Cyber",
@@ -57121,6 +57139,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {pulse: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		boosts: {
+			att: 1,
+			def: 1,
+			spa: 1,
+			spd: 1,
+			spe: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Steel",
@@ -65154,7 +65190,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -68770,6 +68809,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		volatileStatus: 'confusion',
+		onModifyMove(move) {
+			if (this.field.isWeather(['sunnyday'])) move.accuracy = true;
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Fire",
