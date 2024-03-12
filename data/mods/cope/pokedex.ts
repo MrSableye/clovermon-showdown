@@ -146,7 +146,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		abilities: {0: "Temperamental", H: "Super Luck", S: "Fairy Aura"},
 	},
 	disbearyebil: { // surely this wont be broken with brutal punishment :clueless:
-		inherit: true, //surely giving the disbearies their respective auras wont be broken :clueless:
+		inherit: true, // surely giving the disbearies their respective auras wont be broken :clueless:
 		requiredAbility: undefined,
 		battleOnly: undefined, // PLEASE WORK THIS TIME.
 		abilities: {0: "Temperamental", H: "Tough Claws", S: "Dark Aura"}, // surely :clueless:

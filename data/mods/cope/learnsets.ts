@@ -240,7 +240,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			safeguard: ["8M"],
 			earthquake: ["8M"],
 			dig: ["8M"],
-			stealthrocks: ["8M"],
+			stealthrock: ["8M"],
 			aerialace: ["8M"],
 			facade: ["8M"],
 			rest: ["8M"],

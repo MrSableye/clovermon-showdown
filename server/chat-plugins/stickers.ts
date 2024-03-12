@@ -55,8 +55,8 @@ const downloadSticker = async (stickerName: string, imageUrl: string) => {
 	const result = await downloadImageWithVerification(imageUrl, {
 		validTypes: ['png', 'gif'],
 		enforceSquare: true,
-		minDimensions: { width: STICKER_SIZE, height: STICKER_SIZE },
-		maxDimensions: { width: MAX_STICKER_SIZE, height: MAX_STICKER_SIZE },
+		minDimensions: {width: STICKER_SIZE, height: STICKER_SIZE},
+		maxDimensions: {width: MAX_STICKER_SIZE, height: MAX_STICKER_SIZE},
 		fileSize: 1000000,
 	});
 

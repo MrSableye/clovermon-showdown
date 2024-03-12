@@ -3407,6 +3407,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	paintedrock: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bloodyrock: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	plagueorb: {
 		inherit: true,
 		isNonstandard: null,
@@ -3916,4 +3924,4 @@ export const Items: {[k: string]: ModdedItemData} = {
 		},
 		isNonstandard: null,
 	},
-}
+};

@@ -2462,6 +2462,26 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Pirate's Jug",
 		desc: "If held by an Octai, it doubles the power of Lactose Shot.",
 	},
+	berserkmeme: {
+		name: "Berserk Meme",
+		desc: "If held by a Memenace, sets its type to ??? and increases base power of Meme to 90.",
+	},
+	anitem: {
+		name: "An Item",
+		desc: "Holder's ???-type attacks have 1.2x power.",
+	},
+	aberry: {
+		name: "A Berry",
+		desc: "Halves damage taken from a ???-type attack. Single use.",
+	},
+	firering: {
+		name: "Fire Ring",
+		desc: "Holder cannot be burned. If knocked off, the attacker is burned.",
+	},
+	skillguard: {
+		name: "Skill Guard",
+		desc: "Holder's type and abilities cannot be changed.",
+	},
 	/* Clover CAP */
 	moluganion: {
 		name: "Moluganion",
@@ -2735,7 +2755,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	loadeddisk: {
 		name: "Loaded Disk",
-		desc: "DIDN'T YOU KNOW [Blobbos-Spamton] IS FAMOUS FOR ITS [Doubled] DEFENSE [while holding]!?",
+		desc: "DIDN'T YOU KNOW [Blobbos-Spamton] IS FAMOUS FOR ITS [1.5x] DEFENSE [while holding]!?",
 	},
 	propellerhat: {
 		name: "Propeller Hat",
@@ -2832,13 +2852,17 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Alcohol",
 		desc: "Has adverse effects to Pokemon without extreme alcohol tolerance.",
 	},
+	radishorb: {
+		name: "Radish Orb",
+		desc: "At the end of every turn, this item attempts to radish the holder.",
+	},
 	missingvoirite: {
 		name: "Missinvoirite",
 		desc: "If held by a Missingvoir, this item allows it to Mega Evolve in battle.",
 	},
 	powerrush: {
 		name: "Power Rush",
-		desc: "If held by a Blobbos-Paper and it has 1/4 or less of its max HP, its Attack and Special Attack are doubled."
+		desc: "If held by a Blobbos-Paper and it has 1/4 or less of its max HP, its Attack and Special Attack are doubled.",
 	},
 	mesosack: {
 		name: "Meso Sack",
@@ -2879,6 +2903,14 @@ export const ItemsText: {[k: string]: ItemText} = {
 	mascotsorb: {
 		name: "Mascot's Orb",
 		desc: "If held by Blobbos-Pika, its Attack and Special Attack are doubled.",
+	},
+	kapala: {
+		name: "Kapala",
+		shortDesc: "If held by a Blobbos-Spelunky, user recovers 50% of damage dealt.",
+	},
+	eyedropper: {
+		name: "Eye Dropper",
+		desc: "If held by a Blobbos-Chroma, sets it primary type to your team's most common type and its secondary type to a type that resists the most amount of enemy STABs.",
 	},
 	/* New Wack items **/
 	glalite: {
@@ -3043,7 +3075,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	fluffycoat: {
 		name: "Fluffy Coat",
-		desc: "An item to be held by a Pokémon. A thick coat of fur that slightly reduces ice type damage."
+		desc: "An item to be held by a Pokémon. A thick coat of fur that slightly reduces ice type damage.",
 	},
 	ancienthelm: {
 		name: "Ancient Helm",
@@ -4992,6 +5024,14 @@ export const ItemsText: {[k: string]: ItemText} = {
 	clasticrock: {
 		name: "Clastic Rock",
 		desc: "Extends the duration of Power Arena used by the holder.",
+	},
+	paintedrock: {
+		name: "Painted Rock",
+		desc: "Extends the duration of Art Gallery used by the holder.",
+	},
+	bloodyrock: {
+		name: "Bloody Rock",
+		desc: "Extends the duration of Blood Rain used by the holder.",
 	},
 	swarmedrock: {
 		name: "Swarmed Rock",

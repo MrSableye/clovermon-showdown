@@ -1,4 +1,4 @@
-export const Moves: { [k: string]: ModdedMoveData; } = {
+export const Moves: { [k: string]: ModdedMoveData } = {
 	/* Disabled moves */
 	"10000000voltthunderbolt": {
 		inherit: true,
@@ -3556,7 +3556,7 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	tornadocab: {
+	cuttingwaves: {
 		inherit: true,
 		isNonstandard: "Past",
 	},

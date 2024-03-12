@@ -2307,7 +2307,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	madman: {
 		name: "Madman",
-		desc: "This Pokemon's contact moves have a 100% chance of confusing."
+		desc: "This Pokemon's contact moves have a 100% chance of confusing.",
 	},
 	moreroom: {
 		name: "More Room",
@@ -2495,6 +2495,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 			shortDesc: "This Pokemon is immune to sound-based moves, including Heal Bell.",
 		},
 	},
+	artificial: {
+		name: "Artificial",
+		shortDesc: "Long Reach + Shield Dust + Filter + Keen Eye. Immune to status. Can't be crit or flinched. Infinite PP. Ability cannot be altered or suppressed. Immune to Disable, Encore, Taunt, Torment, OHKO moves, Leech Seed, Pain Split, Psycho Shift, Spite, Perish Song, Endeavor, Destiny Bond, Grudge, Trick, Heart Swap, Guard Split, Power Swap, Speed Swap, Power Split, Super Fang, and damage from trapping moves. Cannot be transformed into. +3 Spe when under 1/3 HP.",
+	},
 	/* Clover CAP Abilities */
 	amplify: {
 		name: "Amplify",
@@ -2512,8 +2516,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's Beam-based attacks have their power multiplied by 1.5.",
 		shortDesc: "This Pokemon's beam attacks have 1.5x power.",
 	},
-	bigbrain: {
-		name: "Big Brain",
+	brainpower: {
+		name: "Brain Power",
 		shortDesc: "This Pokemon's Special Attack is doubled.",
 	},
 	blueblood: {
@@ -2531,6 +2535,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	colonoscopy: {
 		name: "Colonoscopy",
+		shortDesc: "This Pokemon's draining moves have 1.5x power.",
+	},
+	vampiric: {
+		name: "Vampiric",
 		shortDesc: "This Pokemon's draining moves have 1.5x power.",
 	},
 	detonator: {
@@ -2585,6 +2593,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon is immune to Fire-type moves and raises its Special Attack by 1 stage when hit by a Fire-type move.",
 
 		activate: "#lightningrod",
+	},
+	frozenbunker: {
+		name: "Frozen Bunker",
+		desc: "Upon taking super-effective daamge, this Pokémon changes into its freed form for the rest of the battle.",
+	},
+	boundary: {
+		name: "Boundary",
+		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.5.",
+		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.5x damage.",
 	},
 	rusepower: {
 		name: "Ruse Power",
@@ -2721,6 +2738,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Artillery",
 		shortDesc: "Boosts bomb and bullet moves by 1.5x.",
 	},
+	colonization: {
+		name: "Colonization",
+		shortDesc: "If user is Blobbos-Colony (Level 20 or Above), changes to Colonized form if it has > 1/4 max HP, else Solo Form.",
+	},
 	genwunning: {
 		name: "Genwunning",
 		shortDesc: "Summons Genwun Room upon switch-in, how nostalgic!",
@@ -2832,6 +2853,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		transform: "You feel an evil presence watching you!",
 		transformEnd: "Blobbos-Eye-Mouth has calmed down!",
+	},
+	codename: {
+		name: "Codename",
+		shortDesc: "+1 crit ratio; critical hit damage is boosted by 1.5x.",
 	},
 	reconstruct: {
 		name: "Reconstruct",
@@ -2967,7 +2992,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	swamped: {
 		name: "Swamped",
-		shortDesc: "On switch-in, this Pokemon summons a Swamp.",
+		shortDesc: "On switch-in, summons a swamp that lowers all opponents speed stats by 50% for 4 turns.",
 	},
 	revvingmalice: {
 		name: "Revving Malice",
@@ -3070,6 +3095,38 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	neurotoxin: {
 		name: "Neurotoxin",
 		shortDesc: "Immune to Psychic-type moves; restores 1/4 HP. Poison-type attacks hit Psychic-types super effectively.",
+	},
+	suicidelead: {
+		name: "Suicide Lead",
+		shortDesc: "On switch-in, ability holder uses Explosion.",
+	},
+	inandout: {
+		name: "In and Out",
+		shortDesc: "On switch-in, ability holder uses U-turn.",
+	},
+	onepunch: {
+		name: "One Punch",
+		shortDesc: "On switch-in, ability holder attempts to use Focus Punch.",
+	},
+	invasivethoughts: {
+		name: "Invasive Thoughts",
+		shortDesc: "I AM IN YOUR WALLS.",
+	},
+	forthefunny: {
+		name: "For the Funny",
+		shortDesc: "On switch-in, ability holder uses Metronome for the funny.",
+	},
+	bully: {
+		name: "Bully",
+		shortDesc: "On switch-in, ability holder uses Knock Off.",
+	},
+	leafblower: {
+		name: "Leaf Blower",
+		shortDesc: "On switch-in, ability holder uses Whirlwind.",
+	},
+	imitator: {
+		name: "Imitator",
+		shortDesc: "On switch-in, ability holder uses Copycat.",
 	},
 	metamorphosis: {
 		name: "Metamorphosis",
@@ -3208,6 +3265,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	stringpower: {
 		name: "String Power",
 		shortDesc: "Adds a String Shot to every attack.",
+	},
+	lasagnatoss: {
+		name: "Lasagna Toss",
+		shortDesc: "Upon hitting, makes all users on the field use their current held berry.",
 	},
 	madlad: {
 		name: "Madlad",
@@ -3429,9 +3490,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Radish Body",
 		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be radished.",
 	},
+	falsedark: {
+		name: "False Dark",
+		desc: "Like Dark, but significantly weaker to Grass and Fighting.",
+	},
 	musclemass: {
 		name: "Muscle Mass",
-		desc: "This Pokemon is immune to Fighting-type moves and raises its Defense by 1 stage when hit by a Fighting-type move. If this Pokemon is not the target of a single-target Water-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move. If multiple Pokemon could redirect with this Ability, it goes to the one with the highest Speed, or in the case of a tie to the one that has had this Ability active longer.",
+		desc: "This Pokemon is immune to Fighting-type moves and raises its Defense by 1 stage when hit by a Fighting-type move. If this Pokemon is not the target of a single-target Fighting-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move. If multiple Pokemon could redirect with this Ability, it goes to the one with the highest Speed, or in the case of a tie to the one that has had this Ability active longer.",
 		shortDesc: "This Pokemon draws Fighting moves to itself to raise Defense by 1; Fighting immunity.",
 
 		activate: "#lightningrod",
@@ -3450,7 +3515,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	crowheaded: {
 		name: "Crowheaded",
-		desc: "Peck, Drill Peck, Pluck, and Bolt Beak deal 2x damage.",
+		desc: "Peck, Drill Peck and Pluck deal 2x damage.",
 	},
 	aintnothingonnabreakmystride: {
 		name: "AIN'T NOTHIN' GONNA BREAK MY STRIDE",
@@ -3465,6 +3530,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Dies after landing any damaging move. Takes absurdly reduced damage from all damaging moves.",
 
 		damage: "  [POKEMON] shattered into millions of glass shards!",
+	},
+	"3d": {
+		name: "3D",
+		shortDesc: "On switch-in, summons Magic, Wonder and Trick room at the same time for 5 Turns.",
 	},
 	atlonglast: {
 		name: "At Long Last",
@@ -3848,6 +3917,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	polite: {
 		name: "Polite",
-		shortDesc: "Moves last. STAB increased to 2."
-	}
+		shortDesc: "Moves last. STAB increased to 2.",
+	},
 };

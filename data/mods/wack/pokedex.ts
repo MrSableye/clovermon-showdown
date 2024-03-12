@@ -3181,5 +3181,5 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	voodoom: {
 		inherit: true,
 		baseStats: {hp: 90, atk: 85, def: 80, spa: 105, spd: 80, spe: 110},
-	}
-}
+	},
+};

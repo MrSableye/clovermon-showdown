@@ -7849,10 +7849,25 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
 		shortDesc: "Has 33% recoil.",
 	},
+	brainfreeze: {
+		name: "Brain Freeze",
+		desc: "Has 33% recoil. 10% Chance to Freeze",
+		shortDesc: "Has 33% recoil. 10% Chance to Freeze",
+	},
 	solarhunger: {
 		name: "Solar Hunger",
 		desc: "This move's Base Power is multiplied by 1.5x if Sunny Day, Desolate Land, or Dense Fog is active.",
 		shortDesc: "1.5x Power if used in Sun, Desolate Land, or Dense Fog.",
+	},
+	mitada: {
+		name: "Mitada",
+		desc: "Power is equal to 50+(X*50), where X is the total number of times the user has been hit by a damaging attack during the battle, even if the user did not lose HP from the attack. X cannot be greater than 6 and does not reset upon switching out or fainting. Each hit of a multi-hit attack is counted, but confusion damage is not counted.",
+		shortDesc: "+50 power for each time user was hit. 200 BP max",
+	},
+	grandbat: {
+		name: "Grand Bat",
+		shortDesc: "Forces the target to switch to a random ally.",
+		desc: "If both the user and the target have not fainted, the target is forced to switch out and be replaced with a random unfainted ally. This effect fails if the target used Ingrain previously, has the Suction Cups Ability, or this move hit a substitute.",
 	},
 	clobber: {
 		name: "Clobber",
@@ -8333,6 +8348,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Butterfly Kick",
 		shortDesc: "Combines Fighting in its type effectiveness.",
 	},
+	unload: {
+		name: "Unload",
+		shortDesc: "Hits 2-5 times. Applies Focus Energy to the user after the first hit.",
+	},
 	toxicbeam: {
 		name: "Toxic Beam",
 		shortDesc: "20% chance to badly poison the foe.",
@@ -8426,9 +8445,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Ninjutsu",
 		shortDesc: "Hits 4 times.",
 	},
-	tornadocab: {
-		name: "Tornado (CAB)",
-		shortDesc: "Summons Strong Winds after this move hits.",
+	cuttingwaves: {
+		name: "Cutting Waves",
+		shortDesc: "Summons Strong Winds after this move hits; for 5 turns.",
 	},
 	groundbomb: {
 		name: "Ground Bomb",
@@ -8487,7 +8506,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	bouncyball: {
 		name: "Bouncy Ball",
-		shortDesc: "No additional effect.",
+		shortDesc: "30% chance to raise speed by 1.",
 	},
 	extremesneed: {
 		name: "Extreme Sneed",
@@ -8679,6 +8698,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	dousingflame: {
 		name: "Dousing Flame",
 		shortDesc: "Super effective on Fire.",
+	},
+	lasagnatoss: {
+		name: "Lasagna Toss",
+		desc: "The user and any Pokemon hit eat their items.",
 	},
 	cursedblade: {
 		name: "Cursed Blade",
@@ -8984,10 +9007,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  [PARTY] were surrounded by fire!",
 		damage: "  [POKEMON] is burning up within Blackfire’s flames!",
 	},
-	justmonikat: {
-		name: "Just Monikat",
-		desc: "Transforms the target into a Monikat. Prevents the target from switching out. Drops the target's speed one stage.",
-	},
 	doubleiceblob: {
 		name: "Double Ice Blob",
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. Has a 30% chance to make the target flinch.",
@@ -9025,31 +9044,6 @@ export const MovesText: {[k: string]: MoveText} = {
 	strifedicekind: {
 		name: "Strife: Dicekind",
 		desc: "Physical if user's Atk > Sp. Atk. Hits 8 times. Each hit can miss. 4% to permanently improve's the user's side's luck by 5% up to 3 times. +1 crit at 3 stacks.",
-	},
-	abeblast: {
-		name: "Abe Blast",
-		desc: "Has a higher chance for a critical hit.",
-		shortDesc: "High critical hit ratio.",
-	},
-	harajukushuffle: {
-		name: "Harajuku Shuffle",
-		shortDesc: "Adds Fairy to the user's type(s). Raises the user's Attack, Sp. Atk, and Speed by 1.",
-	},
-	hokkaidosnowstorm: {
-		name: "Hokkaido Snowstorm",
-		shortDesc: "Adds Ice to the user's type(s). Sets Hail. 10% chance to Freeze."
-	},
-	blessingofyakushima: {
-		name: "Blessing of Yakushima",
-		shortDesc: "Adds Grass to the user's type(s). Sets Grassy Terrain. Heals 1/3 of the user's HP.",
-	},
-	eminenceofkinkakuji: {
-		name: "Eminence of Kinkaku-ji",
-		shortDesc: "Adds Steel to the user's type(s). Sets Lucky Chant. Clears the user's negative boosts.",
-	},
-	kamiswrath: {
-		name: "Kami's Wrath",
-		shortDesc: "Type varies based on the user's last type.",
 	},
 	cumblast: {
 		name: "Cum Blast",
@@ -9217,7 +9211,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mirrorball: {
 		name: "Mirror Ball",
-		desc: "Deals damage, then creates Magic Coat.",
+		desc: "Copies foes stat changes upon hit.",
+	},
+	needlepulse: {
+		name: "Needle Pulse",
+		desc: "Physical if Atk>Sp.Atk.",
 	},
 	trashtalk: {
 		name: "Trash Talk",
@@ -9519,6 +9517,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Perfect Calculation",
 		desc: "If the sum of this battle's RNG seed mod 40 plus 5 is the same as the current turn, the user's team wins.",
 	},
+	centrifugekick: {
+		name: "Centrifuge Kick",
+		desc: "Hits an additional time for each Speed boost the user has and each additional hit has 20 more BP than the last.",
+	},
 	maplewarrior: {
 		name: "Maple Warrior",
 		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
@@ -9529,7 +9531,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	reroll: {
 		name: "Reroll",
-		desc: "Randomly reroll all boosts and deboosts (not acc/eva), always adding 3 total boosts."
+		desc: "Randomly reroll all boosts and deboosts (not acc/eva), always adding 3 total boosts.",
 	},
 	skillroom: {
 		name: "Skill Room",
@@ -9550,6 +9552,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	genesisblast: {
 		name: "Genesis Blast",
 		desc: "30% chance to lower the target's accuracy by 1.",
+	},
+	finishingtouch: {
+		name: "Brine",
+		desc: "3.125x power if the target has less than or equal to half of its maximum HP remaining.",
+		shortDesc: "3.125x power if the target's HP is 50% or less.",
 	},
 	runeofluck: {
 		name: "Rune of Luck",
@@ -24901,7 +24908,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	bonelance: {
 		name: "Bone Lance",
 		desc: "Raises its Attack in the first turn, then rams the foe on the next turn.",
-		shortDesc: "2-turn attack. Raises Attack on first turn."
+		shortDesc: "2-turn attack. Raises Attack on first turn.",
 	},
 	bonetired: {
 		name: "Bone Tired",
@@ -24935,7 +24942,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	flashball: {
 		name: "Flash Ball",
-		desc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat."
+		desc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat.",
 	},
 	soporous: {
 		name: "Soporous",

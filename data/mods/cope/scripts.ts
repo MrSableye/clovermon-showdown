@@ -51,7 +51,7 @@ export const Scripts: ModdedBattleScriptsData = {
 
 			const isCrit = target.getMoveHitData(move).crit;
 			if (isCrit) {
-				baseDamage = this.battle.modify(baseDamage, move.critModifier || 2);
+				baseDamage = this.battle.modify(baseDamage, move.critModifier || 1.5);
 			}
 
 			// Mod 2 (Damage is floored after all multipliers are in)
@@ -375,8 +375,8 @@ export const Scripts: ModdedBattleScriptsData = {
 			let damage: number | undefined | false = 0;
 			pokemon.lastDamage = 0;
 			let targetHits = move.multihit || 1;
+			let hits = 1;
 			if (move.multihit) {
-				let hits = move.multihit;
 				if (Array.isArray(targetHits)) {
 					// yes, it's hardcoded... meh
 					if (targetHits[0] === 2 && targetHits[1] === 5) {
@@ -394,6 +394,7 @@ export const Scripts: ModdedBattleScriptsData = {
 					}
 				}
 				targetHits = Math.floor(targetHits);
+				hits = targetHits;
 				let nullDamage = true;
 				let moveDamage: number | undefined | false;
 				// There is no need to recursively check the ´sleepUsable´ flag as Sleep Talk can only be used while asleep.
@@ -453,7 +454,12 @@ export const Scripts: ModdedBattleScriptsData = {
 				this.battle.damage(this.calcRecoilDamage(move.totalDamage, move, pokemon), pokemon, target, 'recoil');
 			}
 
-			if (target && pokemon !== target) target.gotAttacked(move, damage, pokemon);
+			if (target && pokemon !== target) {
+				target.gotAttacked(move, damage, pokemon);
+				if (typeof move.totalDamage === 'number') {
+					target.timesAttacked += hits;
+				}
+			}
 
 			if (move.ohko && !target.hp) this.battle.add('-ohko');
 

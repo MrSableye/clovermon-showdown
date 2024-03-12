@@ -413,6 +413,9 @@ export interface EventMethods {
 	onAfterTypeChange?: (this: Battle, typeChange: [string[], string[]], pokemon: Pokemon) => void;
 	onAnyAfterTypeChange?: (this: Battle, typeChange: [string[], string[]], pokemon: Pokemon) => void;
 	onFoeAfterTypeChange?: (this: Battle, typeChange: [string[], string[]], pokemon: Pokemon) => void;
+	onTypeChange?: (this: Battle, typeChange: [string[], string[]], target: Pokemon, source: Pokemon, effect: Effect) => boolean | null | void;
+	onAnyTypeChange?: (this: Battle, typeChange: [string[], string[]], target: Pokemon, source: Pokemon, effect: Effect) => boolean | null | void;
+	onFoeTypeChange?: (this: Battle, typeChange: [string[], string[]], target: Pokemon, source: Pokemon, effect: Effect) => boolean | null | void;
 
 	// Priorities (incomplete list)
 	onAccuracyPriority?: number;
@@ -579,6 +582,7 @@ export interface PokemonEventMethods extends EventMethods {
 	onAllyModifyDamagePhase1?: CommonHandlers['ModifierSourceMove'];
 	onAllyModifyDamagePhase2?: CommonHandlers['ModifierSourceMove'];
 	onAllyAfterTypeChange?: (this: Battle, typeChange: [string[], string[]], pokemon: Pokemon) => void;
+	onAllyTypeChange?: (this: Battle, typeChange: [string[], string[]], pokemon: Pokemon) => boolean | null | void;
 }
 export interface SideEventMethods extends EventMethods {
 	onSideStart?: (this: Battle, target: Side, source: Pokemon, sourceEffect: Effect) => void;

@@ -1,5 +1,3 @@
-import { truncate } from "fs";
-
 export const Abilities: {[k: string]: ModdedAbilityData} = {
 	toxicchain: {
 		inherit: true,
@@ -530,7 +528,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	justified: {
 		inherit: true,
 		onDamagingHit(damage, target, source, move) {
-			if (['Dark','Chaos'].includes(move.type)) {
+			if (['Dark', 'Chaos'].includes(move.type)) {
 				this.boost({atk: 1});
 			}
 		},
@@ -570,7 +568,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	parentalbond: {
 		inherit: true,
-		//Damage changes made in sim/battle-actions.ts
+		// Damage changes made in sim/battle-actions.ts
 		onPrepareHit(source, target, move) {
 			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
 			if (['dynamaxcannon', 'endeavor', 'fling', 'iceball', 'rollout'].includes(move.id)) return;
@@ -586,19 +584,16 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		onResidual(pokemon) {
 			if (!["Standard", "School"].includes(pokemon.baseSpecies.baseForme) || pokemon.transformed) return;
-			if (pokemon.baseSpecies.baseSpecies === "Sarieangel" && 
+			if (pokemon.baseSpecies.baseSpecies === "Sarieangel" &&
 			pokemon.hp <= pokemon.maxhp / 3 && !['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
 				pokemon.addVolatile('zenmode');
-			}
-			else if (pokemon.hp <= pokemon.maxhp / 2 && !['Zen', 'Galar-Zen', 'Solo'].includes(pokemon.species.forme)) {
+			} else if (pokemon.hp <= pokemon.maxhp / 2 && !['Zen', 'Galar-Zen', 'Solo'].includes(pokemon.species.forme)) {
 				pokemon.addVolatile('zenmode');
-			}
-			else if (pokemon.baseSpecies.baseSpecies === "Sarieangel" && pokemon.hp > pokemon.maxhp / 3
-			&& ['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
+			} else if (pokemon.baseSpecies.baseSpecies === "Sarieangel" && pokemon.hp > pokemon.maxhp / 3 &&
+			['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
 				pokemon.addVolatile('zenmode'); // in case of Sarieangel Zen form
 				pokemon.removeVolatile('zenmode');
-			}
-			else if (pokemon.hp > pokemon.maxhp / 2 && ['Zen', 'Galar-Zen', 'Solo'].includes(pokemon.species.forme)) {
+			} else if (pokemon.hp > pokemon.maxhp / 2 && ['Zen', 'Galar-Zen', 'Solo'].includes(pokemon.species.forme)) {
 				pokemon.addVolatile('zenmode'); // in case of Zen forms mons
 				pokemon.removeVolatile('zenmode');
 			}
@@ -993,7 +988,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isBreakable: false,
 		isNonstandard: null,
 	},
-	breakdown: {	/** Same as in data/abilities.ts */
+	breakdown: {/** Same as in data/abilities.ts */
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1014,7 +1009,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isBreakable: false,
 		isNonstandard: null,
 	},
-	balance: {		/** Same as in data/abilities.ts */
+	balance: {/** Same as in data/abilities.ts */
 		inherit: true,
 		shortDesc: "NVE moves are boosted, SE moves against the Pokemon are weakened.",
 		desc: "This pokemon's not very effective moves are boosted and super effective moves against it are decreased.",
@@ -1027,7 +1022,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		onAfterMove(source, target, move) {
 			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct'].includes(move.id)) {
-				this.damage(source.baseMaxhp / 5, source, source)
+				this.damage(source.baseMaxhp / 5, source, source);
 			}
 		},
 		onBasePowerPriority: undefined,

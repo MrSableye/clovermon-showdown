@@ -224,6 +224,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	kapala: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	eyedropper: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	powerrush: {
 		inherit: true,
 		isNonstandard: null,

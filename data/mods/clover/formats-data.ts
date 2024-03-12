@@ -3752,6 +3752,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	taurospaldeacombat: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	tinglu: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -7442,7 +7446,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	biteki: {
 		inherit: true,
-		tier: "NU",
+		tier: "NUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"voltswitch",

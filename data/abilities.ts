@@ -538,7 +538,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				target.isActive && move.effectType === 'Move' && move.category !== 'Status' &&
 				type !== '???' && !target.hasType(type)
 			) {
-				if (!target.setType(type)) return false;
+				if (!target.setType(type, false, target, this.effect)) return false;
 				this.add('-start', target, 'typechange', type, '[from] ability: Color Change');
 
 				if (target.side.active.length === 2 && target.position === 1) {
@@ -2419,7 +2419,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				types = pokemon.baseSpecies.types;
 			}
 			const oldTypes = pokemon.getTypes();
-			if (oldTypes.join() === types.join() || !pokemon.setType(types)) return;
+			if (oldTypes.join() === types.join() || !pokemon.setType(types, false, pokemon, this.effect)) return;
 			if (this.field.terrain || pokemon.transformed) {
 				this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Mimicry');
 				if (!this.field.terrain) this.hint("Transform Mimicry changes you to your original un-transformed types.");
@@ -3251,7 +3251,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
 			const type = move.type;
 			if (type && type !== '???' && source.getTypes().join() !== type) {
-				if (!source.setType(type)) return;
+				if (!source.setType(type, false, source, this.effect)) return;
 				this.effectState.protean = true;
 				this.add('-start', source, 'typechange', type, '[from] ability: Protean');
 			}
@@ -5617,7 +5617,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					pink: 'Fairy',
 				};
 				const type = colorType[this.toID(color)];
-				if (type && pokemon.setType(type)) {
+				if (type && pokemon.setType(type, false, pokemon, this.effect)) {
 					this.add('-start', pokemon, 'typechange', type, '[from] ability: Gradient');
 				}
 			}
@@ -5931,8 +5931,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(source) {
 			for (const pokemon of this.getAllActive()) {
 				if (pokemon === source) continue;
+				if (pokemon.isSemiInvulnerable()) continue;
+				if (pokemon.volatiles['substitute']) continue;
 				this.add('-start', pokemon, 'typechange', 'Normal', '[from] ability: Fuk U', '[of] ' + source);
-				pokemon.setType('Normal');
+				pokemon.setType('Normal', false, source, this.effect);
 			}
 		},
 		isNonstandard: "Future",
@@ -5942,7 +5944,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(source) {
 			for (const pokemon of this.getAllActive()) {
 				this.add('-ability', pokemon, 'Stench', '[from] ability: Stink Bomb', '[of] ' + source);
-				pokemon.setAbility('stench');
+				pokemon.setAbility('stench', source);
 				pokemon.addVolatile('stinkbomb');
 			}
 		},
@@ -6074,7 +6076,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/c/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Fairy')) {
+			if (pokemon.addType('Fairy', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Fairy', '[from] ability: Board Power (/c/)');
 			}
 			pokemon.abilityState.irresistable = true;
@@ -6130,7 +6132,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/d/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Dark')) {
+			if (pokemon.addType('Dark', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Dark', '[from] ability: Board Power (/d/)');
 			}
 			this.actions.useMove('Stockpile', pokemon);
@@ -6239,7 +6241,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			// Copy Types
 			const newBaseTypes = target.getTypes(true);
 			this.add('-start', pokemon, 'typechange', newBaseTypes.join('/'), '[from] ability: Board Power (/fa/)', '[of] ' + target);
-			pokemon.setType(newBaseTypes);
+			pokemon.setType(newBaseTypes, false, pokemon, this.effect);
 
 			// Copy Boosts
 			let i: BoostID;
@@ -6255,7 +6257,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/fit/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Fighting')) {
+			if (pokemon.addType('Fighting', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Fighting', '[from] ability: Board Power (/fit/)');
 			}
 			this.actions.useMove('Hulk Up', pokemon);
@@ -6267,7 +6269,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/g/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Electric')) {
+			if (pokemon.addType('Electric', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Electric', '[from] ability: Board Power (/g/)');
 			}
 			this.field.setTerrain('electricterrain');
@@ -6280,7 +6282,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/h/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Fire')) {
+			if (pokemon.addType('Fire', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Fire', '[from] ability: Board Power (/h/)');
 			}
 			pokemon.abilityState.irresistable = true;
@@ -6326,7 +6328,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/jp/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Fairy')) {
+			if (pokemon.addType('Fairy', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Fairy', '[from] ability: Board Power (/jp/)');
 			}
 			this.field.setTerrain('mistyterrain');
@@ -6349,7 +6351,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/k/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Steel')) {
+			if (pokemon.addType('Steel', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Steel', '[from] ability: Board Power (/k/)');
 			}
 			this.boost({def: 1, spd: 1}, pokemon);
@@ -6579,7 +6581,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/tv/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Ground')) {
+			if (pokemon.addType('Ground', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Ground', '[from] ability: Board Power (/tv/)');
 			}
 			this.field.addPseudoWeather('gravity');
@@ -6650,7 +6652,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/vg/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Dragon')) {
+			if (pokemon.addType('Dragon', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Dragon', '[from] ability: Board Power (/vg/)');
 			}
 		},
@@ -6735,7 +6737,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/x/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Ghost')) {
+			if (pokemon.addType('Ghost', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Ghost', '[from] ability: Board Power (/x/)');
 			}
 			for (const activePokemon of this.getAllActive()) {
@@ -6743,7 +6745,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (activePokemon.isSemiInvulnerable()) continue;
 				if (activePokemon.volatiles['substitute']) continue;
 				this.add('-start', activePokemon, 'typechange', 'Ghost', '[from] ability: Board Power (/x/)');
-				activePokemon.setType('Ghost');
+				activePokemon.setType('Ghost', false, pokemon, this.effect);
 			}
 		},
 		isPermanent: true,
@@ -6754,7 +6756,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			this.add('-start', pokemon, 'typechange', '???', '[from] ability: Board Power (/z/)');
-			pokemon.setType('???');
+			pokemon.setType('???', false, pokemon, this.effect);
 		},
 		onModifySecondaries(secondaries, target, source) {
 			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
@@ -6790,7 +6792,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Presage",
 		onBeforeMove(source, target, move) {
 			if (move.category === 'Status') return;
-			const sunMoves = ['solarbeam', 'solarblaade'];
+			const sunMoves = ['solarbeam', 'solarblade'];
 			const rainMoves = ['thunder', 'hurricane'];
 			const isInRain = ['raindance', 'primordialsea'].includes(target.effectiveWeather());
 			const isInSun = ['sunnyday', 'desolateland'].includes(target.effectiveWeather());
@@ -6873,6 +6875,132 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Cacophony",
 		rating: 1.5,
 		num: 43,
+		isNonstandard: "Future",
+	},
+	artificial: {
+		name: "Artificial",
+		onStart(pokemon) {
+			this.addSplit(pokemon.side.id, ['-ability', pokemon, 'Pressure', '[silent]']);
+			this.boost({def: 1, spd: 1});
+		},
+		onModifyMove(move) {
+			delete move.flags['contact'];
+			move.ignoreEvasion = true;
+		},
+		onModifySecondaries(secondaries) {
+			this.debug('Artificial prevent secondary');
+			return secondaries.filter(effect => !!(effect.self || effect.dustproof));
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Artificial neutralize');
+				return this.chainModify(0.75);
+			}
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source) return;
+			if (boost.accuracy && boost.accuracy < 0) {
+				delete boost.accuracy;
+				if (!(effect as ActiveMove).secondaries) {
+					this.add("-fail", target, "unboost", "accuracy", "[from] ability: Artificial", "[of] " + target);
+				}
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Artificial');
+			}
+			return false;
+		},
+		onCriticalHit: false,
+		onTryAddVolatile(status, pokemon) {
+			const immuneStatuses = ['flinch', 'disable', 'torment', 'encore'];
+			if (immuneStatuses.includes(status.id)) { this.add('-immune', pokemon, '[from] ability: Artificial'); }
+			return null;
+		},
+		onTryHit(pokemon, target, move) {
+			if (move.ohko) {
+				this.add('-immune', pokemon, '[from] ability: Artificial');
+				return null;
+			}
+		},
+		onTryPrimaryHit(target, source, move) {
+			const blocked = [
+				'leechseed',
+				'painsplit',
+				'psychoshift',
+				'spite',
+				'perishsong',
+				'endeavor',
+				'destinybond',
+				'grudge',
+				'trick',
+				'heartswap',
+				'guardsplit',
+				'powerswap',
+				'speedswap',
+				'powersplit',
+				'superfang',
+			];
+
+			if (blocked.includes(move.id)) {
+				this.add('-activate', target, 'Artificial', '[block] ' + move.name);
+				return null;
+			}
+		},
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'partiallytrapped') return false;
+			if (
+				effect.effectType === "Move" &&
+				!effect.multihit &&
+				(!effect.negateSecondary && !(effect.hasSheerForce && source.hasAbility('sheerforce')))
+			) {
+				this.effectState.checkedArtificial = false;
+			} else {
+				this.effectState.checkedArtificial = true;
+			}
+		},
+		onDeductPP(target, source) {
+			if (target === source) return -1;
+		},
+		onTryEatItem(item) {
+			const healingItems = [
+				'aguavberry', 'enigmaberry', 'figyberry', 'iapapaberry', 'magoberry', 'sitrusberry', 'wikiberry', 'oranberry', 'berryjuice',
+			];
+			if (healingItems.includes(item.id)) {
+				return this.effectState.checkedArtificial;
+			}
+			return true;
+		},
+		onAfterMoveSecondary(target, source, move) {
+			this.effectState.checkedArtificial = true;
+			if (!source || source === target || !target.hp || !move.totalDamage) return;
+			const lastAttackedBy = target.getLastAttackedBy();
+			if (!lastAttackedBy) return;
+			const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
+			if (target.hp <= target.maxhp / 3 && target.hp + damage > target.maxhp / 3) {
+				this.boost({spe: 3}, target, target);
+			}
+		},
+		onResidual(pokemon) {
+			const heroicStrike = pokemon.baseMoves.indexOf('heroicstrike');
+			if (heroicStrike >= 0) {
+				const move = this.dex.moves.get('heroiconslaught');
+				pokemon.baseMoveSlots[heroicStrike] = {
+					move: move.name,
+					id: move.id,
+					pp: (move.noPPBoosts || move.isZ) ? move.pp : Math.floor(move.pp * 8 / 5),
+					maxpp: (move.noPPBoosts || move.isZ) ? move.pp : Math.floor(move.pp * 8 / 5),
+					target: move.target,
+					disabled: false,
+					disabledSource: '',
+					used: false,
+				};
+				pokemon.moveSlots = pokemon.baseMoveSlots.slice();
+			}
+		},
+		// At the end of each turn, the 4th move changes depending on the opposing mon
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	/* Clover CAP Abilities */
@@ -6974,6 +7102,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move?.flags['heal']) return this.chainModify(1.5);
 		},
 		name: "Colonoscopy",
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
+	vampiric: {
+		onModifyAtk(atk, pokemon, target, move) {
+			if (move?.flags['heal']) return this.chainModify(1.5);
+		},
+		onModifySpA(atk, pokemon, target, move) {
+			if (move?.flags['heal']) return this.chainModify(1.5);
+		},
+		name: "Vampiric",
 		rating: 3.5,
 		isNonstandard: "Future",
 	},
@@ -7280,12 +7419,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 		isNonstandard: "Future",
 	},
-	bigbrain: {
+	brainpower: {
 		onModifySpAPriority: 5,
 		onModifySpA(spa) {
 			return this.chainModify(2);
 		},
-		name: "Big Brain",
+		name: "Brain Power",
 		rating: 5,
 		num: 37,
 		isNonstandard: "Future",
@@ -7533,6 +7672,37 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add('-start', source, 'typechange', types.join('/'), '[from] ability: Blobbotype');
 			}
 		},
+	},
+	frozenbunker: {
+		onDamagingHit(damage, target, source, move) {
+			if (!move.damage && !move.damageCallback && target.getMoveHitData(move).typeMod > 0) {
+				if (target.baseSpecies.baseSpecies !== 'Arctiglobe' || target.transformed) return;
+				const arctiglobeform = target.species.id === 'arctiglobefreed' ? '' : '-Freed';
+				target.formeChange('Arctiglobe' + arctiglobeform, this.effect, true, '[msg]');
+				this.effectState.busted = true;
+			}
+			if (!move.damage && !move.damageCallback && target.getMoveHitData(move).typeMod == 0) {
+				if (target.baseSpecies.baseSpecies !== 'Arctiglobe' || target.transformed) return;
+				return this.chainModify(0.5);
+			}
+		},
+		onUpdate(pokemon) {
+			if (['arctiglobe'].includes(pokemon.species.id) && this.effectState.busted) {
+				pokemon.formeChange('Arctiglobe-Freed', this.effect, true);
+			}
+		},
+		isPermanent: true,
+		name: "Frozen Bunker",
+		rating: 4,
+		},
+	boundary: {
+		onModifyDamage(damage, source, target, move) {
+			if (move && target.getMoveHitData(move).typeMod > 0) {
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Boundary",
+		rating: 2.5,
 	},
 	niceface: {
 		onStart(pokemon) {
@@ -8731,6 +8901,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 		isNonstandard: "Future",
 	},
+	codename: {
+		onModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).crit) {
+				this.debug('Sniper boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyCritRatio(critRatio) {
+			return critRatio + 1;
+		},
+		name: "Codename",
+		rating: 2,
+		num: 97,
+	},
 	madlad: {
 		name: "Madlad",
 		onDamagingHit(damage, target, source, move) {
@@ -9744,6 +9928,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-ability', pokemon, 'Fake');
 		},
 		name: "Fake",
+		isPermanent: true,
 		rating: 0,
 		isNonstandard: "Future",
 	},
@@ -10669,6 +10854,86 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		isNonstandard: "Future",
 	},
+	suicidelead: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('explosion'), pokemon);
+		},
+		name: "Suicide Lead",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	inandout: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('uturn'), pokemon);
+		},
+		name: "In and Out",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	onepunch: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('focuspunch'), pokemon);
+		},
+		name: "One Punch",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	invasivethoughts: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('torment'), pokemon);
+		},
+		name: "Invasive Thoughts",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	forthefunny: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('metronome'), pokemon);
+		},
+		name: "For The Funny",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	bully: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('knockoff'), pokemon);
+		},
+		name: "Bully",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	leafblower: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('whirlwind'), pokemon);
+		},
+		name: "Leaf Blower",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	imitator: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('copycat'), pokemon);
+		},
+		name: "Imitator",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
 	metamorphosis: {
 		onSwitchOut(pokemon) {
 			if (pokemon.species.id !== 'blobboseedle' || pokemon.transformed) return;
@@ -10830,22 +11095,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	supremeunderlord: {
 		onStart(pokemon) {
-			if (pokemon.side.totalFainted) {
-				this.add('-activate', pokemon, 'ability: Supreme Underlord');
-				const fallen = Math.min(pokemon.side.totalFainted, 5);
-				this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
-				this.effectState.fallen = fallen;
-			}
+			this.add('-activate', pokemon, 'ability: Supreme Underlord');
+			const risen = Math.max(5 - pokemon.side.totalFainted, 0);
+			this.add('-start', pokemon, `risen${risen}`, '[silent]');
+			this.effectState.risen = risen;
 		},
 		onEnd(pokemon) {
-			this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+			this.add('-end', pokemon, `risen${this.effectState.risen}`, '[silent]');
 		},
 		onBasePowerPriority: 21,
 		onBasePower(basePower, attacker, defender, move) {
-			if (this.effectState.fallen) {
+			if (this.effectState.risen) {
 				const powMod = [6144, 5734, 5325, 4915, 4506, 4096];
-				this.debug(`Supreme Underlord boost: ${powMod[this.effectState.fallen]}/4096`);
-				return this.chainModify([powMod[this.effectState.fallen], 4096]);
+				this.debug(`Supreme Underlord boost: ${powMod[this.effectState.risen]}/4096`);
+				return this.chainModify([powMod[this.effectState.risen], 4096]);
 			}
 		},
 		name: "Supreme Underlord",
@@ -11454,8 +11717,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 			const statA = this.sample(stats);
 			const statB = this.sample(stats);
-			
-			if (statA === statB){
+
+			if (statA === statB) {
 				pokemon.addVolatile('focusenergy');
 				this.add('-activate', pokemon, 'ability: Rollan');
 			}
@@ -11551,7 +11814,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 
 				this.boost({[statName]: 1}, source);
-		
+
 				return statName;
 			}
 		},
@@ -11609,7 +11872,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyCritRatio(critRatio, pokemon, target) {
 			if (!target) return;
 			let totalDrops = 0;
-			const stats: BoostID[] = [];
 			let stat: BoostID;
 			for (stat in target.boosts) {
 				if (target.boosts[stat] < 0) {
@@ -11944,10 +12206,36 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onTryAddVolatile(status, pokemon) {
 			if (status.id === 'mustrecharge') return null;
-		}, 
+		},
 	},
-
-
+	falsedark: {
+		name: "False Dark",
+		rating: 0,
+		isNonstandard: "Future",
+		isPermanent: true,
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Grass') {
+				this.debug('SEED BOMBED');
+				return this.chainModify(4);
+			}
+			if (move.type === 'Fighting') {
+				this.debug('MACH PUNCHED');
+				return this.chainModify(4);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Grass') {
+				this.debug('GIGA DRAINED');
+				return this.chainModify(4);
+			}
+			if (move.type === 'Fighting') {
+				this.debug('FOCUS BLASTED');
+				return this.chainModify(4);
+			}
+		},
+	},
 	trickster: {
 		name: "Trickster",
 		isNonstandard: "Future",
@@ -12912,6 +13200,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		isNonstandard: "Future",
 	},
+	"3d": {
+		name: "3D",
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: 3D');
+			this.field.addPseudoWeather('wonderroom');
+			this.field.addPseudoWeather('trickroom');
+			this.field.addPseudoWeather('magicroom');
+		},
+		rating: 4,
+		isNonstandard: "Future",
+	},
 	cellconstruct: {
 		onResidualOrder: 29,
 		onResidual(pokemon) {
@@ -12974,6 +13273,44 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		name: "Malevolent Soul",
+		rating: 3,
+		num: 208,
+		isNonstandard: "Future",
+	},
+	colonization: {
+		onStart(pokemon) {
+			if (pokemon.level < 20 || pokemon.transformed) return;
+			if (pokemon.hp > pokemon.maxhp / 4) {
+				if (pokemon.species.id === 'blobboscolony') {
+					pokemon.formeChange('Blobbos-Colony-Colonized');
+				}
+			} else {
+				if (pokemon.species.id === 'blobboscolonycolonized') {
+					pokemon.formeChange('Blobbos-Colony');
+				}
+			}
+		},
+		onResidualOrder: 27,
+		onResidual(pokemon) {
+			if (
+				pokemon.level < 20 ||
+				pokemon.transformed || !pokemon.hp
+			) return;
+			if (pokemon.hp > pokemon.maxhp / 4) {
+				if (pokemon.species.id === 'blobboscolony') {
+					pokemon.formeChange('Blobbos-Colony-Colonized');
+				}
+			} else {
+				if (pokemon.species.id === 'blobboscolonycolonized') {
+					pokemon.formeChange('Blobbos-Colony');
+				}
+			}
+		},
+		isPermanent: true,
+		name: "Colonization",
+		rating: 3,
+		num: 208,
+		isNonstandard: "Future",
 	},
 	/** Wack abilities */
 	darklife: {
@@ -13004,27 +13341,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyAtk(atk, source, target, move) {
 			if (!source.hasType('Meme')) {
 				return this.chainModify(0.75);
-			}; 
+			}
 		},
 		onModifySpA(spa, source, target, move) {
 			if (!source.hasType('Meme')) {
 				return this.chainModify(0.75);
-			};
+			}
 		},
 		onModifyDef(def, target, source, move) {
 			if (!source.hasType('Meme')) {
 				return this.chainModify(0.75);
-			};
+			}
 		},
 		onModifySpD(spd, target, source, move) {
 			if (!source.hasType('Meme')) {
 				return this.chainModify(0.75);
-			};
+			}
 		},
 		onModifySpe(spe, pokemon) {
 			if (!pokemon.hasType('Meme')) {
 				return this.chainModify(0.75);
-			};
+			}
 		},
 		name: "Memetic",
 		rating: 4,
@@ -13102,7 +13439,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	pounce: {
 		onModifyPriority(priority, source, target, move) {
-			if (source.activeMoveActions == 0) {
+			if (source.activeMoveActions === 0) {
 				return priority + 1;
 			}
 		},
@@ -13383,7 +13720,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onWeather(target, source, effect) {
 			if (effect.id === 'hail' || effect.id === 'snow') {
-				this.damage(target.baseMaxhp / 8, target, target)
+				this.damage(target.baseMaxhp / 8, target, target);
 			}
 			if (target.hasItem('utilityumbrella')) return;
 			if (effect.id === 'sunnyday' || effect.id === 'desolateland') {
@@ -13671,7 +14008,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	sadist: {
 		onAfterMoveSecondarySelf(source, target, move) {
 			if (source && source !== target && move && move.category !== 'Status' && !source.forceSwitchFlag) {
-				this.heal(source.baseMaxhp / 16, source, source)
+				this.heal(source.baseMaxhp / 16, source, source);
 			}
 		},
 		name: "Sadist",
@@ -14295,5 +14632,5 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 6726,
 		isNonstandard: "Future",
-	}
+	},
 };

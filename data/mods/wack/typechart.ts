@@ -3042,4 +3042,4 @@ export const TypeChart: {[k: string]: TypeData} = {
 			Zombie: 1,
 		},
 	},
-}
+};

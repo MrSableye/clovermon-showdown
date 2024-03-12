@@ -142,7 +142,7 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 	crowheaded: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	musclemass: {
 		inherit: true,
 		isNonstandard: null,
@@ -1427,7 +1427,7 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bigbrain: {
+	brainpower: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1508,6 +1508,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	fogofwar: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	boundary: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1886,15 +1890,15 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 	goodasgold: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	mindseye: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	wellbakedbody: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	thermalexchange: {
 		inherit: true,
 		isNonstandard: null,
@@ -1944,6 +1948,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	mindzap: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	falsedark: {
 		inherit: true,
 		isNonstandard: null,
 	},

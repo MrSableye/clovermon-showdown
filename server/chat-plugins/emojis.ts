@@ -4,7 +4,7 @@ import Axios from 'axios';
 import probe from 'probe-image-size';
 import {FS} from '../../lib';
 import {Punishments} from '../punishments';
-import { escapeHTML } from '../../lib/utils';
+import {escapeHTML} from '../../lib/utils';
 
 const EMOJI_BAN_DURATION = 7 * 24 * 60 * 60 * 1000; // 1 week
 const MAX_REASON_LENGTH = 300;

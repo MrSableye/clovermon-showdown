@@ -760,6 +760,7 @@ export const OFFICIAL_CLODOWN_AVATARS = new Set([
 	'cap-batherm',
 	'cap-batherf',
 	'cap-fucker',
+	'cope-chavo',
 	/* Wack Avatars*/
 	'wack-mabe',
 	'wack-heli',
@@ -825,7 +826,7 @@ export const OFFICIAL_CLODOWN_AVATARS = new Set([
 	'wack-moonman',
 	'wack-moonman-resprite',
 	'wack-marsshade',
-	'wack-him'
+	'wack-him',
 ]);
 
 for (const avatar of OFFICIAL_AVATARS_BELIOT419) OFFICIAL_AVATARS.add(avatar);

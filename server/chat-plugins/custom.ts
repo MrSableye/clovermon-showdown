@@ -11,9 +11,7 @@ const CSS_HEADER = `.userlist li button:hover {
 	background: rgba(220,230,240,0.7);
 }`;
 
-const hasTourWins = (wins: number, user: User) => {
-	return getTourWins(user.id) >= wins;
-};
+const hasTourWins = (wins: number, user: User) => getTourWins(user.id) >= wins;
 
 const createUserCss = (
 	userId: string,
@@ -23,7 +21,7 @@ const createUserCss = (
 	const backgroundCss: string[] = [];
 
 	if (flair) {
-		backgroundCss.push(`url("${getFlairUrl(flair.pokemonId, flair.pokemonMod)}") no-repeat right -7px top ${flair.heightOffset}px`)
+		backgroundCss.push(`url("${getFlairUrl(flair.pokemonId, flair.pokemonMod)}") no-repeat right -7px top ${flair.heightOffset}px`);
 	}
 
 	if (background) {
@@ -32,28 +30,50 @@ const createUserCss = (
 
 	if (!backgroundCss.length) return '';
 
-	return `[id$="-userlist-user-${userId}"]{background: ${backgroundCss.join(', ')};}`
+	return `[id$="-userlist-user-${userId}"]{background: ${backgroundCss.join(', ')};}`;
+};
+
+const createUserChatCss = (
+	userId: string,
+	chatBackground: Background | undefined,
+) => {
+	const backgroundCss: string[] = [];
+
+	if (chatBackground) {
+		backgroundCss.push(`rgba(${chatBackground.r},${chatBackground.g},${chatBackground.b}, 0.05)`);
+	}
+
+	if (!backgroundCss.length) return '';
+
+	return `.chatmessage-${userId}{background: ${backgroundCss.join(', ')};}`;
 };
 
 const writeCss = (content: string) => FS(CUSTOM_CSS_PATH).writeSync(content);
 
 const updateCss = () => {
-	const userConfig: Record<string, { flair?: Flair, background?: Background }> = {};
+	const userConfigs: Record<string, { flair?: Flair, background?: Background, chatBackground?: Background }> = {};
 
 	Object.entries(flairs).forEach(([userId, flair]) => {
-		if (!userConfig[userId]) userConfig[userId] = {};
-		userConfig[userId].flair = flair;
+		if (!userConfigs[userId]) userConfigs[userId] = {};
+		userConfigs[userId].flair = flair;
 	});
 
 	Object.entries(backgrounds).forEach(([userId, background]) => {
-		if (!userConfig[userId]) userConfig[userId] = {};
-		userConfig[userId].background = background;
+		if (!userConfigs[userId]) userConfigs[userId] = {};
+		userConfigs[userId].background = background;
+	});
+
+	Object.entries(chatBackgrounds).forEach(([userId, background]) => {
+		if (!userConfigs[userId]) userConfigs[userId] = {};
+		userConfigs[userId].chatBackground = background;
 	});
 
 	writeCss([
 		CSS_HEADER,
-		...Object.entries(userConfig)
+		...Object.entries(userConfigs)
 			.map(([userId, userConfig]) => createUserCss(userId, userConfig.flair, userConfig.background)),
+		...Object.entries(userConfigs)
+			.map(([userId, userConfig]) => createUserChatCss(userId, userConfig.chatBackground)),
 	].join('\n'));
 };
 
@@ -187,7 +207,8 @@ const createRawEmojiHtml = (
 	isRequest = false,
 ) => createEmojiHtml(
 	`custom-${userId}`,
-	(isRequest ? 'requests/' : '') + emojiFileName);
+	(isRequest ? 'requests/' : '') + emojiFileName
+);
 
 const createPendingEmojiRequestHtml = (userId: string, emojiFileName: string, isBroadcast = false) => {
 	const username = getUsername(userId);
@@ -262,7 +283,8 @@ const createRawStickerHtml = (
 	isRequest = false,
 ) => createStickerHtml(
 	`custom-${userId}`,
-	(isRequest ? 'requests/' : '') + stickerFileName);
+	(isRequest ? 'requests/' : '') + stickerFileName
+);
 
 const createPendingStickerRequestHtml = (userId: string, stickerFileName: string, isBroadcast = false) => {
 	const username = getUsername(userId);
@@ -312,7 +334,7 @@ const TITLE_USER_INELIGIBLE = `You are not eligible for a custom title. You must
 const TITLE_USER_UNSET = 'You do not have a custom title set.';
 const TITLE_INVALID = 'Your custom title must be between 1 and 18 characters long.';
 
-type Title = { title: string };
+interface Title { title: string }
 type TitleConfig = Record<string, Title>;
 
 const titles: TitleConfig = JSON.parse(
@@ -345,7 +367,7 @@ const getBaseUrl = (pokemonMod: string) => baseUrls[pokemonMod] || baseUrls.clov
 
 const getFlairUrl = (pokemonId: string, pokemonMod: string) => `${getBaseUrl(pokemonMod)}/${pokemonId}.png`;
 
-type Flair = { pokemonId: string, pokemonMod: string, heightOffset: number };
+interface Flair { pokemonId: string; pokemonMod: string; heightOffset: number }
 type FlairConfig = Record<string, Flair>;
 
 const flairs: FlairConfig = JSON.parse(
@@ -368,7 +390,7 @@ const BACKGROUND_USER_INELIGIBLE = `You are not eligible for a custom background
 const BACKGROUND_USER_UNSET = 'You do not have a custom background set.';
 const BACKGROUND_INVALID = 'Your custom background must be a color. Try a hex value.';
 
-type Background = { r: number, g: number, b: number };
+interface Background { r: number; g: number; b: number }
 type BackgroundConfig = Record<string, Background>;
 
 const backgrounds: BackgroundConfig = JSON.parse(
@@ -377,6 +399,21 @@ const backgrounds: BackgroundConfig = JSON.parse(
 
 const saveBackgrounds = () => {
 	FS('config/chat-plugins/custom-background.json').writeUpdate(() => JSON.stringify(backgrounds));
+	updateCss();
+};
+
+/* Chat background color logic */
+const CHAT_BACKGROUND_MINIMUM_TOUR_WINS = 6;
+const CHAT_BACKGROUND_USER_INELIGIBLE = `You are not eligible for a custom chat background. You must have at least ${CHAT_BACKGROUND_MINIMUM_TOUR_WINS} tour wins.`;
+const CHAT_BACKGROUND_USER_UNSET = 'You do not have a custom chat background set.';
+const CHAT_BACKGROUND_INVALID = 'Your custom chat background must be a color. Try a hex value.';
+
+const chatBackgrounds: BackgroundConfig = JSON.parse(
+	FS('config/chat-plugins/custom-chat-background.json').readIfExistsSync() || "{}"
+);
+
+const saveChatBackgrounds = () => {
+	FS('config/chat-plugins/custom-chat-background.json').writeUpdate(() => JSON.stringify(chatBackgrounds));
 	updateCss();
 };
 
@@ -407,16 +444,16 @@ export const commands: Chat.ChatCommands = {
 			async request(target, room, user) {
 				try {
 					const canHaveAvatar = hasTourWins(AVATAR_MINIMUM_TOUR_WINS, user) || Config.customavatars?.[user.id] !== undefined;
-	
+
 					if (!canHaveAvatar) {
 						return this.errorReply(AVATAR_USER_INELIGIBLE);
 					}
-	
+
 					const imageUrl = target.trim();
 					const imageResult = await Image.downloadImageWithVerification(imageUrl, {
 						validTypes: ['png', 'gif'],
-						maxDimensions: { width: 80, height: 80 },
-						minDimensions: { width: 80, height: 80 },
+						maxDimensions: {width: 80, height: 80},
+						minDimensions: {width: 80, height: 80},
 						fileSize: 200000,
 					});
 
@@ -425,15 +462,15 @@ export const commands: Chat.ChatCommands = {
 					}
 
 					const {image, type} = imageResult;
-	
+
 					try {
 						const fileName = `${user.id}.${type}`;
 						await FS(`./config/avatars/requests/${fileName}`).write(image);
-	
+
 						updateAvatarStatus(user.id, {requestedAvatar: fileName});
-	
+
 						notifyAvatarStaff(user.id, fileName);
-	
+
 						return this.sendReplyBox(`Requested: ${createRawAvatarHtml(fileName, true)}`);
 					} catch (error) {
 						return this.errorReply(AVATAR_ERROR_WRITING_IMAGE);
@@ -446,13 +483,13 @@ export const commands: Chat.ChatCommands = {
 			showapproved() {
 				this.runBroadcast();
 				this.checkCan('avatar');
-	
+
 				const avatarList = Object.entries(avatars).filter(([userId, avatarStatus]) => avatarStatus.avatar !== undefined);
-	
+
 				if (!avatarList.length) {
 					return this.sendReplyBox('<b><u>Approved Avatars</u></b><br /><div>No approved avatars.</div>');
 				}
-	
+
 				/* eslint-disable max-len */
 				const avatarListHtml = avatarList.map(
 					([
@@ -461,105 +498,105 @@ export const commands: Chat.ChatCommands = {
 					]) => `<span style="display: inline-block;"><div>${getUsername(userId)}</div><div>${createRawAvatarHtml(avatarStatus.avatar || '')}</div></span>`
 				).join(' ');
 				/* eslint-enable max-len */
-	
+
 				return this.sendReplyBox('<b><u>Approved Avatars</u></b><br />' + avatarListHtml);
 			},
 			showrequests: 'requests',
 			requests() {
 				this.checkCan('avatar');
-	
+
 				const requestList = Object.entries(avatars)
 					.filter(([userId, avatarStatus]) => avatarStatus.requestedAvatar !== undefined);
-	
+
 				if (!requestList.length) {
 					return this.sendReplyBox('<b><u>Avatar Requests</u></b><br />' + `<div>No requests available.</div>`);
 				}
-	
+
 				const requestListHtml = requestList.map(
 					([userId, avatarStatus]) => createPendingAvatarRequestHtml(userId, avatarStatus.requestedAvatar || ''),
 				).join('<br />');
-	
+
 				return this.sendReplyBox('<b><u>Avatar Requests</u></b><br />' + requestListHtml);
 			},
 			approve(target) {
 				this.checkCan('avatar');
-	
+
 				const targetId = toID(target);
 				const avatarStatus = avatars[targetId];
-	
+
 				if (!avatarStatus || !avatarStatus.requestedAvatar) {
 					return this.errorReply(`No avatar request for ${targetId}`);
 				}
-	
+
 				updateAvatarStatus(targetId, {
 					avatar: avatarStatus.requestedAvatar,
 					requestedAvatar: undefined,
 				});
-	
+
 				FS(`./config/avatars/requests/${avatarStatus.requestedAvatar}`)
 					.renameSync(`./config/avatars/${avatarStatus.requestedAvatar}`);
-	
+
 				sendPM(`/html <div class="infobox"><div>Avatar approved</div><div>${createRawAvatarHtml(avatarStatus.requestedAvatar)}</div></div>`, targetId);
 				removeAvatarStaffNotificiation(targetId);
-	
+
 				return this.sendReplyBox(`<div><div>Approved avatar request of ${targetId}</div><div>${createRawAvatarHtml(avatarStatus.requestedAvatar)}</div></div>`);
 			},
 			deny(target) {
 				this.checkCan('avatar');
-	
+
 				const targetId = toID(target);
 				const avatarStatus = avatars[targetId];
-	
+
 				if (!avatarStatus || !avatarStatus.requestedAvatar) {
 					return this.errorReply(`No avatar request for ${targetId}`);
 				}
-	
+
 				updateAvatarStatus(targetId, {
 					requestedAvatar: undefined,
 				});
-	
+
 				FS(`./config/avatars/requests/${avatarStatus.requestedAvatar}`).unlinkIfExistsSync();
-	
+
 				sendPM('Your avatar request was denied.', targetId);
 				removeAvatarStaffNotificiation(targetId);
-	
+
 				return this.sendReply(`Denied avatar request of ${targetId}`);
 			},
 			delete(target, room, user) {
 				this.checkCan('avatar');
-	
+
 				const targetId = toID(target);
 				const avatarStatus = avatars[targetId];
-	
+
 				if (!avatarStatus || !avatarStatus.avatar) {
 					return this.errorReply(`No avatar for ${targetId}`);
 				}
-	
+
 				updateAvatarStatus(targetId, {
 					avatar: undefined,
 				});
-	
+
 				FS(`./config/avatars/${avatarStatus.avatar}`).unlinkIfExistsSync();
-	
+
 				sendPM('Your avatar was deleted.', targetId);
 				this.addGlobalModAction(`${user.name} deleted avatar of ${targetId}`);
-	
+
 				return this.sendReply(`Deleted avatar of ${targetId}`);
 			},
 			on(target, room, user) {
 				updateAvatarStatus(user.id, {enabled: true});
-	
+
 				return this.sendReplyBox('Enabled custom avatar.');
 			},
 			off(target, room, user) {
 				updateAvatarStatus(user.id, {enabled: false});
-	
+
 				return this.sendReplyBox('Disabled custom avatar.');
 			},
 			blobbos(target, room, user) {
 				const isInBlobbosConfig = Config.blobbosTournamentWinners && Config.blobbosTournamentWinners.includes(user.id);
 				const hasBlobbosBadge = Config.usesqlitebadges && user.badges?.some((badge) => badge.badge_id === 'blobboswinner');
-		
+
 				if (isInBlobbosConfig || hasBlobbosBadge) {
 					this.user.avatar = '#blobbos';
 					this.sendReply(`${this.tr`Avatar changed to:`}\n|raw|${createAvatarHtml('blobbos', true)}`);
@@ -586,17 +623,17 @@ export const commands: Chat.ChatCommands = {
 			async request(target, room, user) {
 				try {
 					const canHaveEmoji = hasTourWins(EMOJI_MINIMUM_TOUR_WINS, user) || Config.customemoji?.[user.id] !== undefined;
-	
+
 					if (!canHaveEmoji) {
 						return this.errorReply(EMOJI_USER_INELIGIBLE);
 					}
-	
+
 					const imageUrl = target.trim();
 					const imageResult = await Image.downloadImageWithVerification(imageUrl, {
 						validTypes: ['png', 'gif'],
 						enforceSquare: true,
-						maxDimensions: { width: 64, height: 64 },
-						minDimensions: { width: 32, height: 32 },
+						maxDimensions: {width: 64, height: 64},
+						minDimensions: {width: 32, height: 32},
 						fileSize: 200000,
 					});
 
@@ -605,15 +642,15 @@ export const commands: Chat.ChatCommands = {
 					}
 
 					const {image, type} = imageResult;
-	
+
 					try {
 						const fileName = `custom-${user.id}.${type}`;
 						await FS(`./config/emojis/requests/${fileName}`).write(image);
-	
+
 						updateEmojiStatus(user.id, {requestedEmoji: fileName});
-	
+
 						notifyEmojiStaff(user.id, fileName);
-	
+
 						return this.sendReplyBox(`Requested: ${createRawEmojiHtml(user.id, fileName, true)}`);
 					} catch (error) {
 						return this.errorReply(EMOJI_ERROR_WRITING_IMAGE);
@@ -626,13 +663,13 @@ export const commands: Chat.ChatCommands = {
 			showapproved() {
 				this.runBroadcast();
 				this.checkCan('avatar');
-	
+
 				const emojiList = Object.entries(emojis).filter(([userId, emojiStatus]) => emojiStatus.emoji !== undefined);
-	
+
 				if (!emojiList.length) {
 					return this.sendReplyBox('<b><u>Approved Emojis</u></b><br /><div>No approved emojis.</div>');
 				}
-	
+
 				/* eslint-disable max-len */
 				const emojiListHtml = emojiList.map(
 					([
@@ -641,89 +678,89 @@ export const commands: Chat.ChatCommands = {
 					]) => `<span style="display: inline-block;"><div>${getUsername(userId)}</div><div>${createRawEmojiHtml(userId, emojiStatus.emoji || '')}</div></span>`
 				).join(' ');
 				/* eslint-enable max-len */
-	
+
 				return this.sendReplyBox('<b><u>Approved Emojis</u></b><br />' + emojiListHtml);
 			},
 			showrequests: 'requests',
 			requests() {
 				this.checkCan('avatar');
-	
+
 				const emojiList = Object.entries(emojis)
 					.filter(([userId, emojiStatus]) => emojiStatus.requestedEmoji !== undefined);
-	
+
 				if (!emojiList.length) {
 					return this.sendReplyBox('<b><u>Emoji Requests</u></b><br />' + `<div>No requests available.</div>`);
 				}
-	
+
 				const requestListHtml = emojiList.map(
 					([userId, emojiStatus]) => createPendingEmojiRequestHtml(userId, emojiStatus.requestedEmoji || ''),
 				).join('<br />');
-	
+
 				return this.sendReplyBox('<b><u>Emoji Requests</u></b><br />' + requestListHtml);
 			},
 			approve(target) {
 				this.checkCan('avatar');
-	
+
 				const targetId = toID(target);
 				const emojiStatus = emojis[targetId];
-	
+
 				if (!emojiStatus || !emojiStatus.requestedEmoji) {
 					return this.errorReply(`No emoji request for ${targetId}`);
 				}
-	
+
 				updateEmojiStatus(targetId, {
 					emoji: emojiStatus.requestedEmoji,
 					requestedEmoji: undefined,
 				});
-	
+
 				FS(`./config/emojis/requests/${emojiStatus.requestedEmoji}`)
 					.renameSync(`./config/emojis/${emojiStatus.requestedEmoji}`);
-	
+
 				sendPM(`/html <div class="infobox"><div>Emoji approved</div><div>${createRawEmojiHtml(targetId, emojiStatus.requestedEmoji)}</div></div>`, targetId);
 				removeEmojiStaffNotificiation(targetId);
-	
+
 				return this.sendReplyBox(`<div><div>Approved emoji request of ${targetId}</div><div>${createRawEmojiHtml(targetId, emojiStatus.requestedEmoji)}</div></div>`);
 			},
 			deny(target) {
 				this.checkCan('avatar');
-	
+
 				const targetId = toID(target);
 				const emojiStatus = emojis[targetId];
-	
+
 				if (!emojiStatus || !emojiStatus.requestedEmoji) {
 					return this.errorReply(`No emoji request for ${targetId}`);
 				}
-	
+
 				updateEmojiStatus(targetId, {
 					requestedEmoji: undefined,
 				});
-	
+
 				FS(`./config/emojis/requests/${emojiStatus.requestedEmoji}`).unlinkIfExistsSync();
-	
+
 				sendPM('Your emoji request was denied.', targetId);
 				removeEmojiStaffNotificiation(targetId);
-	
+
 				return this.sendReply(`Denied emoji request of ${targetId}`);
 			},
 			delete(target, room, user) {
 				this.checkCan('avatar');
-	
+
 				const targetId = toID(target);
 				const emojiStatus = emojis[targetId];
-	
+
 				if (!emojiStatus || !emojiStatus.emoji) {
 					return this.errorReply(`No emoji for ${targetId}`);
 				}
-	
+
 				updateEmojiStatus(targetId, {
 					emoji: undefined,
 				});
-	
+
 				FS(`./config/emojis/${emojiStatus.emoji}`).unlinkIfExistsSync();
-	
+
 				sendPM('Your emoji was deleted.', targetId);
 				this.addGlobalModAction(`${user.name} deleted emoji of ${targetId}`);
-	
+
 				return this.sendReply(`Deleted emoji of ${targetId}`);
 			},
 			'': 'help',
@@ -753,8 +790,8 @@ export const commands: Chat.ChatCommands = {
 					const imageResult = await Image.downloadImageWithVerification(imageUrl, {
 						validTypes: ['png', 'gif'],
 						enforceSquare: true,
-						maxDimensions: { width: 320, height: 320 },
-						minDimensions: { width: 160, height: 160 },
+						maxDimensions: {width: 320, height: 320},
+						minDimensions: {width: 160, height: 160},
 						fileSize: 200000,
 					});
 
@@ -762,13 +799,13 @@ export const commands: Chat.ChatCommands = {
 						return this.errorReply(imageResult.error);
 					}
 
-					const { image, type } = imageResult;
+					const {image, type} = imageResult;
 
 					try {
 						const fileName = `custom-${user.id}.${type}`;
 						await FS(`./config/stickers/requests/${fileName}`).write(image);
 
-						updateStickerStatus(user.id, { requestedSticker: fileName });
+						updateStickerStatus(user.id, {requestedSticker: fileName});
 
 						notifyStickerStaff(user.id, fileName);
 
@@ -902,17 +939,17 @@ export const commands: Chat.ChatCommands = {
 		title: {
 			set(target, room, user) {
 				const canHaveTitle = hasTourWins(TITLE_MINIMUM_TOUR_WINS, user) || Config.customtitle?.[user.id] !== undefined;
-	
+
 				if (!canHaveTitle) {
 					return this.errorReply(TITLE_USER_INELIGIBLE);
 				}
-	
+
 				const title = formatTitle(target);
 				if (title.length < 1 || title.length > 18) return this.errorReply(TITLE_INVALID);
-	
+
 				titles[user.id] = {title};
 				saveTitles();
-	
+
 				this.sendReply(`|raw| Your title was successfully set. Log in again for it to appear. Title: ${title}`);
 			},
 			unset(target, room, user) {
@@ -935,18 +972,18 @@ export const commands: Chat.ChatCommands = {
 			);
 		},
 		flair: {
-			async set(target, room, user) {	
+			async set(target, room, user) {
 				const canHaveFlair = hasTourWins(FLAIR_MINIMUM_TOUR_WINS, user) || Config.customflair?.[user.id] !== undefined;
-	
+
 				if (!canHaveFlair) {
 					return this.errorReply(FLAIR_USER_INELIGIBLE);
 				}
-	
+
 				const [pokemon, pokemonMod, heightInput] = target.split(',');
 				const flairUrl = getFlairUrl(toID(pokemon), toID(pokemonMod));
-	
+
 				let heightOffset = parseInt(heightInput);
-	
+
 				if (Number.isNaN(heightOffset)) {
 					heightOffset = defaultHeight;
 				} else if (Math.abs(heightOffset) > maxHeightChange) {
@@ -954,16 +991,16 @@ export const commands: Chat.ChatCommands = {
 				} else {
 					heightOffset = defaultHeight + Math.trunc(heightOffset);
 				}
-	
+
 				try {
 					await Net(flairUrl).get();
 				} catch (e) {
 					return this.errorReply(getInvalidFlairErrorMessage(pokemonMod, pokemon));
 				}
-	
+
 				flairs[user.id] = {pokemonId: toID(pokemon), pokemonMod: toID(pokemonMod), heightOffset};
 				saveFlairs();
-	
+
 				this.sendReply("|raw| Your flair was successfully set. It may take a while for it to show up. Flair:<br /><img src='" + flairUrl + "' width='40' height='30'>");
 			},
 			unset(target, room, user) {
@@ -1035,9 +1072,9 @@ export const commands: Chat.ChatCommands = {
 		bg: 'background',
 		backgrounds: 'background',
 		background: {
-			set(target, room, user) {	
+			set(target, room, user) {
 				const canHaveBackground = hasTourWins(BACKGROUND_MINIMUM_TOUR_WINS, user) || Config.custombackground?.[user.id] !== undefined;
-	
+
 				if (!canHaveBackground) {
 					return this.errorReply(BACKGROUND_USER_INELIGIBLE);
 				}
@@ -1078,14 +1115,57 @@ export const commands: Chat.ChatCommands = {
 		help() {
 			return this.parse('/help custom');
 		},
+		chatbg: 'background',
+		chatbackgrounds: 'chatbackground',
+		chatbackground: {
+			set(target, room, user) {
+				const canHaveBackground = hasTourWins(CHAT_BACKGROUND_MINIMUM_TOUR_WINS, user) || Config.custombackground?.[user.id] !== undefined;
+
+				if (!canHaveBackground) {
+					return this.errorReply(CHAT_BACKGROUND_USER_INELIGIBLE);
+				}
+
+				const color = parseColor(target.trim());
+
+				if (!color.rgb) return this.errorReply(CHAT_BACKGROUND_INVALID);
+
+				chatBackgrounds[user.id] = {
+					r: color.rgb[0],
+					g: color.rgb[1],
+					b: color.rgb[2],
+				};
+				saveChatBackgrounds();
+
+				this.sendReply("|raw| Your chat background was successfully set. It may take a while for it to show up.");
+			},
+			unset(target, room, user) {
+				if (!chatBackgrounds[user.id]) return this.errorReply(CHAT_BACKGROUND_USER_UNSET);
+
+				delete chatBackgrounds[user.id];
+				saveChatBackgrounds();
+
+				this.sendReply('|raw| Your chat background was successfully unset. It may take a while for it to dissapear.');
+			},
+			'': 'help',
+			help() {
+				return this.parse('/help custom chatbackground');
+			},
+		},
+		chatbackgroundhelp() {
+			this.sendReplyBox(
+				`<code>/custom chatbackground set [hex color]</code>: sets your user chat background color to the specified color.<br />` +
+				`<code>/custom chatbackground unset</code>: removes your user chat background color.`
+			);
+		},
 	},
 	customhelp() {
 		this.sendReplyBox(
 			`<code>/custom avatar</code>: commands related to custom avatars. Try <code>/help custom avatar</code> for details. ${AVATAR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom title</code>: commands related to custom titles. Try <code>/help custom title</code> for details. ${TITLE_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom flair</code>: commands related to custom flairs. Try <code>/help custom flair</code> for details. ${FLAIR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
-			`<code>/custom color</code>: commands related to custom user colors. Try <code>/help custom color</code> for details. ${NAME_COLOR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
+			`<code>/custom color</code>: commands related to custom user colors. Try <code>/help custom color</code> for details. ${NAME_COLOR_MINIMUM_TOUR_WINS}C or more tour wins required to use.<br />` +
 			`<code>/custom background</code>: commands related to custom background colors. Try <code>/help custom background</code> for details. ${BACKGROUND_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
+			`<code>/custom chatbackground</code>: commands related to custom chat background colors. Try <code>/help custom chatbackground</code> for details. ${CHAT_BACKGROUND_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom emoji</code>: commands related to custom emojis. Try <code>/help custom emoji</code> for details. ${EMOJI_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom sticker</code>: commands related to custom stickers. Try <code>/help custom sticker</code> for details. ${STICKER_MINIMUM_TOUR_WINS} or more tour wins required to use.`
 		);
@@ -1104,13 +1184,13 @@ export const loginfilter: Chat.LoginFilter = user => {
 	}
 };
 
-const customEmojiRegex = /\:\!\:/g;
+const customEmojiRegex = /:!:/g;
 
 export const chatfilter: Chat.ChatFilter = (message, user) => {
 	const emojiStatus = emojis[user.id];
 	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN') && emojiStatus && emojiStatus.emoji && customEmojiRegex.test(message)) {
 		const prefix = message.startsWith('/html') ? '' : '/html ';
-		return prefix + escapeHTML(message).replace(customEmojiRegex, createEmojiHtml(`custom-${user.id}`, emojiStatus.emoji || ''))
+		return prefix + escapeHTML(message).replace(customEmojiRegex, createEmojiHtml(`custom-${user.id}`, emojiStatus.emoji || ''));
 	}
 	return message;
 };

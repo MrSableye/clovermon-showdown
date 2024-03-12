@@ -458,7 +458,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return this.chainModify([5325, 4096]);
 		},
 	},
-    radish: {  // exclusively caused by Radish Punch and Radish Body
+	radish: { // exclusively caused by Radish Punch and Radish Body
 		name: 'radish',
 		effectType: 'Status',
 		onStart(target, source, sourceEffect) {
@@ -752,6 +752,29 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'none');
 		},
 	},
+	ultrawind: {
+		name: 'Ultrawind',
+		effectType: 'Weather',
+		duration: 5,
+		onEffectivenessPriority: -1,
+		onEffectiveness(typeMod, target, type, move) {
+			if (move && move.effectType === 'Move' && move.category !== 'Status' && type === 'Flying' && typeMod > 0) {
+				this.add('-fieldactivate', 'Delta Stream');
+				return 0;
+			}
+		},
+		onFieldStart(field, source, effect) {
+			this.add('-weather', 'DeltaStream', '[from] ability: ' + effect.name, '[of] ' + source);
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'DeltaStream', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
 	acidicrainfall: {
 		name: 'Acidic Rainfall',
 		effectType: 'Weather',
@@ -887,7 +910,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'BladeRain', '[upkeep]');
 			if (this.field.isWeather('bladerain')) this.eachEvent('Weather');
 		},
-		onWeather(target) {
+		onWeather(target) {1
 			this.damage(target.baseMaxhp / 16);
 		},
 		onFieldEnd() {
@@ -903,8 +926,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onResidualOrder: 13,
 		onResidual(pokemon) {
-			this.damage(pokemon.baseMaxhp / (this.field.isWeather('bloddrain') ? 10 : 14));
-			
+			this.damage(pokemon.baseMaxhp / (this.field.getPseudoWeather('bloodrain') ? 10 : 14));
 		},
 		onEnd(pokemon) {
 			this.add('-end', pokemon, 'Bleed');
@@ -1004,7 +1026,6 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.queue.cancelAction(pokemon);
 		},
 	},
-
 	// Arceus and Silvally's actual typing is implemented here.
 	// Their true typing for all their formes is Normal, and it's only
 	// Multitype and RKS System, respectively, that changes their type,
@@ -1330,6 +1351,15 @@ export const Conditions: {[k: string]: ConditionData} = {
 					pokemon.damage(data.overkillDamage);
 					pokemon.side.removeSlotCondition(pokemon, 'overkill');
 				}
+			}
+		},
+	},
+	blobbosdragonmaid: {
+		name: 'Blobbos-Dragon Maid',
+		onAfterMoveSecondarySelf(source) {
+			if (source.speciesState.mopped) {
+				delete source.speciesState.mopped;
+				source.formeChange('blobbosdragonmaidtrue', this.effect, true);
 			}
 		},
 	},

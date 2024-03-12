@@ -450,7 +450,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		onHit(target) {
 			const noAssist = [
-				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'blazingtorque', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'combattorque', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'magicaltorque', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'noxioustorque', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'wickedtorque', 'nuswave', 'tsunami', 'blackhole', 'waveshot', 'stringout', 'helldrag', 'tractorbeam', 'vacuumstrike', 'baseballbat', 'homerunbat', 'airstamp', 'fujinwind', 'boo', 'booing', 'ghoulbreath', 'eject', 'magnetpulse', 'fishingrod', 'fairytail', 'agoraphobia', 'ancienttsunami', 'shiftingsands', 'aquariusflow', 'raremetalpoop', 'shepherdcrook', 'moonladder', 'poseidonmaelstrom', 'metalbat', 'violencegust', 'getoverhere', 'fusrodah', 'banhammer'
+				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'blazingtorque', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'combattorque', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'magicaltorque', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'noxioustorque', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'wickedtorque', 'nuswave', 'tsunami', 'blackhole', 'waveshot', 'stringout', 'helldrag', 'tractorbeam', 'vacuumstrike', 'baseballbat', 'homerunbat', 'airstamp', 'fujinwind', 'boo', 'booing', 'ghoulbreath', 'eject', 'magnetpulse', 'fishingrod', 'fairytail', 'agoraphobia', 'ancienttsunami', 'shiftingsands', 'aquariusflow', 'raremetalpoop', 'shepherdcrook', 'moonladder', 'poseidonmaelstrom', 'metalbat', 'violencegust', 'getoverhere', 'fusrodah', 'banhammer',
 			];
 
 			const moves = [];
@@ -479,7 +479,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		onHit(pokemon) {
 			const noCopycat = [
-				'struggle', 'chatter', 'mimic', 'sketch', 'metronome'
+				'struggle', 'chatter', 'mimic', 'sketch', 'metronome',
 			];
 			let move: Move | ActiveMove | null = this.lastMove;
 			if (!move) return;
@@ -512,8 +512,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				if (source?.hasAbility(['persistent', 'moreroom'])) {
 					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
-				} 
-				else if (source?.hasItem('Vr Headset')) {
+				} else if (source?.hasItem('Vr Headset')) {
 					return 8;
 				}
 				return 5;
@@ -546,8 +545,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				if (source?.hasAbility(['persistent', 'moreroom'])) {
 					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
-				} 
-				else if (source?.hasItem('Vr Headset')) {
+				} else if (source?.hasItem('Vr Headset')) {
 					return 8;
 				}
 				return 5;
@@ -581,8 +579,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				if (source?.hasAbility(['persistent', 'moreroom'])) {
 					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
-				}
-				else if (source?.hasItem('Vr Headset')) {
+				} else if (source?.hasItem('Vr Headset')) {
 					return 8;
 				}
 				return 5;
@@ -888,7 +885,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 90,
 		isNonstandard: null,
 	},
-	confide: { //TODO: Add Amplifier interaction
+	confide: { // TODO: Add Amplifier interaction
 		inherit: true,
 		type: "Sound",
 		priority: 1,
@@ -934,7 +931,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 5,
 		isNonstandard: null,
 	},
-	cosmicpower: {	//TODO: Add +1 speed boost during Starfield
+	cosmicpower: {	// TODO: Add +1 speed boost during Starfield
 		inherit: true,
 		type: "Cosmic",
 		isNonstandard: null,
@@ -981,7 +978,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "Raises one adjacent ally's Attack and Sp. Atk by 2.",
 		isNonstandard: null,
 	},
-	defendorder: { //TODO: Add Swarm interaction
+	defendorder: { // TODO: Add Swarm interaction
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1190,7 +1187,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {protect: 1, mirror: 1},
 		isNonstandard: null,
 	},
-	featherdance: { //TODO: Steady Wind interaction
+	featherdance: { // TODO: Steady Wind interaction
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1253,7 +1250,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "50% chance to lower the target's Attack by 1.",
 		isNonstandard: null,
 	},
-	firepledge: { //TODO: Secondary: 100% chance to trigger Sea of Fire 
+	firepledge: { // TODO: Secondary: 100% chance to trigger Sea of Fire
 		inherit: true,
 		basePower: 70,
 		basePowerCallback(pokemon, target, move) {
@@ -1338,7 +1335,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	forestscurse: {
 		inherit: true,
-		accuracy: 0,
+		accuracy: true,
 		isNonstandard: null,
 	},
 	freezedry: {
@@ -1416,7 +1413,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 100,
 		isNonstandard: null,
 	},
-	grasspledge: { //TODO: Secondary: 100% chance to trigger Swamp
+	grasspledge: { // TODO: Secondary: 100% chance to trigger Swamp
 		inherit: true,
 		basePower: 80,
 		basePowerCallback(pokemon, target, move) {
@@ -1443,13 +1440,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "100% chance to lower target's Defense by 1.",
 		isNonstandard: null,
 	},
-	growl: { //TODO: Amplifier interaction
+	growl: { // TODO: Amplifier interaction
 		inherit: true,
 		type: "Sound",
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
 		isNonstandard: null,
 	},
-	healorder: { //TODO: Swarm interaction
+	healorder: { // TODO: Swarm interaction
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1558,7 +1555,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				if (['dynamaxcannon', 'endeavor', 'fling', 'iceball', 'rollout'].includes(move.id)) return;
 				if (!move.flags['charge'] && !move.isZ && !move.isMax) {
 					if (source.getVolatile('instruct')) {
-						this.add('-activate', source, "  [TARGET] followed [POKEMON]'s instructions!")
+						this.add('-activate', source, "  [TARGET] followed [POKEMON]'s instructions!");
 						this.add('-end', source, 'Instruct');
 						delete source.volatiles['instruct'];
 					}
@@ -1597,7 +1594,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		isNonstandard: null,
 	},
-	irontail: { //TODO: Add Iron Dust interaction
+	irontail: { // TODO: Add Iron Dust interaction
 		inherit: true,
 		accuracy: 80,
 		flags: {contact: 1, protect: 1, mirror: 1, tail: 1},
@@ -1788,7 +1785,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 5,
 		isNonstandard: null,
 	},
-	meanlook: { //TODO: Add Graveyard interaction
+	meanlook: { // TODO: Add Graveyard interaction
 		inherit: true,
 		type: "Fear",
 		pp: 15,
@@ -1863,7 +1860,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		damage: undefined,
 		isNonstandard: null,
 	},
-	mirrorshot: { //TODO: Mirror Dimension interaction
+	mirrorshot: { // TODO: Mirror Dimension interaction
 		inherit: true,
 		type: "Glass",
 		isNonstandard: null,
@@ -1908,7 +1905,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "26% chance to sleep foe(s).",
 		isNonstandard: null,
 	},
-	moonlight: { //TODO: Eclipse, Full Moon and Fog interaction
+	moonlight: { // TODO: Eclipse, Full Moon and Fog interaction
 		inherit: true,
 		flags: {snatch: 1, heal: 1, moon: 1},
 		isNonstandard: null,
@@ -2073,7 +2070,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	octolock: {
 		inherit: true,
-		accuracy: 0,
+		accuracy: true,
 		pp: 10,
 		flags: {reflectable: 1, protect: 1, mirror: 1},
 		isNonstandard: null,
@@ -2093,7 +2090,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 0,
 		category: "Status",
-		accuracy: 0,
+		accuracy: true,
 		pp: 20,
 		flags: {snatch: 1},
 		self: undefined,
@@ -2128,8 +2125,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				if (immune.includes(pokemon.baseSpecies.baseSpecies)) {
 					this.add('-immune', pokemon);
 					result = true;
-				}
-				else if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
+				} else if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
 					this.add('-miss', source, pokemon);
 					result = true;
 				} else if (this.runEvent('TryHit', pokemon, source, move) === null) {
@@ -2394,7 +2390,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Fear",
 		isNonstandard: null,
 	},
-	screech: { //TODO: Amplifier interaction
+	screech: { // TODO: Amplifier interaction
 		inherit: true,
 		type: "Sound",
 		accuracy: 90,
@@ -2524,7 +2520,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	soak: {
 		inherit: true,
-		accuracy: 0,
+		accuracy: true,
 		onHit(target) {
 			if (!target.setType('Water')) {
 				// Soak should animate even when it fails.
@@ -2581,7 +2577,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Time",
 		isNonstandard: null,
 	},
-	spiderweb: { //TODO: Add Web Field interaction
+	spiderweb: { // TODO: Add Web Field interaction
 		inherit: true,
 		flags: {protect: 1, reflectable: 1, mirror: 1, web: 1},
 		isNonstandard: null,
@@ -2624,7 +2620,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "Traps and damages the target for 4-5 turns.",
 		secondary: null,
 	},
-	spotlight: { //TODO: Add Aura Glow interaction
+	spotlight: { // TODO: Add Aura Glow interaction
 		inherit: true,
 		onHit(target, source, move) {
 			this.boost({spd: 1}, target, source, move);
@@ -2690,7 +2686,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	strengthsap: {
 		inherit: true,
-		accuracy: 0,
+		accuracy: true,
 		flags: {protect: 1, reflectable: 1, heal: 1},
 		isNonstandard: null,
 	},
@@ -2735,7 +2731,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "26% chance to burn the target.",
 		isNonstandard: null,
 	},
-	supersonic: { //TODO: Add Amplifier interaction
+	supersonic: { // TODO: Add Amplifier interaction
 		inherit: true,
 		type: "Sound",
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
@@ -2758,7 +2754,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {protect: 1, reflectable: 1, mirror: 1, kiss: 1},
 		isNonstandard: null,
 	},
-	sweetscent: { //TODO: Add Feast interaction
+	sweetscent: { // TODO: Add Feast interaction
 		inherit: true,
 		type: "Grass",
 		boosts: {
@@ -2904,7 +2900,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 95,
 		isNonstandard: null,
 	},
-	waterpledge: { //TODO: Rainbow Interaction
+	waterpledge: { // TODO: Rainbow Interaction
 		inherit: true,
 		basePower: 80,
 		basePowerCallback(pokemon, target, move) {
@@ -5839,7 +5835,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 70,
 		isNonstandard: null,
 	},
-	// Wack moves		
+	// Wack moves
 	hijumpkick: {
 		inherit: true,
 		isNonstandard: null,
@@ -18129,7 +18125,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.debug('BP: ' + bp);
 			return bp;
 		},
-		
+
 		category: "Physical",
 		desc: "The user crashes down sending a splash flying in all directions. The heavier the user, the greater the damage.",
 		shortDesc: "The user crashes down sending a splash flying in all directions. The heavier the user, the greater the damage.",
@@ -18339,7 +18335,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Rock",
 		isNonstandard: null,
 	},
-	meltedplastic: {		/** The move already exists in 'data/moves.ts' */
+	meltedplastic: {/** The move already exists in 'data/moves.ts' */
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -18361,7 +18357,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		self: {
 			onHit(pokemon) {
-				pokemon.setType(pokemon.getTypes(true).map(type => type === "Fire" ? "???" : type));
+				pokemon.setType(pokemon.getTypes(true).map(type => type === "Grass" ? "???" : type));
 				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Uproot');
 			},
 		},
@@ -18423,7 +18419,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Normal",
-		isNonstandard: "Future",	/**TODO?: This move is perish song but in 1 turn and only affects the target... */
+		isNonstandard: "Future",	/** TODO?: This move is perish song but in 1 turn and only affects the target... */
 	},
 	nosedive: {
 		inherit: true,
@@ -18460,7 +18456,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onModifyMove(move, pokemon, target) {
 			switch (target?.effectiveWeather()) {
 			case 'sandstorm':
-				move.basePower = move.basePower * 2
+				move.basePower = move.basePower * 2;
 			}
 		},
 		secondary: null,
@@ -18686,7 +18682,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Glass",
 		isNonstandard: null,
 	},
-	mindbreak: {	
+	mindbreak: {
 		inherit: true,
 		accuracy: 60,
 		basePower: 0,
@@ -18698,7 +18694,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		onHit(pokemon) {
 			pokemon.addVolatile('confusion');
-			pokemon.trySetStatus('slp')
+			pokemon.trySetStatus('slp');
 			pokemon.addVolatile('attract');
 		},
 		onTryImmunity(target, source) {
@@ -18754,7 +18750,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'bleed',
+			status: 'psn',
+		},
+		self: {
+			volatileStatus: 'bleed',
+		},
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",	/** TODO: Code "Bleeding" */
@@ -18774,4 +18777,4 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Chaos",
 		isNonstandard: "Future",	/** TODO: Code "Bleeding" */
 	},
-}
+};
