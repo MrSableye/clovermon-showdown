@@ -23165,18 +23165,38 @@ export const Moves: {[moveid: string]: MoveData} = {
 	soulcrusher: {
 		num: 42010,
 		accuracy: 100,
-		basePower: 10,
+		basePower: 9,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Soul Crusher",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		drain: [1, 1],
+		flags: {mirror: 1},
+		breaksProtect: true,
+		infiltrates: true,
 		/* lol */
-		onBasePower(basePower, pokemon, target) {
+		damageCallback(pokemon, target) {
 			if (target.hp * 2 <= target.maxhp) {
-				return this.chainModify(999);
+				return this.clampIntRange(Math.floor(target.getUndynamaxedHP() * 999), 1);
+			}
+		},
+		onHit(target, source) {
+			if (target.hp * 2 <= target.maxhp) {
+				this.heal(Math.ceil(source.maxhp), source);
+				this.add('-activate', source, 'move: Soul Crusher');
+				const stats: BoostID[] = [];
+				let stat: BoostID;
+				for (stat in source.boosts) {
+					if (stat !== 'accuracy' && stat !== 'evasion' && source.boosts[stat] < 6) {
+						stats.push(stat);
+					}
+				}
+				if (stats.length) {
+					const randomStat = this.sample(stats);
+					const boost: SparseBoostsTable = {};
+					boost[randomStat] = 2;
+					this.boost(boost);
+				}
 			}
 		},
 		secondary: null,
