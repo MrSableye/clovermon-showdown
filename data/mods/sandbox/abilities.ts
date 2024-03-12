@@ -1459,7 +1459,19 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	madeofglass: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	atlonglast: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	capacitance: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aintnothingonnabreakmystride: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1519,10 +1531,6 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	asoneblobbostherian: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	asoneblobbosrembered: {
 		inherit: true,
 		isNonstandard: null,
@@ -1560,10 +1568,6 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	armorplate: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	asonehorse: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1700,6 +1704,18 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	supermentum: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	acupower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	assistpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rollan: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1891,6 +1907,18 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	compensate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dexterity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	vindication: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	ascension: {
 		inherit: true,
 		isNonstandard: null,
@@ -1932,6 +1960,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	noweaknesses: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sapiophile: {
 		inherit: true,
 		isNonstandard: null,
 	},

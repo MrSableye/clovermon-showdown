@@ -23,6 +23,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	acidicrainfall: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	acidspray: {
 		inherit: true,
 		isNonstandard: null,
@@ -3707,7 +3711,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	memejr: {
+	memepunch: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3911,10 +3915,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	faedozer: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	yiikout: {
 		inherit: true,
 		isNonstandard: null,
@@ -3944,6 +3944,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	implosion: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fullhouse: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4251,6 +4255,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	rainbowblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	hyperzone: {
 		inherit: true,
 		isNonstandard: null,
@@ -4311,7 +4319,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	susteelstrike: {
+	sussteelstrike: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4519,10 +4527,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	sussteelstrike: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	alloutirony: {
 		inherit: true,
 		isNonstandard: null,
@@ -4624,6 +4628,54 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	godotshammer: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shieldslam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psychocrush: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pacebreaker: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	speedforce: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tooslow: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	honorablekick: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aquafangs: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	reroll: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	perfectcalculation: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	despiteallmyrage: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	frytoacrisp: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	enhancedfireorbs: {
 		inherit: true,
 		isNonstandard: null,
 	},

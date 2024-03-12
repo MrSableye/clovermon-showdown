@@ -17,7 +17,7 @@ const AVATARS_FILE = 'config/avatars.json';
  * - 'example.png' - side server custom avatars in config/avatars/ in your server
  */
 type AvatarID = string;
-const AVATAR_FORMATS_MESSAGE = Config.serverid === 'showdown' ?
+const AVATAR_FORMATS_MESSAGE = Config.serverid === 'clodown' ?
 	"Custom avatars start with '#', like '#splxraiders'." :
 	"Custom avatars look like 'example.png'. Custom avatars should be put in `config/avatars/`. Your server must be registered for custom avatars to work.";
 
@@ -60,7 +60,7 @@ try {
 	FS(AVATARS_FILE).writeSync(JSON.stringify(customAvatars));
 }
 if ((Config.customavatars && Object.keys(Config.customavatars).length) || Config.allowedavatars) {
-	Monitor.log("Please remove 'customavatars' and 'allowedavatars' from Config (config/config.js). Your avatars have been migrated to the new '/addavatar' system.");
+	// Monitor.log("Please remove 'customavatars' and 'allowedavatars' from Config (config/config.js). Your avatars have been migrated to the new '/addavatar' system.");
 }
 function saveCustomAvatars(instant?: boolean) {
 	FS(AVATARS_FILE).writeUpdate(() => JSON.stringify(customAvatars), {throttle: instant ? null : 60_000});
@@ -77,7 +77,7 @@ export const Avatars = new class {
 		return validatedAvatar;
 	}
 	canUse(userid: ID, avatar: string): AvatarID | null {
-		avatar = avatar.toLowerCase().replace(/[^a-z0-9-.]+/g, '');
+		avatar = avatar.toLowerCase().replace(/[^a-z0-9-.#]+/g, '');
 		if (OFFICIAL_AVATARS.has(avatar)) return avatar;
 
 		const customs = customAvatars[userid]?.allowed;
@@ -554,16 +554,19 @@ const OFFICIAL_AVATARS_BRUMIRAGE = new Set([
 	'cynthia-masters', 'diantha', 'doctor-gen8', 'elaine', 'gloria', 'gordie', 'hilda-masters2', 'hop',
 	'irida', 'kabu', 'klara', 'koga-lgpe', 'leon', 'leon-tower', 'lian', 'lisia', 'lorelei-lgpe', 'magnolia',
 	'mai', 'marnie', 'may-contest', 'melony', 'milo', 'mina-lgpe', 'mustard', 'mustard-master', 'nessa',
-	'oleana', 'opal', 'peony', 'pesselle', 'phoebe-gen6', 'piers', 'raihan', 'rei', 'rose', 'sabi',
+	'oleana', 'opal', 'peony', 'pesselle', 'phoebe-gen6', 'piers', 'raihan', 'rei', 'rose', 'sabi', 'sada-ai',
 	'sanqua', 'shielbert', 'sonia', 'sonia-professor', 'sordward', 'sordward-shielbert', 'tateandliza-gen6',
-	'victor', 'victor-dojo', 'volo', 'yellgrunt', 'yellgruntf', 'zisu',
+	'turo-ai', 'victor', 'victor-dojo', 'volo', 'yellgrunt', 'yellgruntf', 'zisu',
 ]);
 
 const OFFICIAL_AVATARS_ZACWEAVILE = new Set([
 	'alain', 'charm', 'coin', 'courtney', 'dulse', 'elio-usum', 'emma', 'essentia', 'gloria-dojo',
 	'magmagrunt', 'magmagruntf', 'marnie-league', 'morgan', 'phyco', 'selene-usum', 'shauna', 'skullgrunt',
 	'skullgruntf', 'soliera', 'zossie', 'arven-v', 'dexio-gen6', 'flannery-gen6', 'green', 'grusha', 'mela',
-	'norman-gen6', 'penny', 'sina-gen6', 'steven-gen6',
+	'norman-gen6', 'penny', 'sina-gen6', 'steven-gen6', 'atticus', 'eri', 'giacomo', 'ortega',
+	'ginchiyo-conquest', 'hanbei-conquest', 'hero-conquest', 'hero2-conquest', 'heroine-conquest',
+	'heroine2-conquest', 'kunoichi-conquest', 'kunoichi2-conquest', 'masamune-conquest', 'nobunaga-conquest',
+	'oichi-conquest', 'ranmaru-conquest', 'serena-anime',
 ]);
 
 const OFFICIAL_AVATARS_KYLEDOVE = new Set([
@@ -616,7 +619,11 @@ const OFFICIAL_AVATARS_KYLEDOVE = new Set([
 	'akari-isekai', 'allister-masters', 'arven-s', 'brassius', 'clavell-s', 'cynthia-anime2', 'cynthia-masters3', 'florian-s',
 	'geeta', 'hassel', 'hilda-masters3', 'iono', 'iris-masters', 'jacq', 'juliana-s', 'katy', 'kofu', 'larry', 'miriam',
 	'nemona-v', 'poppy', 'red-masters2', 'rei-isekai', 'rika', 'rosa-masters2', 'ryme', 'sada', 'stargrunt-s', 'stargrunt-v',
-	'stargruntf-s', 'stargruntf-v', 'steven-masters3', 'tulip', 'turo', 'tyme', 'wally-masters',
+	'stargruntf-s', 'stargruntf-v', 'steven-masters3', 'tulip', 'turo', 'tyme', 'wally-masters', 'amelia-shuffle',
+	'beauty-gen9', 'bede-masters', 'calem-masters', 'clerk-unite', 'dawn-masters3', 'dendra', 'diantha-masters2',
+	'erbie-unite', 'hilbert-masters2', 'hop-masters', 'jasmine-masters2', 'lisia-masters', 'marnie-masters3', 'matt',
+	'n-masters3', 'paulo-masters', 'phorus-unite', 'pokemaniac-gen9', 'serena-masters3', 'tabitha', 'tina-masters', 'trevor',
+	'whitney-masters', 'youngster-gen9', 'zirco-unite',
 ]);
 
 const OFFICIAL_AVATARS_HYOOPPA = new Set([
@@ -752,7 +759,73 @@ export const OFFICIAL_CLODOWN_AVATARS = new Set([
 	'cap-sunny',
 	'cap-batherm',
 	'cap-batherf',
-	'cap-fucker'
+	'cap-fucker',
+	/* Wack Avatars*/
+	'wack-mabe',
+	'wack-heli',
+	'wack-spook',
+	'wack-spook-resprite',
+	'wack-reaf',
+	'wack-zaydolf',
+	'wack-zaydolf2',
+	'wack-zaydolffuhrer',
+	'wack-zaydolf-resprite',
+	'wack-zaydolf2-resprite',
+	'wack-zaydolf3-resprite',
+	'wack-zaydolffuhrer-resprite',
+	'wack-anne',
+	'wack-anne2',
+	'wack-anne-resprite',
+	'wack-anne2-resprite',
+	'wack-crost',
+	'wack-lomar',
+	'wack-lomar-resprite',
+	'wack-claire',
+	'wack-claire-resprite',
+	'wack-vlad',
+	'wack-vlad-resprite',
+	'wack-duette',
+	'wack-duette-resprite',
+	'wack-jeevestobs',
+	'wack-jeevestobs-resprite',
+	'wack-hiroshima',
+	'wack-hiroshima-resprite',
+	'wack-merlin',
+	'wack-wackgruntm',
+	'wack-wackgruntf',
+	'wack-wackgruntm-resprite',
+	'wack-wackgruntf-resprite',
+	'wack-twaquaforcem-resprite',
+	'wack-twaquaforcef-resprite',
+	'wack-eva',
+	'wack-zyklon',
+	'wack-zyklon-resprite',
+	'wack-manglo',
+	'wack-shlomo',
+	'wack-shlomo-resprite',
+	'wack-silverman',
+	'wack-silverman-resprite',
+	'wack-goldberg',
+	'wack-goldberg-resprite',
+	'wack-vira',
+	'wack-vira-resprite',
+	'wack-cybrus',
+	'wack-cybrus-resprite',
+	'wack-stella',
+	'wack-stella-resprite',
+	'wack-neil',
+	'wack-yawen',
+	'wack-yawen-resprite',
+	'wack-transformedm',
+	'wack-transformedf',
+	'wack-transformedm-resprite',
+	'wack-transformedf-resprite',
+	'wack-gowen',
+	'wack-gowen-resprite',
+	'wack-moonman',
+	'wack-moonman-resprite',
+	'wack-marsshade',
+	'wack-him'
 ]);
 
 for (const avatar of OFFICIAL_AVATARS_BELIOT419) OFFICIAL_AVATARS.add(avatar);
@@ -883,6 +956,7 @@ export const commands: Chat.ChatCommands = {
 		`/groupavatar [username], [avatar] - Gives a user an allowed (group) avatar.`,
 		`/removeavatar [username], [avatar] - Removes access to an avatar from a user.`,
 		`/removeavatar [username] - Removes access to all custom avatars from a user.`,
+		`/moveavatars [oldname], [newname] - Moves access to all custom avatars from oldname to newname.`,
 		AVATAR_FORMATS_MESSAGE,
 	],
 

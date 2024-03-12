@@ -437,6 +437,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	frostysurge: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	electromorphosis: {
 		inherit: true,
 		isNonstandard: null,
@@ -525,6 +529,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	gogetter: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	homogeneity: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	immortality: {
 		inherit: true,
 		isNonstandard: null,
@@ -586,6 +598,119 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	wonderland: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	malevolentsoul: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cellconstruct: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sandspit: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mirrorarmor: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	thermalfumes: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	plus: {
+		inherit: true,
+		isNonstandard: null,
+		onAfterMove(target, source, move) {
+			if (move.type !== 'Electric') return;
+			if (this.randomChance(1, 4)) {
+				const stats: BoostID[] = [];
+				let stat: BoostID;
+				for (stat in target.boosts) {
+					if (stat === 'accuracy' || stat === 'evasion') continue;
+					if (target.boosts[stat] < 6) {
+						stats.push(stat);
+					}
+				}
+				if (stats.length) {
+					const randomStat = this.sample(stats);
+					const boost: SparseBoostsTable = {};
+					boost[randomStat] = 1;
+					this.boost(boost);
+				}
+			}
+		},
+	},
+	minus: {
+		inherit: true,
+		isNonstandard: null,
+		onTryBoost(boost, target, source, effect) {
+			let showMsg = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! < 0) {
+					delete boost[i];
+					showMsg = true;
+				}
+			}
+			if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+				this.add("-fail", target, "unboost", "[from] ability: Minus", "[of] " + target);
+			}
+		},
+	},
+	fireaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wateraffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	electricityaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	strengthaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	poisonaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rockaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	flightaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	iceaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lightaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	parasiteaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+
+brainwash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	medusascurse: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sweetdreams: {
 		inherit: true,
 		isNonstandard: null,
 	},

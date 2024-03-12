@@ -37,4 +37,8 @@ export const AbilitiesText: {[k: string]: ModdedAbilityText} = {
 		desc: "Changes weather when using certain moves relating to weather.",
 		shortDesc: "Changes weather to benefit certain moves.",
 	},
+	snowwarning: {
+		inherit: true,
+		shortDesc: "On switch-in, this Pokemon summons Hail.",
+	},
 };

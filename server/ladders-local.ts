@@ -64,7 +64,7 @@ export class LadderStore {
 		try {
 			const data = await FS('config/ladders/' + this.formatid + '.tsv').readIfExists();
 			const ladder: LadderRow[] = [];
-			for (const dataLine of data.split('\n')) {
+			for (const dataLine of data.split('\n').slice(1)) {
 				const line = dataLine.trim();
 				if (!line) continue;
 				const row = line.split('\t');
@@ -195,6 +195,23 @@ export class LadderStore {
 			row[5]++; // tie
 		}
 		row[6] = '' + new Date();
+	}
+
+	static async changeName(oldName: string, newName: string): Promise<LadderRow[]> {
+		const ratings: LadderRow[] = [];
+		for (const format of Dex.formats.all()) {
+			if (format.searchShow) {
+				const store = new LadderStore(format.id);
+				const ladder = await store.getLadder();
+				const userIndex = store.indexOfUser(oldName, false);
+				if (userIndex < 0) continue;
+				ratings.push(ladder[userIndex]);
+				ladder[userIndex][0] = toID(newName);
+				ladder[userIndex][2] = newName;
+				await store.save();
+			}
+		}
+		return ratings;
 	}
 
 	/**

@@ -94,10 +94,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 69,
 		},
 	},
-	sableye: {
-		inherit: true,
-		abilities: {0: "Keen Eye", 1: "Prankster"},
-	},
 	pantherk: {
 		inherit: true,
 		baseStats: {
@@ -108,5 +104,79 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spd: 75,
 			spe: 75,
 		},
+	},
+	bluduck: {
+		inherit: true,
+		abilities: {0: "Swift Swim", H: "Analytic", S: "Synchronize"},
+		baseStats: {
+			hp: 82,
+			atk: 80,
+			def: 80,
+			spa: 188,
+			spd: 92,
+			spe: 78,
+		},
+	},
+	platylics: {
+		inherit: true,
+		abilities: {0: "Oblivious", H: "Healer", S: "Synchronize"},
+		baseStats: {
+			hp: 188,
+			atk: 67,
+			def: 79,
+			spa: 101,
+			spd: 69,
+			spe: 96,
+		},
+	},
+	tarquail: {
+		inherit: true,
+		abilities: {0: "Arena Trap", 1: "Gooey", H: "Sticky Hold", S: "Earth Eater"},
+	},
+	glaciun: {
+		inherit: true,
+		abilities: {0: "Pressure", H: "Technician", S: "Ice Scales"},
+	},
+	mammount: {
+		inherit: true,
+		abilities: {0: "Thick Fat", 1: "Ice Body", H: "Shaved Ice", S: "Rough Skin"},
+	},
+	disbeary: {
+		inherit: true,
+		abilities: {0: "Temperamental", H: "Super Luck", S: "Fairy Aura"},
+	},
+	disbearyebil: { // surely this wont be broken with brutal punishment :clueless:
+		inherit: true, //surely giving the disbearies their respective auras wont be broken :clueless:
+		requiredAbility: undefined,
+		battleOnly: undefined, // PLEASE WORK THIS TIME.
+		abilities: {0: "Temperamental", H: "Tough Claws", S: "Dark Aura"}, // surely :clueless:
+	},
+	yanorm: {
+		inherit: true,
+		abilities: {0: "Shed Skin", H: "Jihad", S: "Pickpocket"},
+	},
+	yancoon: {
+		inherit: true,
+		abilities: {0: "Simple", H: "Flash Fire", S: "Pickpocket"},
+	},
+	yanture: {
+		inherit: true,
+		abilities: {0: "Tinted Lens", H: "Numero Uno", S: "Pickpocket"},
+	},
+	purplegoat: {
+		inherit: true,
+		abilities: {0: "Fluffy", 1: "Shadow Tag", H: "Levitate", S: "Sharpness"},
+	},
+	sableye: {
+		inherit: true,
+		abilities: {0: "Prankster", H: "Stall", S: "Keen Eye"},
+	},
+	weedle: {
+		inherit: true,
+		abilities: {0: "Shield Dust", 1: "Shed Skin", H: "Run Away", S: "Mind Zap"},
+	},
+	waterweedle: {
+		inherit: true,
+		abilities: {0: "Water Absorb", 1: "Water Veil", H: "Shield Dust", S: "Run Away"},
 	},
 };

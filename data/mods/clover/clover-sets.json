@@ -64,7 +64,7 @@
 				"Breedject",
 				"Ackbar",
 				"Muhammad",
-				"Lizakbar",
+				"La Bomba",
 				"Lizakbar",
 				"Lizakbar",
 				"Lizakbar",
@@ -753,7 +753,33 @@
 							"knockoff"
 					 ],
 					 "level":84
-				}
+				},
+				{
+					"abilities":[
+						   "protean"
+					],
+					"items":[
+						   "flyinggem"
+					],
+					"moves":[
+						   "acrobatics",
+						   "earthquake",
+						   "rapidspin",
+						   "uturn",
+						   "machpunch",
+						   "closecombat",
+						   "firepunch",
+						   "thunderpunch",
+						   "icepunch",
+						   "knockoff",
+						   "bulletpunch",
+						   "poisonjab"
+					],
+					"lockedMoves":[
+						"acrobatics"
+				 ],
+					"level":84
+			   }
 		 ]
 	},
 	"finasoven":{
@@ -3049,7 +3075,8 @@
 				},
 				{
 					 "abilities":[
-							"noguard"
+							"noguard",
+							"stinkbomb"
 					 ],
 					 "items":[
 							"choicescarf"
@@ -3079,7 +3106,7 @@
 		 "sets":[
 				{
 					 "abilities":[
-							"defiant"
+							"fuku"
 					 ],
 					 "items":[
 							"leftovers"
@@ -3089,7 +3116,9 @@
 							"slackoff",
 							"substitute",
 							"earthquake",
-							"knockoff"
+							"knockoff",
+							"uturn",
+							"rapidspin"
 					 ],
 					 "level":84
 				}
@@ -6876,6 +6905,62 @@
 				}
 		 ]
 	},
+	"heliofug":{
+		"nicknames":[
+			   "rainfug",
+			   "imhelping",
+			   "hellfug",
+			   "heliofug"
+		],
+		"sets":[
+			   {
+					"abilities":[
+						   "drizzle"
+					],
+					"items":[
+						   "assaultvest"
+					],
+					"moves":[
+						   "dracometeor",
+						   "weatherball",
+						   "hurricane",
+						   "thunder"
+						   
+					],
+					"level":72
+			   },
+			   {
+					"abilities":[
+						   "drought"
+					],
+					"items":[
+						   "leftovers"
+					],
+					"moves":[
+						   "willowisp",
+						   "roost",
+						   "defog",
+						   "dragontail"
+					],
+					"level":72
+			   },
+			   {
+					"abilities":[
+						   "drought"
+					],
+					"items":[
+						   "leftovers"
+					],
+					"moves":[
+						   "lavaplume",
+						   "torment",
+						   "substitute",
+						   "protect"
+					],
+					"level":72
+			   }
+		]
+   },
 	"ruselamp":{
 		 "nicknames":[
 				":v)",
@@ -6980,6 +7065,7 @@
 	"hohohoming":{
 		 "nicknames":[
 				"CruzCtrl",
+				"MissleHoe",
 				"Hohohoming",
 				"Hohohoming",
 				"Hohohoming"
@@ -7021,6 +7107,22 @@
 					 ],
 					 "level":80
 				},
+				{
+					"abilities":[
+						   "slushrush"
+					],
+					"items":[
+						   "lifeorb"
+					],
+					"moves":[
+						   "blizzard",
+						   "hail",
+						   "earthpower",
+						   "focusblast"
+					
+					],
+					"level":80
+			   },
 				{
 					 "abilities":[
 							"technician"
@@ -8390,7 +8492,7 @@
 				"BANNED",
 				"SHADOWBANNED",
 				"ProtoMagic",
-				"Banageddon",
+				"SupaJannie",
 				"Banageddon",
 				"Banageddon",
 				"Banageddon",
@@ -8446,7 +8548,23 @@
 							"icehammer"
 					 ],
 					 "level":80
-				}
+				},
+				{
+					"abilities":[
+						   "moldbreaker"
+					],
+					"items":[
+						   "leftovers"
+					],
+					"moves":[
+						   "banhammer",
+						   "knockoff",
+						   "slackoff",
+						   "mop",
+						   "teleport"
+					],
+					"level":80
+			   }
 		 ]
 	},
 	"acufront":{
@@ -8459,19 +8577,48 @@
 		 "sets":[
 				{
 					 "abilities":[
-							"forecast"
+							"presage"
 					 ],
 					 "items":[
 							"choicescarf"
 					 ],
 					 "moves":[
-							"voltswitch",
-							"shadowball",
-							"focusblast",
+							"blizzard",
+							"solarbeam",
+							"thunder",
 							"fireblast"
 					 ],
-					 "lockedMoves":[
-							"boomburst"
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"presage"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"slipturn",
+							"voltswitch",
+							"tailwind",
+							"triattack"
+					 ],
+					 
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"presage"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"defog",
+							"morningsun",
+							"heatwave",
+							"toxic",
+							"clearsmog"
 					 ],
 					 "level":84
 				},
@@ -8480,54 +8627,13 @@
 							"forecast"
 					 ],
 					 "items":[
-							"damprock"
+							"assaultvest"
 					 ],
 					 "moves":[
-							"hurricane",
 							"thunder",
-							"weatherball",
-							"boomburst"
-					 ],
-					 "lockedMoves":[
-							"raindance"
-					 ],
-					 "level":84
-				},
-				{
-					 "abilities":[
-							"forecast"
-					 ],
-					 "items":[
-							"heatrock"
-					 ],
-					 "moves":[
+							"earthpower",
 							"solarbeam",
-							"weatherball",
-							"icebeam",
-							"thunderbolt",
-							"boomburst"
-					 ],
-					 "lockedMoves":[
-							"sunnyday"
-					 ],
-					 "level":84
-				},
-				{
-					 "abilities":[
-							"forecast"
-					 ],
-					 "items":[
-							"icyrock"
-					 ],
-					 "moves":[
-							"thunderbolt",
-							"fireblast",
-							"boomburst",
-							"focusblast"
-					 ],
-					 "lockedMoves":[
-							"hail",
-							"blizzard"
+							"slipturn"
 					 ],
 					 "level":84
 				}
@@ -9048,7 +9154,8 @@
 	"biteki":{
 		 "nicknames":[
 				"Shiteki",
-				"Biteki"
+				"Biteki",
+				"Finteki"
 		 ],
 		 "sets":[
 				{
@@ -9065,7 +9172,8 @@
 							"icebeam",
 							"erosionwave",
 							"dazzlinggleam",
-							"heatwave"
+							"heatwave",
+							"slipturn"
 					 ],
 					 "level":84
 				},
@@ -9086,6 +9194,20 @@
 							"earthpower",
 							"thunderbolt"
 					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"gradient"
+					 ],
+					 "items":[
+							"choicescarf"
+					 ],
+					 "moves":[
+							"slipturn",
+							"surf",
+							"psychoboost",
+							"revelationdance"					 ],
 					 "level":84
 				}
 		 ]
@@ -9282,6 +9404,48 @@
 				}
 		 ]
 	},
+	"narwhiz":{
+		"nicknames":[
+			   "DaWiz",
+			   "Narwhiz",
+			   "Narwhiz",
+			   "Narwhiz"
+		],
+		"sets":[
+			   {
+					"abilities":[
+						   "magician"
+					],
+					"items":[
+						   "watergem"
+					],
+					"moves":[
+						   "aquatail",
+						   "coil",
+						   "pixiepummel",
+						   "megahorn"
+						  
+					],
+					"level":72
+			   },
+			   {
+				"abilities":[
+					   "magician"
+				],
+				"items":[
+					   "watergem"
+				],
+				"moves":[
+					   "sparklingaria",
+					   "lunardance",
+					   "trick",
+					   "icebeam"
+					  
+				],
+				"level":72
+		   }
+		]
+   },
 	"spookscare":{
 		 "nicknames":[
 				"Sandertale",
@@ -9368,7 +9532,7 @@
 		 "nicknames":[
 				"Sandertale",
 				"Varg",
-				"Goryannus",
+				">Gory Anus",
 				"Goryannus",
 				"Goryannus",
 				"Goryannus",
@@ -9535,6 +9699,156 @@
 				}
 		 ]
 	},
+
+	"admoot":{
+		"nicknames":[
+				"Admoot",
+			   "Admoot",
+			   "Admoot",
+			   "Admoot"
+		],
+		"sets":[
+			   {
+					
+					"items":[
+						   "lifeorb",
+						   "leftovers"
+					],
+					"moves":[
+						"milkdrink",
+						"moonblast",
+						"flamethrower",
+						"earthpower",
+						"nastyplot"
+					],
+					"level":76
+			   },
+			   {
+					"abilities":[
+						   "adminabuse"
+					],
+					"items":[
+						   "choiceband",
+						   "lifeorb"
+					],
+					"moves":[
+						   "banhammer",
+						   "uturn",
+						   "woodhammer",
+						   "dragonhammer",
+						   "icehammer",
+						   "hammerarm"
+					],
+					"level":76
+			   },
+			   {
+					"abilities":[
+						   "berserk"
+					],
+					"items":[
+						   "leftovers"
+					],
+					"moves":[
+						   "moonblast",
+						   "earthpower",
+						   "fireblast",
+						   "milkdrink"
+					],
+					"level":76
+			   },
+			   {
+				
+				"items":[
+					   "leftovers"
+				],
+				"moves":[
+					   "uturn",
+					   "mop",
+					   "knockoff",
+					   "milkdrink"
+				],
+				"level":76
+		   }
+		]
+   },
+   "hailsanta":{
+	"nicknames":[
+			"Sieg Hail",
+		   "KrisKringel",
+		   "Hailsanta",
+		   "Hailsanta"
+	],
+	"sets":[
+		   {
+			"abilities":[
+				"snowcloak"
+		 ],
+				"items":[
+					   "lifeorb",
+					   "leftovers"
+				],
+				"moves":[
+					"milkdrink",
+					"earthpower",
+					"slipturn",
+					"icebeam",
+					"closecombat",
+					"honeclaws",
+					"blizzard",
+					"knockoff",
+					"iciclecrash"
+				],
+				"level":80
+		   },
+		   {
+				"abilities":[
+					   "snowwarning"
+				],
+				"items":[
+					   "lightclay",
+					   "lifeorb"
+				],
+				"moves":[
+					   "blizzard",
+					   "earthpower",
+					   "slipturn",
+					   "auroraveil",
+					   "focusblast"
+				],
+				"level":76
+		   },
+		   {
+				"abilities":[
+					   "snowcloak"
+				],
+				"items":[
+					   "choicescarf"
+				],
+				"moves":[
+					   "slipturn",
+					   "earthpower",
+					   "focusblast",
+					   "icebeam"
+				],
+				"level":80
+		   },
+		   {
+			"abilities":[
+				"snowcloak"
+		 ],
+			"items":[
+				   "leftovers"
+			],
+			"moves":[
+				   "honeclaws",
+				   "iciclecrash",
+				   "knockoff",
+				   "stoneedge"
+			],
+			"level":80
+	   }
+	]
+},
 	"deisnutz":{
 		 "nicknames":[
 				"NUT DELUXE",

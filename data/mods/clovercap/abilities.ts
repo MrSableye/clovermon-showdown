@@ -69,6 +69,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	purifyingsalt: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	ripen: {
 		inherit: true,
 		isNonstandard: null,
@@ -223,6 +227,46 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	detonator: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	battlearmor: {
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'recoil') {
+				if (!this.activeMove) throw new Error("Battle.activeMove is null");
+				if (this.activeMove.id !== 'struggle') return null;
+			}
+		},
+		onCriticalHit: false,
+		isBreakable: true,
+		name: "Battle Armor",
+		rating: 1,
+		num: 4,
+	},
+	shellarmor: {
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'recoil') {
+				if (!this.activeMove) throw new Error("Battle.activeMove is null");
+				if (this.activeMove.id !== 'struggle') return null;
+			}
+		},
+		onCriticalHit: false,
+		isBreakable: true,
+		name: "Shell Armor",
+		rating: 1,
+		num: 75,
+	},
+	unnerve: {
+		inherit: true,
+		onFoeTryMove(target, source, effect) {
+			if (['milkdrink', 'focusmunch', 'fruitjuice', 'softboiled'].includes(effect.id)) {
+				this.attrLastMove('[still]');
+				this.add('cant', this.effectState.target, 'ability: Unnerve', effect, '[of] ' + target);
+				return false;
+			}
+		},
+	},
+	horror: {
 		inherit: true,
 		isNonstandard: null,
 	},

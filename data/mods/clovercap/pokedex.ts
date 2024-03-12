@@ -20,7 +20,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	honrade: {
 		inherit: true,
-		evos: ["Devante","Vergilion"],
+		evos: ["Devante", "Vergilion"],
 	},
 	devante: {
 		inherit: true,

@@ -22,7 +22,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	innerfocus: {
 		inherit: true,
-		onBoost(boost, target, source, effect) {
+		onTryBoost(boost, target, source, effect) {
 			if (effect.id === 'intimidate' || effect.id === 'ability:intimidate') {
 				delete boost.atk;
 				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Inner Focus', '[of] ' + target);
@@ -31,7 +31,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	mirrorarmor: {
 		inherit: true,
-		onBoost(boost, target, source, effect) {
+		onTryBoost(boost, target, source, effect) {
 			// Don't bounce self stat changes, or boosts that have already bounced
 			if (target === source || !boost || effect.id === 'mirrorarmor' || effect.id === 'ability:mirrorarmor') return;
 			let b: BoostID;
@@ -139,7 +139,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	oblivious: {
 		inherit: true,
-		onBoost(boost, target, source, effect) {
+		onTryBoost(boost, target, source, effect) {
 			if (effect.id === 'intimidate' || effect.id === 'ability:intimidate') {
 				delete boost.atk;
 				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Oblivious', '[of] ' + target);
@@ -148,7 +148,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	owntempo: {
 		inherit: true,
-		onBoost(boost, target, source, effect) {
+		onTryBoost(boost, target, source, effect) {
 			if (effect.id === 'intimidate' || effect.id === 'ability:intimidate') {
 				delete boost.atk;
 				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Own Tempo', '[of] ' + target);
@@ -213,7 +213,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	scrappy: {
 		inherit: true,
-		onBoost(boost, target, source, effect) {
+		onTryBoost(boost, target, source, effect) {
 			if (effect.id === 'intimidate' || effect.id === 'ability:intimidate') {
 				delete boost.atk;
 				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Scrappy', '[of] ' + target);

@@ -1,13 +1,14 @@
 {
   "name": "pokemon-showdown",
   "description": "The server for the Pokémon Showdown battle simulator",
-  "version": "0.11.7",
+  "version": "0.11.9",
   "main": "dist/sim/index.js",
   "dependencies": {
-    "esbuild": "^0.16.10",
     "@swc/core": "1.2.205",
     "axios": "^0.21.1",
-    "discord.js": "^14.7.1",
+    "discord.js": "^14.11.0",
+    "esbuild": "^0.16.10",
+    "parse-color": "^1.0.0",
     "preact": "^10.5.15",
     "preact-render-to-string": "^5.1.19",
     "probe-image-size": "^5.0.0",
@@ -41,9 +42,12 @@
     "full-lint": "npm run lint",
     "pretest": "npm run lint",
     "test": "mocha",
+    "pretest-ci": "npm run build",
+    "test-ci": "mocha --config .mocharc-ci.json",
     "posttest": "npm run tsc",
     "full-test": "npm run lint && npm run tsc && mocha --timeout 8000 --forbid-only -g \".*\"",
-    "postinstall": "npm run build"
+    "full-test-ci": "eslint ${FILES} --max-warnings 0 && npm run tsc && (([ \"$SKIPSIMTESTS\" = true ] && mocha --timeout 8000 --forbid-only -g \".*\" --exclude \"test/{sim,random-battles}/**\") || mocha --timeout 8000 --forbid-only -g \".*\")",
+    "postinstall": "npm run build postinstall"
   },
   "bin": "./pokemon-showdown",
   "homepage": "http://pokemonshowdown.com",
@@ -75,6 +79,7 @@
     "@types/node": "^14.18.36",
     "@types/node-static": "^0.7.7",
     "@types/nodemailer": "^6.4.4",
+    "@types/parse-color": "^1.0.1",
     "@types/pg": "^8.6.5",
     "@types/probe-image-size": "^7.0.1",
     "@types/sockjs": "^0.3.33",
@@ -83,6 +88,6 @@
     "eslint": "^8.5.0",
     "mocha": "^8.2.0",
     "smogon": "^2.2.1",
-    "typescript": "^4.9.4"
+    "typescript": "^5.0.4"
   }
 }

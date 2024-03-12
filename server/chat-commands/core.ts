@@ -17,6 +17,7 @@
 import {Utils} from '../../lib';
 import type {UserSettings} from '../users';
 import type {GlobalPermission} from '../user-groups';
+import {BestOfGame} from '../room-battle';
 
 export const crqHandlers: {[k: string]: Chat.CRQHandler} = {
 	userdetails(target, user, trustable) {
@@ -414,7 +415,7 @@ export const commands: Chat.ChatCommands = {
 		}
 		if (!target) return this.parse('/help status');
 
-		const maxLength = 52;
+		const maxLength = 70;
 		if (target.length > maxLength) {
 			return this.errorReply(this.tr`Your status is too long; it must be under ${maxLength} characters.`);
 		}
@@ -778,6 +779,11 @@ export const commands: Chat.ChatCommands = {
 		`!showteam hidestats - show the team you're using in the current battle, without displaying any stat-related information.`,
 		`!showset [number] - shows the set of the pokemon corresponding to that number (in original Team Preview order, not necessarily current order)`,
 	],
+
+	confirmready(target, room, user) {
+		const game = this.requireGame(BestOfGame);
+		game.confirmReady(user.id);
+	},
 
 	async acceptopenteamsheets(target, room, user, connection, cmd) {
 		room = this.requireRoom();
@@ -1270,21 +1276,24 @@ export const commands: Chat.ChatCommands = {
 	forcewin(target, room, user) {
 		room = this.requireRoom();
 		this.checkCan('forcewin');
-		if (!room.battle) {
+		if (
+			!room.battle &&
+			!(room.game && typeof (room.game as any).tie === 'function' && typeof (room.game as any).win === 'function')
+		) {
 			this.errorReply("/forcewin - This is not a battle room.");
 			return false;
 		}
 
-		room.battle.endType = 'forced';
+		if (room.battle) room.battle.endType = 'forced';
 		if (!target) {
-			room.battle.tie();
+			(room.game as any).tie();
 			this.modlog('FORCETIE');
 			return false;
 		}
 		const targetUser = Users.getExact(target);
 		if (!targetUser) return this.errorReply(this.tr`User '${target}' not found.`);
 
-		room.battle.win(targetUser);
+		(room.game as any).win(targetUser);
 		this.modlog('FORCEWIN', targetUser.id);
 	},
 	forcewinhelp: [

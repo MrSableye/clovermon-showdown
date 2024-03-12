@@ -27,7 +27,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	regishort: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	regicide: {
 		inherit: true,
@@ -49,12 +49,82 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "LC",
 	},
-	semmush: {
+	starhiro: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	starhiro: {
+	tartis: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	terratarus: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	stowlet: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	strixnight: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sepulture: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	flockarrion: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+    ibask: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+    dirtybis: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "LC",
+	},
+	inkrow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	liquill: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	ravarnish: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	larvatrice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	brashalisk: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	kokaiju: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	levititan: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -139,6 +209,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 	},
 	hydroil: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	jermin: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -573,15 +648,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "LC",
 	},
-	jermin: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	jerminswarm: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Future",
+		tier: "Illegal",
 	},
 	smogars: {
 		inherit: true,
@@ -1068,6 +1138,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	},
+	winkhulu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	temawria: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	retwina: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	schiztarf: {
 		inherit: true,
 		isNonstandard: null,
@@ -1094,6 +1179,46 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	hallmonitor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	manatank: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	theforest: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	sanickel: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	skoxious: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	onusalt: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	ghastropod: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	glucurs: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	qrakenmark: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -1125,11 +1250,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	somboludomega: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	floriousmega: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -1227,10 +1347,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	vandashmega: {
-		isNonstandard: null,
-		tier: "OU",
-	},
 	chasumomega: {
 		isNonstandard: null,
 		tier: "OU",
@@ -1250,5 +1366,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	doomsday: {
 		isNonstandard: null,
 		tier: "AG",
+	},
+	hailsanta: {
+		isNonstandard: "Future",
 	},
 };

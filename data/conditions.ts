@@ -458,7 +458,22 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return this.chainModify([5325, 4096]);
 		},
 	},
-
+    radish: {  // exclusively caused by Radish Punch and Radish Body
+		name: 'radish',
+		effectType: 'Status',
+		onStart(target, source, sourceEffect) {
+			if (sourceEffect && sourceEffect.effectType === 'Ability') {
+				this.add('-status', target, 'radish', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
+			} else {
+				this.add('-status', target, 'radish');
+			}
+		},
+		onResidualOrder: 10,
+		onResidual(pokemon) {
+			this.add('-message', `Radishes are annual or biennial brassicaceous crops grown for their swollen tap roots which can be globular, tapering, or cylindrical. The root skin colour ranges from white through pink, red, purple, yellow, and green to black, but the flesh is usually white. The roots obtain their color from anthocyanins. Red varieties use the anthocyanin pelargonidin as a pigment, and purple cultivars obtain their color from cyanidin. Smaller types have a few leaves about 13 cm (5 in) long with round roots up to 2.5 cm (1 in) in diameter or more slender, long roots up to 7 cm (3 in) long. Both of these are normally eaten raw in salads. A longer root form, including oriental radishes, daikon or mooli, and winter radishes, grows up to 60 cm (24 in) long with foliage about 60 cm (24 in) high with a spread of 45 cm (18 in). The flesh of radishes harvested timely is crisp and sweet, but becomes bitter and tough if the vegetable is left in the ground too long. Leaves are arranged in a rosette. They have a lyrate shape, meaning they are divided pinnately with an enlarged terminal lobe and smaller lateral lobes. The white flowers are borne on a racemose inflorescence. The fruits are small pods which can be eaten when young.`);
+			this.damage(pokemon.baseMaxhp / 20);
+		},
+	},
 	// weather is implemented here since it's so important to the game
 
 	raindance: {
@@ -542,6 +557,10 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return 5;
 		},
 		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (move.id === 'hydrosteam' && !attacker.hasItem('utilityumbrella')) {
+				this.debug('Sunny Day Hydro Steam boost');
+				return this.chainModify(1.5);
+			}
 			if (defender.hasItem('utilityumbrella')) return;
 			if (move.type === 'Fire') {
 				this.debug('Sunny Day fire boost');
@@ -733,7 +752,164 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'none');
 		},
 	},
+	acidicrainfall: {
+		name: 'Acidic Rainfall',
+		effectType: 'Weather',
+		duration: 5,
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'Acidic Rainfall', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Acidic Rainfall');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Acidic Rainfall', '[upkeep]');
+			if (this.field.isWeather('acidicrainfall')) this.eachEvent('Weather');
+		},
+		onWeather(target) {
+			this.damage(target.baseMaxhp / 16);
+			this.damage(target.baseMaxhp / 16);
+			this.damage(target.baseMaxhp / 16);
+			this.damage(target.baseMaxhp / 16);
+			this.damage(target.baseMaxhp / 16);
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	/** Wack weathers */
+	midnight: {
+		name: 'Midnight',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem('blackrock')) {
+				return 8;
+			}
+			return 5;
+		},
+		onModifySpePriority: 10,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.hasType('Zombie') && this.field.isWeather('midnight')) {
+				return this.modify(spe, 2);
+			}
+		},
+		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (move.type === 'Ghost' || move.type === 'Fear' || move.type === 'Dark') {
+				this.debug('Midnight boost');
+				return this.chainModify(1.5);
+			}
+			if (move.type === 'Light') {
+				this.debug('Midnight light suppress');
+				return this.chainModify(0.5);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'Midnight', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Midnight');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Midnight', '[upkeep]');
+			if (this.field.isWeather('midnight')) this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	acidrain: {
+		name: 'Acid Rain',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem('acidrock')) {
+				return 8;
+			}
+			return 5;
+		},
+		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (move.type === 'Poison') {
+				this.debug('Acid Rain poison boost');
+				return this.chainModify(1.5);
+			}
+			if (move.type === 'Fairy') {
+				this.debug('Acid Rain fairy suppress');
+				return this.chainModify(0.5);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'AcidRain', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'AcidRain');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'AcidRain', '[upkeep]');
+			if (this.field.isWeather('acidrain')) this.eachEvent('Weather');
+		},
+		onWeather(target) {
+			this.damage(target.baseMaxhp / 16);
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	bladerain: {
+		name: 'Blade Rain',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem('chromerock')) {
+				return 8;
+			}
+			return 5;
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'BladeRain', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'BladeRain');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'BladeRain', '[upkeep]');
+			if (this.field.isWeather('bladerain')) this.eachEvent('Weather');
+		},
+		onWeather(target) {
+			this.damage(target.baseMaxhp / 16);
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
 
+	/** Wack conditions */
+	bleed: {
+		name: 'bleed',
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'Bleed');
+		},
+		onResidualOrder: 13,
+		onResidual(pokemon) {
+			this.damage(pokemon.baseMaxhp / (this.field.isWeather('bloddrain') ? 10 : 14));
+			
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, 'Bleed');
+		},
+	},
 	dynamax: {
 		name: 'Dynamax',
 		noCopy: true,
@@ -810,9 +986,6 @@ export const Conditions: {[k: string]: ConditionData} = {
 	commanding: {
 		name: "Commanding",
 		noCopy: true,
-		onStart(pokemon) {
-			this.add('-activate', pokemon, 'ability: Commander');
-		},
 		onDragOutPriority: 2,
 		onDragOut() {
 			return false;

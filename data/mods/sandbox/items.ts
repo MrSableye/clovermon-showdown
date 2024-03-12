@@ -2367,4 +2367,12 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	queensrock: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	choicechoice: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

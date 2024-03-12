@@ -88,6 +88,8 @@ export class Item extends BasicEffect implements Readonly<BasicEffect> {
 	readonly isGem: boolean;
 	/** Is this item a Pokeball? */
 	readonly isPokeball: boolean;
+		/** Rating from -1 Detrimental to +5 Essential; see `data/abilities.ts` for details. */
+	readonly rating: number;
 
 	declare readonly condition?: ConditionData;
 	declare readonly forcedForme?: string;
@@ -122,6 +124,7 @@ export class Item extends BasicEffect implements Readonly<BasicEffect> {
 		this.onPlate = data.onPlate || undefined;
 		this.isGem = !!data.isGem;
 		this.isPokeball = !!data.isPokeball;
+		this.rating = data.rating || 0;
 
 		if (!this.gen) {
 			if (this.num >= 1124) {

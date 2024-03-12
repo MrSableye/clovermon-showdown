@@ -281,6 +281,38 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	toxicchain: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	mindseye: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	supersweetsyrup: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	embodyaspectteal: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	embodyaspecthearthflame: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	embodyaspectwellspring: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	embodyaspectcornerstone: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	hospitality: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* Modified abilities */
 	flareboost: {
 		inherit: true,
@@ -712,5 +744,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	cacophony: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	snowwarning: {
+		inherit: true,
+		onStart(source) {
+			this.field.setWeather('hail');
+		},
 	},
 };

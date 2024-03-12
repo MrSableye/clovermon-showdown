@@ -1,7 +1,9 @@
+import {REST, Routes} from 'discord.js';
 import {FS} from '../../lib';
 import {Badges} from './badges';
 
 const DISCORD_BOT_ID = "mrsablebot"; // TODO: Make this configurable
+const DISCORD_BADGE_ID = "discord";
 const MINIMUM_TOURS_REQUIRED = 4;
 const TOUR_BADGE_ID = "tourfarmer";
 const OTHER_BADGES: [number, string][] = [
@@ -34,24 +36,9 @@ const checkBadgesEnabled = () => {
 	}
 };
 
-const checkCanUpdateTours = async (user: User) => {
-	const badge = await Badges.getBadge(TOUR_BADGE_ID);
-	const managers = await Badges.getBadgeManagers(TOUR_BADGE_ID);
+const checkCanUpdateTours = (user: User) => Badges.canManageBadge(user.id, TOUR_BADGE_ID);
 
-	if (!badge) {
-		throw new Chat.ErrorMessage(`Tour badge ${TOUR_BADGE_ID} doesn't exist.`);
-	}
-
-	const canUpdate = [badge.owner_id, ...managers.map((manager) => manager.user_id)].includes(user.id);
-
-	if (!canUpdate) {
-		throw new Chat.ErrorMessage('You do not have permission to manage this.');
-	}
-};
-
-const getTourWins = (userID: string) => {
-	return data.tours[userID] || 0;
-};
+export const getTourWins = (userID: string) => data.tours[userID] || 0;
 
 const changeTourWins = (userID: string, func: (previousWins: number) => number) => {
 	if (!data.tours[userID]) data.tours[userID] = 0;
@@ -79,7 +66,7 @@ const checkTourThreshold = async (userID: string, user: User) => {
 				await Badges.addBadgeToUser(userID, TOUR_BADGE_ID, user, true);
 			} catch (e) {}
 
-			await Badges.updateBadgeData(userID, TOUR_BADGE_ID, { wins: userTourWins }, user, true);
+			await Badges.updateBadgeData(userID, TOUR_BADGE_ID, {wins: userTourWins}, user, true);
 		} catch (e) { return false; }
 
 		return true;
@@ -88,13 +75,33 @@ const checkTourThreshold = async (userID: string, user: User) => {
 	return false;
 };
 
+const addDiscordBadge = async (user: User, username: string) => {
+	try {
+		try {
+			await Badges.addBadgeToUser(user.id, DISCORD_BADGE_ID, user, true);
+		} catch (e) {}
+
+		await Badges.updateBadgeData(user.id, DISCORD_BADGE_ID, {username}, user, true);
+	} catch (e) { return false; }
+
+	return true;
+};
+
+export const transferTourWins = (oldUser: string, newUser: string, user: User) => {
+	const oldTourWins = getTourWins(toID(oldUser));
+	changeTourWins(toID(newUser), () => oldTourWins);
+	changeTourWins(toID(oldUser), () => 0);
+	checkTourThreshold(toID(newUser), user);
+	checkTourThreshold(toID(oldUser), user);
+};
+
 export const commands: Chat.ChatCommands = {
 	dbadge: 'databadge',
 	databadge: {
 		tour: 'tournament',
 		tours: 'tournament',
 		tournament: {
-			async get(target, room, user) {
+			get(target, room, user) {
 				checkBadgesEnabled();
 
 				const userID = toID(target);
@@ -108,7 +115,7 @@ export const commands: Chat.ChatCommands = {
 
 				const [rawUserID, rawValue] = target.split(',');
 				const userID = toID(rawUserID);
-				const value = parseInt(toID(rawValue), 10);
+				const value = parseInt(toID(rawValue));
 
 				if (Number.isNaN(value)) {
 					throw new Chat.ErrorMessage(`Invalid tour amount ${value} specified.`);
@@ -117,6 +124,7 @@ export const commands: Chat.ChatCommands = {
 				const newTourWins = changeTourWins(userID, () => value);
 				const receivedBadge = await checkTourThreshold(userID, user);
 
+				this.addGlobalModAction(`${user.name} added set ${userID} to ${newTourWins} tour wins.`);
 				return this.sendReplyBox(`User ${userID} has ${newTourWins} wins.${receivedBadge ? ` They have been granted the ${TOUR_BADGE_ID} badge.` : ''}`);
 			},
 			add: 'increment',
@@ -129,6 +137,7 @@ export const commands: Chat.ChatCommands = {
 				const newTourWins = changeTourWins(userID, (previousValue) => previousValue + 1);
 				const receivedBadge = await checkTourThreshold(userID, user);
 
+				this.addGlobalModAction(`${user.name} has added 1 tour win to ${userID} (${newTourWins} total wins)`);
 				return this.sendReplyBox(`User ${userID} has ${newTourWins} wins.${receivedBadge ? ` They have been granted the ${TOUR_BADGE_ID} badge.` : ''}`);
 			},
 			remove: 'decrement',
@@ -141,6 +150,7 @@ export const commands: Chat.ChatCommands = {
 				const newTourWins = changeTourWins(userID, (previousValue) => previousValue - 1);
 				const receivedBadge = await checkTourThreshold(userID, user);
 
+				this.addGlobalModAction(`${user.name} has removed 1 tour win from ${userID} (${newTourWins} total wins)`);
 				return this.sendReplyBox(`User ${userID} has ${newTourWins} wins.${receivedBadge ? ` They have been granted the ${TOUR_BADGE_ID} badge.` : ''}`);
 			},
 		},
@@ -155,8 +165,25 @@ export const commands: Chat.ChatCommands = {
 			);
 		},
 		discord: {
+			async activate(target, room, user) {
+				if (!Config.discord) throw new Chat.ErrorMessage('Discord functionality is not enabled.');
+
+				const discordId = data.discord[user.id];
+
+				if (!discordId) throw new Chat.ErrorMessage('You have no linked Discord id.');
+
+				const rest = new REST().setToken(Config.discord);
+				const discordUser = await rest.get(Routes.user(discordId)) as any;
+				const username = discordUser.discriminator === '0' ?
+					discordUser.username : `${discordUser.username}#${discordUser.discriminator}`;
+
+				const success = await addDiscordBadge(user, username);
+				if (!success) throw new Chat.ErrorMessage('An error has occurred.');
+
+				return this.sendReplyBox('Your Discord badge has been activated and updated.');
+			},
 			get(target, room, user) {
-				const discordId =  data.discord[user.id];
+				const discordId = data.discord[user.id];
 				if (!discordId) throw new Chat.ErrorMessage('You have no linked Discord id.');
 
 				return this.sendReplyBox(`Your linked Discord id is ${discordId}`);

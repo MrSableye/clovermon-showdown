@@ -4,10 +4,12 @@
 name: Node.js CI
 
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_call:
 
 jobs:
   build:
@@ -16,15 +18,18 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 100 # assumes PR/push to master is no larger than 100 commits. Other solutions are needlessly complex.
+
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: Zarel/setup-node@patch-1
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: npm run full-test
+    - run: npm run test-ci
       env:
         CI: true

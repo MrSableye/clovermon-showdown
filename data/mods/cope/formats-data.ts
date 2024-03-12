@@ -142,13 +142,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	semdrop: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "LC",
+		isNonstandard: "Past",
 	},
 	semrust: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "NFE",
+		isNonstandard: "Past",
 	},
 	furnazi: {
 		inherit: true,
@@ -1011,8 +1009,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	wifemin: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Past",
 	},
 	uwotto: {
 		inherit: true,
@@ -1028,8 +1025,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	semdemen: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Past",
 	},
 	dragking: {
 		inherit: true,
@@ -1575,8 +1571,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	sesquatch: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Past",
 	},
 	fireshi: {
 		inherit: true,
@@ -1702,7 +1697,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	regishort: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	regicide: {
 		inherit: true,
@@ -1726,13 +1721,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	semmush: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Past",
 	},
 	husbin: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Past",
 	},
 	ranruu: {
 		inherit: true,
@@ -2245,13 +2238,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	jermin: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Future",
+		tier: "Illegal",
 	},
 	jerminswarm: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Future",
+		tier: "Illegal",
 	},
 	smogars: {
 		inherit: true,
@@ -2471,7 +2464,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	platylics: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	impfection: {
 		inherit: true,
@@ -2716,7 +2709,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    dugwalker: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	    },
 	    phantacade: {
 		inherit: true,
@@ -2731,7 +2724,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    krakenwalker: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber", // no way around it. eterrain surge surfer is not balanced.
 	},
 	    yanorm: {
 		inherit: true,
@@ -2746,7 +2739,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    yanture: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber", // sorry yan, hes just too strong
 	},
 	    seaman: {
 		inherit: true,
@@ -2781,7 +2774,27 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    tsuchinoko: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "AG",
+		tier: "OU",
+	},
+		ponderselo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	    walkietalkie: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	    impostree: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	    hemogoblin: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	    purplegoat: {
 		inherit: true,
@@ -2851,7 +2864,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    shroomko: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	    junkbane: {
 		inherit: true,
@@ -2866,17 +2879,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    oengas: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	    stingulor: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	    titaneedle: {
+	    titaneetle: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	    horse: {
 		inherit: true,
@@ -2918,6 +2931,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "AG",
 	},
+	glasscat: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "AG",
+	},
 	stoppogriff: {
 		inherit: true,
 		isNonstandard: null,
@@ -2929,6 +2947,76 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	gem: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	azumarite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	meteoriik: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+		},
+	parmiausan: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+		},
+	gojifiend: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	snurl: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	snuroyal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	sphare: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	costrike: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	rasstord: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	smawl: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	hookling: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	fractyvern: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sleepsy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	psycheyend: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -2952,6 +3040,111 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+	},
+	crolord: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	realwalker: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	tsuchinokoinsular: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+    },
+	slub: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+    },
+	pyroshiiva: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	lober: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "LC",
+	},
+	clobber: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	tiamat: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "Uber",
+	},
+	albergrab: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "LC",
+	},
+	alberchamp: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	alberfly: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	alberaph: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "Uber",
+	},
+	albermax: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	alberfectcell: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "Uber",
+	},
+	genine: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	gharroste: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	kiwi: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	iwik: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	meower: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "LC",
+	},
+	catation: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	sludge: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "PU",
 	},
 	/* CAP Megas */
 	oogabugamega: {
@@ -3079,6 +3272,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	honrademega: {
+		isNonstandard: null,
+		tier: "OU",
+	},
+	izuriri: {
 		isNonstandard: null,
 		tier: "OU",
 	},

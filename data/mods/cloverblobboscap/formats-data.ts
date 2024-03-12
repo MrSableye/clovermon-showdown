@@ -1636,6 +1636,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	hailsanta: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	vandash: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -1697,14 +1701,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	husbin: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	starhiro: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	doubtlaw: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -2528,6 +2524,128 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	glucurs: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	qrakenmark: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+
+	theforest: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	onusalt: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	vergilion: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	devante: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ghastropod: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	starhiro: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	doubtlaw: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sanickel: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	skoxious: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tartis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	terratarus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	stowlet: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	strixnight: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	flockarrion: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sepulture: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+		},
+	ibask: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+		},
+	dirtybis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	inkrow: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	liquill: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ravarnish: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	larvatrice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	brashalisk: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kokaiju: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	levititan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	winkhulu: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	temawria: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	retwina: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	slub: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,
@@ -2935,7 +3053,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	blobbossexymegay: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	blobbossexymegax: {
 		inherit: true,
@@ -3013,6 +3131,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbosomori: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosomorihappy: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -3557,7 +3680,72 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosporing: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikmin: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminyellow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminblue: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminpurple: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminwhite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminflying: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminrock: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminglow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminparasite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	blobboshomestuck: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnihonjin: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscum: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -3662,6 +3850,66 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosmech: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmechfire: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmechwater: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmechelectric: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdragonmaid: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgl17ch: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnymph: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshollow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosclover: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosmechice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboskracko: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospartner: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	blobbosmermaid: {
 		inherit: true,
 		isNonstandard: null,
@@ -3688,6 +3936,66 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbospterois: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmitosis: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmitosiscomplete: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosblackmage: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosflask: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgeno: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosyarn: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshotpot: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosparasite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosplasma: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscreampuff: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostapu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosminion: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

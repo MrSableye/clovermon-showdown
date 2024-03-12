@@ -59,6 +59,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	alberspin: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	alloutpummeling: {
 		inherit: true,
 		isNonstandard: null,
@@ -212,8 +216,20 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	bind: {
-		inherit: true,
-		isNonstandard: null,
+		accuracy: 85,
+		basePower: 15,
+		category: "Physical",
+		name: "Bind",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+		chance: 100,
+		volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Normal",
+		contestType: "Tough",
 	},
 	bite: {
 		inherit: true,
@@ -224,7 +240,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	blastburn: {
-		inherit: true,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Blast Burn",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		recoil: [1, 2],
+		target: "normal",
+		type: "Fire",
+		contestType: "Beautiful",
 		isNonstandard: null,
 	},
 	blazekick: {
@@ -253,6 +280,23 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	bodyslam: {
 		inherit: true,
+		isNonstandard: null,
+	},
+	boil: {
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "BOIL",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1},
+		thawsTarget: true,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Water",
 		isNonstandard: null,
 	},
 	boltbeak: {
@@ -308,6 +352,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	brine: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	brutalmauling: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -520,6 +568,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	crosspoison: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	crustaceancombat: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1036,7 +1088,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	frenzyplant: {
-		inherit: true,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Frenzy Plant",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		recoil: [1, 2],
+		target: "normal",
+		type: "Grass",
+		contestType: "Beautiful",
 		isNonstandard: null,
 	},
 	frostbreath: {
@@ -1444,7 +1507,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	hydrocannon: {
-		inherit: true,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Hydro Cannon",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		recoil: [1, 2],
+		target: "normal",
+		type: "Water",
+		contestType: "Beautiful",
 		isNonstandard: null,
 	},
 	hydropump: {
@@ -1456,6 +1530,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	hyperbeam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hyperdrill: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2441,6 +2519,23 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	rockwrecker: {
 		inherit: true,
+		accuracy: 100,
+		basePower: 150,
+		category: "Physical",
+		name: "Rock Wrecker",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				atk: -1,
+				def: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+		contestType: "Tough",
 		isNonstandard: null,
 	},
 	roleplay: {
@@ -3703,7 +3798,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	memejr: {
+	memepunch: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3904,10 +3999,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	inverserush: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	faedozer: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4253,6 +4344,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	rainbowblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	hyperzone: {
 		inherit: true,
 		isNonstandard: null,
@@ -4313,7 +4408,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	susteelstrike: {
+	sussteelstrike: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4362,10 +4457,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	gigasubfernostrike: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	backwardslongjump: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4509,6 +4600,50 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	makeitrain: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bitterblade: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	spinout: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	bloodmoon: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	mindbreak: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	glaiverush: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	solarhunger: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	trailblaze: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	flowertrick: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	jetpunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	luminacrash: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	thebigone: {
 		inherit: true,
 		isNonstandard: null,
@@ -4518,10 +4653,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	flounderpunch: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	sussteelstrike: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4550,6 +4681,26 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	scavenge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	oceanhorn: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blazingwheel: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	prisonroots: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	radishpunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	despiteallmyrage: {
 		inherit: true,
 		isNonstandard: null,
 	},

@@ -76,6 +76,7 @@ interface Handlers {
 	onBattleStart: (user: User, room: GameRoom) => void;
 	onBattleLeave: (user: User, room: GameRoom) => void;
 	onRoomJoin: (room: BasicRoom, user: User, connection: Connection) => void;
+	onBeforeRoomJoin: (room: BasicRoom, user: User, connection: Connection) => void;
 	onDisconnect: (user: User) => void;
 	onRoomDestroy: (roomid: RoomID) => void;
 	onBattleEnd: (battle: RoomBattle, winner: ID, players: ID[]) => void;
@@ -85,6 +86,7 @@ interface Handlers {
 	) => void;
 	onRename: (user: User, oldID: ID, newID: ID) => void;
 	onTicketCreate: (ticket: import('./chat-plugins/helptickets').TicketState, user: User) => void;
+	onChallenge: (user: User, targetUser: User, format: string | ID) => void;
 }
 
 export interface ChatPlugin {
@@ -998,7 +1000,7 @@ export class CommandContext extends MessageContext {
 	checkCan(permission: RoomPermission, target: User | ID | null, room: Room): undefined;
 	checkCan(permission: GlobalPermission, target?: User | ID | null): undefined;
 	checkCan(permission: string, target: User | ID | null = null, room: Room | null = null) {
-		if (!Users.Auth.hasPermission(this.user, permission, target, room, this.fullCmd)) {
+		if (!Users.Auth.hasPermission(this.user, permission, target, room, this.fullCmd, this.cmdToken)) {
 			throw new Chat.ErrorMessage(`${this.cmdToken}${this.fullCmd} - Access denied.`);
 		}
 	}
@@ -1006,7 +1008,7 @@ export class CommandContext extends MessageContext {
 	privatelyCheckCan(permission: GlobalPermission, target?: User | ID | null): boolean;
 	privatelyCheckCan(permission: string, target: User | ID | null = null, room: Room | null = null) {
 		this.handler!.isPrivate = true;
-		if (Users.Auth.hasPermission(this.user, permission, target, room, this.fullCmd)) {
+		if (Users.Auth.hasPermission(this.user, permission, target, room, this.fullCmd, this.cmdToken)) {
 			return true;
 		}
 		this.commandDoesNotExist();
@@ -1032,8 +1034,10 @@ export class CommandContext extends MessageContext {
 			throw new Chat.ErrorMessage(`To see it for yourself, use: /${this.message.slice(1)}`);
 		}
 
-		if (this.room && !this.user.can('show', null, this.room)) {
-			this.errorReply(`You need to be voiced to broadcast this command's information.`);
+		if (this.room && !this.user.can('show', null, this.room, this.cmd, this.cmdToken)) {
+			const perm = this.room.settings.permissions?.[`!${this.cmd}`];
+			const atLeast = perm ? `at least rank ${perm}` : 'voiced';
+			this.errorReply(`You need to be ${atLeast} to broadcast this command's information.`);
 			throw new Chat.ErrorMessage(`To see it for yourself, use: /${this.message.slice(1)}`);
 		}
 
@@ -2462,7 +2466,7 @@ export const Chat = new class {
 		}
 		buf += `<span class="col widelabelcol"><em>Accuracy</em><br>${typeof move.accuracy === 'number' ? (move.accuracy + '%') : '—'}</span> `;
 		const basePP = move.pp || 1;
-		const pp = Math.floor(move.noPPBoosts ? basePP : basePP * 8 / 5);
+		const pp = Math.floor(move.noPPBoosts ? basePP : Math.floor(basePP * 8 / 5));
 		buf += `<span class="col pplabelcol"><em>PP</em><br>${pp}</span> `;
 		buf += `<span class="col movedesccol">${move.shortDesc || move.desc}</span> `;
 		buf += `</li><li style="clear:both"></li></ul>`;
