@@ -72158,8 +72158,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onStart(target) {
 				this.add('-start', target, 'Indestructible');
 			},
-			onImmunity(source, target, move) {
-				if (target.getMoveHitData(move).typeMod > 0) return false;
+			onImmunity(damage, source, target, move) {
+				if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Indestructible neutralize');
+				return false;
+				}
 			},
 			onResidualOrder: 18,
 			onEnd(target) {
