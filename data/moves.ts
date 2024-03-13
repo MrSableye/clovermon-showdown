@@ -49763,12 +49763,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Bright Moss",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1},
+		flags: {snatch: 1},
 		boosts: {
 			accuracy: 2,
 		},
 		secondary: null,
-		target: "normal",
+		target: "self",
 		type: "Grass",
 		isNonstandard: "Future",
 	},
@@ -72151,17 +72151,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Indestructible",
 		pp: 5,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1,},
 		volatileStatus: 'indestructible',
 		condition: {
 			duration: 4,
 			onStart(target) {
 				this.add('-start', target, 'Indestructible');
 			},
-			onImmunity(damage, source, target, move) {
+			onSourceModifyDamage(damage, source, target, move) {
 				if (target.getMoveHitData(move).typeMod > 0) {
 				this.debug('Indestructible neutralize');
-				return false;
+				return this.chainModify(0);
 				}
 			},
 			onResidualOrder: 18,
@@ -74852,7 +74852,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Aqueduct",
 		pp: 10,
 		priority: 0,
-		flags: {pulse: 1},
+		flags: {distance: 1, nonsky: 1},
 		onHitField(target, source) {
 			const targets: Pokemon[] = [];
 			let anyAirborne = false;
@@ -74873,7 +74873,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Water",
 		isNonstandard: "Future",
 	},
