@@ -7827,7 +7827,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power is multiplied by 999 times the HP of the target if the target has less than or equal to half of its maximum HP remaining, and then Heals for 100% and boosts a random stat not including evasion or accuracy by two stages.",
 		shortDesc: "OHKO, heals 100% and +2 to random stat if target HP < 50%.",
 
-		activate: "[POKEMON] claimed the soul of [TARGET]!",
+		activate: "[POKEMON] crushes their soul, claiming it for itself!",
 	},
 	tombstoner: {
 		name: "Tombstoner",
