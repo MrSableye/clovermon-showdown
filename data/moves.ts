@@ -23312,10 +23312,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 					}
 				}
 				if (stats.length) {
+					if (target.hp * 2 <= target.maxhp) {
+					}
 					const randomStat = this.sample(stats);
 					const boost: SparseBoostsTable = {};
 					boost[randomStat] = 2;
-					this.boost(boost);
+					this.boost(boost, source);
 				}
 			}
 		},
