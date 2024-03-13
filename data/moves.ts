@@ -49764,6 +49764,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		boosts: {
+			accuracy: 2,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Grass",
@@ -57236,7 +57239,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -72144,6 +72152,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		volatileStatus: 'indestructible',
+		condition: {
+			duration: 4,
+			onStart(target) {
+				this.add('-start', target, 'Indestructible');
+			},
+			onImmunity(source, target, move) {
+				if (target.getMoveHitData(move).typeMod > 0) return false;
+			},
+			onResidualOrder: 18,
+			onEnd(target) {
+				this.add('-end', target, 'Indestructible');
+			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Steel",
@@ -74828,6 +74850,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {pulse: 1},
+		onHitField(target, source) {
+			const targets: Pokemon[] = [];
+			let anyAirborne = false;
+			for (const pokemon of this.getAllActive()) {
+				if (!pokemon.runImmunity('Ground')) {
+					this.add('-immune', pokemon);
+					anyAirborne = true;
+					continue;
+				}
+				if (pokemon.hasType('Grass')) {
+					// This move affects every grounded Grass-type Pokemon in play.
+					targets.push(pokemon);
+				}
+			}
+			if (!targets.length && !anyAirborne) return false; // Fails when there are no grounded Grass types or airborne Pokemon
+			for (const pokemon of targets) {
+				this.boost({def: 1, spd: 1}, pokemon, source);
+			}
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Water",
