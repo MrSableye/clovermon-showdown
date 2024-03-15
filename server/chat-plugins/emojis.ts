@@ -165,7 +165,7 @@ export const commands: Chat.ChatCommands = {
 
 export const checkEmojiLevel = (user: User, room: Room): boolean => {
 	if (user.can('bypassall')) return true;
-	if (room.settings.modchat && !room.auth.atLeast(user, room.settings.modchat)) return false;
+	if (room.settings.emojiLevel && !room.auth.atLeast(user, room.settings.emojiLevel)) return false;
 	return true;
 };
 
