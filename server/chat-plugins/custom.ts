@@ -1,7 +1,7 @@
 import parseColor from 'parse-color';
 import {FS, Image, Net, Utils} from '../../lib';
 import {getTourWins} from './data-badges';
-import {createEmojiHtml} from './emojis';
+import {checkEmojiLevel, createEmojiHtml} from './emojis';
 import {createStickerHtml} from './stickers';
 import {escapeHTML} from '../../lib/utils';
 
@@ -1186,7 +1186,9 @@ export const loginfilter: Chat.LoginFilter = user => {
 
 const customEmojiRegex = /:!:/g;
 
-export const chatfilter: Chat.ChatFilter = (message, user) => {
+export const chatfilter: Chat.ChatFilter = (message, user, room) => {
+	if (!room) return message;
+	if (!checkEmojiLevel(user, room)) return message;
 	const emojiStatus = emojis[user.id];
 	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN') && emojiStatus && emojiStatus.emoji && customEmojiRegex.test(message)) {
 		const prefix = message.startsWith('/html') ? '' : '/html ';

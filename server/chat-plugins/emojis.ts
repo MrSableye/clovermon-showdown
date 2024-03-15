@@ -163,7 +163,15 @@ export const commands: Chat.ChatCommands = {
 	},
 };
 
-export const chatfilter: Chat.ChatFilter = (message, user) => {
+export const checkEmojiLevel = (user: User, room: Room): boolean => {
+	if (user.can('bypassall')) return true;
+	if (room.settings.modchat && !room.auth.atLeast(user, room.settings.modchat)) return false;
+	return true;
+};
+
+export const chatfilter: Chat.ChatFilter = (message, user, room) => {
+	if (!room) return message;
+	if (!checkEmojiLevel(user, room)) return message;
 	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN') && Object.keys(emojis).length > 0 && emojiRegex.test(message)) {
 		const prefix = message.startsWith('/html') ? '' : '/html ';
 		return prefix + escapeHTML(message).replace(emojiRegex, (match) => {

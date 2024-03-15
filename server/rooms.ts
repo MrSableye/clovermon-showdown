@@ -139,6 +139,7 @@ export interface RoomSettings {
 	noLogTimes?: boolean;
 	noAutoTruncate?: boolean;
 	isMultichannel?: boolean;
+	emojiLevel?: AuthLevel | null;
 }
 
 export type MessageHandler = (room: BasicRoom, message: string) => void;

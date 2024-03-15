@@ -158,6 +158,77 @@ export const commands: Chat.ChatCommands = {
 		`/modchat [off/autoconfirmed/trusted/+/%/@/*/player/#/&] - Set the level of moderated chat. Requires: % \u2606 for off/autoconfirmed/+/player options, * @ # & for all the options`,
 	],
 
+	emojilevel(target, room, user) {
+		room = this.requireRoom();
+		if (!target) {
+			const emojiLevelSettings = room.settings.emojiLevel ? 'disabled' : 'enabled';
+			return this.sendReply(`Emojis are ${emojiLevelSettings}.`);
+		}
+		if (user.locked) { // would put this below but it behaves weird if there's no modchat set
+			return this.errorReply(`/emojilevel - Access denied.`);
+		} else {
+			this.checkCan('emojilevel', null, room);
+		}
+
+		if (
+			room.settings.emojiLevel && room.settings.emojiLevel.length <= 1 &&
+			!room.auth.atLeast(user, room.settings.emojiLevel) &&
+			// Upper Staff should probably be able to set /modchat & in secret rooms
+			!user.can('bypassall')
+		) {
+			return this.errorReply(`/emojilevel - Access denied for changing a setting currently at ${room.settings.emojiLevel}.`);
+		}
+
+		target = target.toLowerCase().trim();
+		const currentEmojiLevel = room.settings.emojiLevel;
+		switch (target) {
+		case 'off':
+		case 'false':
+		case 'no':
+		case 'disable':
+			room.settings.emojiLevel = null;
+			break;
+		case 'ac':
+		case 'autoconfirmed':
+			room.settings.emojiLevel = 'autoconfirmed';
+			break;
+		case 'trusted':
+			room.settings.emojiLevel = 'trusted';
+			break;
+		case 'player':
+			target = Users.PLAYER_SYMBOL;
+			/* falls through */
+		default:
+			if (!Users.Auth.isAuthLevel(target) || ['‽', '!'].includes(target)) {
+				this.errorReply(`The rank '${target}' was unrecognized as an auth level.`);
+				return this.parse('/help emojilevel');
+			}
+			// Users shouldn't be able to set emojilevel above their own rank (except for ROs who are also Upper Staff)
+			const emojiLevelHigherThanUserRank = !room.auth.atLeast(user, target) && !user.can('bypassall');
+			if (emojiLevelHigherThanUserRank || !Users.Auth.hasPermission(user, 'emojilevel', target as GroupSymbol, room)) {
+				return this.errorReply(`/emojilevel - Access denied for setting to ${target}.`);
+			}
+			room.settings.emojiLevel = target;
+			break;
+		}
+		if (currentEmojiLevel === room.settings.emojiLevel) {
+			return this.errorReply(`Emoji level is already set to ${currentEmojiLevel || 'off'}.`);
+		}
+		if (!room.settings.emojiLevel) {
+			this.add("|raw|<div class=\"broadcast-blue\"><strong>Emojis were enabled!</strong><br />Anyone user may use emojis now.</div>");
+		} else {
+			const emojiLevelSetting = Utils.escapeHTML(room.settings.emojiLevel);
+			this.add(`|raw|<div class="broadcast-red"><strong>Emoji level was set to ${emojiLevelSetting}!</strong><br />Only users of rank ${emojiLevelSetting} and higher can use emojis.</div>`);
+		}
+		this.privateModAction(`${user.name} set emoji level to ${room.settings.emojiLevel || "off"}`);
+		this.modlog('EMOJILEVEL', null, `to ${room.settings.emojiLevel || "false"}`);
+
+		room.saveSettings();
+	},
+	emojilevelhelp: [
+		`/emojilevel [off/autoconfirmed/trusted/+/%/@/*/player/#/&] - Set the emoji level. Requires: % \u2606 for off/autoconfirmed/+/player options, * @ # & for all the options`,
+	],
+
 	automodchat(target, room, user) {
 		room = this.requireRoom();
 		if (!target) {
