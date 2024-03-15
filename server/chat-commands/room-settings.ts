@@ -215,7 +215,7 @@ export const commands: Chat.ChatCommands = {
 			return this.errorReply(`Emoji level is already set to ${currentEmojiLevel || 'off'}.`);
 		}
 		if (!room.settings.emojiLevel) {
-			this.add("|raw|<div class=\"broadcast-blue\"><strong>Emojis were enabled!</strong><br />Anyone user may use emojis now.</div>");
+			this.add("|raw|<div class=\"broadcast-blue\"><strong>Emojis were enabled!</strong><br />Any user may use emojis now.</div>");
 		} else {
 			const emojiLevelSetting = Utils.escapeHTML(room.settings.emojiLevel);
 			this.add(`|raw|<div class="broadcast-red"><strong>Emoji level was set to ${emojiLevelSetting}!</strong><br />Only users of rank ${emojiLevelSetting} and higher can use emojis.</div>`);
