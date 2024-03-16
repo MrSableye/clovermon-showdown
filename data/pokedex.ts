@@ -37323,9 +37323,9 @@ gyonin: {
 	eggGroups: ["Water 3"],
 	gen: 8,
 },
-smologore: {
+smologre: {
 	num: -8249,
-	name: "Smologore",
+	name: "Smologre",
 	types: ["Ice"],
 	gender: "F",
 	baseStats: {hp: 100, atk: 70, def: 80, spa: 135, spd: 75, spe: 77},
@@ -45362,7 +45362,7 @@ blobbosextradimensional: {
 		name: "Haarshogun",
 		types: ["Normal", "Water"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 115, atk: 130, def: 85, spa: 100, spd: 60, spe: 65},
+		baseStats: {hp: 120, atk: 130, def: 80, spa: 100, spd: 60, spe: 65},
 		abilities: {0: "Blademaster", 1: "Cloud Nine", H: "Fog Of War", S: "Battle Armor"},
 		heightm: 1.7,
 		weightkg: 25,

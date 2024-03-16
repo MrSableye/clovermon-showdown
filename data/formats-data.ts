@@ -8953,7 +8953,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	smologore: {
+	smologre: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
