@@ -2806,7 +2806,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	smologore: {
+	smologre: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
