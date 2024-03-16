@@ -2800,7 +2800,22 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
-		},
+	},
+	gyonin: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	smologore: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	coilspill: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	klasicope: {
 		inherit: true,
 		isNonstandard: null,
