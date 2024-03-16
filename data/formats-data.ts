@@ -8953,6 +8953,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	smologore: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	gyonin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	coilspill: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	klasicope: {
 		tier: "Illegal",
 		isNonstandard: "Future",
