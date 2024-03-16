@@ -37316,7 +37316,7 @@ gyonin: {
 	types: ["Water", "Normal"],
 	gender: "M",
 	baseStats: {hp: 75, atk: 100, def: 65, spa: 105, spd: 75, spe: 92},
-	abilities: {0: "Iluminate", H: "Water Absorb", S: "Huge Power"},
+	abilities: {0: "Illuminate", H: "Water Absorb", S: "Huge Power"},
 	heightm: 0.2,
 	weightkg: 20.11,
 	color: "White",
