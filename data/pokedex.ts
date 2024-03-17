@@ -36889,7 +36889,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Dragon", "Ground"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 70, atk: 120, def: 66, spa: 91, spd: 91, spe: 111},
-		abilities: {0: "Skill Link", H: "Moxie", S: "Infiltrator"},
+		abilities: {0: "Skill Link", H: "Rattled", S: "Infiltrator"},
 		heightm: 15.3,
 		weightkg: 557.7,
 		color: "Brown",

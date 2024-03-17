@@ -2299,7 +2299,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	wawho: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	sablini: {
 		inherit: true,
@@ -2924,7 +2924,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    weathervein: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	    oengas: {
 		inherit: true,
