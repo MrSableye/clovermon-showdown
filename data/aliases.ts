@@ -1892,6 +1892,19 @@ export const Aliases: {[alias: string]: string} = {
 	merutan: "Meltan",
 	merumetaru: "Melmetal",
 
+	// Format alises
+	cloverou: "[Gen 8 Clover Only] OU",
+	clou: "[Gen 8 Clover Only] OU",
+	cloveruu: "[Gen 8 Clover Only] UU",
+	cloverru: "[Gen 8 Clover Only] RU",
+	clovernu: "[Gen 8 Clover Only] NU",
+	cloverlc: "[Gen 8 Clover Only] LC",
+	cloverubers: "[Gen 8 Clover Only] Ubers",
+	capou: "[Gen 8 CAP Only] OU",
+	copeou: "[Gen 8 Cope Only] OU",
+	wackou: "[Gen 8 Wack Only] OU",
+	cabou: "[Gen 8 Blobbos CAP Only] OU",
+
 	// Clover aliases
 	eccosmicmagellanic: "Eccosmic",
 	eccosmicsol: "Eccosmic",
