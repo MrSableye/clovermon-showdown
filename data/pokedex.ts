@@ -46193,7 +46193,7 @@ blobbosextradimensional: {
 	},
 	mammudha: {
 		num: -69049,
-		name: "Elephas",
+		name: "Mammudha",
 		types: [
 			"Psychic",
 			"Fighting",
