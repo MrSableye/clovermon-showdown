@@ -204,7 +204,13 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Standard NatDex',
 			'Same Type Clause',
+			'Sleep Clause Mod',
+			'Species Clause',
+			'OHKO Clause',
+			'Evasion Moves Clause',
 		],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass'],
+		unbanlist: ['Darmanitan-Galar', 'Deoxys-Speed', 'Regieleki', 'Melmetal', 'Shedinja', 'Cinderace', 'Roaring Moon', 'Walking Wake'],
 	},
 	{
 		name: '[Gen 8 Clover Only] Doubles OU',
