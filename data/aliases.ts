@@ -1903,7 +1903,7 @@ export const Aliases: {[alias: string]: string} = {
 	capou: "[Gen 8 CAP Only] OU",
 	copeou: "[Gen 8 Cope Only] OU",
 	wackou: "[Gen 8 Wack Only] OU",
-	cabou: "[Gen 8 Blobbos CAP Only] OU",
+	cabou: "[Gen 8 Clover Blobbos CAP Only] OU",
 
 	// Clover aliases
 	eccosmicmagellanic: "Eccosmic",
