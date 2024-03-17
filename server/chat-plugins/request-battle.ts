@@ -11,6 +11,6 @@ export const commands: Chat.ChatCommands = {
 			throw new Chat.ErrorMessage(`${target} is not a valid format.`);
 		}
 
-		return `/html <button class="button" name="send" value="/challenge ${user.id}, ${format.id}">Challenge me to ${format.name}</button>`;
+		return `/html <button class="button" name="openChallenge" value="${user.id},${format.id}">Challenge me to ${format.name}</button>`;
 	},
 };
