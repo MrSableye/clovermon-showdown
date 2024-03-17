@@ -46191,6 +46191,40 @@ blobbosextradimensional: {
 		color: "Pink",
 		gen: 8,
 	},
+	mammudha: {
+		num: -69049,
+		name: "Elephas",
+		types: [
+			"Psychic",
+			"Fighting",
+		],
+		genderRatio: {
+			M: 0.5,
+			F: 0.5,
+		},
+		baseStats: {
+			hp: 115,
+			atk: 120,
+			def: 90,
+			spa: 110,
+			spd: 85,
+			spe: 40,
+		},
+		abilities: {
+			0: "Telepathy",
+			1: "Super Luck",
+			H: "Pooperpower",
+			S: "Shitstorm",
+		},
+		heightm: 2.2,
+		weightkg: 240,
+		color: "Pink",
+		eggGroups: [
+			"Field",
+		],
+		gen: 8,
+		tags: ["Inferior"],
+	},
 	buge: {
 		num: -42106,
 		name: "Buge",
