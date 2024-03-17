@@ -46192,7 +46192,7 @@ blobbosextradimensional: {
 		gen: 8,
 	},
 	mammudha: {
-		num: -69049,
+		num: -42069049,
 		name: "Mammudha",
 		types: [
 			"Psychic",
