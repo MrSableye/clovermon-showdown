@@ -56629,7 +56629,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return null;
 		},
 		boosts: {
-			att: 1,
+			atk: 1,
 			def: 1,
 			spa: 1,
 			spd: 1,
@@ -57176,7 +57176,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return null;
 		},
 		boosts: {
-			att: 1,
+			atk: 1,
 			def: 1,
 			spa: 1,
 			spd: 1,

@@ -10103,6 +10103,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	mammudha: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	yanture: {
 		tier: "Illegal",
 		isNonstandard: "Future",

@@ -7724,10 +7724,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Uber",
 		isNonstandard: null,
 		randomBattleMoves: [
-			"quiverdance",
+			"tailwind",
 			"energyball",
 			"fireblast",
-			"regenerate",
+			"defog",
 			"earthpower",
 		],
 		randomBattleLevel: 72,
