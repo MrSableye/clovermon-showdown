@@ -18422,7 +18422,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	zazamenta: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	lhooh: {
