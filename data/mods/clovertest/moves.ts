@@ -13,4 +13,76 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			}
 		},
 	},
+	hyperbeam: {
+		inherit: true,
+		self: null,
+		onAfterHit(source, target) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	gigaimpact: {
+		inherit: true,
+		self: null,
+		onAfterHit(source, target) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	frenzyplant: {
+		inherit: true,
+		self: null,
+		onAfterHit(source, target) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	blastburn: {
+		inherit: true,
+		self: null,
+		onAfterHit(source, target) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	hydrocannon: {
+		inherit: true,
+		self: null,
+		onAfterHit(source, target) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	rockwrecker: {
+		inherit: true,
+		self: null,
+		onAfterHit(source, target) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	roaroftime: {
+		inherit: true,
+		self: null,
+		onAfterHit(source, target) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	prismaticlaser: {
+		inherit: true,
+		self: null,
+		onAfterHit(source, target) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
 };
