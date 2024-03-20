@@ -24836,8 +24836,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {recharge: 1, protect: 1, mirror: 1},
-		onMoveFail(target, source, move) {
-			source.addVolatile('mustrecharge');
+		onAfterHit(source, target) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		secondary: null,
 		noSketch: true,
