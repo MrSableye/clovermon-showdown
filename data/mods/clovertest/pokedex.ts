@@ -77,4 +77,26 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			S: "Reckless",
 		},
 	},
+	gangnome: {
+		inherit: true,
+		baseStats: {
+			hp: 120,
+			atk: 50,
+			def: 115,
+			spa: 55,
+			spd: 125,
+			spe: 50,
+		},
+	},
+	pyongnome: {
+		inherit: true,
+		baseStats: {
+			hp: 70,
+			atk: 135,
+			def: 60,
+			spa: 115,
+			spd: 55,
+			spe: 80,
+		},
+	},
 };
