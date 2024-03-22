@@ -979,8 +979,8 @@ export const commands: Chat.ChatCommands = {
 					return this.errorReply(FLAIR_USER_INELIGIBLE);
 				}
 
-				const [pokemon, pokemonMod, heightInput] = target.split(',');
-				const flairUrl = getFlairUrl(toID(pokemon), toID(pokemonMod));
+				const [pokemon, pokemonMod, heightInput] = target.split(',').map((s) => s.trim());
+				const flairUrl = getFlairUrl(pokemon, toID(pokemonMod));
 
 				let heightOffset = parseInt(heightInput);
 
@@ -998,7 +998,7 @@ export const commands: Chat.ChatCommands = {
 					return this.errorReply(getInvalidFlairErrorMessage(pokemonMod, pokemon));
 				}
 
-				flairs[user.id] = {pokemonId: toID(pokemon), pokemonMod: toID(pokemonMod), heightOffset};
+				flairs[user.id] = {pokemonId: pokemon, pokemonMod: toID(pokemonMod), heightOffset};
 				saveFlairs();
 
 				this.sendReply("|raw| Your flair was successfully set. It may take a while for it to show up. Flair:<br /><img src='" + flairUrl + "' width='40' height='30'>");
