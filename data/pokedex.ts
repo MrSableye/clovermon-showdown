@@ -37357,7 +37357,7 @@ shroomalice: {
 	name: "Shroomalice",
 	types: ["Grass", "Psychic"],
 	genderRatio: {M: 0.5, F: 0.5},
-	baseStats: {hp: 92, atk: 82, def: 62, spa: 102, spd: 72, spe: 112},
+	baseStats: {hp: 95, atk: 25, def: 75, spa: 125, spd: 75, spe: 80},
 	abilities: {0: "Effect Spore", 1: "Infiltrator", H: "Intimidate", S: "Unnerve"},
 	heightm: 2.5,
 	weightkg: 100.22,
