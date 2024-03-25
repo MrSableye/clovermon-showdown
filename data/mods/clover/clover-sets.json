@@ -146,6 +146,21 @@
 					 "level":72
 				},
 				{
+					"abilities":[
+						   "skilllink"
+					],
+					"items":[
+						   "kingsrock"
+					],
+					"moves":[
+						   "comeandgo",
+						   "bulletseed",
+						   "rapidspin",
+						   "sludgebomb"
+					],
+					"level":76
+			   },
+				{
 					 "abilities":[
 							"torrent"
 					 ],
@@ -158,7 +173,7 @@
 							"seedflare",
 							"sludgebomb"
 					 ],
-					 "level":72
+					 "level":76
 				}
 		 ]
 	},
@@ -2645,6 +2660,21 @@
 					 "level":84
 				},
 				{
+					"abilities":[
+						   "magicguard"
+					],
+					"items":[
+						   "lifeorb"
+					],
+					"moves":[
+						   "slipturn",
+						   "rapidspin",
+						   "mysticalfire",
+						   "energyball"
+					],
+					"level":84
+			   },
+				{
 					 "abilities":[
 							"snowwarning"
 					 ],
@@ -3401,6 +3431,26 @@
 					 ],
 					 "level":80
 				},
+				{
+					"abilities":[
+						   "flamebody"
+					],
+					"items":[
+						   "leftovers"
+					],
+					"moves":[
+						   "earthpower",
+						   "moonlight",
+						   "overheat",
+						   "knockoff",
+						   "teleport"
+					],
+					"lockedMoves":[
+						"rapidspin",
+						"psychoboost"
+				 ],
+					"level":80
+			   },
 				{
 					 "abilities":[
 							"flamebody"
@@ -6659,6 +6709,24 @@
 					 "level":76
 				},
 				{
+					"abilities":[
+						   "regenerator"
+					],
+					"items":[
+						   "flyinggem"
+					],
+					"moves":[
+						   "uturn",
+						   "roost",
+						   "tailwind"
+					],
+					"lockedMoves":[
+						   "defog",
+						   "acrobatics"
+					],
+					"level":76
+			   },
+				{
 					 "abilities":[
 							"regenerator"
 					 ],
@@ -8624,7 +8692,7 @@
 				},
 				{
 					 "abilities":[
-							"forecast"
+							"presage"
 					 ],
 					 "items":[
 							"assaultvest"
@@ -8635,7 +8703,7 @@
 							"solarbeam",
 							"slipturn"
 					 ],
-					 "level":84
+					 "level":80
 				}
 		 ]
 	},
@@ -8726,6 +8794,24 @@
 					 ],
 					 "level":84
 				},
+				{
+					"abilities":[
+						   "regenerator",
+						   "dryskin"
+					],
+					"items":[
+						   "assaultvest",
+						   "leftovers"
+					],
+					"moves":[
+						   "rapidspin",
+						   "uturn",
+						   "knockoff",
+						   "foulplay",
+						   "earthpower"
+					],
+					"level":84
+			   },
 				{
 					 "abilities":[
 							"arenatrap",
