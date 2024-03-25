@@ -37241,7 +37241,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {snatch: 1},
 		secondary: null,
 		boosts: {
-			def: 2,
+			def: 3,
 		},
 		target: "self",
 		type: "Divine",
