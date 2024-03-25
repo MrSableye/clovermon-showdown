@@ -10717,13 +10717,203 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
-		},
+	},
 	doomsay: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
 	},
+	ibask: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	dirtybis: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	glucurs: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	gyonin: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	heatdle: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	seadle: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	treedle: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	sepulture: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	flockarrion: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	ravarnish: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	liquill: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	inkrow: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	stowlet: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	strixnight: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	kokaiju: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	levititan: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	brahshalisk: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	larvatrice: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	mogumole: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	cellgar: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	meteoriik: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	shroomalice: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	slub: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	grandon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	smologre: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	starhiro: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	doubtlaw: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	termagnius: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	terratarus: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	kouprend: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	hookling: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	klasicope: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	skoxious: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	sanickel: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	tartis: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	ttos: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	rasstord: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	ponderselo: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	popecap: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
@@ -10794,11 +10984,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	tsuchinokoinsular: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
-	},
-	ponderselo: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
@@ -11322,11 +11507,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	mogumole: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	polybrawn: {
 		inherit: true,
 		isNonstandard: null,
@@ -11568,11 +11748,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	neohorse: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	popecap: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
