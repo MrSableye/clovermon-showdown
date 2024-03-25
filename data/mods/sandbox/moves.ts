@@ -4319,6 +4319,22 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	grandbat: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	brutalmauling: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mitada: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	solarhunger: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	sussteelstrike: {
 		inherit: true,
 		isNonstandard: null,
