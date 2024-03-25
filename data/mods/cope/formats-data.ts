@@ -2816,6 +2816,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	seadle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	heatdle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	treedle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	coilspill: {
 		inherit: true,
 		isNonstandard: null,
@@ -2884,12 +2899,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    weedle: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "LC",
 	},
 	    waterweedle: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "NFE",
 	},
 	    spweedle: {
 		inherit: true,

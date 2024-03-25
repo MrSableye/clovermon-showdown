@@ -8961,6 +8961,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	seadle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	treedle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	heatdle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	gyonin: {
 		tier: "Illegal",
 		isNonstandard: "Future",
