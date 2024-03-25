@@ -2811,6 +2811,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	shroomalice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	coilspill: {
 		inherit: true,
 		isNonstandard: null,
