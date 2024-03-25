@@ -12216,23 +12216,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onSourceModifyAtkPriority: 6,
 		onSourceModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Grass') {
-				this.debug('SEED BOMBED');
-				return this.chainModify(4);
+				this.debug('BOMB SEEDED');
+				return this.chainModify(0.5);
 			}
 			if (move.type === 'Fighting') {
-				this.debug('MACH PUNCHED');
-				return this.chainModify(4);
+				this.debug('PUNCH MACHED');
+				return this.chainModify(0.5);
 			}
 		},
 		onSourceModifySpAPriority: 5,
 		onSourceModifySpA(atk, attacker, defender, move) {
 			if (move.type === 'Grass') {
-				this.debug('GIGA DRAINED');
-				return this.chainModify(4);
+				this.debug('DRAIN GIGAD');
+				return this.chainModify(0.5);
 			}
 			if (move.type === 'Fighting') {
-				this.debug('FOCUS BLASTED');
-				return this.chainModify(4);
+				this.debug('BLAST FOCUSED');
+				return this.chainModify(0.5);
 			}
 		},
 	},
