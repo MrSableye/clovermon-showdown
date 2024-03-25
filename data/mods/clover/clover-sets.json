@@ -2306,6 +2306,7 @@
 							"knockoff",
 							"uturn",
 							"1000folds",
+							"defog",
 							"pursuit"
 					 ],
 					 "level":84
@@ -4925,6 +4926,7 @@
 							"voltswitch",
 							"nuzzle",
 							"superfang",
+							"mop",
 							"owtheedge"
 					 ],
 					 "level":84
@@ -8234,6 +8236,7 @@
 							"stealthrock",
 							"spikes",
 							"toxicspikes",
+							"defog",
 							"scald",
 							"rockclimb",
 							"knockoff"
