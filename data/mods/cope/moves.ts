@@ -4645,6 +4645,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	headlongrush: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mortalspin: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	mitada: {
 		inherit: true,
 		isNonstandard: null,

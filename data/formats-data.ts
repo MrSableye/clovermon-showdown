@@ -8957,6 +8957,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	shroomalice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	gyonin: {
 		tier: "Illegal",
 		isNonstandard: "Future",
