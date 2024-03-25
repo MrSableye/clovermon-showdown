@@ -2520,7 +2520,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	rockwrecker: {
 		inherit: true,
 		accuracy: 100,
-		basePower: 150,
+		basePower: 125,
 		category: "Physical",
 		name: "Rock Wrecker",
 		pp: 5,

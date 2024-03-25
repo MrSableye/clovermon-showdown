@@ -3492,7 +3492,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	falsedark: {
 		name: "False Dark",
-		desc: "Like Dark, but significantly weaker to Grass and Fighting.",
+		desc: "Reduces damage taken from Grass and Fighting moves by half.",
 	},
 	musclemass: {
 		name: "Muscle Mass",
