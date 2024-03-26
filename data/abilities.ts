@@ -7716,20 +7716,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Transfusion",
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
-			const oldApparentType = target.apparentType;
-			let newBaseTypes = source.getTypes(true).filter(type => type !== '???');
-			if (!newBaseTypes.length) {
-				if (source.addedType) {
-					newBaseTypes = ['Normal'];
-				} else {
-					return false;
-				}
-			}
 			this.add('-start', target, 'typechange', '[from] move: Transfusion', '[of] ' + source);
-			target.setType(newBaseTypes, false, target, this.effect);
-			target.addedType = source.addedType;
-			target.knownType = source.isAlly(target) && source.knownType;
-			if (!target.knownType) target.apparentType = oldApparentType;
+			target.setType(source.getTypes());
 		},
 		rating: 2,
 	},
@@ -7741,18 +7729,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (possibleTargets.length > 1) rand = this.random(possibleTargets.length);
 			const target = possibleTargets[rand];
 			if (target && target.species) {
-				let newBaseTypes = [pokemon.apparentType + target.getTypes(true).filter(type => type !== '???')];
-				if (!newBaseTypes.length) {
-					if (target.addedType) {
-						newBaseTypes = ['Normal'];
-					} else {
-						return false;
-					}
-				}
-				const type = newBaseTypes;
-				if (type && pokemon.setType(type, false, pokemon, this.effect)) {
-					this.add('-start', pokemon, 'typechange', '[from] ability: Catalyst');
-				}
+				if (!target.addType(target.getTypes()[0], pokemon, this.effect)) return false;
+				if (!target.addType(target.getTypes()[1], pokemon, this.effect)) return false;
 			}
 		},
 		rating: 2,
