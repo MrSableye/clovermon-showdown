@@ -3394,4 +3394,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	velvetshrimp: {
+		isNonstandard: null,
+		tier: "Uber",
+	},
 };

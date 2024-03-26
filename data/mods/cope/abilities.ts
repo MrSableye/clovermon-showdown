@@ -1955,4 +1955,20 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	transfusion: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	catalyst: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	delusion: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	atlonglast: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

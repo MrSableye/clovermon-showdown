@@ -7691,6 +7691,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				pokemon.formeChange('Arctiglobe-Freed', this.effect, true);
 			}
 		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (['arctiglobe'].includes(source.species.id) && this.effectState.busted) {
+				if (target.getMoveHitData(move).typeMod = 0) {
+					this.debug('Frozen Bunker neutralize');
+					return this.chainModify(0.5);
+				}
+			}
+		},
 		isPermanent: true,
 		name: "Frozen Bunker",
 		rating: 4,
@@ -7703,6 +7711,93 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Boundary",
 		rating: 2.5,
+	},
+	transfusion: {
+		name: "Transfusion",
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			const oldApparentType = target.apparentType;
+			let newBaseTypes = source.getTypes(true).filter(type => type !== '???');
+			if (!newBaseTypes.length) {
+				if (source.addedType) {
+					newBaseTypes = ['Normal'];
+				} else {
+					return false;
+				}
+			}
+			this.add('-start', target, 'typechange', '[from] move: Transfusion', '[of] ' + source);
+			target.setType(newBaseTypes, false, target, this.effect);
+			target.addedType = source.addedType;
+			target.knownType = source.isAlly(target) && source.knownType;
+			if (!target.knownType) target.apparentType = oldApparentType;
+		},
+		rating: 2,
+	},
+	catalyst: {
+		name: "Catalyst",
+		onStart(pokemon) {
+			const possibleTargets = pokemon.side.foe.active.filter(foeActive => foeActive && pokemon.isAdjacent(foeActive));
+			let rand = 0;
+			if (possibleTargets.length > 1) rand = this.random(possibleTargets.length);
+			const target = possibleTargets[rand];
+			if (target && target.species) {
+				let newBaseTypes = [pokemon.apparentType + target.getTypes(true).filter(type => type !== '???')];
+				if (!newBaseTypes.length) {
+					if (target.addedType) {
+						newBaseTypes = ['Normal'];
+					} else {
+						return false;
+					}
+				}
+				const type = newBaseTypes;
+				if (type && pokemon.setType(type, false, pokemon, this.effect)) {
+					this.add('-start', pokemon, 'typechange', '[from] ability: Catalyst');
+				}
+			}
+		},
+		rating: 2,
+	},
+	delusion: {
+		name: "Delusion",
+		onDamagingHit(damage, target, source, move) {
+			const sourceAbility = source.getAbility();
+			if (sourceAbility.isPermanent || sourceAbility.id === 'delusion') {
+				return;
+			}
+			const oldAbility = source.setAbility('delusion', target);
+			if (oldAbility) {
+				this.add('-activate', target, 'ability: Delusion', this.dex.abilities.get(oldAbility).name, '[of] ' + source);
+			}
+		},
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			let stats: BoostID[] = [];
+			const boost: SparseBoostsTable = {};
+			let statPlus: BoostID;
+			for (statPlus in pokemon.boosts) {
+				if (statPlus === 'accuracy' || statPlus === 'evasion') continue;
+				if (pokemon.boosts[statPlus] < 6) {
+					stats.push(statPlus);
+				}
+			}
+			let randomStat: BoostID | undefined = stats.length ? this.sample(stats) : undefined;
+			if (randomStat) boost[randomStat] = 1;
+
+			stats = [];
+			let statMinus: BoostID;
+			for (statMinus in pokemon.boosts) {
+				if (statMinus === 'accuracy' || statMinus === 'evasion') continue;
+				if (pokemon.boosts[statMinus] > -6 && statMinus !== randomStat) {
+					stats.push(statMinus);
+				}
+			}
+			randomStat = stats.length ? this.sample(stats) : undefined;
+			if (randomStat) boost[randomStat] = -2;
+
+			this.boost(boost, pokemon, pokemon);
+		},
+		rating: 2,
 	},
 	niceface: {
 		onStart(pokemon) {
