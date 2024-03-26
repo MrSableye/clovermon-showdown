@@ -8973,6 +8973,30 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	schizeel: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	schizuo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	schizorgon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	jumblegore: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	jumblinart: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mootant: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	gyonin: {
 		tier: "Illegal",
 		isNonstandard: "Future",
