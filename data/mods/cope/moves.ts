@@ -4741,4 +4741,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	enhancedfireorbs: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	frytoacrisp: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

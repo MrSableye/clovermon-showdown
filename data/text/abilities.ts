@@ -2596,12 +2596,25 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	frozenbunker: {
 		name: "Frozen Bunker",
-		desc: "Upon taking super-effective daamge, this Pokémon changes into its freed form for the rest of the battle.",
+		desc: "This Pokémon permanently changes into its freed form taking a S.E. hit, Halved neutral damage taken.",
 	},
 	boundary: {
 		name: "Boundary",
 		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.5.",
 		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.5x damage.",
+	},
+	transfusion: {
+		name: "Transfusion",
+		shortDesc: "Upon being hit, changes the opponent's type to the type of the ability-holder.",
+	},
+	catalyst: {
+		name: "Catalyst",
+		desc: "Upon switching in, adds an opposing Pokemon's types to this Pokemon's types.",
+		shortDesc: "Upon switching in, the opponent's types to this Pokemon's types",
+	},
+	delusion: {
+		name: "Delusion",
+		shortDesc: "End of every turn -2 stat +1 stat, Ability spreads when the holder is hit.",
 	},
 	rusepower: {
 		name: "Ruse Power",

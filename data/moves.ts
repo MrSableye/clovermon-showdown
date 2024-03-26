@@ -24890,32 +24890,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mustpressure: 1},
-		volatileStatus: 'imprison',
-		condition: {
-			noCopy: true,
-			onStart(target) {
-				this.add('-start', target, 'move: Prison Roots');
-			},
-			onFoeDisableMove(pokemon) {
-				for (const moveSlot of this.effectState.source.moveSlots) {
-					if (moveSlot.id === 'struggle') continue;
-					pokemon.disableMove(moveSlot.id, 'hidden');
-				}
-				pokemon.maybeDisabled = true;
-			},
-			onFoeBeforeMovePriority: 4,
-			onFoeBeforeMove(attacker, defender, move) {
-				if (move.id !== 'struggle' && this.effectState.source.hasMove(move.id) && !move.isZ && !move.isMax) {
-					this.add('cant', attacker, 'move: Prison Roots', move);
-					return false;
-				}
-			},
-		},
 		onHit(target, source, move) {
+			source.addVolatile('imprison')
 			return target.addVolatile('trapped', source, move, 'trapper');
 		},
 		secondary: null,
-		target: "self",
+		target: "normal",
 		type: "Grass",
 		contestType: "Clever",
 		isNonstandard: "Future",
