@@ -2831,6 +2831,36 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	schizeel: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	schizuo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	schizorgon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	jumblegore: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	jumblinart: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	mootant: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	coilspill: {
 		inherit: true,
 		isNonstandard: null,
