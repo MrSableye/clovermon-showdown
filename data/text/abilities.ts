@@ -2610,7 +2610,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	catalyst: {
 		name: "Catalyst",
 		desc: "Upon switching in, adds an opposing Pokemon's types to this Pokemon's types.",
-		shortDesc: "Upon switching in, the opponent's types to this Pokemon's types",
+		shortDesc: "Upon switching in, adds the opponent's types to this Pokemon's types",
 	},
 	delusion: {
 		name: "Delusion",
