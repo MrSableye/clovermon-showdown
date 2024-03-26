@@ -64,6 +64,16 @@ const initializeTeams = async () => {
 			aries: 'aries',
 			aquarius: 'aquarius',
 		}),
+		flag: await createTeam({
+			usa: 'usaflag',
+			uk: 'ukflag',
+			brazil: 'brazilflag',
+			italy: 'italyflag',
+			canada: 'canadaflag',
+			eu: 'euflag',
+			chile: 'chileflag',
+			mexico: 'mexicoflag',
+		}),
 	};
 	isInitialized = true;
 };
