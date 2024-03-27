@@ -10848,6 +10848,41 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	mootant: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	jumblegore: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	jumblinart: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	schizeel: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	schizuo: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	schizorgon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	ganglython: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	starhiro: {
 		inherit: true,
 		tier: "OU",
