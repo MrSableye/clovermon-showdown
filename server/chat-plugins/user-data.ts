@@ -35,6 +35,7 @@ async function getUserData(user: User): Promise<UserData | null> {
 }
 
 export const loginfilter: Chat.LoginFilter = (user) => {
-	const userData = getUserData(user);
-	FS(`config/users/${user.id}.json`).writeSync(JSON.stringify(userData));
+	getUserData(user)
+		.then((userData) => FS(`config/users/${user.id}.json`).writeSync(JSON.stringify(userData)))
+		.catch(() => {});
 };
