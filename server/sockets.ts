@@ -342,6 +342,7 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 			const badgeServer = new StaticServer('./config/badges');
 			const emojiServer = new StaticServer('./config/emojis');
 			const stickerServer = new StaticServer('./config/stickers');
+			const userServer = new StaticServer('./config/users');
 			const staticServer = new StaticServer('./server/static');
 			const staticRequestHandler = (req: http.IncomingMessage, res: http.ServerResponse) => {
 				// console.log(`static rq: ${req.socket.remoteAddress}:${req.socket.remotePort} -> ${req.socket.localAddress}:${req.socket.localPort} - ${req.method} ${req.url} ${req.httpVersion} - ${req.rawHeaders.join('|')}`);
@@ -368,6 +369,9 @@ export class ServerStream extends Streams.ObjectReadWriteStream<string> {
 						} else if (req.url.startsWith('/stickers/')) {
 							req.url = req.url.substr(9);
 							server = stickerServer;
+						} else if (req.url.startsWith('/users/')) {
+							req.url = req.url.substr(6);
+							server = userServer;
 						} else if (roomidRegex.test(req.url)) {
 							req.url = '/';
 						}

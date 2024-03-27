@@ -337,7 +337,7 @@ const TITLE_INVALID = 'Your custom title must be between 1 and 18 characters lon
 interface Title { title: string }
 type TitleConfig = Record<string, Title>;
 
-const titles: TitleConfig = JSON.parse(
+export const titles: TitleConfig = JSON.parse(
 	FS('config/chat-plugins/custom-titles.json').readIfExistsSync() || "{}"
 );
 
