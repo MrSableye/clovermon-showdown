@@ -7729,7 +7729,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (!possibleTargets.length) return;
 			const target = this.sample(possibleTargets);
 			if (target && target.species) {
-				const types = pokemon.types;
+				const types = pokemon.getTypes();
 				target.getTypes().forEach((type) => {
 					if (!types.includes(type)) types.push(type);
 				});
@@ -12418,7 +12418,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			for (const pokemon of attacker.side.pokemon) {
 				if (attacker === pokemon) continue;
 				if (pokemon.fainted) continue;
-				if (pokemon.types.some((type) => attacker.types.includes(type))) {
+				if (pokemon.getTypes().some((type) => attacker.types.includes(type))) {
 					homogenousAllies++;
 				}
 			}
