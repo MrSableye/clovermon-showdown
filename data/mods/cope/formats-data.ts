@@ -2856,6 +2856,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	ganglython: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	mootant: {
 		inherit: true,
 		isNonstandard: null,

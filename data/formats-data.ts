@@ -8997,6 +8997,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	ganglython: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	gyonin: {
 		tier: "Illegal",
 		isNonstandard: "Future",
