@@ -7716,21 +7716,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Transfusion",
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
-			this.add('-start', target, 'typechange', '[from] move: Transfusion', '[of] ' + source);
+			const types = source.getTypes();
 			target.setType(source.getTypes());
+			this.add('-start', source, 'typechange', types.join('/'), '[from] ability: Transfusion', '[of] ' + source);
 		},
 		rating: 2,
 	},
 	catalyst: {
 		name: "Catalyst",
 		onStart(pokemon) {
-			const possibleTargets = pokemon.side.foe.active.filter(foeActive => foeActive && pokemon.isAdjacent(foeActive));
-			let rand = 0;
-			if (possibleTargets.length > 1) rand = this.random(possibleTargets.length);
-			const target = possibleTargets[rand];
+			const possibleTargets = pokemon.adjacentFoes();
+			if (!possibleTargets.length) return;
+			const target = this.sample(possibleTargets);
 			if (target && target.species) {
-				if (!target.addType(target.getTypes()[0], pokemon, this.effect)) return false;
-				if (!target.addType(target.getTypes()[1], pokemon, this.effect)) return false;
+				target.getTypes().forEach((type) => {
+					if (pokemon.addType(type, pokemon, this.effect)) {
+						this.add('-start', pokemon, 'typeadd', type, '[from] ability: Catalyst');
+					}
+				});
 			}
 		},
 		rating: 2,
