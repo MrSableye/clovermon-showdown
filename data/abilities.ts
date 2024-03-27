@@ -7716,9 +7716,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Transfusion",
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
-			const types = source.getTypes();
-			target.setType(source.getTypes());
-			this.add('-start', target, 'typechange', types.join('/'), '[from] ability: Transfusion', '[of] ' + source);
+			const types = target.getTypes();
+			source.setType(types);
+			this.add('-start', source, 'typechange', types.join('/'), '[from] ability: Transfusion', '[of] ' + target);
 		},
 		rating: 2,
 	},
