@@ -7733,8 +7733,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				target.getTypes().forEach((type) => {
 					if (!types.includes(type)) types.push(type);
 				});
-				pokemon.setType(types);
-				this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Catalyst', '[of] ' + pokemon);
+				if (pokemon.setType(types)) {
+					this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Catalyst', '[of] ' + pokemon);
+				}
 			}
 		},
 		rating: 2,
