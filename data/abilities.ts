@@ -7718,7 +7718,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onDamagingHit(damage, target, source, move) {
 			const types = source.getTypes();
 			target.setType(source.getTypes());
-			this.add('-start', source, 'typechange', types.join('/'), '[from] ability: Transfusion', '[of] ' + source);
+			this.add('-start', target, 'typechange', types.join('/'), '[from] ability: Transfusion', '[of] ' + source);
 		},
 		rating: 2,
 	},
@@ -7729,11 +7729,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (!possibleTargets.length) return;
 			const target = this.sample(possibleTargets);
 			if (target && target.species) {
+				const types = pokemon.types;
 				target.getTypes().forEach((type) => {
-					if (pokemon.addType(type, pokemon, this.effect)) {
-						this.add('-start', pokemon, 'typeadd', type, '[from] ability: Catalyst');
-					}
+					if (!types.includes(type)) types.push(type);
 				});
+				pokemon.setType(types);
+				this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Catalyst', '[of] ' + pokemon);
 			}
 		},
 		rating: 2,
