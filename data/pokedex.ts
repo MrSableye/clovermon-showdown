@@ -37508,7 +37508,7 @@ ganglython: {
 	name: "Ganglython",
 	types: ["Ghost", "Psychic"],
 	genderRatio: {M: 0.5, F: 0.5},
-	baseStats: {hp: 70, atk: 48, def: 42, spa: 73, spd: 38, spe: 236},
+	baseStats: {hp: 70, atk: 48, def: 42, spa: 93, spd: 38, spe: 136},
 	abilities: {0: "Pressure", 1: "Own Tempo", H: "Transfusion", S: "Infiltrator"},
 	heightm: 1.92,
 	weightkg: 106.17,
