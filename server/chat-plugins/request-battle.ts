@@ -1,10 +1,15 @@
+const getFormatButton = (format: Format) => {
+	return `<button name="send" value="/requestbattle ${format.id}" class="button">Request ${format.name} battle</button>`;
+};
+
 export const commands: Chat.ChatCommands = {
 	requestbattle(target, room, user) {
 		room = this.requireRoom('lobby' as RoomID);
 		this.checkChat();
 
 		if (!target) {
-			throw new Chat.ErrorMessage('Please specify a format.');
+			const formats = Dex.formats.all();
+			return this.sendReplyBox(formats.map(getFormatButton).join(', '));
 	 	}
 		const format = Dex.formats.get(target);
 		if (!format || !format.exists) {
