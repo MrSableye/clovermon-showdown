@@ -9,7 +9,7 @@ import {Config} from './config-loader';
 import * as path from 'path';
 
 /** Max badges per user */
-export const MAX_OWNED_BADGES = 100;
+export const MAX_OWNED_BADGES = 1000;
 export const MAX_USER_BADGES = 100;
 export const DEFAULT_FILE = FS('databases/badges.db').path;
 const PM_TIMEOUT = 30 * 60 * 1000;
