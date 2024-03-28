@@ -3455,6 +3455,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Homogeneity",
 		desc: "This Pokemon's moves have 20% increased power for every unfainted party member that shares a type with it.",
 	},
+	multiversal: {
+		name: "Multiversal",
+		desc: "This Pokemon's boosts, volatile conditions, and status are synced among all Pokemon with Multiversal among all battles. Wackiness will ensue.",
+	},
 	medusascurse: {
 		name: "Medusa's Curse",
 		shortDesc: "Sets all other Pokemon to Rock-type on switch-in.",

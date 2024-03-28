@@ -33,6 +33,7 @@ Ratings and how they work:
 */
 
 import {Pokemon} from "../sim";
+import {FS} from "../sim";
 
 export const Abilities: {[abilityid: string]: AbilityData} = {
 	noability: {
@@ -12426,6 +12427,47 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			return this.chainModify(1 + homogenousAllies * 0.2);
 		},
 		isNonstandard: "Future",
+	},
+	multiversal: {
+		name: "Multiversal",
+		isNonstandard: "Future",
+		onUpdate(pokemon) {
+			this.effectState.step = this.effectState.step || 0;
+			const rawData = FS('config/multiversal.json').readIfExistsSync() || '{ "step": 0 }';
+			const data = JSON.parse(rawData);
+
+			if (this.effectState.step >= data.step) {
+				this.effectState.step++;
+				const newData = {
+					step: this.effectState.step,
+					boosts: pokemon.boosts,
+					volatiles: Object.keys(pokemon.volatiles),
+					status: pokemon.status,
+				};
+				FS('config/multiversal.json').writeSync(JSON.stringify(newData));
+			} else {
+				const volatiles = data.volatiles as string[] | undefined;
+				if (volatiles) {
+					volatiles.forEach((volatile) => {
+						if (pokemon.volatiles[volatile]) return;
+						pokemon.addVolatile(volatile, pokemon, this.effect);
+					});
+				}
+
+				const status = data.status as string | undefined;
+				if (status) {
+					pokemon.setStatus(status, pokemon, this.effect);
+				}
+
+				const boosts = data.boosts as BoostsTable | undefined;
+				if (boosts) {
+					this.add('-clearboost', pokemon, '[from] ability: Multiversal', '[of] ' + pokemon);
+					this.boost(boosts);
+				}
+
+				this.effectState.step = data.step;
+			}
+		},
 	},
 	medusascurse: {
 		name: "Medusa's Curse",
