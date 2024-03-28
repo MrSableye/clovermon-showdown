@@ -10883,6 +10883,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	coilspill: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	raidenetti: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	starhiro: {
 		inherit: true,
 		tier: "OU",
