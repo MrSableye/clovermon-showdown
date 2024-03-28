@@ -8924,7 +8924,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	pantherkkick: {
 		name: "Pantherk Kick",
-		shortDesc: "30% flinch chance. Pantherk.",
+		shortDesc: "20% flinch chance. Pantherk.",
 	},
 	despiteallmyrage: {
 		name: "DESPITE ALL MY RAGE",

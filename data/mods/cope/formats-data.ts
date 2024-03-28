@@ -3001,11 +3001,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	    },
-	    blobbospostmodern: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	    krackowalker: {
 		inherit: true,
 		isNonstandard: null,

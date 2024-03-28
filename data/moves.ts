@@ -29533,7 +29533,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	pantherkkick: {
 		accuracy: 85,
-		basePower: 120,
+		basePower: 100,
 		category: "Physical",
 		name: "Pantherk Kick",
 		pp: 10,
@@ -29549,7 +29549,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return null;
 		},
 		secondary: {
-			chance: 30,
+			chance: 20,
 			volatileStatus: 'flinch',
 		},
 		target: "normal",
