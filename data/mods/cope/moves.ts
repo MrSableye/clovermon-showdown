@@ -4649,6 +4649,30 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	infernalparade: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tripledive: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	triplearrows: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	esperwing: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bleakwindstorm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stoneaxe: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	mortalspin: {
 		inherit: true,
 		isNonstandard: null,
