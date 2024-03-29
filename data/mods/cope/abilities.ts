@@ -1847,6 +1847,14 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	protosynthesis: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	supremeoverlord: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	vesselofruin: {
 		inherit: true,
 		isNonstandard: null,
