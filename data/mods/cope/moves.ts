@@ -4649,6 +4649,26 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	spicyextract: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	doubleshock: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ruination: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wildboltstorm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ragingbull: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	infernalparade: {
 		inherit: true,
 		isNonstandard: null,
