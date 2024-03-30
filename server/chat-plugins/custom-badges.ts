@@ -1,6 +1,8 @@
 import {Badge} from '../badges';
 import {Badges} from './badges';
 
+const CHUNK_SIZE = 6;
+
 type Team = Record<string, Badge>;
 
 const createTeam = async (teamToBadge: Record<string, string>): Promise<Team> => {
@@ -294,12 +296,25 @@ const initializeTeams = async () => {
 	isInitialized = true;
 };
 
-const createTeamHtml = (teamName: string, team: Team) => {
-	let teamHtml = `<b>${teamName} <i>(try <code>/badgeteam join ${teamName}, SIDE</code>)</i></b><br />`;
+const chunk = <T>(array: T[], chunkSize: number): T[][] => {
+	const chunks = [];
+	for (let i = 0; i < array.length; i += chunkSize) {
+		chunks.push(array.slice(i, i + chunkSize));
+	}
+	return chunks;
+};
 
-	teamHtml += Object.entries(team).map(
-		([sideName, badge]) => Badges.createBadgeHtml({...badge, badge_id: sideName}, false),
-	).join(' ');
+const createTeamHtml = (teamName: string, team: Team) => {
+	let teamHtml = `<details><summary><b>${teamName} <i>(try <code>/badgeteam join ${teamName}, SIDE</code>)</i></b></summary>`;
+
+	const chunkedBadges = chunk(Object.entries(team), CHUNK_SIZE);
+	teamHtml += '<table>';
+	chunkedBadges.forEach((badgeChunk) => {
+		teamHtml += '<tr>';
+		teamHtml += badgeChunk.map(([sideName, badge]) => '<td>' + Badges.createBadgeHtml({...badge, badge_id: sideName}, false) + '</td>');
+		teamHtml += '</tr>';
+	});
+	teamHtml += '</table></details>';
 
 	return teamHtml;
 };
@@ -336,6 +351,9 @@ const joinTeam = async (user: User, teamName: string, teamSide: string): Promise
 };
 
 export const commands: Chat.ChatCommands = {
+	sidejoin: 'badgeteam',
+	joinside: 'badgeteam',
+	teambadge: 'badgeteam',
 	badgeteam: {
 		async list() {
 			if (!Config.usesqlitebadges) {
@@ -373,6 +391,10 @@ export const commands: Chat.ChatCommands = {
 			}
 
 			return this.sendReplyBox(`Successfully joined team ${teamSide}: ${Badges.createBadgeHtml(badge, false)}`);
+		},
+		'': 'help',
+		help() {
+			return this.parse("/badgeteam list");
 		},
 	},
 };
