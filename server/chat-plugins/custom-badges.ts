@@ -1,7 +1,7 @@
 import {Badge} from '../badges';
 import {Badges} from './badges';
 
-const CHUNK_SIZE = 6;
+const CHUNK_SIZE = 4;
 
 type Team = Record<string, Badge>;
 
@@ -311,7 +311,7 @@ const createTeamHtml = (teamName: string, team: Team) => {
 	teamHtml += '<table>';
 	chunkedBadges.forEach((badgeChunk) => {
 		teamHtml += '<tr>';
-		teamHtml += badgeChunk.map(([sideName, badge]) => '<td>' + Badges.createBadgeHtml({...badge, badge_id: sideName}, false) + '</td>');
+		teamHtml += badgeChunk.map(([sideName, badge]) => '<td>' + Badges.createBadgeHtml({...badge, badge_id: sideName}, false) + '</td>').join('');
 		teamHtml += '</tr>';
 	});
 	teamHtml += '</table></details>';
