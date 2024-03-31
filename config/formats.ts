@@ -1187,13 +1187,13 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Random Battles',
 		mod: 'cloverblobboscap',
-		team: 'randomblob',
+		team: 'random',
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Pick Your Team Random Battle',
 		mod: 'cloverblobboscap',
-		team: 'randomblob',
+		team: 'random',
 		ruleset: [
 			'Terastal Clause',
 			'Picked Team Size = 6',
