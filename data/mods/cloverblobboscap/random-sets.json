@@ -340,13 +340,12 @@
             "moves":[
               "abduction",
               "laserbeam",
-              "psychic",
-              "psychoboost",
               "thunderwave",
               "moonlight"
             ],
             "lockedMoves":[
-              "uturn"
+              "uturn",
+              "psychic"
             ],
             "level":84
           }
@@ -455,7 +454,7 @@
           },
           {
             "abilities":[
-              "deadlypincer"
+              "deadlypincers"
             ],
             "items":[
               "loadeddice"
@@ -844,8 +843,7 @@
               "purepower"
             ],
             "items":[
-              "choiceband",
-              "lifeorb"
+              "choiceband"
             ],
             "lockedMoves":[
               "focuspunch",
@@ -853,7 +851,7 @@
               "rockslide",
               "blobbybop"
             ],
-            "level":74
+            "level":69
           },
           {
             "abilities":[
@@ -868,7 +866,7 @@
               "sleeptalk",
               "brickbreak"
             ],
-            "level":74
+            "level":69
           }
         ]
     },
@@ -1426,7 +1424,7 @@
               "spookout",
               "poltergeist"
             ],
-            "level":84
+            "level":78
           }
         ]
     },
@@ -1476,7 +1474,7 @@
               "knockoff",
               "tridentcharge"
             ],
-            "level":76
+            "level":72
           }
         ]
     },
@@ -1740,7 +1738,7 @@
               "petrify",
               "chatter"
             ],
-            "level":84
+            "level":78
           }
         ]
     },
@@ -1764,7 +1762,7 @@
               "trapcard",
               "trashtalk"
             ],
-            "level":84
+            "level":81
           }
         ]
     },
@@ -2161,7 +2159,7 @@
               "braindamage",
               "shellsmash"
             ],
-            "level":76
+            "level":69
           },
           {
             "abilities":[
@@ -2176,7 +2174,7 @@
               "icebeam",
               "shellsmash"
             ],
-            "level":76
+            "level":69
           }
         ]
     },
@@ -3938,7 +3936,7 @@
               "pursuit",
               "obstruct"
             ],
-            "level":84
+            "level":78
           },
           {
             "abilities":[
@@ -3953,7 +3951,7 @@
               "mountaingale",
               "rockpolish"
             ],
-            "level":84
+            "level":78
           }
         ]
     },
@@ -4211,7 +4209,7 @@
               "crystalslash",
               "swordsdance"
             ],
-            "level":78
+            "level":74
           }
         ]
     },
@@ -4559,7 +4557,7 @@
               "surf",
               "erosionwave"
             ],
-            "level":63
+            "level":61
           }
         ]
     },
@@ -5022,7 +5020,7 @@
               "fakeout",
               "morningsun"
             ],
-            "level":96
+            "level":93
           }
         ]
     },
@@ -5076,7 +5074,7 @@
     },
     "blobbospterois":{
         "nicknames":[
-          "Pseudo"
+          "Pterois"
         ],
         "sets":[
           {
@@ -5092,7 +5090,7 @@
               "icebeam",
               "raindance"
             ],
-            "level":81
+            "level":80
           },
           {
             "abilities":[
@@ -5391,7 +5389,7 @@
               "limber"
             ],
             "items":[
-              "sexitex"
+              "sexitey"
             ],
             "lockedMoves":[
               "matingpress",
@@ -5406,7 +5404,7 @@
               "limber"
             ],
             "items":[
-              "sexitey"
+              "sexitex"
             ],
             "lockedMoves":[
               "matingpress",
@@ -6304,7 +6302,7 @@
           "tripleaxel",
           "flamecharge"
         ],
-        "level":84
+        "level":76
       }
     ]
   },
@@ -6370,7 +6368,7 @@
           "stormthrow",
           "quiverdance"
         ],
-        "level":93
+        "level":88
       }
     ]
   },
@@ -6575,7 +6573,7 @@
           "brickbreak",
           "bulkup"
         ],
-        "level":84
+        "level":81
       }
     ]
   },
@@ -6620,7 +6618,7 @@
           "flamethrower",
           "calmmind"
         ],
-        "level":84
+        "level":81
       }
     ]
   },
@@ -6660,7 +6658,7 @@
         ],
         "lockedMoves":[
           "fizzbitch",
-          "blobbybop",
+          "wowwiener",
           "toke",
           "regenerate"
         ],
