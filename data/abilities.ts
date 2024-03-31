@@ -6058,12 +6058,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'boardpowerz',
 			];
 			const randomAbility = this.sample(boardAbilities);
+			const ability = this.dex.abilities.get(randomAbility);
 
-			if (randomAbility) {
-				const oldAbility = pokemon.setAbility(randomAbility);
+			if (ability && ability.exists) {
+				const oldAbility = pokemon.setAbility(ability, pokemon, true);
 
 				if (oldAbility) {
-					this.add('-ability', pokemon, randomAbility, '[from] move: Board Power (/b/)');
+					this.add('-ability', pokemon, ability, '[from] ability: Board Power (/b/)');
 					return;
 				}
 			}
