@@ -2531,7 +2531,7 @@
             "abilities":[
               "levitate"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "moves":[
@@ -2557,7 +2557,7 @@
             "abilities":[
               "magician"
             ],
-            "item":[
+            "items":[
               "sitrusberry",
               "fightinggem"
             ],
@@ -2621,7 +2621,7 @@
             "abilities":[
               "simple"
             ],
-            "item":[
+            "items":[
               "airballoon"
             ],
             "lockedMoves":[
@@ -2643,7 +2643,7 @@
             "abilities":[
               "peaceandtranquility"
             ],
-            "item":[
+            "items":[
               "petayaberry"
             ],
             "lockedMoves":[
@@ -2665,7 +2665,7 @@
             "abilities":[
               "lootable"
             ],
-            "item":[
+            "items":[
               "blacksludge"
             ],
             "lockedMoves":[
@@ -2687,7 +2687,7 @@
             "abilities":[
               "ancientstyle"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "moves":[
@@ -2717,7 +2717,7 @@
             "abilities":[
               "speedboost"
             ],
-            "item":[
+            "items":[
               "sitrusberry"
             ],
             "moves":[
@@ -2742,7 +2742,7 @@
             "abilities":[
               "digger"
             ],
-            "item":[
+            "items":[
               "softsand",
               "lifeorb"
             ],
@@ -2765,7 +2765,7 @@
             "abilities":[
               "soulheart"
             ],
-            "item":[
+            "items":[
               "leftovers",
               "lifeorb"
             ],
@@ -2781,7 +2781,7 @@
             "abilities":[
               "blademaster"
             ],
-            "item":[
+            "items":[
               "leftovers",
               "lifeorb"
             ],
@@ -2807,7 +2807,7 @@
             "abilities":[
               "intangible"
             ],
-            "item":[
+            "items":[
               "lightclay"
             ],
             "lockedMoves":[
@@ -2831,7 +2831,7 @@
             "abilities":[
               "ascension"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -2853,7 +2853,7 @@
             "abilities":[
               "captchahorni"
             ],
-            "item":[
+            "items":[
               "assaultvest",
               "lifeorb"
             ],
@@ -2878,7 +2878,7 @@
             "abilities":[
               "powerofyeehaw"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -2900,7 +2900,7 @@
             "abilities":[
               "sheerforce"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -2926,7 +2926,7 @@
               "levitate",
               "download"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -2948,7 +2948,7 @@
             "abilities":[
               "infection"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -2970,7 +2970,7 @@
             "abilities":[
               "harvest"
             ],
-            "item":[
+            "items":[
               "sitrusberry"
             ],
             "lockedMoves":[
@@ -2992,7 +2992,7 @@
             "abilities":[
               "adminabuse"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -3007,7 +3007,7 @@
             "abilities":[
               "adminabuse"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -3029,7 +3029,7 @@
             "abilities":[
               "multiscale"
             ],
-            "item":[
+            "items":[
               "lumberry",
               "leftovers"
             ],
@@ -3045,7 +3045,7 @@
             "abilities":[
               "technician"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -3068,7 +3068,7 @@
               "deltastream",
               "dragonsmaw"
             ],
-            "item":[
+            "items":[
               "throatspray"
             ],
             "moves":[
@@ -3094,7 +3094,7 @@
             "abilities":[
               "pixilate"
             ],
-            "item":[
+            "items":[
               "kalosite"
             ],
             "lockedMoves":[
@@ -3116,7 +3116,7 @@
             "abilities":[
               "memepower"
             ],
-            "item":[
+            "items":[
               "propellerhat"
             ],
             "lockedMoves":[
@@ -3138,7 +3138,7 @@
             "abilities":[
               "copypower"
             ],
-            "item":[
+            "items":[
               "starrod"
             ],
             "lockedMoves":[
@@ -3162,7 +3162,7 @@
             "abilities":[
               "showerpower"
             ],
-            "item":[
+            "items":[
               "damprock",
               "leftovers"
             ],
@@ -3178,7 +3178,7 @@
             "abilities":[
                 "hydrophile"
             ],
-            "item":[
+            "items":[
                 "assaultvest",
                 "leftovers"
             ],
@@ -3203,7 +3203,7 @@
             "abilities":[
               "codename"
             ],
-            "item":[
+            "items":[
               "loadeddice"
             ],
             "lockedMoves":[
@@ -3227,7 +3227,7 @@
             "abilities":[
               "solidrock"
             ],
-            "item":[
+            "items":[
               "weaknesspolicy"
             ],
             "moves":[
@@ -3245,7 +3245,7 @@
             "abilities":[
               "levitate"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -3269,7 +3269,7 @@
             "abilities":[
               "woodchipper"
             ],
-            "item":[
+            "items":[
               "occaberry",
               "sitrusberry"
             ],
@@ -3288,7 +3288,7 @@
             "abilities":[
               "woodchipper"
             ],
-            "item":[
+            "items":[
               "sitrusberry"
             ],
             "lockedMoves":[
@@ -3310,7 +3310,7 @@
             "abilities":[
               "immortality"
             ],
-            "item":[
+            "items":[
               "phylactery"
             ],
             "lockedMoves":[
@@ -3371,7 +3371,7 @@
             "abilities":[
               "madman"
             ],
-            "item":[
+            "items":[
               "sitrusberry"
             ],
             "lockedMoves":[
@@ -3393,7 +3393,7 @@
             "abilities":[
               "levitate"
             ],
-            "item":[
+            "items":[
               "marxite"
             ],
             "lockedMoves":[
@@ -3408,7 +3408,7 @@
             "abilities":[
               "prankster"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -3430,7 +3430,7 @@
             "abilities":[
               "blademaster"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "moves":[
@@ -3448,7 +3448,7 @@
             "abilities":[
               "levitate"
             ],
-            "item":[
+            "items":[
               "flamesword"
             ],
             "lockedMoves":[
@@ -3463,7 +3463,7 @@
             "abilities":[
               "blademaster"
             ],
-            "item":[
+            "items":[
               "frostsword"
             ],
             "moves":[
@@ -3481,7 +3481,7 @@
             "abilities":[
               "levitate"
             ],
-            "item":[
+            "items":[
               "sparksword"
             ],
             "moves":[
@@ -3499,7 +3499,7 @@
             "abilities":[
               "levitate"
             ],
-            "item":[
+            "items":[
               "splashsword"
             ],
             "moves":[
@@ -3526,7 +3526,7 @@
             "abilities":[
               "medusascurse"
             ],
-            "item":[
+            "items":[
               "lifeorb",
               "lumberry"
             ],
@@ -3551,7 +3551,7 @@
             "abilities":[
               "marvelscale"
             ],
-            "item":[
+            "items":[
               "flameorb"
             ],
             "lockedMoves":[
@@ -3566,7 +3566,7 @@
             "abilities":[
               "liquidvoice"
             ],
-            "item":[
+            "items":[
               "throatspray",
               "assaultvest"
             ],
@@ -3594,7 +3594,7 @@
             "abilities":[
               "blademaster"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "moves":[
@@ -3612,7 +3612,7 @@
             "abilities":[
               "blademaster"
             ],
-            "item":[
+            "items":[
               "choiceband"
             ],
             "moves":[
@@ -3637,7 +3637,7 @@
             "abilities":[
               "fullmetalbody"
             ],
-            "item":[
+            "items":[
               "chestoberry"
             ],
             "lockedMoves":[
@@ -3659,7 +3659,7 @@
             "abilities":[
               "comatose"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -3681,7 +3681,7 @@
             "abilities":[
               "costume"
             ],
-            "item":[
+            "items":[
               "blobbosmikiumz",
               "lifeorb"
             ],
@@ -3708,7 +3708,7 @@
             "abilities":[
               "download"
             ],
-            "item":[
+            "items":[
               "leftovers",
               "choicespecs"
             ],
@@ -3734,7 +3734,7 @@
             "abilities":[
               "aftermath"
             ],
-            "item":[
+            "items":[
               "normalgem"
             ],
             "moves":[
@@ -3752,7 +3752,7 @@
             "abilities":[
               "detonator"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "moves":[
@@ -3780,7 +3780,7 @@
             "abilities":[
               "evasionhax"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "moves":[
@@ -3809,7 +3809,7 @@
               "berserk",
               "immunity"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "moves":[
@@ -3836,7 +3836,7 @@
             "abilities":[
               "cellconstruct"
             ],
-            "item":[
+            "items":[
               "sitrusberry"
             ],
             "moves":[
@@ -3863,7 +3863,7 @@
             "abilities":[
               "shadowtag"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "moves":[
@@ -3881,7 +3881,7 @@
             "abilities":[
               "shadowtag"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -3903,7 +3903,7 @@
             "abilities":[
               "levitate"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "moves":[
@@ -3928,7 +3928,7 @@
             "abilities":[
               "rockhead"
             ],
-            "item":[
+            "items":[
               "sitrusberry",
               "lumberry"
             ],
@@ -3944,7 +3944,7 @@
             "abilities":[
               "solidrock"
             ],
-            "item":[
+            "items":[
               "weaknesspolicy"
             ],
             "lockedMoves":[
@@ -3968,7 +3968,7 @@
             "abilities":[
               "muhmentum"
             ],
-            "item":[
+            "items":[
               "assaultvest"
             ],
             "lockedMoves":[
@@ -3990,7 +3990,7 @@
             "abilities":[
               "flashfire"
             ],
-            "item":[
+            "items":[
               "assaultvest"
             ],
             "lockedMoves":[
@@ -4005,7 +4005,7 @@
             "abilities":[
               "solarpower"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "moves":[
@@ -4030,7 +4030,7 @@
             "abilities":[
               "mummy"
             ],
-            "item":[
+            "items":[
               "lifeorb",
               "leftovers"
             ],
@@ -4059,7 +4059,7 @@
               "dryskin",
               "liquidooze"
             ],
-            "item":[
+            "items":[
               "blacksludge"
             ],
             "lockedMoves":[
@@ -4081,7 +4081,7 @@
             "abilities":[
               "soulheart"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -4096,7 +4096,7 @@
             "abilities":[
               "naturalcure"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -4118,7 +4118,7 @@
             "abilities":[
               "inversion"
             ],
-            "item":[
+            "items":[
               "negite"
             ],
             "lockedMoves":[
@@ -4140,7 +4140,7 @@
             "abilities":[
               "niceface"
             ],
-            "item":[
+            "items":[
               "terrainextender",
               "lifeorb"
             ],
@@ -4163,7 +4163,7 @@
             "abilities":[
               "spookyaura"
             ],
-            "item":[
+            "items":[
               "focussash",
               "lifeorb"
             ],
@@ -4179,7 +4179,7 @@
             "abilities":[
               "moody"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -4202,7 +4202,7 @@
               "infiltrator",
               "blademaster"
             ],
-            "item":[
+            "items":[
               "masamune"
             ],
             "lockedMoves":[
@@ -4225,7 +4225,7 @@
               "shavedice",
               "merciless"
             ],
-            "item":[
+            "items":[
               "blacksludge"
             ],
             "lockedMoves":[
@@ -4247,7 +4247,7 @@
             "abilities":[
               "madlad"
             ],
-            "item":[
+            "items":[
               "widelens"
             ],
             "lockedMoves":[
@@ -4271,7 +4271,7 @@
             "abilities":[
               "triage"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -4286,7 +4286,7 @@
             "abilities":[
               "triage"
             ],
-            "item":[
+            "items":[
               "assaultvest"
             ],
             "lockedMoves":[
@@ -4301,7 +4301,7 @@
             "abilities":[
               "triage"
             ],
-            "item":[
+            "items":[
               "ganlonberry"
             ],
             "lockedMoves":[
@@ -4323,7 +4323,7 @@
             "abilities":[
               "bigguy"
             ],
-            "item":[
+            "items":[
               "rockyhelmet"
             ],
             "lockedMoves":[
@@ -4345,7 +4345,7 @@
             "abilities":[
               "primordialsea"
             ],
-            "item":[
+            "items":[
               "chestoberry"
             ],
             "lockedMoves":[
@@ -4361,7 +4361,7 @@
               "waterabsorb",
               "stormdrain"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -4383,7 +4383,7 @@
             "abilities":[
               "swampforce"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "moves":[
@@ -4410,7 +4410,7 @@
             "abilities":[
               "darkthoughts"
             ],
-            "item":[
+            "items":[
               "sitrusberry"
             ],
             "moves":[
@@ -4429,7 +4429,7 @@
             "abilities":[
               "moody"
             ],
-            "item":[
+            "items":[
               "sitrusberry"
             ],
             "lockedMoves":[
@@ -4454,7 +4454,7 @@
             "abilities":[
               "seedsower"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "moves":[
@@ -4479,7 +4479,7 @@
             "abilities":[
               "paperpower"
             ],
-            "item":[
+            "items":[
               "powerrush"
             ],
             "moves":[
@@ -4504,7 +4504,7 @@
             "abilities":[
               "leech"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "moves":[
@@ -4522,7 +4522,7 @@
             "abilities":[
               "shedskin"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -4547,7 +4547,7 @@
             "abilities":[
               "comatose"
             ],
-            "item":[
+            "items":[
               "partnerspendant"
             ],
             "moves":[
@@ -4573,7 +4573,7 @@
             "abilities":[
               "adaptability"
             ],
-            "item":[
+            "items":[
               "lightclay"
             ],
             "lockedMoves":[
@@ -4596,7 +4596,7 @@
               "lightningrod",
               "teravolt"
             ],
-            "item":[
+            "items":[
               "mascotsorb"
             ],
             "lockedMoves":[
@@ -4618,7 +4618,7 @@
             "abilities":[
               "fireaffinity"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "moves":[
@@ -4643,7 +4643,7 @@
             "abilities":[
               "wateraffinity"
             ],
-            "item":[
+            "items":[
               "choiceband"
             ],
             "lockedMoves":[
@@ -4665,7 +4665,7 @@
             "abilities":[
               "flightaffinity"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -4687,7 +4687,7 @@
             "abilities":[
               "lightaffinity"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -4709,7 +4709,7 @@
             "abilities":[
               "iceaffinity"
             ],
-            "item":[
+            "items":[
               "assaultvest"
             ],
             "lockedMoves":[
@@ -4731,7 +4731,7 @@
             "abilities":[
               "parasiteaffinity"
             ],
-            "item":[
+            "items":[
               "blackglasses"
             ],
             "lockedMoves":[
@@ -4753,7 +4753,7 @@
             "abilities":[
               "strengthaffinity"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -4775,7 +4775,7 @@
             "abilities":[
               "rockaffinity"
             ],
-            "item":[
+            "items":[
               "assaultvest"
             ],
             "lockedMoves":[
@@ -4797,7 +4797,7 @@
             "abilities":[
               "poisonaffinity"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -4819,7 +4819,7 @@
             "abilities":[
               "electricityaffinity"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -4843,7 +4843,7 @@
             "abilities":[
               "torrent"
             ],
-            "item":[
+            "items":[
               "piratesbooty"
             ],
             "lockedMoves":[
@@ -4877,7 +4877,7 @@
             "abilities":[
               "wellbakedbody"
             ],
-            "item":[
+            "items":[
               "pizzaite"
             ],
             "moves":[
@@ -4902,7 +4902,7 @@
             "abilities":[
               "limblauncher"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "moves":[
@@ -4929,7 +4929,7 @@
             "abilities":[
               "turboblaze"
             ],
-            "item":[
+            "items":[
               "magnet"
             ],
             "lockedMoves":[
@@ -4952,7 +4952,7 @@
               "stickyhold",
               "gooey"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -4975,7 +4975,7 @@
               "unaware",
               "rattled"
             ],
-            "item":[
+            "items":[
               "powerherb"
             ],
             "lockedMoves":[
@@ -4990,7 +4990,7 @@
             "abilities":[
               "unaware"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -5013,7 +5013,7 @@
             "abilities":[
               "presentpower"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -5035,7 +5035,7 @@
             "abilities":[
               "hyperboreanarctic"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "moves":[
@@ -5061,7 +5061,7 @@
               "intimidate",
               "overcoat"
             ],
-            "item":[
+            "items":[
               "scopelens"
             ],
             "lockedMoves":[
@@ -5083,7 +5083,7 @@
             "abilities":[
               "swiftswim"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -5098,7 +5098,7 @@
             "abilities":[
               "intimidate"
             ],
-            "item":[
+            "items":[
               "blacksludge"
             ],
             "lockedMoves":[
@@ -5120,7 +5120,7 @@
             "abilities":[
               "waterbubble"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -5143,7 +5143,7 @@
               "trace",
               "clearbody"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -5158,7 +5158,7 @@
             "abilities":[
               "roughskin"
             ],
-            "item":[
+            "items":[
               "rockyhelmet"
             ],
             "lockedMoves":[
@@ -5180,7 +5180,7 @@
             "abilities":[
               "galvanize"
             ],
-            "item":[
+            "items":[
               "throatspray"
             ],
             "lockedMoves":[
@@ -5195,7 +5195,7 @@
             "abilities":[
               "galvanize"
             ],
-            "item":[
+            "items":[
               "magnet"
             ],
             "lockedMoves":[
@@ -5219,7 +5219,7 @@
             "abilities":[
               "turboblaze"
             ],
-            "item":[
+            "items":[
               "whiteherb"
             ],
             "lockedMoves":[
@@ -5234,7 +5234,7 @@
             "abilities":[
               "blaze"
             ],
-            "item":[
+            "items":[
               "charcoal"
             ],
             "lockedMoves":[
@@ -5258,7 +5258,7 @@
             "abilities":[
               "inmemoriam"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -5273,7 +5273,7 @@
             "abilities":[
               "sableviumz"
             ],
-            "item":[
+            "items":[
               "inmemoriam"
             ],
             "lockedMoves":[
@@ -5297,7 +5297,7 @@
             "abilities":[
               "genwunning"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -5321,7 +5321,7 @@
             "abilities":[
               "brainpower"
             ],
-            "item":[
+            "items":[
               "assaultvest",
               "reversite"
             ],
@@ -5346,7 +5346,7 @@
             "abilities":[
               "steelworker"
             ],
-            "item":[
+            "items":[
               "lifeorb"
             ],
             "lockedMoves":[
@@ -5368,7 +5368,7 @@
             "abilities":[
               "purifyingsalt"
             ],
-            "item":[
+            "items":[
               "leftovers"
             ],
             "lockedMoves":[
@@ -5390,7 +5390,7 @@
             "abilities":[
               "limber"
             ],
-            "item":[
+            "items":[
               "sexitex"
             ],
             "lockedMoves":[
@@ -5405,7 +5405,7 @@
             "abilities":[
               "limber"
             ],
-            "item":[
+            "items":[
               "sexitey"
             ],
             "lockedMoves":[
@@ -5427,7 +5427,7 @@
           "abilities":[
             "shadowaura"
           ],
-          "item":[
+          "items":[
             "spelltag"
           ],
           "lockedMoves":[
@@ -5449,7 +5449,7 @@
         "abilities":[
           "goodasgold"
         ],
-        "item":[
+        "items":[
           "chopleberry",
           "airballoon",
           "assaultvest"
@@ -5477,7 +5477,7 @@
           "sandspit",
           "flashfire"
         ],
-        "item":[
+        "items":[
           "leftovers",
           "lifeorb"
         ],
@@ -5503,7 +5503,7 @@
         "abilities":[
           "shrimpleas"
         ],
-        "item":[
+        "items":[
           "lifeorb"
         ],
         "moves":[
@@ -5521,7 +5521,7 @@
         "abilities":[
           "shrimpleas"
         ],
-        "item":[
+        "items":[
           "curlykrill",
           "droopykrill",
           "stretchykrill"
@@ -5545,7 +5545,7 @@
         "abilities":[
           "unburden"
         ],
-        "item":[
+        "items":[
           "whiteherb"
         ],
         "moves":[
@@ -5563,7 +5563,7 @@
         "abilities":[
           "reckless"
         ],
-        "item":[
+        "items":[
           "leftovers",
           "lifeorb"
         ],
@@ -5586,7 +5586,7 @@
         "abilities":[
           "bonerzoner"
         ],
-        "item":[
+        "items":[
           "tumultuoustibia"
         ],
         "lockedMoves":[
@@ -5611,7 +5611,7 @@
         "abilities":[
           "comatose"
         ],
-        "item":[
+        "items":[
           "nevermeltice"
         ],
         "moves":[
@@ -5638,7 +5638,7 @@
           "gooey",
           "sapsipper"
         ],
-        "item":[
+        "items":[
           "blacksludge"
         ],
         "moves":[
@@ -5658,7 +5658,7 @@
           "gooey",
           "sapsipper"
         ],
-        "item":[
+        "items":[
           "lifeorb"
         ],
         "moves":[
@@ -5685,7 +5685,7 @@
         "abilities":[
           "sneedboost"
         ],
-        "item":[
+        "items":[
           "terrainextender",
           "leftovers"
         ],
@@ -5710,7 +5710,7 @@
         "abilities":[
           "shedskin"
         ],
-        "item":[
+        "items":[
           "blacksludge"
         ],
         "moves":[
@@ -5735,7 +5735,7 @@
         "abilities":[
           "shavedice"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "lockedMoves":[
@@ -5750,7 +5750,7 @@
         "abilities":[
           "snowwarning"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "lockedMoves":[
@@ -5775,7 +5775,7 @@
         "abilities":[
           "stakeout"
         ],
-        "item":[
+        "items":[
           "loadeddisk",
           "choicescarf"
         ],
@@ -5800,7 +5800,7 @@
         "abilities":[
           "spincleaner"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "lockedMoves":[
@@ -5825,7 +5825,7 @@
         "abilities":[
           "poisonheal"
         ],
-        "item":[
+        "items":[
           "toxicorb"
         ],
         "lockedMoves":[
@@ -5840,7 +5840,7 @@
         "abilities":[
           "poisontouch"
         ],
-        "item":[
+        "items":[
           "protectivepads"
         ],
         "lockedMoves":[
@@ -5862,7 +5862,7 @@
         "abilities":[
           "skilllink"
         ],
-        "item":[
+        "items":[
           "lifeorb"
         ],
         "moves":[
@@ -5888,7 +5888,7 @@
         "abilities":[
           "marvelscale"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "moves":[
@@ -5913,7 +5913,7 @@
         "abilities":[
           "boombox"
         ],
-        "item":[
+        "items":[
           "throatspray"
         ],
         "lockedMoves":[
@@ -5935,7 +5935,7 @@
         "abilities":[
           "flareboost"
         ],
-        "item":[
+        "items":[
           "flameorb"
         ],
         "lockedMoves":[
@@ -5957,7 +5957,7 @@
         "abilities":[
           "sheerforce"
         ],
-        "item":[
+        "items":[
           "lifeorb"
         ],
         "lockedMoves":[
@@ -5979,7 +5979,7 @@
         "abilities":[
           "illusion"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "lockedMoves":[
@@ -5994,7 +5994,7 @@
         "abilities":[
           "imposter"
         ],
-        "item":[
+        "items":[
           "choicescarf"
         ],
         "lockedMoves":[
@@ -6016,7 +6016,7 @@
         "abilities":[
           "swamped"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "lockedMoves":[
@@ -6038,7 +6038,7 @@
         "abilities":[
           "deathstranding"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "lockedMoves":[
@@ -6053,7 +6053,7 @@
         "abilities":[
           "deathstranding"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "lockedMoves":[
@@ -6075,7 +6075,7 @@
         "abilities":[
           "liquidvoice"
         ],
-        "item":[
+        "items":[
           "terrainboard"
         ],
         "lockedMoves":[
@@ -6097,7 +6097,7 @@
         "abilities":[
           "joycon"
         ],
-        "item":[
+        "items":[
           "aspearberry"
         ],
         "lockedMoves":[
@@ -6112,7 +6112,7 @@
         "abilities":[
           "joycon"
         ],
-        "item":[
+        "items":[
           "lifeorb"
         ],
         "lockedMoves":[
@@ -6134,7 +6134,7 @@
         "abilities":[
           "pollution"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "moves":[
@@ -6152,7 +6152,7 @@
         "abilities":[
           "pollution"
         ],
-        "item":[
+        "items":[
           "assaultvest"
         ],
         "lockedMoves":[
@@ -6176,7 +6176,7 @@
         "abilities":[
           "frostysurge"
         ],
-        "item":[
+        "items":[
           "expertbelt"
         ],
         "lockedMoves":[
@@ -6200,7 +6200,7 @@
         "abilities":[
           "hustle"
         ],
-        "item":[
+        "items":[
           "choiceband"
         ],
         "lockedMoves":[
@@ -6224,7 +6224,7 @@
         "abilities":[
           "windglider"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "lockedMoves":[
@@ -6246,7 +6246,7 @@
         "abilities":[
           "metagaming"
         ],
-        "item":[
+        "items":[
           "leftovers",
           "rockyhelmet"
         ],
@@ -6270,7 +6270,7 @@
           "pozzed",
           "arenatrap"
         ],
-        "item":[
+        "items":[
           "lumberry"
         ],
         "lockedMoves":[
@@ -6294,7 +6294,7 @@
         "abilities":[
           "overeager"
         ],
-        "item":[
+        "items":[
           "assaultvest",
           "leftovers"
         ],
@@ -6317,7 +6317,7 @@
         "abilities":[
           "ultraego"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "lockedMoves":[
@@ -6339,7 +6339,7 @@
         "abilities":[
           "ultrainstinct"
         ],
-        "item":[
+        "items":[
           "salacberry"
         ],
         "lockedMoves":[
@@ -6361,7 +6361,7 @@
         "abilities":[
           "sharpshooter"
         ],
-        "item":[
+        "items":[
           "glock"
         ],
         "lockedMoves":[
@@ -6383,7 +6383,7 @@
         "abilities":[
           "sheerforce"
         ],
-        "item":[
+        "items":[
           "lifeorb"
         ],
         "moves":[
@@ -6409,7 +6409,7 @@
         "abilities":[
           "vampiric"
         ],
-        "item":[
+        "items":[
           "bigroot"
         ],
         "moves":[
@@ -6437,7 +6437,7 @@
         "abilities":[
           "allskill"
         ],
-        "item":[
+        "items":[
           "blacksludge"
         ],
         "lockedMoves":[
@@ -6460,7 +6460,7 @@
           "magmaarmor",
           "magmaticeruption"
         ],
-        "item":[
+        "items":[
           "airballoon",
           "leftovers"
         ],
@@ -6484,7 +6484,7 @@
           "flashfire",
           "flamebody"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "lockedMoves":[
@@ -6506,7 +6506,7 @@
         "abilities":[
           "superluck"
         ],
-        "item":[
+        "items":[
           "scopelens"
         ],
         "lockedMoves":[
@@ -6521,7 +6521,7 @@
         "abilities":[
           "fluffy"
         ],
-        "item":[
+        "items":[
           "normalgem"
         ],
         "lockedMoves":[
@@ -6543,7 +6543,7 @@
         "abilities":[
           "simple"
         ],
-        "item":[
+        "items":[
           "powerherb"
         ],
         "lockedMoves":[
@@ -6565,7 +6565,7 @@
         "abilities":[
           "protosynthesis"
         ],
-        "item":[
+        "items":[
           "boosterenergy",
           "leftovers"
         ],
@@ -6588,7 +6588,7 @@
         "abilities":[
           "contrary"
         ],
-        "item":[
+        "items":[
           "sitrusberry"
         ],
         "lockedMoves":[
@@ -6610,7 +6610,7 @@
         "abilities":[
           "quarkdrive"
         ],
-        "item":[
+        "items":[
           "leftovers",
           "boosterenergy"
         ],
@@ -6633,7 +6633,7 @@
         "abilities":[
           "inversion"
         ],
-        "item":[
+        "items":[
           "choicespecs"
         ],
         "lockedMoves":[
@@ -6655,7 +6655,7 @@
         "abilities":[
           "woodenguard"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "lockedMoves":[
@@ -6678,7 +6678,7 @@
           "blademaster",
           "beamboost"
         ],
-        "item":[
+        "items":[
           "lifeorb"
         ],
         "lockedMoves":[
@@ -6700,7 +6700,7 @@
         "abilities":[
           "metamorphosis"
         ],
-        "item":[
+        "items":[
           "choicespecs"
         ],
         "lockedMoves":[
@@ -6724,7 +6724,7 @@
           "goodasgold",
           "intimidate"
         ],
-        "item":[
+        "items":[
           "leftovers"
         ],
         "lockedMoves":[
@@ -6746,7 +6746,7 @@
         "abilities":[
           "supremeoverlord"
         ],
-        "item":[
+        "items":[
           "royalcrown"
         ],
         "lockedMoves":[
@@ -6761,7 +6761,7 @@
         "abilities":[
           "nimblemetalbody"
         ],
-        "item":[
+        "items":[
           "choicespecs"
         ],
         "lockedMoves":[
@@ -6786,7 +6786,7 @@
         "abilities":[
           "levitate"
         ],
-        "item":[
+        "items":[
           "zeroite"
         ],
         "lockedMoves":[
