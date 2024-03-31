@@ -268,6 +268,21 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: '[Gen 8 Clover Test Only] 3v3',
+		mod: 'clovertest',
+		ruleset: [
+			'Max Team Size = 3',
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+			'Condoom + Unaware', 'Potarded + Unaware',
+		],
+	},
+	{
 		name: '[Gen 8 Clover Only] OU (No Team Preview)',
 		mod: 'clover',
 		searchShow: false,
