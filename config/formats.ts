@@ -1184,6 +1184,28 @@ export const Formats: FormatList = [
 		],
 		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct'],
 	},
+	{
+		name: '[Gen 8 Clover Blobbos CAP Only] Random Battles',
+		mod: 'cloverblobboscap',
+		team: 'random',
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod'],
+	},
+	{
+		name: '[Gen 8 Clover Blobbos CAP Only] Pick Your Team Random Battle',
+		mod: 'cloverblobboscap',
+		team: 'random',
+		ruleset: [
+			'Terastal Clause',
+			'Picked Team Size = 6',
+			'Max Team Size = 12',
+			'Team Preview',
+			'Dynamax Clause',
+			'Obtainable',
+			'Species Clause',
+			'HP Percentage Mod',
+			'Cancel Mod'
+		],
+	},
 	///////////////////////////////////////////////////////////////////
 	// Showderp
 	///////////////////////////////////////////////////////////////////
