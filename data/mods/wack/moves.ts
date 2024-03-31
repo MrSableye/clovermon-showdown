@@ -18499,7 +18499,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				}
 			},
 		},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Rubber",
 		isNonstandard: null,
