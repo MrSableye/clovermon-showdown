@@ -1179,7 +1179,6 @@
         "sets":[
           {
             "abilities":[
-              "tintedlens",
               "colonization"
             ],
             "items":[
@@ -1191,7 +1190,7 @@
               "uturn",
               "rockclimb"
             ],
-            "level":90
+            "level":78
           },
           {
             "abilities":[
@@ -1206,7 +1205,7 @@
               "earthquake",
               "rockclimb"
             ],
-            "level":90
+            "level":78
           }
         ]
     },
@@ -2506,6 +2505,9 @@
             "abilities":[
               "jewelry"
             ],
+            "items":[
+              "fightinggem",
+            ],
             "moves":[
               "energyball",
               "dazzlinggleam",
@@ -2727,7 +2729,7 @@
               "stockpile",
               "sparklingaria"
             ],
-            "level":84
+            "level":78
           }
         ]
     },
@@ -2827,7 +2829,7 @@
         "sets":[
           {
             "abilities":[
-              "ascension"
+              "plunderedluck"
             ],
             "items":[
               "lifeorb"
@@ -2835,8 +2837,8 @@
             "lockedMoves":[
               "strifedicekind",
               "bugbuzz",
-              "lightofruin",
-              "owtheedge"
+              "glare",
+              "nastyplot"
             ],
             "level":81
           }
@@ -3145,7 +3147,7 @@
               "icebeam",
               "electromagnetism"
             ],
-            "level":84
+            "level":81
           }
         ]
     },
@@ -3440,7 +3442,7 @@
               "techslash",
               "swordsdance"
             ],
-            "level":84
+            "level":81
           }
         ]
     },
@@ -3462,7 +3464,7 @@
               "calibrate",
               "rocketboost"
             ],
-            "level":84
+            "level":81
           }
         ]
     },
@@ -3487,7 +3489,7 @@
                 "1000folds",
                 "rocketboost"
               ],
-              "level":84
+              "level":81
             }
           ]
     },
@@ -3512,7 +3514,7 @@
                 "boltstrike",
                 "swordsdance"
               ],
-              "level":84
+              "level":81
             }
           ]
     },
@@ -3537,10 +3539,10 @@
                 "warhead",
                 "calibrate"
               ],
-              "level":84
-            }
-          ]
-      },
+              "level":81
+          }
+        ]
+    },
     "blobbosmedusa":{
         "nicknames":[
           "Medusa",
@@ -3586,7 +3588,7 @@
               "moonblast",
               "recover"
             ],
-            "level":84
+            "level":81
           },
           {
             "abilities":[
@@ -4585,7 +4587,7 @@
               "surf",
               "erosionwave"
             ],
-            "level":61
+            "level":60
           }
         ]
     },
@@ -5048,7 +5050,7 @@
               "fakeout",
               "morningsun"
             ],
-            "level":93
+            "level":84
           }
         ]
     },
@@ -6623,7 +6625,7 @@
           "ironhead",
           "facade"
         ],
-        "level":88
+        "level":84
       }
     ]
   },
