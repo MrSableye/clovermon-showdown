@@ -32,6 +32,7 @@ export class RandomBlobbosTeams extends RandomCloverTeams {
 		const teamDetails: RandomTeamsTypes.TeamDetails = {};
 
 		const pokemonPool = this.getPokemonPool(type, pokemon, isMonotype, true);
+		console.log(pokemonPool);
 		while (pokemonPool.length && pokemon.length < this.maxTeamSize) {
 			let species = this.dex.species.get(this.sampleNoReplace(pokemonPool));
 			if (!species.exists) continue;
@@ -45,7 +46,7 @@ export class RandomBlobbosTeams extends RandomCloverTeams {
 			}
 
 			// Limit to one of each species (Species Clause)
-			if (baseFormes[species.baseSpecies]) continue;
+			if (baseFormes[species.name]) continue;
 
 			// Adjust rate for species with multiple sets
 			switch (species.baseSpecies) {
