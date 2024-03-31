@@ -33522,7 +33522,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Fairy",
 		onAfterHit(target, source) {
-			this.boost({atk: 1, spa: 1});
+			this.boost({atk: 1, spa: 1}, source, source);
 		},
 		flags: {protect: 1, mirror: 1},
 		isNonstandard: "Future",
