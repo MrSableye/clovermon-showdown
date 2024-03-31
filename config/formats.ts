@@ -1203,7 +1203,7 @@ export const Formats: FormatList = [
 		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct'],
 	},
 	{
-		name: '[Gen 8 Clover Blobbos CAP Only] Random Battles',
+		name: '[Gen 8 Clover Blobbos CAP Only] Random Battle',
 		mod: 'cloverblobboscap',
 		team: 'random',
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod'],
