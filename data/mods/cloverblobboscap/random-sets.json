@@ -4251,7 +4251,7 @@
         ],
         "lockedMoves": [
           "freezyfrost",
-          "slurgebomb",
+          "sludgebomb",
           "thunderbolt",
           "toxic"
         ],
@@ -4580,7 +4580,7 @@
           "surf",
           "erosionwave"
         ],
-        "level": 60
+        "level": 59
       }
     ]
   },
@@ -5645,7 +5645,7 @@
           "rockslide",
           "sleeppowder"
         ],
-        "level": 84
+        "level": 78
       }
     ]
   },
