@@ -489,7 +489,7 @@
               "bravebird",
               "aeroblast"
             ],
-            "lockedmoves":[
+            "lockedMoves":[
               "boltbeak",
               "tailwind",
               "defog"
@@ -503,7 +503,7 @@
             "items":[
               "sharpbeak"
             ],
-            "lockedmoves":[
+            "lockedMoves":[
               "bodyslam",
               "boltbeak",
               "tailwind",
@@ -525,7 +525,7 @@
             "items":[
               "lightclay"
             ],
-            "lockedmoves":[
+            "lockedMoves":[
               "badenergy",
               "thunderbolt",
               "lightscreen",
@@ -540,7 +540,7 @@
             "items":[
               "blackmagiumz"
             ],
-            "lockedmoves":[
+            "lockedMoves":[
               "meteor",
               "badenergy",
               "protect",
@@ -555,7 +555,7 @@
             "items":[
               "groundgem"
             ],
-            "lockedmoves":[
+            "lockedMoves":[
               "earthshatter",
               "thunderbolt",
               "badenergy",
