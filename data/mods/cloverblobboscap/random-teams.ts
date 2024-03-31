@@ -1,12 +1,14 @@
 import {toID} from '../../../sim/dex';
 import {PRNG, PRNGSeed} from '../../../sim/prng';
-import RandomCloverTeams from '../clover/random-teams';
+import RandomCloverTeams, {RandomBattleSets} from '../clover/random-teams';
 
 export class RandomBlobbosTeams extends RandomCloverTeams {
 	constructor(format: Format | string, prng: PRNG | PRNGSeed | null) {
 		super(format, prng);
 		this.noLead = ['blobboschroma', 'blobbosmummy', 'blobbospaldea', 'blobbosremembered', 'blobbosking', 'blobbospartner'];
 	}
+
+	randomSets: RandomBattleSets = require('./random-sets.json');
 
 	randomTeam() {
 		const seed = this.prng.seed;
@@ -32,7 +34,6 @@ export class RandomBlobbosTeams extends RandomCloverTeams {
 		const teamDetails: RandomTeamsTypes.TeamDetails = {};
 
 		const pokemonPool = this.getPokemonPool(type, pokemon, isMonotype, true);
-		console.log(pokemonPool);
 		while (pokemonPool.length && pokemon.length < this.maxTeamSize) {
 			let species = this.dex.species.get(this.sampleNoReplace(pokemonPool));
 			if (!species.exists) continue;

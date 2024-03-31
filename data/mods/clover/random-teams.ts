@@ -14,7 +14,7 @@ interface RandomBattleSetData {
 		level?: number,
 	}[];
 }
-type RandomBattleSets = Record<string, RandomBattleSetData>;
+export type RandomBattleSets = Record<string, RandomBattleSetData>;
 
 export interface TeamData {
 	typeCount: {[k: string]: number};
