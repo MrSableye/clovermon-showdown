@@ -18,6 +18,38 @@ The column value will be ignored for repeat sections.
 */
 
 export const Formats: FormatList = [
+	{
+		section: 'Special',
+	},
+	{
+		name: '[Gen 8 Clover Test Only] OU',
+		mod: 'clovertest',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+			'Condoom + Unaware', 'Potarded + Unaware',
+		],
+	},
+	{
+		name: '[Gen 8 Clover Test Only] 3v3',
+		mod: 'clovertest',
+		ruleset: [
+			'Max Team Size = 3',
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+			'Condoom + Unaware', 'Potarded + Unaware',
+		],
+	},
 	///////////////////////////////////////////////////////////////////
 	// Clover
 	///////////////////////////////////////////////////////////////////
@@ -252,35 +284,6 @@ export const Formats: FormatList = [
 	///////////////////////////////////////////////////////////////////
 	{
 		section: 'Clover OMs',
-	},
-	{
-		name: '[Gen 8 Clover Test Only] OU',
-		mod: 'clovertest',
-		ruleset: [
-			'Terastal Clause',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
-		],
-		banlist: [
-			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
-			'Condoom + Unaware', 'Potarded + Unaware',
-		],
-	},
-	{
-		name: '[Gen 8 Clover Test Only] 3v3',
-		mod: 'clovertest',
-		ruleset: [
-			'Max Team Size = 3',
-			'Terastal Clause',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
-		],
-		banlist: [
-			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
-			'Condoom + Unaware', 'Potarded + Unaware',
-		],
 	},
 	{
 		name: '[Gen 8 Clover Only] OU (No Team Preview)',
