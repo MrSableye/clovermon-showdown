@@ -3441,7 +3441,14 @@
               "swordsdance"
             ],
             "level":84
-          },
+          }
+        ]
+    },
+    "blobbosmechfire":{
+        "nicknames":[
+          "Mecha"
+        ],
+        "sets":[
           {
             "abilities":[
               "levitate"
@@ -3456,63 +3463,84 @@
               "rocketboost"
             ],
             "level":84
-          },
-          {
-            "abilities":[
-              "blademaster"
-            ],
-            "items":[
-              "frostsword"
-            ],
-            "moves":[
-                "bitterblade",
-                "sacredsword"
-            ],
-            "lockedMoves":[
-              "coldcutter",
-              "1000folds",
-              "rocketboost"
-            ],
-            "level":84
-          },
-          {
-            "abilities":[
-              "levitate"
-            ],
-            "items":[
-              "sparksword"
-            ],
-            "moves":[
-                "earthquake",
-                "sacredsword"
-            ],
-            "lockedMoves":[
-              "techslash",
-              "boltstrike",
-              "swordsdance"
-            ],
-            "level":84
-          },
-          {
-            "abilities":[
-              "levitate"
-            ],
-            "items":[
-              "splashsword"
-            ],
-            "moves":[
-                "thunderbolt",
-                "icebeam"
-            ],
-            "lockedMoves":[
-              "hydropump",
-              "warhead",
-              "calibrate"
-            ],
-            "level":84
           }
         ]
     },
+    "blobbosmechice":{
+          "nicknames":[
+            "Mecha"
+          ],
+          "sets":[
+            {
+              "abilities":[
+                "blademaster"
+              ],
+              "items":[
+                "frostsword"
+              ],
+              "moves":[
+                  "bitterblade",
+                  "sacredsword"
+              ],
+              "lockedMoves":[
+                "coldcutter",
+                "1000folds",
+                "rocketboost"
+              ],
+              "level":84
+            }
+          ]
+    },
+    "blobbosmechelectric":{
+          "nicknames":[
+            "Mecha"
+          ],
+          "sets":[
+            {
+              "abilities":[
+                "levitate"
+              ],
+              "items":[
+                "sparksword"
+              ],
+              "moves":[
+                  "earthquake",
+                  "sacredsword"
+              ],
+              "lockedMoves":[
+                "techslash",
+                "boltstrike",
+                "swordsdance"
+              ],
+              "level":84
+            }
+          ]
+    },
+    "blobbosmechelectric":{
+          "nicknames":[
+            "Mecha"
+          ],
+          "sets":[
+            {
+              "abilities":[
+                "levitate"
+              ],
+              "items":[
+                "splashsword"
+              ],
+              "moves":[
+                  "thunderbolt",
+                  "icebeam"
+              ],
+              "lockedMoves":[
+                "hydropump",
+                "warhead",
+                "calibrate"
+              ],
+              "level":84
+            }
+          ]
+      },
     "blobbosmedusa":{
         "nicknames":[
           "Medusa",
