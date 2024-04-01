@@ -43194,6 +43194,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -62610,11 +62613,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
 				return null;
 			}
-			const result = target.setStatus('slp', source, move);
+			const result = source.setStatus('slp', source, move);
 			if (!result) return result;
-			target.statusState.time = 3;
-			target.statusState.startTime = 3;
-			this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+			source.statusState.time = 3;
+			source.statusState.startTime = 3;
+			this.heal(source.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
 		},
 		secondary: null,
 		target: "allAdjacentFoes",
@@ -62630,6 +62633,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, source, move) {
+			if (source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')) return false;
+
+			if (source.hp === source.maxhp) {
+				this.add('-fail', source, 'heal');
+				return null;
+			}
+			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+				return null;
+			}
+			const result = source.setStatus('slp', source, move);
+			if (!result) return result;
+			source.statusState.time = 3;
+			source.statusState.startTime = 3;
+			this.heal(source.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Normal",
@@ -62968,6 +62988,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, source, move) {
+			if (source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')) return false;
+
+			if (source.hp === source.maxhp) {
+				this.add('-fail', source, 'heal');
+				return null;
+			}
+			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+				return null;
+			}
+			const result = source.setStatus('slp', source, move);
+			if (!result) return result;
+			source.statusState.time = 3;
+			source.statusState.startTime = 3;
+			this.heal(source.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Fabric",
@@ -63040,6 +63077,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		onHit(target) {
+			if (target.hp <= target.maxhp / 2 || target.boosts.atk >= 6 || target.maxhp === 1) { // Shedinja clause
+				return false;
+			}
+			this.directDamage(target.maxhp / 2);
+			this.boost({spe: 12}, target);
+		},
 		secondary: null,
 		target: "self",
 		type: "Tech",
@@ -65685,7 +65729,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Plastic",
 		isNonstandard: "Future",
@@ -65700,6 +65747,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1, punch: 1},
 		secondary: null,
+		self: {
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -66856,6 +66908,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		self: {
+			boosts: {
+				spe: -1,
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Zombie",
@@ -69751,6 +69808,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: null,
+		self: {
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Rock",
 		isNonstandard: "Future",
@@ -71098,7 +71160,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Wood') return 1;
+		},
+		secondary: {
+			chance: 10,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Wood",
 		isNonstandard: "Future",
@@ -73394,6 +73462,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		self: {
+			boosts: {
+				spe: -1,
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -76315,6 +76388,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		self: {
+			boosts: {
+				spe: -1,
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -76674,7 +76752,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
+		onHit(move, target) {
+			const i = this.random(11);
+			if (i < 3) {
+				this.boost({atk: 1, spa: 1}, target);
+			} else if (i < 6) {
+				this.boost({atk: 2, spa: 2}, target);
+			} else if (i < 8) {
+				this.boost({atk: 3, spa: 3}, target);
+			} else if (i < 9) {
+				this.boost({atk: 4, spa: 4}, target);
+			} else if (i < 10) {
+				this.boost({atk: 5, spa: 5}, target);
+			} else if (i < 11) {
+				this.boost({atk: 6, spa: 6}, target);
+			} 
+		},
 		secondary: null,
+		volatileStatus: 'confusion',
 		target: "self",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -81256,6 +81351,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, source, move) {
+			if (source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')) return false;
+
+			if (source.hp === source.maxhp) {
+				this.add('-fail', source, 'heal');
+				return null;
+			}
+			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+				return null;
+			}
+			const result = source.setStatus('slp', source, move);
+			if (!result) return result;
+			source.statusState.time = 3;
+			source.statusState.startTime = 3;
+			this.heal(source.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Water",
@@ -81850,6 +81962,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, source, move) {
+			if (source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')) return false;
+
+			if (source.hp === source.maxhp) {
+				this.add('-fail', source, 'heal');
+				return null;
+			}
+			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+				return null;
+			}
+			const result = source.setStatus('slp', source, move);
+			if (!result) return result;
+			source.statusState.time = 3;
+			source.statusState.startTime = 3;
+			this.heal(source.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Heart",
