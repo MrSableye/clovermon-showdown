@@ -187,7 +187,7 @@
         "lockedMoves": [
           "recover",
           "cosmicpower",
-          "judgement",
+          "judgment",
           "icebeam"
         ],
         "level": 84
@@ -851,7 +851,7 @@
           "rockslide",
           "blobbybop"
         ],
-        "level": 69
+        "level": 71
       },
       {
         "abilities": [
@@ -866,7 +866,7 @@
           "sleeptalk",
           "brickbreak"
         ],
-        "level": 69
+        "level": 71
       }
     ]
   },
@@ -1190,7 +1190,7 @@
           "uturn",
           "rockclimb"
         ],
-        "level": 78
+        "level": 76
       },
       {
         "abilities": [
@@ -1205,7 +1205,7 @@
           "earthquake",
           "rockclimb"
         ],
-        "level": 78
+        "level": 76
       }
     ]
   },
@@ -1916,7 +1916,7 @@
           "icicleplate"
         ],
         "lockedMoves": [
-          "judgement",
+          "judgment",
           "regularattack",
           "metronome"
         ],
@@ -2366,14 +2366,14 @@
     "sets": [
       {
         "abilities": [
-          "magicguard"
+          "puppeteer"
         ],
         "items": [
-          "lifeorb"
+          "silverpowder"
         ],
         "moves": [
-          "rockclimb",
-          "seedbomb"
+          "lunge",
+          "crashhopper"
         ],
         "lockedMoves": [
           "closecombat",
@@ -3311,15 +3311,15 @@
           "immortality"
         ],
         "items": [
-          "phylactery"
+          "leftovers"
         ],
         "lockedMoves": [
           "finalhour",
           "hex",
           "willowisp",
-          "teleport"
+          "protect"
         ],
-        "level": 84
+        "level": 88
       }
     ]
   },
@@ -6300,7 +6300,7 @@
           "milkdrink",
           "tidyup"
         ],
-        "level": 86
+        "level": 81
       }
     ]
   },
@@ -6722,15 +6722,16 @@
           "metamorphosis"
         ],
         "items": [
-          "choicespecs"
+          "assaultvest",
+          "choiceband"
         ],
         "lockedMoves": [
-          "freezyfrost",
-          "bugbuzz",
-          "earthpower",
+          "blobbybop",
+          "leechlife",
+          "rockslide",
           "slipturn"
         ],
-        "level": 74
+        "level": 78
       }
     ]
   },
