@@ -8372,6 +8372,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(target, source, effect) {
+				if (effect?.name === "Frozen Song") {
+					return 2;
+				}
 				if (source?.hasAbility('persistent')) {
 					this.add('-activate', source, 'ability: Persistent', '[move] Heal Block');
 					return 7;
@@ -86821,26 +86824,26 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 150,
 		category: "Special",
-		name: "Ear Rape",
+		name: "Earrape",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 		onTryHit(target) {
-			if (target.getAbility().isPermanent || target.ability === 'soundproof' || target.ability === 'truant') {
+			if (target.getAbility().isPermanent || target.ability === 'cacophony' || target.ability === 'truant') {
 				return false;
 			}
 		},
 		onHit(pokemon) {
-			const oldAbility = pokemon.setAbility('soundproof');
+			const oldAbility = pokemon.setAbility('cacophony');
 			if (oldAbility) {
-				this.add('-ability', pokemon, 'Soundproof', '[from] move: Ear Rape');
+				this.add('-ability', pokemon, 'Cacophony', '[from] move: Earrape');
 				return;
 			}
 			return oldAbility as false | null;
 		},
 		secondary: null,
 		target: "normal",
-		type: "Normal",
+		type: "Grass",
 		zMove: {boost: {spa: 1}},
 		contestType: "Cute",
 		isNonstandard: "Future",
