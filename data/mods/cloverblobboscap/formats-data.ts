@@ -2838,12 +2838,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	blobboseedle: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "Uber",
+		tier: "OU",
 	},
 	blobboseedletrue: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "Uber",
+		tier: "OU",
 	},
 	blobbosdust: {
 		inherit: true,
