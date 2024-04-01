@@ -7864,6 +7864,15 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power is equal to 50+(X*50), where X is the total number of times the user has been hit by a damaging attack during the battle, even if the user did not lose HP from the attack. X cannot be greater than 6 and does not reset upon switching out or fainting. Each hit of a multi-hit attack is counted, but confusion damage is not counted.",
 		shortDesc: "+50 power for each time user was hit. 200 BP max",
 	},
+	frozensong: {
+		name: "Frozen Song",
+		desc: "For 1 turns, the target is prevented from restoring any HP as long as it remains active. During the effect, healing and draining moves are unusable, and Abilities and items that grant healing will not heal the user. If an affected Pokemon uses Baton Pass, the replacement will remain unable to restore its HP. Pain Split and the Regenerator Ability are unaffected.",
+		shortDesc: "For 1 turns, the foe(s) is prevented from healing.",
+	},
+	earrape: {
+		name: "Ear Rape",
+		shortDesc: "Changes the opponent's ability to Soundproof.",
+	},
 	grandbat: {
 		name: "Grand Bat",
 		shortDesc: "Forces the target to switch to a random ally.",

@@ -86788,16 +86788,61 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	grandbat: {
 		num: 42013,
-		accuracy: 90,
+		accuracy: 85,
 		basePower: 120,
 		category: "Physical",
 		name: "Grand Bat",
-		pp: 10,
+		pp: 5,
 		priority: -6,
 		target: "normal",
 		type: "Rock",
 		flags: {contact: 1, protect: 1},
 		forceSwitch: true,
+		isNonstandard: "Future",
+	},
+	frozensong: {
+		num: 42014,
+		accuracy: 85,
+		basePower: 120,
+		category: "Special",
+		name: "Frozen Song",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'healblock',
+		},
+		target: "normal",
+		type: "Ice",
+	},
+	earrape: {
+		num: 42015,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Ear Rape",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'soundproof' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('soundproof');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Soundproof', '[from] move: Ear Rape');
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		zMove: {boost: {spa: 1}},
+		contestType: "Cute",
 		isNonstandard: "Future",
 	},
 	solarhunger: {
