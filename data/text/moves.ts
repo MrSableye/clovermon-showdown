@@ -7870,8 +7870,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "For 1 turns, the foe(s) is prevented from healing.",
 	},
 	earrape: {
-		name: "Ear Rape",
-		shortDesc: "Changes the opponent's ability to Soundproof.",
+		name: "Earrape",
+		shortDesc: "Changes the opponent's ability to Cacophony.",
 	},
 	grandbat: {
 		name: "Grand Bat",
