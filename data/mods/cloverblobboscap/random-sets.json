@@ -1783,7 +1783,7 @@
           "bonerush",
           "coldreception"
         ],
-        "level": 84
+        "level": 78
       }
     ]
   },
@@ -2775,7 +2775,7 @@
           "cerebralparasite",
           "shadowball"
         ],
-        "level": 88
+        "level": 84
       },
       {
         "abilities": [
@@ -2794,7 +2794,7 @@
           "shadowstrike",
           "xscissor"
         ],
-        "level": 88
+        "level": 84
       }
     ]
   },
@@ -5917,7 +5917,7 @@
           "dracometeor"
         ],
         "lockedMoves": [
-          "mysticalfire",
+          "flamethrower",
           "rest",
           "sleeptalk"
         ],
