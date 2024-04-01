@@ -1,0 +1,147 @@
+{
+  "elias": {
+    "nicknames": [
+      "Elias"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "justified",
+          "insomnia"
+        ],
+        "items": [
+          "choiceband"
+        ],
+        "moves": [
+          "swordsedge",
+          "bindingsword",
+          "sacredsword"
+        ],
+        "lockedMoves": [
+          "soulsword"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mothmowl": {
+    "nicknames": [
+      "Mothmowl"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "cryptid",
+          "paranoia",
+          "bravebird"
+        ],
+        "lockedMoves": [
+          "purefear"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "coommate": {
+    "nicknames": [
+      "Coommate"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "berserker"
+        ],
+        "items": [
+          "choicescarf"
+        ],
+        "moves": [
+          "warpaway",
+          "odynocharge",
+          "burningpassion"
+        ],
+        "lockedMoves": [
+          "invasion"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "drgnchamber": {
+    "nicknames": [
+      "Chambermaid"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "serenegrace"
+        ],
+        "items": [
+          "choiceband"
+        ],
+        "moves": [
+          "steamclean",
+          "sewing",
+          "yatanokagami"
+        ],
+        "lockedMoves": [
+          "dusttornado"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "alterlanta": {
+    "nicknames": [
+      "Alterlanta"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "berserker"
+        ],
+        "items": [
+          "choiceband"
+        ],
+        "moves": [
+          "cbt",
+          "tauroskiathermokrasia",
+          "extremespeed"
+        ],
+        "lockedMoves": [
+          "agility"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "carmillapire": {
+    "nicknames": [
+      "Carmillapire"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "siphon"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "bloodsiphon",
+          "gigadrain",
+          "vampirebite"
+        ],
+        "lockedMoves": [
+          "bloodsiphon"
+        ],
+        "level": 84
+      }
+    ]
+  }
+}

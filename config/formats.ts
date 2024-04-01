@@ -904,6 +904,12 @@ export const Formats: FormatList = [
 			'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis',
 		],
 	},
+	{
+		name: '[Gen 8 Wack Only] Random Battle',
+		mod: 'wack',
+		team: 'random',
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
+	},
 	///////////////////////////////////////////////////////////////////
 	// Wack OMs
 	///////////////////////////////////////////////////////////////////
@@ -1053,6 +1059,12 @@ export const Formats: FormatList = [
 		mod: 'clovercap',
 		gameType: 'doubles',
 		ruleset: ['Terastal Clause', '[Gen 8 Clover CAP Only] OU'],
+	},
+	{
+		name: '[Gen 8 Clover CAP Only] Random Battle',
+		mod: 'clovercap',
+		team: 'random',
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	{
 		name: '[Gen 8 Cope Only] Anything Goes',

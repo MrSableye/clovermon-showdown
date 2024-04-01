@@ -187,7 +187,7 @@
         "lockedMoves": [
           "recover",
           "cosmicpower",
-          "judgement",
+          "judgment",
           "icebeam"
         ],
         "level": 84
@@ -599,7 +599,7 @@
           "return"
         ],
         "lockedMoves": [
-          "darkening",
+          "shadowclaw",
           "shadowball",
           "sludgewave"
         ],
@@ -851,7 +851,7 @@
           "rockslide",
           "blobbybop"
         ],
-        "level": 69
+        "level": 71
       },
       {
         "abilities": [
@@ -866,7 +866,7 @@
           "sleeptalk",
           "brickbreak"
         ],
-        "level": 69
+        "level": 71
       }
     ]
   },
@@ -1007,7 +1007,7 @@
           "revelationdance",
           "secretstrength"
         ],
-        "level": 93
+        "level": 88
       }
     ]
   },
@@ -1190,7 +1190,7 @@
           "uturn",
           "rockclimb"
         ],
-        "level": 78
+        "level": 76
       },
       {
         "abilities": [
@@ -1205,7 +1205,7 @@
           "earthquake",
           "rockclimb"
         ],
-        "level": 78
+        "level": 76
       }
     ]
   },
@@ -1441,7 +1441,7 @@
         ],
         "moves": [
           "leafblade",
-          "crystalslash"
+          "psychocut"
         ],
         "lockedMoves": [
           "owtheedge",
@@ -1916,7 +1916,7 @@
           "icicleplate"
         ],
         "lockedMoves": [
-          "judgement",
+          "judgment",
           "regularattack",
           "metronome"
         ],
@@ -2065,7 +2065,7 @@
           "venoshock",
           "toxic"
         ],
-        "level": 80
+        "level": 81
       }
     ]
   },
@@ -2195,7 +2195,7 @@
           "sludgebomb",
           "uturn"
         ],
-        "level": 80
+        "level": 78
       }
     ]
   },
@@ -2366,14 +2366,14 @@
     "sets": [
       {
         "abilities": [
-          "magicguard"
+          "puppeteer"
         ],
         "items": [
-          "lifeorb"
+          "silverpowder"
         ],
         "moves": [
-          "rockclimb",
-          "seedbomb"
+          "lunge",
+          "crashhopper"
         ],
         "lockedMoves": [
           "closecombat",
@@ -2791,7 +2791,7 @@
         ],
         "lockedMoves": [
           "stunspore",
-          "shadowstrike",
+          "phasethrough",
           "xscissor"
         ],
         "level": 84
@@ -3311,15 +3311,15 @@
           "immortality"
         ],
         "items": [
-          "phylactery"
+          "leftovers"
         ],
         "lockedMoves": [
           "finalhour",
           "hex",
           "willowisp",
-          "teleport"
+          "protect"
         ],
-        "level": 84
+        "level": 88
       }
     ]
   },
@@ -3678,7 +3678,7 @@
     "sets": [
       {
         "abilities": [
-          "comatose"
+          "lethargic"
         ],
         "items": [
           "leftovers"
@@ -3689,7 +3689,7 @@
           "slackoff",
           "swordsdance"
         ],
-        "level": 76
+        "level": 72
       }
     ]
   },
@@ -4009,22 +4009,8 @@
     "sets": [
       {
         "abilities": [
+          "solarpower",
           "flashfire"
-        ],
-        "items": [
-          "assaultvest"
-        ],
-        "lockedMoves": [
-          "leafstorm",
-          "flamethrower",
-          "earthpower",
-          "sunburst"
-        ],
-        "level": 84
-      },
-      {
-        "abilities": [
-          "solarpower"
         ],
         "items": [
           "leftovers"
@@ -4038,7 +4024,7 @@
           "flamethrower",
           "sunburst"
         ],
-        "level": 84
+        "level": 81
       }
     ]
   },
@@ -4193,21 +4179,6 @@
           "psychicfangs",
           "icebeam",
           "scarystory"
-        ],
-        "level": 81
-      },
-      {
-        "abilities": [
-          "moody"
-        ],
-        "items": [
-          "lifeorb"
-        ],
-        "lockedMoves": [
-          "shadowball",
-          "psychicfangs",
-          "icebeam",
-          "protect"
         ],
         "level": 81
       }
@@ -5481,7 +5452,7 @@
         ],
         "lockedMoves": [
           "flashcannon",
-          "diamonstorm",
+          "diamondstorm",
           "flashbang"
         ],
         "level": 84
@@ -5578,7 +5549,7 @@
           "spacialrend",
           "leafstorm"
         ],
-        "level": 84
+        "level": 88
       },
       {
         "abilities": [
@@ -5594,7 +5565,7 @@
           "bravebird",
           "headsmash"
         ],
-        "level": 84
+        "level": 88
       }
     ]
   },
@@ -5645,7 +5616,7 @@
           "rockslide",
           "sleeppowder"
         ],
-        "level": 78
+        "level": 74
       }
     ]
   },
@@ -6101,7 +6072,7 @@
         ],
         "lockedMoves": [
           "hypervoice",
-          "strangsteam",
+          "strangesteam",
           "calmmind",
           "flipturn"
         ],
@@ -6300,7 +6271,7 @@
           "milkdrink",
           "tidyup"
         ],
-        "level": 86
+        "level": 81
       }
     ]
   },
@@ -6722,15 +6693,16 @@
           "metamorphosis"
         ],
         "items": [
-          "choicespecs"
+          "assaultvest",
+          "choiceband"
         ],
         "lockedMoves": [
-          "freezyfrost",
-          "bugbuzz",
-          "earthpower",
+          "blobbybop",
+          "leechlife",
+          "rockslide",
           "slipturn"
         ],
-        "level": 74
+        "level": 78
       }
     ]
   },
@@ -6754,7 +6726,7 @@
           "nastyplot",
           "substitute"
         ],
-        "level": 74
+        "level": 71
       }
     ]
   },
@@ -6816,7 +6788,7 @@
           "earthpower",
           "calmmind"
         ],
-        "level": 72
+        "level": 69
       }
     ]
   }
