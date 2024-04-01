@@ -10858,7 +10858,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	achatena: {
+	achaethena: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

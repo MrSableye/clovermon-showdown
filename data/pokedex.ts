@@ -37530,9 +37530,9 @@ daemonix: {
 	eggGroups: ["Monster","Human-Like"],
 	gen: 8,
 },
-achaetena: {
+achaethena: {
 	num: -8264,
-	name: "Achaetena",
+	name: "Achaethena",
 	types: ["Fighting", "Dark"],
 	gender: 'F',
 	baseStats: {hp: 65, atk: 119, def: 55, spa: 85, spd: 66, spe: 115},

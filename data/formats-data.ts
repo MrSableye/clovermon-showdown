@@ -9001,7 +9001,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	achatena: {
+	achaethena: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
