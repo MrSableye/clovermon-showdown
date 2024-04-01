@@ -1846,7 +1846,7 @@
           "dispenser"
         ],
         "items": [
-          "steelgem"
+          "metalcoat"
         ],
         "lockedMoves": [
           "flakcannon",
@@ -2933,7 +2933,7 @@
           "encore",
           "thunderwave",
           "mindbreak",
-          "discharge"
+          "doubleshock"
         ],
         "level": 84
       }
@@ -6233,7 +6233,7 @@
           "uturn",
           "stealthrock"
         ],
-        "level": 81
+        "level": 78
       }
     ]
   },
@@ -6278,8 +6278,8 @@
         "lockedMoves": [
           "poweruppunch",
           "diamondstorm",
-          "tripleaxel",
-          "flamecharge"
+          "blobbybop",
+          "surgingstrikes"
         ],
         "level": 76
       }
@@ -6299,7 +6299,7 @@
         ],
         "lockedMoves": [
           "dragonfist",
-          "lasthout",
+          "lashout",
           "strength",
           "taunt"
         ],
