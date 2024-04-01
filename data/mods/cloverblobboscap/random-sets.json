@@ -6570,7 +6570,7 @@
         "lockedMoves": [
           "boomburst",
           "gazerbeam",
-          "astralbeam",
+          "astralbarrage",
           "geomancy"
         ],
         "level": 100
@@ -6596,7 +6596,7 @@
           "brickbreak",
           "bulkup"
         ],
-        "level": 81
+        "level": 78
       }
     ]
   },
@@ -6641,7 +6641,7 @@
           "flamethrower",
           "calmmind"
         ],
-        "level": 81
+        "level": 78
       }
     ]
   },
