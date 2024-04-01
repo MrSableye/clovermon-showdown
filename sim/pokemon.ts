@@ -2032,8 +2032,8 @@ export class Pokemon {
 	getTypes(excludeAdded?: boolean, preterastallized?: boolean): string[] {
 		if (!preterastallized && this.terastallized) return [this.terastallized];
 		const types = this.battle.runEvent('Type', this, null, null, this.types);
-		if (!excludeAdded && this.addedType) return types.concat(this.addedType);
-		if (types.length) return types;
+		if (!excludeAdded && this.addedType) return [...types.concat(this.addedType)];
+		if (types.length) return [...types];
 		return [this.battle.gen >= 5 ? 'Normal' : '???'];
 	}
 

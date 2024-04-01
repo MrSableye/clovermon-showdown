@@ -1,0 +1,134 @@
+{
+  "arachnote": {
+    "nicknames": [
+      "Arachnote"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "boombox"
+        ],
+        "items": [
+          "focussash"
+        ],
+        "lockedMoves": [
+          "boomburst",
+          "bugbuzz",
+          "shadowball",
+          "stickyweb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "3dawg": {
+    "nicknames": [
+      "3dawg"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "tintedlens"
+        ],
+        "items": [
+          "choicespecs"
+        ],
+        "lockedMoves": [
+          "technoblast",
+          "shadowball",
+          "aurasphere",
+          "uturn"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ampstar": {
+    "nicknames": [
+      "Ampstar"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "vitalspirit"
+        ],
+        "items": [
+          "lightball"
+        ],
+        "lockedMoves": [
+          "return",
+          "volttackle",
+          "icepunch",
+          "fakeout"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ankhurah": {
+    "nicknames": [
+      "Ankhurah"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "colburberry"
+        ],
+        "lockedMoves": [
+          "scorchingsands",
+          "stealthrock",
+          "shoreup",
+          "teleport"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "aquadiiva": {
+    "nicknames": [
+      "Aquadiiva"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "immunity"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "powerwasher",
+          "freezedry",
+          "calmmind",
+          "recover"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "apocamise": {
+    "nicknames": [
+      "Apocamise"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicbounce"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "finalhour",
+          "protect",
+          "recover",
+          "teleport"
+        ],
+        "level": 84
+      }
+    ]
+  }
+}

@@ -18,6 +18,38 @@ The column value will be ignored for repeat sections.
 */
 
 export const Formats: FormatList = [
+	{
+		section: 'Special',
+	},
+	{
+		name: '[Gen 8 Clover Test Only] OU',
+		mod: 'clovertest',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+			'Condoom + Unaware', 'Potarded + Unaware',
+		],
+	},
+	{
+		name: '[Gen 8 Clover Test Only] 3v3',
+		mod: 'clovertest',
+		ruleset: [
+			'Max Team Size = 3',
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+			'Condoom + Unaware', 'Potarded + Unaware',
+		],
+	},
 	///////////////////////////////////////////////////////////////////
 	// Clover
 	///////////////////////////////////////////////////////////////////
@@ -252,20 +284,6 @@ export const Formats: FormatList = [
 	///////////////////////////////////////////////////////////////////
 	{
 		section: 'Clover OMs',
-	},
-	{
-		name: '[Gen 8 Clover Test Only] OU',
-		mod: 'clovertest',
-		ruleset: [
-			'Terastal Clause',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
-		],
-		banlist: [
-			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
-			'Condoom + Unaware', 'Potarded + Unaware',
-		],
 	},
 	{
 		name: '[Gen 8 Clover Only] OU (No Team Preview)',
@@ -886,6 +904,12 @@ export const Formats: FormatList = [
 			'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis',
 		],
 	},
+	{
+		name: '[Gen 8 Wack Only] Random Battle',
+		mod: 'wack',
+		team: 'random',
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
+	},
 	///////////////////////////////////////////////////////////////////
 	// Wack OMs
 	///////////////////////////////////////////////////////////////////
@@ -1037,6 +1061,12 @@ export const Formats: FormatList = [
 		ruleset: ['Terastal Clause', '[Gen 8 Clover CAP Only] OU'],
 	},
 	{
+		name: '[Gen 8 Clover CAP Only] Random Battle',
+		mod: 'clovercap',
+		team: 'random',
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
+	},
+	{
 		name: '[Gen 8 Cope Only] Anything Goes',
 		mod: 'cope',
 		ruleset: [
@@ -1183,6 +1213,27 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 		],
 		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct'],
+	},
+	{
+		name: '[Gen 8 Clover Blobbos CAP Only] Random Battle',
+		mod: 'cloverblobboscap',
+		team: 'random',
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
+	},
+	{
+		name: '[Gen 8 Clover Blobbos CAP Only] Pick Your Team Random Battle',
+		mod: 'cloverblobboscap',
+		team: 'random',
+		ruleset: [
+			'Terastal Clause',
+			'Picked Team Size = 6',
+			'Max Team Size = 12',
+			'Team Preview',
+			'Dynamax Clause',
+			'Obtainable',
+			'HP Percentage Mod',
+			'Cancel Mod'
+		],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Showderp

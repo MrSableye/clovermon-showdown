@@ -28225,7 +28225,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 90,
 		category: "Physical",
 		name: "Shooting Star",
-		pp: 15,
+		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		recoil: [20, 100],
@@ -29533,7 +29533,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	pantherkkick: {
 		accuracy: 85,
-		basePower: 120,
+		basePower: 100,
 		category: "Physical",
 		name: "Pantherk Kick",
 		pp: 10,
@@ -29549,7 +29549,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return null;
 		},
 		secondary: {
-			chance: 30,
+			chance: 20,
 			volatileStatus: 'flinch',
 		},
 		target: "normal",
@@ -33522,7 +33522,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Fairy",
 		onAfterHit(target, source) {
-			this.boost({atk: 1, spa: 1});
+			this.boost({atk: 1, spa: 1}, source, source);
 		},
 		flags: {protect: 1, mirror: 1},
 		isNonstandard: "Future",
@@ -36793,9 +36793,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1},
-		boosts: {
-			def: 2,
-		},
 		onHit(target) {
 			if (this.field.getPseudoWeather('arboreum')) {
 				this.boost({
@@ -42122,6 +42119,40 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		pseudoWeather: 'sauna',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('steamyrock')) {
+					return 10;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Sauna', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Steam') {
+					this.debug('sauna increase');
+					return this.chainModify([1.5]);
+				} else if (move.type === 'Water') {
+					this.debug('sauna increase');
+					return this.chainModify([1.3]);
+				}
+			},
+			onModifyDefPriority: 10,
+			onModifyDef(spd, pokemon) {
+				if (pokemon.hasType('Steam')) {
+					return this.chainModify([1.5]);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Sauna');
+			},
+		},
 		secondary: null,
 		target: "all",
 		type: "Steam",
@@ -49287,7 +49318,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			boosts: {
+				spa: -1,
+			},
+		},
 		target: "normal",
 		type: "Grass",
 		isNonstandard: "Future",
@@ -50269,6 +50305,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		multihit: 2,
 		target: "normal",
 		type: "Grass",
 		isNonstandard: "Future",
@@ -56259,6 +56296,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target.getTypes().join() === 'Water') {
+				this.debug("BP octopled for being water scum");
+				return move.basePower * 8;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -56282,14 +56326,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		beforeMoveCallback(pokemon) {
 			if (pokemon.volatiles['focuspunch']?.lostFocus) {
-				this.add('cant', pokemon, 'Focus Punch', 'Focus Punch');
+				this.add('cant', pokemon, 'Third Trumpet', 'Third Trumpet');
 				return true;
 			}
 		},
 		condition: {
 			duration: 1,
 			onStart(pokemon) {
-				this.add('-singleturn', pokemon, 'move: Focus Punch');
+				this.add('-singleturn', pokemon, 'move: Third Trumpet');
 			},
 			onHit(pokemon, source, move) {
 				if (move.category !== 'Status') {
@@ -59204,7 +59248,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		status: 'brn',
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				if (this.field.getPseudoWeather('sauna')) {
+					this.boost({spd: 1}, source, source);
+				}
+			},
+		},
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -59303,6 +59355,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		multihit: [2, 5],
 		target: "normal",
 		type: "Dragon",
 		isNonstandard: "Future",
@@ -59316,7 +59369,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 30,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					def: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Rock",
 		isNonstandard: "Future",
@@ -59330,7 +59390,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 30,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spd: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -60561,6 +60628,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
 		target: "normal",
 		type: "Rubber",
 		isNonstandard: "Future",
@@ -62529,6 +62599,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, source, move) {
+			if (source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')) return false;
+
+			if (source.hp === source.maxhp) {
+				this.add('-fail', source, 'heal');
+				return null;
+			}
+			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+				return null;
+			}
+			const result = target.setStatus('slp', source, move);
+			if (!result) return result;
+			target.statusState.time = 3;
+			target.statusState.startTime = 3;
+			this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Food",
@@ -66783,6 +66870,40 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {},
+		onHit(target, pokemon) {
+			const i = this.random(19);
+			
+			
+			
+			let move = '5ImpossibleRequests';
+			if (i < 3) {
+				move = 'dragonjewels';
+			} else if (i < 6) {
+				move = 'buddhasbowl';
+			} else if (i < 9) {
+				move = 'fireratrobe';
+			} else if (i < 12) {
+				move = 'cowrieshell';
+			} else if (i < 15) {
+				move = 'houraibranch';
+			} else if (i < 16) {
+				move = 'kinkakujiceiling';
+			} else if (i < 17) {
+				move = 'lunarilmenite';
+			} 
+			else if (i < 18) {
+				move = 'redstoneaja';
+			}
+			else if (i < 19) {
+				move = 'mysterium';
+			}
+			const fullMove = this.dex.getActiveMove(move);
+			fullMove.flags = {...fullMove.flags, naturePower: 1};
+			this.actions.useMove(move, pokemon, target);
+			return null;
+		},
+
+		
 		secondary: null,
 		target: "scripted",
 		type: "Divine",
@@ -66861,7 +66982,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Crystal",
 		isNonstandard: "Future",
@@ -73298,6 +73422,37 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {},
+		pseudoWeather: 'steamsport',
+		condition: {
+			duration: 5,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Steam Sport', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Magma') {
+					this.debug('steam sport weaken');
+					return this.chainModify([1352, 4096]);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Steam Sport');
+			},
+		},
+		onHit(target) {
+			if (this.field.getPseudoWeather('sauna')) {
+				this.boost({
+					def: 1,
+					spd: 1,
+				});
+			} else {
+				this.boost({
+					spd: 1,
+				});
+			}
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Steam",
@@ -75991,6 +76146,53 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Pandemic",
 		pp: 10,
 		priority: 0,
+		pseudoWeather: 'pandemic',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('viralrock')) {
+					return 8;
+				}
+				return 5;
+			},
+			onSwitchOut(pokemon) {
+				const result = this.random(3);
+				if (!pokemon.hasType('Virus')){
+				
+				if (result === 0) {
+					pokemon.trySetStatus('psn');
+				} else if (result === 1) {
+					pokemon.trySetStatus('brn');
+				} else {
+					pokemon.trySetStatus('par');
+				}}
+				
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Virus' && !attacker.isSemiInvulnerable()) {
+					this.debug('Pandemic boost');
+					return this.chainModify([5325, 4096]);
+				}
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (!target.hasType('Virus')) this.damage(target.baseMaxhp / 10, target);
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Pandemic', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Pandemic');
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Pandemic');
+			},
+		},
 		flags: {},
 		secondary: null,
 		target: "allySide",
@@ -84873,6 +85075,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		ignoreEvasion: true,
+		ignoreDefensive: true,
 		critRatio: 2,
 		target: "normal",
 		type: "Time",

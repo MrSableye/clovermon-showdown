@@ -33,6 +33,7 @@ Ratings and how they work:
 */
 
 import {Pokemon} from "../sim";
+import {FS} from "../sim";
 
 export const Abilities: {[abilityid: string]: AbilityData} = {
 	noability: {
@@ -6057,12 +6058,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'boardpowerz',
 			];
 			const randomAbility = this.sample(boardAbilities);
+			const ability = this.dex.abilities.get(randomAbility);
 
-			if (randomAbility) {
-				const oldAbility = pokemon.setAbility(randomAbility);
+			if (ability && ability.exists) {
+				const oldAbility = pokemon.setAbility(ability, pokemon, true);
 
 				if (oldAbility) {
-					this.add('-ability', pokemon, randomAbility, '[from] move: Board Power (/b/)');
+					this.add('-ability', pokemon, ability, '[from] ability: Board Power (/b/)');
 					return;
 				}
 			}
@@ -7716,21 +7718,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Transfusion",
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
-			this.add('-start', target, 'typechange', '[from] move: Transfusion', '[of] ' + source);
-			target.setType(source.getTypes());
+			const types = target.getTypes();
+			source.setType(types);
+			this.add('-start', source, 'typechange', types.join('/'), '[from] ability: Transfusion', '[of] ' + target);
 		},
 		rating: 2,
 	},
 	catalyst: {
 		name: "Catalyst",
 		onStart(pokemon) {
-			const possibleTargets = pokemon.side.foe.active.filter(foeActive => foeActive && pokemon.isAdjacent(foeActive));
-			let rand = 0;
-			if (possibleTargets.length > 1) rand = this.random(possibleTargets.length);
-			const target = possibleTargets[rand];
+			const possibleTargets = pokemon.adjacentFoes();
+			if (!possibleTargets.length) return;
+			const target = this.sample(possibleTargets);
 			if (target && target.species) {
-				if (!target.addType(target.getTypes()[0], pokemon, this.effect)) return false;
-				if (!target.addType(target.getTypes()[1], pokemon, this.effect)) return false;
+				const types = pokemon.getTypes();
+				target.getTypes().forEach((type) => {
+					if (!types.includes(type)) types.push(type);
+				});
+				if (pokemon.setType(types)) {
+					this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Catalyst', '[of] ' + pokemon);
+				}
 			}
 		},
 		rating: 2,
@@ -12414,13 +12421,54 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			for (const pokemon of attacker.side.pokemon) {
 				if (attacker === pokemon) continue;
 				if (pokemon.fainted) continue;
-				if (pokemon.types.some((type) => attacker.types.includes(type))) {
+				if (pokemon.getTypes().some((type) => attacker.types.includes(type))) {
 					homogenousAllies++;
 				}
 			}
 			return this.chainModify(1 + homogenousAllies * 0.2);
 		},
 		isNonstandard: "Future",
+	},
+	multiversal: {
+		name: "Multiversal",
+		isNonstandard: "Future",
+		onUpdate(pokemon) {
+			this.effectState.step = this.effectState.step || 0;
+			const rawData = FS('config/multiversal.json').readIfExistsSync() || '{ "step": 0 }';
+			const data = JSON.parse(rawData);
+
+			if (this.effectState.step >= data.step) {
+				this.effectState.step++;
+				const newData = {
+					step: this.effectState.step,
+					boosts: pokemon.boosts,
+					volatiles: Object.keys(pokemon.volatiles),
+					status: pokemon.status,
+				};
+				FS('config/multiversal.json').writeSync(JSON.stringify(newData));
+			} else {
+				const volatiles = data.volatiles as string[] | undefined;
+				if (volatiles) {
+					volatiles.forEach((volatile) => {
+						if (pokemon.volatiles[volatile]) return;
+						pokemon.addVolatile(volatile, pokemon, this.effect);
+					});
+				}
+
+				const status = data.status as string | undefined;
+				if (status) {
+					pokemon.setStatus(status, pokemon, this.effect);
+				}
+
+				const boosts = data.boosts as BoostsTable | undefined;
+				if (boosts) {
+					this.add('-clearboost', pokemon, '[from] ability: Multiversal', '[of] ' + pokemon);
+					this.boost(boosts);
+				}
+
+				this.effectState.step = data.step;
+			}
+		},
 	},
 	medusascurse: {
 		name: "Medusa's Curse",
