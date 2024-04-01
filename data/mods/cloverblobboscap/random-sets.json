@@ -241,7 +241,7 @@
     ]
   },
   "blobbosathlete": {
-    "nicknmes": [
+    "nicknames": [
       "Athlete",
       "Trackstar"
     ],
@@ -3716,7 +3716,7 @@
           "flashfreeze",
           "nastyplot"
         ],
-        "level": 84
+        "level": 81
       }
     ]
   },
@@ -6399,7 +6399,7 @@
           "soulcrusher",
           "oblivionwing"
         ],
-        "level": 78
+        "level": 74
       }
     ]
   },
