@@ -38619,12 +38619,12 @@ iwik: {
 		],
 		gender: "M",
 		baseStats: {
-			hp: 69,
+			hp: 70,
 			atk: 100,
 			def: 100,
 			spa: 100,
-			spd: 60,
-			spe: 20,
+			spd: 69,
+			spe: 15,
 		},
 		abilities: {
 			0: "Nice Face",
@@ -42326,7 +42326,7 @@ iwik: {
 		types: ["Ice", "Bug"],
 		gender: "N",
 		baseStats: {
-			hp: 100,
+			hp: 84,
 			atk: 39,
 			def: 49,
 			spa: 26,
@@ -42353,7 +42353,7 @@ iwik: {
 		baseSpecies: "Blobbos-eedle",
 		forme: "True",
 		types: ["Ice", "Bug"],
-		baseStats: {hp: 100, atk: 87, def: 100, spa: 160, spd: 97, spe: 106},
+		baseStats: {hp: 84, atk: 104, def: 132, spa: 70, spd: 90, spe: 130},
 		abilities: {0: "Metamorphosis"},
 		heightm: 0.3,
 		weightkg: 3.2,
@@ -45038,7 +45038,7 @@ blobbosextradimensional: {
 		gender: "M",
 		baseStats: {
 			hp: 70,
-			atk: 105,
+			atk: 100,
 			def: 75,
 			spa: 95,
 			spd: 75,
@@ -45047,7 +45047,7 @@ blobbosextradimensional: {
 		abilities: {
 			0: "Wandering Spirit",
 			1: "Wooden Guard",
-			H: "Magic Guard",
+			H: "Puppeteer",
 			S: "Beam Boost",
 
 		},
