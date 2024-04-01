@@ -1441,7 +1441,7 @@
         ],
         "moves": [
           "leafblade",
-          "crystalslash"
+          "psychocut"
         ],
         "lockedMoves": [
           "owtheedge",
@@ -3678,7 +3678,7 @@
     "sets": [
       {
         "abilities": [
-          "comatose"
+          "lethargic"
         ],
         "items": [
           "leftovers"
@@ -3689,7 +3689,7 @@
           "slackoff",
           "swordsdance"
         ],
-        "level": 76
+        "level": 72
       }
     ]
   },
@@ -5481,7 +5481,7 @@
         ],
         "lockedMoves": [
           "flashcannon",
-          "diamonstorm",
+          "diamondstorm",
           "flashbang"
         ],
         "level": 84
