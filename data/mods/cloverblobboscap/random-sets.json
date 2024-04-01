@@ -1007,7 +1007,7 @@
           "revelationdance",
           "secretstrength"
         ],
-        "level": 93
+        "level": 88
       }
     ]
   },
@@ -2065,7 +2065,7 @@
           "venoshock",
           "toxic"
         ],
-        "level": 80
+        "level": 81
       }
     ]
   },
@@ -2791,7 +2791,7 @@
         ],
         "lockedMoves": [
           "stunspore",
-          "shadowstrike",
+          "phasethrough",
           "xscissor"
         ],
         "level": 84
@@ -5616,7 +5616,7 @@
           "rockslide",
           "sleeppowder"
         ],
-        "level": 78
+        "level": 74
       }
     ]
   },
