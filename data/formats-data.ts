@@ -8997,6 +8997,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	daemonix: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	achatena: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	geomortus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	beayquaza: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	ganglython: {
 		tier: "Illegal",
 		isNonstandard: "Future",

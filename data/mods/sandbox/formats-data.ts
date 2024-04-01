@@ -10853,6 +10853,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	daemonix: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	achatena: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	geomortus: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	beayquaza: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	jumblegore: {
 		inherit: true,
 		tier: "OU",
