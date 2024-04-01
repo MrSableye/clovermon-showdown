@@ -599,7 +599,7 @@
           "return"
         ],
         "lockedMoves": [
-          "darkening",
+          "shadowclaw",
           "shadowball",
           "sludgewave"
         ],
@@ -2195,7 +2195,7 @@
           "sludgebomb",
           "uturn"
         ],
-        "level": 80
+        "level": 78
       }
     ]
   },
@@ -4009,22 +4009,8 @@
     "sets": [
       {
         "abilities": [
+          "solarpower",
           "flashfire"
-        ],
-        "items": [
-          "assaultvest"
-        ],
-        "lockedMoves": [
-          "leafstorm",
-          "flamethrower",
-          "earthpower",
-          "sunburst"
-        ],
-        "level": 84
-      },
-      {
-        "abilities": [
-          "solarpower"
         ],
         "items": [
           "leftovers"
@@ -4038,7 +4024,7 @@
           "flamethrower",
           "sunburst"
         ],
-        "level": 84
+        "level": 81
       }
     ]
   },
@@ -4193,21 +4179,6 @@
           "psychicfangs",
           "icebeam",
           "scarystory"
-        ],
-        "level": 81
-      },
-      {
-        "abilities": [
-          "moody"
-        ],
-        "items": [
-          "lifeorb"
-        ],
-        "lockedMoves": [
-          "shadowball",
-          "psychicfangs",
-          "icebeam",
-          "protect"
         ],
         "level": 81
       }
@@ -5578,7 +5549,7 @@
           "spacialrend",
           "leafstorm"
         ],
-        "level": 84
+        "level": 88
       },
       {
         "abilities": [
@@ -5594,7 +5565,7 @@
           "bravebird",
           "headsmash"
         ],
-        "level": 84
+        "level": 88
       }
     ]
   },
@@ -6101,7 +6072,7 @@
         ],
         "lockedMoves": [
           "hypervoice",
-          "strangsteam",
+          "strangesteam",
           "calmmind",
           "flipturn"
         ],
@@ -6755,7 +6726,7 @@
           "nastyplot",
           "substitute"
         ],
-        "level": 74
+        "level": 71
       }
     ]
   },
@@ -6817,7 +6788,7 @@
           "earthpower",
           "calmmind"
         ],
-        "level": 72
+        "level": 69
       }
     ]
   }
