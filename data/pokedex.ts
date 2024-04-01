@@ -37536,7 +37536,7 @@ achaethena: {
 	types: ["Fighting", "Dark"],
 	gender: 'F',
 	baseStats: {hp: 65, atk: 119, def: 55, spa: 85, spd: 66, spe: 115},
-	abilities: {0: "Cute Charm", 1: "Levitate", H: "opportunist", S: "Merciless"},
+	abilities: {0: "Cute Charm", 1: "Levitate", H: "Opportunist", S: "Merciless"},
 	heightm: 1.82,
 	weightkg: 104.1,
 	color: "White",
