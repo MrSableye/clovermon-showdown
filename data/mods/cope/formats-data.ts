@@ -2711,7 +2711,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	    },
-	    phantacade: {
+	    mantasm: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -2886,6 +2886,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	andelusion: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	horstuba: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	horsiwa: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	hor: {
 		inherit: true,
 		isNonstandard: null,
@@ -2901,7 +2916,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "LC",
 		},
-	kouprend: {
+	essention: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "NFE",
@@ -3259,12 +3274,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	alberchamp: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "NFE",
 	},
 	alberfly: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "NFE",
 	},
 	alberaph: {
 		inherit: true,
