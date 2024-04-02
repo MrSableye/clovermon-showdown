@@ -82,7 +82,7 @@
           "serenegrace"
         ],
         "items": [
-          "choiceband"
+          "angelpowder"
         ],
         "moves": [
           "steamclean",
@@ -106,7 +106,7 @@
           "berserker"
         ],
         "items": [
-          "choiceband"
+          "lifeorb"
         ],
         "moves": [
           "cbt",
@@ -116,6 +116,339 @@
         "lockedMoves": [
           "agility"
         ],
+        "level": 84
+      }
+    ]
+  },
+  "dragurve": {
+    "nicknames": [
+      "Dragurve"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "adaptability"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "spacialrend",
+          "voltswitch",
+          "thunderwave",
+          "trickroom"
+        ],
+        "lockedMoves": [
+          "dracometeor"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standopurplehaze": {
+    "nicknames": [
+      "Stando-PurpleHaze"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "poisonheal"
+        ],
+        "items": [
+          "toxicorb"
+        ],
+        "moves": [
+          "drainpunch",
+          "protect",
+          "poisonjab",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "purplehaze",
+          "pleaguefrezy"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standohorus": {
+    "nicknames": [
+      "Stando-Horus"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "compoundeyes"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "focusblast",
+          "stoneedge",
+          "taunt",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "iciclecrash",
+          "bravebird"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "dmcdante": {
+    "nicknames": [
+      "Dmcdante"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "regenerator"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "knockoff",
+          "toxic",
+          "taunt",
+          "thunderwave",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "pizzaspin",
+          "swordsedge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "btyranitar": {
+    "nicknames": [
+      "beta AF"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sandstream"
+        ],
+        "items": [
+          "chopleberry"
+        ],
+        "moves": [
+          "flintstrike",
+          "fireblast",
+          "stealthrock",
+          "thunderbolt",
+          "hydropump",
+          "icebeam",
+          "thunderwave"
+        ],
+        "lockedMoves": [
+          "earthquake"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "wackchad": {
+    "nicknames": [
+      "cahd"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "choicescarf"
+        ],
+        "moves": [
+          "playrough",
+          "pursuit",
+          "bloodhound",
+          "firefang",
+          "crunch"
+        ],
+        "lockedMoves": [
+          "cbt",
+          "closecombat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "warshin": {
+    "nicknames": [
+      "Warshin"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "swiftswim",
+          "drizzle"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "choicescarf"
+        ],
+        "moves": [
+          "knockoff",
+          "icebeam",
+          "crosschop"
+        ],
+        "lockedMoves": [
+          "sharkbite"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mylph": {
+    "nicknames": [
+      "Mylph"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "milkdrink",
+          "thunderwave",
+          "moonblast",
+          "healbell",
+          "foulplay"
+        ],
+        "lockedMoves": [
+          "venusburst"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "knood": {
+    "nicknames": [
+      "Knood"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "battlearmor"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "armorburst",
+          "bodypress",
+          "ironroot",
+          "synthesis",
+          "toxic"
+        ],
+        "lockedMoves": [
+          "armorcrash",
+          "barkpress"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "swanaper": {
+    "nicknames": [
+      "Swanaper"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "serenegrace",
+          "roughskin"
+        ],
+        "items": [
+          "rockyhelmet",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "swordsdance",
+          "painsplit",
+          "leafblade",
+          "drillrun",
+          "tailwind"
+        ],
+        "lockedMoves": [
+          "aerialrace"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "doita": {
+    "nicknames": [
+      "Doita"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "victorystar",
+          "pride"
+        ],
+        "items": [
+          "assaultvest",
+          "heavydutyboots",
+          "lifeorb"
+        ],
+        "moves": [
+          "abruption",
+          "boomburst",
+          "flamecharge",
+          "scald",
+          "heatwave"
+        ],
+        "lockedMoves": [
+          "bassdrop"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "neonazi": {
+    "nicknames": [
+      "Neonazi"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "lifeorb",
+          "assaultvest"
+        ],
+        "moves": [
+          "flamethrower",
+          "flashcannon",
+          "focusblast",
+          "energyball",
+          "voltswitch",
+          "thunderbolt",
+          "powergem",
+          "signalbeam",
+          "psychic",
+          "flashball"
+        ],
+        
         "level": 84
       }
     ]
@@ -138,7 +471,7 @@
           "vampirebite"
         ],
         "lockedMoves": [
-          "bloodsiphon"
+          "bloodbite"
         ],
         "level": 84
       }
