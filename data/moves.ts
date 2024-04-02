@@ -25143,102 +25143,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	thunderdrop: {
-		accuracy: 100,
+		accuracy: 90,
 		basePower: 100,
 		category: "Physical",
 		name: "Thunder Drop",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1},
-		onModifyMove(move, source) {
-			if (!source.volatiles['skydrop']) {
-				move.accuracy = true;
-				delete move.flags.contact;
-			}
-		},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1, gravity: 1},
 		onMoveFail(target, source) {
-			if (source.volatiles['twoturnmove'] && source.volatiles['twoturnmove'].duration === 1) {
-				source.removeVolatile('skydrop');
-				source.removeVolatile('twoturnmove');
-				if (target === this.effectState.target) {
-					this.add('-end', target, 'Sky Drop', '[interrupt]');
-				}
-			}
-		},
-		onTry(source, target) {
-			return !target.fainted;
-		},
-		onTryHit(target, source, move) {
-			if (source.removeVolatile(move.id)) {
-				if (target !== source.volatiles['twoturnmove'].source) return false;
-
-				this.add('-prepare', source, move.name, target);
-				source.addVolatile('twoturnmove', target);
-				return null;
-			}
-		},
-		onHit(target, source) {
-			if (target.hp) this.add('-end', target, 'Thunder Drop');
-		},
-		condition: {
-			duration: 2,
-			onAnyDragOut(pokemon) {
-				if (pokemon === this.effectState.target || pokemon === this.effectState.source) return false;
-			},
-			onFoeTrapPokemonPriority: -15,
-			onFoeTrapPokemon(defender) {
-				if (defender !== this.effectState.source) return;
-				defender.trapped = true;
-			},
-			onFoeBeforeMovePriority: 12,
-			onFoeBeforeMove(attacker, defender, move) {
-				if (attacker === this.effectState.source) {
-					attacker.activeMoveActions--;
-					this.debug('Thunder drop nullifying.');
-					return null;
-				}
-			},
-			onRedirectTargetPriority: 99,
-			onRedirectTarget(target, source, source2) {
-				if (source !== this.effectState.target) return;
-				if (this.effectState.source.fainted) return;
-				return this.effectState.source;
-			},
-			onAnyInvulnerability(target, source, move) {
-				if (target !== this.effectState.target && target !== this.effectState.source) {
-					return;
-				}
-				if (source === this.effectState.target && target === this.effectState.source) {
-					return;
-				}
-				const moves = ['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows', 'airshooter'];
-				if (moves.includes(move.id)) {
-					return;
-				}
-				return false;
-			},
-			onAnyBasePower(basePower, target, source, move) {
-				if (target !== this.effectState.target && target !== this.effectState.source) {
-					return;
-				}
-				if (source === this.effectState.target && target === this.effectState.source) {
-					return;
-				}
-				if (move.id === 'gust' || move.id === 'twister' || move.id === 'airshooter') {
-					return this.chainModify(2);
-				}
-			},
-			onFaint(target) {
-				if (target.volatiles['skydrop'] && target.volatiles['twoturnmove'].source) {
-					this.add('-end', target.volatiles['twoturnmove'].source, 'Sky Drop', '[interrupt]');
-				}
-			},
+			source.trySetStatus('par');
 		},
 		secondary: {
-			chance: 30,
+			chance: 20,
 			status: 'par',
 		},
-		target: "any",
+		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
 	},
