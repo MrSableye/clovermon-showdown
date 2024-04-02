@@ -45781,7 +45781,7 @@ blobbosextradimensional: {
 		heightm: 1.0,
 		weightkg: 30,
 		color: "Brown",
-		evos: ["Andelusion", "Horsetuba","Horsiwa"],
+		evos: ["Andelusion", "Horstuba","Horsiwa"],
 		eggGroups: ["Undiscovered"],
 		creator: "hell if i know",
 	},
