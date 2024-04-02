@@ -2480,7 +2480,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	phantacade: {
+	mantasm: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
