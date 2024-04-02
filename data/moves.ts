@@ -24839,7 +24839,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {recharge: 1, protect: 1, mirror: 1},
-		onAfterHit(source, target) {
+		onAfterHit(target, source) {
 			if (target && target.hp) {
 				source.addVolatile('mustrecharge');
 			}
@@ -86829,7 +86829,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	earrape: {
 		num: 42015,
 		accuracy: 100,
-		basePower: 150,
+		basePower: 140,
 		category: "Special",
 		name: "Earrape",
 		pp: 5,

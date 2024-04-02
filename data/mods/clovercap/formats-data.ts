@@ -1103,7 +1103,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	phantacade: {
+	mantasm: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

@@ -9013,6 +9013,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	andelusion: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	horstuba: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	horsiwa: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	ganglython: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -10195,7 +10207,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	phantacade: {
+	mantasm: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

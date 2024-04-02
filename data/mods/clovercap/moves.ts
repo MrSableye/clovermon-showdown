@@ -1149,6 +1149,49 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		accuracy: 100,
 		isNonstandard: null,
 	},
+	poweruppunch: {
+		num: 612,
+		accuracy: 100,
+		basePower: 50,
+		category: "Physical",
+		isNonstandard: "Past",
+		name: "Power-Up Punch",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fighting",
+		contestType: "Tough",
+	},
+	chargebeam: {
+		num: 451,
+		accuracy: 90,
+		basePower: 55,
+		category: "Special",
+		name: "Charge Beam",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 70,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Electric",
+		contestType: "Beautiful",
+	},
 	sleazyspores: {
 		inherit: true,
 		isNonstandard: null,
