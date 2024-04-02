@@ -4645,6 +4645,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	frozensong: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	earrape: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	headlongrush: {
 		inherit: true,
 		isNonstandard: null,
