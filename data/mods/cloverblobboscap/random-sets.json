@@ -2012,7 +2012,7 @@
           "steameruption",
           "waterspout"
         ],
-        "level": 84
+        "level": 81
       }
     ]
   },
@@ -2242,8 +2242,15 @@
           "shellsidearm",
           "clangoroussoul"
         ],
-        "level": 84
-      },
+        "level": 88
+      }
+    ]
+  },
+  "blobbosgalarcrowned": {
+    "nicknames": [
+      "Galar"
+    ],
+    "sets": [
       {
         "abilities": [
           "neutralizinggas"
@@ -2251,13 +2258,16 @@
         "items": [
           "rustedcrown"
         ],
+        "moves": [
+          "fishiousrend",
+          "boltbeak"
+        ],
         "lockedMoves": [
-          "shellsidearm",
           "behemothblade",
-          "tripleaxel",
+          "behemothblob",
           "clangoroussoul"
         ],
-        "level": 84
+        "level": 74
       }
     ]
   },
