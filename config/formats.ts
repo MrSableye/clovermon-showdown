@@ -41,10 +41,17 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Max Team Size = 3',
 			'Terastal Clause',
-			'Standard',
+			'Obtainable',
+			'Sleep Clause Mod',
+			'Species Clause',
+			'Nickname Clause',
+			'OHKO Clause',
+			'Evasion Moves Clause',
+			'Endless Battle Clause',
+			'HP Percentage Mod',
+			'Cancel Mod',
 			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
-			'-Team Preview'
+			'Sketch Post-Gen 7 Moves'
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
