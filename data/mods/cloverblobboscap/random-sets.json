@@ -2267,7 +2267,7 @@
           "behemothblob",
           "clangoroussoul"
         ],
-        "level": 74
+        "level": 72
       }
     ]
   },
@@ -2662,7 +2662,7 @@
           "sludgebomb",
           "substitute"
         ],
-        "level": 78
+        "level": 76
       }
     ]
   },
@@ -2753,7 +2753,6 @@
           "digger"
         ],
         "items": [
-          "softsand",
           "lifeorb"
         ],
         "lockedMoves": [
@@ -2989,7 +2988,7 @@
           "spooperpower",
           "tailglow"
         ],
-        "level": 84
+        "level": 81
       }
     ]
   },
@@ -3091,7 +3090,7 @@
           "hurricane",
           "roost"
         ],
-        "level": 84
+        "level": 81
       }
     ]
   },
@@ -4167,7 +4166,7 @@
           "highhorsepower",
           "grassyterrain"
         ],
-        "level": 88
+        "level": 84
       }
     ]
   },
@@ -4210,7 +4209,7 @@
         "lockedMoves": [
           "powerwhip",
           "cursedblade",
-          "crystalslash",
+          "1000folds",
           "swordsdance"
         ],
         "level": 74
@@ -4236,7 +4235,7 @@
           "thunderbolt",
           "toxic"
         ],
-        "level": 88
+        "level": 84
       }
     ]
   },
@@ -4277,9 +4276,9 @@
           "lifeorb"
         ],
         "lockedMoves": [
-          "seedbomb",
+          "gigadrain",
           "drainingkiss",
-          "earthpower",
+          "earthquake",
           "workup"
         ],
         "level": 78
@@ -4331,7 +4330,7 @@
         "lockedMoves": [
           "rockslide",
           "earthshatter",
-          "bellyflop",
+          "bodypress",
           "slackoff"
         ],
         "level": 88
@@ -4834,24 +4833,27 @@
           "piratesbooty"
         ],
         "lockedMoves": [
-          "riptide",
-          "powergem",
-          "darkpulse",
-          "nastyplot"
+          "plunder",
+          "knockoff",
+          "suckerpunch",
+          "bulkup"
         ],
-        "level": 84
+        "level": 81
       },
       {
         "abilities": [
           "jewelry"
         ],
+        "items": [
+          "watergem"
+        ],
         "lockedMoves": [
-          "plunder",
+          "riptide",
           "darkpulse",
           "aquajet",
           "icebeam"
         ],
-        "level": 84
+        "level": 81
       }
     ]
   },
@@ -5183,12 +5185,12 @@
           "galvanize"
         ],
         "items": [
-          "magnet"
+          "lifeorb"
         ],
         "lockedMoves": [
-          "bodyslam",
+          "return",
           "outrage",
-          "swordsdance",
+          "icefang",
           "agility"
         ],
         "level": 78
@@ -5236,7 +5238,6 @@
   },
   "blobbosremembered": {
     "nicknames": [
-      "Remembered",
       "Remembered",
       "9/11isnotajoke"
     ],
@@ -5599,7 +5600,7 @@
           "comatose"
         ],
         "items": [
-          "nevermeltice"
+          "leftovers"
         ],
         "moves": [
           "slimegulp",
@@ -5611,7 +5612,7 @@
           "rockslide",
           "sleeppowder"
         ],
-        "level": 74
+        "level": 76
       }
     ]
   },
@@ -5953,7 +5954,7 @@
           "playrough",
           "jumpkick"
         ],
-        "level": 84
+        "level": 81
       }
     ]
   },
@@ -6012,7 +6013,7 @@
           "icebeam",
           "leechseed"
         ],
-        "level": 96
+        "level": 93
       }
     ]
   },
@@ -6576,7 +6577,7 @@
           "contrary"
         ],
         "items": [
-          "sitrusberry"
+          "dragonfang"
         ],
         "lockedMoves": [
           "outrage",
@@ -6716,7 +6717,7 @@
           "leftovers"
         ],
         "lockedMoves": [
-          "flashcannon",
+          "makeitrain",
           "moonblast",
           "nastyplot",
           "substitute"
