@@ -53,10 +53,8 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves'
 		],
-		banlist: [
-			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
-			'Condoom + Unaware', 'Potarded + Unaware',
-		],
+		banlist: ['Uber', 'Wonder Guard'],
+		unbanlist: ['Fontaba-Z', 'Funnedong', 'Kuuroba'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Clover
