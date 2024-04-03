@@ -42138,6 +42138,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		multihit: [2, 5],
 		target: "normal",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -51247,7 +51248,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'tox',
+		},
 		target: "normal",
 		type: "Zombie",
 		isNonstandard: "Future",
@@ -63027,6 +63031,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sun: 1},
+		onBasePower(basePower, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Cosmic",
@@ -66362,6 +66371,42 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1},
+		volatileStatus: 'barkskin',
+		condition: {
+			onStart(pokemon, source, effect) {
+				
+					this.add('-start', pokemon, 'Barkskin');
+				
+			},
+			onRestart(pokemon, source, effect) {
+				
+					this.add('-start', pokemon, 'Barkskin');
+				
+			},
+			onBasePowerPriority: 9,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Wood') {
+					this.debug('barkskin boost');
+					return this.chainModify(2);
+				}
+			},
+			onMoveAborted(pokemon, target, move) {
+				if (move.type === 'Wood' && move.id !== 'barkskin') {
+					pokemon.removeVolatile('barkskin');
+				}
+			},
+			onAfterMove(pokemon, Wood, move) {
+				if (move.type === 'Electric' && move.id !== 'barkskin') {
+					pokemon.removeVolatile('barkskin');
+				}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Barkskin', '[silent]');
+			},
+		},
+		boosts: {
+			def: 2,
+		},
 		secondary: null,
 		target: "self",
 		type: "Wood",
@@ -66847,6 +66892,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Zombie",
 		isNonstandard: "Future",
 	},
+	
 	"5impossiblerequests": {
 		num: 668654,
 		accuracy: true,
@@ -74103,6 +74149,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Anxiety",
 		pp: 15,
 		priority: 0,
+		overrideOffensivePokemon: 'target',
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -77471,7 +77518,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Shuttle Launch",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		flags: {
+			contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1, nosleeptalk: 1, noassist: 1, failinstruct: 1,
+		},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability(target, source, move) {
+				if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
+					return;
+				}
+				return false;
+			},
+			onSourceModifyDamage(damage, source, target, move) {
+				if (move.id === 'gust' || move.id === 'twister') {
+					return this.chainModify(2);
+				}
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Tech",
@@ -78263,6 +78337,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sun: 1},
+		onBasePower(basePower, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Grass",
