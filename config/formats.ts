@@ -44,6 +44,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
+			'-Team Preview'
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
