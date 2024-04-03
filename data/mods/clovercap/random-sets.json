@@ -1,7 +1,10 @@
 {
   "arachnote": {
     "nicknames": [
-      "Arachnote"
+      "Arachnote",
+      "Arachnote",
+      "Arachnote",
+      "Otamatone"
     ],
     "sets": [
       {
@@ -23,7 +26,10 @@
   },
   "3dawg": {
     "nicknames": [
-      "3dawg"
+      "3dawg",
+      "3dawg",
+      "3dawg",
+      "Brian"
     ],
     "sets": [
       {
@@ -45,7 +51,10 @@
   },
   "ampstar": {
     "nicknames": [
-      "Ampstar"
+      "Ampstar",
+      "Ampstar",
+      "Ampstar",
+      "Biggie Cheese"
     ],
     "sets": [
       {
@@ -62,12 +71,34 @@
           "fakeout"
         ],
         "level": 84
+      },
+      {
+        "abilities": [
+          "punkrock"
+        ],
+        "items": [
+          "lightball"
+        ],
+        "lockedMoves": [
+          "hypervoice",
+          "overdrive",
+          "surf",
+          "voltswitch"
+        ],
+        "level": 84
       }
     ]
   },
   "ankhurah": {
     "nicknames": [
-      "Ankhurah"
+      "Ankhurah",
+      "Ankhurah",
+      "Ankhurah",
+      "Ankhurah",
+      "Ankhurah",
+      "Ankhurah",
+      "Camel",
+      "Anubis"
     ],
     "sets": [
       {
@@ -83,13 +114,20 @@
           "shoreup",
           "teleport"
         ],
-        "level": 84
+        "level": 83
       }
     ]
   },
   "aquadiiva": {
     "nicknames": [
-      "Aquadiiva"
+      "Aquadiiva",
+      "Aquadiiva",
+      "Aquadiiva",
+      "Aquadiiva",
+      "Aquadiiva",
+      "Aquadiiva",
+      "Watergirl",
+      "Wife"
     ],
     "sets": [
       {
@@ -105,13 +143,20 @@
           "calmmind",
           "recover"
         ],
-        "level": 84
+        "level": 83
       }
     ]
   },
   "apocamise": {
     "nicknames": [
-      "Apocamise"
+      "Apocamise",
+      "Apocamise",
+      "Apocamise",
+      "Apocamise",
+      "Apocamise",
+      "Apocamise",
+      "Apoggermise",
+      "13"
     ],
     "sets": [
       {
@@ -128,6 +173,405 @@
           "teleport"
         ],
         "level": 84
+      }
+    ]
+  },
+  "bluduck": {
+    "nicknames": [
+      "Bluduck",
+      "Bluduck",
+      "Bluduck",
+      "Bluduck",
+      "Bluduck",
+      "Bluduck",
+      "Berdly",
+      "Golduck"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "brainpower"
+        ],
+        "items": [
+          "lifeorb",
+          "choicespecs"
+        ],
+        "moves": [
+          "surf",
+          "scald"
+        ],
+        "lockedMoves": [
+          "freezingglare",
+          "thinkfast",
+          "focusblast"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "empidae": {
+    "nicknames": [
+      "Empidae",
+      "Empidae",
+      "Empidae",
+      "Empidae",
+      "Empidae",
+      "Empidae",
+      "HueyLewis&TheNews",
+      "Queen Deltarune",
+      "HIP"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "noguard"
+        ],
+        "items": [
+          "choiceband"
+        ],
+        "lockedMoves": [
+          "uturn",
+          "megakick",
+          "highjumpkick",
+          "knockoff"
+        ],
+        "level": 84
+      },
+      {
+        "abilities": [
+          "noguard"
+        ],
+        "items": [
+          "lifeorb",
+          "silkscarf"
+        ],
+        "moves": [
+          "highjumpkick",
+          "knockoff",
+          "megahorn"
+        ],
+        "lockedMoves": [
+          "firstimpression",
+          "megakick",
+          "quickattack"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "forgotno": {
+    "nicknames": [
+      "FORGOTNO",
+      "FORGOTNO",
+      "FORGOTNO",
+      "FORGOTNO",
+      "FORGOTNO",
+      "FORGOTNO",
+      "FORGOTNO",
+      "YOU FORGOT",
+      "MISSINGNO.",
+      "ZZAZZ",
+      "KFAD"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "galewings"
+        ],
+        "items": [
+          "choicespecs"
+        ],
+        "lockedMoves": [
+          "flakcannon",
+          "hurricane",
+          "fireblast",
+          "icebeam"
+        ],
+        "level": 84
+      },
+      {
+        "abilities": [
+          "galewings"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "firepunch",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "shiftgear",
+          "bravebird",
+          "ironhead"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ignifatu": {
+    "nicknames": [
+      "Ignifatu",
+      "Ignifatu",
+      "Ignifatu",
+      "Ignifatu",
+      "Ignifatu",
+      "Ignifatu",
+      "FIREBRINGER",
+      "UNEXPECTANCY",
+      "COÑO!!!!"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sheerforce"
+        ],
+        "items": [
+          "choicescarf"
+        ],
+        "lockedMoves": [
+          "flareblitz",
+          "thunderfang",
+          "rockslide",
+          "partingshot"
+        ],
+        "level": 80
+      },
+      {
+        "abilities": [
+          "toxicboost"
+        ],
+        "items": [
+          "toxicorb"
+        ],
+        "lockedMoves": [
+          "flareblitz",
+          "flamecharge",
+          "earthquake",
+          "swordsdance"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "lemirethun": {
+    "nicknames": [
+      "Lemirethun",
+      "Lemirethun",
+      "Lemirethun",
+      "LIVE AND LEARN"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sheerforce"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "lockedMoves": [
+          "scald",
+          "mudmaelstrom",
+          "sludgewave",
+          "icebeam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "noxilium": {
+    "nicknames": [
+      "Noxilium",
+      "Noxilium",
+      "Noxilium",
+      "Noxilium",
+      "Noxilium",
+      "Noxilium",
+      "GO GREED",
+      "Mola Gay"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "noguard"
+        ],
+        "items": [
+          "choicespecs"
+        ],
+        "lockedMoves": [
+          "shadowball",
+          "hurricane",
+          "fireblast",
+          "thunder"
+        ],
+        "level": 84
+      },
+      {
+        "abilities": [
+          "noguard"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "shadowsneak",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "swordsdance",
+          "poltergeist",
+          "bravebird"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "platylics": {
+    "nicknames": [
+      "Platylics",
+      "Platylics",
+      "Platylics",
+      "Platylics",
+      "Platylics",
+      "Platylics",
+      "Wayne",
+      "Decres"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "simple"
+        ],
+        "items": [
+          "chestoberry"
+        ],
+        "lockedMoves": [
+          "moonblast",
+          "calmmind",
+          "barrier",
+          "rest"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "seraphill": {
+    "nicknames": [
+      "Seraphill",
+      "Seraphill",
+      "Seraphill",
+      "Seraphill",
+      "Seraphill",
+      "Seraphill",
+      "GAY LUIGI",
+      "Dinner Blaster",
+      "Playstation"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicguard"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "lockedMoves": [
+          "volttackle",
+          "stratoblade",
+          "swordsdance",
+          "roost"
+        ],
+        "level": 82
+      },
+      {
+        "abilities": [
+          "magicguard"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "rapidspin",
+          "volttackle",
+          "roost",
+          "voltswitch"
+        ],
+        "level": 82
+      }
+    ]
+  },
+  "wawho": {
+    "nicknames": [
+      "Wawho",
+      "Wawho",
+      "Wawho",
+      "Luingi"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "sitrusberry"
+        ],
+        "lockedMoves": [
+          "bellydrum",
+          "extremespeed",
+          "photongeyser",
+          "shadowsneak"
+        ],
+        "level": 73
+      }
+    ]
+  },
+  "weatherbane": {
+    "nicknames": [
+      "Weatherbane",
+      "Weatherbane",
+      "Weatherbane",
+      "Weatherbane",
+      "Weatherbane",
+      "Weatherbane",
+      "Archimedes",
+      "Tyrant Bird"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "lightningrod"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "heatwave",
+          "flashcannon",
+          "thunderwave"
+        ],
+        "lockedMoves": [
+          "roost",
+          "cloudbreaker"
+        ],
+        "level": 82
+      },
+      {
+        "abilities": [
+          "ironbarbs"
+        ],
+        "items": [
+          "rockyhelmet"
+        ],
+        "moves": [
+          "heatwave",
+          "flashcannon",
+          "thunderwave"
+        ],
+        "lockedMoves": [
+          "roost",
+          "cloudbreaker"
+        ],
+        "level": 82
       }
     ]
   }
