@@ -11063,6 +11063,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	piurette: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	crolord: {
 		inherit: true,
 		tier: "OU",

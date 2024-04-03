@@ -7994,6 +7994,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	crashhopper: {
 		name: "Crash Hopper",
+		desc: "Has a 30% chance to paralyze the target. User is paralyzed if it misses.",
 		shortDesc: "30% chance to paralyze. Paralyze self on miss.",
 	},
 	fractus: {
@@ -8266,8 +8267,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	thunderdrop: {
 		name: "Thunder Drop",
-		desc: "Has a 30% chance to paralyze the target.",
-		shortDesc: "30% chance to paralyze the target.",
+		desc: "Has a 20% chance to paralyze the target. User is paralyzed if it misses.",
+		shortDesc: "20% chance to paralyze. Paralyze self on miss.",
 
 		prepare: "[POKEMON] took [TARGET] into the sky!",
 		end: "  [POKEMON] was freed from the Thunder Drop!",

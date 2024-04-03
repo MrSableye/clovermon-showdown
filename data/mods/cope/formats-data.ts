@@ -3326,6 +3326,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	piurette: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	sludge: {
 		inherit: true,
 		isNonstandard: null,
