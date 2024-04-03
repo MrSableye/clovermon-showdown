@@ -2,7 +2,7 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	bulletseed: {
 		inherit: true,
 		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times. If the user is a Grass-type, each hit has a 1/16 chance to apply Leech Seeds.",
-		shortDesc: "Hits 2-5 times in one turn. Grass-type users have a 1/16 per hit to Leech Seed.",
+		shortDesc: "Hits 2-5 times. Grass-type: 1/16 odds to Leech Seed per hit.",
 	},
 	grassyterrain: {
 		name: "Grassy Terrain",
@@ -11,8 +11,8 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	},
 	needlearm: {
 		inherit: true,
-		desc: "Has a 50% chance to set spikes.",
-		shortDesc: "50% chance to set spikes.",
+		desc: "Has a 50% chance to set Spikes.",
+		shortDesc: "50% chance to set Spikes.",
 	},
 	seedbomb: {
 		inherit: true,
@@ -22,7 +22,7 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	xscissor: {
 		inherit: true,
 		desc: "Has a higher chance for a critical hit.",
-		shortDesc: "High critical hit ratio",
+		shortDesc: "High critical hit ratio.",
 	},
 	smellingsalts: {
 		inherit: true,
@@ -58,8 +58,8 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	},
 	sharpen: {
 		inherit: true,
-		desc: "Raises the user's Attack by 1 stage.Increases Critical Hit odds by one stage",
-		shortDesc: "Raises the user's Attack by 1. Raises Critical Hit Odds",
+		desc: "Raises the user's Attack by 1 stage. Applies a stackable buff to the user that raises their critical hit change by 1 stage.",
+		shortDesc: "Raises the user's Attack and crit stage by 1.",
 	},
 	mistball: {
 		name: "Mist Ball",
@@ -70,6 +70,11 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		name: "Luster Purge",
 		desc: "Has a 100% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "100% chance to lower the target's Sp. Def by 1.",
+	},
+	chargebeam: {
+		inherit: true,
+		desc: "Has a 100% chance to raise the user's Special Attack by 1 stage.",
+		shortDesc: "100% chance to raise the user's Sp. Atk by 1.",
 	},
 	sleazyspores: {
 		inherit: true,

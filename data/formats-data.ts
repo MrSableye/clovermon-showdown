@@ -9133,6 +9133,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	piurette: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	worldle: {
 		tier: "Illegal",
 		isNonstandard: "Future",

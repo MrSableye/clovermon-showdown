@@ -1173,15 +1173,15 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	chargebeam: {
 		num: 451,
-		accuracy: 90,
-		basePower: 55,
+		accuracy: 100,
+		basePower: 50,
 		category: "Special",
 		name: "Charge Beam",
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-			chance: 70,
+			chance: 100,
 			self: {
 				boosts: {
 					spa: 1,

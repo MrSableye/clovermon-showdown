@@ -11,7 +11,7 @@ export const AbilitiesText: {[k: string]: ModdedAbilityText} = {
 	},
 	unnerve: {
 		inherit: true,
-		desc: "Foes cannot use Berries, Berry Juice, Leftovers, Milk Drink, Focus Munch, Softboiled or Fruit Juice.",
-		shortDesc: "Foes cannot use Berries, Berry Juice, Leftovers, Milk Drink, Focus Munch, Softboiled or Fruit Juice.",
+		desc: "Foes cannot use Berries, Berry Juice, Leftovers, Milk Drink, Focus Munch, Soft-Boiled or Fruit Juice.",
+		shortDesc: "Foes cannot use Berries, Berry Juice, Leftovers, Milk Drink, Focus Munch, Soft-Boiled or Fruit Juice.",
 	},
 };
