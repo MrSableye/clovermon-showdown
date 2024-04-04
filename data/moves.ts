@@ -72403,10 +72403,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-start', target, 'Indestructible');
 				this.add('-message', 'became immune to super effective moves!');
 			},
-			onTryHit(source, target, move) {
-				if (source.getMoveHitData(move).typeMod > 0) {
+			onFoeTryMove(target, source, move){
+				if (target.getMoveHitData(move).typeMod > 0) {
 				this.debug('Indestructible neutralize');
-				this.add('-immune', source, '[from] : Flash Fire');
+				this.add('-immune', target, '[from] : Indestructible');
 				return null;
 				}
 			},
