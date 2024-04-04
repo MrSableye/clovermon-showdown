@@ -10633,7 +10633,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		},
-	albergrab: {
+	albersnatch: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
