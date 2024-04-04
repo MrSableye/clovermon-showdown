@@ -1,3 +1,5 @@
+import { Pokemon } from "../../../sim";
+
 /*
 
 List of new flags and their descriptions:
@@ -1882,6 +1884,39 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	zenheadbutt: {
 		inherit: true,
 		accuracy: 95,
+	},
+	beatup: {
+		inherit: true,
+		damageCallback(pokemon, target, move) {
+			let source = pokemon;
+			if (move && move.hit > 1) {
+				const allies = pokemon.side.pokemon.filter((ally) => ally !== pokemon && !ally.fainted);
+				const ally = allies[move.hit - 2];
+				if (ally) {
+					source = new Pokemon({
+						...ally.set,
+						ability: undefined,
+						item: undefined,
+					}, pokemon.side);
+				}
+			}
+			const moveData = {
+				name: "Beat Up",
+				basePower: 25,
+				category: "Physical",
+				flags: {futuremove: 1},
+				willCrit: false,
+				type: 'Dark',
+			} as unknown as ActiveMove;
+			const damage = this.actions.getDamage(source, target, moveData);
+			if (typeof damage === 'number') return damage;
+			return false;
+		},
+		basePowerCallback: undefined,
+		onModifyMove(move, pokemon) {
+			move.allies = pokemon.side.pokemon.filter(ally => ally === pokemon || !ally.fainted);
+			move.multihit = move.allies.length;
+		},
 	},
 	/* Clover Exclusive Moves */
 	sleazyspores: {

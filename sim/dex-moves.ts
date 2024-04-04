@@ -118,7 +118,7 @@ export interface MoveEventMethods {
 	/** Return true to stop the move from being used */
 	beforeMoveCallback?: (this: Battle, pokemon: Pokemon, target: Pokemon | null, move: ActiveMove) => boolean | void;
 	beforeTurnCallback?: (this: Battle, pokemon: Pokemon, target: Pokemon) => void;
-	damageCallback?: (this: Battle, pokemon: Pokemon, target: Pokemon) => number | false;
+	damageCallback?: (this: Battle, pokemon: Pokemon, target: Pokemon, move?: ActiveMove) => number | false;
 	priorityChargeCallback?: (this: Battle, pokemon: Pokemon) => void;
 
 	onDisableMove?: (this: Battle, pokemon: Pokemon) => void;
