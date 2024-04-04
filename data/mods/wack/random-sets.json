@@ -353,7 +353,7 @@
           "shatteringhammer"
         ],
         "moves": [
-          "crabhammmer",
+          "crabhammer",
           "dragonclaw",
           "shadowclaw"
         ],
@@ -1308,7 +1308,7 @@
           "rockblast"
         ],
         "lockedMoves": [
-          "pinmissle"
+          "pinmissile"
         ],
         "level": 84
       }
@@ -2032,7 +2032,7 @@
         "moves": [
           "vcreate",
           "wcreate",
-          "veryhighjumpkick",
+          "veryhijumpkick",
           "rottingbrst",
           "kamikaze",
           "pastalavista"

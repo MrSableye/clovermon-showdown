@@ -72401,11 +72401,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 			duration: 4,
 			onStart(target) {
 				this.add('-start', target, 'Indestructible');
+				this.add('-message', 'became immune to super effective moves!');
 			},
-			onSourceModifyDamage(damage, source, target, move) {
+			onTryHit(source, target, move) {
 				if (target.getMoveHitData(move).typeMod > 0) {
 				this.debug('Indestructible neutralize');
-				return this.chainModify(0);
+				this.add('-immune', target, '[from] Indestructable');
+				return null;
 				}
 			},
 			onResidualOrder: 18,
