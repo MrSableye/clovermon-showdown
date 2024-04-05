@@ -2684,7 +2684,7 @@
           "sludgebomb",
           "recover"
         ],
-        "level": 88
+        "level": 84
       }
     ]
   },
@@ -3291,7 +3291,7 @@
           "1000folds",
           "shiftgear"
         ],
-        "level": 88
+        "level": 84
       },
       {
         "abilities": [
@@ -3306,7 +3306,7 @@
           "rapidspin",
           "spikyshield"
         ],
-        "level": 88
+        "level": 84
       }
     ]
   },
@@ -4189,7 +4189,7 @@
           "icebeam",
           "scarystory"
         ],
-        "level": 81
+        "level": 78
       }
     ]
   },
