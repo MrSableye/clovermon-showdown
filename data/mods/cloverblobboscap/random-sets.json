@@ -52,7 +52,7 @@
           "stoneedge",
           "substitute"
         ],
-        "level": 84
+        "level": 81
       },
       {
         "abilities": [
@@ -71,7 +71,7 @@
           "blobbybop",
           "doubleedge"
         ],
-        "level": 84
+        "level": 81
       }
     ]
   },
@@ -3371,7 +3371,7 @@
       }
     ]
   },
-  "blobbosmandem": {
+  "blobbosmandm": {
     "nicknames": [
       "M&M"
     ],
@@ -6785,6 +6785,44 @@
           "calmmind"
         ],
         "level": 69
+      }
+    ]
+  },
+  "blobbosorangeisles": {
+    "nicknames": [
+      "Orange Island"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "terraform"
+        ],
+        "items": [
+          "terrainextender"
+        ],
+        "lockedMoves": [
+          "grassyglide",
+          "rockslide",
+          "expandingforce",
+          "risingvoltage"
+        ],
+        "level": 78
+      },
+      {
+        "abilities": [
+          "mimicry"
+        ],
+        "items": [
+          "leftovers",
+          "sitrusberry"
+        ],
+        "lockedMoves": [
+          "grassyglide",
+          "terradozer",
+          "terrainpulse",
+          "protect"
+        ],
+        "level": 78
       }
     ]
   }
