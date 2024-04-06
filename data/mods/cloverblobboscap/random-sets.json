@@ -3338,7 +3338,8 @@
       "Mage",
       "Mage",
       "Cosmo",
-      "Wanda"
+      "Wanda",
+      "Kirblob"
     ],
     "sets": [
       {
@@ -6823,6 +6824,253 @@
           "protect"
         ],
         "level": 78
+      }
+    ]
+  },
+  "blobbosstingray": {
+    "nicknames": [
+      "Stingray"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "paralysisheal"
+        ],
+        "items": [
+          "paraorb"
+        ],
+        "moves":[
+          "thunderbolt",
+          "surf"
+        ],
+        "lockedMoves": [
+          "toxicbeam",
+          "hurricane",
+          "protect"
+        ],
+        "level": 81
+      },
+      {
+        "abilities": [
+          "stormdrain"
+        ],
+        "items": [
+          "blacksludge"
+        ],
+        "moves":[
+          "roost",
+          "airslash"
+        ],
+        "lockedMoves": [
+          "venoshock",
+          "toxic",
+          "thunderbolt"
+        ],
+        "level": 81
+      }
+      
+    ]
+  },
+  "blobbosyolked": {
+    "nicknames": [
+      "Yolked"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "ironfist"
+        ],
+        "items": [
+          "leftovers",
+          "sitrusberry"
+        ],
+        "moves":[
+          "icepunch",
+          "thunderpunch",
+          "firepunch",
+          "fruitpunch"
+        ],
+        "lockedMoves": [
+          "eggbomb",
+          "punchout",
+          "machpunch"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "blobbosjunkheap": {
+    "nicknames": [
+      "Junk Heap",
+      "Junk Heap",
+      "3 Mothers"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "steelworker"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "earthquake",
+          "thunderblitz",
+          "heavyslam",
+          "spikes"
+        ],
+        "level": 81
+      },
+      {
+        "abilities": [
+          "pollution"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "earthquake",
+          "thunderblitz",
+          "gunkshot",
+          "spikes"
+        ],
+        "level": 81
+      }
+    ]
+  },
+  "blobbospodoboo": {
+    "nicknames": [
+      "Podoboo"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "reckless"
+        ],
+        "items": [
+          "sitrusberry"
+        ],
+        "moves":[
+          "braindamage",
+          "headsmash"
+        ],
+        "lockedMoves": [
+          "flareblitz",
+          "floatyfall",
+          "morningsun"
+        ],
+        "level": 81
+      }
+    ]
+  },
+  "blobboslofi": {
+    "nicknames": [
+      "Lofi",
+      "Lofi",
+      "Lofi",
+      "Study Queen"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "brainpower"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "meme",
+          "focusblast"
+        ],
+        "lockedMoves": [
+          "hypervoice",
+          "thunderwave",
+          "calmmind"
+        ],
+        "level": 84
+      },
+      {
+        "abilities": [
+          "simple"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "hypervoice",
+          "focusblast",
+          "storedpower",
+          "calmmind"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "blobbosraptor": {
+    "nicknames": [
+      "Raptor"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "poisontouch",
+          "merciless"
+        ],
+        "items": [
+          "blacksludge",
+          "protectivepads"
+        ],
+        "lockedMoves": [
+          "toxiravage",
+          "closecombat",
+          "stompingtantrum",
+          "toxicspikes"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "blobbostengu": {
+    "nicknames": [
+      "Tengu"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "blademaster"
+        ],
+        "items": [
+          "expertbelt"
+        ],
+        "lockedMoves": [
+          "airslash",
+          "phasethrough",
+          "shadowball",
+          "secretsword"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "blobbosbrasil": {
+    "nicknames": [
+      "Brasil"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "dancer"
+        ],
+        "items": [
+          "whiteherb"
+        ],
+        "lockedMoves": [
+          "cherrybomb",
+          "karatechop",
+          "boomburst",
+          "toke"
+        ],
+        "level": 81
       }
     ]
   }
