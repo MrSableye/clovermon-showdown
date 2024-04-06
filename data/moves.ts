@@ -28692,7 +28692,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 60,
 		category: "Physical",
 		name: "Flurry Fist",
-		pp: 15,
+		pp: 5,
 		priority: 1,
 		flags: {protect: 1, mirror: 1, punch: 1, contact: 1},
 		secondary: null,
