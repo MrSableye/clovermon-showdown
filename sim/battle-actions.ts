@@ -1593,7 +1593,7 @@ export class BattleActions {
 		}
 
 		if (move.ohko) return target.maxhp;
-		if (move.damageCallback) return move.damageCallback.call(this.battle, source, target);
+		if (move.damageCallback) return move.damageCallback.call(this.battle, source, target, move);
 		if (move.damage === 'level') {
 			return source.level;
 		} else if (move.damage) {

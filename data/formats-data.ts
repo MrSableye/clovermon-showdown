@@ -9085,7 +9085,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	albergrab: {
+	albersnatch: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

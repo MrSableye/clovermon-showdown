@@ -8096,7 +8096,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	albergrab: {
+	albersnatch: {
 		inherit: true,
 		isNonstandard: "Past",
 	},

@@ -52,7 +52,7 @@
           "stoneedge",
           "substitute"
         ],
-        "level": 84
+        "level": 81
       },
       {
         "abilities": [
@@ -71,7 +71,7 @@
           "blobbybop",
           "doubleedge"
         ],
-        "level": 84
+        "level": 81
       }
     ]
   },
@@ -2684,7 +2684,7 @@
           "sludgebomb",
           "recover"
         ],
-        "level": 88
+        "level": 84
       }
     ]
   },
@@ -3291,7 +3291,7 @@
           "1000folds",
           "shiftgear"
         ],
-        "level": 88
+        "level": 84
       },
       {
         "abilities": [
@@ -3306,7 +3306,7 @@
           "rapidspin",
           "spikyshield"
         ],
-        "level": 88
+        "level": 84
       }
     ]
   },
@@ -3371,7 +3371,7 @@
       }
     ]
   },
-  "blobbosmandem": {
+  "blobbosmandm": {
     "nicknames": [
       "M&M"
     ],
@@ -4189,7 +4189,7 @@
           "icebeam",
           "scarystory"
         ],
-        "level": 81
+        "level": 78
       }
     ]
   },
@@ -6785,6 +6785,44 @@
           "calmmind"
         ],
         "level": 69
+      }
+    ]
+  },
+  "blobbosorangeisles": {
+    "nicknames": [
+      "Orange Island"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "terraform"
+        ],
+        "items": [
+          "terrainextender"
+        ],
+        "lockedMoves": [
+          "grassyglide",
+          "rockslide",
+          "expandingforce",
+          "risingvoltage"
+        ],
+        "level": 78
+      },
+      {
+        "abilities": [
+          "mimicry"
+        ],
+        "items": [
+          "leftovers",
+          "sitrusberry"
+        ],
+        "lockedMoves": [
+          "grassyglide",
+          "terradozer",
+          "terrainpulse",
+          "protect"
+        ],
+        "level": 78
       }
     ]
   }
