@@ -37214,6 +37214,19 @@ epipheror: {
 		eggGroups: ["Monster"],
 		gen: 8,
 	},
+	throbak: { // called GHOST in coperom. name changed because lol lmao /dt would DIE
+		num: -8275,
+		name: "THROBAK",
+		types: ["Dark", "Ground"],
+		gender: 'N',
+		baseStats: {hp: 1, atk: 80, def: 1, spa: 85, spd: 85, spe: 80},
+		abilities: {0: "Wonder Guard"},
+		heightm: 1,
+		weightkg: 45,
+		color: "Purple",
+		eggGroups: ["Amorphous", "Monster"],
+		gen: 1,
+	},
 	grandon: {
 		num: -8243,
 		name: "Grandon",
@@ -37325,7 +37338,7 @@ gyonin: {
 	gen: 8,
 },
 smologre: {
-	num: -8249,
+	num: -8274,
 	name: "Smologre",
 	types: ["Ice"],
 	gender: "F",

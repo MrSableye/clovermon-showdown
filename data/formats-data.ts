@@ -8937,6 +8937,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	throbak: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	grandon: {
 		tier: "Illegal",
 		isNonstandard: "Future",

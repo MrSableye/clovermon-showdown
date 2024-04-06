@@ -45,7 +45,7 @@
           "aurasphere",
           "uturn"
         ],
-        "level": 84
+        "level": 77
       }
     ]
   },
@@ -70,7 +70,7 @@
           "icepunch",
           "fakeout"
         ],
-        "level": 84
+        "level": 82
       },
       {
         "abilities": [
@@ -300,7 +300,7 @@
           "highjumpkick",
           "knockoff"
         ],
-        "level": 84
+        "level": 79
       },
       {
         "abilities": [
@@ -320,7 +320,7 @@
           "megakick",
           "quickattack"
         ],
-        "level": 84
+        "level": 79
       }
     ]
   },
@@ -352,7 +352,7 @@
           "fireblast",
           "icebeam"
         ],
-        "level": 84
+        "level": 81
       },
       {
         "abilities": [
@@ -370,7 +370,7 @@
           "bravebird",
           "ironhead"
         ],
-        "level": 84
+        "level": 81
       }
     ]
   },
@@ -400,7 +400,7 @@
           "rockslide",
           "partingshot"
         ],
-        "level": 80
+        "level": 79
       },
       {
         "abilities": [
@@ -415,7 +415,7 @@
           "earthquake",
           "swordsdance"
         ],
-        "level": 80
+        "level": 79
       }
     ]
   },
@@ -511,7 +511,7 @@
           "sludgewave",
           "icebeam"
         ],
-        "level": 84
+        "level": 80
       }
     ]
   },
@@ -540,7 +540,7 @@
           "fireblast",
           "thunder"
         ],
-        "level": 84
+        "level": 80
       },
       {
         "abilities": [
@@ -558,7 +558,7 @@
           "poltergeist",
           "bravebird"
         ],
-        "level": 84
+        "level": 80
       }
     ]
   },
@@ -587,7 +587,7 @@
           "barrier",
           "rest"
         ],
-        "level": 84
+        "level": 81
       }
     ]
   },
@@ -617,7 +617,7 @@
           "swordsdance",
           "roost"
         ],
-        "level": 82
+        "level": 79
       },
       {
         "abilities": [
@@ -632,7 +632,7 @@
           "roost",
           "voltswitch"
         ],
-        "level": 82
+        "level": 79
       }
     ]
   },
