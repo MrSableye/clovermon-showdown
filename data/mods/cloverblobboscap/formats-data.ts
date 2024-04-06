@@ -2828,7 +2828,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	blobbosarceus: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	blobbosalola: {
 		inherit: true,
@@ -3996,6 +3996,46 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobboschroma: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstingray: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosraptor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospodoboo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboslofi: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosyolked: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbrasil: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosjunkheap: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostengu: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
