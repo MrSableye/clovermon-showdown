@@ -1154,7 +1154,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		accuracy: 100,
 		basePower: 50,
 		category: "Physical",
-		isNonstandard: "Past",
 		name: "Power-Up Punch",
 		pp: 15,
 		priority: 0,
