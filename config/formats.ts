@@ -1109,6 +1109,7 @@ export const Formats: FormatList = [
 			'Species Clause',
 		],
 		banlist: ['AG', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard'],
+		unbanlist: ['Disbeary-Ebil + Tough Claws', 'Disbeary-Ebil + Dark Aura', 'THROBAK + Wonder Guard'],
 	},
 	{
 		name: '[Gen 8 Cope Only] OU',
@@ -1128,7 +1129,7 @@ export const Formats: FormatList = [
 			'Species Clause',
 		],
 		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean', 'Weathervein', 'Aurora Veil', 'Maximize', "Cope + King's Rock"],
-		unbanlist: ['Disbeary-Ebil + Tough Claws', 'Disbeary-Ebil + Dark Aura'],
+		unbanlist: ['Disbeary-Ebil + Tough Claws', 'Disbeary-Ebil + Dark Aura', 'THROBAK + Wonder Guard'],
 	},
 	{
 		name: '[Gen 8 Cope Only] Flipped',
