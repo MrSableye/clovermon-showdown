@@ -8937,6 +8937,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	throbak: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	grandon: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -9134,6 +9138,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	piurette: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	lumini: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	parademise: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sickelgraw: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	guertenity: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -10136,6 +10156,38 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	blobboschroma: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosstingray: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosraptor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospodoboo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboslofi: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosyolked: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosbrasil: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosjunkheap: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbostengu: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

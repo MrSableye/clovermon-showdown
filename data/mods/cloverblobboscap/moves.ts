@@ -1754,4 +1754,23 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	eggbomb: {
+		num: 121,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Egg Bomb",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
+		},
+		target: "normal",
+		type: "Normal",
+		contestType: "Cute",
+	},
 };

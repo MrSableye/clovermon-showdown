@@ -13286,7 +13286,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 				const damage = this.damage(pokemon.baseMaxhp / 16, pokemon, target);
 				if (damage) {
-					this.heal(damage, target, pokemon);
+					this.heal(damage, pokemon, pokemon);
 				}
 			}
 		},
