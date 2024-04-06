@@ -12811,7 +12811,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'peck',
 				'drillpeck',
 				'pluck',
-				'boltbeak',
 			];
 			if (peckMoves.includes(move.id)) {
 				this.debug('Peck your beak');
