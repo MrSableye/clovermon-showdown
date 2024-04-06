@@ -9137,6 +9137,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	lumini: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	parademise: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sickelgraw: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	guertenity: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	worldle: {
 		tier: "Illegal",
 		isNonstandard: "Future",
