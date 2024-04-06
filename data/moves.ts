@@ -28690,7 +28690,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 857,
 		accuracy: 100,
 		basePower: 60,
-		category: "Special",
+		category: "Physical",
 		name: "Flurry Fist",
 		pp: 15,
 		priority: 1,

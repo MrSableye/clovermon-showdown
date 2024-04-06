@@ -701,7 +701,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-
+	paralysisheal: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	brainwash: {
 		inherit: true,
 		isNonstandard: null,
