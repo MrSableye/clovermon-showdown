@@ -1772,5 +1772,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Normal",
 		contestType: "Cute",
+		desc: "Has a 100% chance to lower foe's defense by 1.",
 	},
 };
