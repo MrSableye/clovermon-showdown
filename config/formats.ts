@@ -186,7 +186,7 @@ export const Formats: FormatList = [
 			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: [
-			'Chancer', 'Semrust', 'Hosajack',
+			'Chancer', 'Semrust', 'Hosajack', 'Masdawg', 'Nonegative', 'Proboskito',
 			'Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard',
 		],
 	},
@@ -1241,6 +1241,15 @@ export const Formats: FormatList = [
 			'HP Percentage Mod',
 			'Cancel Mod'
 		],
+	},
+	{
+		name: '[Gen 8 Clover Blobbos CAP Only] FFA Random Battle',
+		mod: 'cloverblobboscap',
+		gameType: 'freeforall',
+		team: 'random',
+		tournamentShow: false,
+		rated: false,
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Showderp
