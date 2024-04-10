@@ -1133,7 +1133,7 @@ export const Formats: FormatList = [
 	},
 {
 	name: '[Gen 8 Cope Draft] Season 3',
-	mod: 'clovercap',
+	mod: 'copedraft',
 	ruleset: [
 		'Terastal Clause',
 		'Standard',
