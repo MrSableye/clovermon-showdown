@@ -1132,7 +1132,7 @@ export const Formats: FormatList = [
 		unbanlist: ['Disbeary-Ebil + Tough Claws', 'Disbeary-Ebil + Dark Aura'],
 	},
 {
-	name: '[Gen 8 Cope Draft] Season 3',
+	name: '[Gen 8 Cope Draft Only] Season 3',
 	mod: 'copedraft',
 	ruleset: [
 		'Terastal Clause',
