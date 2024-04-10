@@ -3366,6 +3366,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "PU",
 	},
+	larvadet: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	routja: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,

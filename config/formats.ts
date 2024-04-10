@@ -1131,6 +1131,17 @@ export const Formats: FormatList = [
 		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Fuck You', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean', 'Weathervein', 'Aurora Veil', 'Maximize', "Cope + King's Rock"],
 		unbanlist: ['Disbeary-Ebil + Tough Claws', 'Disbeary-Ebil + Dark Aura'],
 	},
+{
+	name: '[Gen 8 Cope Draft] Season 3',
+	mod: 'clovercap',
+	ruleset: [
+		'Terastal Clause',
+		'Standard',
+		'Dynamax Clause',
+		'Sketch Post-Gen 7 Moves',
+	],
+	banlist: ['Uber'],
+},
 	{
 		name: '[Gen 8 Cope Only] Flipped',
 		mod: 'cope',

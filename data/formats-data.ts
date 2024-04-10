@@ -9153,6 +9153,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	larvadet: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	routja: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	guertenity: {
 		tier: "Illegal",
 		isNonstandard: "Future",
