@@ -67,6 +67,17 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		],
 		gen: 8,
 	},
+	pantherk: {
+		inherit: true,
+		baseStats: {
+			hp: 85,
+			atk: 115,
+			def: 75,
+			spa: 105,
+			spd: 75,
+			spe: 75,
+		},
+	},
 	alberfectcell: {
 	   num: -8213,
 	   name: "Alberfect Cell",
