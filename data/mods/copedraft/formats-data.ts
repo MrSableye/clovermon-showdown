@@ -1670,6 +1670,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	isNonstandard: null,
 	tier: "OU",
 },
+    kakuna: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "NFE",
+},
+    beedrill: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+},
 /* Clovermons */
 grasshole: {
 	inherit: true,
@@ -3420,20 +3430,6 @@ manatorque: {
 	inherit: true,
 	tier: "NFE",
 	isNonstandard: null,
-},
-manatank: {
-	inherit: true,
-	tier: "OU",
-	isNonstandard: null,
-	randomBattleMoves: [
-		"milkdrink",
-		"liquidation",
-		"iciclecrash",
-		"earthquake",
-		"aquajet",
-		"spikes",
-	],
-	randomBattleLevel: 76,
 },
 anonymouse: {
 	inherit: true,
