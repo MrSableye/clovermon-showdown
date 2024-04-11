@@ -1664,12 +1664,32 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	/* Clover Unbans */
+	/* Clover Unbans and Bans */
     tentaquil: {
 	inherit: true,
 	isNonstandard: null,
 	tier: "OU",
-},
+	},
+	venowatt: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	manatank: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	chasumo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	smellox: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+    },
     kakuna: {
 	inherit: true,
 	isNonstandard: null,
