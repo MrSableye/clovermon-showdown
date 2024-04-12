@@ -10223,6 +10223,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	sombersequoia: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	finteki: {
 		tier: "Illegal",
 		isNonstandard: "Future",

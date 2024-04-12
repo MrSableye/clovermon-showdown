@@ -244,6 +244,192 @@
       }
     ]
   },
+  "qwilshark": {
+    "nicknames": [
+      "Qwilshark"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "swiftswim",
+          "poisonpoint",
+          "roughskin"
+        ],
+        "items": [
+          "choiceband"
+        ],
+        "moves": [
+          "sludgehammer",
+          "cbt",
+          "throatchop",
+          "explosion",
+          "haze",
+          "spikes"
+        ],
+        "lockedMoves": [
+          "torpedo"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "skylax": {
+    "nicknames": [
+      "Skylax"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "immunity",
+          "bulletproof",
+          "thickfat"
+        ],
+        "items": [
+          "normalgem"
+        ],
+        "moves": [
+          "highhorsepower",
+          "heatcrash",
+          "heavyslam",
+          "encore",
+          "darksestlariat",
+          "gastroacid"
+        ],
+        "lockedMoves": [
+          "bodyslam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ac0": {
+    "nicknames": [
+      "Ac0"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "wonderskin",
+          "superluck"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "selfdestruct",
+          "wrap",
+          "eggbomb",
+          "hypnosis"
+        ],
+        "lockedMoves": [
+          "superglitch"
+        ],
+        "level": 90
+      }
+    ]
+  },
+  "whitehand": {
+    "nicknames": [
+      "White Hand"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "souleater"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "brutal",
+          "paintsplit",
+          "ghastlyhand",
+          "shadowclaw"
+        ],
+        "lockedMoves": [
+          "fist"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "skeleton": {
+    "nicknames": [
+      "Skeleton"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "defeatist"
+        ],
+        "items": [
+          "icegem"
+        ],
+        "moves": [
+          "gasterblaster",
+          "bonemerang",
+          "blizzard",
+          "throatchop"
+        ],
+        
+        "level": 84
+      }
+    ]
+  },
+  "bonemadio": {
+    "nicknames": [
+      "Bonemadio"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "speedboost",
+          "skilllink",
+          "levitate"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "bonerush",
+          "glare",
+          "beatup",
+          "hypnosis"
+        ],
+        
+        "level": 84
+      }
+    ]
+  },
+  "kenchukuo": {
+    "nicknames": [
+      "Kenchukuo"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "guts"
+        ],
+        "items": [
+          "sharpbeak",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "cometpunch",
+          "shadowclaw",
+          "triplekick"
+        ],
+        "lockedMoves": [
+          "skyattack"
+        ],
+        "level": 72
+      }
+    ]
+  },
   "altarule": {
     "nicknames": [
       "Altarule"
@@ -482,6 +668,34 @@
         ],
         "lockedMoves": [
           "stringrush"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standobluenight": {
+    "nicknames": [
+      "BlueNight"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "infected"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "plague",
+          "virus",
+          "quarantinevirus",
+          "painsplit",
+          "taunt"
+
+        ],
+        "lockedMoves": [
+          "taintedwater"
         ],
         "level": 84
       }

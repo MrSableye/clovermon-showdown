@@ -4679,6 +4679,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	naturessadness: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	perfectcalculation: {
 		inherit: true,
 		isNonstandard: null,
