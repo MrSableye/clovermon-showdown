@@ -8660,6 +8660,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 100% chance to either sleep, freeze, flinch, or paralyze the target.",
 		shortDesc: "100% chance to sleep, freeze, flinch, or paralyze target.",
 	},
+	naturessadness: {
+		name: "Nature's Sadness",
+		desc: "Does damage equal to 1/2 target's current HP and starts Rain.",
+		shortDesc: "Does damage equal to 1/2 target's current HP and starts Rain.",
+	},
 	fullhouse: {
 		name: "Full House",
 		shortDesc: "Summons Inverse Room, Trick Room, Magic Room, and Wonder Room after hit.",

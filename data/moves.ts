@@ -30152,6 +30152,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 		isNonstandard: "Future",
 	},
+	naturessadness: {
+		num: 420993,
+		accuracy: 90,
+		basePower: 0,
+		category: "Special",
+		name: "Nature's Sadness",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		damageCallback(pokemon, target) {
+			return this.clampIntRange(Math.floor(target.getUndynamaxedHP() / 2), 1);
+		},
+		secondary: null,
+		target: "normal",
+		self: {
+			onHit(source) {
+				this.field.setWeather('raindance');
+			},
+		},
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
 	meteor: {
 		num: 1124,
 		accuracy: 100,
@@ -54001,8 +54023,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
-		self: {
-			volatileStatus: 'mustrecharge',
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		target: "normal",
 		type: "Light",
@@ -65026,6 +65050,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		pseudoWeather: 'mirrordimension',
+		
 		secondary: null,
 		target: "allySide",
 		type: "Glass",
@@ -66177,7 +66203,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'bleed',
+		},
 		target: "normal",
 		type: "Bone",
 		isNonstandard: "Future",
@@ -69040,12 +69069,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 	jealousy: {
 		num: 668784,
 		accuracy: 100,
-		basePower: 1,
+		basePower: 0,
 		category: "Special",
 		name: "Jealousy",
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target) {
+			let power = 60 + 20 * target.positiveBoosts();
+			if (power > 200) power = 200;
+			this.debug('BP: ' + power);
+			return power;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Heart",
@@ -72404,9 +72439,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-message', 'became immune to super effective moves!');
 			},
 			onFoeTryMove(target, source, move){
-				if (target.getMoveHitData(move).typeMod > 0) {
+				if (source.getMoveHitData(move).typeMod > 0) {
 				this.debug('Indestructible neutralize');
-				this.add('-immune', target, '[from] : Indestructible');
+				this.add('-immune', source, '[from] : Indestructible');
 				return null;
 				}
 			},
@@ -72429,6 +72464,26 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		volatileStatus: 'rubbershield',
+		condition: {
+			duration: 4,
+			onStart(target) {
+				this.add('-start', target, 'Rubber Shield');
+				this.add('-message', 'became immune to super effective moves and critical hits!');
+			},
+			onFoeTryMove(target, source, move){
+				if (source.getMoveHitData(move).typeMod > 0) {
+				this.debug('Indestructible neutralize');
+				this.add('-immune', source, '[from] : Indestructible');
+				return null;
+				}
+			},
+			onCriticalHit: false,
+			onResidualOrder: 18,
+			onEnd(target) {
+				this.add('-end', target, 'Indestructible');
+			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Rubber",
@@ -76305,7 +76360,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {},
-		secondary: null,
+		
+		
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spd: 1,
+				},
+			},
+		},
 		target: "all",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -84655,8 +84719,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		self: {
-			volatileStatus: 'mustrecharge',
+
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		secondary: null,
 		target: "normal",
