@@ -37221,6 +37221,7 @@ epipheror: {
 		gender: 'N',
 		baseStats: {hp: 1, atk: 80, def: 1, spa: 85, spd: 85, spe: 80},
 		abilities: {0: "Wonder Guard"},
+		maxHP: 1,
 		heightm: 1,
 		weightkg: 45,
 		color: "Purple",

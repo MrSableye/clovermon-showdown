@@ -22104,7 +22104,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	mop: {
 		num: 69033,
-		accuracy: 100,
+		accuracy: true,
 		basePower: 0,
 		category: "Status",
 		name: "Mop",
