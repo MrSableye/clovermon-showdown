@@ -1262,6 +1262,41 @@ export const Formats: FormatList = [
 		rated: false,
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
+
+	{
+		name: '[Gen 8 Clover Blobbos CAP Only] Pokebilities FFA Random Battle',
+		mod: 'cloverblobboscap',
+		gameType: 'freeforall',
+		team: 'random',
+		tournamentShow: false,
+		rated: false,
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
+		onBegin() {
+			for (const pokemon of this.getAllPokemon()) {
+				const ruleTable = this.dex.formats.getRuleTable(this.format);
+
+				pokemon.m.innates = Object.keys(pokemon.species.abilities)
+					.map(key => this.toID(pokemon.species.abilities[key as "0" | "1" | "H" | "S"]))
+					.filter(ability => !ruleTable.isBanned(`ability:${ability}`))
+					.filter(ability => ability !== pokemon.ability);
+			}
+		},
+		onSwitchInPriority: 2,
+		onSwitchIn(pokemon) {
+			if (pokemon.m.innates) {
+				for (const innate of pokemon.m.innates) {
+					pokemon.addVolatile("ability:" + innate, pokemon);
+				}
+			}
+		},
+		onAfterMega(pokemon) {
+			for (const innate of Object.keys(pokemon.volatiles).filter(i => i.startsWith('ability:'))) {
+				pokemon.removeVolatile(innate);
+			}
+			pokemon.m.innates = undefined;
+		},
+	},
+
 	///////////////////////////////////////////////////////////////////
 	// Showderp
 	///////////////////////////////////////////////////////////////////
