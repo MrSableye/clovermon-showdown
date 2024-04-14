@@ -261,11 +261,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 	},
-	ginocchio: {
-		inherit: true,
-		baseStats: {hp: 70, atk: 98, def: 65, spa: 105, spd: 62, spe: 125},
-		abilities: {0: "Overgrow", H: "Magic Guard", S: "Flower Gift"},
-	},
 	golisopod: {
 		inherit: true,
 		abilities: {0: "Emergency Exit", H: "Tough Claws", S: "Intimidate"},
