@@ -1408,12 +1408,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
-	    },
+	},
 	    explovine: {
 	    inherit: true,
 	    isNonstandard: null,
 	    tier: "OU",
-	    },
+	},
 	colombolt: {
 		inherit: true,
 		isNonstandard: null,

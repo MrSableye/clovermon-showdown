@@ -1129,18 +1129,19 @@ export const Formats: FormatList = [
 			'Species Clause',
 		],
 		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Fuck You', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean', 'Weathervein', 'Aurora Veil', 'Maximize', "Cope + King's Rock"],
-		unbanlist: ['Disbeary-Ebil + Tough Claws', 'Disbeary-Ebil + Dark Aura'],
+		unbanlist: ['THROBAK + Wonder Guard'],
 	},
 {
-	name: '[Gen 8 Cope Draft Only] Season 3',
-	mod: 'copedraft',
-	ruleset: [
-		'Terastal Clause',
-		'Standard',
-		'Dynamax Clause',
-		'Sketch Post-Gen 7 Moves',
-	],
-	banlist: ['Uber'],
+		name: '[Gen 8 Cope Draft Only] Season 3',
+		mod: 'copedraft',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Krackocean', 'Weathervein', 'Pixilate + Extreme Speed'],
+		unbanlist: ['THROBAK + Wonder Guard'],
 },
 	{
 		name: '[Gen 8 Cope Only] Flipped',
@@ -1161,8 +1162,8 @@ export const Formats: FormatList = [
 			'Species Clause',
 			'Flipped Mod',
 		],
-		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean', 'Illusion', 'Weathervein', 'Aurora Veil'],
-		unbanlist: ['Disbeary-Ebil + Tough Claws', 'Disbeary-Ebil + Dark Aura'],
+		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Krackocean', 'Weathervein'],
+		unbanlist: ['THROBAK + Wonder Guard'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Create-a-Blobbos (CAB)
