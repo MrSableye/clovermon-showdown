@@ -543,7 +543,7 @@ export const Formats: FormatList = [
 			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: [
-			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Stink Bomb',
 			 'Condoom + Unaware', 'Potarded + Unaware',
 		],
 	},
