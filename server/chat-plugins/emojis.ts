@@ -170,8 +170,7 @@ export const checkEmojiLevel = (user: User, room: Room): boolean => {
 };
 
 export const chatfilter: Chat.ChatFilter = (message, user, room) => {
-	if (!room) return message;
-	if (!checkEmojiLevel(user, room)) return message;
+	if (room && !checkEmojiLevel(user, room)) return message;
 	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN') && Object.keys(emojis).length > 0 && emojiRegex.test(message)) {
 		const prefix = message.startsWith('/html') ? '' : '/html ';
 		return prefix + escapeHTML(message).replace(emojiRegex, (match) => {
