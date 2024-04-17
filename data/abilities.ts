@@ -12059,11 +12059,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	paralysisheal: {
-		onDamagePriority: 1,
-		onDamage(damage, target, source, effect) {
-			if (effect.id === 'par') {
-				this.heal(target.baseMaxhp / 8);
-				return false;
+		onResidual(pokemon) {
+			if (pokemon.getStatus().id === 'par') {
+				this.heal(pokemon.baseMaxhp / 8);
 			}
 		},
 		name: "Paralysis Heal",
