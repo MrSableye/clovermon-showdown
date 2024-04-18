@@ -4558,7 +4558,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	dowster: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"spookout",
@@ -4648,7 +4648,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	florious: {
 		inherit: true,
-		tier: "RU",
+		tier: "RUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"darkpulse",
@@ -5075,7 +5075,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	chasumo: {
 		inherit: true,
-		tier: "UUBL",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"highjumpkick",
@@ -5411,7 +5411,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	lossolith: {
 		inherit: true,
-		tier: "OU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"wish",
@@ -5470,7 +5470,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	nonegative: {
 		inherit: true,
-		tier: "NFE",
+		tier: "NU",
 		isNonstandard: null,
 	},
 	nomaestro: {
@@ -5502,7 +5502,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		randomBattleMoves: [
 			"oblivionwing",
-			"nastyploy",
+			"nastyplot",
 			"roost",
 			"flamethrower",
 			"taunt",
@@ -5556,7 +5556,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	sonnanos: {
 		inherit: true,
-		tier: "RUBL",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"doubleironbash",
@@ -5719,7 +5719,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fontaba: {
 		inherit: true,
-		tier: "RU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"lightscreen",
@@ -5732,7 +5732,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fontabab: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 	},
 	fontabac: {
@@ -5777,7 +5777,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fontabaint: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 	},
 	fontabajp: {
@@ -5807,7 +5807,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fontaba5: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 	},
 	fontabas4s: {
@@ -6109,7 +6109,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	uwotto: {
 		inherit: true,
-		tier: "RU",
+		tier: "RUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"shiftgear",
@@ -6991,7 +6991,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	wantnaut: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"stealthrock",
