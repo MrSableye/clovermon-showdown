@@ -191,7 +191,7 @@ export const chatfilter: Chat.ChatFilter = (message, user, room) => {
 		});
 		newMessage = newMessage.replace(ITEM_ICON_REGEX, (match) => {
 			const itemName = match.slice(6, -1);
-			const item = Dex.types.get(itemName);
+			const item = Dex.items.get(itemName);
 			if (item.exists) {
 				return `<psicon item="${item.id}" />`
 			}
