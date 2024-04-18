@@ -176,8 +176,10 @@ export const chatfilter: Chat.ChatFilter = (message, user, room) => {
 	if (room && !checkEmojiLevel(user, room)) return message;
 	const prefix = message.startsWith('/html') ? '' : '/html ';
 	let newMessage = escapeHTML(message);
+	let anyEmoji = false;
 	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN')) {
 		newMessage = newMessage.replace(emojiRegex, (match) => {
+			anyEmoji = true;
 			const emojiName = match.slice(1, -1);
 			return createEmojiHtml(emojiName, emojis[emojiName]);
 		});
@@ -185,6 +187,7 @@ export const chatfilter: Chat.ChatFilter = (message, user, room) => {
 			const monName = match.slice(5, -1);
 			const mon = Dex.species.get(monName);
 			if (mon.exists) {
+				anyEmoji = true;
 				return `<psicon pokemon="${mon.id}" />`
 			}
 			return match;
@@ -193,6 +196,7 @@ export const chatfilter: Chat.ChatFilter = (message, user, room) => {
 			const itemName = match.slice(6, -1);
 			const item = Dex.items.get(itemName);
 			if (item.exists) {
+				anyEmoji = true;
 				return `<psicon item="${item.id}" />`
 			}
 			return match;
@@ -201,10 +205,14 @@ export const chatfilter: Chat.ChatFilter = (message, user, room) => {
 			const typeName = match.slice(6, -1);
 			const type = Dex.types.get(typeName);
 			if (type.exists) {
+				anyEmoji = true;
 				return `<psicon type="${type.id}" />`
 			}
 			return match;
 		});
 	}
-	return prefix + newMessage;
+	if (anyEmoji) {
+		return prefix + newMessage;
+	}
+	return message;
 };
