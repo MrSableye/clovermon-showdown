@@ -698,6 +698,7 @@ export const Aliases: {[alias: string]: string} = {
 	ashgren: "Greninja-Ash",
 	azu: "Azumarill",
 	bdrill: "Beedrill",
+	beanquaza: "Beayquaza",
 	bee: "Beedrill",
 	bigsharp: "Kingambit",
 	birdabomination: "Smawl",
