@@ -426,6 +426,10 @@ export const commands: Chat.ChatCommands = {
 			return this.errorReply('You are banned from using stickers.');
 		}
 
+		if (room && !checkEmojiLevel(user, room)) {
+			throw new Chat.ErrorMessage('You cannot use stickers in this room.');
+		}
+
 		this.checkChat();
 
 		const sticker = stickers[user.id];
@@ -1187,8 +1191,7 @@ export const loginfilter: Chat.LoginFilter = user => {
 const customEmojiRegex = /:!:/g;
 
 export const chatfilter: Chat.ChatFilter = (message, user, room) => {
-	if (!room) return message;
-	if (!checkEmojiLevel(user, room)) return message;
+	if (room && !checkEmojiLevel(user, room)) return message;
 	const emojiStatus = emojis[user.id];
 	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN') && emojiStatus && emojiStatus.emoji && customEmojiRegex.test(message)) {
 		const prefix = message.startsWith('/html') ? '' : '/html ';

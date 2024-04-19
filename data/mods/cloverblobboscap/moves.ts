@@ -1772,6 +1772,19 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Normal",
 		contestType: "Cute",
-		desc: "Has a 100% chance to lower foe's defense by 1.",
+		desc: "Has a 100% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "100% chance to lower the target's Defense by 1.",
+	},
+	landswrath: {
+		inherit: true,
+		pp: 5,
+		onModifyMove(move, pokemon) {
+			if (this.field.terrain && pokemon.isGrounded()) {
+				move.basePower *= 2;
+				this.debug('BP doubled in Terrain');
+			}
+		},
+		desc: "Power doubles if the user is grounded and a terrain is active.",
+		shortDesc: "User on terrain: power doubles.",
 	},
 };

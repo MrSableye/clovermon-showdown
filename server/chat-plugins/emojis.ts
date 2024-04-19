@@ -13,6 +13,9 @@ const EMOJI_SIZE = 32;
 const ERROR_NO_EMOJI_NAME = 'Specify an emoji name.';
 const ERROR_NO_EMOJI_URL = 'Specify an emoji URL.';
 const ERROR_NO_VALID_EMOJI_IMAGE = 'Specify a PNG or GIF image.';
+const POKEMON_ICON_REGEX = /:mon-([a-z0-9\s]+):/gi;
+const ITEM_ICON_REGEX = /:item-([a-z0-9\s]+):/gi;
+const TYPE_ICON_REGEX = /:type-([a-z0-9\s]+):/gi;
 
 type Emojis = Record<string, string>;
 
@@ -170,14 +173,46 @@ export const checkEmojiLevel = (user: User, room: Room): boolean => {
 };
 
 export const chatfilter: Chat.ChatFilter = (message, user, room) => {
-	if (!room) return message;
-	if (!checkEmojiLevel(user, room)) return message;
-	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN') && Object.keys(emojis).length > 0 && emojiRegex.test(message)) {
-		const prefix = message.startsWith('/html') ? '' : '/html ';
-		return prefix + escapeHTML(message).replace(emojiRegex, (match) => {
+	if (room && !checkEmojiLevel(user, room)) return message;
+	const prefix = message.startsWith('/html') ? '' : '/html ';
+	let newMessage = escapeHTML(message);
+	let anyEmoji = false;
+	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN')) {
+		newMessage = newMessage.replace(emojiRegex, (match) => {
+			anyEmoji = true;
 			const emojiName = match.slice(1, -1);
 			return createEmojiHtml(emojiName, emojis[emojiName]);
 		});
+		newMessage = newMessage.replace(POKEMON_ICON_REGEX, (match) => {
+			const monName = match.slice(5, -1);
+			const mon = Dex.species.get(monName);
+			if (mon.exists) {
+				anyEmoji = true;
+				return `<psicon pokemon="${mon.id}" />`
+			}
+			return match;
+		});
+		newMessage = newMessage.replace(ITEM_ICON_REGEX, (match) => {
+			const itemName = match.slice(6, -1);
+			const item = Dex.items.get(itemName);
+			if (item.exists) {
+				anyEmoji = true;
+				return `<psicon item="${item.id}" />`
+			}
+			return match;
+		});
+		newMessage = newMessage.replace(TYPE_ICON_REGEX, (match) => {
+			const typeName = match.slice(6, -1);
+			const type = Dex.types.get(typeName);
+			if (type.exists) {
+				anyEmoji = true;
+				return `<psicon type="${type.id}" />`
+			}
+			return match;
+		});
+	}
+	if (anyEmoji) {
+		return prefix + newMessage;
 	}
 	return message;
 };

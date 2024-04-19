@@ -3,6 +3,7 @@
 import {FS} from '../../lib';
 import {Punishments} from '../punishments';
 import {downloadImageWithVerification} from '../../lib/image';
+import { checkEmojiLevel } from './emojis';
 
 const MAX_STICKER_SIZE = 320;
 const STICKER_SIZE = 160;
@@ -75,6 +76,10 @@ export const commands: Chat.ChatCommands = {
 	sticker(target, room, user) {
 		if (Punishments.hasPunishType(user.id, 'EMOJIBAN')) {
 			throw new Chat.ErrorMessage('You are banned from using stickers.');
+		}
+
+		if (room && !checkEmojiLevel(user, room)) {
+			throw new Chat.ErrorMessage('You cannot use stickers in this room.');
 		}
 
 		this.checkChat();

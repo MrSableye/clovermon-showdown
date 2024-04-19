@@ -99,4 +99,21 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 80,
 		},
 	},
+	venowatt: {
+		inherit: true,
+		abilities: {
+			0: "Illuminate",
+			1: "Liquid Ooze",
+			H: "Swarm",
+			S: "Levitate",
+		},
+		baseStats: {
+			hp: 85,
+			atk: 70,
+			def: 115,
+			spa: 110,
+			spd: 85,
+			spe: 75,
+		},
+	},
 };

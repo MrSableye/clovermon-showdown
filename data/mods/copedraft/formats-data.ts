@@ -1408,12 +1408,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
-	    },
+	},
 	    explovine: {
 	    inherit: true,
 	    isNonstandard: null,
 	    tier: "OU",
-	    },
+	},
 	colombolt: {
 		inherit: true,
 		isNonstandard: null,
@@ -1666,9 +1666,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	/* Clover Unbans and Bans */
     tentaquil: {
-	inherit: true,
-	isNonstandard: null,
-	tier: "OU",
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	venowatt: {
 		inherit: true,
@@ -1680,26 +1680,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	},
-	chasumo: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "Uber",
-	},
-	smellox: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "Uber",
-    },
     kakuna: {
-	inherit: true,
-	isNonstandard: null,
-	tier: "NFE",
-},
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
     beedrill: {
-	inherit: true,
-	isNonstandard: null,
-	tier: "OU",
-},
+		inherit: true,
+		isNonstandard: null,
+		tier: "NU",
+	},
 /* Clovermons */
 grasshole: {
 	inherit: true,
@@ -5102,6 +5092,151 @@ deisnutz: {
 		"softboiled",
 	],
 	randomBattleLevel: 84,
+},
+fontabab: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabac: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabaco: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabad: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabaf: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabafa: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabafit: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabag: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabah: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabaint: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabajp: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabak: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabaout: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabapol: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabar9k: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontaba5: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabas4s: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabasoc: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabasp: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabatrv: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabatv: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabav: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabavg: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabavp: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabavr: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabax: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+fontabaz: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
+chasumo: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+},
+smellox: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
 },
 	/* CAP Megas */
 	oogabugamega: {
