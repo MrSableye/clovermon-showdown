@@ -115,10 +115,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	berserkgene: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	moluganion: {
 		inherit: true,
 		onAfterSetStatusPriority: -1,
