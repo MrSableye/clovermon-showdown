@@ -27389,8 +27389,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	xenobeam: {
 		num: 487,
-		accuracy: 110,
-		basePower: 95,
+		accuracy: 95,
+		basePower: 110,
 		category: "Special",
 		name: "Xenobeam",
 		pp: 5,
@@ -33198,10 +33198,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	scryingwish: {
 		accuracy: 100,
-		basePower: 140,
+		basePower: 200,
 		category: "Special",
 		name: "Scrying Wish",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {allyanim: 1, futuremove: 1},
 		ignoreImmunity: true,
@@ -33215,7 +33215,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					id: 'scryingwish',
 					name: "Scrying Wish",
 					accuracy: 100,
-					basePower: 140,
+					basePower: 200,
 					category: "Special",
 					priority: 0,
 					flags: {allyanim: 1, futuremove: 1},
@@ -34125,7 +34125,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	mitosismash: {
 		num: 813,
 		accuracy: 90,
-		basePower: 65,
+		basePower: 85,
 		basePowerCallback(pokemon, target, move) {
 			return 13 * move.hit;
 		},
