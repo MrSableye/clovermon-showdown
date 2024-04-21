@@ -26576,7 +26576,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	chernoboil: {
 		accuracy: 100,
-		basePower: 26,
+		basePower: 31,
 		category: "Special",
 		name: "Chernoboil",
 		pp: 15,
@@ -26796,7 +26796,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	nuclearmeltdown: {
 		num: 557,
 		accuracy: 95,
-		basePower: 37,
+		basePower: 41,
 		category: "Physical",
 		name: "Nuclear Meltdown",
 		pp: 5,
@@ -26957,13 +26957,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 	blobblast: {
 		num: 66,
 		accuracy: 80,
-		basePower: 110,
+		basePower: 150,
 		category: "Special",
 		name: "Blobblast",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		recoil: [1, 4],
+		recoil: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -27389,11 +27389,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	xenobeam: {
 		num: 487,
-		accuracy: 100,
-		basePower: 90,
+		accuracy: 110,
+		basePower: 95,
 		category: "Special",
 		name: "Xenobeam",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 		secondary: {
@@ -28405,7 +28405,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Sly Squall",
-		pp: 15,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, wind: 1},
 		beforeMoveCallback(source, target, move) {
@@ -28513,7 +28513,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Physical",
 		name: "Trap Card",
 		pp: 10,
-		priority: 0,
+		priority: -3,
 		flags: {protect: 1, mirror: 1},
 		priorityChargeCallback() {},
 		onTryMove() {},
@@ -28542,7 +28542,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "allAdjacentFoes",
+		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
 		contestType: "Cute",
@@ -28608,7 +28608,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	heroiconslaught: {
 		accuracy: true,
-		basePower: 90,
+		basePower: 50,
 		category: "Physical",
 		name: "Heroic Onslaught",
 		multihit: 2,
@@ -28670,8 +28670,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	rawvenom: {
 		num: 403,
-		accuracy: 100,
-		basePower: 100,
+		accuracy: 95,
+		basePower: 85,
 		category: "Special",
 		name: "Raw Venom",
 		pp: 10,
@@ -29555,7 +29555,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1, heal: 1},
-		heal: [4, 5],
+		heal: [5, 5],
 		onHit(target) {
 			if (!target.volatiles['dynamax']) {
 				target.addVolatile('taunt');
@@ -29669,10 +29669,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	tridentcharge: {
 		accuracy: 100,
-		basePower: 80,
+		basePower: 70,
 		category: "Physical",
 		name: "Trident Charge",
-		pp: 20,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: {
@@ -33005,10 +33005,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	banana: {
 		accuracy: 100,
-		basePower: 40,
+		basePower: 5,
 		category: "Physical",
 		name: "Banana",
-		pp: 35,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onHit(target, source) {
