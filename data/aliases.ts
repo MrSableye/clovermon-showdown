@@ -788,6 +788,7 @@ export const Aliases: {[alias: string]: string} = {
 	mandi: "Mandibuzz",
 	mence: "Salamence",
 	milo: "Milotic",
+	mr128: "Junkgeist",
 	molagay: "Noxilium",
 	morfentshusbando: "Gengar",
 	naga: "Naganadel",
@@ -2163,7 +2164,10 @@ export const Aliases: {[alias: string]: string} = {
 	bcircus: "Blobbos-Circus",
 	bpterois: "Blobbos-Pterois",
 	blionfish: "Blobbos-Pterois",
-
+	bnymph: "Blobbos-Nymph",
+	bcolony: "Blobbos-Colony",
+	bcolonyc: "Blobbos-Colony-Colonized:,
+	
 	// Board Power Aliases
 	bpa: "Board Power (/a/)",
 	bp5: "Board Power (/5/)",
