@@ -709,6 +709,7 @@ export const Aliases: {[alias: string]: string} = {
 	bull: "Tauros",
 	bulu: "Tapu Bulu",
 	bundlechan: "Iron Bundle",
+	c3llhasaproblempleasecontactherimmedietlyasitsserious: "Yanture",
 	cahd: "Chasumo",
 	camel: "Camerupt",
 	cathy: "Trevenant",
@@ -2164,9 +2165,7 @@ export const Aliases: {[alias: string]: string} = {
 	bcircus: "Blobbos-Circus",
 	bpterois: "Blobbos-Pterois",
 	blionfish: "Blobbos-Pterois",
-	bnymph: "Blobbos-Nymph",
-	bcolony: "Blobbos-Colony",
-	bcolonyc: "Blobbos-Colony-Colonized:,
+	
 	
 	// Board Power Aliases
 	bpa: "Board Power (/a/)",
