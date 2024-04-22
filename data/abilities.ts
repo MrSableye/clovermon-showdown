@@ -7190,6 +7190,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'prismaticlaser',
 				'beamblade',
 				'genesisbeam',
+				'spectresabre',
 			];
 			if (beamMoves.includes(move.id)) {
 				this.debug('Beam Boost boost');
@@ -8952,6 +8953,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'lunge',
 				'splishysplash',
 				'lavadapt',
+				'bellyflop',
 			];
 			if (hoppingMoves.includes(move.id)) {
 				this.debug('Mass Hopping boost');
@@ -9131,6 +9133,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.field.setTerrain('grassyterrain');
 			} else if (move.type === 'Electric') {
 				this.field.setTerrain('electricterrain');
+			} else if (move.type === 'Ice') {
+				this.field.setTerrain('frostyterrain');
 			} else if (move.type === 'Psychic') {
 				this.field.setTerrain('psychicterrain');
 			} else if (move.type === 'Fairy') {
@@ -9165,6 +9169,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				switch (this.field.terrain) {
 				case 'electricterrain':
 					newType = 'Electric';
+					break;
+				case 'frostyterrain':
+					newType = 'Ice';
 					break;
 				case 'grassyterrain':
 					newType = 'Grass';
