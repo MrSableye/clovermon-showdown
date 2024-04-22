@@ -8493,7 +8493,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	blobblast: {
 		name: "Blobblast",
-		shortDesc: "Has 1/4 recoil.",
+		shortDesc: "Has 1/2 recoil.",
 	},
 	floofandpoof: {
 		name: "Floof and Poof",
@@ -8742,7 +8742,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	swamp: {
 		name: "Swamp",
-		shortDesc: "For 4 turns, foes' Speed is reduced by 20%.",
+		shortDesc: "For 4 turns, foes' Speed is reduced by 50%.",
 		start: "  A swamp enveloped [TEAM]!",
 		end: "  The swamp around [TEAM] disappeared!",
 	},
@@ -8768,7 +8768,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	trapcard: {
 		name: "Trap Card",
-		shortDesc: "Does double damage and attracts the foe if hit by a physical attack.",
+		shortDesc: "Does double damage and attracts the foe if hit by a physical attack. Usually goes last.",
 
 		start: "  [POKEMON] set a trap card!",
 		prepare: "  [POKEMON] set a trap card!",
@@ -8857,7 +8857,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	regularattack: {
 		name: "Regular Attack",
-		shortDesc: "Just a regular attack.",
+		shortDesc: "Just a regular attack that has no additional effect.",
 	},
 	laserbeam: {
 		name: "Laser Beam",
@@ -8915,7 +8915,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	pobybbolb: {
 		name: "Pob Ybbolb",
-		shortDesc: "Raises accuracy when this move lands.",
+		shortDesc: "Raises accuracy by 1 when this move lands.",
 	},
 	eronsrepus: {
 		name: "Erons Repus",
@@ -8987,8 +8987,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	holdit: {
 		name: "Hold It!",
-		desc: "The user restores 14/5 of its maximum HP, rounded half up. Taunts user.",
-		shortDesc: "Heals the user by 80% of its max HP. Taunts User.",
+		desc: "The user restores 100% of its maximum HP. Taunts user.",
+		shortDesc: "Heals the user by 100% of its max HP. Taunts User.",
 	},
 	objection: {
 		name: "Objection!",
@@ -9029,7 +9029,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	bugout: {
 		name: "Bug Out",
-		shortDesc: "Forces the foe to switch out.",
+		shortDesc: "Forces the foe to switch out upon hitting.",
 	},
 	gentworrible: {
 		name: "Gentworrible",
@@ -9194,7 +9194,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Hits twice. Sets up Grassy Terrain.",
 	},
 	shadowbox: {
-		name: "Mindbreak",
+		name: "Shadowbox",
 		shortDesc: "Supereffective on Ghost.",
 	},
 	mindbreak: {
@@ -9230,7 +9230,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	needlepulse: {
 		name: "Needle Pulse",
-		desc: "Physical if Atk>Sp.Atk.",
+		desc: "Physical if Atk > Sp.Atk.",
 	},
 	trashtalk: {
 		name: "Trash Talk",
@@ -9514,7 +9514,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	banana: {
 		name: "Banana",
-		shortDesc: "Fuck you figure it out",
+		shortDesc: "Upon this moves use, 30+ different effects can occur.",
 	},
 	surpriseattack: {
 		name: "Surprise",
@@ -9526,7 +9526,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	scryingwish: {
 		name: "Scrying Wish",
-		shortDesc: "Hits two turns after being used.",
+		shortDesc: "Hits three turns after being used.",
 	},
 	perfectcalculation: {
 		name: "Perfect Calculation",
