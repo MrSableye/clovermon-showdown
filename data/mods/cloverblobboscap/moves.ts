@@ -1210,10 +1210,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	blackfire: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	bugout: {
 		inherit: true,
 		isNonstandard: null,
@@ -1264,10 +1260,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Steel",
 	},
 	strifedicekind: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	cumblast: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1522,6 +1514,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Steel",
 		contestType: "Beautiful",
+		desc: "Has a 20% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "20% chance to lower the target's Spdef. by 1.",
 	},
 	rockslide: {
 		num: 157,
@@ -1589,6 +1583,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Fairy",
 		contestType: "Beautiful",
+		desc: "Has a 20% chance of lowering special attack upon hit",
+		shortDesc: "20% chance to lower the target's Spatk. by 1.",
 	},
 	spore: {
 		num: 147,
@@ -1693,6 +1689,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Fairy",
 		contestType: "Cute",
+		desc: "The user heals for 1/2 of how much damage dealt to the opponent.",
+		shortDesc: "Heals for 50% of damage dealt to the opponent.",
 	},
 	rocketboost: {
 		inherit: true,
