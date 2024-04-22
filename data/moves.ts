@@ -27417,7 +27417,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	infectiouswheeze: {
 		num: 594,
 		accuracy: 100,
-		basePower: 25,
+		basePower: 100,
 		onModifyType(move, pokemon) {
 			if (pokemon.species.name === 'Blobbos-Zombie') {
 				move.type = 'Ghost';
@@ -27427,10 +27427,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		category: "Special",
 		name: "Infectious Wheeze",
-		pp: 20,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -27478,7 +27477,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Shadowban",
-		pp: 20,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
 		volatileStatus: 'taunt',
@@ -33147,7 +33146,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				break;
 			}
 			// You can use Any of the Dance moves.
-			// You can give any of the 18 types+Nuclear, Plastic and glass on your opponent or yourself.
+			// You can give any of the 18 types.
 			// You can revive an ally
 			// You can swap hazards with the opponent.
 			// You can use any sleeping move
@@ -34066,12 +34065,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	unload: {
 		num: 131,
-		accuracy: 100,
-		basePower: 25,
+		accuracy: 90,
+		basePower: 20,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Unload",
-		pp: 15,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		multihit: [2, 5],
