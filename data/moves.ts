@@ -23297,7 +23297,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {mirror: 1},
 		breaksProtect: true,
 		infiltrates: true,
-		onTryHit(source, target, move) {
+		onTryHit(target, source, move) {
 			if (target.hp * 2 > target.maxhp) return false;
 			move.ohko = true;
 		},
