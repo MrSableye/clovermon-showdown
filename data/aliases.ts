@@ -688,6 +688,7 @@ export const Aliases: {[alias: string]: string} = {
 	wp: "Weakness Policy",
 
 	// pokemon
+	abbi: "Qrakenmark",
 	aboma: "Abomasnow",
 	aegi: "Aegislash",
 	aegiblade: "Aegislash-Blade",
@@ -771,6 +772,7 @@ export const Aliases: {[alias: string]: string} = {
 	gigone: "Regigigone",
 	gino: "Ginocchio",
 	gira: "Giratina",
+	gory: "Goryannus",
 	gren: "Greninja",
 	gross: "Metagross",
 	gyara: "Gyarados",
@@ -866,6 +868,7 @@ export const Aliases: {[alias: string]: string} = {
 	smogon: "Koffing",
 	smogonbird: "Talonflame",
 	somethingiswrong: "The Forest",
+	smox: "Smoxilon",
 	snips: "Drapion",
 	spenj: "Spenjbab",
 	spunch: "Spenjbab",
