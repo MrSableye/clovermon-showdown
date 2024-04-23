@@ -29915,7 +29915,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	strifedicekind: {
 		name: "Strife: Dicekind",
 		basePower: 18,
-		accuracy: 108,
+		accuracy: 98,
 		multihit: 8,
 		pp: 8,
 		noPPBoosts: true,
@@ -30780,31 +30780,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
-		},
-		basePowerCallback(pokemon, target) {
-			const targetWeight = target.getWeight();
-			const pokemonWeight = pokemon.getWeight();
-			let bp;
-			if (pokemonWeight >= targetWeight * 5) {
-				bp = 120;
-			} else if (pokemonWeight >= targetWeight * 4) {
-				bp = 100;
-			} else if (pokemonWeight >= targetWeight * 3) {
-				bp = 80;
-			} else if (pokemonWeight >= targetWeight * 2) {
-				bp = 60;
-			} else {
-				bp = 40;
-			}
-			this.debug('BP: ' + bp);
-			return bp;
-		},
-		onTryHit(target, pokemon, move) {
-			if (target.volatiles['dynamax']) {
-				this.add('-fail', pokemon, 'Dynamax');
-				this.attrLastMove('[still]');
-				return null;
-			}
 		},
 		secondary: null,
 		target: "normal",
