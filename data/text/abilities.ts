@@ -3459,6 +3459,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Multiversal",
 		desc: "This Pokemon's boosts, volatile conditions, and status are synced among all Pokemon with Multiversal among all battles. Wackiness will ensue.",
 	},
+	warden: {
+		name: "warden",
+		desc: "The user prevents all opposing Pokemon from using any moves that the user also knows as long as the user remains active.",
+		shortDesc: "No foe can use any move known by the user.",
+
+		start: "  [POKEMON] sealed any moves its target shares with it!",
+		cant: "[POKEMON] can't use its sealed [MOVE]!",
+	},
 	medusascurse: {
 		name: "Medusa's Curse",
 		shortDesc: "Sets all other Pokemon to Rock-type on switch-in.",
