@@ -13336,6 +13336,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		isNonstandard: "Future",
 	},
+	carbonated: {
+		name: "Carbonated",
+		onStart(pokemon) {
+			this.effectState.turns = 2;
+			this.boost({atk: 1, spa: 1}, pokemon);
+		},
+		onResidual(pokemon) {
+			if (this.effectState.turns === 0) {
+				this.boost({atk: -1, spa: -1}, pokemon);
+				delete this.effectState.turns;
+			} else if (pokemon.activeTurns) {
+				this.effectState.turns--;
+			}
+		},
+		isNonstandard: "Future",
+	},
 	cellconstruct: {
 		onResidualOrder: 29,
 		onResidual(pokemon) {
