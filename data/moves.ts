@@ -23297,31 +23297,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {mirror: 1},
 		breaksProtect: true,
 		infiltrates: true,
-		/* lol */
-		damageCallback(pokemon, target) {
-			if (target.hp * 2 <= target.maxhp) {
-				return this.clampIntRange(Math.floor(target.getUndynamaxedHP() * 999), 1);
-			}
+		ohko: true,
+		onTryHit(source, target) {
+			if (target.hp * 2 > target.maxhp) return false;
 		},
 		onHit(target, source) {
-			if (target.hp * 2 <= target.maxhp) {
-				this.heal(Math.ceil(source.maxhp), source);
-				this.add('-activate', source, 'move: Soul Crusher');
-				const stats: BoostID[] = [];
-				let stat: BoostID;
-				for (stat in source.boosts) {
-					if (stat !== 'accuracy' && stat !== 'evasion' && source.boosts[stat] < 6) {
-						stats.push(stat);
-					}
+			this.heal(Math.ceil(source.maxhp), source);
+			this.add('-activate', source, 'move: Soul Crusher');
+			const stats: BoostID[] = [];
+			let stat: BoostID;
+			for (stat in source.boosts) {
+				if (stat !== 'accuracy' && stat !== 'evasion' && source.boosts[stat] < 6) {
+					stats.push(stat);
 				}
-				if (stats.length) {
-					if (target.hp * 2 <= target.maxhp) {
-					}
-					const randomStat = this.sample(stats);
-					const boost: SparseBoostsTable = {};
-					boost[randomStat] = 2;
-					this.boost(boost, source);
+			}
+			if (stats.length) {
+				if (target.hp * 2 <= target.maxhp) {
 				}
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = 2;
+				this.boost(boost, source);
 			}
 		},
 		secondary: null,
