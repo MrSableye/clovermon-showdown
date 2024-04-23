@@ -8306,7 +8306,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	flakcannon: {
 		name: "Flak Cannon",
-		shortDesc: "Removes the users held item. Always crits. Does not work with Steel Gem.",
+		shortDesc: "Requires held item to use. Removes user's held item. Always crits.",
 
 		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",
 	},
