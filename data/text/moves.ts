@@ -9268,7 +9268,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	justmonikat: {
 		name: "Just Monikat",
-		shortDesc: "Upon hit, turns the foe into the pokemon Monikat, lowers their Speed by 1 and 'traps'.",
+		shortDesc: "Upon hit, turns the foe into the Pokemon Monikat, trapping them and lowering their Speed by 1.",
 	},
 	acidicrainfall: {
 		name: "Acidic Rainfall",
