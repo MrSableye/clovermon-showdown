@@ -7902,7 +7902,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	wingsofcorrection: {
 		name: "Wings Of Correction",
 		desc: "If this move is successful the effects of Reflect, Light Screen, Aurora Veil, Safeguard, Mist, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the target's side, and the effects of Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the user's side. If there is a terrain active and this move is successful, the terrain will be cleared. Has -6 priority and switches the opponent out to a random member.",
-		shortDesc: "Clears terrain and hazards, switches out opponent.",
+		shortDesc: "Clears terrain, weather and hazards. Switches out opponent.",
 	},
 	brutalpunishment: {
 		name: "Brutal Punishment",
@@ -8306,7 +8306,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	flakcannon: {
 		name: "Flak Cannon",
-		shortDesc: "Removes user's held item, always crits.",
+		shortDesc: "Removes the users held item. Always crits. Does not work with Steel Gem.",
 
 		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",
 	},
@@ -8441,7 +8441,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	heavenpierce: {
 		name: "Heaven Pierce",
-		shortDesc: "Always crits, breaks screens, ignores everything.",
+		shortDesc: "Always crits, breaks screens, and ignores abilities.",
 	},
 	sandysnore: {
 		name: "Sandy Snore",
@@ -8449,7 +8449,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	amogus: {
 		name: "Amogus",
-		shortDesc: "Disguises as 6th teammate's attack, how sus.",
+		shortDesc: "Disguises as 6th teammate's first slotted attack. How Suspicious.",
 	},
 	ninjutsu: {
 		name: "Ninjutsu",
@@ -8457,7 +8457,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	cuttingwaves: {
 		name: "Cutting Waves",
-		shortDesc: "Summons Strong Winds after this move hits; for 5 turns.",
+		shortDesc: "Summons Strong Winds after this move hits for 5 turns.",
 	},
 	groundbomb: {
 		name: "Ground Bomb",
@@ -8489,7 +8489,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	skulltoss: {
 		name: "Skull Toss",
-		shortDesc: "Raises Speed by 1, but only once.",
+		shortDesc: "Raises Speed by 1 if this move doesn't KO, but only once.",
 	},
 	blobblast: {
 		name: "Blobblast",
@@ -8501,7 +8501,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sunburst: {
 		name: "Sunburst",
-		shortDesc: "Summons Sun. 10% chance to Burn.",
+		shortDesc: "Summons Sun upon hit. 10% chance to Burn.",
 	},
 	deepfry: {
 		name: "Deep Fry",
@@ -8540,11 +8540,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sereneshockwave: {
 		name: "Serene Shockwave",
-		shortDesc: "Cures teammates of their status effects.",
+		shortDesc: "Cures teammates of their status effects upon hitting.",
 	},
 	hypersomnia: {
 		name: "Hypersomnia",
-		shortDesc: "Makes user ability Bad Dreams, opponent Lethargic and gives Nightmare.",
+		shortDesc: "Makes user ability Bad Dreams, opponent Lethargic and gives the Nightmare effect.",
 	},
 	xenobeam: {
 		name: "Xenobeam",
@@ -8606,7 +8606,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	highjumpsaw: {
 		name: "High Jump Saw",
-		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw. Dual Type Steel.",
+		shortDesc: "Combines Steel in its type effectiveness.",
 	},
 	stingingrage: {
 		name: "Stinging Rage",
@@ -8756,11 +8756,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Rebuild",
 		shortDesc: "Charges, then restores 2/3 of its maximum HP, and cures its burn, poison, or paralysis.",
 
-		prepare: "[POKEMON] is reforming itself!",
+		prepare: "[POKEMON] is rebuilding itself!",
 	},
 	bigshot: {
 		name: "Big Shot",
-		shortDesc: "High critical hit ratio, 30% chance to paralyze.Favorite move 1997",
+		shortDesc: "High critical hit ratio, 30% chance to paralyze. Favorite move 1997.",
 	},
 	foolsgambit: {
 		name: "Fool's Gambit",
@@ -8800,11 +8800,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	icestorm: {
 		name: "Ice Storm",
-		shortDesc: "Summons Hail. 10% chance to freeze.",
+		shortDesc: "Summons Hail upon it. 10% chance to freeze.",
 	},
 	downpour: {
 		name: "Downpour",
-		shortDesc: "Summons Rain.",
+		shortDesc: "Summons Rain upon hit.",
 	},
 	slysquall: {
 		name: "Sly Squall",
@@ -9191,7 +9191,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	cherrynobyl: {
 		name: "Cherrynobyl",
-		shortDesc: "Hits twice. Sets up Grassy Terrain.",
+		shortDesc: "Hits twice. Sets up Grassy Terrain. Has 1/3 Recoil per hit.",
 	},
 	shadowbox: {
 		name: "Shadowbox",
@@ -9265,6 +9265,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	alberspin: {
 		name: "Alber Spin",
 		shortDesc: "Frees the user from hazards/bind/Leech Seed.",
+	},
+	justmonikat: {
+		name: "Just Monikat",
+		shortDesc: "Upon hit, turns the foe into the pokemon Monikat, lowers their Speed by 1 and 'traps'.",
 	},
 	acidicrainfall: {
 		name: "Acidic Rainfall",
