@@ -1745,6 +1745,27 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	hydropump: {
+		num: 56,
+		accuracy: 85,
+		basePower: 110,
+		category: "Special",
+		name: "Hydro Pump",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "normal",
+		type: "Water",
+		contestType: "Beautiful",
+		desc: "Has a 10% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "10% chance to lower the target's Speed by 1.",
+	},
 		focusblast: {
 		inherit: true,
 		accuracy: 85,
