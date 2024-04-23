@@ -8306,7 +8306,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	flakcannon: {
 		name: "Flak Cannon",
-		shortDesc: "Removes the users held item. Always crits. Does not work with Steel Gem.",
+		shortDesc: "Requires held item to use. Removes user's held item. Always crits.",
 
 		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",
 	},
@@ -9268,7 +9268,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	justmonikat: {
 		name: "Just Monikat",
-		shortDesc: "Upon hit, turns the foe into the pokemon Monikat, lowers their Speed by 1 and 'traps'.",
+		shortDesc: "Upon hit, turns the foe into the Pokemon Monikat, trapping them and lowering their Speed by 1.",
 	},
 	acidicrainfall: {
 		name: "Acidic Rainfall",
