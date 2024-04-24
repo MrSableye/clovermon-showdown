@@ -33178,7 +33178,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onTry(source, target) {
 			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
 			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
-				duration: 3,
+				duration: 4,
 				move: 'scryingwish',
 				source: source,
 				moveData: {
