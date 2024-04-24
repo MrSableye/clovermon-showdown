@@ -2981,7 +2981,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	aphenphosmphobia: {
 		name: "Aphenphosmphobia",
-		shortDesc: "This Pokemon receives 2x damage from contact attacks.",
+		shortDesc: "This Pokemon receives 2x damage from contact attacks. The accuracy of attacks against this Pokemon is 0.9x.",
 	},
 	chiralnetwork: {
 		name: "Chiral Network",

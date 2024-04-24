@@ -9232,6 +9232,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(2);
 			}
 		},
+		onModifyAccuracyPriority: -2,
+		onModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			this.debug('aphenphosmphobia - decreasing accuracy');
+			return this.chainModify([3686, 4096]);
+		},
 		isNonstandard: "Future",
 	},
 	chiralnetwork: {
