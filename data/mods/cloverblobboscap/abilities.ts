@@ -251,6 +251,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				case 'plasticterrain':
 					newType = 'Plastic';
 					break;
+				case 'frostyterrain': 
+						newType = 'Ice';
 				}
 				if (!newType || pokemon.getTypes().join() === newType || !pokemon.setType(newType)) return;
 				this.add('-start', pokemon, 'typechange', newType, '[from] ability: Mimicry');
@@ -342,18 +344,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	muhmentum: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	plasticsurge: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	turbine: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	balance: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -661,6 +651,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+		regenerator: {
+		inherit: true,
+		isNonstandard: null,
+		onSwitchOut(pokemon) {
+			pokemon.heal(pokemon.baseMaxhp / 5);
+		},
 	fireaffinity: {
 		inherit: true,
 		isNonstandard: null,
@@ -742,6 +738,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	carbonated: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mindseye: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hospitality: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	toxicchain: {
 		inherit: true,
 		isNonstandard: null,
 	},
