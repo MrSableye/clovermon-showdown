@@ -7972,12 +7972,12 @@ export const MovesText: {[k: string]: MoveText} = {
 	nuclearwinter: {
 		name: "Nuclear Winter",
 		desc: "Has a 10% chance to freeze the target. This move's type effectiveness against Poison is changed to be super effective no matter what this move's type is. If the weather is Hail, this move does not check accuracy.",
-		shortDesc: "10% chance to freeze. Super effective on Poison.",
+		shortDesc: "10% chance to freeze. Super effective on Poison. Cannot miss under Hail or Snow.",
 	},
 	badeggs: {
 		name: "Bad Eggs",
 		desc: "Hits three times. Power increases to 40 for the second hit and 60 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times. Each hit has a 10% chance to poison the target.",
-		shortDesc: "Hits 3 times, hits can miss, gets stronger, 10% psn.",
+		shortDesc: "Hits 3 times. Each hit can miss and gets stronger per hit. 10% psn.",
 	},
 	backdraft: {
 		name: "Backdraft",
