@@ -5,7 +5,7 @@ import {Punishments} from '../punishments';
 import {downloadImageWithVerification} from '../../lib/image';
 import { checkEmojiLevel } from './emojis';
 
-const MAX_STICKER_SIZE = 320;
+const MAX_STICKER_SIZE = 160;
 const STICKER_SIZE = 64;
 const ERROR_NO_STICKER_NAME = 'Specify an sticker name.';
 const ERROR_NO_STICKER_URL = 'Specify an sticker URL.';
