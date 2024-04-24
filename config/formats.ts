@@ -1248,7 +1248,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct', 'Power Herb + Geomancy', 'Power Herb + Awaken', 'Fishermans Ruse + Destiny Bond', 'Star Rod + Victory Dance', "Partner's Pendant + Super Snore"],
+		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct', 'Power Herb + Geomancy', 'Power Herb + Awaken', 'Baitite + Destiny Bond', 'Star Rod + Victory Dance', "Partner's Pendant + Super Snore"],
 	},
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Ubers',
@@ -1268,7 +1268,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Fling + License to Sell Hotdogs', 'Wheygle + Unburden', 'Condoom + Unaware'],
+		banlist: ['Fling + License to Sell Hotdogs', 'Wheygle + Unburden', 'Condoom + Unaware'],
 	},
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Doubles OU',
