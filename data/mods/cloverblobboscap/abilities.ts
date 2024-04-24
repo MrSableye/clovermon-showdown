@@ -741,18 +741,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mindseye: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	hospitality: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	toxicchain: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	windpower: {
 		inherit: true,
 		isNonstandard: null,
