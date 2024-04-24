@@ -7854,7 +7854,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	nimblemetalbody: {
 		onModifyPriority(priority, pokemon, target, move) {
 			const momentum = [
-				'batonpass', 'uturn', 'flipturn', 'partingshot', 'teleport', 'uturn', 'voltswitch', 'flashbang',
+				'batonpass', 'punchout', 'uturn', 'rockout', 'slipturn', 'backdraft', 'flipturn', 'partingshot', 'teleport', 'uturn', 'voltswitch', 'flashbang',
 			];
 			if (momentum.includes(move.id)) return priority + 1;
 		},
@@ -8275,7 +8275,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.type === 'Fairy') {
 				return this.chainModify(0.125);
 			} else if (move.type === 'Dragon') {
-				return this.chainModify(0.25);
+				return this.chainModify(0.125);
 			}
 		},
 		onAnyEffectiveness(typemod, target, type, move) {
