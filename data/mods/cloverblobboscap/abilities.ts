@@ -651,7 +651,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-		regenerator: {
+	regenerator: {
 		inherit: true,
 		isNonstandard: null,
 		onSwitchOut(pokemon) {
