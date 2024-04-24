@@ -2,7 +2,7 @@ import parseColor from 'parse-color';
 import {FS, Image, Net, Utils} from '../../lib';
 import {getTourWins} from './data-badges';
 import {checkEmojiLevel, createEmojiHtml} from './emojis';
-import {createStickerHtml} from './stickers';
+import {createStickerHtml, downloadSticker, Sticker} from './stickers';
 import {escapeHTML} from '../../lib/utils';
 
 /* Generic logic */
@@ -247,8 +247,8 @@ const COOLDOWN = 10 * 1000;
 
 interface StickerStatus {
 	enabled: boolean;
-	requestedSticker?: string;
-	sticker?: string;
+	requestedSticker?: Sticker;
+	sticker?: Sticker;
 }
 
 type StickerConfig = Record<string, StickerStatus>;
@@ -279,28 +279,29 @@ const updateStickerStatus = (id: string, statusUpdate: Partial<StickerStatus>) =
 
 const createRawStickerHtml = (
 	userId: string,
-	stickerFileName: string,
+	sticker: Sticker,
 	isRequest = false,
 ) => createStickerHtml(
 	`custom-${userId}`,
-	(isRequest ? 'requests/' : '') + stickerFileName
+	sticker,
+	isRequest ? 'requests/' : ''
 );
 
-const createPendingStickerRequestHtml = (userId: string, stickerFileName: string, isBroadcast = false) => {
+const createPendingStickerRequestHtml = (userId: string, sticker: Sticker, isBroadcast = false) => {
 	const username = getUsername(userId);
 	let pendingStickerRequestHtml = '<details>';
 	pendingStickerRequestHtml += `<summary><b>${username}${isBroadcast ? ' Custom Sticker Request' : ''}</b></summary>`;
-	pendingStickerRequestHtml += createRawStickerHtml(userId, stickerFileName, true) + '<br />';
+	pendingStickerRequestHtml += createRawStickerHtml(userId, sticker, true) + '<br />';
 	pendingStickerRequestHtml += `<button class="button" name="send" value="/custom sticker approve ${userId}">Approve</button>`;
 	pendingStickerRequestHtml += `<button class="button" name="send" value="/custom sticker deny ${userId}">Deny</button>`;
 	return pendingStickerRequestHtml + '</details>';
 };
 
-const notifyStickerStaff = (requesterId: string, fileName: string) => {
+const notifyStickerStaff = (requesterId: string, sticker: Sticker) => {
 	const staffRoom = Rooms.get('staff');
 
 	if (staffRoom) {
-		staffRoom.sendMods(`|uhtml|sticker-request-${requesterId}|${createPendingStickerRequestHtml(requesterId, fileName, true)}`);
+		staffRoom.sendMods(`|uhtml|sticker-request-${requesterId}|${createPendingStickerRequestHtml(requesterId, sticker, true)}`);
 	}
 };
 
@@ -447,7 +448,7 @@ export const commands: Chat.ChatCommands = {
 		avatar: {
 			async request(target, room, user) {
 				try {
-					const canHaveAvatar = hasTourWins(AVATAR_MINIMUM_TOUR_WINS, user) || Config.customavatars?.[user.id] !== undefined;
+					const canHaveAvatar = (Config.customavatars?.[user.id] !== undefined) || hasTourWins(AVATAR_MINIMUM_TOUR_WINS, user);
 
 					if (!canHaveAvatar) {
 						return this.errorReply(AVATAR_USER_INELIGIBLE);
@@ -626,7 +627,7 @@ export const commands: Chat.ChatCommands = {
 		emoji: {
 			async request(target, room, user) {
 				try {
-					const canHaveEmoji = hasTourWins(EMOJI_MINIMUM_TOUR_WINS, user) || Config.customemoji?.[user.id] !== undefined;
+					const canHaveEmoji = (Config.customemoji?.[user.id] !== undefined) || hasTourWins(EMOJI_MINIMUM_TOUR_WINS, user);
 
 					if (!canHaveEmoji) {
 						return this.errorReply(EMOJI_USER_INELIGIBLE);
@@ -635,7 +636,7 @@ export const commands: Chat.ChatCommands = {
 					const imageUrl = target.trim();
 					const imageResult = await Image.downloadImageWithVerification(imageUrl, {
 						validTypes: ['png', 'gif'],
-						enforceSquare: true,
+						enforceRatio: { min: { width: 1, height: 1}, max: { width: 1, height: 1} },
 						maxDimensions: {width: 64, height: 64},
 						minDimensions: {width: 32, height: 32},
 						fileSize: 200000,
@@ -784,39 +785,18 @@ export const commands: Chat.ChatCommands = {
 		sticker: {
 			async request(target, room, user) {
 				try {
-					const canHaveSticker = hasTourWins(STICKER_MINIMUM_TOUR_WINS, user) || Config.customsticker?.[user.id] !== undefined;
+					const canHaveSticker = (Config.customsticker?.[user.id] !== undefined) || hasTourWins(STICKER_MINIMUM_TOUR_WINS, user);
 
 					if (!canHaveSticker) {
 						return this.errorReply(STICKER_USER_INELIGIBLE);
 					}
 
 					const imageUrl = target.trim();
-					const imageResult = await Image.downloadImageWithVerification(imageUrl, {
-						validTypes: ['png', 'gif'],
-						enforceSquare: true,
-						maxDimensions: {width: 320, height: 320},
-						minDimensions: {width: 160, height: 160},
-						fileSize: 200000,
-					});
+					const sticker = await downloadSticker(`custom-${user.id}`, imageUrl, './config/stickers/requests');
 
-					if ('error' in imageResult) {
-						return this.errorReply(imageResult.error);
-					}
-
-					const {image, type} = imageResult;
-
-					try {
-						const fileName = `custom-${user.id}.${type}`;
-						await FS(`./config/stickers/requests/${fileName}`).write(image);
-
-						updateStickerStatus(user.id, {requestedSticker: fileName});
-
-						notifyStickerStaff(user.id, fileName);
-
-						return this.sendReplyBox(`Requested: ${createRawStickerHtml(user.id, fileName, true)}`);
-					} catch (error) {
-						return this.errorReply(STICKER_ERROR_WRITING_IMAGE);
-					}
+					updateStickerStatus(user.id, {requestedSticker: sticker});
+					notifyStickerStaff(user.id, sticker);
+					return this.sendReplyBox(`Requested: ${createRawStickerHtml(user.id, sticker, true)}`);
 				} catch (error) {
 					return this.errorReply(STICKER_UNKNOWN_ERROR);
 				}
@@ -836,8 +816,8 @@ export const commands: Chat.ChatCommands = {
 				const stickerListHtml = stickerList.map(
 					([
 						userId,
-						stickerSTattus,
-					]) => `<span style="display: inline-block;"><div>${getUsername(userId)}</div><div>${createRawStickerHtml(userId, stickerSTattus.sticker || '')}</div></span>`
+						stickerStatus,
+					]) => `<span style="display: inline-block;"><div>${getUsername(userId)}</div><div>${createRawStickerHtml(userId, stickerStatus.sticker!)}</div></span>`
 				).join(' ');
 				/* eslint-enable max-len */
 
@@ -855,7 +835,7 @@ export const commands: Chat.ChatCommands = {
 				}
 
 				const requestListHtml = stickerList.map(
-					([userId, stickerStatus]) => createPendingStickerRequestHtml(userId, stickerStatus.requestedSticker || ''),
+					([userId, stickerStatus]) => createPendingStickerRequestHtml(userId, stickerStatus.requestedSticker!),
 				).join('<br />');
 
 				return this.sendReplyBox('<b><u>Sticker Requests</u></b><br />' + requestListHtml);
@@ -942,7 +922,7 @@ export const commands: Chat.ChatCommands = {
 		},
 		title: {
 			set(target, room, user) {
-				const canHaveTitle = hasTourWins(TITLE_MINIMUM_TOUR_WINS, user) || Config.customtitle?.[user.id] !== undefined;
+				const canHaveTitle = (Config.customtitle?.[user.id] !== undefined) || hasTourWins(TITLE_MINIMUM_TOUR_WINS, user);
 
 				if (!canHaveTitle) {
 					return this.errorReply(TITLE_USER_INELIGIBLE);
@@ -977,7 +957,7 @@ export const commands: Chat.ChatCommands = {
 		},
 		flair: {
 			async set(target, room, user) {
-				const canHaveFlair = hasTourWins(FLAIR_MINIMUM_TOUR_WINS, user) || Config.customflair?.[user.id] !== undefined;
+				const canHaveFlair = (Config.customflair?.[user.id] !== undefined) || hasTourWins(FLAIR_MINIMUM_TOUR_WINS, user);
 
 				if (!canHaveFlair) {
 					return this.errorReply(FLAIR_USER_INELIGIBLE);
@@ -1028,7 +1008,7 @@ export const commands: Chat.ChatCommands = {
 		},
 		color: {
 			async set(target, room, user) {
-				const canHaveFlair = hasTourWins(NAME_COLOR_MINIMUM_TOUR_WINS, user) || Config.customnamecolor?.[user.id] !== undefined;
+				const canHaveFlair = (Config.customnamecolor?.[user.id] !== undefined) || hasTourWins(NAME_COLOR_MINIMUM_TOUR_WINS, user);
 
 				if (!canHaveFlair) return this.errorReply(NAME_COLOR_USER_INELIGIBLE);
 
@@ -1077,7 +1057,7 @@ export const commands: Chat.ChatCommands = {
 		backgrounds: 'background',
 		background: {
 			set(target, room, user) {
-				const canHaveBackground = hasTourWins(BACKGROUND_MINIMUM_TOUR_WINS, user) || Config.custombackground?.[user.id] !== undefined;
+				const canHaveBackground = (Config.custombackground?.[user.id] !== undefined) || hasTourWins(BACKGROUND_MINIMUM_TOUR_WINS, user);
 
 				if (!canHaveBackground) {
 					return this.errorReply(BACKGROUND_USER_INELIGIBLE);
@@ -1123,7 +1103,7 @@ export const commands: Chat.ChatCommands = {
 		chatbackgrounds: 'chatbackground',
 		chatbackground: {
 			set(target, room, user) {
-				const canHaveBackground = hasTourWins(CHAT_BACKGROUND_MINIMUM_TOUR_WINS, user) || Config.custombackground?.[user.id] !== undefined;
+				const canHaveBackground = (Config.custombackground?.[user.id] !== undefined) || hasTourWins(CHAT_BACKGROUND_MINIMUM_TOUR_WINS, user);
 
 				if (!canHaveBackground) {
 					return this.errorReply(CHAT_BACKGROUND_USER_INELIGIBLE);

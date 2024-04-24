@@ -6,12 +6,18 @@ import {downloadImageWithVerification} from '../../lib/image';
 import { checkEmojiLevel } from './emojis';
 
 const MAX_STICKER_SIZE = 320;
-const STICKER_SIZE = 160;
+const STICKER_SIZE = 64;
 const ERROR_NO_STICKER_NAME = 'Specify an sticker name.';
 const ERROR_NO_STICKER_URL = 'Specify an sticker URL.';
 const COOLDOWN = 10 * 1000;
 
-type Stickers = Record<string, string>;
+export interface Sticker {
+	filename: string;
+	width: number;
+	height: number;
+}
+
+type Stickers = Record<string, Sticker>;
 
 export const stickers: Stickers = JSON.parse(
 	FS('config/chat-plugins/stickers.json').readIfExistsSync() || "{}"
@@ -21,8 +27,8 @@ const saveStickers = () => {
 	FS('config/chat-plugins/stickers.json').writeUpdate(() => JSON.stringify(stickers));
 };
 
-const addOrUpdateSticker = (name: string, filename: string) => {
-	stickers[name] = filename;
+const addOrUpdateSticker = (name: string, sticker: Sticker) => {
+	stickers[name] = sticker;
 	saveStickers();
 };
 
@@ -49,13 +55,14 @@ const toAlphaNumeric = (text: string) => ('' + text).replace(/[^A-Za-z0-9]+/g, '
 
 export const createStickerHtml = (
 	name: string,
-	filename: string,
-) => `<img src="https://clover.weedl.es:8443/stickers/${filename}" title="/gif ${name}" height="${STICKER_SIZE}" width="${STICKER_SIZE}">`;
+	sticker: Sticker,
+	path: string = ''
+) => `<img src="https://clover.weedl.es:8443/stickers/${path}${sticker.filename}" title="/gif ${name}" height="${sticker.height}" width="${sticker.width}">`;
 
-const downloadSticker = async (stickerName: string, imageUrl: string) => {
+export const downloadSticker = async (stickerName: string, imageUrl: string, path: string = './config/stickers'): Promise<Sticker> => {
 	const result = await downloadImageWithVerification(imageUrl, {
 		validTypes: ['png', 'gif'],
-		enforceSquare: true,
+		enforceRatio: { min: { width: 1, height: 2 }, max: { width: 2, height: 1 } },
 		minDimensions: {width: STICKER_SIZE, height: STICKER_SIZE},
 		maxDimensions: {width: MAX_STICKER_SIZE, height: MAX_STICKER_SIZE},
 		fileSize: 1000000,
@@ -66,9 +73,9 @@ const downloadSticker = async (stickerName: string, imageUrl: string) => {
 	}
 
 	const fileName = `${stickerName}.${result.type}`;
-	await FS(`./config/stickers/${fileName}`).write(result.image);
+	await FS(`${path}/${fileName}`).write(result.image);
 
-	return fileName;
+	return { filename: fileName, width: result.width, height: result.height };
 };
 
 export const commands: Chat.ChatCommands = {
@@ -115,12 +122,12 @@ export const commands: Chat.ChatCommands = {
 				return this.errorReply(ERROR_NO_STICKER_URL);
 			}
 
-			const filename = await downloadSticker(stickerName, stickerUrl);
+			const sticker = await downloadSticker(stickerName, stickerUrl);
 
-			addOrUpdateSticker(stickerName, filename);
+			addOrUpdateSticker(stickerName, sticker);
 
 			this.addGlobalModAction(`${user.name} added sticker ${stickerName}`);
-			return this.sendReplyBox(`Added: ${createStickerHtml(stickerName, filename)}`);
+			return this.sendReplyBox(`Added: ${createStickerHtml(stickerName, sticker)}`);
 		},
 		remove(target, room, user) {
 			this.checkCan('emoji');
