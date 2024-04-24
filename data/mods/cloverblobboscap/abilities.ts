@@ -509,6 +509,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	toxicchain: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hospitality: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mindseye: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	purifyingsalt: {
 		inherit: true,
 		isNonstandard: null,
@@ -620,6 +632,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	thermalfumes: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	regenerator: {
+		inherit: true,
+		isNonstandard: null,
+		onSwitchOut(pokemon) {
+			pokemon.heal(pokemon.baseMaxhp / 5);
 	},
 	plus: {
 		inherit: true,
