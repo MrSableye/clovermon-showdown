@@ -1158,6 +1158,30 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	hydrosteam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psyblade: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bloodmoon: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	syrupbomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ivycudgel: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	matchagotcha: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	laserbeam: {
 		inherit: true,
 		isNonstandard: null,
