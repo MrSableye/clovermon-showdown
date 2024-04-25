@@ -8405,7 +8405,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	poisonivy: {
 		name: "Poison Ivy",
-		shortDesc: "Chance to poison or badly poison the foe.",
+		shortDesc: "25% Chance to either poison, badly poison or paralyze the foe.",
 	},
 	absolutezero: {
 		name: "Absolute Zero",
@@ -8509,7 +8509,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	flashbang: {
 		name: "Flashbang",
-		shortDesc: "User switches out. Sets up Dazzling for a turn.",
+		shortDesc: "User switches out. Prevents the use of Priority moves on your side for 1 turn.",
 		start: "  A dazzling display surrounds [TEAM]!",
 		end: "  [TEAM]'s the dazzling display has dissipated!",
 		switchOut: "#uturn",
@@ -8520,7 +8520,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	extremesneed: {
 		name: "Extreme Sneed",
-		shortDesc: "Usually goes first. Formerly Extremechuck",
+		shortDesc: "Usually goes first. Formerly Extreme Chuck",
 	},
 	feedandseed: {
 		name: "Feed and Seed",
@@ -8760,7 +8760,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	bigshot: {
 		name: "Big Shot",
-		shortDesc: "High critical hit ratio, 30% chance to paralyze. Favorite move 1997.",
+		shortDesc: "High critical hit ratio. 30% chance to paralyze. Favorite move 1997.",
 	},
 	foolsgambit: {
 		name: "Fool's Gambit",
@@ -8800,7 +8800,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	icestorm: {
 		name: "Ice Storm",
-		shortDesc: "Summons Hail upon it. 10% chance to freeze.",
+		shortDesc: "Summons Hail upon hit. 10% chance to freeze.",
 	},
 	downpour: {
 		name: "Downpour",
@@ -9234,11 +9234,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	trashtalk: {
 		name: "Trash Talk",
-		desc: "Makes the foe have Rage effect. Raises the user's crit rate by 2.",
+		desc: "Makes the foe have Rage effect. Applies Focus Energy to the user.",
 	},
 	torchshriek: {
 		name: "Torch Shriek",
-		desc: "Lowers the user's Sp. Atk by 1.",
+		desc: "Lowers the user's Sp. Atk by 1. Hits adjacent foe(s).",
 	},
 	this: {
 		name: "This",
@@ -9466,7 +9466,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	snowgrave: {
 		name: "Snowgrave",
-		shortDesc: "100% chance to freeze the target.",
+		shortDesc: "Watch what happens when I cast a spell I don't know! (100% chance to Freeze.)",
 	},
 	bigbang: {
 		name: "Big Bang",
@@ -9573,7 +9573,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "30% chance to lower the target's accuracy by 1.",
 	},
 	finishingtouch: {
-		name: "Brine",
+		name: "Finishing Touch",
 		desc: "3.125x power if the target has less than or equal to half of its maximum HP remaining.",
 		shortDesc: "3.125x power if the target's HP is 50% or less.",
 	},
