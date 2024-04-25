@@ -8647,8 +8647,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	bloodshot: {
 		name: "Blood Shot",
-		desc: "Has a 20% chance to either poison, confuse, or paralyze the target.",
-		shortDesc: "20% chance to poison, confuse, or paralyze target.",
+		desc: "Has a 20% chance to either poison, confuse, or paralyze the target. Drains 100% of damage done to the opponent.",
+		shortDesc: "20% chance to poison, confuse, or paralyze target. 100% Health Drain.",
 	},
 	overdose: {
 		name: "Overdose",
