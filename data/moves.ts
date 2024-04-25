@@ -24371,7 +24371,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	matingpress: {
 		accuracy: 100,
-		basePower: 70,
+		basePower: 90,
 		category: "Physical",
 		name: "Mating Press",
 		pp: 5,
@@ -27670,13 +27670,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	bloodshot: {
 		num: 161,
-		accuracy: 100,
-		basePower: 80,
+		accuracy: 75,
+		basePower: 120,
 		category: "Special",
 		name: "Blood Shot",
-		pp: 10,
+		pp: 5,
 		priority: 0,
-		flags: {bullet: 1, protect: 1, mirror: 1},
+		flags: {bullet: 1, protect: 1, mirror: 1, heal: 1},
+		drain: [1, 1],
 		secondary: {
 			chance: 20,
 			onHit(target, source) {
