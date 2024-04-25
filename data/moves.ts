@@ -26300,15 +26300,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	poisonivy: {
-		accuracy: 95,
-		basePower: 90,
+		accuracy: 110,
+		basePower: 80,
 		category: "Physical",
 		name: "Poison Ivy",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, contact: 1},
+		flags: {protect: 1, mirror: 1},
 		secondary: {
-			chance: 30,
+			chance: 25,
 			onHit(target, source) {
 				const result = this.random(3);
 				if (result === 0) {
@@ -31095,7 +31095,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				},
 			},
 		},
-		target: "normal",
+		secondary: null,
+		target: "allAdjacentFoes",
 		type: "Fire",
 		contestType: "Beautiful",
 		isNonstandard: "Future",
@@ -31552,7 +31553,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	glacialgroove: {
 		accuracy: 100,
-		basePower: 85,
+		basePower: 70,
 		category: "Special",
 		name: "Glacial Groove",
 		pp: 10,
