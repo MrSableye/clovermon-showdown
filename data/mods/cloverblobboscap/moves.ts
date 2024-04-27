@@ -1158,6 +1158,30 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	hydrosteam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psyblade: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bloodmoon: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	syrupbomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ivycudgel: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	matchagotcha: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	laserbeam: {
 		inherit: true,
 		isNonstandard: null,
@@ -1207,10 +1231,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	tridentcharge: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	blackfire: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1264,10 +1284,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Steel",
 	},
 	strifedicekind: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	cumblast: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1522,6 +1538,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Steel",
 		contestType: "Beautiful",
+		desc: "Has a 20% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "20% chance to lower the target's Spdef. by 1.",
 	},
 	rockslide: {
 		num: 157,
@@ -1589,6 +1607,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Fairy",
 		contestType: "Beautiful",
+		desc: "Has a 20% chance of lowering special attack upon hit",
+		shortDesc: "20% chance to lower the target's Spatk. by 1.",
 	},
 	spore: {
 		num: 147,
@@ -1629,6 +1649,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	slipturn: {
 		inherit: true,
 		basePower: 65,
+		isNonstandard: null,
+	},
+	armthrust: {
+		inherit: true,
+		basePower: 25,
 		isNonstandard: null,
 	},
 	sadpoem: {
@@ -1688,11 +1713,13 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
-		drain: [3, 4],
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
 		contestType: "Cute",
+		desc: "The user heals for 1/2 of how much damage dealt to the opponent.",
+		shortDesc: "Heals for 50% of damage dealt to the opponent.",
 	},
 	rocketboost: {
 		inherit: true,
@@ -1742,6 +1769,33 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	hydropump: {
+		num: 56,
+		accuracy: 85,
+		basePower: 110,
+		category: "Special",
+		name: "Hydro Pump",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "normal",
+		type: "Water",
+		contestType: "Beautiful",
+		desc: "Has a 10% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "10% chance to lower the target's Speed by 1.",
+	},
+		focusblast: {
+		inherit: true,
+		accuracy: 85,
+		basePower: 110,
+		isNonstandard: null,
+	},
 	finishingtouch: {
 		inherit: true,
 		isNonstandard: null,
@@ -1753,6 +1807,73 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	needlepulse: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	toxic: {
+		num: 92,
+		accuracy: 90,
+		basePower: 0,
+		category: "Status",
+		name: "Toxic",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		// No Guard-like effect for Poison-type users implemented in Scripts#tryMoveHit
+		status: 'tox',
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		zMove: {boost: {def: 1}},
+		contestType: "Clever",
+	},
+	protect: {
+		num: 182,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Protect",
+		pp: 5,
+		priority: 4,
+		flags: {noassist: 1, failcopycat: 1},
+		stallingMove: true,
+		volatileStatus: 'protect',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect']) {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				return this.NOT_FAIL;
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Cute",
 	},
 	eggbomb: {
 		num: 121,

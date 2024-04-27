@@ -119,11 +119,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		abilities: {
 			0: "Cell Shield",
 			1: "Filter",
-			H: "Admin Abuse",
+			H: "Receiver",
 			S: "Regenerator",
 		},
 		color: "Black",
-
 	},
 	blobbosforbidden: {
 		inherit: true,

@@ -12525,7 +12525,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Mortal Spin', '[of] ' + pokemon);
 				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'luckyroll',
 					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 				for (const condition of sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
@@ -23297,31 +23297,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {mirror: 1},
 		breaksProtect: true,
 		infiltrates: true,
-		/* lol */
-		damageCallback(pokemon, target) {
-			if (target.hp * 2 <= target.maxhp) {
-				return this.clampIntRange(Math.floor(target.getUndynamaxedHP() * 999), 1);
-			}
+		onTryHit(target, source, move) {
+			if (target.hp * 2 > target.maxhp) return false;
+			move.ohko = true;
 		},
 		onHit(target, source) {
-			if (target.hp * 2 <= target.maxhp) {
-				this.heal(Math.ceil(source.maxhp), source);
-				this.add('-activate', source, 'move: Soul Crusher');
-				const stats: BoostID[] = [];
-				let stat: BoostID;
-				for (stat in source.boosts) {
-					if (stat !== 'accuracy' && stat !== 'evasion' && source.boosts[stat] < 6) {
-						stats.push(stat);
-					}
+			this.heal(Math.ceil(source.maxhp), source);
+			this.add('-activate', source, 'move: Soul Crusher');
+			const stats: BoostID[] = [];
+			let stat: BoostID;
+			for (stat in source.boosts) {
+				if (stat !== 'accuracy' && stat !== 'evasion' && source.boosts[stat] < 6) {
+					stats.push(stat);
 				}
-				if (stats.length) {
-					if (target.hp * 2 <= target.maxhp) {
-					}
-					const randomStat = this.sample(stats);
-					const boost: SparseBoostsTable = {};
-					boost[randomStat] = 2;
-					this.boost(boost, source);
+			}
+			if (stats.length) {
+				if (target.hp * 2 <= target.maxhp) {
 				}
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = 2;
+				this.boost(boost, source);
 			}
 		},
 		secondary: null,
@@ -26576,7 +26572,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	chernoboil: {
 		accuracy: 100,
-		basePower: 26,
+		basePower: 31,
 		category: "Special",
 		name: "Chernoboil",
 		pp: 15,
@@ -26796,7 +26792,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	nuclearmeltdown: {
 		num: 557,
 		accuracy: 95,
-		basePower: 37,
+		basePower: 41,
 		category: "Physical",
 		name: "Nuclear Meltdown",
 		pp: 5,
@@ -26957,13 +26953,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 	blobblast: {
 		num: 66,
 		accuracy: 80,
-		basePower: 110,
+		basePower: 150,
 		category: "Special",
 		name: "Blobblast",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		recoil: [1, 4],
+		recoil: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -27389,11 +27385,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	xenobeam: {
 		num: 487,
-		accuracy: 100,
-		basePower: 90,
+		accuracy: 95,
+		basePower: 110,
 		category: "Special",
 		name: "Xenobeam",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
 		secondary: {
@@ -27417,7 +27413,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	infectiouswheeze: {
 		num: 594,
 		accuracy: 100,
-		basePower: 25,
+		basePower: 100,
 		onModifyType(move, pokemon) {
 			if (pokemon.species.name === 'Blobbos-Zombie') {
 				move.type = 'Ghost';
@@ -27427,10 +27423,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		category: "Special",
 		name: "Infectious Wheeze",
-		pp: 20,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -27478,7 +27473,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Shadowban",
-		pp: 20,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
 		volatileStatus: 'taunt',
@@ -28405,7 +28400,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Sly Squall",
-		pp: 15,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, wind: 1},
 		beforeMoveCallback(source, target, move) {
@@ -28513,7 +28508,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Physical",
 		name: "Trap Card",
 		pp: 10,
-		priority: 0,
+		priority: -3,
 		flags: {protect: 1, mirror: 1},
 		priorityChargeCallback() {},
 		onTryMove() {},
@@ -28542,7 +28537,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "allAdjacentFoes",
+		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
 		contestType: "Cute",
@@ -28608,7 +28603,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	heroiconslaught: {
 		accuracy: true,
-		basePower: 90,
+		basePower: 50,
 		category: "Physical",
 		name: "Heroic Onslaught",
 		multihit: 2,
@@ -28670,8 +28665,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	rawvenom: {
 		num: 403,
-		accuracy: 100,
-		basePower: 100,
+		accuracy: 95,
+		basePower: 85,
 		category: "Special",
 		name: "Raw Venom",
 		pp: 10,
@@ -29555,7 +29550,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1, heal: 1},
-		heal: [4, 5],
+		heal: [5, 5],
 		onHit(target) {
 			if (!target.volatiles['dynamax']) {
 				target.addVolatile('taunt');
@@ -29669,10 +29664,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	tridentcharge: {
 		accuracy: 100,
-		basePower: 80,
+		basePower: 70,
 		category: "Physical",
 		name: "Trident Charge",
-		pp: 20,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: {
@@ -29916,7 +29911,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	strifedicekind: {
 		name: "Strife: Dicekind",
 		basePower: 18,
-		accuracy: 108,
+		accuracy: 98,
 		multihit: 8,
 		pp: 8,
 		noPPBoosts: true,
@@ -30781,31 +30776,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
-		},
-		basePowerCallback(pokemon, target) {
-			const targetWeight = target.getWeight();
-			const pokemonWeight = pokemon.getWeight();
-			let bp;
-			if (pokemonWeight >= targetWeight * 5) {
-				bp = 120;
-			} else if (pokemonWeight >= targetWeight * 4) {
-				bp = 100;
-			} else if (pokemonWeight >= targetWeight * 3) {
-				bp = 80;
-			} else if (pokemonWeight >= targetWeight * 2) {
-				bp = 60;
-			} else {
-				bp = 40;
-			}
-			this.debug('BP: ' + bp);
-			return bp;
-		},
-		onTryHit(target, pokemon, move) {
-			if (target.volatiles['dynamax']) {
-				this.add('-fail', pokemon, 'Dynamax');
-				this.attrLastMove('[still]');
-				return null;
-			}
 		},
 		secondary: null,
 		target: "normal",
@@ -33005,10 +32975,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	banana: {
 		accuracy: 100,
-		basePower: 40,
+		basePower: 5,
 		category: "Physical",
 		name: "Banana",
-		pp: 35,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onHit(target, source) {
@@ -33147,7 +33117,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				break;
 			}
 			// You can use Any of the Dance moves.
-			// You can give any of the 18 types+Nuclear, Plastic and glass on your opponent or yourself.
+			// You can give any of the 18 types.
 			// You can revive an ally
 			// You can swap hazards with the opponent.
 			// You can use any sleeping move
@@ -33198,24 +33168,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	scryingwish: {
 		accuracy: 100,
-		basePower: 140,
+		basePower: 200,
 		category: "Special",
 		name: "Scrying Wish",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {allyanim: 1, futuremove: 1},
 		ignoreImmunity: true,
 		onTry(source, target) {
 			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
 			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
-				duration: 3,
+				duration: 4,
 				move: 'scryingwish',
 				source: source,
 				moveData: {
 					id: 'scryingwish',
 					name: "Scrying Wish",
 					accuracy: 100,
-					basePower: 140,
+					basePower: 200,
 					category: "Special",
 					priority: 0,
 					flags: {allyanim: 1, futuremove: 1},
@@ -34066,12 +34036,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	unload: {
 		num: 131,
-		accuracy: 100,
-		basePower: 25,
+		accuracy: 90,
+		basePower: 20,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Unload",
-		pp: 15,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		multihit: [2, 5],
@@ -34125,7 +34095,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	mitosismash: {
 		num: 813,
 		accuracy: 90,
-		basePower: 65,
+		basePower: 85,
 		basePowerCallback(pokemon, target, move) {
 			return 13 * move.hit;
 		},

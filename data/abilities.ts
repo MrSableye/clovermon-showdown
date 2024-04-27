@@ -7190,6 +7190,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'prismaticlaser',
 				'beamblade',
 				'genesisbeam',
+				'spectresabre',
 			];
 			if (beamMoves.includes(move.id)) {
 				this.debug('Beam Boost boost');
@@ -7853,7 +7854,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	nimblemetalbody: {
 		onModifyPriority(priority, pokemon, target, move) {
 			const momentum = [
-				'batonpass', 'uturn', 'flipturn', 'partingshot', 'teleport', 'uturn', 'voltswitch', 'flashbang',
+				'batonpass', 'punchout', 'uturn', 'rockout', 'slipturn', 'backdraft', 'flipturn', 'partingshot', 'teleport', 'uturn', 'voltswitch', 'flashbang',
 			];
 			if (momentum.includes(move.id)) return priority + 1;
 		},
@@ -8274,7 +8275,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.type === 'Fairy') {
 				return this.chainModify(0.125);
 			} else if (move.type === 'Dragon') {
-				return this.chainModify(0.25);
+				return this.chainModify(0.125);
 			}
 		},
 		onAnyEffectiveness(typemod, target, type, move) {
@@ -8952,6 +8953,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'lunge',
 				'splishysplash',
 				'lavadapt',
+				'bellyflop',
 			];
 			if (hoppingMoves.includes(move.id)) {
 				this.debug('Mass Hopping boost');
@@ -9131,6 +9133,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.field.setTerrain('grassyterrain');
 			} else if (move.type === 'Electric') {
 				this.field.setTerrain('electricterrain');
+			} else if (move.type === 'Ice') {
+				this.field.setTerrain('frostyterrain');
 			} else if (move.type === 'Psychic') {
 				this.field.setTerrain('psychicterrain');
 			} else if (move.type === 'Fairy') {
@@ -9165,6 +9169,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				switch (this.field.terrain) {
 				case 'electricterrain':
 					newType = 'Electric';
+					break;
+				case 'frostyterrain':
+					newType = 'Ice';
 					break;
 				case 'grassyterrain':
 					newType = 'Grass';
@@ -9224,6 +9231,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.flags['contact']) {
 				return this.chainModify(2);
 			}
+		},
+		onModifyAccuracyPriority: -2,
+		onModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			this.debug('aphenphosmphobia - decreasing accuracy');
+			return this.chainModify([3686, 4096]);
 		},
 		isNonstandard: "Future",
 	},
@@ -12468,6 +12481,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 	},
+	warden: {
+		name: "Warden",
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Warden');
+		},
+		onFoeDisableMove(pokemon) {
+			for (const moveSlot of this.effectState.source.moveSlots) {
+				if (moveSlot.id === 'struggle') continue;
+				pokemon.disableMove(moveSlot.id, 'hidden');
+			}
+			pokemon.maybeDisabled = true;
+		},
+		onFoeBeforeMovePriority: 4,
+		onFoeBeforeMove(attacker, defender, move) {
+			if (move.id !== 'struggle' && this.effectState.source.hasMove(move.id) && !move.isZ && !move.isMax) {
+				this.add('cant', attacker, 'ability: Warden', move);
+				return false;
+			}
+		},
+	},
 	medusascurse: {
 		name: "Medusa's Curse",
 		onStart(source) {
@@ -13327,6 +13360,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.field.addPseudoWeather('magicroom');
 		},
 		rating: 4,
+		isNonstandard: "Future",
+	},
+	carbonated: {
+		name: "Carbonated",
+		onStart(pokemon) {
+			this.effectState.turns = 2;
+			this.boost({atk: 1, spa: 1}, pokemon);
+		},
+		onResidual(pokemon) {
+			if (this.effectState.turns === 0) {
+				this.boost({atk: -1, spa: -1}, pokemon);
+				delete this.effectState.turns;
+			} else if (pokemon.activeTurns) {
+				this.effectState.turns--;
+			}
+		},
 		isNonstandard: "Future",
 	},
 	cellconstruct: {

@@ -2870,7 +2870,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	partnerspendant: {
 		name: "Partner's Pendant",
-		desc: "On switch-in, raise all of the user's stats by 1 (including acc/eva).",
+		desc: "An item to be held by Blobbos-Partner. On switch-in, raise all of the user's stats by 1 (including acc/eva).",
 	},
 	kikeousorb: {
 		name: "Kikeous Orb",

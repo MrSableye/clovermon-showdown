@@ -1,11 +1,12 @@
 export const TypeChart: {[k: string]: ModdedTypeData | null} = {
 	bug: {
 		damageTaken: {
+			powder: 3,
 			Bug: 0,
 			Dark: 0,
 			Dragon: 0,
 			Electric: 0,
-			Fairy: 0,
+			Fairy: 2,
 			Fighting: 2,
 			Fire: 1,
 			Flying: 1,
@@ -106,7 +107,7 @@ export const TypeChart: {[k: string]: ModdedTypeData | null} = {
 	},
 	fairy: {
 		damageTaken: {
-			Bug: 2,
+			Bug: 1,
 			Dark: 2,
 			Dragon: 3,
 			Electric: 0,

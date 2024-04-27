@@ -6,9 +6,14 @@ interface Dimensions {
 	height: number;
 }
 
+interface AspectRatio {
+	width: number;
+	height: number;
+}
+
 interface VerificationParameters {
 	validTypes: string[];
-	enforceSquare?: boolean;
+	enforceRatio?: { min: AspectRatio, max: AspectRatio };
 	minDimensions?: Dimensions;
 	maxDimensions?: Dimensions;
 	fileSize?: number;
@@ -18,7 +23,7 @@ type ImageResult = { error: string } | { image: Buffer, width: number, height: n
 
 export const downloadImageWithVerification = async (
 	imageUrl: string,
-	{validTypes, enforceSquare, minDimensions, maxDimensions, fileSize}: VerificationParameters,
+	{validTypes, enforceRatio, minDimensions, maxDimensions, fileSize}: VerificationParameters,
 ): Promise<ImageResult> => {
 	try {
 		const imageBuffer = (await Axios.get(imageUrl, {responseType: 'arraybuffer'})).data;
@@ -38,8 +43,13 @@ export const downloadImageWithVerification = async (
 			return {error: `Invalid image type. Found image of type ${type}, must be one of ${validTypes.join(',')}`};
 		}
 
-		if (enforceSquare && width !== height) {
-			return {error: `Invalid image size. Found image of size ${width}x${height}. Must be square`};
+		if (enforceRatio) {
+			const ratio = width / height;
+			const minRatio = enforceRatio.min.width / enforceRatio.min.height;
+			const maxRatio = enforceRatio.max.width / enforceRatio.max.height;
+			if (ratio < minRatio || ratio > maxRatio) {
+				return {error: `Invalid image size. Found image of size ${width}x${height}. Must have an aspect ratio between ${enforceRatio.min.width}:${enforceRatio.min.height} (${minRatio.toFixed(3)}) and ${enforceRatio.max.width}:${enforceRatio.max.height} (${maxRatio.toFixed(3)})`};
+			}
 		}
 
 		if (minDimensions) {

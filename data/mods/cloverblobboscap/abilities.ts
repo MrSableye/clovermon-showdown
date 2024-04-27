@@ -251,6 +251,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				case 'plasticterrain':
 					newType = 'Plastic';
 					break;
+				case 'frostyterrain':
+					newType = 'Ice';
+					break;
 				}
 				if (!newType || pokemon.getTypes().join() === newType || !pokemon.setType(newType)) return;
 				this.add('-start', pokemon, 'typechange', newType, '[from] ability: Mimicry');
@@ -509,6 +512,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	toxicchain: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hospitality: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mindseye: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	purifyingsalt: {
 		inherit: true,
 		isNonstandard: null,
@@ -620,6 +635,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	thermalfumes: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	regenerator: {
+		onSwitchOut(pokemon) {
+			pokemon.heal(pokemon.baseMaxhp / 5);
+		},
+		name: "Regenerator",
+		rating: 4.5,
+		num: 144,
 	},
 	plus: {
 		inherit: true,
@@ -738,6 +761,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	"3d": {
+		inherit: true,
+		isNonstandard: null,
+	},
+	carbonated: {
 		inherit: true,
 		isNonstandard: null,
 	},
