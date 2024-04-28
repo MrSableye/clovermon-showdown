@@ -26300,8 +26300,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	poisonivy: {
-		accuracy: 110,
-		basePower: 80,
+		accuracy: 80,
+		basePower: 110,
 		category: "Physical",
 		name: "Poison Ivy",
 		pp: 5,
