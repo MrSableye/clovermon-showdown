@@ -4994,6 +4994,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			hiddenpower: ["8M"],
 			honeclaws: ["8T"],
 			howl: ["8L17"],
+			hyperbeam: ["8M"],
 			icebeam: ["8M"],
 			icefang: ["8E", "8T"],
 			irontail: ["8L45", "8M"],
