@@ -35752,7 +35752,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Hazelnaut",
 		types: ["Grass", "Fairy"],
 		genderRatio: {M: 0.875, F: 0.125},
-		baseStats: {hp: 50, atk: 80, def: 50, spa: 75, spd: 50, spe: 100},
+		baseStats: {hp: 60, atk: 85, def: 50, spa: 80, spd: 50, spe: 100},
 		abilities: {0: "Overgrow", H: "Technician", S: "Blademaster"},
 		heightm: 0.8,
 		weightkg: 21.2,
