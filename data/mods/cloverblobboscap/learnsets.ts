@@ -101,7 +101,6 @@ blobbosforbidden: {
 		slipturn: ["8L1"],
 		flashbang: ["8L1"],
 		flakcannon: ["8L1"],
-		recycle: ["8L1"],
 		storedpower: ["8L1"],
 		powertrip: ["8L1"],
 		encore: ["8L1"],
@@ -156,16 +155,17 @@ blobbosforbidden: {
 		pixiepummel: ["8L1"],
 		fissure: ["8L1"],
 		guillotine: ["8L1"],
-		sheercold: ["8L1"],
 		horndrill: ["8L1"],
 		extinction: ["8L1"],
 		scarystory: ["8L1"],
 		sereneshockwave: ["8L1"],
 		psychoboost: ["8L1"],
 		cosmicpower: ["8L1"],
+		thousandarrows: ["8L1"],
 		lightofruin: ["8L1"],
 		judgment: ["8L1"],
 		knockoff: ["8L1"],
+		awaken: ["8L1"],
 	}
 }
 }
