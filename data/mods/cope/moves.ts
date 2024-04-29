@@ -4814,19 +4814,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
 		},
-		onModifyType(move, pokemon) {
-			switch (pokemon.species.name) {
-			case 'Tauros-Paldea-Combat':
-				move.type = 'Fighting';
-				break;
-			case 'Tauros-Paldea-Blaze':
-				move.type = 'Fire';
-				break;
-			case 'Tauros-Paldea-Aqua':
-				move.type = 'Water';
-				break;
-			}
-		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
