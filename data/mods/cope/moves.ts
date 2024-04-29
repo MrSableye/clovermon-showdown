@@ -4793,6 +4793,46 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ragingbull: {
+		num: 873,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Raging Bull",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
+		onModifyType(move, pokemon) {
+			switch (pokemon.species.name) {
+			case 'Tauros-Paldea-Combat':
+				move.type = 'Fighting';
+				break;
+			case 'Tauros-Paldea-Blaze':
+				move.type = 'Fire';
+				break;
+			case 'Tauros-Paldea-Aqua':
+				move.type = 'Water';
+				break;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		desc: "Uses the users Primary typing for the typing of this move. Destroys Reflect, Light Screen and Aurora Veil.",
+		shortDesc: "Type varies based on user's primary type. Destroys screens.",
+	},
 	enhancedfireorbs: {
 		inherit: true,
 		isNonstandard: null,
