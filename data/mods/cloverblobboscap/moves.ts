@@ -1459,6 +1459,28 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ivycudgel: {
+		num: 904,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Ivy Cudgel",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		critRatio: 2,
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Beautiful",
+		desc: "Uses the users Primary typing for the typing of this move. High crit ratio.",
+		shortDesc: "Type varies based on user's primary type. +2 Crit Ratio.",
+	},
 	ominouswind: {
 		num: 466,
 		accuracy: 100,
@@ -1794,6 +1816,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		accuracy: 85,
 		basePower: 110,
+		isNonstandard: null,
+	},
+	dualwingbeat: {
+		inherit: true,
+		accuracy: 100,
 		isNonstandard: null,
 	},
 	finishingtouch: {
