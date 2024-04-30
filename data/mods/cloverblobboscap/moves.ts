@@ -1823,6 +1823,31 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		accuracy: 100,
 		isNonstandard: null,
 	},
+	dreameater: {
+		num: 138,
+		accuracy: 100,
+		basePower: 65,
+		basePowerCallback(pokemon, target, move) {
+			return target.status === 'slp' || target.hasAbility('comatose') || target.hasAbility('boardpowerz'); {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		category: "Special",
+		name: "Dream Eater",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		zMove: {basePower: 160},
+		contestType: "Clever",
+		desc: "The initial damage of this move is altered only when the target is asleep. Then, this moves power is doubled. Only doubles in power for sleeping targets.",
+		shortDesc: "User gains 1/2 of targets HP inflicted. Doubles damage against sleeping targets.",
+	},
 	finishingtouch: {
 		inherit: true,
 		isNonstandard: null,
@@ -1834,6 +1859,33 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	needlepulse: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	ragingbull: {
+		num: 873,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Raging Bull",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		desc: "Uses the users Primary typing for the typing of this move. Destroys Reflect, Light Screen and Aurora Veil.",
+		shortDesc: "Type varies based on user's primary type. Destroys screens.",
 	},
 	toxic: {
 		num: 92,

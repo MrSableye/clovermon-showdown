@@ -1334,6 +1334,7 @@ export const Formats: FormatList = [
 			'Sketch Post-Gen 7 Moves',
 			'OHKO Clause',
 			'Evasion Moves Clause',
+			'Species Clause but Special for Blobbos',
 		],
 		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct', 'Power Herb + Geomancy', 'Power Herb + Awaken', 'Baitite + Destiny Bond', 'Star Rod + Victory Dance', "Partner's Pendant + Super Snore"],
 	},
