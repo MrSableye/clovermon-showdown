@@ -3966,6 +3966,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	clobber: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	neosporin: {
 		inherit: true,
 		isNonstandard: null,
