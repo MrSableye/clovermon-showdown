@@ -650,7 +650,7 @@ export const Formats: FormatList = [
 			'Uber', 'Baton Pass',
 			'Shadow Tag', 'Arena Trap', 'Moody',
 			'Bunnorgy', 'Sprucifix', 'Traumobra',
-			'Wheygle', 'Condoom',
+			'Hohohoming', 'Condoom',
 		],
 		onBegin() {
 			for (const pokemon of this.getAllPokemon()) {
