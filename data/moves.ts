@@ -65390,7 +65390,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					spa: 1,
 				},
 			},
-		},,
+		},
 		target: "normal",
 		type: "Qmarks",
 		isNonstandard: "Future",
