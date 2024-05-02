@@ -42870,7 +42870,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -43693,7 +43700,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 75,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -44630,7 +44644,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -45250,7 +45271,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -45307,7 +45335,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 45,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -45321,7 +45356,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 55,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Crystal",
 		isNonstandard: "Future",
@@ -45818,7 +45860,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -48261,7 +48310,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -49667,7 +49723,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 70,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -49924,7 +49987,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 70,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -52409,7 +52479,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -57591,7 +57668,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -62317,7 +62401,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Dragon",
 		isNonstandard: "Future",
@@ -65292,7 +65383,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 40,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 65,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},,
 		target: "normal",
 		type: "Qmarks",
 		isNonstandard: "Future",
@@ -65574,7 +65672,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, arrow: 1},
-		secondary: null,
+		secondary: {
+			chance: 60,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -65701,7 +65806,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 70,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -69033,7 +69145,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -74425,7 +74544,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Grass",
 		isNonstandard: "Future",
@@ -79667,7 +79793,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Flying",
 		isNonstandard: "Future",
