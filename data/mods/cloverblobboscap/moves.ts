@@ -1834,7 +1834,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		flags: {protect: 1, mirror: 1, heal: 1},
 		drain: [1, 2],
 		onBasePower(basePower, pokemon, target) {
-			if (target.status === 'slp' || target.hasAbility('comatose') {
+			if (target.status === 'slp' || target.hasAbility('comatose')) {
 				return this.chainModify(2);
 			}
 		},
