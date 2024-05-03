@@ -1833,8 +1833,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, heal: 1},
 		drain: [1, 2],
-		basePowerCallback(pokemon, target, move) {
-			return target.status === 'slp' || target.hasAbility('comatose') || target.hasAbility('boardpowerz'); {
+		onBasePower(basePower, pokemon, target) {
+			if (target.status === 'slp' || target.hasAbility('comatose') {
 				return this.chainModify(2);
 			}
 		},
