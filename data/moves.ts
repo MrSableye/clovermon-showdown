@@ -24377,6 +24377,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1},
+		noSketch: true,
 		secondary: {
 			chance: 100,
 			onHit(target, source) {
@@ -32983,6 +32984,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		noSketch: true,
 		onHit(target, source) {
 			const numberEffects = 37;
 			const effect: number = this.random(numberEffects);
