@@ -8186,10 +8186,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	matingpress: {
 		name: "Mating Press",
-		desc: "20% chance to have a child with the opposing mon with no item and only Metronome. Can only occur once for a user.",
-		shortDesc: "Produces a child. Uses Defense.",
+		desc: "100% chance to have a child with the opposing mon with no item and the moves Soft-Boiled, Egg Bomb, Revelation Dance and Metronome. Can only occur once for a user.",
+		shortDesc: "Produces a child. Uses Defense. Can only occur once per user.",
 
-		activate: "  [SOURCE] had a child with [POKEMON]!",
+		activate: "  [SOURCE] consensually had a child with [POKEMON]!",
 		fail: "[POKEMON] had a miscarriage...",
 	},
 	gunshot: {
@@ -9179,7 +9179,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "If an opposing Pokemon switches out this turn, this move hits that Pokemon before it leaves the field, even if it was not the original target. If the user moves after an opponent using Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch, but not Baton Pass, it will hit that opponent before it leaves the field. Power doubles and no accuracy check is done if the user hits an opponent switching out, and the user's turn is over; if an opponent faints from this, the replacement Pokemon does not become active until the end of the turn.",
 		shortDesc: "If a foe is switching out, hits it at 2x power.",
 
-		activate: "  ([TARGET] is being withdrawn...)",
+		activate: "  ([TARGET] is being sucked in...!)",
 	},
 	dustbowl: {
 		name: "Dustbowl",
