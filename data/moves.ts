@@ -77455,7 +77455,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
-		onHit(target, source, move) {
+		onTryHit(target, source, move) {
 			source.side.addSideCondition('reflect');
 			source.side.addSideCondition('lightscreen');
 		},
