@@ -68611,6 +68611,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Divine') return 1;
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
