@@ -26911,10 +26911,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 10,
-			status: 'brn',
-		},
 		self: {
 			onHit(source) {
 				this.field.setWeather('sunnyday');
@@ -27222,11 +27218,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 100,
-			boosts: {
-				spe: -1,
-		},
 		self: {
 			onHit(source) {
 				this.field.setWeather('raindance');
@@ -27247,10 +27238,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 10,
-			status: 'frz',
-		},
 		self: {
 			onHit(source) {
 				this.field.setWeather('hail');
@@ -30865,10 +30852,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 10,
-			volatileStatus: 'confusion',
-		},
 		self: {
 			onHit(source) {
 				this.field.setWeather('sandstorm');
