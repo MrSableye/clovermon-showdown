@@ -27226,6 +27226,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 100,
 			boosts: {
 				spe: -1,
+		},
 		self: {
 			onHit(source) {
 				this.field.setWeather('raindance');
