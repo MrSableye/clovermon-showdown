@@ -1791,6 +1791,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	prismspray: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dragoonslash: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	hydropump: {
 		num: 56,
 		accuracy: 85,
