@@ -26906,16 +26906,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 	sunburst: {
 		num: 173,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 75,
 		category: "Special",
 		name: "Sunburst",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 10,
-			status: 'brn',
-		},
 		self: {
 			onHit(source) {
 				this.field.setWeather('sunnyday');
@@ -27217,7 +27213,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	downpour: {
 		num: 173,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 75,
 		category: "Special",
 		name: "Downpour",
 		pp: 5,
@@ -27237,17 +27233,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 	icestorm: {
 		num: 173,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 75,
 		category: "Special",
 		name: "Ice Storm",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		sleepUsable: true,
-		secondary: {
-			chance: 10,
-			status: 'frz',
-		},
 		self: {
 			onHit(source) {
 				this.field.setWeather('hail');
@@ -29894,10 +29885,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	tombstonerd: {
 		num: 1317,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 80,
 		category: "Physical",
 		name: "Tombstoner-D",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
@@ -30856,7 +30847,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	dustbowl: {
 		num: 173,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 75,
 		category: "Physical",
 		name: "Dustbowl",
 		pp: 5,
@@ -32442,12 +32433,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	prismspray: {
 		accuracy: 100,
-		basePower: 90,
+		basePower: 100,
 		category: "Special",
 		name: "Prism Spray",
-		pp: 10,
+		pp: 5,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1},
 		onModifyMove(move) {
 			const types = this.dex.types.all().map((type) => type.name);
 			const newType = this.sample(types);
@@ -32782,12 +32773,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	dragoonslash: {
 		accuracy: 100,
-		basePower: 75,
+		basePower: 60,
 		category: "Physical",
 		name: "Dragoon Slash",
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		noSketch: true,
 		onHit(target, source) {
 			if (target && target.hasType('Dark')) {
 				target.faint(source, this.effect);

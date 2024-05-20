@@ -8501,7 +8501,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sunburst: {
 		name: "Sunburst",
-		shortDesc: "Summons Sun upon hit. 10% chance to Burn.",
+		shortDesc: "Summons Sun upon hit.",
 	},
 	deepfry: {
 		name: "Deep Fry",
@@ -8716,7 +8716,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	lasagnatoss: {
 		name: "Lasagna Toss",
-		desc: "The user and any Pokemon hit eat their items.",
+		desc: "The user and any Pokemon hit eat their items. Berries are eaten and used up while other items completely disappear.",
 	},
 	cursedblade: {
 		name: "Cursed Blade",
@@ -8800,7 +8800,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	icestorm: {
 		name: "Ice Storm",
-		shortDesc: "Summons Hail upon hit. 10% chance to freeze.",
+		shortDesc: "Summons Hail upon hit.",
 	},
 	downpour: {
 		name: "Downpour",
@@ -9562,7 +9562,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	genesisbeam: {
 		name: "Genesis Beam",
-		desc: "On-hit: +1 Atk, +1 SpA",
+		desc: "On-hit: +1 Atk and +1 SpA for the user.",
 	},
 	genesisflash: {
 		name: "Genesis Flash",

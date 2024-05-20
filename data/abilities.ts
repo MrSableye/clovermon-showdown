@@ -6984,23 +6984,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.boost({spe: 3}, target, target);
 			}
 		},
-		onResidual(pokemon) {
-			const heroicStrike = pokemon.baseMoves.indexOf('heroicstrike');
-			if (heroicStrike >= 0) {
-				const move = this.dex.moves.get('heroiconslaught');
-				pokemon.baseMoveSlots[heroicStrike] = {
-					move: move.name,
-					id: move.id,
-					pp: (move.noPPBoosts || move.isZ) ? move.pp : Math.floor(move.pp * 8 / 5),
-					maxpp: (move.noPPBoosts || move.isZ) ? move.pp : Math.floor(move.pp * 8 / 5),
-					target: move.target,
-					disabled: false,
-					disabledSource: '',
-					used: false,
-				};
-				pokemon.moveSlots = pokemon.baseMoveSlots.slice();
-			}
-		},
 		// At the end of each turn, the 4th move changes depending on the opposing mon
 		isPermanent: true,
 		isNonstandard: "Future",
