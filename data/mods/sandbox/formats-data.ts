@@ -11248,6 +11248,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	chaneddit: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	alcremite: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	taterdoom: {
 		inherit: true,
 		tier: "OU",

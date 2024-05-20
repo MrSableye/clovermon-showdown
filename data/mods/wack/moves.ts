@@ -10490,6 +10490,54 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	rainbow: {
 		inherit: true,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Rainbow",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'rainbow',
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('rainbow');
+				}
+			},
+		},
+		
+		condition: {
+			duration: 4,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-activate', source, 'ability: Persistent', effect);
+					return 12;
+				}
+				return 10;
+			},
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'rainbow');
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 9,
+			onModifyMove(move, pokemon) {
+				if (move.secondaries && move.id !== 'secretpower') {
+					this.debug('doubling secondary chance');
+					for (const secondary of move.secondaries) {
+						if (pokemon.hasAbility('serenegrace') && secondary.volatileStatus === 'flinch') continue;
+						if (secondary.chance) secondary.chance *= 2;
+					}
+					if (move.self?.chance) move.self.chance *= 2;
+				}
+			},
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'rainbow');
+			},
+
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Light",
 		isNonstandard: null,
 	},
 	imperishablenight: {

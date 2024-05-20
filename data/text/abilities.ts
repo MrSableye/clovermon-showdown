@@ -2966,6 +2966,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "  [POKEMON] got dubs! Check 'em!",
 	},
+	aromascale: {
+		name: "Aromascale",
+		shortDesc: "Protects user/allies from Attract, Disable, Encore, Heal Block, Taunt, and Torment and halves the damage from attacks when at 100% health.",
+	},
+	serenetrace: {
+		name: "Serene Trace",
+		shortDesc: "On switch-in, or when it can, this Pokemon sets up Rainbow for 5 turns and then copies a random adjacent foe's Ability.",
+	},
 	terraform: {
 		name: "Terraform",
 		desc: "Changes terrain when using certain moves relating to terrain.",

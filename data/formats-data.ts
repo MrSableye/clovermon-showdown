@@ -10227,6 +10227,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	chaneddit: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	alcremite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	finteki: {
 		tier: "Illegal",
 		isNonstandard: "Future",
