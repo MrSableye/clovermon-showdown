@@ -9325,8 +9325,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sharpwit: {
 		name: "Sharp Wit",
-		desc: "Raises the user's Attack by 1. Until the end of the next turn, the user's attacks will use the opponent's defense stat.",
-		shortDesc: "Raises the user's Attack by 1. Until the end of the next turn, the user's attacks will use the opponent's defense stat.",
+		desc: "Raises the user's Special Attack by 1. Until the end of the next turn, the user's attacks will use the opponent's defense stat.",
+		shortDesc: "Raises the user's Special Attack by 1. Until the end of the next turn, the user's attacks will use the opponent's defense stat.",
 		start: "  [POKEMON] is thingken!",
 	},
 	funnyfun: {

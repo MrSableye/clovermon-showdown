@@ -1711,6 +1711,14 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	aromascale: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	serenetrace: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	acupower: {
 		inherit: true,
 		isNonstandard: null,
