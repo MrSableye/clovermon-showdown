@@ -1548,6 +1548,30 @@ export const Formats: FormatList = [
 		],
 
 	},
+	
+	{
+		name: '[Gen 8 Sandbox Only] Multi-Battle',
+		mod: 'sandbox',
+		ruleset: [
+			'Terastal Clause',
+			'Obtainable',
+			'Team Preview',
+			'Sleep Clause Mod',
+			'Endless Battle Clause',
+			'HP Percentage Mod',
+			'Cancel Mod',
+			'Sketch Post-Gen 7 Moves',
+			'OHKO Clause',
+			'Evasion Moves Clause',
+			'Species Clause but Special for Blobbos',
+		],
+		tournamentShow: false,
+		rated: false,
+		searchShow: false,
+		gameType: 'multi',
+		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs', 'Skull Cannon', 'Extinction Wave', 'Wonder Guard', 'Junkbane', 'Shed Tail'],
+	},
+
 	{
 		name: '[Gen 8 Sburbmons Only] OU',
 		mod: 'sburbmons',
