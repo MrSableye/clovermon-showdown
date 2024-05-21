@@ -11860,12 +11860,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
-		onSourceModifyDamage(damage, source, target, move) {
-			if (target.hp >= target.maxhp) {
-				this.debug('Aromascale weaken');
-				return this.chainModify(0.5);
-			}
-		},
 		onAnyModifyDamage(damage, source, target, move) {
 			if (target.isAlly(this.effectState.target) && target.hp >= target.maxhp) {
 				this.debug('Aromascale weaken');
