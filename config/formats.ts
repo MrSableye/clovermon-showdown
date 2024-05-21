@@ -843,7 +843,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
-			'Sketch Post-Gen 7 Moves',
+	
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
