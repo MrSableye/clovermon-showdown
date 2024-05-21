@@ -61856,6 +61856,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -62306,6 +62308,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Ground",
@@ -64038,6 +64042,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -65366,6 +65372,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
@@ -66242,6 +66250,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Tech",
@@ -67080,6 +67090,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
@@ -67110,6 +67122,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Bug",
@@ -67124,8 +67138,48 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		onHit(target, pokemon) {
+			const i = this.random(12);
+			
+			
+			
+			let move = 'summon';
+			if (i == 0) {
+				move = 'summonminions';
+			} else if (i == 1) {
+				move = 'summonminions';
+			} else if (i == 2) {
+				move = 'summonhorrors';
+			} else if (i == 3) {
+				move = 'summongolems';
+			} else if (i == 4) {
+				move = 'bloodsoldieers';
+			} else if (i == 5) {
+				move = 'summonrobots';
+			} else if (i == 6) {
+				move = 'summonundead';
+			} else if (i == 7) {
+				move = 'summoninsects';
+			} 
+			else if (i == 8) {
+				move = 'summonspirits';
+			}
+			else if (i == 9) {
+				move = 'summonfey';
+			}
+			else if (i == 10) {
+				move = 'summonelementals';
+			}
+			else if (i == 11) {
+				move = 'summondragons';
+			}
+			const fullMove = this.dex.getActiveMove(move);
+			fullMove.flags = {...fullMove.flags, naturePower: 1};
+			this.actions.useMove(move, pokemon, target);
+			return null;
+		},
 		secondary: null,
-		target: "scripted",
+		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
 	},
@@ -67216,6 +67270,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Zombie",
@@ -67485,6 +67541,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
@@ -67676,6 +67734,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -81864,6 +81924,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
@@ -81879,7 +81941,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
-		target: "scripted",
+		onHit(target, pokemon) {
+			const i = this.random(4);
+						
+			let move = 'summonelementals';
+			if (i == 0) {
+				move = 'firelementals';
+			} else if (i == 1) {
+				move = 'waterelementals';
+			} else if (i == 2) {
+				move = 'earthelementals';
+			} else if (i == 3) {
+				move = 'windelementals';
+			} 
+			const fullMove = this.dex.getActiveMove(move);
+			fullMove.flags = {...fullMove.flags, naturePower: 1};
+			this.actions.useMove(move, pokemon, target);
+			return null;
+		},
+		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
 	},
@@ -81920,6 +82000,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -81934,6 +82016,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -81948,6 +82032,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Ground",
@@ -81962,6 +82048,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Wind",
@@ -86271,6 +86359,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Normal",
