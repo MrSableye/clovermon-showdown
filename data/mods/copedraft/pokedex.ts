@@ -76,5 +76,19 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 75,
 		},
 	},
+	genine: {
+		num: -42125,
+		name: "Genine",
+		types: ["Dark", "Ground"],
+		gender: "N",
+		baseStats: {hp: 90, atk: 100, def: 100, spa: 83, spd: 86, spe: 89},
+		abilities: {0: "Supreme Underlord", 1: "Bulletproof", H: "Quark Drive", S: "Good as Zinc"},
+		heightm: 6.3,
+		weightkg: 666.6,
+		color: "Black",
+		eggGroups: ["Smoggonpleasebankingambitsexual"],
+		gen: 8,
+		creator: "Mr. Sableye",
+	},
 };
 
