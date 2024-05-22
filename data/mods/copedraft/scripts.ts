@@ -1,5 +1,5 @@
 export const Scripts: ModdedBattleScriptsData = {
-	inherit: 'clover',
+	inherit: 'clovercap',
 	pokemon: {
 		ignoringItem() {
 			const enemyUnnerving = this.foes().some((foe) => foe.hasAbility('unnerve'));
