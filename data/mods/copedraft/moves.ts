@@ -479,6 +479,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	combattorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	coil: {
 		inherit: true,
 		isNonstandard: null,

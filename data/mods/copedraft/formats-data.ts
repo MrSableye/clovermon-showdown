@@ -1294,6 +1294,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	    genine: {
+	    inherit: true,
+	    isNonstandard: null,
+	    tier: "OU",
+	},
 		jumblinart: {
 		inherit: true,
 		isNonstandard: null,
