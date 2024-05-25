@@ -1317,7 +1317,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		daemonix: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "NFE",
 	},
 		achaethena: {
 		inherit: true,
@@ -1602,7 +1602,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	alberfectcell: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	gharroste: {
 		inherit: true,
