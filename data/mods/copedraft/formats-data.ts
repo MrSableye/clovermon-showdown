@@ -5103,6 +5103,11 @@ deisnutz: {
 	],
 	randomBattleLevel: 84,
 },
+fontaba: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
+},
 fontabab: {
 	inherit: true,
 	tier: "Uber",
