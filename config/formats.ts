@@ -1284,6 +1284,10 @@ export const Formats: FormatList = [
 			'Catalyst',
 			'Transfusion',
 			'More Room',
+			'Dowster-Mega',
+			'Hazmate-Mega',
+			'Emplyin-Mega',
+			'Upbeddit-Mega',
 			'Fuk U',
 			'Stink Bomb',],
 		unbanlist: [
