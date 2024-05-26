@@ -1283,6 +1283,11 @@ export const Formats: FormatList = [
 			'Alberfect Cell + Pure Power',
 			'Catalyst',
 			'Transfusion',
+			'More Room',
+			'Dowster-Mega',
+			'Hazmate-Mega',
+			'Emplyin-Mega',
+			'Upbeddit-Mega',
 			'Fuk U',
 			'Stink Bomb',],
 		unbanlist: [
