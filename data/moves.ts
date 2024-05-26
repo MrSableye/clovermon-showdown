@@ -61367,6 +61367,37 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('pollenseason');
+				}
+			},
+		},
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('mossyrock')) {
+					return 7;
+				}
+				return 5;
+			},
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'Pollen Season');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (target.activeTurns) {
+					this.boost({evasion: -1});
+				}
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'Pollen Season');
+			},
+		},
 		secondary: null,
 		target: "foeSide",
 		type: "Grass",
@@ -67153,7 +67184,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			} else if (i == 3) {
 				move = 'summongolems';
 			} else if (i == 4) {
-				move = 'bloodsoldieers';
+				move = 'bloodsoldiers';
 			} else if (i == 5) {
 				move = 'summonrobots';
 			} else if (i == 6) {
@@ -73366,7 +73397,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('gravity');
+				},
+			},
+		},
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -76242,49 +76280,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
-		onHitField(target, source, move) {
-			let result = false;
-			let message = false;
-			for (const pokemon of this.getAllActive()) {
-				if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
-					this.add('-miss', source, pokemon);
-					result = true;
-				} else if (this.runEvent('TryHit', pokemon, source, move) === null) {
-					result = true;
-				} else if (!pokemon.volatiles['perishsong']) {
-					pokemon.addVolatile('perishsong');
-					this.add('-start', pokemon, 'perish1', '[silent]');
-					result = true;
-					message = true;
-				}
-			}
-			if (!result) return false;
-			if (message) this.add('-fieldactivate', 'move: Perish Song');
-		},
-		condition: {
-			duration: 2,
-			onEnd(target) {
-				this.add('-start', target, 'perish0');
-				target.faint();
-			},
-			onResidualOrder: 24,
-			onResidual(pokemon) {
-				const duration = pokemon.volatiles['perishsong'].duration;
-				this.add('-start', pokemon, 'perish' + duration);
-				
-			},
-			onTrapPokemon(pokemon) {
-				pokemon.tryTrap();
-			},
-		},
 		
-		boosts: {
-			atk: 12,
-			def: 12,
-			spa: 12,
-			spd: 12,
-			spe: 12,
-		},
 		target: "self",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -77713,9 +77709,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		onTry(target, source, move) {
-			source.side.addSideCondition('reflect');
-			source.side.addSideCondition('lightscreen');
+			target.side.addSideCondition('reflect');
+			target.side.addSideCondition('lightscreen');
 		},
+	
 		selfdestruct: "ifHit",
 		secondary: null,
 		target: "normal",
@@ -83811,6 +83808,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
+		sideCondition: 'guidinglight',
+		condition: {
+			duration: 6,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'Guiding Light');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (target.activeTurns) {
+					this.boost({accuracy: 1});
+				}
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'Guiding Light');
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Light",
