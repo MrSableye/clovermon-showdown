@@ -479,6 +479,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	combattorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	coil: {
 		inherit: true,
 		isNonstandard: null,
@@ -4128,6 +4132,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	frytoacrisp: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	drinkpotion: {
 		inherit: true,
 		isNonstandard: null,
 	},

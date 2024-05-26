@@ -261,7 +261,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	cockenmega: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	regigigone: {
 		inherit: true,
@@ -1294,6 +1294,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	    genine: {
+	    inherit: true,
+	    isNonstandard: null,
+	    tier: "OU",
+	},
 		jumblinart: {
 		inherit: true,
 		isNonstandard: null,
@@ -1312,7 +1317,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		daemonix: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "NFE",
 	},
 		achaethena: {
 		inherit: true,
@@ -1597,7 +1602,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	alberfectcell: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	gharroste: {
 		inherit: true,
@@ -1660,6 +1665,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 	},
 	routja: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	bootlos: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -5092,6 +5102,11 @@ deisnutz: {
 		"softboiled",
 	],
 	randomBattleLevel: 84,
+},
+fontaba: {
+	inherit: true,
+	tier: "Uber",
+	isNonstandard: null,
 },
 fontabab: {
 	inherit: true,
