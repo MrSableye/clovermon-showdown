@@ -11909,8 +11909,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, recharge: 1, mirror: 1, failinstruct: 1},
-		self: {
-			volatileStatus: 'mustrecharge',
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		secondary: null,
 		target: "normal",
@@ -46066,7 +46068,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -55246,8 +55251,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		self: {
-			volatileStatus: 'mustrecharge',
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		secondary: null,
 		target: "normal",
@@ -55430,8 +55437,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Burst Stream",
 		pp: 5,
 		priority: 0,
-		self: {
-			volatileStatus: 'mustrecharge',
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -59852,6 +59861,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		secondary: null,
+		volatileStatus: 'confusion',
+		boosts: {
+			atk: 3,
+		},
 		target: "self",
 		type: "Food",
 		isNonstandard: "Future",
@@ -61486,8 +61499,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "STONER SUNSHINE",
 		pp: 5,
 		priority: 0,
-		self: {
-			volatileStatus: 'mustrecharge',
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -61854,8 +61869,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
-		self: {
-			volatileStatus: 'mustrecharge',
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		critRatio: 2,
 		target: "normal",
@@ -62166,7 +62183,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 9,
+			boosts: {
+				def: -1,
+			},
+		},
+		multihit: 9,
 		target: "normal",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -65964,8 +65987,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Flavor Town",
 		pp: 5,
 		priority: 0,
-		self: {
-			volatileStatus: 'mustrecharge',
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -70303,7 +70328,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -76901,6 +76929,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onHit(target) {
+			target.setType(target.getTypes(true).map(type => type === "Posion" ? "???" : type), false, target, this.effect);
+			this.add('-start', target, 'typechange', target.getTypes().join('/'), '[from] move: Antivenom');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -76915,7 +76947,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		ignoreImmunity: {'Electric': true},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Ground') return 1;
+		},
+		secondary: {
+			chance: 15,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -80700,7 +80739,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -2,
+			},
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",

@@ -4334,6 +4334,20 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	gigaimpact: {
 		inherit: true,
+			accuracy: 90,
+			basePower: 150,
+			category: "Physical",
+			name: "Giga Impact",
+			pp: 5,
+			priority: 0,
+			flags: {contact: 1, recharge: 1, protect: 1, mirror: 1},
+			self: {
+				volatileStatus: 'mustrecharge',
+			},
+			secondary: null,
+			target: "normal",
+			type: "Normal",
+			contestType: "Tough",
 		isNonstandard: null,
 	},
 	gigatonhammer: {
@@ -4458,6 +4472,20 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	hyperbeam: {
 		inherit: true,
+		accuracy: 90,
+			basePower: 150,
+			category: "Physical",
+			name: "Giga Impact",
+			pp: 5,
+			priority: 0,
+			flags: {contact: 1, recharge: 1, protect: 1, mirror: 1},
+			self: {
+				volatileStatus: 'mustrecharge',
+			},
+			secondary: null,
+			target: "normal",
+			type: "Normal",
+			contestType: "Tough",
 		isNonstandard: null,
 	},
 	hyperdrill: {
