@@ -261,7 +261,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	cockenmega: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	regigigone: {
 		inherit: true,
