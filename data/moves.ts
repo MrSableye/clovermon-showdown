@@ -36164,6 +36164,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {},
+		onHit(target) {
+			const stats: BoostID[] = [];
+			let stat: BoostID;
+			for (stat in target.boosts) {
+				if (target.boosts[stat] < 6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = 2;
+				this.boost(boost);
+			} else {
+				return false;
+			}
+		},
 		secondary: null,
 		target: "self",
 		type: "Cyber",
@@ -36786,6 +36803,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 4],
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
@@ -44813,6 +44831,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower + 20 * pokemon.positiveBoosts();
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -45149,6 +45172,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Sound",
@@ -45285,7 +45309,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					def: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -46054,7 +46085,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -46085,7 +46119,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			boosts: {
+				def: -1,
+			},
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Cyber",
@@ -49561,6 +49600,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, punch: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Cyber",
@@ -51502,6 +51542,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		recoil: [1, 4],
 		target: "normal",
 		type: "Zombie",
 		isNonstandard: "Future",
@@ -51812,6 +51853,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower + 20 * pokemon.positiveBoosts();
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Sound",
@@ -52048,6 +52094,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: -4,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const damagedByTarget = pokemon.attackedBy.some(
+				p => p.source === target && p.damage > 0 && p.thisTurn
+			);
+			if (damagedByTarget) {
+				this.debug('BP doubled for getting hit by ' + target);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Rubber",
@@ -52806,6 +52862,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		recoil: [1, 4],
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -57341,6 +57398,46 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		volatileStatus: 'cyberboost',
+		condition: {
+			onStart(pokemon, source, effect) {
+				if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
+					this.add('-start', pokemon, 'Cyberboost', this.activeMove!.name, '[from] ability: ' + effect.name);
+				} else {
+					this.add('-start', pokemon, 'Cyberboost');
+				}
+			},
+			onRestart(pokemon, source, effect) {
+				if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
+					this.add('-start', pokemon, 'Cyberboost', this.activeMove!.name, '[from] ability: ' + effect.name);
+				} else {
+					this.add('-start', pokemon, 'Cyberboost');
+				}
+			},
+			onBasePowerPriority: 9,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Cyber') {
+					this.debug('charge boost');
+					return this.chainModify(2);
+				}
+			},
+			onMoveAborted(pokemon, target, move) {
+				if (move.type === 'Cyber' && move.id !== 'charge') {
+					pokemon.removeVolatile('cyberboost');
+				}
+			},
+			onAfterMove(pokemon, target, move) {
+				if (move.type === 'Cyber' && move.id !== 'charge') {
+					pokemon.removeVolatile('cyberboost');
+				}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Cyberboost', '[silent]');
+			},
+		},
+		boosts: {
+			spe: 2,
+		},
 		secondary: null,
 		target: "self",
 		type: "Cyber",
@@ -57396,7 +57493,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Cloud Storage",
 		pp: 20,
 		priority: 0,
-		flags: {},
+		flags: {failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1},
+		onHit(target) {
+			const moves = [];
+			for (const pokemon of target.side.pokemon) {
+				if (pokemon === target) continue;
+				for (const moveSlot of pokemon.moveSlots) {
+					const moveid = moveSlot.id;
+					const move = this.dex.moves.get(moveid);
+					if (move.flags['noassist'] || move.isZ || move.isMax) {
+						continue;
+					}
+					moves.push(moveid);
+				}
+			}
+			let randomMove = '';
+			if (moves.length) randomMove = this.sample(moves);
+			if (!randomMove) {
+				return false;
+			}
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
 		target: "self",
 		type: "Cyber",
@@ -57643,6 +57760,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
 		target: "allAdjacent",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -57873,6 +57995,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			const i = this.random(100);
+			if (i < 5) {
+				move.magnitude = 4;
+				move.basePower = 10;
+			} else if (i < 15) {
+				move.magnitude = 5;
+				move.basePower = 30;
+			} else if (i < 35) {
+				move.magnitude = 6;
+				move.basePower = 50;
+			} else if (i < 65) {
+				move.magnitude = 7;
+				move.basePower = 70;
+			} else if (i < 85) {
+				move.magnitude = 8;
+				move.basePower = 90;
+			} else if (i < 95) {
+				move.magnitude = 9;
+				move.basePower = 110;
+			} else {
+				move.magnitude = 10;
+				move.basePower = 150;
+			}
+		},
+		onUseMoveMessage(pokemon, target, move) {
+			this.add('-activate', pokemon, 'move: Chromo Beam', move.magnitude);
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Light",
@@ -57887,6 +58037,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			const i = this.random(100);
+			if (i < 5) {
+				move.magnitude = 4;
+				move.basePower = 10;
+			} else if (i < 15) {
+				move.magnitude = 5;
+				move.basePower = 30;
+			} else if (i < 35) {
+				move.magnitude = 6;
+				move.basePower = 50;
+			} else if (i < 65) {
+				move.magnitude = 7;
+				move.basePower = 70;
+			} else if (i < 85) {
+				move.magnitude = 8;
+				move.basePower = 90;
+			} else if (i < 95) {
+				move.magnitude = 9;
+				move.basePower = 110;
+			} else {
+				move.magnitude = 10;
+				move.basePower = 150;
+			}
+		},
+		onUseMoveMessage(pokemon, target, move) {
+			this.add('-activate', pokemon, 'move: Random Generate', move.magnitude);
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Cyber",
@@ -57959,6 +58137,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			const i = this.random(100);
+			if (i < 5) {
+				move.magnitude = 4;
+				move.basePower = 10;
+			} else if (i < 15) {
+				move.magnitude = 5;
+				move.basePower = 30;
+			} else if (i < 35) {
+				move.magnitude = 6;
+				move.basePower = 50;
+			} else if (i < 65) {
+				move.magnitude = 7;
+				move.basePower = 70;
+			} else if (i < 85) {
+				move.magnitude = 8;
+				move.basePower = 90;
+			} else if (i < 95) {
+				move.magnitude = 9;
+				move.basePower = 110;
+			} else {
+				move.magnitude = 10;
+				move.basePower = 150;
+			}
+		},
+		onUseMoveMessage(pokemon, target, move) {
+			this.add('-activate', pokemon, 'move: Gale Force', move.magnitude);
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Wind",
@@ -57973,6 +58179,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			const i = this.random(100);
+			if (i < 5) {
+				move.magnitude = 4;
+				move.basePower = 10;
+			} else if (i < 15) {
+				move.magnitude = 5;
+				move.basePower = 30;
+			} else if (i < 35) {
+				move.magnitude = 6;
+				move.basePower = 50;
+			} else if (i < 65) {
+				move.magnitude = 7;
+				move.basePower = 70;
+			} else if (i < 85) {
+				move.magnitude = 8;
+				move.basePower = 90;
+			} else if (i < 95) {
+				move.magnitude = 9;
+				move.basePower = 110;
+			} else {
+				move.magnitude = 10;
+				move.basePower = 150;
+			}
+		},
+		onUseMoveMessage(pokemon, target, move) {
+			this.add('-activate', pokemon, 'move: Fear Factor', move.magnitude);
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Fear",
@@ -60120,6 +60354,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Grass",
@@ -61519,6 +61754,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: -4,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const damagedByTarget = pokemon.attackedBy.some(
+				p => p.source === target && p.damage > 0 && p.thisTurn
+			);
+			if (damagedByTarget) {
+				this.debug('BP doubled for getting hit by ' + target);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -63731,6 +63976,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, beak: 1},
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Flying",
@@ -64458,6 +64704,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			const i = this.random(100);
+			if (i < 5) {
+				move.magnitude = 4;
+				move.basePower = 10;
+			} else if (i < 15) {
+				move.magnitude = 5;
+				move.basePower = 30;
+			} else if (i < 35) {
+				move.magnitude = 6;
+				move.basePower = 50;
+			} else if (i < 65) {
+				move.magnitude = 7;
+				move.basePower = 70;
+			} else if (i < 85) {
+				move.magnitude = 8;
+				move.basePower = 90;
+			} else if (i < 95) {
+				move.magnitude = 9;
+				move.basePower = 110;
+			} else {
+				move.magnitude = 10;
+				move.basePower = 150;
+			}
+		},
+		onUseMoveMessage(pokemon, target, move) {
+			this.add('-activate', pokemon, 'move: Degree Burn', move.magnitude);
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Fire",
@@ -64633,7 +64907,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			volatileStatus: 'confusion',
+		},
 		target: "allAdjacentFoes",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -66871,6 +67148,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Steam",
@@ -69083,6 +69361,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: -4,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const damagedByTarget = pokemon.attackedBy.some(
+				p => p.source === target && p.damage > 0 && p.thisTurn
+			);
+			if (damagedByTarget) {
+				this.debug('BP doubled for getting hit by ' + target);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Flying",
@@ -69435,6 +69723,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -69743,6 +70032,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Flying",
@@ -69978,6 +70268,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		recoil: [1, 4],
 		secondary: null,
 		target: "normal",
 		type: "Blood",
@@ -70430,6 +70721,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target, source) {
+			if (target.getTypes().join() === 'Pyschic' || !target.setType('Psychic', false, source, this.effect)) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Psychic');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
@@ -71007,6 +71307,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Cyber",
@@ -71021,6 +71322,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Cyber",
@@ -71050,6 +71352,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: -4,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const damagedByTarget = pokemon.attackedBy.some(
+				p => p.source === target && p.damage > 0 && p.thisTurn
+			);
+			if (damagedByTarget) {
+				this.debug('BP doubled for getting hit by ' + target);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -71137,6 +71449,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Virus",
@@ -72236,6 +72549,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 4],
 		secondary: null,
 		target: "normal",
 		type: "Qmarks",
@@ -74485,6 +74799,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -74603,6 +74918,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 10,
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -75039,6 +75355,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const damagedByTarget = pokemon.attackedBy.some(
+				p => p.source === target && p.damage > 0 && p.thisTurn
+			);
+			if (damagedByTarget) {
+				this.debug('BP doubled for getting hit by ' + target);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Cyber",
@@ -78522,7 +78848,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			onHit(target, source, move) {
+				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+			},
+		},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('healblock');
+				target.addVolatile('torment');
+				target.addVolatile('taunt');
+			}
+		},
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -78551,7 +78889,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('cyberspace');
+				},
+			},
+		},
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -78565,7 +78910,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			onHit(target, source, move) {
+				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+			},
+		},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('healblock');
+				target.addVolatile('torment');
+				target.addVolatile('taunt');
+			}
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -80531,7 +80888,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			boosts: {
+				atk: -1,
+				def: -1,
+				spa: -1,
+				spd: -1,
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -80546,6 +80912,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		multihit: 2,
 		target: "allAdjacentFoes",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -80592,6 +80959,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -81527,7 +81895,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -82268,6 +82639,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 4],
 		secondary: null,
 		target: "normal",
 		type: "Cyber",
@@ -82442,6 +82814,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -82945,7 +83318,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			volatileStatus: 'attract',
+		},
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -83687,6 +84063,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower + 20 * pokemon.positiveBoosts();
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Cyber",
@@ -83730,6 +84111,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 40,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower + 20 * pokemon.positiveBoosts();
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Qmarks",
@@ -83899,7 +84285,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				atk: -1,
+				def: -1,
+				spa: -1,
+				spd: -1,
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -84023,6 +84418,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower + 20 * pokemon.positiveBoosts();
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
@@ -84415,6 +84815,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 30,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			const i = this.random(100);
+			if (i < 5) {
+				move.magnitude = 4;
+				move.basePower = 10;
+			} else if (i < 15) {
+				move.magnitude = 5;
+				move.basePower = 30;
+			} else if (i < 35) {
+				move.magnitude = 6;
+				move.basePower = 50;
+			} else if (i < 65) {
+				move.magnitude = 7;
+				move.basePower = 70;
+			} else if (i < 85) {
+				move.magnitude = 8;
+				move.basePower = 90;
+			} else if (i < 95) {
+				move.magnitude = 9;
+				move.basePower = 110;
+			} else {
+				move.magnitude = 10;
+				move.basePower = 150;
+			}
+		},
+		onUseMoveMessage(pokemon, target, move) {
+			this.add('-activate', pokemon, 'move: Judge', move.magnitude);
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Cyber",
@@ -84514,6 +84942,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Fire",
@@ -84528,6 +84957,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Fire",
@@ -85104,6 +85534,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 4],
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
@@ -85339,7 +85770,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",

@@ -925,10 +925,48 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.add('-start', target, 'typechange', type);
 		},
 		isNonstandard: null,
+		
+		onAfterHit(target) {
+			if (this.field.getPseudoWeather('cyberspace')) {
+				this.boost({
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				});
+			} 
+		},
 	},
 	conversion2: {
 		inherit: true,
 		pp: 5,
+		onHit(target, source) {
+			if (!target.lastMoveUsed) {
+				return false;
+			}
+			const possibleTypes = [];
+			const attackType = target.lastMoveUsed.type;
+			for (const type of this.dex.types.names()) {
+				if (source.hasType(type)) continue;
+				const typeCheck = this.dex.types.get(type).damageTaken[attackType];
+				if (typeCheck === 2 || typeCheck === 3) {
+					possibleTypes.push(type);
+				}
+			}
+			if (!possibleTypes.length) {
+				return false;
+			}
+			const randomType = this.sample(possibleTypes);
+
+			if (!source.setType(randomType, false, source, this.effect)) return false;
+			this.add('-start', source, 'typechange', randomType);
+		},
+		onAfterHit(pokemon) {if (this.field.getPseudoWeather('cyberspace')) {
+			const success = !!this.heal(this.modify(pokemon.maxhp, 1.0));
+			return pokemon.cureStatus() || success;
+		}
+		},
 		isNonstandard: null,
 	},
 	cosmicpower: {	// TODO: Add +1 speed boost during Starfield
