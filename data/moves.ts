@@ -47150,6 +47150,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
 		secondary: null,
+		self: {
+			boosts: {
+				atk: -1,
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -50799,6 +50805,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		self: {
+			boosts: {
+				atk: -1,
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -50877,6 +50889,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		self: {
+			boosts: {
+				atk: -1,
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -57398,20 +57416,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
-		volatileStatus: 'cyberboost',
+		volatileStatus: 'defragment',
 		condition: {
 			onStart(pokemon, source, effect) {
 				if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
-					this.add('-start', pokemon, 'Cyberboost', this.activeMove!.name, '[from] ability: ' + effect.name);
+					this.add('-start', pokemon, 'Defragment', this.activeMove!.name, '[from] ability: ' + effect.name);
 				} else {
-					this.add('-start', pokemon, 'Cyberboost');
+					this.add('-start', pokemon, 'Defragment');
 				}
 			},
 			onRestart(pokemon, source, effect) {
 				if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
-					this.add('-start', pokemon, 'Cyberboost', this.activeMove!.name, '[from] ability: ' + effect.name);
+					this.add('-start', pokemon, 'Defragment', this.activeMove!.name, '[from] ability: ' + effect.name);
 				} else {
-					this.add('-start', pokemon, 'Cyberboost');
+					this.add('-start', pokemon, 'Defragment');
 				}
 			},
 			onBasePowerPriority: 9,
@@ -57422,17 +57440,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 			onMoveAborted(pokemon, target, move) {
-				if (move.type === 'Cyber' && move.id !== 'charge') {
-					pokemon.removeVolatile('cyberboost');
+				if (move.type === 'Cyber' && move.id !== 'defragment') {
+					pokemon.removeVolatile('defragment');
 				}
 			},
 			onAfterMove(pokemon, target, move) {
-				if (move.type === 'Cyber' && move.id !== 'charge') {
-					pokemon.removeVolatile('cyberboost');
+				if (move.type === 'Cyber' && move.id !== 'defragment') {
+					pokemon.removeVolatile('defragment');
 				}
 			},
 			onEnd(pokemon) {
-				this.add('-end', pokemon, 'Cyberboost', '[silent]');
+				this.add('-end', pokemon, 'Defragment', '[silent]');
 			},
 		},
 		boosts: {
@@ -76433,8 +76451,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		pseudoWeather: 'cyberspace',
 		condition: {
 			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('virtualrock')) {
+					return 10;
+				}
+				return 5;
+			},
 			onFieldStart(field, source) {
 				this.add('-fieldstart', 'move: Cyberspace', '[of] ' + source);
 			},
@@ -76457,6 +76482,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-fieldend', 'move: Cyberspace');
 			},
 		},
+		
 		secondary: null,
 		target: "allySide",
 		type: "Cyber",
