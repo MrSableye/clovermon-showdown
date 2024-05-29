@@ -1468,7 +1468,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	hiddenpower: {
 		inherit: true,
-		isNonstandard: null,
+		isNonstandard: "Future",
 	},
 	highhorsepower: {
 		inherit: true,

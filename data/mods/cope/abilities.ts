@@ -679,6 +679,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	quarkdrive: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	queenlymajesty: {
 		inherit: true,
 		isNonstandard: null,
