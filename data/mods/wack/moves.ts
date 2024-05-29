@@ -18213,6 +18213,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		boosts: {
 			accuracy: 2,
 		},
+		onHit(target, source) {
+			if (this.field.getPseudoWeather('cyberspace')) {
+				source.addVolatile('lockon', target);
+				this.add('-activate', source, 'move: Lock-On', '[of] ' + target);
+			}
+		},
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: null,
