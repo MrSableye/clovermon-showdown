@@ -73892,6 +73892,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		sideCondition: 'divinetemple',
+		condition: {
+			duration: 6,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'Divine Temple');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (target.activeTurns) {
+					this.boost({spd: 1});
+				}
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'Divine Temple');
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Divine",
@@ -73906,6 +73925,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		sideCondition: 'chaotictemple',
+		condition: {
+			duration: 6,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'Chaotic Temple');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (target.activeTurns) {
+					this.boost({atk: 1});
+				}
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'Chaotic Temple');
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Chaos",
@@ -73920,6 +73958,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		sideCondition: 'psychictemple',
+		condition: {
+			duration: 6,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'Psychic Temple');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (target.activeTurns) {
+					this.boost({spa: 1});
+				}
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'Psychic Temple');
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Psychic",
