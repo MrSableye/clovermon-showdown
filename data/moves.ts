@@ -44429,7 +44429,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 26,
+			status: 'slp',
+		},
 		target: "allAdjacentFoes",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -47478,6 +47481,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('healblock');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Virus",
@@ -47575,7 +47583,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -47584,6 +47595,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 667422,
 		accuracy: 100,
 		basePower: 70,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'brn') {
+				this.debug('BP doubled on burned target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Special",
 		name: "Extinguish Flame",
 		pp: 10,
@@ -47619,6 +47637,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 667424,
 		accuracy: 100,
 		basePower: 70,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'frz') {
+				this.debug('BP doubled on frozen target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Special",
 		name: "Ice Thaw",
 		pp: 10,
@@ -47638,7 +47663,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 1,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -47652,7 +47680,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 45,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -50948,7 +50979,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				accuracy: -6,
+			},
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -50962,7 +50998,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		volatileStatus: 'confusion',
+		boosts: {
+			accuracy: -1,
+		},
 		target: "allAdjacentFoes",
 		type: "Light",
 		isNonstandard: "Future",
