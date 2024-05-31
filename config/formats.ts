@@ -1281,6 +1281,7 @@ export const Formats: FormatList = [
 			'Pixilate + Extreme Speed',
 			'Raidenetti + Speed Boost',
 			'Alberfect Cell + Pure Power',
+			'Stingulor + Toke',
 			'Catalyst',
 			'Transfusion',
 			'More Room',
