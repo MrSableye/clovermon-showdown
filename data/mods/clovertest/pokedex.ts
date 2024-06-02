@@ -99,6 +99,21 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 80,
 		},
 	},
+	walruskie: {
+	inherit: true,
+	types: [
+			"Water",
+			"Steel",
+		],
+		baseStats: {
+			hp: 110,
+			atk: 105,
+			def: 83,
+			spa: 60,
+			spd: 70,
+			spe: 80,
+		},
+	},
 	venowatt: {
 		inherit: true,
 		abilities: {
