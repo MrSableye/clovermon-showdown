@@ -62584,7 +62584,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, arrow: 1},
-		volatileStatus: 'antaressnipe',
+		volatileStatus: 'gastroacid',
 		ignoreDefensive: true,
 		ignoreEvasion: true,
 		onTryHit(target) {
@@ -62601,10 +62601,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onStart(pokemon) {
 				if (pokemon.hasItem('Ability Shield')) return false;
 				this.add('-endability', pokemon);
-				this.singleEvent('End', pokemon.getAbility(), pokemon.abilityState, pokemon, pokemon, 'antaressnipe');
+				this.singleEvent('End', pokemon.getAbility(), pokemon.abilityState, pokemon, pokemon, 'gastroacid');
 			},
 			onCopy(pokemon) {
-				if (pokemon.getAbility().isPermanent) pokemon.removeVolatile('antaressnipe');
+				if (pokemon.getAbility().isPermanent) pokemon.removeVolatile('gastroacid');
 			},
 		},
 		secondary: null,
