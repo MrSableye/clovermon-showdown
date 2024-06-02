@@ -1268,7 +1268,6 @@ export const Formats: FormatList = [
 		banlist: [
 			'AG',
 			'Uber',
-			'Baton Pass',
 			'Moody',
 			'Arena Trap',
 			'Shadow Tag',
