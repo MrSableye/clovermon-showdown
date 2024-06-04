@@ -1674,6 +1674,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	popecap: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	/* Clover Unbans and Bans */
     tentaquil: {
 		inherit: true,
