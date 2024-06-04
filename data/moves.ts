@@ -43980,7 +43980,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Ghost",
 		isNonstandard: "Future",
-	},nibilize: {
+	},
+	cannibilize: {
 		num: 667184,
 		accuracy: 100,
 		basePower: 150,
