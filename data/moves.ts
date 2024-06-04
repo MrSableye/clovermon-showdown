@@ -44659,7 +44659,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 26,
+			status: 'slp',
+		},
 		target: "allAdjacentFoes",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -45391,6 +45394,43 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove(move, pokemon, target) {
+			if (pokemon.volatiles['duel'] || pokemon.status === 'slp' || !target) return;
+			pokemon.addVolatile('duel');
+			// @ts-ignore
+			// TS thinks pokemon.volatiles['duel'] doesn't exist because of the condition on the return above
+			// but it does exist now because addVolatile created it
+			pokemon.volatiles['duel'].targetSlot = move.sourceEffect ? pokemon.lastMoveTargetLoc : pokemon.getLocOf(target);
+		},
+		onAfterMove(source, target, move) {
+			const iceballData = source.volatiles["duel"];
+			if (
+				duelData &&
+				duelData.hitCount === 5 &&
+				duelData.contactHitCount < 5
+				// this conditions can only be met in gen7 and gen8dlc1
+				// see `disguise` and `iceface` abilities in the resp mod folders
+			) {
+				source.addVolatile("rolloutstorage");
+				source.volatiles["rolloutstorage"].contactHitCount =
+				duelData.contactHitCount;
+			}
+		},
+
+		condition: {
+			duration: 1,
+			onLockMove: 'duel',
+			onStart() {
+				this.effectState.hitCount = 0;
+				this.effectState.contactHitCount = 0;
+			},
+			onResidual(target) {
+				if (target.lastMove && target.lastMove.id === 'struggle') {
+					// don't lock
+					delete target.volatiles['duel'];
+				}
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -48215,7 +48255,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -48224,6 +48267,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 667422,
 		accuracy: 100,
 		basePower: 70,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'brn') {
+				this.debug('BP doubled on burned target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Special",
 		name: "Extinguish Flame",
 		pp: 10,
@@ -48259,6 +48309,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 667424,
 		accuracy: 100,
 		basePower: 70,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'frz') {
+				this.debug('BP doubled on frozen target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Special",
 		name: "Ice Thaw",
 		pp: 10,
@@ -48278,7 +48335,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 1,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -48292,7 +48352,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 45,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -51760,7 +51823,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				accuracy: -6,
+			},
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -51774,7 +51842,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		volatileStatus: 'confusion',
+		boosts: {
+			accuracy: -1,
+		},
 		target: "allAdjacentFoes",
 		type: "Light",
 		isNonstandard: "Future",
@@ -62599,6 +62670,29 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, arrow: 1},
+		volatileStatus: 'gastroacid',
+		ignoreDefensive: true,
+		ignoreEvasion: true,
+		onTryHit(target) {
+			if (target.getAbility().isPermanent) {
+				return false;
+			}
+			if (target.hasItem('Ability Shield')) {
+				this.add('-block', target, 'item: Ability Shield');
+				return null;
+			}
+		},
+		condition: {
+			// Ability suppression implemented in Pokemon.ignoringAbility() within sim/pokemon.ts
+			onStart(pokemon) {
+				if (pokemon.hasItem('Ability Shield')) return false;
+				this.add('-endability', pokemon);
+				this.singleEvent('End', pokemon.getAbility(), pokemon.abilityState, pokemon, pokemon, 'gastroacid');
+			},
+			onCopy(pokemon) {
+				if (pokemon.getAbility().isPermanent) pokemon.removeVolatile('gastroacid');
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -74056,6 +74150,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		sideCondition: 'divinetemple',
+		condition: {
+			duration: 6,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'Divine Temple');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (target.activeTurns) {
+					this.boost({spd: 1});
+				}
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'Divine Temple');
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Divine",
@@ -74070,6 +74183,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		sideCondition: 'chaotictemple',
+		condition: {
+			duration: 6,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'Chaotic Temple');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (target.activeTurns) {
+					this.boost({atk: 1});
+				}
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'Chaotic Temple');
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Chaos",
@@ -74084,6 +74216,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		sideCondition: 'psychictemple',
+		condition: {
+			duration: 6,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'Psychic Temple');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (target.activeTurns) {
+					this.boost({spa: 1});
+				}
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'Psychic Temple');
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Psychic",
