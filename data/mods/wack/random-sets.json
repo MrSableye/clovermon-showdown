@@ -546,7 +546,37 @@
         "lockedMoves": [
           "rockblast"
         ],
-        "level": 84
+        "level": 86
+      }
+    ]
+  },
+  "entrailgrowth": {
+    "nicknames": [
+      "Entrailgrowth"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sadist"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "gorgoneye",
+          "knockoff",
+          "sadistwhip",
+          "purefear",
+          "bloodbathe",
+          "brambles",
+          "zombieacid"
+
+        ],
+        "lockedMoves": [
+          "bloodboil"
+        ],
+        "level": 86
       }
     ]
   },
@@ -1474,7 +1504,143 @@
           "hypnosis"
         ],
         "lockedMoves": [
-          "downpower"
+          "downpoor"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "demonig": {
+    "nicknames": [
+      "Demonig"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sandforce"
+        ],
+        "items": [
+          "vampirefangs"
+        ],
+        "moves": [
+          "doom",
+          "crunch",
+          "ironchomp"
+        ],
+        "lockedMoves": [
+          "earthchomp"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cracholiath": {
+    "nicknames": [
+      "Cracholiath"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "stealthrock",
+          "spikes",
+          "memento",
+          "pursuit",
+          "blackout"
+        ],
+        "lockedMoves": [
+          "earthchomp"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "dooworm": {
+    "nicknames": [
+      "Dooworm"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "regenerator",
+          "sheerforce"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "assaultvest",
+          "choiceband",
+          "choicescarf"
+        ],
+        "moves": [
+          "fireblast",
+          "thunderbolt",
+          "tunnelaway",
+          "leechlife"
+        ],
+        "lockedMoves": [
+          "earthchomp"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "castedea": {
+    "nicknames": [
+      "Castedea"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "skilllink"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb"
+        ],
+        "moves": [
+          "summondragons",
+          "summonminions",
+          "ceremony",
+          "rainoflight"
+        ],
+        "lockedMoves": [
+          "rulebreaker"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "nurserhyme": {
+    "nicknames": [
+      "Nurserhyme"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "synchronize"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb"
+        ],
+        "moves": [
+          "jabberwock",
+          "queensglassgame",
+          "nastyplot",
+          "rewrite",
+          "pixiedust"
+        ],
+        "lockedMoves": [
+          "nursaryrhyme"
         ],
         "level": 84
       }
@@ -1826,15 +1992,19 @@
           "strongjaw"
         ],
         "items": [
-          "vammpirefangs"
+          "vampirefangs"
         ],
         "moves": [
-          "lowkick",
-          "lightscreen",
-          "reflect"
+          "dragondance",
+          "superfang",
+          "firefang",
+          "psychicfangs",
+          "icefang",
+          "thunderfang",
+          "swordsdance"
         ],
         "lockedMoves": [
-          "boulderbash"
+          "crunch"
         ],
         "level": 84
       }
@@ -2231,6 +2401,149 @@
       }
     ]
   },
+  "standohierophantgreen": {
+    "nicknames": [
+      "Stando-HierophantGreen"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "analytic"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "possesion",
+          "diamondstorm",
+          "calmmind",
+          "aurasphere",
+          "rockpolish",
+          "toxic"
+        ],
+        "lockedMoves": [
+          "ectoblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standohermitpurple": {
+    "nicknames": [
+      "Stando-HermitPurple"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "taunt",
+          "reflect",
+          "stunspore",
+          "powerwhip",
+          "mania",
+          "uturn"
+        ],
+        
+        "level": 84
+      }
+    ]
+  },
+  "standomagiciansred": {
+    "nicknames": [
+      "Stando-MagiciansRed"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicbounce"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "arcanebolt",
+          "healingwish",
+          "kindle",
+          "beacon",
+          "magicflames"
+        ],
+        "lockedMoves": [
+          "crossfirehurricane"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "maryanncer": {
+    "nicknames": [
+      "Maryanncer"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "trace"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "stealthrock",
+          "spikes",
+          "reptize",
+          "summondragons",
+          "thunderdrill",
+          "rockgather",
+          "dragonruins"
+        ],
+        "lockedMoves": [
+          "duriaantiquior"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "betalapras": {
+    "nicknames": [
+      "Beta Lapras"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "waterabsorb",
+          "drizzle"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "cooldown",
+          "mysticdance",
+          "thunderbolt",
+          "soulchill",
+          "sonar"
+        ],
+        "lockedMoves": [
+          "freezingwave"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "standoearthwindandfire": {
     "nicknames": [
       "Stando-EarthWindandFire"
@@ -2304,7 +2617,7 @@
   },
   "Kaguyainbow": {
     "kaguyainbow": [
-      "A Monster"
+      "kaguyainbow"
     ],
     "sets": [
       {
