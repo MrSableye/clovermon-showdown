@@ -34598,6 +34598,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			def: 1,
+			spd: 2,
+		},
 		secondary: null,
 		target: "self",
 		type: "Tech",
@@ -41918,6 +41922,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Splinter",
 		pp: 20,
 		priority: 0,
+		self: {
+			volatileStatus: 'rage',
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -42755,6 +42762,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		self: {
+			boosts: {
+				spe: -1,
+				def: -1,
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -53906,6 +53920,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		boosts: {
+			spd: -2,
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Water",
@@ -57823,6 +57839,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'klutz' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('klutz');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Klutz', '[from] move: Deviation Down');
+				return;
+			}
+			return oldAbility as false | null;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
@@ -59584,6 +59613,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Warmup Flex",
 		pp: 10,
 		priority: 0,
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Fake Out only works on your first turn out.");
+				return false;
+			}
+		},
+		boosts: {
+			spe: 1,
+			def: 1,
+			atk: 1,
+		},
 		flags: {snatch: 1},
 		secondary: null,
 		target: "self",
@@ -59723,7 +59763,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
-		secondary: null,
+		secondary: {
+			chance: 60,
+			boosts: {
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Wood",
 		isNonstandard: "Future",
@@ -65744,6 +65789,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 1,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'wonderguard' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('wonderguard');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Wonder Guard', '[from] move: Nanobot Barrier');
+				return;
+			}
+		},
 		secondary: null,
 		target: "self",
 		type: "Tech",
@@ -67592,6 +67649,46 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1},
+		volatileStatus: 'steamup',
+		condition: {
+			onStart(pokemon, source, effect) {
+				if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
+					this.add('-start', pokemon, 'Steamup', this.activeMove!.name, '[from] ability: ' + effect.name);
+				} else {
+					this.add('-start', pokemon, 'Steamup');
+				}
+			},
+			onRestart(pokemon, source, effect) {
+				if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
+					this.add('-start', pokemon, 'Steamup', this.activeMove!.name, '[from] ability: ' + effect.name);
+				} else {
+					this.add('-start', pokemon, 'Steamup');
+				}
+			},
+			onBasePowerPriority: 9,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Steam') {
+					this.debug('charge boost');
+					return this.chainModify(2);
+				}
+			},
+			onMoveAborted(pokemon, target, move) {
+				if (move.type === 'Steam' && move.id !== 'steamup') {
+					pokemon.removeVolatile('steamup');
+				}
+			},
+			onAfterMove(pokemon, target, move) {
+				if (move.type === 'Steam' && move.id !== 'steamup') {
+					pokemon.removeVolatile('steamup');
+				}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Steamup', '[silent]');
+			},
+		},
+		boosts: {
+			spd: 2,
+		},
 		secondary: null,
 		target: "self",
 		type: "Steam",
@@ -68063,7 +68160,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Zombie",
 		isNonstandard: "Future",
@@ -69035,6 +69135,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			spe: 2,
+			atk: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Wood",
@@ -70073,6 +70177,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Tech",
@@ -76543,7 +76648,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Due Date",
 		pp: 10,
 		priority: 0,
+		ignoreImmunity: true,
 		flags: {},
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 3,
+				move: 'duedate',
+				source: source,
+				moveData: {
+					id: 'duedate',
+					name: "Due Date",
+					accuracy: 100,
+					basePower: 100,
+					category: "Special",
+					priority: 0,
+					flags: {allyanim: 1, futuremove: 1},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					type: 'Paper',
+				},
+			});
+			this.add('-start', source, 'move: Due Date');
+			return this.NOT_FAIL;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Paper",
@@ -77308,6 +77436,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'noguard' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('noguard');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'No Guard', '[from] move: Drop Guard');
+				return;
+			}
+			return oldAbility as false | null;
+		},
 		secondary: null,
 		target: "self",
 		type: "Fighting",
@@ -82753,6 +82894,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyType(move, pokemon) {
+			if (pokemon.ignoringItem()) return;
+			move.type = this.runEvent('Gem', pokemon, null, move, 'Normal');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
