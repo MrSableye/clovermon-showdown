@@ -53922,6 +53922,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		boosts: {
 			spd: -2,
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Water",
