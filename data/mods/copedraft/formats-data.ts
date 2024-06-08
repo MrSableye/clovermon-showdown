@@ -1209,6 +1209,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "NFE",
 	},
+		yanture: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
 	    seaman: {
 		inherit: true,
 		isNonstandard: null,
