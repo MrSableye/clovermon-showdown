@@ -1057,10 +1057,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ragingbull: {
-		inherit: true,
-		isNonstandard: null,
-	},
+	
 	makeitrain: {
 		inherit: true,
 		isNonstandard: null,
@@ -1174,10 +1171,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ivycudgel: {
-		inherit: true,
-		isNonstandard: null,
-	},
+	
 	matchagotcha: {
 		inherit: true,
 		isNonstandard: null,

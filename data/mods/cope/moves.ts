@@ -4673,10 +4673,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ragingbull: {
-		inherit: true,
-		isNonstandard: null,
-	},
+	
 	infernalparade: {
 		inherit: true,
 		isNonstandard: null,

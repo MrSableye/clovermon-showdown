@@ -24,6 +24,103 @@
       }
     ]
   },
+  "shadowhedgehog": {
+    "nicknames": [
+      "Shadowhedgehog"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "rapidspin",
+          "taunt",
+          "torment",
+          "shadowball",
+          "extremespeed",
+          "machinegun"
+        ],
+        "lockedMoves": [
+          "darkpulse"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "arceus": {
+    "nicknames": [
+      "Arceus"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "multitype"
+        ],
+        "items": [
+          "agesplate",
+          "angelplate",
+          "arcaneplate",
+          "artplate",
+          "crystalplate",
+          "demonicplate",
+          "digitalplate",
+          "dracoplate",
+          "dreadplate",
+          "earthplate",
+          "elasticplate",
+          "emotionplate",
+          "fatplate",
+          "fistplate",
+          "flameplate",
+          "glassplate",
+          "ichorplate",
+          "icicleplate",
+          "infectionplate",
+          "infoplate",
+          "insectplate",
+          "ironplate",
+          "lavaplate",
+          "lumberplate",
+          "lusterplate",
+          "machineplate",
+          "meadowplate",
+          "mindplate",
+          "onionplate",
+          "paperplate",
+          "phobiaplate",
+          "pixieplate",
+          "plasticplate",
+          "radiationplate",
+          "skyplate",
+          "spaceplate",
+          "splashplate",
+          "spookyplate",
+          "stoneplate",
+          "tornadoplate",
+          "toxicplate",
+          "undeadplate",
+          "vaporplate",
+          "zapplate"
+        ],
+        "moves": [
+          "multiattack",
+          "metronome",
+          "assist",
+          "mefirst",
+          "mirrormove"
+        ],
+        "lockedMoves": [
+          "judgment"
+        ],
+        "level": 70
+      }
+    ]
+  },
   "mothmowl": {
     "nicknames": [
       "Mothmowl"
@@ -58,7 +155,7 @@
           "berserker"
         ],
         "items": [
-          "choicescarf"
+          "lifeorb"
         ],
         "moves": [
           "warpaway",
@@ -244,6 +341,88 @@
       }
     ]
   },
+  "Sprite007": {   
+    "nicknames": [   
+      "Clifford",    
+      "Michael"
+    ],
+    "sets": [
+      {
+        "abilities": [   
+          "speedboost"
+        ],
+        "items": [
+          "focussash",
+          "focusband", 
+          "chaosdust",
+          "choiceband"
+        ],
+        "moves": [     
+          "insanity",
+          "closecombat",    
+          "demonicclaws",
+          "crunch",
+          "icefang", 
+          "pursuit", 
+          "playrough", 
+          "firepunch", 
+          "cbt",  
+          "crazytackle",     
+          "gigaimpact",
+          "lastresort", 
+          "crushclaw",            
+          "lick"
+        ],
+        "lockedMoves": [   
+          "reversal",
+          "insanity"
+        ],
+        "level": 88         
+      },  
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "focussash"    
+        ],
+        "lockedMoves": [
+          "yawn",
+          "crunch",
+          "insanity",
+          "vibecheck"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "giantwoman": {
+    "nicknames": [
+      "Giant Woman"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "hugepower"
+        ],
+        "items": [
+          "spikedboots",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "crushgrip",
+          "earthquake",
+          "heavyslam",
+          "teeterdance",
+          "focuspunch"
+        ],
+        "lockedMoves": [
+          "stomp"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "qwilshark": {
     "nicknames": [
       "Qwilshark"
@@ -273,6 +452,132 @@
       }
     ]
   },
+  "memaster": {
+    "nicknames": [
+      "Memaster"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "filter"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "infoplate"
+        ],
+        "moves": [
+          "infooverload",
+          "nastyplot",
+          "memento",
+          "sonar",
+          "zapcannon"
+        ],
+        "lockedMoves": [
+          "risinginfo"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "anglereist": {
+    "nicknames": [
+      "Anglereist"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "infected",
+          "adaptability"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "undeadplate",
+          "heavydutyboots",
+          "choiceband",
+          "choicescarf",
+          "assaultvest"
+        ],
+        "moves": [
+          "zombiebite",
+          "riptide",
+          "soulhound",
+          "shadowsneak",
+          "leechlife"
+        ],
+        "lockedMoves": [
+          "rigormortis"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "babbaster": {
+    "nicknames": [
+      "Babbaster"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "isolation"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "machineplate",
+          "vaporplate",
+          "heavydutyboots"
+          
+        ],
+        "moves": [
+          "energyshield",
+          "steamclean",
+          "sauna",
+          "techsavvy",
+          "steamup"
+        ],
+        "lockedMoves": [
+          "technoray",
+          "dimensionofsteam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "rhyperior": {
+    "nicknames": [
+      "Rhyperior"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "moldbreaker",
+          "solidrock"
+        ],
+        "items": [
+          "softsand",
+          "rockyhelmet",
+          "stoneplate"
+        ],
+        "moves": [
+          "accelerock",
+          "bodypress",
+          "batteringram",
+          "bolderbash",
+          "flintstrke",
+          "heatcrash",
+          "megadrill",
+          "piercinghorn",
+          "earthquake",
+          "rockpolish",
+          "stealthrock",
+          "swordsdance"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "skylax": {
     "nicknames": [
       "Skylax"
@@ -292,7 +597,7 @@
           "heatcrash",
           "heavyslam",
           "encore",
-          "darksestlariat",
+          "darkestlariat",
           "gastroacid"
         ],
         "lockedMoves": [
@@ -330,6 +635,82 @@
       }
     ]
   },
+  "paperbowser": {
+    "nicknames": [
+      "Paper Bowser"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "roughskin"
+        ],
+        "items": [
+          "rockyhelmet",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "papersharpening",
+          "flamecharge",
+          "earthquake",
+          "aquatail",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "papercharge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "armisy": {
+    "nicknames": [
+      "Armisy"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "unaware",
+          "protean"
+        ],
+        "items": [
+          "rockyhelmet",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "angelburst",
+          "deliverance",
+          "holysacrifice",
+          "powerswap"
+        ],
+        
+        "level": 84
+      }
+    ]
+  },
+  "bowserjr": {
+    "nicknames": [
+      "Bowser Jr."
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "unburden"
+        ],
+        "items": [
+          "lumberry"
+        ],
+        "moves": [
+          "mines",
+          "carcrash",
+          "cannonball",
+          "explosion"
+        ],
+        
+        "level": 84
+      }
+    ]
+  },
   "whitehand": {
     "nicknames": [
       "White Hand"
@@ -346,7 +727,7 @@
         ],
         "moves": [
           "brutal",
-          "paintsplit",
+          "painsplit",
           "ghastlyhand",
           "shadowclaw"
         ],
@@ -703,6 +1084,127 @@
       }
     ]
   },
+  "standohangedman": {
+    "nicknames": [
+      "Hanged Man"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicbounce"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "whiteherb"
+        ],
+        "moves": [
+          "shamble",
+          "shatter",
+          "noose"
+        ],
+        "lockedMoves": [
+          "cryptblade",
+          "glassblade"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standobabyface": {
+    "nicknames": [
+      "Babby Face"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "download"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb"
+        ],
+        "moves": [
+          "foulplay",
+          "earthquake",
+          "defragment",
+          "deviationdown"
+        ],
+        "lockedMoves": [
+          "cyberboost",
+          "dnabeam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standoratt": {
+    "nicknames": [
+      "Ratt"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "compoundeyes"
+        ],
+        "items": [
+          "powerherb"
+        ],
+        "moves": [
+          "focusblast",
+          "stoneedge",
+          "focusenergy",
+          "thunderwave",
+          "earthquake",
+          "shadowclaw"
+        ],
+        "lockedMoves": [
+          "bloodpump",
+          "megamissile"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "yebus": {
+    "nicknames": [
+      "Yebus"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "drought",
+          "flamebody"
+        ],
+        "items": [
+          "heavydutyboots",
+          "lifeorb",
+          "angelpowder"
+        ],
+        "moves": [
+          "doom",
+          "flamecharge",
+          "earthquake",
+          "insanitybolt",
+          "thunderbolt",
+          "waterfall",
+          "ironhead",
+          "icebeam",
+          "gunkshot",
+          "knockoff",
+          "energyball",
+          "ritual",
+          "invocation"
+        ],
+        "lockedMoves": [
+          "flareblitz"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "standobluenight": {
     "nicknames": [
       "BlueNight"
@@ -726,6 +1228,61 @@
         ],
         "lockedMoves": [
           "taintedwater"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "alexandredumas": {
+    "nicknames": [
+      "Alexandre Dumas"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "friendguard",
+          "pickup"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "foulplay",
+          "achillesheel",
+          "studynotes"
+
+        ],
+        "lockedMoves": [
+          "rewrite"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cencyclodia": {
+    "nicknames": [
+      "C Encyclodia"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "pride"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "psychoboost",
+          "encycloray",
+          "toxic",
+          "focusblast",
+          "grassknot"
+
+        ],
+        "lockedMoves": [
+          "duedate"
         ],
         "level": 84
       }
@@ -1708,7 +2265,7 @@
           "choicescarf"
         ],
         "moves": [
-          "darkplse",
+          "darkpulse",
           "psychic",
           "muddywater"
         ],
@@ -2560,7 +3117,7 @@
           "vcreate",
           "wcreate",
           "veryhijumpkick",
-          "rottingbrst",
+          "rottingburst",
           "kamikaze",
           "pastalavista"
         ],

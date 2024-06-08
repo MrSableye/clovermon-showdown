@@ -833,7 +833,7 @@ export const Aliases: {[alias: string]: string} = {
 	nix: "Daemonix",
 	nyano: "Nyanonite",
 	obama: "Abomasnow",
-	ogre: "Kyogre",
+	
 	ohmagod: "Plasmanta",
 	ohmoderators: "Banageddon",
 	p2: "Porygon2",
