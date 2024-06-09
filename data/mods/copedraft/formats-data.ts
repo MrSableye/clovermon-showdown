@@ -2118,7 +2118,7 @@ knokedge: {
 },
 ribbizap: {
 	inherit: true,
-	tier: "RU",
+	tier: "NFE",
 	isNonstandard: null,
 	randomBattleMoves: [
 		"tailglow",
@@ -2199,7 +2199,7 @@ spanke: {
 },
 anaconduke: {
 	inherit: true,
-	tier: "NU",
+	tier: "NFE",
 	isNonstandard: null,
 	randomBattleMoves: [
 		"powerwhip",
@@ -2449,7 +2449,7 @@ glacialynx: {
 },
 pengas: {
 	inherit: true,
-	tier: "RUBL",
+	tier: "NFE",
 	isNonstandard: null,
 	randomBattleMoves: [
 		"boomburst",
@@ -3575,7 +3575,7 @@ fleespecs: {
 },
 honrade: {
 	inherit: true,
-	tier: "RU",
+	tier: "NFE",
 	isNonstandard: null,
 	randomBattleMoves: [
 		"pixiepummel",
