@@ -1214,6 +1214,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	},
+	   oengas: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	devante: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	vergilion: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
 	    seaman: {
 		inherit: true,
 		isNonstandard: null,
