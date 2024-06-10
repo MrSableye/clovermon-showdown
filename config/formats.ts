@@ -1283,7 +1283,7 @@ export const Formats: FormatList = [
 			'Alberfect Cell + Pure Power',
 			'Stingulor + Toke',
 			'Spycrab + Illusion', 
-         'Rendalopod + Fishious Rend',
+         	'Rendalopod + Fishious Rend',
 			'Rendalopod + Bolt Beak',
 			'Dall-eedle + Dire Claw',
 			'Catalyst',
@@ -1295,7 +1295,10 @@ export const Formats: FormatList = [
 			'Upbeddit-Mega',
 			'Cocken + Ancient Power',
 			'Fuk U',
-			'Stink Bomb',],
+			'Stink Bomb',
+			'Baton Pass + Ingrain',
+			'Baton Pass + Aqua Ring'
+		],
 		unbanlist: [
 			'THROBAK + Wonder Guard'],
 },
