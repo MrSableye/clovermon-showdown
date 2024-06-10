@@ -1209,6 +1209,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "NFE",
 	},
+		yanture: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	   oengas: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	devante: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	vergilion: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
 	    seaman: {
 		inherit: true,
 		isNonstandard: null,
@@ -2098,7 +2118,7 @@ knokedge: {
 },
 ribbizap: {
 	inherit: true,
-	tier: "RU",
+	tier: "NFE",
 	isNonstandard: null,
 	randomBattleMoves: [
 		"tailglow",
@@ -2179,7 +2199,7 @@ spanke: {
 },
 anaconduke: {
 	inherit: true,
-	tier: "NU",
+	tier: "NFE",
 	isNonstandard: null,
 	randomBattleMoves: [
 		"powerwhip",
@@ -2429,7 +2449,7 @@ glacialynx: {
 },
 pengas: {
 	inherit: true,
-	tier: "RUBL",
+	tier: "NFE",
 	isNonstandard: null,
 	randomBattleMoves: [
 		"boomburst",
@@ -3555,7 +3575,7 @@ fleespecs: {
 },
 honrade: {
 	inherit: true,
-	tier: "RU",
+	tier: "NFE",
 	isNonstandard: null,
 	randomBattleMoves: [
 		"pixiepummel",
