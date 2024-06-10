@@ -42056,6 +42056,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		weather: 'Midnight',
 		target: "all",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -49115,6 +49116,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		onHit(target) {
+			if (target.hp <= target.maxhp / 2 || target.boosts.atk >= 6 || target.maxhp === 1) { // Shedinja clause
+				return false;
+			}
+			this.directDamage(target.maxhp / 2);
+			this.boost({atk: 12}, target);
+		},
 		secondary: null,
 		target: "self",
 		type: "Fighting",
@@ -50120,7 +50128,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -50182,6 +50197,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
+		onHit(target) {
+			if (target.hp <= target.maxhp / 2 || target.boosts.atk >= 6 || target.maxhp === 1) { // Shedinja clause
+				return false;
+			}
+			this.directDamage(target.maxhp / 2);
+			this.boost({atk: 12}, target);
+		},
 		secondary: null,
 		target: "self",
 		type: "Dark",
@@ -50706,7 +50728,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -56030,6 +56059,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
@@ -64799,7 +64834,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			volatileStatus: 'curse',
+		},
 		target: "normal",
 		type: "Zombie",
 		isNonstandard: "Future",
@@ -71164,6 +71202,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			spe: 1,
+			def: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Steel",
@@ -73068,8 +73110,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
-		self: {
-			volatileStatus: 'mustrecharge',
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		target: "normal",
 		type: "Fighting",
@@ -73869,7 +73913,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -74732,7 +74779,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-			chance: 100,
+			chance: 80,
 			onHit(target) {
 				if (target.getTypes().join() === 'Zombie' || !target.setType('Zombie')) {
 					// Soak should animate even when it fails.
@@ -81835,7 +81882,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Qmarks",
 		isNonstandard: "Future",
