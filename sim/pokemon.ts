@@ -1133,6 +1133,15 @@ export class Pokemon {
 		return boosts;
 	}
 
+	negativeBoosts() {
+		let boosts = 0;
+		let boost: BoostID;
+		for (boost in this.boosts) {
+			if (this.boosts[boost] < 0) boosts += this.boosts[boost];
+		}
+		return boosts;
+	}
+
 	getCappedBoost(boosts: SparseBoostsTable) {
 		const cappedBoost: SparseBoostsTable = {};
 		let boostName: BoostID;

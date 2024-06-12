@@ -951,6 +951,24 @@ export const Rulesets: {[k: string]: FormatData} = {
 			this.add('rule', 'Swagger Clause: Swagger is banned');
 		},
 	},
+	batonpassmod: {
+		effectType: 'Rule',
+		name: 'Baton Pass Mod',
+		desc: "Stat boosts are reset upon using Baton Pass.",
+		onBegin() {
+			this.add('rule', 'Baton Pass Mod: Stat boosts are reset upon using Baton Pass');
+		},
+		onHit(source, target, move) {
+			if (source.positiveBoosts() && move.id === 'batonpass') {
+				this.add('-clearboosts', source);
+				this.hint("Baton Pass Mod activated: Stat changes are not passed");
+			}
+			if (source.negativeBoosts() && move.id === 'batonpass') {
+				this.add('-clearboosts', source);
+				this.hint("Baton Pass Mod activated: Stat changes are not passed");
+			}
+		},
+	},
 	batonpassclause: {
 		effectType: 'ValidatorRule',
 		name: 'Baton Pass Clause',

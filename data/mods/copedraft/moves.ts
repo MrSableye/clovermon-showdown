@@ -197,8 +197,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Normal",
 		zMove: {effect: 'heal'},
 		contestType: "Cool",
-		desc: "User switches out.",
-		shortDesc: "User swiches out.",
 	},
 	beakblast: {
 		inherit: true,
