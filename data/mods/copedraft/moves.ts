@@ -180,8 +180,25 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	batonpass: {
-		inherit: true,
-		isNonstandard: null,
+		num: 226,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Baton Pass",
+		pp: 40,
+		priority: 0,
+		flags: {},
+		onTry(source) {
+			return !!this.canSwitch(source.side);
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {effect: 'heal'},
+		contestType: "Cool",
+		desc: "User switches out.",
+		shortDesc: "User swiches out.",
 	},
 	beakblast: {
 		inherit: true,
