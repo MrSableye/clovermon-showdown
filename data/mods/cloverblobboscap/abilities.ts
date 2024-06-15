@@ -768,6 +768,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	hadronengine: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	rockypayload: {
 		inherit: true,
 		isNonstandard: null,
