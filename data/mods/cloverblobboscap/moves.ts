@@ -59,10 +59,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	recoilshot: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	behemothblob: {
 		inherit: true,
 		isNonstandard: null,
@@ -286,15 +282,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	electromagnetism: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	splishysplash: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	titaniumclap: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1685,10 +1673,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	combatorders: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	haste: {
 		inherit: true,
 		isNonstandard: null,
 	},
