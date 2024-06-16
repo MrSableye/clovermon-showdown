@@ -2993,7 +2993,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	blobboshorse: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	blobbosbirb: {
 		inherit: true,
@@ -3413,7 +3413,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	blobbosprimal: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	blobbosswamp: {
 		inherit: true,
