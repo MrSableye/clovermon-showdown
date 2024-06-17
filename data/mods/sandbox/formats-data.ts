@@ -11028,11 +11028,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
-	junkbane: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
-	},
 	weathervein: {
 		inherit: true,
 		tier: "OU",
@@ -11169,6 +11164,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	yanture: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	yanlos: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
