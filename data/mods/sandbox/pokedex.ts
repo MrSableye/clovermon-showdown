@@ -98,6 +98,16 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		evos: ["Hofucyea"],
 	},
+	carbink: {
+		inherit: true,
+		evos: ["Diancie"],
+	},
+	diancie: {
+	    inherit: true,
+	    prevo: "Carbink",
+	    evoType: "other",
+	    evoCondition: "Level up while holding a Gem.",
+	},
 	honrade: {
 		inherit: true,
 		evos: ["Devante", "Vergilion"],
@@ -156,6 +166,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		abilities: {
 			0: "Slow Start",
+			H: "Stall",
 			S: "Big Guy",
 		},
 	},
@@ -238,6 +249,158 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			S: "Rampage",
 		},
 	},
+	aegislash: {
+		inherit: true,
+		baseStats: {
+			hp: 60,
+			atk: 50,
+			def: 150,
+			spa: 50,
+			spd: 150,
+			spe: 60,
+		},
+	},
+	aegislashblade: {
+		inherit: true,
+		baseStats: {
+			hp: 60,
+			atk: 150,
+			def: 50,
+			spa: 150,
+			spd: 50,
+			spe: 60,
+		},
+	},
+	hemogoblin: {
+		inherit: true,
+		baseStats: {
+			hp: 90,
+			atk: 99,
+			def: 89,
+			spa: 99,
+			spd: 97,
+			spe: 55,
+		},
+	},
+	fractyvern: {
+		inherit: true,
+		baseStats: {
+			hp: 83,
+			atk: 131,
+			def: 61,
+			spa: 131,
+			spd: 79,
+			spe: 133,
+		},
+	},
+	abomasnow: {
+		inherit: true,
+		abilities: {0: "Snow Warning", H: "Shaved Ice"},
+		baseStats: {
+			hp: 101,
+			atk: 114,
+			def: 80,
+			spa: 114,
+			spd: 80,
+			spe: 45,
+		},
+	},
+	abomasnowmega: {
+		inherit: true,
+		abilities: {0: "Shaved Ice"},
+		baseStats: {
+			hp: 101,
+			atk: 139,
+			def: 110,
+			spa: 139,
+			spd: 100,
+			spe: 45,
+		},
+	},
+	yanorm: {
+		inherit: true,
+		abilities: {0: "Swarm", H: "Shed Skin", S: "Jihad"},
+		baseStats: {
+			hp: 157,
+			atk: 57,
+			def: 47,
+			spa: 57,
+			spd: 47,
+			spe: 157,
+		},
+	},
+	yancoon: {
+		inherit: true,
+		abilities: {0: "Swarm", H: "Simple", S: "Flash Fire"},
+		baseStats: {
+			hp: 67,
+			atk: 57,
+			def: 147,
+			spa: 57,
+			spd: 137,
+			spe: 37,
+		},
+	},
+	regice: {
+		inherit: true,
+		abilities: {0: "Clear Body", H: "Ice Body", S: "Heatproof"},
+		baseStats: {
+			hp: 100,
+			atk: 50,
+			def: 100,
+			spa: 100,
+			spd: 200,
+			spe: 50,
+		},
+	},
+	regirock: {
+		inherit: true,
+		abilities: {0: "Clear Body", H: "Sturdy", S: "Solid Rock"},
+		baseStats: {
+			hp: 100,
+			atk: 100,
+			def: 200,
+			spa: 50,
+			spd: 100,
+			spe: 50,
+		},
+	},
+	registeel: {
+		inherit: true,
+		abilities: {0: "Clear Body", H: "Light Metal", S: "Battle Armor"},
+		baseStats: {
+			hp: 100,
+			atk: 75,
+			def: 150,
+			spa: 75,
+			spd: 150,
+			spe: 50,
+		},
+	},
+	regieleki: {
+		inherit: true,
+		abilities: {0: "Clear Body", H: "Transistor", S: "Volt Absorb"},
+		baseStats: {
+			hp: 100,
+			atk: 100,
+			def: 50,
+			spa: 100,
+			spd: 50,
+			spe: 200,
+		},
+	},
+	regidrago: {
+		inherit: true,
+		abilities: {0: "Clear Body", H: "Dragon's Maw", S: "Multiscale"},
+		baseStats: {
+			hp: 200,
+			atk: 100,
+			def: 50,
+			spa: 100,
+			spd: 50,
+			spe: 100,
+		},
+	},
 	towhorse: {
 		inherit: true,
 		types: ["???", "Fighting"],
@@ -246,6 +409,95 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		abilities: {0: "Chlorophyll", 1: "Levitate", H: "Solar Power", S: "Flash Fire"},
 
+	},
+	rhydon: {
+		inherit: true,
+		abilities: {0: "Lightning Rod", 1: "Rock Head", H: "Reckless", S: "Old School"},
+
+	},
+	indignifly: {
+		inherit: true,
+		abilities: {0: "Pressure", 1: "Synchronoise", H: "Filter", S: "Tinted Lens"},
+
+	},
+	cirnumiru: {
+		inherit: true,
+		abilities: {0: "Beast Boost", H: "Refrigerate", S: "Snow Warning"},
+		baseStats: {
+			hp: 61,
+			atk: 67,
+			def: 61,
+			spa: 127,
+			spd: 127,
+			spe: 127,
+		},
+	},
+	loituma: {
+		inherit: true,
+		abilities: {0: "Beast Boost", H: "Aerilate", S: "Dazzling"},
+        
+	},
+	spenjbab: {
+		inherit: true,
+		abilities: {0: "Beast Boost", H: "Dry Skin", S: "Harvest"},
+        
+	},
+	ignifatu: {
+		inherit: true,
+		abilities: {0: "Beast Boost", H: "Sheer Force", S: "Toxic Boost"},
+        baseStats: {
+			hp: 101,
+			atk: 149,
+			def: 89,
+			spa: 61,
+			spd: 61,
+			spe: 109,
+		},
+	},
+	empidae: {
+		inherit: true,
+		abilities: {0: "Beast Boost", H: "Queenly Majesty", S: "Striker"},
+        baseStats: {
+			hp: 89,
+			atk: 127,
+			def: 83,
+			spa: 53,
+			spd: 79,
+			spe: 139,
+		},
+	},
+	gigapuddi: {
+		inherit: true,
+		baseStats: {
+			hp: 107,
+			atk: 67,
+			def: 101,
+			spa: 139,
+			spd: 109,
+			spe: 47,
+		},
+	},
+	seraphill: {
+		inherit: true,
+		baseStats: {
+			hp: 103,
+			atk: 97,
+			def: 107,
+			spa: 97,
+			spd: 107,
+			spe: 59,
+		},
+	},
+	ranruu: {
+		inherit: true,
+		baseStats: {
+			hp: 67,
+			atk: 73,
+			def: 71,
+			spa: 157,
+			spd: 89,
+			spe: 113,
+		},
 	},
 	sableven: {
 		num: -42151,

@@ -10307,6 +10307,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	yanlos: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	schiztarf: {
 		tier: "Illegal",
 		isNonstandard: "Future",
