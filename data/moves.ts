@@ -41281,7 +41281,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Grass",
 		isNonstandard: "Future",
@@ -43293,7 +43296,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'disable',
+		},
 		target: "normal",
 		type: "Paper",
 		isNonstandard: "Future",
@@ -43321,7 +43327,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bullet: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Wind",
 		isNonstandard: "Future",
@@ -59203,6 +59212,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		secondary: null,
+		boosts: {
+			spa: 1,
+			spd: 1,
+			spe: 1,
+		},
 		target: "self",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -67590,7 +67604,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		damageCallback(pokemon, target) {
-			return this.clampIntRange(Math.floor(target.getUndynamaxedHP() / 2), 1);
+			return this.clampIntRange(Math.floor(target.getUndynamaxedHP() / 3), 1);
 		},
 		status: 'par',
 		flags: {protect: 1, mirror: 1},
@@ -73183,7 +73197,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1},
-		secondary: null,
+		secondary: {
+		chance: 100,
+		onHit(target, source) {
+			if (source.hasAbility('strongjaw')) {
+				this.boost({def: -2}, target, source);
+				this.boost({atk: 2}, source, source);
+			} else {
+				this.boost({def: -1}, target, source);
+				this.boost({atk: 1}, source, source);
+			}
+			},
+		},
 		target: "normal",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -74381,7 +74406,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-			chance: 100,
+			chance: 40,
 			onHit(target) {
 				if (target.getTypes().join() === 'Zombie' || !target.setType('Zombie')) {
 					// Soak should animate even when it fails.
@@ -78107,7 +78132,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		self: {
+			boosts: {
+				evasion: -2,
+			},
+		},
 		target: "normal",
 		type: "Wood",
 		isNonstandard: "Future",
@@ -86713,6 +86742,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Divine') return 1;
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -87059,7 +87091,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		status: 'tox',
+		secondary: {
+			chance: 100,
+			volatileStatus: 'disable',
+		},
+		boosts: {
+			atk: -1,
+			def: -1,
+			spa: -1,
+			spd: -1,
+			spe: -1,
+		},
 		target: "allAdjacentFoes",
 		type: "Poison",
 		isNonstandard: "Future",
