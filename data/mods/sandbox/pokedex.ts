@@ -442,6 +442,16 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		abilities: {0: "Beast Boost", H: "Dry Skin", S: "Harvest"},
         
 	},
+	impostree: {
+		inherit: true,
+		abilities: {0: "Skill Link", 1: "Rattled", H: "Infiltrator", S: "Imposter"},
+        
+	},
+	spinda: {
+		inherit: true,
+		abilities: {0: "Own Tempo", 1: "Tangled Feet", H: "Contrary", S: "Spin Cleaner"},
+        
+	},
 	ignifatu: {
 		inherit: true,
 		abilities: {0: "Beast Boost", H: "Sheer Force", S: "Toxic Boost"},
