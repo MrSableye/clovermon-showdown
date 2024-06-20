@@ -1014,8 +1014,26 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	tripledive: {
-		inherit: true,
-		isNonstandard: null,
+		num: 865,
+		accuracy: 95,
+		basePower: 30,
+		basePowerCallback(pokemon, target, move) {
+			return 20 * move.hit;
+		},
+		category: "Physical",
+		name: "Triple Dive",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 3,
+		multiaccuracy: true,
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		zMove: {basePower: 120},
+		maxMove: {basePower: 140},
+		desc: "Hits three times. Each hit increases by 20 power but each hit can also miss.",
+		shortDesc: "Hits three times. Each hit can miss but power rises.",
 	},
 	mortalspin: {
 		inherit: true,

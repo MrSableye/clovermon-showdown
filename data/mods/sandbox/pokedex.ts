@@ -174,6 +174,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		abilities: {
 			0: "Defeatist",
+			H: "Stall",
 			S: "Flame Body",
 		},
 	},
@@ -321,11 +322,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		abilities: {0: "Swarm", H: "Shed Skin", S: "Jihad"},
 		baseStats: {
-			hp: 157,
-			atk: 57,
-			def: 47,
-			spa: 57,
-			spd: 47,
+			hp: 117,
+			atk: 47,
+			def: 57,
+			spa: 47,
+			spd: 57,
 			spe: 157,
 		},
 	},
@@ -442,6 +443,21 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		abilities: {0: "Beast Boost", H: "Dry Skin", S: "Harvest"},
         
 	},
+	spycrab: {
+		inherit: true,
+		abilities: {0: "Illusion", 1: "Imposter", S: "Inner Focus", H: "Infiltrator"},
+        
+	},
+	impostree: {
+		inherit: true,
+		abilities: {0: "Skill Link", 1: "Rattled", H: "Infiltrator", S: "Imposter"},
+        
+	},
+	spinda: {
+		inherit: true,
+		abilities: {0: "Own Tempo", 1: "Tangled Feet", H: "Contrary", S: "Spin Cleaner"},
+        
+	},
 	ignifatu: {
 		inherit: true,
 		abilities: {0: "Beast Boost", H: "Sheer Force", S: "Toxic Boost"},
@@ -497,6 +513,18 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spa: 157,
 			spd: 89,
 			spe: 113,
+		},
+	},
+	doubtlaw: {
+		inherit: true,
+		abilities: {0: "Dark Aura", 1: "Quick Draw", H: "Flare Boost", S: "Neuroforce"},
+		baseStats: {
+			hp: 64,
+			atk: 80,
+			def: 86,
+			spa: 127,
+			spd: 68,
+			spe: 98,
 		},
 	},
 	sableven: {
