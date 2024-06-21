@@ -14809,6 +14809,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 6724,
 		isNonstandard: "Future",
 	},
+	mrshield: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'MR-Shield');
+		},
+		onSetStatus(status, target, source, effect) {
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: MR-Shield');
+			}
+			return false;
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('MR-Shield neutralize');
+				return this.chainModify(0.75);
+			}
+		},
+		name: "MR-Shield",
+		rating: 3,
+		num: 232,
+		isNonstandard: "Future",
+	},
 	infected: {
 		onDamagingHit(damage, target, source, move) {
 			const sourceAbility = source.getAbility();

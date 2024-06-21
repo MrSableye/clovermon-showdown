@@ -3952,6 +3952,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Restores HP if hit by a Ghost-type move.",
 		desc: "Restores HP if hit by a Ghost-type move.",
 	},
+	mrshield: {
+		name: "MR Shield",
+		shortDesc: "Reduces Super Effective moves by 25%. Immune to status moves.",
+		desc: "Super effective damage taken is increased by 0.75x. The ability holder is also immune to status moves.",
+	},
 	polite: {
 		name: "Polite",
 		shortDesc: "Moves last. STAB increased to 2.",

@@ -784,6 +784,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mrshield: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	windpower: {
 		inherit: true,
 		isNonstandard: null,
