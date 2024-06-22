@@ -46177,6 +46177,35 @@ blobbosprism: {
 		],
 		gen: 8,
 	},
+	blobbosmr: {
+		num: 69132,
+		name: "Blobbos-MR",
+		baseSpecies: "Blobbos",
+		forme: "MR",
+		types: ["Electric", "Ice"],
+		gender: "N",
+		baseStats: {
+			hp: 70,
+			atk: 35,
+			def: 145,
+			spa: 115,
+			spd: 145,
+			spe: 15,
+		},
+		abilities: {
+			0: "Full Metal Body",
+                        1: "Steelworker",
+                        H: "Electromorphosis",
+                        S: "MR-Shield",
+		},
+		heightm: 0.4,
+		weightkg: 575773,
+		color: "Grey",
+		eggGroups: [
+			"Undiscovered",
+		],
+		gen: 8,
+	},
 
 	infected: {
 		num: 42999,

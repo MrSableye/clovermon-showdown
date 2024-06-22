@@ -10955,6 +10955,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosmr: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	woot: {
 		tier: "Illegal",
 		isNonstandard: "Future",
