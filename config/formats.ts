@@ -1171,7 +1171,7 @@ export const Formats: FormatList = [
 			'HP Percentage Mod',
 			'Cancel Mod',
 			'Sketch Post-Gen 7 Moves',
-		],		
+		},		
 	{
 		name: '[Gen 8 Cope Only] Ubers',
 		mod: 'cope',
