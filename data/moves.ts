@@ -19446,19 +19446,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		volatileStatus: 'tarshot',
-		condition: {
-			onStart(pokemon) {
-				this.add('-start', pokemon, 'Tar Shot');
-			},
-			onEffectivenessPriority: -2,
-			onEffectiveness(typeMod, target, type, move) {
-				if (move.type !== 'Fire') return;
-				if (!target) return;
-				if (type !== target.getTypes()[0]) return;
-				return typeMod + 1;
-			},
-		},
+		volatileStatus: 'flammable',
 		boosts: {
 			spe: -1,
 		},
@@ -34498,6 +34486,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		secondary: null,
+		onHit(target) {
+			if (this.field.isTerrain('oilyterrain') && target.isGrounded()) {
+				this.boost({
+					spe: 3,
+					spd: 1,
+				});
+			} else {
+				this.boost({
+					spe: 3,
+				});
+			}
+		},
+		volatileStatus: 'flammable',
 		target: "self",
 		type: "Greasy",
 		isNonstandard: "Future",
@@ -41741,6 +41742,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'smackdown',
 		secondary: null,
 		target: "normal",
 		type: "Fear",
@@ -49784,7 +49786,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Greasy",
 		isNonstandard: "Future",
@@ -49798,6 +49805,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, source, target) {
+			if (this.field.isTerrain('oilyterrain') && source.isGrounded()) {
+				move.accuracy = 95;
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Greasy",
@@ -51185,6 +51197,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'smackdown',
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -51534,6 +51547,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bone: 1},
 		secondary: null,
+		multihit: [2, 5],
 		target: "normal",
 		type: "Bone",
 		isNonstandard: "Future",
@@ -57925,6 +57939,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'smackdown',
 		secondary: null,
 		target: "normal",
 		type: "Tech",
@@ -60942,6 +60957,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		volatileStatus: 'flammable',
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -60956,23 +60972,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		condition: {
-			duration: 2,
-			onStart(pokemon) {
-				this.add('-start', pokemon, 'Flammable');
-			},
-			onEffectivenessPriority: -2,
-			onEffectiveness(typeMod, target, type, move) {
-				if (move.type !== 'Fire') return;
-				if (!target) return;
-				if (type !== target.getTypes()[0]) return;
-				return typeMod + 1;
-			},
-			onResidualOrder: 22,
-			onEnd(target) {
-				this.add('-end', target, 'Flammable', '[silent]');
-			},
-		},
 		
 		secondary: {
 			chance: 100,
@@ -62836,6 +62835,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, arrow: 1},
+		volatileStatus: 'smackdown',
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -64778,7 +64778,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Greasy",
 		isNonstandard: "Future",
@@ -65025,7 +65030,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			status: 'tox',
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -67756,7 +67764,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -71516,7 +71527,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -2,
+			},
+		},
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -78051,7 +78067,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 18,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Greasy",
 		isNonstandard: "Future",
@@ -78065,6 +78084,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'smackdown',
 		secondary: null,
 		target: "normal",
 		type: "Greasy",
@@ -78318,7 +78338,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 1,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Greasy",
 		isNonstandard: "Future",
@@ -78367,7 +78390,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Greasy",
 		isNonstandard: "Future",
@@ -78381,7 +78407,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		boosts: {
+			spa: -1,
+			spd: -1,
+		},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
+		volatileStatus: 'embargo',
 		target: "normal",
 		type: "Greasy",
 		isNonstandard: "Future",
@@ -81163,6 +81201,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		volatileStatus: 'lubricate',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (this.field.isTerrain('oilyterrain') && source.isGrounded()) {
+					return 10;
+				}
+				return 6;
+			},
+			onAccuracyPriority: 6,
+			onModifyAccuracy(accuracy, defender, attacker, move) {
+				if (move.category === 'Physical') {
+					
+					return this.chainModify(0.75);
+				}
+			},
+			onSourceModifyDamage(damage, source, target, move) {
+				let mod = 1;
+				if (move.flags['contact']) mod /= 2;
+				this.debug('lubricate weaken');
+				return this.chainModify(mod);
+			},
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Lubricate');
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Lubricate', '[silent]');
+			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Greasy",
@@ -81177,6 +81244,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		volatileStatus: 'oilskin',
+		condition: {
+			onTryHit(target, source, move) {
+				if (target !== source && move.type === 'Water') {
+					this.add('-immune', target, '[from] Oil Skin');
+					return null;
+				}
+			},
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Oil Skin');
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Oil Skin', '[silent]');
+			},
+		},
+		boosts: {
+			spd: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Greasy",
@@ -81191,7 +81276,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		basePowerCallback(source, target, move) {
+			if (this.field.isTerrain('oilyterrain') && target.isGrounded()) {
+				if (!source.isAlly(target)) this.hint(`${move.name}'s BP doubled on grounded target.`);
+				return move.basePower * 1.5;
+			}
+			return move.basePower;
+		},
+		secondary: {
+			chance: 40,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Greasy",
 		isNonstandard: "Future",
@@ -81306,7 +81403,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.setTerrain('oilyterrain');
+				},
+			},
+		},
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -84603,6 +84707,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'smackdown',
 		secondary: null,
 		target: "normal",
 		type: "Light",
@@ -84973,6 +85078,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1},
+		basePowerCallback(pokemon) {
+			if (!pokemon.volatiles['stockpile']?.layers) return false;
+			return pokemon.volatiles['stockpile'].layers * 100;
+		},
+		onTry(source) {
+			return !!source.volatiles['stockpile'];
+		},
+		onAfterMove(pokemon) {
+			pokemon.removeVolatile('stockpile');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Greasy",
@@ -84984,9 +85099,45 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Oily Terrain",
+		terrain: 'oilyterrain',
 		pp: 10,
 		priority: 0,
 		flags: {pulse: 1},
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')) {
+					return 8;
+				}
+				return 5;
+			},
+			onAccuracyPriority: 6,
+			onModifyAccuracy(accuracy, defender, attacker, move) {
+				if (move.type !== 'Greasy' && defender.isGrounded() && !defender.isSemiInvulnerable && move.category === 'Physical') {
+					this.debug('oily terrain weaken');
+					return this.chainModify(0.8);
+				}
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Greasy' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+					this.debug('electric terrain boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Oily Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Oily Terrain');
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'Oily Terrain');
+			},
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Greasy",
