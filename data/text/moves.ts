@@ -24141,8 +24141,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	oilyterrain: {
 		name: "Oily Terrain",
-		desc: "Damages all grounded pokemon except Water or Rock types for 5 turns.",
-		shortDesc: "Damages all grounded pokemon except Water or Rock types for 5 turns.",
+		desc: "Boosts the power of grounded Greasy moves and lowers the accuracy of Contact non-Greasy moves.",
+		shortDesc: "Boosts the power of grounded Greasy moves and lowers the accuracy of Contact non-Greasy moves.",
 	},
 	storedchaos: {
 		name: "Stored CHAOS",

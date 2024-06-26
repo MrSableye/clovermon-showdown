@@ -304,6 +304,38 @@
       }
     ]
   },
+  "cubaoop": {
+    "nicknames": [
+      "Cubaoop"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "adaptability",
+          "filter"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots",
+          "plasticplate",
+          "greasygem"
+        ],
+        "moves": [
+          "oilskin",
+          "lubricate",
+          "bloodseal",
+          "flamethrower",
+          "thunderbolt"
+        ],
+        "lockedMoves": [
+          "meltedplastic",
+          "greasepump"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "dracelium": {
     "nicknames": [
       "Draccelium"
@@ -513,6 +545,33 @@
       }
     ]
   },
+  "formspawn": {
+    "nicknames": [
+      "Formspawn"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sturdy"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "lubricate",
+          "oilskin",
+          "oilytrrain",
+          "earthquake",
+          "painsplit"
+        ],
+        "lockedMoves": [
+          "greasygrasp"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "grumboar": {
     "nicknames": [
       "Grumboar"
@@ -586,6 +645,33 @@
       }
     ]
   },
+  "mancubus": {
+    "nicknames": [
+      "Mancubus"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "thickfat",
+          "filter"
+        ],
+        "items": [
+          "heavydutyboots",
+          "sitrusberry"
+        ],
+        "moves": [
+          "corrupt",
+          "selffatten",
+          "shadowball",
+          "fireball"
+        ],
+        "lockedMoves": [
+          "chaosbolt"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "mothmowl": {
     "nicknames": [
       "Mothmowl"
@@ -605,6 +691,61 @@
         ],
         "lockedMoves": [
           "purefear"
+        ],
+        "level": 84
+      }
+    ]
+  },
+
+  "pollugong": {
+    "nicknames": [
+      "Pollugong"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "acidrain"
+        ],
+        "items": [
+          "heavydutyboots",
+          "techgem"
+        ],
+        "moves": [
+          "oilyterrain",
+          "oilskin",
+          "oilup"
+        ],
+        "lockedMoves": [
+          "greasepump",
+          "sludgewave"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pumpjackbird": {
+    "nicknames": [
+      "Pumpjackbird"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "waterabsorb"
+        ],
+        "items": [
+          "heavydutyboots",
+          "techgem"
+        ],
+        "moves": [
+          "construction",
+          "oildrill",
+          "oilup",
+          "woodhammer",
+          "plastichammer",
+          "drillrun"
+        ],
+        "lockedMoves": [
+          "pumpjack"
         ],
         "level": 84
       }
@@ -733,6 +874,36 @@
       }
     ]
   },
+  "seahog": {
+    "nicknames": [
+      "Seahog"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "gooey"
+        ],
+        "items": [
+          "rainycapsule",
+          "angelpowder",
+          "heavydutyboots",
+          "greasygem"
+        ],
+        "moves": [
+          "oilskin",
+          "lubricate",
+          "oilyterrain",
+          "clearsmog",
+          "aquaring"
+        ],
+        "lockedMoves": [
+          "osmosis",
+          "greasepump"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "Sprite007": {   
     "nicknames": [   
       "Clifford",    
@@ -783,6 +954,63 @@
           "crunch",
           "insanity",
           "vibecheck"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "sularcl": {
+    "nicknames": [
+      "Sularcl"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sturdy"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "greasygem"
+        ],
+        "moves": [
+          "lubricate",
+          "oilskin",
+          "oilyterrain"
+        ],
+        "lockedMoves": [
+          "greasygrasp",
+          "stalagbite"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "weepinbarf": {
+    "nicknames": [
+      "Weepinbarf"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "poisonheal"
+        ],
+        "items": [
+          "acidycapsule",
+          "angelpowder",
+          "heavydutyboots",
+          "greasygem"
+        ],
+        "moves": [
+          "greasesplat",
+          "energyball",
+          "knockoff",
+          "synthesis",
+          "vomit",
+          "acidtrap"
+        ],
+        "lockedMoves": [
+          "greasepump"
         ],
         "level": 84
       }
@@ -1657,6 +1885,31 @@
       }
     ]
   },
+  "kingdedede": {
+    "nicknames": [
+      "King Dededede"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "thickfat"
+        ],
+        "items": [
+          "shatteringhammer"
+        ],
+        "moves": [
+          "sledgehammer",
+          "woodhammer",
+          "hammerarm",
+          "oilup"
+        ],
+        "lockedMoves": [
+          "fatslam"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "altarule": {
     "nicknames": [
       "Altarule"
@@ -1921,7 +2174,7 @@
           "fold",
           "jumpscare",
           "insanitybolt",
-          "swordance",
+          "swordsdance",
           "workup",
           "paperseal"
         ],
@@ -2014,7 +2267,7 @@
     "sets": [
       {
         "abilities": [
-          "shlorophyll"
+          "chlorophyll"
         ],
         "items": [
           "angelpowder",
@@ -2040,7 +2293,7 @@
     "sets": [
       {
         "abilities": [
-          "ironball"
+          "illusion"
         ],
         "items": [
           "angelpowder",
@@ -3823,7 +4076,7 @@
           "thickfat"
         ],
         "items": [
-          "ironball"
+          "leftovers"
         ],
         "moves": [
           "bodyslam",
@@ -4490,6 +4743,31 @@
           "extrasensory"
         ],
         "level": 72
+      }
+    ]
+  },
+  "voormisan": {
+    "nicknames": [
+      "Voormisan"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "angerpoint"
+        ],
+        "items": [
+          "lumberry"
+        ],
+        "moves": [
+          "selffatten",
+          "oilskin",
+          "oilyterrain",
+          "rest"
+        ],
+        "lockedMoves": [
+          "fatslam"
+        ],
+        "level": 84
       }
     ]
   },
