@@ -1339,6 +1339,59 @@
       }
     ]
   },
+    "flarhea": {
+    "nicknames": [
+      "Flarhea",
+      "Flarhea",
+      "Flarhea",
+      "Flarhea",
+      "Flarhea",
+      "Flarhea",
+      "Flahjita",
+      "Heatah"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "reckless"
+        ],
+        "items": [
+          "choiceband",
+          "sitrusberry",
+        ],
+        "moves": [
+          "uturn",
+          "braindamage",
+          "bravebird"
+        ],
+        "lockedMoves": [
+          "volttackle",
+          "flareblitz",
+          "highjumpkick"
+        ],
+        "level": 83
+      },
+      {
+        "abilities": [
+          "striker",
+        ],
+        "items": [
+          "lifeorb",
+          "choiceband"
+        ],
+        "moves": [
+          "uturn",
+          "earthquake",
+        ],
+        "lockedMoves": [
+          "blazekick",
+          "highjumpkick",
+          "crashhopper"
+        ],
+        "level": 83
+      }
+    ]
+  },
   "forgotno": {
     "nicknames": [
       "FORGOTNO",
@@ -1386,6 +1439,164 @@
           "ironhead"
         ],
         "level": 81
+      }
+    ]
+  },
+   "frozweed": {
+    "nicknames": [
+      "Frozweed",
+      "Frozweed",
+      "Frozweed",
+      "dude weed lmao"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicguard"
+        ],
+        "items": [
+          "focussash"
+        ],
+        "moves": [
+          "earthpower",
+          "flamethrower"
+        ],
+        "lockedMoves": [
+          "toke",
+          "energyball",
+          "icebeam"
+        ],
+        "level": 87
+      }
+    ]
+  },
+     "fucker": {
+    "nicknames": [
+      "Fucker",
+      "Fucker",
+      "Fucker",
+      "Fucker",
+      "Fucker",
+      "Fucker",
+      "Fucker",
+      "Fucker",
+      "Fucker",
+      "Wife Beater",
+      "Fuck You",
+      "Fuck Yourself"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "scrappy",
+          "ironfist"
+        ],
+        "items": [
+          "luckypunch",
+          "lifeorb",
+          "choiceband"
+        ],
+         "moves": [
+          "suckerpunch",
+          "thunderpunch",
+          "bravebird",
+          "icepunch",
+          "gunkshot"
+        ],
+        "lockedMoves": [
+          "rocketpunch",
+          "punchout",
+          "closecombat"
+        ],
+        "level": 88
+      }
+    ]
+  },
+    "fungnet": {
+    "nicknames": [
+      "Fungnet",
+      "Fungnet",
+      "Fungnet",
+      "Fungnet",
+      "Fungnet",
+      "Fungnet",
+      "Fungnet",
+      "Fungnet",
+      "Fungnet",
+      "Funger",
+      "Stichface",
+      "PvZ"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "illuminate"
+        ],
+        "items": [
+          "leftovers"
+        ],
+         "moves": [
+          "sleeppowder",
+          "leechseed",
+        ],
+        "lockedMoves": [
+          "thunder",
+          "gigadrain",
+          "voltswitch"
+        ],
+        "level": 82
+         {
+        "abilities": [
+          "poisonheal"
+        ],
+        "items": [
+          "toxicorb"
+        ],
+        "lockedMoves": [
+          "protect",
+          "thundercage",
+          "spore",
+          "gigadrain"
+        ],
+        "level": 82
+      }
+    ]
+  },
+   "fusjahl": {
+    "nicknames": [
+      "Fusjahl",
+      "Fusjahl",
+      "Fusjahl",
+      "Fusjahl",
+      "Fusjahl",
+      "Fusjahl",
+      "El Memes",
+      "Disabled Guys"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "overeager"
+        ],
+        "items": [
+          "leftovers",
+          "choiceband",
+          "sitrusberry"
+        ],
+        "moves": [
+          "mudslap",
+          "rocktomb",
+          "flamecharge",
+          "fruitpunch",
+          "icepunch",
+          "poisonjab",
+          "lunge"
+        ],
+        "lockedMoves": [
+          "memepunch",
+          "earthquake"
+        ],
+        "level": 88
       }
     ]
   },
