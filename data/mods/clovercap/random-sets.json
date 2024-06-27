@@ -421,6 +421,118 @@
       }
     ]
   },
+    "bullepede": {
+    "nicknames": [
+      "Bullepede",
+      "Bullepede",
+      "Bullepede",
+      "Bullepede",
+      "Bullepede",
+      "Bullepede",
+      "Bullet Train",
+      "Tokaido"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "rockhead"
+        ],
+        "items": [
+          "expertbelt",
+          "lifeorb",
+          "choiceband"
+        ],
+        "moves": [
+          "firstimpression",
+          "uturn",
+          "heavyslam"
+        ],
+        "lockedMoves": [
+          "volttackle",
+          "flareblitz",
+          "headsmash"
+        ],
+        "level": 78
+      },
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "focussash",
+          "leftovers",
+          "lifeorb"
+        ],
+        "moves": [
+          "heavyslam",
+          "uturn",
+          "highhorsepower"
+        ],
+        "lockedMoves": [
+          "lunge",
+          "shiftgear"
+        ],
+        "level": 78
+      }
+    ]
+  },
+   "bungaloon": {
+    "nicknames": [
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungy",
+      "October 4rd",
+      "Yoshi"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "thickfat"
+        ],
+        "items": [
+          "blacksludge"
+        ],
+        "moves": [
+          "clearsmog",
+          "mop",
+          "appleacid"
+        ],
+        "lockedMoves": [
+          "stockpile",
+          "fruitjuice",
+          "softboiled"
+        ],
+        "level": 82
+      },
+      {
+        "abilities": [
+          "waterbubble",
+          "gluttony"
+        ],
+        "items": [
+          "sitrusberry"
+        ],
+        "moves": [
+          "stickytongue",
+          "fruitpunch",
+          "stompingtantrum"
+        ],
+        "lockedMoves": [
+          "bellydrum",
+          "drainpunch",
+          "aquajet"
+        ],
+        "level": 82
+      }
+    ]
+  },
     "bulbfrog": {
     "nicknames": [
       "Bulbfrog",
@@ -469,6 +581,58 @@
         "lockedMoves": [
           "boomburst",
           "thunderbolt"
+        ],
+        "level": 76
+      }
+    ]
+  },
+     "chamelee": {
+    "nicknames": [
+      "Chamelee",
+      "Chamelee",
+      "Chamelee",
+      "Chamelee",
+      "Chamelee",
+      "Chamelee",
+      "Battle Lizard",
+      "Raging Reptile"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "choicespecs",
+          "choicescarf",
+          "lifeorb"
+        ],
+        "moves": [
+          "fireblast",
+          "focusblast"
+        ],
+        "lockedMoves": [
+          "punchout",
+          "earthpower",
+          "icebeam"
+        ],
+        "level": 76
+      },
+      {
+        "abilities": [
+          "guts",
+        ],
+        "items": [
+          "flameorb"
+        ],
+        "moves": [
+          "earthquake",
+          "icehammer",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "closecombat",
+          "uturn"
         ],
         "level": 76
       }
