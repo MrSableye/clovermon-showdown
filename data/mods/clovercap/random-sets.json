@@ -176,6 +176,129 @@
       }
     ]
   },
+   "ballboa": {
+    "nicknames": [
+      "Ballboa",
+      "Ballboa",
+      "Ballboa",
+      "Ballboa",
+      "Ballboa",
+      "Ballboa",
+      "Rocky",
+      "Baller"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "ironfist",
+          "skilllink"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers"
+        ],
+         "moves": [
+          "armthrust",
+          "bulletseed",
+          "drainpunch",
+          "coil",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "rockclock",
+        ],
+        "level": 80
+      }
+    ]
+  },
+   "berfgoyle": {
+    "nicknames": [
+      "Berfgoyle",
+      "Berfgoyle",
+      "Berfgoyle",
+      "Berfgoyle",
+      "Berfgoyle",
+      "Berfgoyle",
+      "Barfy",
+      "Frug"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate",
+          "merciless"
+        ],
+        "items": [
+          "rockyhelmet",
+          "blacksludge"
+        ],
+         "moves": [
+          "flamethrower",
+          "roost",
+          "calmmind",
+          "dragonpulse",
+          "yawn"
+        ],
+        "lockedMoves": [
+          "sludgebomb",
+          "toxic"
+        ],
+        "level": 82
+      }
+    ]
+  },
+   "bitteragon": {
+    "nicknames": [
+      "Bitteragon",
+      "Bitteragon",
+      "Bitteragon",
+      "Bitteragon",
+      "Bitteragon",
+      "Bitteragon",
+      "Ice Dragon",
+      "Boring"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "leftovers"
+        ],
+         "moves": [
+          "defog",
+          "roost",
+          "earthquake",
+          "dragonclaw",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "iciclecrash",
+          "iceshard"
+        ],
+        "level": 86
+      }, 
+      {
+        "abilities": [
+          "refrigerate"
+        ],
+        "items": [
+          "icicleplate"
+        ],
+        "moves": [
+          "quickattack",
+          "roost",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "bulkup",
+          "bodyslam"
+        ],
+        "level": 86
+      }
+    ]
+  },
   "blubbastard": {
     "nicknames": [
       "Blubbastard",
@@ -245,6 +368,492 @@
       }
     ]
   },
+   "bugatti": {
+    "nicknames": [
+      "Bugatti",
+      "Bugatti",
+      "Bugatti",
+      "Bugatti",
+      "Bugatti",
+      "Bugatti",
+      "I Woke Up",
+      "Ford"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "leftovers",
+          "lifeorb"
+        ],
+        "moves": [
+          "shiftgear",
+          "uturn",
+          "bodypress"
+        ],
+        "lockedMoves": [
+          "geargrind",
+          "highhorsepower",
+          "irondefense"
+        ],
+        "level": 78
+      },
+      {
+        "abilities": [
+          "heavymetal"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers"
+        ],
+        "moves": [
+          "irondefense",
+          "uturn",
+          "bodypress"
+        ],
+        "lockedMoves": [
+          "heatcrash",
+          "heavyslam"
+        ],
+        "level": 88
+      }
+    ]
+  },
+    "bullepede": {
+    "nicknames": [
+      "Bullepede",
+      "Bullepede",
+      "Bullepede",
+      "Bullepede",
+      "Bullepede",
+      "Bullepede",
+      "Bullet Train",
+      "Tokaido"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "rockhead"
+        ],
+        "items": [
+          "expertbelt",
+          "lifeorb",
+          "choiceband"
+        ],
+        "moves": [
+          "firstimpression",
+          "uturn",
+          "heavyslam"
+        ],
+        "lockedMoves": [
+          "volttackle",
+          "flareblitz",
+          "headsmash"
+        ],
+        "level": 79
+      },
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "focussash",
+          "leftovers",
+          "lifeorb"
+        ],
+        "moves": [
+          "heavyslam",
+          "uturn",
+          "highhorsepower"
+        ],
+        "lockedMoves": [
+          "lunge",
+          "shiftgear"
+        ],
+        "level": 79
+      }
+    ]
+  },
+   "bungaloon": {
+    "nicknames": [
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungaloon",
+      "Bungy",
+      "October 4rd",
+      "Yoshi"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "thickfat"
+        ],
+        "items": [
+          "blacksludge"
+        ],
+        "moves": [
+          "clearsmog",
+          "mop",
+          "appleacid"
+        ],
+        "lockedMoves": [
+          "stockpile",
+          "fruitjuice",
+          "softboiled"
+        ],
+        "level": 82
+      },
+      {
+        "abilities": [
+          "waterbubble",
+          "gluttony"
+        ],
+        "items": [
+          "sitrusberry"
+        ],
+        "moves": [
+          "stickytongue",
+          "fruitpunch",
+          "stompingtantrum"
+        ],
+        "lockedMoves": [
+          "bellydrum",
+          "drainpunch",
+          "aquajet"
+        ],
+        "level": 82
+      }
+    ]
+  },
+    "bulbfrog": {
+    "nicknames": [
+      "Bulbfrog",
+      "Bulbfrog",
+      "Bulbfrog",
+      "Bulbfrog",
+      "Bulbfrog",
+      "Bulbfrog",
+      "Electoad",
+      "BWAOMP"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "liquidvoice"
+        ],
+        "items": [
+          "leftovers",
+          "redcard"
+        ],
+        "moves": [
+          "slackoff",
+          "paraboliccharge",
+          "thunderbolt"
+        ],
+        "lockedMoves": [
+          "boomburst",
+          "calmmind",
+          "icebeam"
+        ],
+        "level": 76
+      },
+      {
+        "abilities": [
+          "liquidvoice"
+        ],
+        "items": [
+          "watergem",
+          "leftovers"
+        ],
+        "moves": [
+          "tailgow",
+          "agility",
+          "slackoff"
+        ],
+        "lockedMoves": [
+          "boomburst",
+          "thunderbolt"
+        ],
+        "level": 76
+      }
+    ]
+  },
+     "chamelee": {
+    "nicknames": [
+      "Chamelee",
+      "Chamelee",
+      "Chamelee",
+      "Chamelee",
+      "Chamelee",
+      "Chamelee",
+      "Battle Lizard",
+      "Raging Reptile"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "choicespecs",
+          "choicescarf",
+          "lifeorb"
+        ],
+        "moves": [
+          "fireblast",
+          "focusblast"
+        ],
+        "lockedMoves": [
+          "punchout",
+          "earthpower",
+          "icebeam"
+        ],
+        "level": 76
+      },
+      {
+        "abilities": [
+          "guts",
+        ],
+        "items": [
+          "flameorb"
+        ],
+        "moves": [
+          "earthquake",
+          "icehammer",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "closecombat",
+          "uturn"
+        ],
+        "level": 76
+      }
+    ]
+  },
+   "cheesetah": {
+    "nicknames": [
+      "Cheesetah",
+      "Cheesetah",
+      "Cheesetah",
+      "Chester"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "strongjaw"
+        ],
+        "items": [
+          "expertbelt",
+          "lifeorb"
+        ],
+        "moves": [
+          "swordsdance",
+          "uturn",
+          "playrough",
+          "knockoff",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "firefang",
+          "thunderfang",
+          "icefang"
+        ],
+        "level": 87
+      }
+    ]
+  },
+     "cirnumiru": {
+    "nicknames": [
+      "Cirnumiru",
+      "Cirnumiru",
+      "Cirnumiru",
+      "Cirnumiru",
+      "Cirnumiru",
+      "Cirnumiru",
+      "Fumo",
+      "Cirno"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "liquidvoice"
+        ],
+        "items": [
+          "choicespecs",
+          "choicescarf",
+          "mysticwater"
+        ],
+        "moves": [
+          "icebeam",
+          "freezedry"
+        ],
+        "lockedMoves": [
+          "boomburst",
+          "moonblast",
+          "slipturn"
+        ],
+        "level": 76
+      },
+      {
+        "abilities": [
+          "snowwarning",
+        ],
+        "items": [
+          "icyrock"
+        ],
+        "moves": [
+          "moonblast",
+          "lactoseshot",
+          "taunt"
+        ],
+        "lockedMoves": [
+          "blizzard",
+          "auroraveil",
+          "slipturn"
+        ],
+        "level": 76
+      }
+    ]
+  },
+   "cocken": {
+    "nicknames": [
+      "Cocken",
+      "Cocken",
+      "Cocken",
+      "Nice Cock!"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "galewings"
+        ],
+        "items": [
+          "choiceband"
+        ],
+        "moves": [
+          "knockoff",
+          "bravebird",
+          "uturn",
+          "headsmash"
+        ],
+        "lockedMoves": [
+          "ancientpower",
+          "headcharge",
+          "earthquake"
+        ],
+        "level": 84
+        },
+        {
+        "abilities": [
+          "emergencyexit",
+          "bigpecks"
+        ],
+        "items": [
+          "focussash"
+        ],
+        "lockedMoves": [
+          "stealthrock",
+          "tailwind",
+          "uturn",
+          "finalgambit"
+        ],
+        "level": 82
+      }
+    ]
+  },
+   "copolar": {
+    "nicknames": [
+      "Copolar",
+      "Copolar",
+      "Copolar",
+      "Stoic Feet"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "blademaster"
+        ],
+        "items": [
+          "lifeorb",
+          "focussash"
+        ],
+        "moves": [
+          "psychocut",
+          "faeblade",
+          "frigidend",
+          "iceshard",
+          "taunt"
+        ],
+        "lockedMoves": [
+          "coldcutter",
+          "sacredsword",
+          "sharpen"
+        ],
+        "level": 82
+      }
+    ]
+  },
+     "cristanium": {
+    "nicknames": [
+      "Cristanium",
+      "Cristanium",
+      "Cristanium",
+      "Cristanium",
+      "Cristanium",
+      "Cristanium",
+      "Pope Bird",
+      "Christianity"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "stakeout",
+          "superluck"
+        ],
+        "items": [
+          "choiceband"
+        ],
+        "moves": [
+          "knockoff",
+          "sacredsword"
+        ],
+        "lockedMoves": [
+          "uturn",
+          "1000folds",
+          "leafblade"
+        ],
+        "level": 82
+      },
+      {
+        "abilities": [
+          "superluck",
+          "sniper"
+        ],
+        "items": [
+          "loadeddice"
+        ],
+        "moves": [
+          "sacredsword",
+          "knockoff",
+          "psychocut"
+        ],
+        "lockedMoves": [
+          "bulletseed",
+          "shinestrike",
+          "sharpen"
+        ],
+        "level": 82
+      }
+    ]
+  },
   "dinomight": {
     "nicknames": [
       "Dinomight",
@@ -271,6 +880,230 @@
           "earthquake"
         ],
         "level": 82
+      }
+    ]
+  },
+   "cyclonian": {
+    "nicknames": [
+      "Cyclonian",
+      "Cyclonian",
+      "Cyclonian",
+      "Mallow"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "beamboost"
+        ],
+        "items": [
+          "choicespecs",
+          "lifeorb",
+          "focussash"
+        ],
+        "moves": [
+          "steelbeam",
+          "chargebeam",
+          "bubblebeam",
+          "signalbeam",
+          "aurorabeam",
+          "hyperbeam",
+          "meteorbeam",
+          "signalbeam",
+          "solarbeam"
+        ],
+        "lockedMoves": [
+          "gazerbeam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+   "devante": {
+    "nicknames": [
+      "Devante",
+      "Devante",
+      "Devante",
+      "Devante",
+      "Devante",
+      "Devante",
+      "Devante",
+      "Devante",
+      "Devante",
+      "DEE EM CEE 2",
+      "BINNY PLEASE",
+      "BEST GAEM EVAHR"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "blademaster"
+        ],
+        "items": [
+          "expertbelt"
+        ],
+         "moves": [
+          "extremespeed",
+          "1000folds",
+        ],
+        "lockedMoves": [
+          "sacredsword",
+          "faeblade",
+          "nightslash"
+        ],
+        "level": 76
+      }
+    ]
+  },
+   "disbeary": {
+    "nicknames": [
+      "Disbeary",
+      "Disbeary",
+      "Disbeary",
+      "Disbeary",
+      "Disbeary",
+      "Disbeary",
+      "Monokuma",
+      "Despair"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "temperamental"
+        ],
+        "items": [
+          "lifeorb",
+          "choiceband",
+          "focussash"
+        ],
+         "moves": [
+          "knockoff",
+          "partingshot",
+          "playrough",
+          "suckerpunch"
+        ],
+        "lockedMoves": [
+          "brutalpunishment",
+          "banhammer",
+          "swordsdance"
+        ],
+        "level": 84
+      }
+    ]
+  },
+    "doubtlaw": {
+    "nicknames": [
+      "Doubtlaw",
+      "Doubtlaw",
+      "Doubtlaw",
+      "Doubtlaw",
+      "Doubtlaw",
+      "Doubtlaw",
+      "Outlaw",
+      "Chaos Cowboy"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "flareboost"
+        ],
+        "items": [
+          "flameorb"
+        ],
+        "lockedMoves": [
+          "astralbarrage",
+          "photongeyser",
+          "partingshot",
+          "aurasphere"
+        ],
+        "level": 80
+      }
+    ]
+  },
+   "dollghost": {
+    "nicknames": [
+      "Dollghost",
+      "Dollghost",
+      "Dollghost",
+      "Dollghost",
+      "Dollghost",
+      "Dollghost",
+      "Ghost Doll",
+      "Possession"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "unaware",
+          "cursedbody"
+        ],
+        "items": [
+          "leftovers"
+        ],
+         "moves": [
+          "willowisp",
+          "knockoff",
+          "teleport",
+          "stealthrock"
+        ],
+        "lockedMoves": [
+          "spectralthief",
+          "mop",
+          "slackoff"
+        ],
+        "level": 86
+      }
+    ]
+  },
+    "draklown": {
+    "nicknames": [
+      "Draklown",
+      "Draklown",
+      "Draklown",
+      "Draklown",
+      "Draklown",
+      "Draklown",
+      "Madness",
+      "Tiky"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "stopsign"
+        ],
+        "items": [
+          "leftovers",
+          "lifeorb"
+        ],
+        "moves": [
+          "willowisp",
+          "dragonclaw",
+          "crunch"
+        ],
+        "lockedMoves": [
+          "pursuit",
+          "recover"
+        ],
+        "level": 84
+      },
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "lightclay",
+          "leftovers"
+        ],
+        "moves": [
+          "destinybond",
+          "fierydance",
+          "partingshot"
+        ],
+        "lockedMoves": [
+          "thunderwave",
+          "baddybad",
+          "recover"
+        ],
+        "level": 84
       }
     ]
   },
@@ -750,6 +1583,38 @@
           "cloudbreaker"
         ],
         "level": 82
+      }
+    ]
+  },
+    "weedle": {
+    "nicknames": [
+      "Weedle",
+      "Weedle",
+      "Weedle",
+      "It's Over"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "mindzap",
+          "shielddust",
+          "runaway"
+        ],
+        "items": [
+          "choicespecs",
+          "stickybarb",
+          "flameorb"
+        ],
+         "moves": [
+          "bugbite",
+          "stringshot"
+        ],
+        "lockedMoves": [
+          "cope",
+          "poisonsting",
+          "electroweb"
+        ],
+        "level": 100
       }
     ]
   },
