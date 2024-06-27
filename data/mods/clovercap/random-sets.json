@@ -176,6 +176,129 @@
       }
     ]
   },
+   "ballboa": {
+    "nicknames": [
+      "Ballboa",
+      "Ballboa",
+      "Ballboa",
+      "Ballboa",
+      "Ballboa",
+      "Ballboa",
+      "Rocky",
+      "Baller"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "ironfist",
+          "skilllink"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers"
+        ],
+         "moves": [
+          "armthrust",
+          "bulletseed",
+          "drainpunch",
+          "coil",
+          "drainpunch"
+        ],
+        "lockedMoves": [
+          "rockclock",
+        ],
+        "level": 76
+      }
+    ]
+  },
+   "berfgoyle": {
+    "nicknames": [
+      "Berfgoyle",
+      "Berfgoyle",
+      "Berfgoyle",
+      "Berfgoyle",
+      "Berfgoyle",
+      "Berfgoyle",
+      "Barfy",
+      "Frug"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate",
+          "merciless"
+        ],
+        "items": [
+          "rockyhelmet",
+          "blacksludge"
+        ],
+         "moves": [
+          "flamethrower",
+          "roost",
+          "calmmind",
+          "dragonpulse",
+          "yawn"
+        ],
+        "lockedMoves": [
+          "sludgebomb",
+          "toxic"
+        ],
+        "level": 80
+      }
+    ]
+  },
+   "bitteragon": {
+    "nicknames": [
+      "Bitteragon",
+      "Bitteragon",
+      "Bitteragon",
+      "Bitteragon",
+      "Bitteragon",
+      "Bitteragon",
+      "Ice Dragon",
+      "Boring"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "leftovers"
+        ],
+         "moves": [
+          "defog",
+          "roost",
+          "earthquake",
+          "dragonclaw",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "iciclecrash",
+          "iceshard"
+        ],
+        "level": 86
+      }, 
+      {
+        "abilities": [
+          "refrigerate"
+        ],
+        "items": [
+          "icicleplate"
+        ],
+        "moves": [
+          "quickattack",
+          "roost",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "bulkup",
+          "bodyslam"
+        ],
+        "level": 86
+      }
+    ]
+  },
   "blubbastard": {
     "nicknames": [
       "Blubbastard",
@@ -245,6 +368,112 @@
       }
     ]
   },
+   "bugatti": {
+    "nicknames": [
+      "Bugatti",
+      "Bugatti",
+      "Bugatti",
+      "Bugatti",
+      "Bugatti",
+      "Bugatti",
+      "I Woke Up",
+      "Ford"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "leftovers",
+          "lifeorb"
+        ],
+        "moves": [
+          "shiftgear",
+          "uturn",
+          "bodypress"
+        ],
+        "lockedMoves": [
+          "geargrind",
+          "highhorsepower",
+          "irondefense"
+        ],
+        "level": 78
+      },
+      {
+        "abilities": [
+          "heavymetal"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers"
+        ],
+        "moves": [
+          "irondefense",
+          "uturn",
+          "bodypress"
+        ],
+        "lockedMoves": [
+          "heatcrash",
+          "heavyslam"
+        ],
+        "level": 88
+      }
+    ]
+  },
+    "bulbfrog": {
+    "nicknames": [
+      "Bulbfrog",
+      "Bulbfrog",
+      "Bulbfrog",
+      "Bulbfrog",
+      "Bulbfrog",
+      "Bulbfrog",
+      "Electoad",
+      "BWAOMP"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "liquidvoice"
+        ],
+        "items": [
+          "leftovers",
+          "redcard"
+        ],
+        "moves": [
+          "slackoff",
+          "paraboliccharge",
+          "thunderbolt"
+        ],
+        "lockedMoves": [
+          "boomburst",
+          "calmmind",
+          "icebeam"
+        ],
+        "level": 76
+      },
+      {
+        "abilities": [
+          "liquidvoice"
+        ],
+        "items": [
+          "watergem",
+          "leftovers"
+        ],
+        "moves": [
+          "tailgow",
+          "agility",
+          "slackoff"
+        ],
+        "lockedMoves": [
+          "boomburst",
+          "thunderbolt"
+        ],
+        "level": 76
+      }
+    ]
+  },
   "dinomight": {
     "nicknames": [
       "Dinomight",
@@ -271,6 +500,42 @@
           "earthquake"
         ],
         "level": 82
+      }
+    ]
+  },
+   "disbeary": {
+    "nicknames": [
+      "Disbeary",
+      "Disbeary",
+      "Disbeary",
+      "Disbeary",
+      "Disbeary",
+      "Disbeary",
+      "Monokuma",
+      "Despair"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "temperamental"
+        ],
+        "items": [
+          "lifeorb",
+          "choiceband",
+          "focussash"
+        ],
+         "moves": [
+          "knockoff",
+          "partingshot",
+          "playrough",
+          "suckerpunch"
+        ],
+        "lockedMoves": [
+          "brutalpunishment",
+          "banhammer",
+          "swordsdance"
+        ],
+        "level": 84
       }
     ]
   },
@@ -750,6 +1015,38 @@
           "cloudbreaker"
         ],
         "level": 82
+      }
+    ]
+  },
+    "weedle": {
+    "nicknames": [
+      "Weedle",
+      "Weedle",
+      "Weedle",
+      "It's Over"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "mindzap",
+          "shielddust",
+          "runaway"
+        ],
+        "items": [
+          "choicespecs",
+          "stickybarb",
+          "flameorb"
+        ],
+         "moves": [
+          "bugbite",
+          "stringshot"
+        ],
+        "lockedMoves": [
+          "cope",
+          "poisonsting",
+          "electroweb"
+        ],
+        "level": 100
       }
     ]
   },
