@@ -1107,6 +1107,188 @@
       }
     ]
   },
+     "eccosmic": {
+    "nicknames": [
+      "Eccosmic",
+      "Eccosmic",
+      "Eccosmic",
+      "Eccosmic",
+      "Eccosmic",
+      "Eccosmic",
+      "Eccosmic",
+      "Eccosmic",
+      "Eccosmic",
+      "Phindolph",
+      "Rude",
+      "Eepy Cozy"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "regenerator"
+        ],
+        "items": [
+          "leftovers",
+          "rockyhelmet"
+        ],
+        "lockedMoves": [
+          "lusterpurge",
+          "scald",
+          "stealthrock",
+          "flipturn"
+        ],
+        "level": 80
+      },
+      {
+        "abilities": [
+          "serenegrace"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers"
+        ],
+        "moves": [
+          "recover",
+          "stealthrock",
+        ],
+        "lockedMoves": [
+          "moonblast",
+          "scald",
+          "psychic"
+        ],
+        "level": 80
+      }
+    ]
+  },
+    "emojinn": {
+    "nicknames": [
+      "Emojinn",
+      "Emojinn",
+      "Emojinn",
+      "Emojinn",
+      "Emojinn",
+      "Emojinn",
+      "Will Smith",
+      "ROFL XD"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "lightclay",
+        ],
+        "lockedMoves": [
+          "lightscreen",
+          "reflect",
+          "partingshot",
+          "moonlight"
+        ],
+        "level": 84
+      },
+      {
+        "abilities": [
+          "aerilate"
+        ],
+        "items": [
+          "lifeorb",
+          "skyplate"
+        ],
+        "moves": [
+          "heatwave",
+          "powergem",
+          "aurasphere",
+          "dazzlinggleam",
+          "focusblast"
+        ],
+        "lockedMoves": [
+          "hypervoice",
+          "photongeyser",
+          "nastyplot"
+        ],
+        "level": 84
+      }
+    ]
+  },
+   "equuan": {
+    "nicknames": [
+      "Equuan",
+      "Equuan",
+      "Equuan",
+      "How Hungry"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "striker"
+        ],
+        "items": [
+          "choiceband",
+          "lifeorb"
+        ],
+        "moves": [
+          "blazekick",
+          "tropkick",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "megakick",
+          "tripleaxel",
+          "highjumpkick"
+        ],
+        "level": 78
+      }
+    ]
+  },
+   "erochre": {
+    "nicknames": [
+      "Erochre",
+      "Erochre",
+      "Erochre",
+      "Erochre",
+      "Erochre",
+      "Erochre",
+      "Erover",
+      "Mediochre"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sandstream"
+        ],
+        "items": [
+          "smoothrock",
+        ],
+        "lockedMoves": [
+          "mirageveil",
+          "shoreup",
+          "stealthrock",
+          "erosionwave"
+        ],
+        "level": 88
+      },
+      {
+        "abilities": [
+          "filter"
+        ],
+        "items": [
+          "leftovers",
+          "weaknesspolicy"
+        ],
+        "moves": [
+          "heatwave",
+          "surf",
+        ],
+        "lockedMoves": [
+          "irondefense",
+          "bodypress",
+          "erosionwave",
+        ],
+        "level": 88
+      }
+    ]
+  },
   "empidae": {
     "nicknames": [
       "Empidae",
