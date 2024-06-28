@@ -1918,6 +1918,19 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			move.multihit = move.allies.length;
 		},
 	},
+	coreenforcer: {
+		inherit: true,
+		onHit(target) {
+			if (target.getAbility().isPermanent) return;
+			if (this.queue.willMove(target)) return;
+			target.addVolatile('gastroacid');
+		},
+		onAfterSubDamage(damage, target) {
+			if (target.getAbility().isPermanent) return;
+			if (this.queue.willMove(target)) return;
+			target.addVolatile('gastroacid');
+		},
+	},
 	/* Clover Exclusive Moves */
 	sleazyspores: {
 		inherit: true,
