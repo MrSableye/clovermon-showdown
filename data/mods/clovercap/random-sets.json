@@ -1600,6 +1600,352 @@
       }
     ]
   },
+    "galvadeux": {
+    "nicknames": [
+      "Galvadeux",
+      "Galvadeux",
+      "Galvadeux",
+      "HEAVY LOBSTER"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate",
+          "teravolt",
+          "pressure"
+        ],
+        "items": [
+          "leftovers",
+          "rockyhelmet",
+        ],
+        "moves": [
+          "toxic",
+          "defog",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "plasmafists",
+          "uturn",
+          "roost"
+        ],
+        "level": 79
+      }
+    ]
+  },
+    "gargarramer": {
+    "nicknames": [
+      "Gargarramer",
+      "Gargarramer",
+      "Gargarramer",
+      "Gargarramer",
+      "Gargarramer",
+      "Gargarramer",
+      "Gamer",
+      "Good Goyle",
+      "Petrification"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "stoneflesh"
+        ],
+        "items": [
+          "leftovers",
+          "lifeorb",
+          "sitrusberry"
+        ],
+        "lockedMoves": [
+          "bravebird",
+          "accelerock",
+          "petrify",
+          "stoneedge"
+        ],
+        "level": 83
+      },
+      {
+        "abilities": [
+          "stoneflesh"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers",
+          "sitrusberry"
+        ],
+         "moves": [
+          "flamethrower",
+          "earthshatter",
+          "earthpower",
+          "airslash"
+        ],
+        "lockedMoves": [
+          "nastyplot",
+          "petrify",
+          "powergem"
+        ],
+        "level": 83
+      }
+    ]
+  },
+   "ghastropod": {
+    "nicknames": [
+      "Ghastropod",
+      "Ghastropod",
+      "Ghastropod",
+      "Ghastropod",
+      "Ghastropod",
+      "Ghastropod",
+      "ACID!!!",
+      "Sussy Ghussy",
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "purifyingsalt",
+          "dryskin"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "stealthrock",
+          "bodypress",
+          "powergem",
+          "earthpower"
+        ],
+        "lockedMoves": [
+          "recover",
+          "willowisp",
+          "hex"
+        ],
+        "level": 80
+      },
+      {
+        "abilities": [
+          "purifyingsalt",
+          "dryskin"
+        ],
+        "items": [
+          "lifeorb",
+          "focussash",
+          "whiteherb"
+        ],
+         "moves": [
+          "bugbuzz",
+          "icebeam",
+          "earthpower",
+          "gigadrain",
+          "hydropump"
+        ],
+        "lockedMoves": [
+          "shellsmash",
+          "shadowball",
+          "powergem"
+        ],
+        "level": 80
+      }
+    ]
+  },
+   "gigapuddi": {
+    "nicknames": [
+      "Gigapuddi",
+      "Gigapuddi",
+      "Gigapuddi",
+      "Gigapuddi",
+      "Gigapuddi",
+      "Gigapuddi",
+      "Sweet Tooth",
+      "Gluttony"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "beastboost"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "dazzlinggleam",
+          "storedpower",
+          "calmmind",
+          "milkdrink"
+        ],
+        "level": 79
+      },
+      {
+        "abilities": [
+          "aromaveil",
+          "sweetveil"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "teleport",
+          "dazzlinggleam",
+          "milkdrink",
+          "thunderbolt"
+        ],
+        "level": 79
+      }
+    ]
+  },
+   "ginocchio": {
+    "nicknames": [
+      "Ginocchio",
+      "Ginocchio",
+      "Ginocchio",
+      "Ginocchio",
+      "Ginocchio",
+      "Ginocchio",
+      "Fat Tits",
+      "Forest Maze"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "lifeorb",
+          "loadeddice"
+        ],
+         "moves": [
+          "rocketpunch",
+          "cherrybomb",
+          "speedweed"
+        ],
+        "lockedMoves": [
+          "starseedblast",
+          "bulletseed"
+        ],
+        "level": 83
+      },
+      {
+        "abilities": [
+          "skilllink"
+        ],
+        "items": [
+          "lifeorb",
+          "kingsrock"
+        ],
+         "moves": [
+          "barrage",
+          "secretsword",
+          "airslash",
+          "partingshot"
+        ],
+        "lockedMoves": [
+          "bulletseed",
+          "starseedshot"
+        ],
+        "level": 83
+      }
+    ]
+  },
+  "glaciun": {
+    "nicknames": [
+      "Glaciun",
+      "Glaciun",
+      "Glaciun",
+      "Glaciun",
+      "Glaciun",
+      "Glaciun",
+      "Stag",
+      "Rink King"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "lockedMoves": [
+          "iceshard",
+          "tripleaxel",
+          "fellstinger",
+          "firstimpression"
+        ],
+        "level": 79
+      },
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "lifeorb",
+          "choiceband"
+        ],
+         "moves": [
+          "swordsdance",
+          "firstimpression",
+          "crashhopper",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "glaciallance",
+          "iceshard",
+          "earthquake"
+        ],
+        "level": 79
+      }
+    ]
+  },
+   "glucurs": {
+    "nicknames": [
+      "Glucurs",
+      "Glucurs",
+      "Glucurs",
+      "Glucurs",
+      "Glucurs",
+      "Glucurs",
+      "Sour Bear",
+      "Mega Mogus Jr."
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "toxicboost"
+        ],
+        "items": [
+          "toxicorb"
+        ],
+         "moves": [
+          "knockoff",
+          "ironhead",
+          "machpunch"
+        ],
+        "lockedMoves": [
+          "protect",
+          "playrough",
+          "closecombat"
+        ],
+        "level": 88
+      },
+      {
+        "abilities": [
+          "triage"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers",
+          "bigroot"
+        ],
+         "moves": [
+          "pixiepummel",
+          "playrough"
+        ],
+        "lockedMoves": [
+          "leechlife",
+          "honeclaws",
+          "drainpunch"
+        ],
+        "level": 88
+      }
+    ]
+  },
   "ignifatu": {
     "nicknames": [
       "Ignifatu",
@@ -1608,6 +1954,10 @@
       "Ignifatu",
       "Ignifatu",
       "Ignifatu",
+      "Ignifatu",
+      "Ignifatu",
+      "Ignifatu",
+      "WRATH",
       "FIREBRINGER",
       "UNEXPECTANCY",
       "COÑO!!!!"
