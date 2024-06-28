@@ -205,7 +205,7 @@
           "earthquake"
         ],
         "lockedMoves": [
-          "rockclock",
+          "rockclock"
         ],
         "level": 80
       }
@@ -620,7 +620,7 @@
       },
       {
         "abilities": [
-          "guts",
+          "guts"
         ],
         "items": [
           "flameorb"
@@ -704,7 +704,7 @@
       },
       {
         "abilities": [
-          "snowwarning",
+          "snowwarning"
         ],
         "items": [
           "icyrock"
@@ -943,7 +943,7 @@
         ],
          "moves": [
           "extremespeed",
-          "1000folds",
+          "1000folds"
         ],
         "lockedMoves": [
           "sacredsword",
