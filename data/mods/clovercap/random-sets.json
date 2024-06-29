@@ -1149,7 +1149,7 @@
         ],
         "moves": [
           "recover",
-          "stealthrock",
+          "stealthrock"
         ],
         "lockedMoves": [
           "moonblast",
@@ -1177,7 +1177,7 @@
           "prankster"
         ],
         "items": [
-          "lightclay",
+          "lightclay"
         ],
         "lockedMoves": [
           "lightscreen",
@@ -1258,7 +1258,7 @@
           "sandstream"
         ],
         "items": [
-          "smoothrock",
+          "smoothrock"
         ],
         "lockedMoves": [
           "mirageveil",
@@ -1278,12 +1278,12 @@
         ],
         "moves": [
           "heatwave",
-          "surf",
+          "surf"
         ],
         "lockedMoves": [
           "irondefense",
           "bodypress",
-          "erosionwave",
+          "erosionwave"
         ],
         "level": 88
       }
@@ -1357,7 +1357,7 @@
         ],
         "items": [
           "choiceband",
-          "sitrusberry",
+          "sitrusberry"
         ],
         "moves": [
           "uturn",
@@ -1373,7 +1373,7 @@
       },
       {
         "abilities": [
-          "striker",
+          "striker"
         ],
         "items": [
           "lifeorb",
@@ -1381,7 +1381,7 @@
         ],
         "moves": [
           "uturn",
-          "earthquake",
+          "earthquake"
         ],
         "lockedMoves": [
           "blazekick",
@@ -1537,7 +1537,7 @@
         ],
          "moves": [
           "sleeppowder",
-          "leechseed",
+          "leechseed"
         ],
         "lockedMoves": [
           "thunder",
@@ -1616,7 +1616,7 @@
         ],
         "items": [
           "leftovers",
-          "rockyhelmet",
+          "rockyhelmet"
         ],
         "moves": [
           "toxic",
@@ -1695,7 +1695,7 @@
       "Ghastropod",
       "Ghastropod",
       "ACID!!!",
-      "Sussy Ghussy",
+      "Sussy Ghussy"
     ],
     "sets": [
       {
