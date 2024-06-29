@@ -563,7 +563,7 @@
           "calmmind",
           "icebeam"
         ],
-        "level": 76
+        "level": 80
       },
       {
         "abilities": [
@@ -582,7 +582,7 @@
           "boomburst",
           "thunderbolt"
         ],
-        "level": 76
+        "level": 80
       }
     ]
   },
@@ -616,7 +616,7 @@
           "earthpower",
           "icebeam"
         ],
-        "level": 76
+        "level": 80
       },
       {
         "abilities": [
@@ -634,7 +634,7 @@
           "closecombat",
           "uturn"
         ],
-        "level": 76
+        "level": 80
       }
     ]
   },
@@ -1535,33 +1535,37 @@
         "items": [
           "leftovers"
         ],
-         "moves": [
-          "sleeppowder",
-          "leechseed"
-        ],
         "lockedMoves": [
           "thunder",
-          "gigadrain",
-          "voltswitch"
+          "grasswhistle",
+          "voltswitch",
+          "gigadrain"
         ],
-        "level": 82
-         {
+        "level": 83
+      },
+      {
         "abilities": [
           "poisonheal"
         ],
         "items": [
           "toxicorb"
         ],
+         "moves": [
+          "spore",
+          "toxic",
+          "strengthsap",
+          "sleazyspores"
+        ],
         "lockedMoves": [
           "protect",
           "thundercage",
-          "spore",
-          "gigadrain"
+          "energyball"
         ],
-        "level": 82
+        "level": 83
       }
     ]
   },
+
    "fusjahl": {
     "nicknames": [
       "Fusjahl",
@@ -1946,6 +1950,281 @@
       }
     ]
   },
+  "haarshogun": {
+    "nicknames": [
+      "Haarshogun",
+      "Haarshogun",
+      "Haarshogun",
+      "Haarshogun",
+      "Haarshogun",
+      "Haarshogun",
+      "The Fog",
+      "Warrior"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "blademaster"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers"
+        ],
+         "moves": [
+          "suckerpunch",
+          "faeblade",
+          "aquajet",
+          "swordsdance",
+          "nightslash"
+        ],
+        "lockedMoves": [
+          "frigidend",
+          "sacredsword"
+        ],
+        "level": 81
+      },
+      {
+        "abilities": [
+          "fogofwar"
+        ],
+        "items": [
+          "assaultvest",
+          "sitrusberry",
+          "normalgem"
+        ],
+         "moves": [
+          "frigidend",
+          "uturn",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "explosion",
+          "drainpunch"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "hallmonitor": {
+    "nicknames": [
+      "Hallmonitor",
+      "Hallmonitor",
+      "Hallmonitor",
+      "No Running"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "adminabuse"
+        ],
+        "items": [
+          "lifeorb",
+          "silkscarf"
+        ],
+        "moves": [
+          "suckerpunch",
+          "hammerarm",
+          "woodhammer"
+        ],
+        "lockedMoves": [
+          "dragondance",
+          "dragonhammer",
+          "banhammer"
+        ],
+        "level": 83
+      }
+    ]
+  },
+  "hognaw": {
+    "nicknames": [
+      "Hognaw",
+      "Hognaw",
+      "Hognaw",
+      "Chungy"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sapsipper",
+          "thickfat",
+          "hustle"
+        ],
+        "items": [
+          "leftovers",
+          "rockyhelmet",
+          "redcard",
+          "normalgem"
+        ],
+        "moves": [
+          "slackoff",
+          "crunch",
+          "woodhammer",
+          "naturesmadness",
+          "icebeam",
+          "leafstorm",
+          "superpower",
+          "suckerpunch"
+        ],
+        "lockedMoves": [
+          "earthquake",
+          "bodyslam",
+          "drainpunch"
+        ],
+        "level": 83
+      }
+    ]
+  },
+  "horntuba": {
+    "nicknames": [
+      "Haarshogun",
+      "Haarshogun",
+      "Haarshogun",
+      "Haarshogun",
+      "Haarshogun",
+      "Haarshogun",
+      "AMONG US MUSICAL",
+      "Foghorn"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "quickdraw"
+        ],
+        "items": [
+          "quickclaw",
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "nastyplot",
+          "flashcannon",
+          "thunderbolt",
+          "boomburst"
+        ],
+        "level": 85
+      },
+      {
+        "abilities": [
+          "sousaphone"
+        ],
+        "items": [
+          "assaultvest",
+          "sitrusberry",
+          "leftovers"
+        ],
+         "moves": [
+          "willowisp",
+          "spookout",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "boomburst",
+          "defog",
+          "recover"
+        ],
+        "level": 85
+      }
+    ]
+  },
+  "hydroil": {
+    "nicknames": [
+      "Hydroil",
+      "Hydroil",
+      "Hydroil",
+      "Hydroil",
+      "Hydroil",
+      "Hydroil",
+      "Schizo Twins",
+      "Weather Wars"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "drizzle"
+        ],
+        "items": [
+          "damprock",
+          "leftovers",
+          "assaultvest"
+        ],
+        "lockedMoves": [
+          "boilover",
+          "scald",
+          "icebeam",
+          "earthpower"
+        ],
+        "level": 80
+      },
+      {
+        "abilities": [
+          "drought"
+        ],
+        "items": [
+          "heatrock",
+          "rockyhelmet",
+          "leftovers"
+        ],
+         "moves": [
+          "fireblast",
+          "flamethrower",
+          "weatherball"
+        ],
+        "lockedMoves": [
+          "boilover",
+          "defog",
+          "morningsun"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "ibask": {
+    "nicknames": [
+      "Ibask",
+      "Ibask",
+      "Ibask",
+      "Masquerade"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "skilllink"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers",
+          "focussash"
+        ],
+        "moves": [
+          "swordsdance",
+          "uturn",
+          "thunderouskick"
+        ],
+        "lockedMoves": [
+          "spikecannon",
+          "bulletseed",
+          "rockblast"
+        ],
+        "level": 87
+      },
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "heatrock",
+          "rockyhelmet",
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "earthquake",
+          "stealthrock",
+          "uturn",
+          "beakblast"
+        ],
+        "level": 87
+      }
+    ]
+  },
   "ignifatu": {
     "nicknames": [
       "Ignifatu",
@@ -1990,6 +2269,81 @@
           "flamecharge",
           "earthquake",
           "swordsdance"
+        ],
+        "level": 79
+      }
+    ]
+  },
+  "impfection": {
+    "nicknames": [
+      "Impfection",
+      "Impfection",
+      "Impfection",
+      "Jevil"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "corrosion"
+        ],
+        "items": [
+          "blacksludge"
+        ],
+        "lockedMoves": [
+          "toxic",
+          "venoshock",
+          "recover",
+          "mop"
+        ],
+        "level": 87
+      },
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "redcard",
+          "lightclay",
+          "blacksludge"
+        ],
+        "moves": [
+          "mop",
+          "nastyplot"
+        ],
+        "lockedMoves": [
+          "recover",
+          "baddybad",
+          "meddymeds"
+        ],
+        "level": 82
+      }
+    ]
+  },
+  "indignifly": {
+    "nicknames": [
+      "Indignifly",
+      "Indignifly",
+      "Indignifly",
+      "Markiginiflier"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "filter"
+        ],
+        "items": [
+          "weaknesspolicy",
+          "leftovers"
+        ],
+        "moves": [
+          "mysticalfire",
+          "psystrike",
+          "roost",
+          "barrier"
+        ],
+        "lockedMoves": [
+          "quiverdance",
+          "revelationdance"
         ],
         "level": 79
       }
@@ -2063,6 +2417,59 @@
           "return"
         ],
         "level": 84
+      }
+    ]
+  },
+  "junkgeist": {
+    "nicknames": [
+      "Junkgeist",
+      "Junkgeist",
+      "Junkgeist",
+      "Junkgeist",
+      "Junkgeist",
+      "Junkgeist",
+      "Mr. 128",
+      "Trash Man"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "blacksludge",
+          "choiceband",
+          "spelltag"
+        ],
+        "moves": [
+          "recover",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "spookout",
+          "doubleironbash",
+          "spectralthief"
+        ],
+        "level": 85
+      },
+      {
+        "abilities": [
+          "tetanus"
+        ],
+        "items": [
+          "rockyhelmet",
+          "blacksludge"
+        ],
+        "moves": [
+          "meteormash",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "recover",
+          "bearhug",
+          "shadowclaw"
+        ],
+        "level": 85
       }
     ]
   },
