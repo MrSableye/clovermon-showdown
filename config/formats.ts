@@ -1175,6 +1175,15 @@ export const Formats: FormatList = [
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	{
+		name: '[Gen 8 Clover CAP Only] Free-For-All Random Battle',
+		mod: 'clovercap',
+		team: 'random',
+		gameType: 'freeforall',
+		tournamentShow: false,
+		rated: false,
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
 		name: '[Gen 8 Cope Only] Anything Goes',
 		mod: 'cope',
 		ruleset: [

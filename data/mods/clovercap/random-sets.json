@@ -574,7 +574,7 @@
           "leftovers"
         ],
         "moves": [
-          "tailgow",
+          "tailglow",
           "agility",
           "slackoff"
         ],
@@ -2473,6 +2473,313 @@
       }
     ]
   },
+  "karkutlass": {
+    "nicknames": [
+      "Karkutlass",
+      "Karkutlass",
+      "Karkutlass",
+      "Cortez"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "blademaster"
+        ],
+        "items": [
+          "lifeorb",
+          "choiceband"
+        ],
+        "lockedMoves": [
+          "razorshell",
+          "sacredsword",
+          "phasethrough",
+          "shadowbone"
+        ],
+        "level": 80
+      },
+      {
+        "abilities": [
+          "blademaster"
+        ],
+        "items": [
+          "choiceband"
+        ],
+        "moves": [
+          "sacredsword",
+          "razorshell"
+        ],
+        "lockedMoves": [
+          "phasethrough",
+          "uturn",
+          "flipturn"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "kaustikrok": {
+    "nicknames": [
+      "Kaustikrok",
+      "Kaustikrok",
+      "Kaustikrok",
+      "Kaustikrok",
+      "Kaustikrok",
+      "Kaustikrok",
+      "Boshi",
+      "Ripped Liver"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "merciless",
+          "corrosion"
+        ],
+        "items": [
+          "blacksludge",
+          "rockyhelmet",
+          "redcard",
+          "shucaberry"
+        ],
+        "moves": [
+          "softboiled",
+          "toxicspikes",
+          "suckerpunch"
+        ],
+        "lockedMoves": [
+          "honeclaws",
+          "badeggs",
+          "gunkshot"
+        ],
+        "level": 85
+      }
+    ]
+  },
+  "kokaiju": {
+    "nicknames": [
+      "Kokaiju",
+      "Kokaiju",
+      "Kokaiju",
+      "Kokaiju",
+      "Kokaiju",
+      "Kokaiju",
+      "Big Coce",
+      "Cockatrice"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "battlearmor"
+        ],
+        "items": [
+          "choiceband",
+          "lifeorb"
+        ],
+        "moves": [
+          "roost",
+          "dragondance",
+          "headsmash"
+        ],
+        "lockedMoves": [
+          "owtheedge",
+          "drillpeck",
+          "braindamage"
+        ],
+        "level": 82
+      },
+      {
+        "abilities": [
+          "battlearmor",
+          "infiltrator"
+        ],
+        "items": [
+          "flyinggem"
+        ],
+        "lockedMoves": [
+          "acrobatics",
+          "owtheedge",
+          "dragondance",
+          "earthquake"
+        ],
+        "level": 82
+      }
+    ]
+  },
+  "konekoth": {
+    "nicknames": [
+      "Konekoth",
+      "Konekoth",
+      "Konekoth",
+      "Garfield"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "fluffy",
+          "intimidate"
+        ],
+        "items": [
+          "leftovers",
+          "rockyhelmet"
+        ],
+        "moves": [
+          "roost",
+          "glare",
+          "earthquake",
+          "closecombat"
+        ],
+        "lockedMoves": [
+          "lunge",
+          "uturn",
+          "knockoff"
+        ],
+        "level": 86
+      },
+      {
+        "abilities": [
+          "toughclaws"
+        ],
+        "items": [
+          "choiceband",
+          "sitrusberry"
+        ],
+        "moves": [
+          "playrough",
+          "psychicfangs",
+          "knockoff",
+          "thunderdrop"
+        ],
+        "lockedMoves": [
+          "firstimpression",
+          "leechlife",
+          "closecombat"
+        ],
+        "level": 86
+      }
+    ]
+  },
+  "korokami": {
+    "nicknames": [
+      "Korokami",
+      "Korokami",
+      "Korokami",
+      "Insatiable"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "furcoat",
+          "intimidate",
+          "unnerve"
+        ],
+        "items": [
+          "leftovers",
+          "rockyhelmet"
+        ],
+        "moves": [
+          "toxic",
+          "glare"
+        ],
+        "lockedMoves": [
+          "bearhug",
+          "recover",
+          "crunch"
+        ],
+        "level": 82
+      },
+      {
+        "abilities": [
+          "strongjaw"
+        ],
+        "items": [
+          "choiceband",
+          "lifeorb",
+          "sitrusberry",
+          "choicescarf"
+        ],
+        "moves": [
+          "overbite",
+          "psychicfangs",
+          "poisonfang",
+          "flintfang"
+        ],
+        "lockedMoves": [
+          "hyperfang",
+          "thunderfang",
+          "crunch"
+        ],
+        "level": 82
+      }
+    ]
+  },
+  "krackodemon": {
+    "nicknames": [
+      "Krackodemon",
+      "Krackodemon",
+      "Krackodemon",
+      "Krackodemon",
+      "Krackodemon",
+      "Krackodemon",
+      "Kracko",
+      "stroke of genius"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "spikes",
+          "icebeam"
+        ],
+        "lockedMoves": [
+          "voltaiccyclone",
+          "darkpulse",
+          "recover"
+        ],
+        "level": 81
+      }
+    ]
+  },
+   "kumataro": {
+    "nicknames": [
+      "Kumataro",
+      "Kumataro",
+      "Kumataro",
+      "Kumataro",
+      "Kumataro",
+      "Kumataro",
+      "Jotaro",
+      "Star Platinum"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "ironfist"
+        ],
+        "items": [
+          "lifeorb",
+          "choiceband",
+          "assaultvest"
+        ],
+         "moves": [
+          "thunderpunch",
+          "icepunch",
+          "machpunch",
+          "rocketpunch",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "crusadercrash",
+          "poltergeist",
+          "meteormash"
+        ],
+        "level": 80
+      }
+    ]
+  },
   "lemirethun": {
     "nicknames": [
       "Lemirethun",
@@ -2498,6 +2805,471 @@
       }
     ]
   },
+   "levititan": {
+    "nicknames": [
+      "Levititan",
+      "Levititan",
+      "Levititan",
+      "Yggdrasil"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "superluck"
+        ],
+        "items": [
+          "lifeorb",
+          "choicespecs",
+          "choicescarf",
+          "sitrusberry"
+        ],
+        "moves": [
+          "shadowball",
+          "thunderbolt",
+          "sludgebomb",
+          "sludgewave",
+          "earthshatter"
+        ],
+        "lockedMoves": [
+          "aeroblast",
+          "fireblast",
+          "aurasphere"
+        ],
+        "level": 83
+      }
+    ]
+  },
+   "loituma": {
+    "nicknames": [
+      "Loituma",
+      "Loituma",
+      "Loituma",
+      "Loituma",
+      "Loituma",
+      "Loituma",
+      "Miku",
+      "Llevan Polka"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "focussash",
+          "lightclay"
+        ],
+        "lockedMoves": [
+          "aeroblast",
+          "lightscreen",
+          "reflect",
+          "uturn"
+        ],
+        "level": 79
+      },
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "lifeorb",
+          "choicespecs"
+        ],
+         "moves": [
+          "energyball",
+          "gigadrain",
+          "leafstorm"
+        ],
+        "lockedMoves": [
+          "aeroblast",
+          "heatwave",
+          "dazzlinggleam"
+        ],
+        "level": 76
+      }
+    ]
+  },
+  "lunabbit": {
+    "nicknames": [
+      "Lunabbit",
+      "Lunabbit",
+      "Lunabbit",
+      "Lunabbit",
+      "Lunabbit",
+      "Lunabbit",
+      "Fucking Bnuuy",
+      "a mimir"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "comatose"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "futuresight",
+          "yawn",
+          "knockoff",
+          "milkdrink"
+        ],
+        "level": 83
+      },
+      {
+        "abilities": [
+          "hugepower"
+        ],
+        "items": [
+          "lifeorb",
+          "choiceband",
+          "choicescarf"
+        ],
+         "moves": [
+          "drainpunch",
+          "knockoff",
+          "icepunch"
+        ],
+        "lockedMoves": [
+          "psychicfangs",
+          "playrough",
+          "earthquake"
+        ],
+        "level": 83
+      }
+    ]
+  },
+   "mafiadon": {
+    "nicknames": [
+      "Mafiadon",
+      "Mafiadon",
+      "Mafiadon",
+      "Mafiadon",
+      "Mafiadon",
+      "Mafiadon",
+      "The Don",
+      "Godfather"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "guts"
+        ],
+        "items": [
+          "flameorb"
+        ],
+         "moves": [
+          "scaleshot",
+          "dragondance"
+        ],
+        "lockedMoves": [
+          "dragonhammer",
+          "knockoff",
+          "earthquake"
+        ],
+        "level": 81
+      },
+      {
+        "abilities": [
+          "intimidate",
+          "moxie"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers",
+          "sitrusberry"
+        ],
+         "moves": [
+          "thunderdrop",
+          "stoneedge",
+          "poisonjab",
+          "rockslide"
+        ],
+        "lockedMoves": [
+          "knockoff",
+          "scaleshot",
+          "earthquake"
+        ],
+        "level": 81
+      }
+    ]
+  },
+  "mammount": {
+    "nicknames": [
+      "Mammount",
+      "Mammount",
+      "Mammount",
+      "Manny"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "thickfat",
+          "shavedice"
+        ],
+        "items": [
+          "leftovers",
+          "weaknesspolicy",
+          "rockyhelmet"
+        ],
+        "lockedMoves": [
+          "glaciallance",
+          "earthquake",
+          "bulkup",
+          "milkdrink"
+        ],
+        "level": 86
+      }
+    ]
+  },
+  "mantasm": {
+    "nicknames": [
+      "Mantasm",
+      "Mantasm",
+      "Mantasm",
+      "Phantacade"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "guts"
+        ],
+        "items": [
+          "flameorb"
+        ],
+        "moves": [
+          "poltergeist",
+          "thunderdrop",
+          "superpower",
+          "bravebird",
+          "firepunch",
+          "fractus"
+        ],
+        "lockedMoves": [
+          "spookout",
+          "wavecrash",
+          "shadowsneak"
+        ],
+        "level": 87
+      }
+    ]
+  },
+  "mogeria": {
+    "nicknames": [
+      "Mogeria",
+      "Mogeria",
+      "Mogeria",
+      "Mogeria",
+      "Mogeria",
+      "Mogeria",
+      "Greed's Wife",
+      "Amogeria"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "serenegrace",
+          "grassysurge"
+        ],
+        "items": [
+          "leftovers",
+          "sitrusberry"
+        ],
+         "moves": [
+          "moonblast",
+          "ancientpower",
+          "naturesmadness"
+        ],
+        "lockedMoves": [
+          "seedflare",
+          "fierydance",
+          "quiverdance"
+        ],
+        "level": 88
+      },
+      {
+        "abilities": [
+          "grassysurge"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers",
+          "sitrusberry",
+          "terrainextender"
+        ],
+         "moves": [
+          "strengthsap",
+          "swordsdance",
+          "sleeppowder"
+        ],
+        "lockedMoves": [
+          "knockoff",
+          "rapidspin",
+          "grassyglide"
+        ],
+        "level": 89
+      }
+    ]
+  },
+  "mogumole": {
+    "nicknames": [
+      "Mogumole",
+      "Mogumole",
+      "Mogumole",
+      "Mogumole",
+      "Mogumole",
+      "Mogumole",
+      "Earthbound",
+      "Wyrmworm"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "hustle",
+          "superluck"
+        ],
+        "items": [
+          "lifeorb",
+          "scopelens"
+        ],
+        "moves": [
+          "firepunch",
+          "icepunch",
+          "headsmash",
+          "ironhead",
+          "thunderpunch",
+          "stoneedge"
+        ],
+        "lockedMoves": [
+          "drillrun",
+          "honeclaws",
+          "scaleshot"
+        ],
+        "level": 90
+      },
+      {
+        "abilities": [
+          "superluck"
+        ],
+        "items": [
+          "loadeddice"
+        ],
+         "moves": [
+          "firepunch",
+          "icepunch",
+          "headsmash",
+          "ironhead",
+          "thunderpunch",
+          "stoneedge"
+        ],
+        "lockedMoves": [
+          "spikecannon",
+          "scaleshot",
+          "swordsdance"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "molterra": {
+    "nicknames": [
+      "Molterra",
+      "Molterra",
+      "Molterra",
+      "Bouldergeist",
+      "RUPTSIN?!"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sheerforce",
+          "battlearmor"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers",
+          "expertbelt"
+        ],
+        "moves": [
+          "stealthrock",
+          "erosionwave",
+          "rapidspin",
+          "sludgebomb"
+        ],
+        "lockedMoves": [
+          "shoreup",
+          "earthshatter",
+          "lavaplume"
+        ],
+        "level": 83
+      }
+    ]
+  },
+  "Moyalith": {
+    "nicknames": [
+      "Moyalith",
+      "Moyalith",
+      "Moyalith",
+      "30 Dollar",
+      "Squidwards House"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "bigguy"
+        ],
+        "items": [
+          "rockyhelmet",
+          "leftovers",
+          "redcard"
+        ],
+        "moves": [
+          "earthquake",
+          "teleport",
+          "protect",
+          "bodypress"
+        ],
+        "lockedMoves": [
+          "stealthrock",
+          "tombstoner",
+          "wish"
+        ],
+        "level": 90
+      }
+    ]
+  },
+  "naughtycoot": {
+    "nicknames": [
+      "Naughtycoot",
+      "Naughtycoot",
+      "Naughtycoot",
+      "N Sane",
+      "Fake Crash"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "prankster",
+          "rebound"
+        ],
+        "items": [
+          "thiccbone"
+        ],
+        "moves": [
+          "taunt",
+          "icepunch",
+          "bulkup",
+          "quicksand"
+        ],
+        "lockedMoves": [
+          "stealthrock",
+          "earthquake",
+          "stoneedge"
+        ],
+        "level": 80
+      }
+    ]
+  },
   "noxilium": {
     "nicknames": [
       "Noxilium",
@@ -2515,7 +3287,8 @@
           "noguard"
         ],
         "items": [
-          "choicespecs"
+          "choicespecs",
+          "moluganion"
         ],
         "lockedMoves": [
           "shadowball",
@@ -2527,14 +3300,17 @@
       },
       {
         "abilities": [
-          "noguard"
+          "noguard",
+          "deltastream"
         ],
         "items": [
-          "lifeorb"
+          "lifeorb",
+          "moluganion"
         ],
         "moves": [
           "shadowsneak",
-          "knockoff"
+          "knockoff",
+          "rest"
         ],
         "lockedMoves": [
           "swordsdance",
@@ -2542,6 +3318,53 @@
           "bravebird"
         ],
         "level": 80
+      }
+    ]
+  },
+  "nyanonite": {
+    "nicknames": [
+      "Nyanonite",
+      "Nyanonite",
+      "Nyanonite",
+      "Nyanonite",
+      "Nyanonite",
+      "Nyanonite",
+      "Nyan Cat",
+      ":3"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "pixilate"
+        ],
+        "items": [
+          "choiceband",
+          "fairygem",
+          "assaultvest",
+          "lifeorb"
+        ],
+        "lockedMoves": [
+          "explosion",
+          "diamondstorm",
+          "bodyslam",
+          "earthquake"
+        ],
+        "level": 76
+      },
+      {
+        "abilities": [
+          "jewelry"
+        ],
+        "items": [
+          "powerherb"
+        ],
+        "lockedMoves": [
+          "meteorbeam",
+          "moonblast",
+          "focusblast",
+          "surf"
+        ],
+        "level": 76
       }
     ]
   },
