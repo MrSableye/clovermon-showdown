@@ -2996,10 +2996,10 @@
   },
   "mammount": {
     "nicknames": [
-      "Lemirethun",
-      "Lemirethun",
-      "Lemirethun",
-      "LIVE AND LEARN"
+      "Mammount",
+      "Mammount",
+      "Mammount",
+      "Manny"
     ],
     "sets": [
       {
@@ -3022,6 +3022,254 @@
       }
     ]
   },
+  "mantasm": {
+    "nicknames": [
+      "Mantasm",
+      "Mantasm",
+      "Mantasm",
+      "Phantacade"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "guts"
+        ],
+        "items": [
+          "flameorb"
+        ],
+        "moves": [
+          "poltergeist",
+          "thunderdrop",
+          "superpower",
+          "bravebird",
+          "firepunch",
+          "fractus"
+        ],
+        "lockedMoves": [
+          "spookout",
+          "wavecrash",
+          "shadowsneak"
+        ],
+        "level": 87
+      }
+    ]
+  },
+  "mogeria": {
+    "nicknames": [
+      "Mogeria",
+      "Mogeria",
+      "Mogeria",
+      "Mogeria",
+      "Mogeria",
+      "Mogeria",
+      "Greed's Wife",
+      "Amogeria"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "serenegrace",
+          "grassysurge"
+        ],
+        "items": [
+          "leftovers",
+          "sitrusberry"
+        ],
+         "moves": [
+          "moonblast",
+          "ancientpower",
+          "naturesmadness"
+        ],
+        "lockedMoves": [
+          "seedflare",
+          "fierydance",
+          "quiverdance"
+        ],
+        "level": 88
+      },
+      {
+        "abilities": [
+          "grassysurge"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers",
+          "sitrusberry",
+          "terrainextender"
+        ],
+         "moves": [
+          "strengthsap",
+          "swordsdance",
+          "sleeppowder"
+        ],
+        "lockedMoves": [
+          "knockoff",
+          "rapidspin",
+          "grassyglide"
+        ],
+        "level": 89
+      }
+    ]
+  },
+  "mogumole": {
+    "nicknames": [
+      "Mogumole",
+      "Mogumole",
+      "Mogumole",
+      "Mogumole",
+      "Mogumole",
+      "Mogumole",
+      "Earthbound",
+      "Wyrmworm"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "hustle",
+          "superluck"
+        ],
+        "items": [
+          "lifeorb",
+          "scopelens"
+        ],
+        "moves": [
+          "firepunch",
+          "icepunch",
+          "headsmash",
+          "ironhead",
+          "thunderpunch",
+          "stoneedge"
+        ],
+        "lockedMoves": [
+          "drillrun",
+          "honeclaws",
+          "scaleshot"
+        ],
+        "level": 90
+      },
+      {
+        "abilities": [
+          "superluck"
+        ],
+        "items": [
+          "loadeddice"
+        ],
+         "moves": [
+          "firepunch",
+          "icepunch",
+          "headsmash",
+          "ironhead",
+          "thunderpunch",
+          "stoneedge"
+        ],
+        "lockedMoves": [
+          "spikecannon",
+          "scaleshot",
+          "swordsdance"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "molterra": {
+    "nicknames": [
+      "Molterra",
+      "Molterra",
+      "Molterra",
+      "Bouldergeist",
+      "RUPTSIN?!"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sheerforce",
+          "battlearmor"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers",
+          "expertbelt"
+        ],
+        "moves": [
+          "stealthrock",
+          "erosionwave",
+          "rapidspin",
+          "sludgebomb"
+        ],
+        "lockedMoves": [
+          "shoreup",
+          "earthshatter",
+          "lavaplume"
+        ],
+        "level": 83
+      }
+    ]
+  },
+  "Moyalith": {
+    "nicknames": [
+      "Moyalith",
+      "Moyalith",
+      "Moyalith",
+      "30 Dollar",
+      "Squidwards House"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "bigguy"
+        ],
+        "items": [
+          "rockyhelmet",
+          "leftovers",
+          "redcard"
+        ],
+        "moves": [
+          "earthquake",
+          "teleport",
+          "protect",
+          "bodypress"
+        ],
+        "lockedMoves": [
+          "stealthrock",
+          "tombstoner",
+          "wish"
+        ],
+        "level": 90
+      }
+    ]
+  },
+  "naughtycoot": {
+    "nicknames": [
+      "Naughtycoot",
+      "Naughtycoot",
+      "Naughtycoot",
+      "N Sane",
+      "Fake Crash"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "prankster",
+          "rebound"
+        ],
+        "items": [
+          "thiccbone"
+        ],
+        "moves": [
+          "taunt",
+          "icepunch",
+          "bulkup",
+          "quicksand"
+        ],
+        "lockedMoves": [
+          "stealthrock",
+          "earthquake",
+          "stoneedge"
+        ],
+        "level": 80
+      }
+    ]
+  },
   "noxilium": {
     "nicknames": [
       "Noxilium",
@@ -3039,7 +3287,8 @@
           "noguard"
         ],
         "items": [
-          "choicespecs"
+          "choicespecs",
+          "moluganion"
         ],
         "lockedMoves": [
           "shadowball",
@@ -3051,14 +3300,17 @@
       },
       {
         "abilities": [
-          "noguard"
+          "noguard",
+          "deltastream"
         ],
         "items": [
-          "lifeorb"
+          "lifeorb",
+          "moluganion"
         ],
         "moves": [
           "shadowsneak",
-          "knockoff"
+          "knockoff",
+          "rest"
         ],
         "lockedMoves": [
           "swordsdance",
@@ -3066,6 +3318,53 @@
           "bravebird"
         ],
         "level": 80
+      }
+    ]
+  },
+  "nyanonite": {
+    "nicknames": [
+      "Nyanonite",
+      "Nyanonite",
+      "Nyanonite",
+      "Nyanonite",
+      "Nyanonite",
+      "Nyanonite",
+      "Nyan Cat",
+      ":3"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "pixilate"
+        ],
+        "items": [
+          "choiceband",
+          "fairygem",
+          "assaultvest",
+          "lifeorb"
+        ],
+        "lockedMoves": [
+          "explosion",
+          "diamondstorm",
+          "bodyslam",
+          "earthquake"
+        ],
+        "level": 76
+      },
+      {
+        "abilities": [
+          "jewelry"
+        ],
+        "items": [
+          "powerherb"
+        ],
+        "lockedMoves": [
+          "meteorbeam",
+          "moonblast",
+          "focusblast",
+          "surf"
+        ],
+        "level": 76
       }
     ]
   },
