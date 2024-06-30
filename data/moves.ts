@@ -42372,7 +42372,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 1,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Light",
@@ -42461,7 +42475,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -43126,6 +43143,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: -6,
 		flags: {protect: 1, mirror: 1},
+		forceSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -47061,7 +47079,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'tox',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Steel",
@@ -47917,8 +47938,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: null,
-		self: {
-			volatileStatus: 'mustrecharge',
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		critRatio: 2,
 		target: "allAdjacentFoes",
@@ -50347,6 +50370,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 1,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -53725,6 +53751,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		self: {
+			onHit(source) {
+				this.field.setWeather('midnight');
+			},
+		},
 		target: "normal",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -55758,6 +55789,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -60914,7 +60950,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bone: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Bone",
 		isNonstandard: "Future",
@@ -60928,7 +60967,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bone: 1, coral: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			boosts: {
+				def: -1,
+			},
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Bone",
@@ -67685,7 +67729,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 			onAfterMove(pokemon, Wood, move) {
-				if (move.type === 'Electric' && move.id !== 'barkskin') {
+				if (move.type === 'Wood' && move.id !== 'barkskin') {
 					pokemon.removeVolatile('barkskin');
 				}
 			},
@@ -68648,8 +68692,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		self: {
-			volatileStatus: 'mustrecharge',
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		secondary: null,
 		target: "normal",
@@ -80385,7 +80431,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		overrideDefensiveStat: 'spd',
+		secondary: {
+			chance: 30,
+			volatileStatus: 'curse',
+		},
 		target: "normal",
 		type: "Shadow",
 		isNonstandard: "Future",
@@ -81143,6 +81193,36 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {pulse: 1},
+		pseudoWeather: 'coralreef',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('damprock')) {
+					return 10;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Coral Reef', '[of] ' + source);
+			},
+			
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (pokemon.hasType('Water')) {
+					this.heal(pokemon.baseMaxhp / 16);
+				}  
+					else if (!pokemon.hasType('Rock')|| pokemon.hasType('Water')) { 
+					this.damage(pokemon.baseMaxhp / 16);
+				}
+			},
+			
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Coral Reef');
+			},
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Water",
@@ -81157,6 +81237,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		onHit(target, source) {
+			let success = false;
+			if (this.field.getPseudoWeather('coralreef')) {
+				success = !!this.heal(this.modify(target.baseMaxhp, 0.667));
+			} else {
+				success = !!this.heal(Math.ceil(target.baseMaxhp * 0.333));
+			}
+			if (success && !target.isAlly(source)) {
+				target.staleness = 'external';
+			}
+			if (!success) {
+				this.add('-fail', target, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
 		secondary: null,
 		target: "self",
 		type: "Water",
@@ -81171,6 +81267,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, coral: 1},
+		basePowerCallback(source, target, move) {
+			if (this.field.getPseudoWeather('coralreef')) {
+				if (!source.isAlly(target)) this.hint(`${move.name}'s BP doubled on grounded target.`);
+				return move.basePower * 1.5;
+			}
+			return move.basePower;
+		},
+		multihit: [2, 5],
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -81186,6 +81290,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(source, target, move) {
+			if (this.field.getPseudoWeather('coralreef')) {
+				return move.basePower * 1.5;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -84959,7 +85069,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		basePowerCallback(source, target, move) {
+			if (this.field.getPseudoWeather('coralreef')) {
+				return move.basePower * 1.5;
+			}
+			return move.basePower;
+		},
+		secondary: {
+			chance: 60,
+			volatileStatus: 'flinch',
+		},
+		recoil: [33, 100],
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -86373,8 +86493,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		self: {
-			volatileStatus: 'mustrecharge',
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		secondary: null,
 		target: "allAdjacentFoes",
@@ -87526,8 +87648,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: null,
-		self: {
-			volatileStatus: 'mustrecharge',
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
 		},
 		critRatio: 2,
 		target: "allAdjacentFoes",
@@ -87713,7 +87837,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 45,
+			boosts: {
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Bone",
 		isNonstandard: "Future",
@@ -87753,7 +87882,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'slp',
+		},
 		target: "normal",
 		type: "Bone",
 		isNonstandard: "Future",
@@ -87805,7 +87937,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'tox',
+		},
 		target: "normal",
 		type: "Bone",
 		isNonstandard: "Future",
