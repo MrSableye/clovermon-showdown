@@ -665,7 +665,35 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	aquaring: {
 		inherit: true,
+		
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Aqua Ring",
+		pp: 20,
+		priority: 0,
 		flags: {snatch: 1, heal: 1},
+		volatileStatus: 'aquaring',
+		condition: {
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Aqua Ring');
+			},
+			onModifyDefPriority: 10,
+			onModifyDef(spd, pokemon) {
+				if (this.field.getPseudoWeather('coralreef')) {
+					return this.chainModify([1.5]);
+				}
+			},
+			onResidualOrder: 6,
+			onResidual(pokemon) {
+				this.heal(pokemon.baseMaxhp / 16);
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Water",
+		zMove: {boost: {def: 1}},
+		contestType: "Beautiful",
 		isNonstandard: null,
 	},
 	aquatail: {
@@ -4397,8 +4425,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			pp: 5,
 			priority: 0,
 			flags: {contact: 1, recharge: 1, protect: 1, mirror: 1},
-			self: {
-				volatileStatus: 'mustrecharge',
+			onAfterHit(target, source) {
+				if (target && target.hp) {
+					source.addVolatile('mustrecharge');
+				}
 			},
 			secondary: null,
 			target: "normal",
@@ -4535,8 +4565,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			pp: 5,
 			priority: 0,
 			flags: {contact: 1, recharge: 1, protect: 1, mirror: 1},
-			self: {
-				volatileStatus: 'mustrecharge',
+			onAfterHit(target, source) {
+				if (target && target.hp) {
+					source.addVolatile('mustrecharge');
+				}
 			},
 			secondary: null,
 			target: "normal",

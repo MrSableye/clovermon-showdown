@@ -1003,6 +1003,22 @@ export const Formats: FormatList = [
 		team: 'random',
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
+	{
+		name: '[Gen 8 Wack Only] Pick Your Team Random Battle',
+		mod: 'wack',
+		team: 'random',
+		gameType: 'freeforall',
+		ruleset: ['Terastal Clause', 'Sleep Clause Mod', 'Picked Team Size = 6', 'Max Team Size = 12', 'Team Preview', 'Dynamax Clause', 'Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
+	},
+	{
+		name: '[Gen 8 Wack Only] FFA Random Battle',
+		mod: 'wack',
+		team: 'random',
+		gameType: 'freeforall',
+		tournamentShow: false,
+		rated: false,
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
 	///////////////////////////////////////////////////////////////////
 	// Wack OMs
 	///////////////////////////////////////////////////////////////////
