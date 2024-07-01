@@ -4170,7 +4170,7 @@
       "Retwina",
       "Retwina",
       "Retwina",
-      "Crimson Twin"
+      "Retinizer"
     ],
     "sets": [
       {
@@ -4964,6 +4964,209 @@
       }
     ]
   },
+  "tarantagon": {
+    "nicknames": [
+      "Tarantagon",
+      "Tarantagon",
+      "Tarantagon",
+      "FantasticAngles",
+      "AwesomeSides"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "skilllink"
+        ],
+        "items": [
+          "lifeorb",
+          "focussash"
+        ],
+        "moves": [
+          "rapidspin",
+          "rockblast",
+          "uturn",
+          "stickyweb",
+          "spikes"
+        ],
+        "lockedMoves": [
+          "barrage",
+          "pinmissile"
+        ],
+        "level": 83
+      },
+      {
+        "abilities": [
+          "sturdy",
+          "stopsign"
+        ],
+        "items": [
+          "leftovers",
+          "custapberry"
+        ],
+        "lockedMoves": [
+          "stickyweb",
+          "spikes",
+          "uturn",
+          "ironhead"
+        ],
+        "level": 83
+      }
+    ]
+  },
+  "tarquail": {
+    "nicknames": [
+      "Tarquail",
+      "Tarquail",
+      "Tarquail",
+      "BounceBird"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "arenatrap"
+        ],
+        "items": [
+          "blacksludge"
+        ],
+        "moves": [
+          "earthpower",
+          "roost"
+        ],
+        "lockedMoves": [
+          "stickytongue",
+          "stickyweb",
+          "stealthrock"
+        ],
+        "level": 78
+      },
+      {
+        "abilities": [
+          "gooey",
+          "stickyhold"
+        ],
+        "items": [
+          "blacksludge",
+          "rockyhelmet"
+        ],
+        "moves": [
+          "teleport",
+          "strengthsap",
+          "spikes",
+          "stickyweb",
+          "stealthrock",
+          "toxicspikes",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "sludgebomb",
+          "thousandwaves"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "temawria": {
+    "nicknames": [
+      "Temawria",
+      "Temawria",
+      "Temawria",
+      "Spazmatism"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sheerforce"
+        ],
+        "items": [
+          "lifeorb",
+          "choicescarf",
+          "choiceband"
+        ],
+        "moves": [
+          "earthquake",
+          "firefang",
+          "icefang",
+          "leechlife",
+          "playrough",
+          "psychicfangs",
+          "pursuit",
+          "superpower"
+        ],
+        "lockedMoves": [
+          "crunch",
+          "meteormash"
+        ],
+        "level": 79
+      }
+    ]
+  },
+  "terratarus": {
+    "nicknames": [
+      "Terratarus",
+      "Terratarus",
+      "Terratarus",
+      "Gary"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "toughclaws"
+        ],
+        "items": [
+          "lifeorb",
+          "focussash",
+          "airballoon"
+        ],
+        "moves": [
+          "highhorsepower",
+          "icepunch",
+          "crabhammer",
+          "superpower",
+          "shadowclaw",
+          "shellsmash"
+        ],
+        "lockedMoves": [
+          "rockclimb",
+          "slimegulp"
+        ],
+        "level": 86
+      }
+    ]
+  },
+  "theforest": {
+    "nicknames": [
+      "The Forest",
+      "The Forest",
+      "The Forest",
+      "Something Is Wrong"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "horror"
+        ],
+        "items": [
+          "lifeorb",
+          "focussash",
+          "leftovers"
+        ],
+        "moves": [
+          "crashhopper",
+          "swordsdance",
+          "earthquake",
+          "headsmash",
+          "irondefense",
+          "leafblade",
+          "jumpkick"
+        ],
+        "lockedMoves": [
+          "firstimpression",
+          "darkvoid"
+        ],
+        "level": 70
+      }
+    ]
+  },
   "toastort": {
     "nicknames": [
       "Toastort",
@@ -5006,11 +5209,409 @@
       }
     ]
   },
+  "toofgrew": {
+    "nicknames": [
+      "Toofgrew",
+      "Toofgrew",
+      "Toofgrew",
+      "Overbite"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "strongjaw",
+          "hustle",
+          "regenerator"
+        ],
+        "items": [
+          "choiceband",
+          "leftovers",
+          "assaultvest",
+          "lifeorb"
+        ],
+        "moves": [
+          "earthquake",
+          "flipturn",
+          "headsmash",
+          "liquidation",
+          "firefang",
+          "suckerpunch",
+          "wildcharge"
+        ],
+        "lockedMoves": [
+          "overbite",
+          "icefang",
+          "gravapple"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "towhorse": {
+    "nicknames": [
+      "Towhorse",
+      "Towhorse",
+      "Towhorse",
+      "Horace"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "stamina"
+        ],
+        "items": [
+          "rockyhelmet",
+          "leftovers",
+          "sitrusberry"
+        ],
+        "moves": [
+          "uturn",
+          "recover"
+        ],
+        "lockedMoves": [
+          "bodypress",
+          "earthquake",
+          "stealthrock"
+        ],
+        "level": 80
+      },
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "leftovers",
+          "rockyhelmet",
+          "weaknesspolicy"
+        ],
+        "lockedMoves": [
+          "bulkup",
+          "recover",
+          "bodypress",
+          "stoneedge"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "tsemani": {
+    "nicknames": [
+      "Tsemani",
+      "Tsemani",
+      "Tsemani",
+      "Not Cum"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "hydrophile",
+          "primordialsea"
+        ],
+        "items": [
+          "mysticwater",
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "scald",
+          "rapidspin",
+          "milkdrink",
+          "dragonpulse"
+        ],
+        "level": 80
+      },
+      {
+        "abilities": [
+          "shellarmor",
+          "primordialsea"
+        ],
+        "items": [
+          "leftovers",
+          "sitrusberry"
+        ],
+        "lockedMoves": [
+          "coil",
+          "milkdrink",
+          "wavecrash",
+          "earthquake"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "turturret": {
+    "nicknames": [
+      "Turturret",
+      "Turturret",
+      "Turturret",
+      "Turturret",
+      "Turturret",
+      "Turturret",
+      "Engie",
+      "Dell"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "dispenser"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "voltswitch",
+          "toxic"
+        ],
+        "lockedMoves": [
+          "earthpower",
+          "protect",
+          "thundercage"
+        ],
+        "level": 83
+      },
+      {
+        "abilities": [
+          "galvanize"
+        ],
+        "items": [
+          "whiteherb",
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "moregun",
+          "fireblast",
+          "flashcannon",
+          "surf"
+        ],
+        "level": 83
+      }
+    ]
+  },
+  "vergilion": {
+    "nicknames": [
+      "Vergilion",
+      "Vergilion",
+      "Vergilion",
+      "Vergil"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "blademaster",
+          "noguard",
+          "darkaura"
+        ],
+        "items": [
+          "assaultvest",
+          "lifeorb"
+        ],
+        "lockedMoves": [
+          "crosschop",
+          "trickstab",
+          "precipiceblades",
+          "1000folds"
+        ],
+        "level": 70
+      }
+    ]
+  },
+  "voliath": {
+    "nicknames": [
+      "Voliath",
+      "Voliath",
+      "Voliath",
+      "Raiju"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "multiscale"
+        ],
+        "items": [
+          "leftovers",
+          "sitrusberry",
+          "weaknesspolicy"
+        ],
+        "moves": [
+          "closecombat",
+          "crashhopper",
+          "earthquake",
+          "crunch"
+        ],
+        "lockedMoves": [
+          "dragondance",
+          "boltstrike",
+          "dragonclaw"
+        ],
+        "level": 79
+      },
+      {
+        "abilities": [
+          "electricsurge"
+        ],
+        "items": [
+          "terrainextender",
+          "leftovers"
+        ],
+        "lockedMoves": [
+          "knockoff",
+          "uturn",
+          "fusionbolt",
+          "nuzzle"
+        ],
+        "level": 82
+      }
+    ]
+  },
+  "vriskeleton": {
+    "nicknames": [
+      "Vriskeleton",
+      "Vriskeleton",
+      "Vriskeleton",
+      "Vriskeleton",
+      "Vriskeleton",
+      "Vriskeleton",
+      "Andrew Hussie",
+      "Vriska"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "degenerate"
+        ],
+        "items": [
+          "lifeorb",
+          "dreadplate"
+        ],
+        "moves": [
+          "icebeam",
+          "focusblast",
+          "moonblast",
+          "flashcannon"
+        ],
+        "lockedMoves": [
+          "fakeout",
+          "hypervoice",
+          "quickattack"
+        ],
+        "level": 81
+      },
+      {
+        "abilities": [
+          "degenerate"
+        ],
+        "items": [
+          "chilldrive",
+          "shockdrive",
+          "burndrive",
+          "dousedrive"
+        ],
+        "lockedMoves": [
+          "fakeout",
+          "hypervoice",
+          "quickattack",
+          "technoblast"
+        ],
+        "level": 81
+      }
+    ]
+  },
+  "warghork": {
+    "nicknames": [
+      "Warghork",
+      "Warghork",
+      "Warghork",
+      "Warghork",
+      "Warghork",
+      "Warghork",
+      "Men Kissing",
+      "HEAVY"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sheerforce"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "lockedMoves": [
+          "moonblast",
+          "warhead",
+          "fireblast",
+          "focusblast"
+        ],
+        "level": 76
+      },
+      {
+        "abilities": [
+          "sheerforce"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "lockedMoves": [
+          "playrough",
+          "earthquake",
+          "ironhead",
+          "icepunch"
+        ],
+        "level": 76
+      }
+    ]
+  },
+  "wattitude": {
+    "nicknames": [
+      "Wattitude",
+      "Wattitude",
+      "Wattitude",
+      "Deltarune CH.3"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "transistor",
+          "teravolt"
+        ],
+        "items": [
+          "lifeorb",
+          "choicespecs"
+        ],
+        "lockedMoves": [
+          "voltswitch",
+          "thunderbolt",
+          "energyball",
+          "dazzlinggleam"
+        ],
+        "level": 78
+      },
+      {
+        "abilities": [
+          "transistor",
+          "teravolt"
+        ],
+        "items": [
+          "leftovers",
+          "focussash",
+          "sitrusberry"
+        ],
+        "lockedMoves": [
+          "coil",
+          "boltstrike",
+          "drainpunch",
+          "spikes"
+        ],
+        "level": 78
+      }
+    ]
+  },
   "wawho": {
     "nicknames": [
       "Wawho",
       "Wawho",
       "Wawho",
+      "Wawho",
+      "Wawho",
+      "Malleo",
       "Luingi"
     ],
     "sets": [
@@ -5027,7 +5628,7 @@
           "photongeyser",
           "shadowsneak"
         ],
-        "level": 73
+        "level": 75
       }
     ]
   },
@@ -5113,6 +5714,133 @@
       }
     ]
   },
+  "whispicuffs": {
+    "nicknames": [
+      "Whispicuffs",
+      "Whispicuffs",
+      "Whispicuffs",
+      "Scuffed"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "leftovers",
+          "rockyhelmet"
+        ],
+        "lockedMoves": [
+          "uturn",
+          "bodypress",
+          "spikes",
+          "knockoff"
+        ],
+        "level": 81
+      },
+      {
+        "abilities": [
+          "scrappy",
+          "technician"
+        ],
+        "items": [
+          "leftovers",
+          "lifeorb",
+          "sitrusberry"
+        ],
+        "moves": [
+          "rocketpunch",
+          "noretreat"
+        ],
+        "lockedMoves": [
+          "stormthrow",
+          "firepunch",
+          "leechlife"
+        ],
+        "level": 81
+      }
+    ]
+  },
+  "xeninter": {
+    "nicknames": [
+      "Xeninter",
+      "Xeninter",
+      "Xeninter",
+      "Xeninter",
+      "Xeninter",
+      "Xeninter",
+      "Alien",
+      "Ravager"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "adaptability",
+          "illuminate"
+        ],
+        "items": [
+          "choicespecs",
+          "choicescarf",
+          "lifeorb",
+          "assaultvest",
+          "focussash"
+        ],
+        "lockedMoves": [
+          "nuclearwinter",
+          "sludgewave",
+          "earthquake",
+          "fusionflare"
+        ],
+        "level": 79
+      }
+    ]
+  },
+  "yokite": {
+    "nicknames": [
+      "Yokite",
+      "Yokite",
+      "Yokite",
+      "Tengu"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "aerilate"
+        ],
+        "items": [
+          "leftovers",
+          "skyplate",
+          "choiceband"
+        ],
+        "moves": [
+          "drainpunch",
+          "superpower",
+          "darkestlariat"
+        ],
+        "lockedMoves": [
+          "backdraft",
+          "extremespeed",
+          "knockoff"
+        ],
+        "level": 80
+      },
+      {
+        "abilities": [
+          "unburden"
+        ],
+        "items": [
+          "flyinggem"
+        ],
+        "lockedMoves": [
+          "bulkup",
+          "acrobatics",
+          "drainpunch",
+          "roost"
+        ],
+        "level": 80
+      }
+    ]
+  },
   "yuukiino": {
     "nicknames": [
       "Yuukiino",
@@ -5140,6 +5868,51 @@
           "toxic"
         ],
         "level": 84
+      }
+    ]
+  },
+   "zillichina": {
+          "nicknames": [
+            "Zillichina",
+            "Zillichina",
+            "Zillichina",
+            "Zillichina",
+            "Zillichina",
+            "Zillichina",
+            "Zillichina",
+            "Zillichina",
+            "Zillichina",
+            "Taiwan",
+            "Korea",
+            "Thailand",
+            "Japan"
+          ],
+          "sets": [
+            {
+              "abilities": [
+                "moldbreaker",
+                "heatproof",
+                "bulletproof"
+              ],
+              "items": [
+                "rockyhelmet",
+                "leftovers"
+              ],
+              "moves": [
+                "voltswitch",
+                "defog",
+                "healorder",
+                "aurasphere",
+                "earthquake",
+                "flamethrower",
+                "sunsteelstrike",
+                "icebeam",
+                "surf"
+        ],
+              "lockedMoves": [
+                "coreenforcer"
+              ],
+              "level": 80
       }
     ]
   }
