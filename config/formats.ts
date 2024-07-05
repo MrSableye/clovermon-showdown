@@ -857,6 +857,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
 	
@@ -877,6 +878,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
 			'Sketch Post-Gen 7 Moves',
@@ -898,6 +900,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Not Fully Evolved',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
 			'Sketch Post-Gen 7 Moves',
@@ -919,6 +922,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Little Cup',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
 			'Sketch Post-Gen 7 Moves',
@@ -940,6 +944,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Same Type Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
 			'Sketch Post-Gen 7 Moves',
@@ -976,6 +981,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Overflow Stat Mod',
@@ -999,6 +1005,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Overflow Stat Mod',
@@ -1050,6 +1057,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Overflow Stat Mod',
@@ -1074,6 +1082,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Overflow Stat Mod',
@@ -1120,6 +1129,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1131,6 +1141,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1143,6 +1154,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Not Fully Evolved',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1155,6 +1167,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Little Cup',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1167,6 +1180,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Same Type Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1287,6 +1301,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 			'Baton Pass Mod'
@@ -1614,6 +1629,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1627,6 +1643,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1639,14 +1656,14 @@ export const Formats: FormatList = [
 		mod: 'gen1',
 		searchShow: false,
 		rated: false,
-		ruleset: ['Terastal Clause', 'Standard'],
+		ruleset: ['Terastal Clause', 'Standard','! Nickname Clause',],
 	},
 	{
 		name: "[Gen 1] OU",
 		mod: 'gen1',
 		searchShow: false,
 		rated: false,
-		ruleset: ['Terastal Clause', 'Standard'],
+		ruleset: ['Terastal Clause', 'Standard','! Nickname Clause',],
 		banlist: ['Uber'],
 	},
 	{
@@ -1660,7 +1677,7 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 1] 10u",
 		mod: "gen1",
-		ruleset: ['Standard'],
+		ruleset: ['Standard','! Nickname Clause',],
 		banlist: ["AG", "Uber", "OU", "UUBL", "UU", "RUBL", "RU", "NUBL", "NU", "PUBL", "PU", "NFE", "DUber", "DOU", "DBL", "DUU", "LC"],
 		unbanlist: ['Weedle', 'Kakuna', 'Caterpie', 'Metapod', 'Ditto', 'Magikarp', 'Magikarp + Dragon Rage'],
 	},
