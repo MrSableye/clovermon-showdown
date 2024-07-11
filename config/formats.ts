@@ -44,7 +44,6 @@ export const Formats: FormatList = [
 			'Obtainable',
 			'Sleep Clause Mod',
 			'Species Clause',
-			'Nickname Clause',
 			'OHKO Clause',
 			'Evasion Moves Clause',
 			'Endless Battle Clause',
@@ -68,6 +67,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -82,6 +82,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -182,6 +183,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Not Fully Evolved',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -197,6 +199,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Little Cup',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -212,6 +215,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Same Type Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -241,6 +245,7 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		ruleset: [
 			'Standard NatDex',
+			'! Nickname Clause',
 			'Same Type Clause',
 			'Sleep Clause Mod',
 			'Species Clause',
@@ -257,6 +262,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Sketch Post-Gen 7 Moves',
@@ -272,6 +278,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Sketch Post-Gen 7 Moves',
@@ -301,7 +308,6 @@ export const Formats: FormatList = [
 			'Obtainable',
 			'Sleep Clause Mod',
 			'Species Clause',
-			'Nickname Clause',
 			'OHKO Clause',
 			'Evasion Moves Clause',
 			'Endless Battle Clause',
@@ -332,6 +338,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Multi Tier',
 			'Sketch Post-Gen 7 Moves',
@@ -347,6 +354,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'350 Cup Mod',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -360,6 +368,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -436,6 +445,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Inverse Mod',
 			'Sketch Post-Gen 7 Moves',
@@ -450,7 +460,7 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		searchShow: false,
 		rated: false,
-		ruleset: ['Terastal Clause', 'Sketch Post-Gen 7 Moves', 'Obtainable', '!Obtainable Abilities', 'Species Clause', 'Nickname Clause', 'Ability Clause = 2', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
+		ruleset: ['Terastal Clause', 'Sketch Post-Gen 7 Moves', 'Obtainable', '!Obtainable Abilities', 'Species Clause', 'Ability Clause = 2', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
 		banlist: [
 			'Uber', 'Niterpent',
 			'Arena Trap', 'Comatose', 'Contrary', 'Fluffy', 'Fuk U', 'Fur Coat', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Intrepid Sword',
@@ -552,7 +562,7 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		searchShow: false,
 		rated: false,
-		ruleset: ['Terastal Clause', 'Standard', 'Flipped Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves'],
+		ruleset: ['Terastal Clause', 'Standard', 'Flipped Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves', '! Nickname Clause',],
 		banlist: ['Draconius', 'Manatank', 'Pasdawg', 'Arena Trap', 'Moody', 'Power Construct', 'Psychic Surge', 'Shadow Tag', 'Baton Pass', 'Psychic Terrain', 'Shell Smash', 'Toke', 'Uber'],
 		unbanlist: ['Chromox', 'Condoom', 'Funnedong', 'Foryu'],
 	},
@@ -565,6 +575,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'STABmons Move Legality',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
@@ -585,6 +596,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Alphabet Cup Move Legality',
 			'Sketch Post-Gen 7 Moves',
@@ -607,6 +619,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Scalemons Mod',
 			'Sketch Post-Gen 7 Moves',
@@ -625,6 +638,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Camomons Mod',
 			'Sketch Post-Gen 7 Moves',
@@ -643,6 +657,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -683,7 +698,7 @@ export const Formats: FormatList = [
 		mod: 'clovermixandmega',
 		searchShow: false,
 		rated: false,
-		ruleset: ['Terastal Clause', 'Standard', 'Overflow Stat Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves'],
+		ruleset: ['Terastal Clause', 'Standard','! Nickname Clause', 'Overflow Stat Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves'],
 		banlist: [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Blobbosite', 'Kalosite', 'Sexite Y', 'Reversite', 'Upbeddite'],
@@ -735,6 +750,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Picked Team Size = 1', 'Max Team Size = 3',
 			'Standard',
+			'! Nickname Clause',
 			'Accuracy Moves Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
@@ -841,6 +857,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
 	
@@ -861,6 +878,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
 			'Sketch Post-Gen 7 Moves',
@@ -882,6 +900,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Not Fully Evolved',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
 			'Sketch Post-Gen 7 Moves',
@@ -903,6 +922,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Little Cup',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
 			'Sketch Post-Gen 7 Moves',
@@ -924,6 +944,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Same Type Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
 			'Sketch Post-Gen 7 Moves',
@@ -960,6 +981,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Overflow Stat Mod',
@@ -983,6 +1005,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Overflow Stat Mod',
@@ -1034,6 +1057,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Overflow Stat Mod',
@@ -1058,6 +1082,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Overflow Stat Mod',
@@ -1104,6 +1129,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1115,6 +1141,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1127,6 +1154,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Not Fully Evolved',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1139,6 +1167,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Little Cup',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1151,6 +1180,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Same Type Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1271,6 +1301,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 			'Baton Pass Mod'
@@ -1350,7 +1381,6 @@ export const Formats: FormatList = [
 			'Team Preview',
 			'Sleep Clause Mod',
 			'Blobbos Only',
-			'Nickname Clause',
 			'Endless Battle Clause',
 			'HP Percentage Mod',
 			'Cancel Mod',
@@ -1370,7 +1400,6 @@ export const Formats: FormatList = [
 			'Team Preview',
 			'Sleep Clause Mod',
 			'Blobbos Only',
-			'Nickname Clause',
 			'Endless Battle Clause',
 			'HP Percentage Mod',
 			'Cancel Mod',
@@ -1391,7 +1420,6 @@ export const Formats: FormatList = [
 			'Team Preview',
 			'Sleep Clause Mod',
 			'Blobbos Only',
-			'Nickname Clause',
 			'Endless Battle Clause',
 			'HP Percentage Mod',
 			'Cancel Mod',
@@ -1547,7 +1575,6 @@ export const Formats: FormatList = [
 			'Obtainable',
 			'Team Preview',
 			'Sleep Clause Mod',
-			'Nickname Clause',
 			'Endless Battle Clause',
 			'HP Percentage Mod',
 			'Cancel Mod',
@@ -1602,6 +1629,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1615,6 +1643,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
+			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -1627,14 +1656,14 @@ export const Formats: FormatList = [
 		mod: 'gen1',
 		searchShow: false,
 		rated: false,
-		ruleset: ['Terastal Clause', 'Standard'],
+		ruleset: ['Terastal Clause', 'Standard','! Nickname Clause',],
 	},
 	{
 		name: "[Gen 1] OU",
 		mod: 'gen1',
 		searchShow: false,
 		rated: false,
-		ruleset: ['Terastal Clause', 'Standard'],
+		ruleset: ['Terastal Clause', 'Standard','! Nickname Clause',],
 		banlist: ['Uber'],
 	},
 	{
@@ -1648,7 +1677,7 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 1] 10u",
 		mod: "gen1",
-		ruleset: ['Standard'],
+		ruleset: ['Standard','! Nickname Clause',],
 		banlist: ["AG", "Uber", "OU", "UUBL", "UU", "RUBL", "RU", "NUBL", "NU", "PUBL", "PU", "NFE", "DUber", "DOU", "DBL", "DUU", "LC"],
 		unbanlist: ['Weedle', 'Kakuna', 'Caterpie', 'Metapod', 'Ditto', 'Magikarp', 'Magikarp + Dragon Rage'],
 	},
