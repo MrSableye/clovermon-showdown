@@ -7569,7 +7569,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	spooperpower: {
 		name: "Spooperpower",
-		shortDesc: "Physical if user's Atk > Sp. Atk.",
+		shortDesc: "Physical if user's Atk > Sp. Atk. Ignores Abilities.",
 		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes.",
 	},
 	greatrage: {
@@ -7819,7 +7819,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	boilover: {
 		name: "Boil Over",
 		desc: "Power doubles if Rain Dance or Sunny Day is active, and this move's type changes to match the other. Fire type during Primordial Sea or Rain Dance and Water type during Desolate Land or Sunny Day.",
-		shortDesc: "Power doubles and type varies in rain or sun.",
+		shortDesc: "Power doubles under Rain and becomes Fire type; Under Sun, becomes Water type. ",
 		move: "Breakneck Blitz turned into [MOVE] due to the weather!",
 	},
 	soulcrusher: {
