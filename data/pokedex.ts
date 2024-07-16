@@ -41065,7 +41065,7 @@ iwik: {
 		baseSpecies: "Blobbos",
 		forme: "UI",
 		types: ["Dragon", "Fighting"],
-		gender: "N",
+		gender: "M",
 		baseStats: {
 			hp: 70,
 			atk: 120,
@@ -41082,7 +41082,7 @@ iwik: {
 		weightkg: 5.7,
 		color: "Blue",
 		eggGroups: [
-			"Ditto",
+			"Dragon",
 		],
 		gen: 8,
 	},
@@ -41092,7 +41092,7 @@ iwik: {
 		baseSpecies: "Blobbos",
 		forme: "UE",
 		types: ["Dragon", "Dark"],
-		gender: "N",
+		gender: "M",
 		baseStats: {
 			hp: 60,
 			atk: 130,
@@ -41107,9 +41107,9 @@ iwik: {
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
-		color: "Purple",
+		color: "Blue",
 		eggGroups: [
-			"Ditto",
+			"Dragon",
 		],
 		gen: 8,
 	},
@@ -46216,9 +46216,9 @@ blobbosprism: {
 		baseStats: {
 			hp: 115,
 			atk: 126,
-			def: 75,
+			def: 85,
 			spa: 69,
-			spd: 65,
+			spd: 75,
 			spe: 40,
 		},
 		abilities: {
