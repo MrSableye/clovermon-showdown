@@ -37818,7 +37818,7 @@ clobber: {
    name: "Clobber",
    types: ["Dragon", "Water"],
    genderRatio: {M: 0.75, F: 0.25},
-   baseStats: {hp: 86, atk: 142, def:121, spa: 78, spd: 65, spe: 48},
+   baseStats: {hp: 86, atk: 150, def:121, spa: 78, spd: 65, spe: 48},
    abilities: {0: "Hyper Cutter", 1: "Water Veil", H: "Hydration", S:"Compound Eyes"},
    heightm: 7.81,
    weightkg: 678.3,
