@@ -7819,7 +7819,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	boilover: {
 		name: "Boil Over",
 		desc: "Power doubles if Rain Dance or Sunny Day is active, and this move's type changes to match the other. Fire type during Primordial Sea or Rain Dance and Water type during Desolate Land or Sunny Day.",
-		shortDesc: "Power doubles under Rain and becomes Fire type; Under Sun, becomes Water type. ",
+		shortDesc: "Under Rain/Sun, power doubles. Fire type under Rain, Water type under Sun.",
 		move: "Breakneck Blitz turned into [MOVE] due to the weather!",
 	},
 	soulcrusher: {
