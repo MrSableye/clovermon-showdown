@@ -226,6 +226,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	frozenbunker: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	baller: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	transfusion: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	detonator: {
 		inherit: true,
 		isNonstandard: null,
