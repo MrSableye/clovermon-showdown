@@ -4,6 +4,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, distance: 1, slicing: 1},
 	},
+	abyssalwave: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	appleacid: {
 		inherit: true,
 		isNonstandard: null,
@@ -762,6 +766,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	/* CAP Exclusive Moves */
 	clobber: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	scarletchant: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	absorption: {
+		inherit: true,
+		isNonstandard: null,	
+	},
+	suffocate: {
 		inherit: true,
 		isNonstandard: null,
 	},

@@ -7873,6 +7873,26 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Earrape",
 		shortDesc: "Changes the opponent's ability to Cacophony.",
 	},
+	abyssalwave: {
+		name: "Abyssal Wave",
+		desc: "No additional effect.",
+		shortDesc: "Usually goes first.",
+	},
+	scarletchant: {
+		name: "Scarlet Chant",
+		desc: "Has a 100% chance to raise the user's Special Attack by 1 stage.",
+		shortDesc: "100% chance to raise the user's Sp. Atk by 1.",
+	},
+	suffocate: {
+		name: "Suffocate",
+		desc: "Has a 100% chance to make the target flinch.",
+		shortDesc: "100% chance to make the target flinch.",
+	},
+	absorption: {
+		name: "Absorption",
+		desc: "Power doubles if the user was hit by the target this turn. User recovers 50% of the damage dealt.",
+		shortDesc: "Power doubles if user is damaged by the target. User recovers 50% of the damage dealt.",
+	},
 	grandbat: {
 		name: "Grand Bat",
 		shortDesc: "Forces the target to switch to a random ally.",
