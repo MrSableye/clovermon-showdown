@@ -46206,6 +46206,36 @@ blobbosprism: {
 		],
 		gen: 8,
 	},
+	blobbosboobos: {
+		num: 69132,
+		name: "Blobbos-Boobos",
+		baseSpecies: "Blobbos",
+		forme: "Boobos",
+		types: ["Rock", "Dark"],
+		gender: "F",
+		baseStats: {
+			hp: 115,
+			atk: 126,
+			def: 75,
+			spa: 69,
+			spd: 65,
+			spe: 40,
+		},
+		abilities: {
+			0: "Big Pecks",
+			1: "Magic Bounce",
+			H: "Cute Charm",
+			S: "Stamina",
+		},
+		heightm: 1.2,
+		weightkg: 4000,
+		color: "Blue",
+		eggGroups: [
+			"Human-Like",
+		],
+		gen: 8,
+		creator: "Con",
+	},
 
 	infected: {
 		num: 42999,
