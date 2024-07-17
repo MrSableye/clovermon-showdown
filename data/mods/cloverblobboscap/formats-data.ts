@@ -2764,6 +2764,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	sphare: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+	}, 
+	colombolt: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+    coilspill: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	/* CAP Megas */
 	oogabugamega: {
@@ -3067,7 +3075,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	blobbosreverse: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "LC",
 	},
 	blobbossnek: {
 		inherit: true,

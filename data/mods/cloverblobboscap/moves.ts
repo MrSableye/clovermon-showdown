@@ -1977,8 +1977,26 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		desc: "Has a 100% chance to lower the target's Defense by 1 stage.",
 		shortDesc: "100% chance to lower the target's Defense by 1.",
 	},
+	suffocate: {
+		num: 42017,
+		accuracy: 70,
+		basePower: 15,
+		category: "Physical",
+		name: "Suffocate",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Dark",
+		contestType: "Beautiful",
+	},
 	landswrath: {
 		inherit: true,
+		basePower: 80,
 		pp: 5,
 		onModifyMove(move, pokemon) {
 			if (this.field.terrain && pokemon.isGrounded()) {
