@@ -1160,6 +1160,202 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			},
 		},
 	},
+	aquacutter: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	aquastep: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	armorcannon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	axekick: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	bitterblade: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	chillingwater: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	chillyreception: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	collisioncourse: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	comeuppance: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	doodle: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	doubleshock: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	electrodrift: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	filletaway: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	flowertrick: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	gigatonhammer: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	glaiverush: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	headlongrush: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	hyperdrill: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	icespinner: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	jetpunch: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	kowtowcleave: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	lastrespects: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	luminacrash: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	makeitrain: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	mortalspin: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	orderup: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	populationbomb: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	pounce: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ragefist: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ragingbull: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	revivalblessing: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ruination: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	saltcure: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	shedtail: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	silktrap: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	snowscape: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	spicyextract: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	spinout: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	terablast: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	tidyup: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	torchsong: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	trailblaze: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	tripledive: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	twinbeam: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	psyblade: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	hydrosteam: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	syrupbomb: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	matchagotcha: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ivycudgel: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	zenheadbutt: {
 		inherit: true,
 		accuracy: 100,
