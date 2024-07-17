@@ -89263,7 +89263,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Scarlet Chant",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, sound: 1},
 		secondary: {
 			chance: 100,
 			self: {
