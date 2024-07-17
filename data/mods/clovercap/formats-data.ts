@@ -1223,6 +1223,161 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	arctiglobe: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	lober: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	clobber: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	meower: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	catation: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	doomsay: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	epilate: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	epipheror: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sphare: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	costrike: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	hookling: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	fractyvern: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ganglython: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	gharroste: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	guertenity: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	kiwi: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	iwik: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	shroomalice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	piurette: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sparmor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	ohmadillo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	colombolt: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	klasicope: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	essention: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	termagnius: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	jumblegore: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	jumblinart: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	parmiausan: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	seaman: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	barabyss: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	coilspill: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,

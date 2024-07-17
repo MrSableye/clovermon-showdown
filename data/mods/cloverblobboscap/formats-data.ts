@@ -2640,11 +2640,130 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	retwina: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+	}, 
+   arctiglobe: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
-	slub: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+	barabyss: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	catation: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	}, 
+   blubbastard: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	clobber: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	costrike: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	doomsay: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	epilate: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	epipheror: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fractyvern: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ganglython: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	gharroste: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	guertenity: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	iwik: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	jumblegore: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	jumblinart: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	parmiausan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	piurette: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	shroomalice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	termagnius: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	flubbster: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	hookling: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kiwi: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	klasicope: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	essention: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ohmadillo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	lober: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	meower: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	seaman: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sparmor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sphare: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	/* CAP Megas */
 	oogabugamega: {
