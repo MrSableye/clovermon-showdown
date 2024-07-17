@@ -965,10 +965,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	neosporin: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	blackbomb: {
 		inherit: true,
 		isNonstandard: null,
@@ -1353,6 +1349,98 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "Past",
 	},
 	ivycudgel: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	barbbarrage: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	bittermalice: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	bleakwindstorm: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	bloodmoon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ceaselessedge: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	chloroblast: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	direclaw: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	frozensong: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	infernalparade: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	mountaingale: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	mysticalpower: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	psyshieldbash: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	sandsearstorm: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	springtidestorm: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	stoneaxe: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	victorydance: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	wildboltstorm: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	eructlas: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	genesisboost: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	lasagnatoss: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	metronomeifitwasfunny: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	mitada: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	neosporin: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
