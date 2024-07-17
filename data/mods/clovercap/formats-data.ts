@@ -1373,6 +1373,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	coilspill: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,
