@@ -43209,7 +43209,7 @@ iwik: {
 		baseSpecies: "Blobbos",
 		forme: "Beetle",
 		types: ["Bug", "Fighting"],
-		gender: "N",
+		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {
 			hp: 85,
 			atk: 125,
@@ -43219,13 +43219,16 @@ iwik: {
 			spe: 55,
 		},
 		abilities: {
-			0: "Deadly Pincers",
+			0: "Hyper Cutter",
+			1: "Mold Breaker",
+			H: "Moxie",
+			S: "Deadly Pincers"
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
 		color: "Brown",
 		eggGroups: [
-			"Ditto",
+			"Bug",
 		],
 		gen: 8,
 	},
