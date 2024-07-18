@@ -89222,6 +89222,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, contact: 1},
+	   noSketch: true,
 		secondary: {
 			chance: 100,
 			volatileStatus: 'flinch',
