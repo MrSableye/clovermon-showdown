@@ -784,6 +784,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	steelyspirit: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	quickdraw: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	mrshield: {
 		inherit: true,
 		isNonstandard: null,

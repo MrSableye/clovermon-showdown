@@ -38343,7 +38343,7 @@ iwik: {
 		},
 		abilities: {
 			0: "Neutralizing Gas",
-			1: "Power Spot",
+			1: "Steely Spirit",
 			H: "Libero",
 			S: "Steam Engine",
 		},
@@ -38365,7 +38365,7 @@ iwik: {
 		baseStats: {hp: 92, atk: 125, def: 82, spa: 125, spd: 81, spe: 75},
 		abilities: {
 			0: "Neutralizing Gas",
-			1: "Power Spot",
+			1: "Quick Draw",
 			H: "Stalwart",
 			S: "Steam Engine",
 		},
@@ -40550,6 +40550,7 @@ iwik: {
 		weightkg: 5.7,
 		color: "Red",
 		otherFormes: ["Blobbos-Eye-Mouth"],
+		formeOrder: ["Blobbos-Eye", "Blobbos-Eye-Mouth"],
 		eggGroups: [
 			"Ditto",
 		],
@@ -40558,7 +40559,8 @@ iwik: {
 	blobboseyemouth: {
 		num: 69132,
 		name: "Blobbos-Eye-Mouth",
-		baseSpecies: "Blobbos-Eye",
+		baseSpecies: "Blobbos-Eye", 
+		forme: "Mouth",
 		types: ["Dark", "Psychic"],
 		forme: "Eye-Mouth",
 		gender: 'N',
@@ -43264,14 +43266,14 @@ iwik: {
 		baseSpecies: "Blobbos",
 		forme: "Peri",
 		types: ["Normal", "Rock"],
-		gender: "N",
+		gender: "F",
 		baseStats: {
 			hp: 80,
 			atk: 100,
 			def: 80,
-			spa: 100,
-			spd: 80,
-			spe: 90,
+			spa: 95,
+			spd: 95,
+			spe: 95,
 		},
 		abilities: {
 			0: "Friend Guard",
@@ -46242,6 +46244,35 @@ blobbosprism: {
 		],
 		gen: 8,
 		creator: "Con",
+	},
+	blobboslamia: {
+		num: 69132,
+		name: "Blobbos-Lamia",
+		baseSpecies: "Blobbos",
+		forme: "Lamia",
+		types: ["Fire", "Poison"],
+		gender: "F",
+		baseStats: {
+			hp: 102,
+			atk: 104,
+			def: 88,
+			spa: 77,
+			spd: 100,
+			spe: 79,
+		},
+		abilities: {
+			0: "Shed Skin",
+                        1: "Queenly Majesty",
+                        H: "Merciless",
+                        S: "Unnerve",
+		},
+		heightm: 1.2,
+		weightkg: 103.7,
+		color: "Blue",
+		eggGroups: [
+			"Human-Like", "Monster"
+		],
+		gen: 8,
 	},
 
 	infected: {

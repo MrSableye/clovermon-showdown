@@ -3316,6 +3316,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+	}, 
+	blobboseyemouth: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	blobbosbloody: {
 		inherit: true,
@@ -4303,6 +4308,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbosboobos: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboslamia: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

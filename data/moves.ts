@@ -26063,10 +26063,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	windwhip: {
 		accuracy: 100,
-		basePower: 80,
+		basePower: 50,
 		category: "Special",
 		name: "Wind Whip",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, wind: 1},
 		secondary: {

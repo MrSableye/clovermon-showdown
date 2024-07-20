@@ -9458,27 +9458,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	usbdrive: {
-		name: "USB Drive",
-		spritenum: 103,
-		fling: {
-			basePower: 42,
-		},
-		onResidualOrder: 28,
-		onResidualSubOrder: 3,
-		onSwitchIn(pokemon) {
-			if (pokemon.hasType('Steel')) {
-				pokemon.useItem();
-			}
-		},
-		boosts: {
-			atk: 1,
-			spa: 1,
-		},
-		num: 2512,
-		isNonstandard: "Future",
-		rating: 1,
-	},
 	royalcrown: {
 		name: "Royal Crown",
 		spritenum: 236,
@@ -10165,6 +10144,24 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		itemUser: ["Blobbos-Skeleton"],
+		isNonstandard: "Future",
+		rating: 1,
+	}, 
+	usbdrive: {
+		name: "USB Drive",
+		spritenum: 103,
+		fling: {
+			basePower: 73,
+			volatileStatus: 'par',
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Idiot') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Blobbos-Idiot"], 
+		num: 2512,
 		isNonstandard: "Future",
 		rating: 1,
 	},
