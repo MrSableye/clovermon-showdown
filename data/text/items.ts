@@ -2739,7 +2739,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	usbdrive: {
 		name: "USB Drive",
-		desc: "If holder is Steel, raises Atk and Sp. Atk by 1 upon switch-in. Consumes item.",
+		desc: "If held by a Blobbos-Idiot, its SpAtk is doubled.", 
 	},
 	royalcrown: {
 		name: "Royal Crown",
