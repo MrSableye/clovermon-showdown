@@ -863,11 +863,11 @@
     "sets": [
       {
         "abilities": [
-          "acidrain"
+          "acidcloudburst"
         ],
         "items": [
           "heavydutyboots",
-          "techgem"
+          "greasygem"
         ],
         "moves": [
           "oilyterrain",
