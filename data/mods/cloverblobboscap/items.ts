@@ -19,6 +19,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	tapuniumz: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	sexitey: {
 		inherit: true,
 		isNonstandard: null,
