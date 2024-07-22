@@ -9208,6 +9208,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	mariopartite: {
+		name: "Mariopartite",
+		spritenum: 596,
+		megaStone: "Blobbos-Mario Party-Mega",
+		megaEvolves: "Blobbos-Mario Party",
+		itemUser: ["Blobbos-Mario Party"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	plasticgem: {
 		name: "Plastic Gem",
 		spritenum: 53,
