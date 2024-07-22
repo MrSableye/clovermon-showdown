@@ -10255,6 +10255,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosmarioparty: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -10644,6 +10648,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	blobbosmarxmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmariopartymega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

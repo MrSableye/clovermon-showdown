@@ -3882,6 +3882,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosmariopartymega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	blobboschameleon: {
 		inherit: true,
 		isNonstandard: null,
@@ -4313,6 +4318,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobboslamia: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmarioparty: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
