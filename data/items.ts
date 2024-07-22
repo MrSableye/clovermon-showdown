@@ -6186,7 +6186,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onTakeItem: false,
 		zMove: "Guardian of Alola",
 		zMoveFrom: "Nature's Madness",
-		itemUser: ["Tapu Koko", "Tapu Lele", "Tapu Bulu", "Tapu Fini"],
+		itemUser: ["Tapu Koko", "Tapu Lele", "Tapu Bulu", "Tapu Fini", "Blobbos-Tapu"],
 		num: 801,
 		gen: 7,
 		isNonstandard: "Past",
@@ -9199,6 +9199,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		megaStone: "Blobbos-Zero-Mega",
 		megaEvolves: "Blobbos-Zero",
 		itemUser: ["Blobbos-Zero"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	mariopartite: {
+		name: "Mariopartite",
+		spritenum: 596,
+		megaStone: "Blobbos-Mario Party-Mega",
+		megaEvolves: "Blobbos-Mario Party",
+		itemUser: ["Blobbos-Mario Party"],
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;

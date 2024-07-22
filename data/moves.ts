@@ -27115,15 +27115,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, sound: 1, mirror: 1},
-		onHit(target, source) {
-			this.add('-activate', source, 'move: Heal Bell');
-			let success = false;
-			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
-			for (const ally of allies) {
-				if (ally !== source && ally.hasAbility(['soundproof', 'cacophony'])) continue;
-				if (ally.cureStatus()) success = true;
-			}
-			return success;
+		self: {
+			onHit(pokemon, source, move) {
+				this.add('-activate', source, 'move: Aromatherapy');
+				for (const ally of source.side.pokemon) {
+					if (ally !== source && (ally.volatiles['substitute'] && !move.infiltrates)) {
+						continue;
+					}
+					ally.cureStatus();
+				}
+			},
 		},
 		target: "normal",
 		type: "Psychic",

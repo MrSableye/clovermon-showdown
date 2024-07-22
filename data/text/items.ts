@@ -2452,7 +2452,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	thiccbone: {
 		name: "Thicc Bone",
-		desc: "If held by a Masdawg, Pasdawg, Naughtycoot, or Blobbos-Skeleton, its Attack is doubled.",
+		desc: "If held by a Masdawg, Pasdawg or Naughtycoot, its Attack is doubled.",
 	},
 	manifesto: {
 		name: "Manifesto",
@@ -2701,6 +2701,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Kalosite",
 		desc: "If held by a Blobbos-Kalos, this item allows it to Mega Evolve in battle.",
 	},
+	mariopartite: {
+		name: "Mariopartite",
+		desc: "If held by a Blobbos-Mario Party, this item allows it to Mega Evolve in battle.",
+	},
 	negite: {
 		name: "Negite",
 		desc: "If held by a Blobbos-Nega, this item allows it to Mega Evolve in battle.",
@@ -2708,6 +2712,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 	reversite: {
 		name: "Reversite",
 		desc: "If held by a Blobbos-Reverse, this item allows it to Mega Evolve in battle.",
+	},
+	sexitex: {
+		name: "Sexite X",
+		desc: "If held by a Blobbos-Sexy, this item allows it to Mega Evolve in battle.",
 	},
 	sexitey: {
 		name: "Sexite Y",
