@@ -313,6 +313,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	mrshield: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	beyondultimate: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* Modified abilities */
 	flareboost: {
 		inherit: true,
