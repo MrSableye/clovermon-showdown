@@ -9221,8 +9221,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Mindbreak",
 		shortDesc: "Neutral effectiveness on Dark.",
 	},
-	ravaginglightningwave: {
-		name: "Ravaging Lightning Wave",
+	lightningblastwave: {
+		name: "Lightning Blast Wave",
 		shortDesc: "Increases by 10 Power everytime the user is hit. Maxes out at 158 Power.",
 	},
 	extinction: {

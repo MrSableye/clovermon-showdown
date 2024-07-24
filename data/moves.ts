@@ -15053,7 +15053,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		contestType: "Cool",
 	},
-	ravaginglightningwave: {
+	lightningblastwave: {
 		num: 889,
 		accuracy: 100,
 		basePower: 80,
@@ -15061,7 +15061,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return Math.min(158, 80 + 10 * pokemon.timesAttacked);
 		},
 		category: "Physical",
-		name: "Ravaging Lightning Wave",
+		name: "Lightning Blast Wave",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, distance: 1},
