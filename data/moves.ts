@@ -15053,6 +15053,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		contestType: "Cool",
 	},
+	lightningblastwave: {
+		num: 889,
+		accuracy: 100,
+		basePower: 80,
+		basePowerCallback(pokemon) {
+			return Math.min(158, 80 + 10 * pokemon.timesAttacked);
+		},
+		category: "Physical",
+		name: "Lightning Blast Wave",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, distance: 1},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Electric",
+	},
 	razorleaf: {
 		num: 75,
 		accuracy: 95,

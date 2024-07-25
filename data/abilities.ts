@@ -14830,6 +14830,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 232,
 		isNonstandard: "Future",
 	},
+	beyondultimate: {
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Beyond Ultimate neutralize');
+				return this.chainModify(0.50);
+			}
+		},
+		name: "Beyond Ultimate",
+		rating: 3,
+		num: 232,
+	},
 	infected: {
 		onDamagingHit(damage, target, source, move) {
 			const sourceAbility = source.getAbility();

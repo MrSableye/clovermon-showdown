@@ -3957,6 +3957,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Reduces Super Effective moves by 25%. Immune to status moves.",
 		desc: "Super effective damage taken is increased by 0.75x. The ability holder is also immune to status moves.",
 	},
+	beyondultimate: {
+		name: "Beyond Ultimate",
+		shortDesc: "Reduces Super Effective moves by 50%.",
+		desc: "Super effective damage taken is halved.",
+	},
 	polite: {
 		name: "Polite",
 		shortDesc: "Moves last. STAB increased to 2.",

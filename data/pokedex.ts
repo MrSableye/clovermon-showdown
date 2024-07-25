@@ -46319,6 +46319,33 @@ blobbosprism: {
 		eggGroups: ["Fairy", "Undiscovered"],
 		requiredItem: "Mariopartite",
 	},
+	blobbosbeast: {
+		num: 69132,
+		name: "Blobbos-Beast",
+		baseSpecies: "Blobbos",
+		forme: "Beast",
+		types: ["Dragon", "Electric"],
+		gender: "M",
+		baseStats: {
+			hp: 95,
+			atk: 125,
+			def: 80,
+			spa: 58,
+			spd: 80,
+			spe: 92,
+		},
+		abilities: {
+			0: "Beast Boost",
+                        H: "Beyond Ultimate",
+		},
+		heightm: 0.4,
+		weightkg: 5.7,
+		color: "Black",
+		eggGroups: [
+			"Dragon",
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
