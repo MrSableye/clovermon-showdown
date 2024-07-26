@@ -33195,6 +33195,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					ignoreImmunity: false,
 					effectType: 'Move',
 					type: 'Water',
+					isNonstandard: "Future",
 				},
 			});
 			this.add('-start', source, 'move: Scrying Wish');
@@ -33226,6 +33227,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 						ignoreImmunity: false,
 						effectType: 'Move',
 						type: 'Ghost',
+						isNonstandard: "Future",
 					},
 				});
 				this.add('-start', source, 'move: Five Nights');
