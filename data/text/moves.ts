@@ -9225,6 +9225,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Lightning Blast Wave",
 		shortDesc: "Increases by 10 Power everytime the user is hit. Maxes out at 158 Power.",
 	},
+	fivenights: {
+		name: "Five Nights",
+		shortDesc: "Hits 5 turns after being used.",
+	},
 	extinction: {
 		name: "Extinction",
 		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",

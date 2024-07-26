@@ -15062,12 +15062,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		category: "Physical",
 		name: "Lightning Blast Wave",
-		pp: 5,
+		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, distance: 1},
+		flags: {protect: 1, mirror: 1, distance: 1, contact: 1},
 		secondary: null,
-		target: "allAdjacentFoes",
+		target: "normal",
 		type: "Electric",
+		isNonstandard: "Future",
 	},
 	razorleaf: {
 		num: 75,
@@ -29779,6 +29780,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Water",
 		contestType: "Tough",
+		isNonstandard: "Future",
 	},
 	gentworrible: {
 		num: 217,
@@ -33197,6 +33199,42 @@ export const Moves: {[moveid: string]: MoveData} = {
 			});
 			this.add('-start', source, 'move: Scrying Wish');
 			return this.NOT_FAIL;
+		},
+		fivenights: {
+			accuracy: 100,
+			basePower: 250,
+			category: "Special",
+			name: "Five Nights",
+			pp: 5,
+			priority: 0,
+			flags: {futuremove: 1},
+			ignoreImmunity: true,
+			onTry(source, target) {
+				if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+				Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+					duration: 6,
+					move: 'fivenights',
+					source: source,
+					moveData: {
+						id: 'fivenights',
+						name: "Five Nights",
+						accuracy: 100,
+						basePower: 250,
+						category: "Special",
+						priority: 0,
+						flags: {futuremove: 1},
+						ignoreImmunity: false,
+						effectType: 'Move',
+						type: 'Ghost',
+					},
+				});
+				this.add('-start', source, 'move: Five Nights');
+				return this.NOT_FAIL;
+			},
+			secondary: null,
+			target: "normal",
+			type: "Ghost",
+			isNonstandard: "Future",
 		},
 		secondary: null,
 		target: "normal",
@@ -89604,6 +89642,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Water",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	suffocate: {
 		num: 42017,
@@ -89622,6 +89661,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Dark",
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
 	absorption: {
 		num: 42018,
@@ -89647,6 +89687,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Water",
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
 	scarletchant: {
 		num: 42018,
@@ -89667,6 +89708,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Psychic",
+		isNonstandard: "Future",
 	},
 	solarhunger: {
 		num: 42009,
