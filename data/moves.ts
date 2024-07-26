@@ -33288,39 +33288,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spe: 1}},
 		contestType: "Beautiful",
 	},
-	fivenights: {
-		num: 248,
-		accuracy: 100,
-		basePower: 250,
-		category: "Special",
-		name: "Five Nights",
-		pp: 5,
-		priority: 0,
-		flags: {allyanim: 1, futuremove: 1},
-		ignoreImmunity: true,
-		onTry(source, target) {
-			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
-			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
-				duration: 6,
-				move: 'fivenights',
-				source: source,
-				moveData: {
-					id: 'fivenights',
-					name: "Five Nights",
-					accuracy: 100,
-					basePower: 250,
-					category: "Special",
-					priority: 0,
-					flags: {allyanim: 1, futuremove: 1},
-					ignoreImmunity: false,
-					effectType: 'Move',
-					type: 'Ghost',
-					isNonstandard: "Future",
-				},
-			});
-			this.add('-start', source, 'move: Scrying Wish');
-			return this.NOT_FAIL;
-	},
 	glomp3: {
 		accuracy: 100,
 		basePower: 100,
@@ -33511,6 +33478,38 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		contestType: "Cute",
 		isNonstandard: "Future",
+	},
+	fivenights: {
+		accuracy: 100,
+		basePower: 250,
+		category: "Special",
+		name: "Five Nights",
+		pp: 5,
+		priority: 0,
+		flags: {allyanim: 1, futuremove: 1},
+		ignoreImmunity: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 6,
+				move: 'fivenights',
+				source: source,
+				moveData: {
+					id: 'fivenights',
+					name: "Five Nights",
+					accuracy: 100,
+					basePower: 250,
+					category: "Special",
+					priority: 0,
+					flags: {allyanim: 1, futuremove: 1},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					type: 'Ghost',
+					isNonstandard: "Future",
+				},
+			});
+			this.add('-start', source, 'move: Five Nights');
+			return this.NOT_FAIL;
 	},
 	skillroom: {
 		accuracy: true,
