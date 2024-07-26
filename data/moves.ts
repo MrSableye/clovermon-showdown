@@ -33289,6 +33289,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	fivenights: {
+		num: 248,
 		accuracy: 100,
 		basePower: 250,
 		category: "Special",
