@@ -89723,5 +89723,5 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Grass",
-	},  
+	},
 };
