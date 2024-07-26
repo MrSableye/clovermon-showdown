@@ -33234,7 +33234,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 			secondary: null,
 			target: "normal",
 			type: "Ghost",
-			isNonstandard: "Future",
 		},
 		secondary: null,
 		target: "normal",
