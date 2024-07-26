@@ -40562,7 +40562,6 @@ iwik: {
 		baseSpecies: "Blobbos-Eye", 
 		forme: "Mouth",
 		types: ["Dark", "Psychic"],
-		forme: "Eye-Mouth",
 		gender: 'N',
 		baseStats: {hp: 100, atk: 135, def: 45, spa: 115, spd: 45, spe: 120},
 		abilities: {0: "Strong Jaw"},
