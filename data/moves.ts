@@ -33207,7 +33207,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			name: "Five Nights",
 			pp: 5,
 			priority: 0,
-			flags: {futuremove: 1},
+			flags: {allyanim: 1, futuremove: 1},
 			ignoreImmunity: true,
 			onTry(source, target) {
 				if (!target.side.addSlotCondition(target, 'futuremove')) return false;
@@ -33222,7 +33222,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 						basePower: 250,
 						category: "Special",
 						priority: 0,
-						flags: {futuremove: 1},
+						flags: {allyanim: 1, futuremove: 1},
 						ignoreImmunity: false,
 						effectType: 'Move',
 						type: 'Ghost',
@@ -33230,17 +33230,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				});
 				this.add('-start', source, 'move: Five Nights');
 				return this.NOT_FAIL;
-			},
-			secondary: null,
-			target: "normal",
-			type: "Ghost",
-			isNonstandard: "Future",
-		},
-		secondary: null,
-		target: "normal",
-		type: "Water",
-		contestType: "Clever",
-		isNonstandard: "Future",
 	},
 	perfectcalculation: {
 		accuracy: true,
