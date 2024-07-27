@@ -33490,7 +33490,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Five Nights",
 		pp: 5,
 		priority: 0,
-		flags: {futuremove: 1},
+		noPPBoosts: true,
+		flags: {futuremove: 1, allyanim: 1},
 		ignoreImmunity: true,
 		onTry(source, target) {
 			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
