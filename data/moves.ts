@@ -33176,7 +33176,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Scrying Wish",
 		pp: 5,
 		priority: 0,
-		flags: {allyanim: 1, futuremove: 1},
+		flags: {futuremove: 1},
 		ignoreImmunity: true,
 		onTry(source, target) {
 			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
@@ -33191,7 +33191,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					basePower: 200,
 					category: "Special",
 					priority: 0,
-					flags: {allyanim: 1, futuremove: 1},
+					flags: {futuremove: 1},
 					ignoreImmunity: false,
 					effectType: 'Move',
 					type: 'Water',
@@ -33200,46 +33200,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			this.add('-start', source, 'move: Scrying Wish');
 			return this.NOT_FAIL;
 		},
-		fivenights: {
-			accuracy: 100,
-			basePower: 250,
-			category: "Special",
-			name: "Five Nights",
-			pp: 5,
-			priority: 0,
-			flags: {futuremove: 1},
-			ignoreImmunity: true,
-			onTry(source, target) {
-				if (!target.side.addSlotCondition(target, 'futuremove')) return false;
-				Object.assign(target.side.slotConditions[target.position]['futuremove'], {
-					duration: 6,
-					move: 'fivenights',
-					source: source,
-					moveData: {
-						id: 'fivenights',
-						name: "Five Nights",
-						accuracy: 100,
-						basePower: 250,
-						category: "Special",
-						priority: 0,
-						flags: {futuremove: 1},
-						ignoreImmunity: false,
-						effectType: 'Move',
-						type: 'Ghost',
-					},
-				});
-				this.add('-start', source, 'move: Five Nights');
-				return this.NOT_FAIL;
-			},
-			secondary: null,
-			target: "normal",
-			type: "Ghost",
-			isNonstandard: "Future",
-		},
 		secondary: null,
 		target: "normal",
 		type: "Water",
-		contestType: "Clever",
 		isNonstandard: "Future",
 	},
 	perfectcalculation: {
@@ -33518,6 +33481,42 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Fairy",
 		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	fivenights: {
+		accuracy: 100,
+		basePower: 250,
+		category: "Special",
+		name: "Five Nights",
+		pp: 5,
+		priority: 0,
+		flags: {futuremove: 1},
+		ignoreImmunity: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 6,
+				move: 'fivenights',
+				source: source,
+				moveData: {
+					id: 'fivenights',
+					name: "Five Nights",
+					accuracy: 100,
+					basePower: 250,
+					category: "Special",
+					priority: 0,
+					flags: {futuremove: 1},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					type: 'Ghost',
+				},
+			});
+			this.add('-start', source, 'move: Five Nights');
+			return this.NOT_FAIL;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
 		isNonstandard: "Future",
 	},
 	skillroom: {
