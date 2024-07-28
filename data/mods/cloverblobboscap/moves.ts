@@ -1886,6 +1886,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	frostyterrain: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	ragingbull: {
 		num: 873,
 		accuracy: 100,
