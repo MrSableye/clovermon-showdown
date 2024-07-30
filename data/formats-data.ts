@@ -10263,6 +10263,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	dunebug: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	vakoon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	carpest: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	veilefly: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
