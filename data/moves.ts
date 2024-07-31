@@ -3839,6 +3839,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		contestType: "Cute",
 	},
+	bowserblaster: {
+		num: 146,
+		accuracy: 95,
+		basePower: 100,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Bowser Blaster",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Water",
+		contestType: "Cute",
+	},
 	doodle: {
 		num: 867,
 		accuracy: 100,
@@ -33490,7 +33508,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Five Nights",
 		pp: 5,
 		priority: 0,
-		flags: {futuremove: 1},
+		noPPBoosts: true,
+		flags: {futuremove: 1, allyanim: 1},
 		ignoreImmunity: true,
 		onTry(source, target) {
 			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
