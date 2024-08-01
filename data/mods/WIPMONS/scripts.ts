@@ -1,6 +1,6 @@
 export const Scripts: ModdedBattleScriptsData = {
 	gen: 9,
-	inherit: 'gen8',
+	inherit: 'clover',
 	boost(boost: SparseBoostsTable, target: Pokemon, source?: Pokemon | null,
 		effect?: Effect | string | null, isSecondary?: boolean, isSelf?: boolean) {
 		if (this.event) {
