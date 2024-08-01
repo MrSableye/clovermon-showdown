@@ -12527,26 +12527,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 	},
-	warden: {
-		name: "Warden",
-		onStart(pokemon) {
-			this.add('-ability', pokemon, 'Warden');
-		},
-		onFoeDisableMove(pokemon) {
-			for (const moveSlot of this.effectState.source.moveSlots) {
-				if (moveSlot.id === 'struggle') continue;
-				pokemon.disableMove(moveSlot.id, 'hidden');
-			}
-			pokemon.maybeDisabled = true;
-		},
-		onFoeBeforeMovePriority: 4,
-		onFoeBeforeMove(attacker, defender, move) {
-			if (move.id !== 'struggle' && this.effectState.source.hasMove(move.id) && !move.isZ && !move.isMax) {
-				this.add('cant', attacker, 'ability: Warden', move);
-				return false;
-			}
-		},
-	},
 	medusascurse: {
 		name: "Medusa's Curse",
 		onStart(source) {
