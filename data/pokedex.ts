@@ -46390,6 +46390,7 @@ blobbosprism: {
 		color: "Grey",
 		evos: ["Vakoon"],
 		eggGroups: ["Bug"],
+		gen: 9,
 	},
 	vakoon: {
 		num: -81,
@@ -46404,6 +46405,7 @@ blobbosprism: {
 		evoLevel: 9,
 		evos: ["Carpest", "Veilefly"],
 		eggGroups: ["Bug"],
+		gen: 9,
 	},
 	carpest: {
 		num: -82,
@@ -46418,6 +46420,7 @@ blobbosprism: {
 		evoType: "other",
 		evoCondition: "Level up knowing Shadow Sneak",
 		eggGroups: ["Bug"],
+		gen: 9,
 	},
 veilefly: {
 		num: -83,
@@ -46431,6 +46434,7 @@ veilefly: {
 		prevo: "Vakoon",
 		evoLevel: 12,
 		eggGroups: ["Bug"],
+		gen: 9,
 	},
 
 	/* gen 2 isn't real */
