@@ -14848,6 +14848,91 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 6725,
 		isNonstandard: "Future",
 	},
+	nuclearization: {
+		name: "Nuclearization",
+		onAnyEffectiveness(typemod, target, type, move) {
+			const nuclearizationUser = this.effectState.target;
+
+			if (nuclearizationUser !== this.activePokemon) return;
+
+			if (move.type === 'Normal' && ['Normal', 'Poison'].includes(type)) {
+				return 1;
+			}
+		},
+		rating: 3,
+		isNonstandard: "Future",
+	},
+	speculate: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = '???';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		name: "Speculate",
+		rating: 4,
+		num: 182,
+		isNonstandard: "Future",
+	},
+	ancientfrenzy: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				this.boost({spe: -1});
+			}
+		},
+		onSourceModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Rock') {
+				return this.chainModify(2);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Rock') {
+				return this.chainModify(2);
+			}
+		},
+		name: "Ancient Frenzy",
+		rating: 4.5,
+		num: 3,
+		isNonstandard: "Future",
+	},
+	futuuuure: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				this.boost({def: -1});
+			}
+		},
+		onSourceModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				return this.chainModify(2);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				return this.chainModify(2);
+			}
+		},
+		name: "FUTUUUURE!",
+		rating: 4.5,
+		num: 3,
+		isNonstandard: "Future",
+	},
 	polite: {
 		onFractionalPriority: -0.1,
 		onModifyMove(move) {
