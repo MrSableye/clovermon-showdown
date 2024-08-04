@@ -753,6 +753,22 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ancientfrenzy: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	speculate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	nuclearization: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	futuuure: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	snowwarning: {
 		inherit: true,
 		onStart(source) {

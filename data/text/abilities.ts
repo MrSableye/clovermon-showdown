@@ -3962,6 +3962,22 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Reduces Super Effective moves by 50%.",
 		desc: "Super effective damage taken is halved.",
 	},
+	nuclearization: {
+		name: "Nuclearization",
+		shortDesc: "Normal type moves are Super Effective on Poison and Normal types.",
+	},
+	speculate: {
+		name: "Speculate",
+		shortDesc: "This Pokemon's normal-type moves become ??? type and has 1.2x power.",
+	},
+	ancientfrenzy: {
+		name: "Ancient Frenzy",
+		shortDesc: "This Pokemon's rock-type moves are doubled but Speed is lowered by 1 each turn.",
+	},
+	futuuuure: {
+		name: "FUTUUURE",
+		shortDesc: "This Pokemon's electric-type moves are doubled but Defense is lowered by 1 each turn.",
+	},
 	polite: {
 		name: "Polite",
 		shortDesc: "Moves last. STAB increased to 2.",
