@@ -249,15 +249,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	/* Disabled items */
-	absorbbulb: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	adamantorb: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	adrenalineorb: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -270,14 +262,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: "Past",
 	},
 	blukberry: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	blunderpolicy: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	cellbattery: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -329,15 +313,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	ejectpack: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	electirizer: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	electricseed: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -373,19 +349,11 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	fullincense: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	galaricacuff: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
 	galaricawreath: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	grassyseed: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -402,10 +370,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: "Past",
 	},
 	icestone: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	jabocaberry: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -429,10 +393,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	luminousmoss: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	lureball: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -449,15 +409,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	metronome: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	micleberry: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	mistyseed: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -466,10 +418,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: "Past",
 	},
 	muscleband: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	oddincense: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -513,15 +461,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	protectivepads: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	protector: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	psychicseed: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -533,31 +473,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	redcard: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	ribbonsweet: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	ringtarget: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	rockincense: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	roomservice: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	roseincense: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	rowapberry: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -574,10 +490,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: "Past",
 	},
 	shinystone: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	snowball: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -606,10 +518,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: "Past",
 	},
 	thickclub: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	throatspray: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -1013,14 +921,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	utilityumbrella: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	waveincense: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	whippeddream: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -1030,10 +930,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: "Past",
 	},
 	/* Gen 9 items */
-	abilityshield: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	auspiciousarmor: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -1050,19 +946,11 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	loadeddice: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	maliciousarmor: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
 	mirrorherb: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	punchingglove: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
