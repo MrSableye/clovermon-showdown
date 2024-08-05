@@ -61042,7 +61042,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					return false;
 				}
 				if (target.getWeight() >= 2000) {
-					this.add('-fail', target, 'move: Submerge', '[heavy]');
+					this.add('-fail', target, 'move: Sky Drop', '[heavy]');
 					return null;
 				}
 
@@ -64704,7 +64704,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					return false;
 				}
 				if (target.getWeight() >= 2000) {
-					this.add('-fail', target, 'move: Close Encounter', '[heavy]');
+					this.add('-fail', target, 'move: Sky Drop', '[heavy]');
 					return null;
 				}
 
@@ -85587,7 +85587,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					return false;
 				}
 				if (target.getWeight() >= 2000) {
-					this.add('-fail', target, 'move: Kidnap', '[heavy]');
+					this.add('-fail', target, 'move: Sky Drop', '[heavy]');
 					return null;
 				}
 
