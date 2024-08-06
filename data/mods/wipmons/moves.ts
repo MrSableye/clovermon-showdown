@@ -65,16 +65,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bulletseed: {
-		inherit: true,
-		onHit(target, source) {
-			if (source.types.includes('Grass')) {
-				if (this.randomChance(1, 16)) {
-					target.addVolatile('leechseed');
-				}
-			}
-		},
-	},
 	burningjealousy: {
 		inherit: true,
 		isNonstandard: null,
@@ -86,22 +76,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	coaching: {
 		inherit: true,
 		isNonstandard: null,
-	},
-	copycat: {
-		inherit: true,
-		onHit(pokemon) {
-			const noCopycat = [
-				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'wingsofcorrection',
-			];
-			let move: Move | ActiveMove | null = this.lastMove;
-			if (!move) return;
-
-			if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
-			if (noCopycat.includes(move.id) || move.isZ || move.isMax) {
-				return false;
-			}
-			this.actions.useMove(move.id, pokemon);
-		},
 	},
 	corrosivegas: {
 		inherit: true,
@@ -241,23 +215,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	heartstamp: {
-		accuracy: 100,
-		basePower: 60,
-		category: "Physical",
-		isNonstandard: null,
-		name: "Heart Stamp",
-		pp: 25,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: {
-			chance: 30,
-			volatileStatus: 'flinch',
-		},
-		target: "normal",
-		type: "Fairy",
-		contestType: "Cute",
-	},
 	icefang: {
 		inherit: true,
 		accuracy: 100,
@@ -285,25 +242,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	lowsweep: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
-	},
-	lusterpurge: {
-		accuracy: 100,
-		basePower: 80,
-		category: "Special",
-		isNonstandard: null,
-		name: "Luster Purge",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 100,
-			boosts: {
-				spd: -1,
-			},
-		},
-		target: "normal",
-		type: "Psychic",
-		contestType: "Clever",
 	},
 	magicpowder: {
 		inherit: true,
@@ -391,38 +329,9 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mistball: {
-		accuracy: 100,
-		basePower: 80,
-		category: "Special",
-		isNonstandard: null,
-		name: "Mist Ball",
-		pp: 10,
-		priority: 0,
-		flags: {bullet: 1, protect: 1, mirror: 1},
-		secondary: {
-			chance: 100,
-			boosts: {
-				spa: -1,
-			},
-		},
-		target: "normal",
-		type: "Psychic",
-		contestType: "Clever",
-	},
 	multiattack: {
 		inherit: true,
 		isNonstandard: null,
-	},
-	needlearm: {
-		inherit: true,
-		basePower: 65,
-		onHit(target) {
-			if (this.randomChance(1, 2)) {
-				target.side.addSideCondition('spikes');
-			}
-		},
-		secondary: null,
 	},
 	noretreat: {
 		inherit: true,
@@ -464,16 +373,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	scorchingsands: {
 		inherit: true,
 		isNonstandard: null,
-	},
-	seedbomb: {
-		inherit: true,
-		onHit(target, source) {
-			if (source.types.includes('Grass')) {
-				if (this.randomChance(3, 10)) {
-					target.addVolatile('leechseed');
-				}
-			}
-		},
 	},
 	sharpen: {
 		inherit: true,
@@ -764,76 +663,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		noSketch: true,
 		isNonstandard: null,
 	},
-	/* CAP Exclusive Moves */
-	clobber: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	scarletchant: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	absorption: {
-		inherit: true,
-		isNonstandard: null,	
-	},
-	suffocate: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	crusadercrash: {
-		inherit: true,
-		isNonstandard: null,
-	},
+	/* WIPMons Enabled and Exclusive Moves */
 	earthshatter: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	moregun: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	psychofists: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	faradaycage: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	dragonburst: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	rockclock: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	awaken: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	voltaiccyclone: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	boilover: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	soulcrusher: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	trickstab: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	tombstoner: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	fruitjuice: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -841,183 +672,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	phasethrough: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	coldcutter: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	shadowscales: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	wingsofcorrection: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	brutalpunishment: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	cloudbreaker: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	gazerbeam: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	memepunch: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	shinestrike: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	petrify: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	starseedblast: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	brandingblade: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mudmaelstrom: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	finalhour: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	turnabout: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	meddymeds: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	badeggs: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	backdraft: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	villify: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	nuclearwinter: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	shroomsnuggle: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	darkening: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	beamblade: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	bearhug: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	chilipowder: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	thunderdrop: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	faeblade: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	stickytongue: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	rocketpunch: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	powerwasher: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	flakcannon: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	blackbomb: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	frigidend: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	cherrybomb: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	crashhopper: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	wrapd: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	blizzardd: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	amnesiad: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	hyperbeamd: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	fractus: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	purge: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	extinction: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	uproot: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mirageveil: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	frostbite: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1046,27 +705,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Flying",
 		isNonstandard: null,
-	},
-	rototiller: {
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Rototiller",
-		pp: 20,
-		priority: 0,
-		flags: {snatch: 1},
-		onModifyMove(move, pokemon) {
-			if (['sandstorm'].includes(pokemon.effectiveWeather())) move.boosts = {atk: 2, spa: 2};
-		},
-		boosts: {
-			atk: 1,
-			spa: 1,
-		},
-		secondary: null,
-		target: "self",
-		type: "Ground",
-		zMove: {boost: {atk: 1}},
-		contestType: "Beautiful",
 	},
 	skyuppercut: {
 		inherit: true,
@@ -1121,40 +759,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Normal",
 		zMove: {basePower: 160},
 		maxMove: {basePower: 130},
-	},
-	sonicboom: {
-		accuracy: 100,
-		basePower: 150,
-		category: "Special",
-		name: "Sonic Boom",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		mindBlownRecoil: true,
-		onAfterMove(pokemon, target, move) {
-			if (move.mindBlownRecoil && !move.multihit) {
-				const hpBeforeRecoil = pokemon.hp;
-				this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Sonic Boom'), true);
-				if (pokemon.hp <= pokemon.maxhp / 2 && hpBeforeRecoil > pokemon.maxhp / 2) {
-					this.runEvent('EmergencyExit', pokemon, pokemon);
-				}
-			}
-		},
-		secondary: null,
-		target: "allAdjacent",
-		type: "Flying",
-		isNonstandard: null,
-	},
-	geargrind: {
-		inherit: true,
-		accuracy: 100,
-		isNonstandard: null,
-		secondary: {
-			chance: 30,
-			boosts: {
-				def: -1,
-			},
-		},
 	},
 	aquacutter: {
 		inherit: true,
@@ -1230,7 +834,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	icespinner: {
 		inherit: true,
-		isNonstandard: "Past",
+		isNonstandard: null,
 	},
 	jetpunch: {
 		inherit: true,
@@ -1322,7 +926,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	trailblaze: {
 		inherit: true,
-		isNonstandard: "Past",
+		isNonstandard: null,
 	},
 	tripledive: {
 		inherit: true,
