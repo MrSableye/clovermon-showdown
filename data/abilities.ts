@@ -11010,6 +11010,106 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 422,
 		isNonstandard: "Future",
 	},
+	procrastinator: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('rest'), pokemon);
+		},
+		name: "Procrastinator",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+resurrection: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('revivalblessing'), pokemon);
+		},
+		name: "Resurrection",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+hideandseek: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('substitute'), pokemon);
+		},
+		name: "Hide and Seek",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+resilience: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('endure'), pokemon);
+		},
+		name: "Resilience",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+scavenger: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('recycle'), pokemon);
+		},
+		name: "Scavenger",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+trolling: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('partingshot'), pokemon);
+		},
+		name: "Trolling",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+headwind: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('tailwind'), pokemon);
+		},
+		name: "Headwind",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+misleading: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('fakeout'), pokemon);
+		},
+		name: "Misleading",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+prestidigitation: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('trick'), pokemon);
+		},
+		name: "Prestidigitation",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+malediction: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('curse'), pokemon);
+		},
+		name: "Malediction",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
 	metamorphosis: {
 		onSwitchOut(pokemon) {
 			if (pokemon.species.id !== 'blobboseedle' || pokemon.transformed) return;
