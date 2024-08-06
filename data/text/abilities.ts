@@ -3149,6 +3149,46 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Imitator",
 		shortDesc: "On switch-in, ability holder uses Copycat.",
 	},
+	procrastinator: {
+		name: "Procrastinator",
+		shortDesc: "On switch-in, ability holder uses Rest.",
+	},
+	resurrection: {
+		name: "Resurrection",
+		shortDesc: "On switch-in, ability holder uses Revival Blessing.",
+	},
+hideandseek: {
+		name: "Hide and Seek",
+		shortDesc: "On switch-in, ability holder uses Substitute.",
+	},
+resilience: {
+		name: "Resilience",
+		shortDesc: "On switch-in, ability holder uses Endure.",
+	},
+scavenger: {
+		name: "Scavenger",
+		shortDesc: "On switch-in, ability holder uses Recycle.",
+	},
+trolling: {
+		name: "Trolling",
+		shortDesc: "we do a little bit of trolling",
+	},
+headwind: {
+		name: "Headwind",
+		shortDesc: "On switch-in, ability holder uses Tailwind.",
+	},
+misleading: {
+		name: "Misleading",
+		shortDesc: "On switch-in, ability holder uses Fake Out.",
+	},
+prestidigitation: {
+		name: "Prestidigitation",
+		shortDesc: "On switch-in, ability holder uses Trick.",
+	},
+malediction: {
+		name: "Malediction",
+		shortDesc: "On switch-in, ability holder uses Curse.",
+	},
 	metamorphosis: {
 		name: "Metamorphosis",
 		shortDesc: "If this Pokemon is a Blobbos-eedle, switching out makes it change into its True Form.",
