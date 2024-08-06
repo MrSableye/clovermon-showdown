@@ -77,168 +77,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	/* Clover CAP Abilities */
-	cakeveil: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	rusepower: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	omniscience: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	oldschool: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	wholesome100: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	spookyaura: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	tetanus: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	colonoscopy: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	hewillbedragon: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	blueblood: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	shavedice: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	temperamental: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	beamboost: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	overeager: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	overeagerest: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	swarming: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	stoneflesh: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	sousaphone: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	spincleaner: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	kinglymajesty: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	shitbugtactics: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	brainpower: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	dispenser: {
-		inherit: true,
-		isNonstandard: null,
-	},
+	/* WIPMon Abilities */
 	leech: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	supportive: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	bonerzoner: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	eclipse: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	chording: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	fogofwar: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	jihad: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	bathtime: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	stopsign: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	stormshelter: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	zenmonke: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	pairoswrath: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	hydrothermal: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	slavemaster: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	frozenbunker: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	baller: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	desolateland: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	transfusion: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -288,17 +132,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 1,
 		num: 75,
 	},
-	unnerve: {
-		inherit: true,
-		onFoeTryMove(target, source, effect) {
-			if (['milkdrink', 'focusmunch', 'fruitjuice', 'softboiled'].includes(effect.id)) {
-				this.attrLastMove('[still]');
-				this.add('cant', this.effectState.target, 'ability: Unnerve', effect, '[of] ' + target);
-				return false;
-			}
-		},
-	},
-	horror: {
+	supportive: {
 		inherit: true,
 		isNonstandard: null,
 	},
