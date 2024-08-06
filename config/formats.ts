@@ -1653,7 +1653,7 @@ export const Formats: FormatList = [
 	},
 	{
 		name: '[Gen 8 WIPMons Only] OU',
-		mod: 'WIPMONS',
+		mod: 'wipmons',
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
