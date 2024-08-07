@@ -18,6 +18,5 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
-		tier: "OU",
 	},
 };
