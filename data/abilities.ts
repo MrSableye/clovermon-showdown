@@ -15033,6 +15033,66 @@ malediction: {
 		num: 3,
 		isNonstandard: "Future",
 	},
+		you: {
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'You.', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({def: -1}, target, pokemon, null, true);
+				}
+			}
+		},
+		name: "You.",
+		rating: 3.5,
+		num: 22,
+		isNonstandard: "Future",
+	},
+	mossyexterior: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				if (!this.boost({spd: 1})) {
+					this.add('-immune', target, '[from] ability: Mossy Exterior');
+				}
+				return null;
+			}
+		},
+		onAnyRedirectTarget(target, source, source2, move) {
+			if (move.type !== 'Water' || move.flags['pledgecombo']) return;
+			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
+			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
+				if (move.smartTarget) move.smartTarget = false;
+				if (this.effectState.target !== target) {
+					this.add('-activate', this.effectState.target, 'ability: Mossy Exterior');
+				}
+				return this.effectState.target;
+			}
+		},
+		isBreakable: true,
+		name: "Mossy Exterior",
+		rating: 3,
+		num: 114,
+		isNonstandard: "Future",
+	},
+	izanamisrage: {
+		onSourceDamagingHit(damage, target, source, move) {
+		if (source.volatiles['torment']) return;
+			if (!move.isMax && !move.flags['futuremove'] && move.id !== 'struggle') {
+				if (this.randomChance(4, 10)) {
+					source.addVolatile('torment', this.effectState.target);
+				}
+			}
+		},
+		name: "Izanami's Rage",
+		rating: 4.5,
+		num: 305,
+	   isNonstandard: "Future",
+	},
 	polite: {
 		onFractionalPriority: -0.1,
 		onModifyMove(move) {
