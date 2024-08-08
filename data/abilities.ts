@@ -13074,6 +13074,38 @@ malediction: {
 		isBreakable: true,
 		name: "At Long Last",
 	},
+	Jumper: {
+		name: "Jumper",
+		isNonstandard: "Future",
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Water' || move.type === 'Ground') {
+				this.debug('Jumper weaken');
+				return this.chainModify(0.5);
+			}
+			if (move.type === 'Flying' || move.type === 'Poison') {
+				this.debug('Jumper strengthen');
+				return this.chainModify(2.0);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Water' || move.type === 'Ground') {
+				this.debug('Jumper weaken');
+				return this.chainModify(0.5);
+			}
+			if (move.type === 'Flying' || move.type === 'Poison') {
+				this.debug('Jumper strengthen');
+				return this.chainModify(2.0);
+			}
+		},
+		onChargeMove(pokemon, target, move) {
+			this.debug('jumper - remove charge turn for ' + move.id);
+			this.attrLastMove('[still]');
+			this.addMove('-anim', pokemon, move.name, target);
+			return false; // skip charge turn
+		},
+	},
 	fireaffinity: {
 		name: "Fire Affinity",
 		isNonstandard: "Future",

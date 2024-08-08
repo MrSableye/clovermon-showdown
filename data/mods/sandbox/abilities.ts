@@ -1975,6 +1975,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	jumper: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	sapiophile: {
 		inherit: true,
 		isNonstandard: null,

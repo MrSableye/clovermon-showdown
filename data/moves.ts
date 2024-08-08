@@ -17904,6 +17904,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 		},
+		
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
@@ -24794,6 +24795,50 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Water",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	jump: {
+		accuracy: 100,
+		basePower: 95,
+		category: "Physical",
+		name: "Jump",
+		pp: 10,
+		flags: {charge: 1, contact: 1, gravity: 1, protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Flying') return 3;
+			if (type === 'Water' || type === 'Ground') return 1;
+			if (type === 'Rock' || type === 'Steel') return 2;
+		},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability(target, source, move) {
+				if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
+					return;
+				}
+				return false;
+			},
+			onSourceModifyDamage(damage, source, target, move) {
+				if (move.id === 'gust' || move.id === 'twister') {
+					return this.chainModify(2);
+				}
+			},
+		},
+		priority: 0,
+		secondary: null,
+		target: "normal",
+		type: "???",
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},

@@ -11288,6 +11288,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	jumpeon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	mammudha: {
 		inherit: true,
 		tier: "OU",

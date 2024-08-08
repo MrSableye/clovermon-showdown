@@ -9447,6 +9447,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Tech Slash",
 		shortDesc: "-1 Priority. Always paralyzes the target.",
 	},
+	jump: {
+		name: "Jump",
+		shortDesc: "Jumps up first turn. Hits on the second. SE: Ground, Water. Resist: Rock, Steel. Immune: Flying.",
+		prepare: "[POKEMON] sprang up!",
+	},
 	rocketboost: {
 		name: "Rocket Boost",
 		shortDesc: "Raises Speed by 1 and sets up Aqua Ring on the user. Can only be used first turn out.",
