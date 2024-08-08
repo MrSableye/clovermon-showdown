@@ -4040,7 +4040,7 @@ malediction: {
 	},
 	marretadadothor: {
 		name: "Thor's Sledgehammer",
-		shortDesc: "Summons King's Hammer.",
+		shortDesc: "Summons Blandy Bland.",
 	},
 	dezgrace: {
 		name: "10 Grace",
@@ -4048,7 +4048,7 @@ malediction: {
 	},
 	violentexchange: {
 		name: "Violent Exchange",
-		shortDesc: "Summons DirtyDeedsDoneDitCheap",
+		shortDesc: "Summons Backdraft",
 	},
 	firstyou: {
 		name: "First You",
@@ -4056,7 +4056,7 @@ malediction: {
 	},
 	saback: {
 		name: "Saback",
-		shortDesc: "Summons Sabbath",
+		shortDesc: "Summons Shed Tail",
 	},
 	thelittleone: {
 		name: "The Little One",

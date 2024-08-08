@@ -15047,7 +15047,7 @@ malediction: {
 	raservant: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
-			this.actions.useMove(Dex.moves.get('Max Flare'), pokemon);
+			this.actions.useMove(Dex.moves.get('UV Burst'), pokemon);
 		},
 		name: "Ra Servant ",
 		rating: 3,
@@ -15091,9 +15091,9 @@ malediction: {
 	marretadadothor: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
-			this.actions.useMove(Dex.moves.get("King's Hammer"), pokemon);
+			this.actions.useMove(Dex.moves.get('Blandy Bland'), pokemon);
 		},
-		name: "Thor's Sledgehammer",
+		name: "Thors Sledgehammer",
 		rating: 3,
 		num: 422,
 		isNonstandard: "Future",
@@ -15113,7 +15113,7 @@ malediction: {
 	violentexchange: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
-			this.actions.useMove(Dex.moves.get('DirtyDeedsDoneDitCheap'), pokemon);
+			this.actions.useMove(Dex.moves.get('Backdraft'), pokemon);
 		},
 		name: "Violent Exchange",
 		rating: 3,
@@ -15135,7 +15135,7 @@ malediction: {
 	saback: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
-			this.actions.useMove(Dex.moves.get('Sabbath'), pokemon);
+			this.actions.useMove(Dex.moves.get('Shed Tail'), pokemon);
 		},
 		name: "Saback",
 		rating: 3,
