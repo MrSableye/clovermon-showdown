@@ -7806,7 +7806,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	blockbuster: {
 		name: "Block Buster",
-		desc: "If this attack does not miss, the effects of Reflect, Light Screen, and Aurora Veil end for the target's side of the field before damage is calculated. Has a 20% chance to lower the target's Defense by 1 stage.",
+		desc: "If this attack does not miss, the effects of Reflect, Light Screen, and Aurora Veil end for the target's side of the field before damage is calculated. Has a 30% chance to lower the target's Defense by 1 stage.",
 		shortDesc: "Destroys screens; 30% to drop target Def.",
 	},
 	awaken: {
