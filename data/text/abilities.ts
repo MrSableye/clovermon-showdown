@@ -4062,6 +4062,10 @@ malediction: {
 		name: "The Little One",
 		shortDesc: "Summons Minimize",
 	},
+	flashlight: {
+		name: "Flash Light",
+		shortDesc: "Summons Flashbang",
+	},
 
 
 	

@@ -15049,7 +15049,7 @@ malediction: {
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('Max Flare'), pokemon);
 		},
-		name: "Rá Servant ",
+		name: "Ra Servant ",
 		rating: 3,
 		num: 422,
 		isNonstandard: "Future",
@@ -15148,6 +15148,17 @@ malediction: {
 			this.actions.useMove(Dex.moves.get('Minimize'), pokemon);
 		},
 		name: "the little one",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+
+	flashlight: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Flashbang'), pokemon);
+		},
+		name: "Flash Light",
 		rating: 3,
 		num: 422,
 		isNonstandard: "Future",
