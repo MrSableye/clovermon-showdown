@@ -46365,10 +46365,14 @@ blobbosprism: {
                         1: "Merciless",
                         H: "Battle Armor",
                         S: "Sniper",
+	},
+		heightm: 0.4,
+		weightkg: 5.7,
+		color: "Black",
 		eggGroups: [
-			"Bug", "Mineral"
+		     "Mineral",
 		],
-		gen: 8,
+			gen: 8,
 	},
 	infected: {
 		num: 42999,
