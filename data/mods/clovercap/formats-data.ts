@@ -34,7 +34,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	},
-	ballboa: {
+	braxitytan: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -1374,6 +1374,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	coilspill: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	crolord: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

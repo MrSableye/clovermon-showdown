@@ -7901,6 +7901,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	braxitytan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	turturret: {
 		tier: "Illegal",
 		isNonstandard: "Future",
