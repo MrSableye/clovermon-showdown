@@ -15043,4 +15043,115 @@ malediction: {
 		num: 6726,
 		isNonstandard: "Future",
 	},
+
+	raservant: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Max Flare'), pokemon);
+		},
+		name: "Rá Servant ",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+
+	copyandpaste: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Knight of Owner'), pokemon);
+		},
+		name: "Copy and Paste ",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+
+	babymonster: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Fughamut'), pokemon);
+		},
+		name: "Baby Monster",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+
+	regate: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Endeavor'), pokemon);
+		},
+		name: "Regate",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+
+	marretadadothor: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get("King's Hammer"), pokemon);
+		},
+		name: "Thor's Sledgehammer",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+
+	dezgraça: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Wish'), pokemon);
+		},
+		name: "10 Grace",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+
+	violentexchange: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('DirtyDeedsDoneDitCheap'), pokemon);
+		},
+		name: "Violent Exchange",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+
+	firstyou: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Portal Gun'), pokemon);
+		},
+		name: "First You",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+
+	saback: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Sabbath'), pokemon);
+		},
+		name: "Saback",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	thelittleone: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Minimize'), pokemon);
+		},
+		name: "the little one",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+
+
 };
