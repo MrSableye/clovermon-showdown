@@ -106,6 +106,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mossyexterior: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	you: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	izanamisrage: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	battlearmor: {
 		onDamage(damage, target, source, effect) {
 			if (effect.id === 'recoil') {
