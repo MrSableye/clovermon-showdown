@@ -4054,9 +4054,13 @@ malediction: {
 		name: "First You",
 		shortDesc: "Summons Portal Gun",
 	},
-	clearman: {
-		name: "Clearman",
-		shortDesc: "Summons Wings Of Correction",
+	saback: {
+		name: "Saback",
+		shortDesc: "Summons Sabbath",
+	},
+	thelittleone: {
+		name: "The Little One",
+		shortDesc: "Summons Minimize",
 	},
 
 

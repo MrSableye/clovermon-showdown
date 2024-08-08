@@ -15044,7 +15044,7 @@ malediction: {
 		isNonstandard: "Future",
 	},
 
-	Raservant: {
+	raservant: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('Max Flare'), pokemon);
@@ -15132,12 +15132,22 @@ malediction: {
 		isNonstandard: "Future",
 	},
 
-	clearman: {
+	saback: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
-			this.actions.useMove(Dex.moves.get('Wings Of Correction'), pokemon);
+			this.actions.useMove(Dex.moves.get('Sabbath'), pokemon);
 		},
-		name: "Clearman",
+		name: "Saback",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	thelittleone: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Minimize'), pokemon);
+		},
+		name: "the little one",
 		rating: 3,
 		num: 422,
 		isNonstandard: "Future",
