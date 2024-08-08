@@ -34,7 +34,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	},
-	ballboa: {
+	braxitytan: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
