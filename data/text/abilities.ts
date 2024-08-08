@@ -4018,6 +4018,18 @@ malediction: {
 		name: "FUTUUURE",
 		shortDesc: "This Pokemon's electric-type moves are doubled but Defense is lowered by 1 each turn.",
 	},
+	you: {
+		name: "You.",
+		shortDesc: "Lowers target defense by 1 on switch-in.",
+	},
+	izanamisrage: {
+		name: "Izanami's Rage",
+		shortDesc: "Attacks have a 40% chance of tormenting the foe.",
+	},
+	mossyexterior: {
+		name: "Mossy Exterior",
+		shortDesc: "This pokemon draws in water-type moves to raise Spdef. by 1. Water immunity.",
+	},
 	polite: {
 		name: "Polite",
 		shortDesc: "Moves last. STAB increased to 2.",
