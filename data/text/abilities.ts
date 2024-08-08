@@ -4022,4 +4022,43 @@ malediction: {
 		name: "Polite",
 		shortDesc: "Moves last. STAB increased to 2.",
 	},
+	raservant: {
+		name: "Rá Servant",
+		shortDesc: "The emergence of the servant of Ra brings with him the power of the sun and serious damage to the opponent.",
+	},
+	copyandpaste: {
+		name: "Copy and Paste",
+		shortDesc: "Summons Knight of Owner",
+	},
+	babymonster: {
+		name: "Baby Monster",
+		shortDesc: "Summons Fughamut",
+	},
+	regate: {
+		name: "Regate",
+		shortDesc: "Summons Endeavor",
+	},
+	marretadadothor: {
+		name: "Thor's Sledgehammer",
+		shortDesc: "Summons King's Hammer.",
+	},
+	dezgrace: {
+		name: "10 Grace",
+		shortDesc: "Summons Wish",
+	},
+	violentexchange: {
+		name: "Violent Exchange",
+		shortDesc: "Summons DirtyDeedsDoneDitCheap",
+	},
+	firstyou: {
+		name: "First You",
+		shortDesc: "Summons Portal Gun",
+	},
+	clearman: {
+		name: "Clearman",
+		shortDesc: "Summons Wings Of Correction",
+	},
+
+
+	
 };
