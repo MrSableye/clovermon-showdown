@@ -1,22 +1,22 @@
 export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	dunebug: {
-		inherit: true,
+		inherit: true, 
+      isNonstandard: null,
 		tier: "LC",
-		isNonstandard: null,
 	},
 	vakoon: {
 		inherit: true,
-		tier: "NFE",
 		isNonstandard: null,
+		tier: "NFE",
 	},
 	carpest: {
 		inherit: true,
-		tier: "OU",
 		isNonstandard: null,
+		tier: "OU",
 	},
 	veilefly: {
 		inherit: true,
-		tier: "OU",
 		isNonstandard: null,
+		tier: "OU",
 	},
 };
