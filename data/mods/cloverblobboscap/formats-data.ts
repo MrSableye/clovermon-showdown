@@ -4332,6 +4332,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosscorpion: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	blobbosextradimensional: {
 		inherit: true,
 		isNonstandard: null,
