@@ -34716,7 +34716,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Bandicute",
 		types: ["Ground"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 70, atk: 70, def: 65, spa: 39, spd: 46, spe: 50},
+		baseStats: {hp: 70, atk: 64, def: 65, spa: 39, spd: 46, spe: 50},
 		abilities: {0: "Own Tempo", 1: "Prankster", H: "Sand Veil", S: "Oblivious"},
 		heightm: 0.4,
 		weightkg: 7.2,

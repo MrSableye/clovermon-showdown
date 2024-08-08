@@ -1266,7 +1266,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	sphare: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "LC",
+		tier: "NFE",
 	},
 	costrike: {
 		inherit: true,
