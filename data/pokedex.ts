@@ -46345,6 +46345,31 @@ blobbosprism: {
 		],
 		gen: 8,
 	},
+	blobbosscorpion: {
+		num: 69132,
+		name: "Blobbos-Scorpion",
+		baseSpecies: "Blobbos",
+		forme: "Scorpion",
+		types: ["Poison", "Steel"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 90,
+			atk: 92,
+			def: 107,
+			spa: 50,
+			spd: 60,
+			spe: 85,
+		},
+		abilities: {
+			0: "Poison Point",
+                        1: "Merciless",
+                        H: "Battle Armor",
+                        S: "Sniper",
+		eggGroups: [
+			"Bug", "Mineral"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
