@@ -8292,8 +8292,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	thunderdrop: {
 		name: "Thunder Drop",
-		desc: "Has a 20% chance to paralyze the target. User is paralyzed if it misses.",
-		shortDesc: "20% chance to paralyze. Paralyze self on miss.",
+		desc: "This attack takes the target into the air with the user on the first turn and executes on the second. Pokemon weighing 200 kg or more cannot be lifted. On the first turn, the user and the target avoid all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister. The user and the target cannot make a move between turns, but the target can select a move to use. This move cannot damage Flying-type Pokemon. Fails on the first turn if the target is an ally, if the target has a substitute, or if the target is using Bounce, Dig, Dive, Fly, Phantom Force, Shadow Force, or Sky Drop. Has a 20% chance to paralyze the target when the move hits.",
+		shortDesc: "User and foe fly up turn 1. Damages on turn 2. 20% para.",
 
 		prepare: "[POKEMON] took [TARGET] into the sky!",
 		end: "  [POKEMON] was freed from the Thunder Drop!",
