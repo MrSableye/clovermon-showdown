@@ -29,4 +29,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	astrobubl: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

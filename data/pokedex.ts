@@ -46510,6 +46510,20 @@ veilefly: {
 		gen: 9,
 		creator: "C3ll",
 	},
+	astrobubl: {
+		num: -86,
+		name: "Astrobubl",
+		types: ["Steel", "Psychic"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 70, atk: 105, def: 113, spa: 95, spd: 45, spe: 95},
+		abilities: {0: "Telepathy", 1: "Synchronize", H: "Pressure", S: "Water Bubble"},
+		heightm: 1.3,
+		weightkg: 1334.6,
+		color: "Green",
+		eggGroups: ["Amorphous"],
+		gen: 9,
+		creator: "C3ll",
+	},
 
 	/* gen 2 isn't real */
 	peasol: {
