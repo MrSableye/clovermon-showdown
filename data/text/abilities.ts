@@ -3665,7 +3665,7 @@ malediction: {
 	},
 	jumper: {
 		name: "Jumper",
-		shortDesc: "Flying and Poison type moves do double damage against this mon. Water and ground type moves do half damage against this mon.",
+		shortDesc: "Flying and Poison type moves do double damage against this mon. Water and ground type moves do half damage against this mon. 2 turn moves attack on the first move.",
 	},
 	malevolentsoul: {
 		name: "Malevolent Soul",
