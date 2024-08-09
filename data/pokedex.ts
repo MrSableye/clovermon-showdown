@@ -47460,7 +47460,7 @@ veilefly: {
 		name: "Jumpeon",
 		types: ["???"],
 		genderRatio: {M: 0.875, F: 0.125},
-		baseStats: {hp: 110, atk: 130, def: 65, spa: 60, spd: 65, spe: 65},
+		baseStats: {hp: 110, atk: 130, def: 60, spa: 65, spd: 65, spe: 95},
 		abilities: {0: "Jumper"},
 		heightm: 0.9,
 		weightkg: 26.5,

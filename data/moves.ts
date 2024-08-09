@@ -24806,9 +24806,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		flags: {charge: 1, contact: 1, gravity: 1, protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
-			if (type === 'Flying') return 3;
+			if (type === 'Flying') return -2;
 			if (type === 'Water' || type === 'Ground') return 1;
-			if (type === 'Rock' || type === 'Steel') return 2;
+			if (type === 'Rock' || type === 'Steel') return -1;
 		},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
