@@ -19,4 +19,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	combustabat: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	explodabat: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
