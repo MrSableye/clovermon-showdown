@@ -13074,7 +13074,7 @@ malediction: {
 		isBreakable: true,
 		name: "At Long Last",
 	},
-	Jumper: {
+	jumper: {
 		name: "Jumper",
 		isNonstandard: "Future",
 		onSourceModifyAtkPriority: 6,
