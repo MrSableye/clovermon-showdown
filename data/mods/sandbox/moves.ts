@@ -4647,6 +4647,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	jump: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	shieldslam: {
 		inherit: true,
 		isNonstandard: null,
