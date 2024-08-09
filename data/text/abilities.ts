@@ -3663,6 +3663,10 @@ malediction: {
 		name: "NO WEAKNESSES",
 		shortDesc: "This Pokemon's typing and ability change when using Normal, Ghost, Bug, Steel, Dark, Poison, Water, or Ground moves.",
 	},
+	jumper: {
+		name: "Jumper",
+		shortDesc: "Flying and Poison type moves do double damage against this mon. Water and ground type moves do half damage against this mon. 2 turn moves attack on the first move.",
+	},
 	malevolentsoul: {
 		name: "Malevolent Soul",
 		shortDesc: "This Pokemon is immune to status and has doubled power on Fairy-Type moves. Takes 10% recoil for moves used and Ghost moves have x4 power against this Pokemon.",

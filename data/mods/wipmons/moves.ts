@@ -1,5 +1,5 @@
 export const Moves: { [k: string]: ModdedMoveData } = {
-	/* CAP Enabled/Modified Moves */
+	/* wipmon Enabled/Modified Moves */
 	aerialace: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, distance: 1, slicing: 1},

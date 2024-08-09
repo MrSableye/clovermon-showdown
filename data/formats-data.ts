@@ -7901,6 +7901,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	braxitytan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	turturret: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -10340,6 +10344,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	goblyin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	jumpeon: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
