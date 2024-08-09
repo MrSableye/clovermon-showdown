@@ -65,7 +65,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ripen: {
+	artillery: {
 		inherit: true,
 		isNonstandard: null,
 	},
