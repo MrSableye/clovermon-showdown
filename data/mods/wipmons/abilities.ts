@@ -65,15 +65,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	punkrock: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	purifyingsalt: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	ripen: {
+	artillery: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -86,7 +78,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	detonator: {
+	artillery: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	beadsofruin: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	swordofruin: {
 		inherit: true,
 		isNonstandard: null,
 	},
