@@ -46575,7 +46575,7 @@ parrodemise: {
 	gorink: {
 		num: -90,
 		name: "Gorink",
-		types: ["Normal"],
+		types: ["Water"],
         genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 60, atk: 45, def: 90, spa: 70, spd: 55, spe: 65},
 		abilities: {0: "Suction Cups", 1: "Liquid Ooze", H: "Swift Swim", S: "Corrosion"},
