@@ -9231,12 +9231,16 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Increases by 10 Power everytime the user is hit. Maxes out at 158 Power.",
 	},
 	fivenights: {
-		name: "Five Hour",
+		name: "Five Nights",
 		desc: "Deals damage five turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if this move or Future Sight is already in effect for the target's position.",
 		shortDesc: "Hits 5 turns after being used.",
 
 		start: "  [POKEMON] is waiting for you.",
 		activate: "  [TARGET] has experienced the 5th Night!",
+	},
+	icastfireball: {
+		name: "I Cast Fireball!",
+		shortDesc: "30% Chance to burn.",
 	},
 	extinction: {
 		name: "Extinction",

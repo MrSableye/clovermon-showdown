@@ -21,7 +21,7 @@ export const AbilitiesText: {[k: string]: ModdedAbilityText} = {
 		inherit: true,
 		shortDesc: "Boosts users speed by 1.5x under Rain/Primordial Sea.",
 	},
-	slushrush: {
+	sandrush: {
 		inherit: true,
 		shortDesc: "Boosts users speed by 1.5x under Sandstorm. Sandstorm Immunity.",
 	},
