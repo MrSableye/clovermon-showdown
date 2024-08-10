@@ -46545,7 +46545,7 @@ veilefly: {
 		types: ["Normal", "Flying"],
         genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 57, atk: 74, def: 45, spa: 44, spd: 57, spe: 73},
-		abilities: {0: "Early Bird", 1: "Simple", H: "Unburden", S:" Gale Wings"},
+		abilities: {0: "Early Bird", 1: "Simple", H: "Unburden", S: "Gale Wings"},
 		heightm: 0.6,
 		weightkg: 92.2,
 		color: "Yellow",
