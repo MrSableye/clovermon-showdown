@@ -696,6 +696,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	glasshammer: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rottingkick: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	razorwind: {
 		accuracy: 90,
 		basePower: 60,
