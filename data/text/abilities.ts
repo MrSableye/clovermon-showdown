@@ -4054,17 +4054,17 @@ malediction: {
 		name: "Regate",
 		shortDesc: "Summons Endeavor",
 	},
-	marretadadothor: {
+	gooddaytodie: {
 		name: "Thor's Sledgehammer",
-		shortDesc: "Summons Blandy Bland.",
+		shortDesc: "Curse of yig",
 	},
 	dezgrace: {
 		name: "10 Grace",
 		shortDesc: "Summons Wish",
 	},
-	violentexchange: {
-		name: "Violent Exchange",
-		shortDesc: "Summons Backdraft",
+	halflife: {
+		name: "Half Life",
+		shortDesc: "Ruination",
 	},
 	firstyou: {
 		name: "First You",
@@ -4078,11 +4078,39 @@ malediction: {
 		name: "The Little One",
 		shortDesc: "Summons Minimize",
 	},
-	flashlight: {
-		name: "Flash Light",
-		shortDesc: "Summons Flashbang",
+	smashability: {
+		name: "Smash Hability",
+		shortDesc: "Summons Antares Snipe",
 	},
 
+	olapele: {
+		name: "Ola Pele",
+		shortDesc: "Summons Zippy Zap",
+	},
 
+	hitswhere: {
+		name: "Hits Where",
+		shortDesc: "Summons Too Slow",
+	},
+
+	robberyatak: {
+		name: "Robbery Atak",
+		shortDesc: "Me First",
+	},
+
+	assistantbreakswall: {
+		name: "Assistant Breaks Wall",
+		shortDesc: "Summons Meowsa",
+	},
+
+	abilityanulation: {
+		name: "Ability Anulation",
+		shortDesc: "Summons Yiik Out",
+	},
+
+	quicksacrifice: {
+		name: "Quick Sacrifice",
+		shortDesc: "Summons Destiny Bond",
+	},
 	
 };
