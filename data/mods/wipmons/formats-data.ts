@@ -34,4 +34,19 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	keeter: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	tropicaw: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	parrodemise: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
