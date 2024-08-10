@@ -90273,6 +90273,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: "Future",
+	}, 
+ 
+// WIPMON EXCLUSIVE MOVES (and solar hunger lol)
+
+	icastfireball: {
+		num: 53,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "I Cast Fireball!",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "???",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
 	solarhunger: {
 		num: 42009,
