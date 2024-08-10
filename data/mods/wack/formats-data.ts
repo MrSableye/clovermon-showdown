@@ -29387,22 +29387,22 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	corsolagalar: {
   		inherit: true,
-  		tier: "UU",
+  		tier: "Illegal",
   		isNonstandard: null,
 	},
 	slowkinggalar: {
   		inherit: true,
-  		tier: "UU",
+  		tier: "Illegal",
   		isNonstandard: null,
 	},
 	zapdosgalar: {
   		inherit: true,
-  		tier: "UU",
+  		tier: "Illegal",
   		isNonstandard: null,
 	},
 	moltresgalar: {
   		inherit: true,
-  		tier: "UU",
+  		tier: "Illegal",
   		isNonstandard: null,
 	},
 };
