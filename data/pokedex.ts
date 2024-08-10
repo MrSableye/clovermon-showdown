@@ -46530,7 +46530,7 @@ veilefly: {
 		types: ["Normal", "Flying"],
         genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 32, atk: 47, def: 53, spa: 20, spd: 35, spe: 52},
-		abilities: {0: "Early Bird", 1: "Simple", H: "Deafeatist", S: "Shell Armor"},
+		abilities: {0: "Early Bird", 1: "Simple", H: "Defeatist", S: "Shell Armor"},
 		heightm: 0.2,
 		weightkg: 13.1,
 		color: "White",
