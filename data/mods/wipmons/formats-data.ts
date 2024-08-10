@@ -64,4 +64,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	closetegg: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	eggstrogen: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

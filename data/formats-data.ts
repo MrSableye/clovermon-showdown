@@ -10323,6 +10323,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	closetegg: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	eggstrogen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
