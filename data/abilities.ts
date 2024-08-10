@@ -15088,34 +15088,12 @@ malediction: {
 		isNonstandard: "Future",
 	},
 
-	marretadadothor: {
-		onSwitchInPriority: 4,
-		onSwitchIn(pokemon) {
-			this.actions.useMove(Dex.moves.get('Blandy Bland'), pokemon);
-		},
-		name: "Thors Sledgehammer",
-		rating: 3,
-		num: 422,
-		isNonstandard: "Future",
-	},
-
 	dezgraça: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('Wish'), pokemon);
 		},
 		name: "10 Grace",
-		rating: 3,
-		num: 422,
-		isNonstandard: "Future",
-	},
-
-	violentexchange: {
-		onSwitchInPriority: 4,
-		onSwitchIn(pokemon) {
-			this.actions.useMove(Dex.moves.get('Backdraft'), pokemon);
-		},
-		name: "Violent Exchange",
 		rating: 3,
 		num: 422,
 		isNonstandard: "Future",
@@ -15153,12 +15131,92 @@ malediction: {
 		isNonstandard: "Future",
 	},
 
-	flashlight: {
+	quicksacrifice: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
-			this.actions.useMove(Dex.moves.get('Flashbang'), pokemon);
+			this.actions.useMove(Dex.moves.get('Destiny Bond'), pokemon);
 		},
-		name: "Flash Light",
+		name: "Quick Sacrifice",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	abilityanulation: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Yiik Out'), pokemon);
+		},
+		name: "Ability Anulation",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	assistantbreakswall: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Meowsa'), pokemon);
+		},
+		name: "Assistant Breaks Wall",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	robberyatak: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Me First'), pokemon);
+		},
+		name: "Roberry Atak",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	hitswhere: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Too Slow'), pokemon);
+		},
+		name: "Hits Where",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	olapele: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Zippy Zap'), pokemon);
+		},
+		name: "Ola Pele",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	gooddaytodie: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Curse of yig'), pokemon);
+		},
+		name: "Good day to die",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	halflife: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Ruination'), pokemon);
+		},
+		name: "Half life",
+		rating: 3,
+		num: 422,
+		isNonstandard: "Future",
+	},
+	smashability: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Antares Snipe'), pokemon);
+		},
+		name: "Smash Ability",
 		rating: 3,
 		num: 422,
 		isNonstandard: "Future",
