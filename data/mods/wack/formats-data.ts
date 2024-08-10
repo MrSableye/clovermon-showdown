@@ -29375,4 +29375,34 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Uber",
 		isNonstandard: null,
 	},
+	landorustherian: {
+  		inherit: true,
+  		tier: "UU",
+  		isNonstandard: null,
+	},
+	tornadustherian: {
+  		inherit: true,
+  		tier: "UU",
+  		isNonstandard: null,
+	},
+	corsolagalar: {
+  		inherit: true,
+  		tier: "UU",
+  		isNonstandard: null,
+	},
+	slowkinggalar: {
+  		inherit: true,
+  		tier: "UU",
+  		isNonstandard: null,
+	},
+	zapdosgalar: {
+  		inherit: true,
+  		tier: "UU",
+  		isNonstandard: null,
+	},
+	moltresgalar: {
+  		inherit: true,
+  		tier: "UU",
+  		isNonstandard: null,
+	},
 };
