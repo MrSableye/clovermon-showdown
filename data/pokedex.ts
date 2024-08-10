@@ -46603,6 +46603,19 @@ parrodemise: {
         gen: 9,
 		creator: "C3ll",
 	},
+	nariisco: {
+		num: -92,
+		name: "Nariisco",
+		types: ["Water", "Ice"],
+		baseStats: {hp: 100, atk: 105, def: 75, spa: 95, spd: 105, spe: 55},
+		abilities: {0: "Thick Fat", 1: "Hydration", H: "Ice Body", S: "Snow Warning"},
+		heightm: 2.3,
+		weightkg: 457.4,
+		color: "Grey",
+		eggGroups: ["Field", "Water 3"],
+                gen: 9,
+		creator: "C3ll",
+	},
 
 	/* gen 2 isn't real */
 	peasol: {
