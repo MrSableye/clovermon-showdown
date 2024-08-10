@@ -148,6 +148,52 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 1,
 		num: 75,
 	},
+	swiftswim: {
+		onModifySpe(spe, pokemon) {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Swift Swim",
+		rating: 3,
+		num: 33,
+	},
+	chlorophyll: {
+		onModifySpe(spe, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Chlorophyll",
+		rating: 3,
+		num: 34,
+	},
+	slushrush: {
+		onModifySpe(spe, pokemon) {
+			if (this.field.isWeather(['hail', 'snow'])) {
+				return this.chainModify(1.5);
+			}
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'hail') return false;
+		},
+		name: "Slush Rush",
+		rating: 3,
+		num: 202,
+	},
+	sandrush: {
+		onModifySpe(spe, pokemon) {
+			if (this.field.isWeather('sandstorm')) {
+				return this.chainModify(1.5);
+			}
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'sandstorm') return false;
+		},
+		name: "Sand Rush",
+		rating: 3,
+		num: 146,
+	},
 	supportive: {
 		inherit: true,
 		isNonstandard: null,

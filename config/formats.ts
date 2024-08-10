@@ -1662,7 +1662,7 @@ export const Formats: FormatList = [
 			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: [
-			'Uber', 'Arena Trap', 'Smellox + Chasumo', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+			'Uber', 'Arena Trap', 'Smellox + Stink Bomb', 'Chasumo + Fuk U', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
 			'Condoom + Unaware',
 		],
 	},
