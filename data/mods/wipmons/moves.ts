@@ -692,6 +692,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	icastfireball: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	razorwind: {
 		accuracy: 90,
 		basePower: 60,
