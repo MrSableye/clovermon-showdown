@@ -49,4 +49,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	gorink: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	krakulate: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

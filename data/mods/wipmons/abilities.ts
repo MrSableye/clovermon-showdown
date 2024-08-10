@@ -69,6 +69,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mimicry: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	perishbody: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	/* WIPMon Abilities */
 	leech: {
 		inherit: true,
