@@ -19,7 +19,7 @@ export const AbilitiesText: {[k: string]: ModdedAbilityText} = {
 	},
 	swiftswim: {
 		inherit: true,
-		shortDesc: "Boosts users speed by 1.5x under Rain.",
+		shortDesc: "Boosts users speed by 1.5x under Rain/Primordial Sea.",
 	},
 	slushrush: {
 		inherit: true,
