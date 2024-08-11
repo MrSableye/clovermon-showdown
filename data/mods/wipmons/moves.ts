@@ -704,6 +704,26 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mawofsight: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	overgrownmoss: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	enclose: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mindjack: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	orbponder: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	razorwind: {
 		accuracy: 90,
 		basePower: 60,

@@ -90333,6 +90333,139 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Poison",
 		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	overgrownmoss: {
+		num: 69049,
+		accuracy: 80,
+		basePower: 75,
+		category: "Special",
+		name: "Overgrown Moss",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		type: "Grass",
+		flags: {protect: 1, mirror: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('torment');
+				target.addVolatile('taunt');
+				target.addVolatile('disable');
+			}
+		},
+		isNonstandard: "Future",
+	},
+	mawofsight: {
+		num: 684,
+		accuracy: true,
+		basePower: 80,
+		category: "Physical",
+		name: "Maw Of Sight",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	orbponder: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Future",
+		name: "Orb Ponder",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			def: 1,
+			spa: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Psychic",
+		zMove: {boost: {spd: 1}},
+		contestType: "Beautiful",
+	},
+	mindjack: {
+		num: 809,
+		accuracy: 90,
+		basePower: 110,
+		category: "Special",
+		name: "Mindjack",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onTry(source, target) {
+			return !!target.item;
+		},
+		onTryHit(target, source, move) {
+			this.add('-activate', target, 'move: Poltergeist', this.dex.items.get(target.item).name);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+	},
+	enclose: {
+		num: 588,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Future",
+		name: "Enclose",
+		pp: 10,
+		priority: 4,
+		flags: {noassist: 1, failcopycat: 1, failinstruct: 1},
+		stallingMove: true,
+		volatileStatus: 'protect',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect'] || move.category === 'Status') {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					target.addVolatile('confusion'); source, target, this.dex.getActiveMove("Enclose");
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+					target.addVolatile('confusion'); source, target, this.dex.getActiveMove("Enclose");
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Dark",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Cool",
 	},
 	solarhunger: {
 		num: 42009,
