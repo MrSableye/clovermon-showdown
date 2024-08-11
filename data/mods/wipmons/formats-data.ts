@@ -89,4 +89,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	anopal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	overloadame: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
