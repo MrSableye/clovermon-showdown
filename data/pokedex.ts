@@ -46679,6 +46679,19 @@ parrodemise: {
                 gen: 9,
 		creator: "C3ll",
 	},
+	paralotl: {
+		num: -97,
+		name: "Paralotl",
+		types: ["Fairy", "Psychic"],
+		baseStats: {hp: 89, atk: 101, def: 55, spa: 140, spd: 80, spe: 40},
+		abilities: {0: "Filter", 1: "Hydrophile", H: "Dark Aura", S: "Analytic"},
+		heightm: 28.3,
+		weightkg: 0.1,
+		color: "Purple",
+		eggGroups: ["Monster"],
+                gen: 9,
+		creator: "C3ll",
+	},
 
 	/* gen 2 isn't real */
 	peasol: {
