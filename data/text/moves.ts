@@ -9248,7 +9248,27 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	glasshammer: {
 		name: "Glass Hammer",
-		shortDesc: "Lowers users defense and special defense by 1",
+		shortDesc: "Lowers users Defense and Special Defense by 1.",
+	},
+	mawofsight: {
+		name: "Maw Of Sight",
+		shortDesc: "Never misses.",
+	},
+	overgrownmoss: {
+		name: "Overgrown Moss",
+		shortDesc: "Torments, Taunts and Disables the target upon hit.",
+	},
+	mindjack: {
+		name: "Mindjack",
+		shortDesc: "Fails if the target doesn't have a held item.",
+	},
+	orbponder: {
+		name: "Orb Ponder",
+		shortDesc: "Raises users Defense and Special Attack by 1. ",
+	},
+	enclose: {
+		name: "Enclose",
+		shortDesc: "Protects the user from damaging attacks. Confuses the foe if made contact with while protecting. ",
 	},
 	extinction: {
 		name: "Extinction",

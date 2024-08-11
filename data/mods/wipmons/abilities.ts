@@ -73,6 +73,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mindseye: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	/* WIPMon Abilities */
 	leech: {
 		inherit: true,

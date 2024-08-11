@@ -10331,6 +10331,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	clawm: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	iretina: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	paralotl: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	anopal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	overloadame: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",

@@ -74,4 +74,29 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	clawm: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	iretina: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	paralotl: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	anopal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	overloadame: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
