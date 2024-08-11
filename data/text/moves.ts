@@ -9240,7 +9240,15 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	icastfireball: {
 		name: "I Cast Fireball!",
-		shortDesc: "30% Chance to burn.",
+		shortDesc: "20% Chance to burn.",
+	},
+	rottingkick: {
+		name: "Rotting Kick",
+		shortDesc: "User is hurt by 50% of max HP if this attack misses.",
+	},
+	glasshammer: {
+		name: "Glass Hammer",
+		shortDesc: "Lowers users defense and special defense by 1",
 	},
 	extinction: {
 		name: "Extinction",
