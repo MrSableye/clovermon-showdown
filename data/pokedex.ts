@@ -46745,7 +46745,7 @@ parrodemise: {
 		name: "Cardinicious",
 		types: ["Flying", "Poison"],
                 genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 98, atk: 118, def: 72, spa: 68, spd: 56, spe: 102},
+		baseStats: {hp: 71, atk: 89, def: 79, spa: 102, spd: 67, spe: 117},
 		abilities: {0: "Air Lock", 1: "White Smoke", H: "Stakeout", S: "Neutralizing Gas"},
 		heightm: 0.9,
 		weightkg: 2.8,
