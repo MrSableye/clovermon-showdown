@@ -90341,7 +90341,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 75,
 		category: "Special",
 		name: "Overgrown Moss",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		target: "normal",
 		type: "Grass",
@@ -90353,6 +90353,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				target.addVolatile('disable');
 			}
 		},
+	   noSketch: true,
 		isNonstandard: "Future",
 	},
 	mawofsight: {

@@ -10351,6 +10351,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	popdinal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cardinicious: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kragonite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
