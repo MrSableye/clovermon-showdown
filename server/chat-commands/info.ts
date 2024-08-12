@@ -1652,8 +1652,8 @@ export const commands: Chat.ChatCommands = {
 		}
 	},
 	innatehelp: [
-		`/innate list - Display all Pok&eacute;amons with an innate ability.`,
-		`/innate [pokemon] - Display the innate ability of a Pok&eacute;amon, if it has one.`,
+		`/innate list - Display all Pokémons with an innate ability.`,
+		`/innate [pokemon] - Display the innate ability of a Pokémon, if it has one.`,
 		`!innate list - Shows this information to everyone. Requires: + % @ # &`,
 		`!innate [pokemon] - Shows this information to everyone. Requires: + % @ # &`,
 	],
