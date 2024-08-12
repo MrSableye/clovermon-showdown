@@ -114,4 +114,29 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	zippy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	feralizolt: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	snippalm: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	razetacean: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	windwraith: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
