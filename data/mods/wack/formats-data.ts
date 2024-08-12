@@ -3592,7 +3592,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	xerneas: {
 		inherit: true,
-		tier: "UU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	yveltal: {
@@ -18017,7 +18017,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	marbrood: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	opticus: {
@@ -18287,7 +18287,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	slugia: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	smewtwo: {
@@ -18892,7 +18892,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	victorygreymon: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	skullgreymon: {
@@ -26122,7 +26122,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bregigigas: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	bshaymin: {
