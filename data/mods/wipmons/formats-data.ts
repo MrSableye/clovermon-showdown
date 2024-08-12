@@ -99,4 +99,19 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	popdinal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	cardinicious: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	kragonite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
