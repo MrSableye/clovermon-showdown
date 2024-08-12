@@ -1,9 +1,4 @@
 export const MovesText: {[k: string]: ModdedMoveText} = {
-	bulletseed: {
-		inherit: true,
-		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times. If the user is a Grass-type, each hit has a 1/16 chance to apply Leech Seeds.",
-		shortDesc: "Hits 2-5 times. Grass-type: 1/16 odds to Leech Seed per hit.",
-	},
 	grassyterrain: {
 		name: "Grassy Terrain",
 		desc: "For 5 turns, the terrain becomes Grassy Terrain. During the effect, the power of Grass-type attacks used by grounded Pokemon is multiplied by 1.3, the power of Bulldoze, Earthquake, Earth Power and Magnitude used against grounded Pokemon is multiplied by 0.5, and grounded Pokemon have 1/16 of their maximum HP, rounded down, restored at the end of each turn, including the last turn. Camouflage transforms the user into a Grass type, Nature Power becomes Energy Ball, and Secret Power has a 30% chance to cause sleep. Fails if the current terrain is Grassy Terrain.",
@@ -28,13 +23,6 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		inherit: true,
 		desc: "This move is neutrally effective on Flying-type Pokemon. This move can hit Pokemon that are using Bounce, Fly, or Sky Drop.",
 		shortDesc: "Neutral on Flying. Can hit Pokemon using Bounce, Fly, or Sky Drop.",
-	},
-	sonicboom: {
-		name: "Sonic Boom",
-		desc: "Whether or not this move is successful and even if it would cause fainting, the user loses 1/2 of its maximum HP, rounded up, unless the user has the Magic Guard Ability.",
-		shortDesc: "User loses 50% max HP. Hits adjacent Pokemon.",
-
-		damage: "  ([POKEMON] cut its own HP to power up its move!)",
 	},
 	chargebeam: {
 		inherit: true,

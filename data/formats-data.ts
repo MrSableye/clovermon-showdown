@@ -10363,6 +10363,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	zippy: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	feralizolt: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	snippalm: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	razetacean: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	windwraith: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
