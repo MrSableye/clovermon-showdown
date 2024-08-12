@@ -1558,27 +1558,27 @@ export const commands: Chat.ChatCommands = {
 		case 'rillaboom':
 			return this.sendReplyBox(`<u>Rillaboom</u>: If it has the "Mold Breaker" ability, summons Grassy Terrain on switch-in.`);
 		case 'tapufini':
-			return this.sendReplyBox(`<u>Tapu Fini/u>: If it has the "Rain Dish" ability, summons Misty Terrain on switch-in.`);
+			return this.sendReplyBox(`<u>Tapu Fini</u>: If it has the "Rain Dish" ability, summons Misty Terrain on switch-in.`);
 		case 'truehim':
-			return this.sendReplyBox(`<u>True HIM/u>: Immune to OHKO moves and Perish Song.`);
+			return this.sendReplyBox(`<u>True HIM</u>: Immune to OHKO moves and Perish Song.`);
 		case 'himless':
-			return this.sendReplyBox(`<u>HIMless/u>: Immune to OHKO moves and Perish Song.`);
+			return this.sendReplyBox(`<u>HIMless</u>: Immune to OHKO moves and Perish Song.`);
 		case 'himwall':
-			return this.sendReplyBox(`<u>HIM Wall/u>: Immune to OHKO moves and Perish Song.`);
+			return this.sendReplyBox(`<u>HIM Wall</u>: Immune to OHKO moves and Perish Song.`);
 		case 'himdivine':
-			return this.sendReplyBox(`<u>HIM Divine/u>: Immune to OHKO moves.`);
+			return this.sendReplyBox(`<u>HIM Divine</u>: Immune to OHKO moves.`);
 		case 'himchaos':
-			return this.sendReplyBox(`<u>HIM Chaos/u>: Immune to OHKO moves.`);
+			return this.sendReplyBox(`<u>HIM Chaos</u>: Immune to OHKO moves.`);
 		case 'gowen':
-			return this.sendReplyBox(`<u>Gowen/u>: Immune to Perish Song and Perish Song.`);
+			return this.sendReplyBox(`<u>Gowen</u>: Immune to Perish Song and Perish Song.`);
 		case 'mechazaydolf':
-			return this.sendReplyBox(`<u>Mecha Zaydolf/u>: Immune to Perish Song.`);
+			return this.sendReplyBox(`<u>Mecha Zaydolf</u>: Immune to Perish Song.`);
 		case 'alphanne':
-			return this.sendReplyBox(`<u>Alphanne/u>: Immune to Perish Song.`);
+			return this.sendReplyBox(`<u>Alphanne</u>: Immune to Perish Song.`);
 		case 'himvoid':
-			return this.sendReplyBox(`<u>HIM Void/u>: Immune to Perish Song.`);
+			return this.sendReplyBox(`<u>HIM Void</u>: Immune to Perish Song.`);
 		case 'god':
-			return this.sendReplyBox(`<u>God/u>: Immune to Perish Song.`);
+			return this.sendReplyBox(`<u>God</u>: Immune to Perish Song.`);
 		case 'msteamboatle':
 			return this.sendReplyBox(`<u>Msteamboatle</u>: If it has the "Wacky" ability, gets "Speed Boost" effect.`);
 		case 'azathoth':
@@ -1590,7 +1590,7 @@ export const commands: Chat.ChatCommands = {
 		case 'metaknight':
 			return this.sendReplyBox(`<u>Meta Knight</u>: On each damaging hit, deals 1/16 of its target max HP as damage.`);
 		case 'achillesder':
-			return this.sendReplyBox(`<u>Achillesder/u>: If it has the "Wonder Guard" ability and is hit, minimize its Speed.`);
+			return this.sendReplyBox(`<u>Achillesder</u>: If it has the "Wonder Guard" ability and is hit, minimize its Speed.`);
 		case 'sandaconda':
 			return this.sendReplyBox(`<u>Sandaconda</u>: Upon dealing damage, summons Sandstorm.`);
 		case 'tikcofagrigus':
@@ -1622,11 +1622,11 @@ export const commands: Chat.ChatCommands = {
 		case 'kawainnocent':
 			return this.sendReplyBox(`<u>Kawainnocent</u>: If it has "Cute Charm", turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);
 		case 'mestwi':
-			return this.sendReplyBox(`<uMestwi</u>: If it has "Filter", turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);
+			return this.sendReplyBox(`<u>Mestwi</u>: If it has "Filter", turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);
 		case 'cclefairy':
 			return this.sendReplyBox(`<u>Cclefairy</u>: Turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);
 		case 'cclefable':
-			return this.sendReplyBox(`<u>F-00</u>: Turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);
+			return this.sendReplyBox(`<u>Cclefable</u>: Turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);
 		case 'wishiwashi':
 			return this.sendReplyBox(`<u>Wishiwashi</u>: If it has "Water Veil", turns into Solo under 1/4 of its max HP. otherwise turns into School.`);
 		case 'aegislash':
