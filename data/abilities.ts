@@ -8397,7 +8397,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePowerPriority: 19,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['gmax']) {
-				return this.chainModify(100);
+				return this.chainModify(50);
 			}
 		},
 		name: "G-Max Comatose",
