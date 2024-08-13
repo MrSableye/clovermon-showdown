@@ -724,6 +724,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	chaosdive: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	jetpunch: {
 		inherit: true,
 		isNonstandard: null,

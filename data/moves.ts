@@ -90467,6 +90467,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Cool",
 	},
+	chaosdive: {
+		num: 686,
+		accuracy: 100,
+		basePower: 95,
+		category: "Physical",
+		name: "Chaos Dive",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		onModifyType(move, pokemon) {
+			if (pokemon.getTypes()[1]) {
+				move.type = pokemon.getTypes()[1];
+			} else {
+				move.type = pokemon.getTypes()[0];
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+		contestType: "Clever",
+	},
 	solarhunger: {
 		num: 42009,
 		accuracy: 100,
