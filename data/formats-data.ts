@@ -10383,6 +10383,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	muddle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mudoll: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tectodon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	terrabull: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",

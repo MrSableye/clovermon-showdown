@@ -139,4 +139,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	muddle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	mudoll: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	tectodon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	terrabull: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

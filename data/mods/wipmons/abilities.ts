@@ -77,6 +77,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	armortail: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	/* WIPMon Abilities */
 	leech: {
 		inherit: true,
