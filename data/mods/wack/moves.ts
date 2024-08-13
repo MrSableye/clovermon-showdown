@@ -1235,6 +1235,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	eternabeam: {
 		inherit: true,
 		pp: 5,
+		self: null,
+		onHit(target, source) {
+			if (!target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+		desc: "Unless the target faints, the user must rest on the next turn.",
+		shortDesc: "Unless the target faints, the user must rest on the next turn.",
 		isNonstandard: null,
 	},
 	extrasensory: {
@@ -1892,6 +1900,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		accuracy: 90,
 		flags: {contact: 1, protect: 1, recharge: 1, mirror: 1},
+		onAfterHit() {},
+		onHit(target, source) {
+			if (!target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+		desc: "Unless the target faints, the user must rest on the next turn.",
+		shortDesc: "Unless the target faints, the user must rest on the next turn.",
 	},
 	meteormash: {
 		inherit: true,
@@ -4418,22 +4434,25 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	gigaimpact: {
 		inherit: true,
-			accuracy: 90,
-			basePower: 150,
-			category: "Physical",
-			name: "Giga Impact",
-			pp: 5,
-			priority: 0,
-			flags: {contact: 1, recharge: 1, protect: 1, mirror: 1},
-			onAfterHit(target, source) {
-				if (target && target.hp) {
-					source.addVolatile('mustrecharge');
-				}
-			},
-			secondary: null,
-			target: "normal",
-			type: "Normal",
-			contestType: "Tough",
+		accuracy: 90,
+		basePower: 150,
+		category: "Physical",
+		name: "Giga Impact",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, recharge: 1, protect: 1, mirror: 1},
+		self: null,
+		onHit(target, source) {
+			if (!target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Tough",
+		desc: "If this move is successful, the user must recharge on the following turn and cannot make a move. If the target is knocked out by this move, the user does not have to recharge.",
+		shortDesc: "User cannot move next turn, if the target isn't KO'ed.",
 		isNonstandard: null,
 	},
 	gigatonhammer: {
@@ -4559,21 +4578,24 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	hyperbeam: {
 		inherit: true,
 		accuracy: 90,
-			basePower: 150,
-			category: "Physical",
-			name: "Giga Impact",
-			pp: 5,
-			priority: 0,
-			flags: {contact: 1, recharge: 1, protect: 1, mirror: 1},
-			onAfterHit(target, source) {
-				if (target && target.hp) {
-					source.addVolatile('mustrecharge');
-				}
-			},
-			secondary: null,
-			target: "normal",
-			type: "Normal",
-			contestType: "Tough",
+		basePower: 150,
+		category: "Special",
+		name: "Hyper Beam",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, recharge: 1, protect: 1, mirror: 1},
+		self: null,
+		onHit(target, source) {
+			if (!target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Tough",
+		desc: "If this move is successful, the user must recharge on the following turn and cannot make a move. If the target is knocked out by this move, the user does not have to recharge.",
+		shortDesc: "User cannot move next turn, if the target isn't KO'ed.",
 		isNonstandard: null,
 	},
 	hyperdrill: {
