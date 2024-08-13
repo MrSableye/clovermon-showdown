@@ -8394,9 +8394,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-activate', pokemon, 'ability: G-Max Comatose');
 			return null;
 		},
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['gmax']) {
+				return this.chainModify(50);
+			}
+		},
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['max']) {
+				return this.chainModify(50);
+			}
+		},
 		name: "G-Max Comatose",
 		isNonstandard: "Future",
-		rating: 0.5,
+		rating: 4,
 		num: 56,
 	},
 

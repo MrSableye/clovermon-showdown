@@ -159,4 +159,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	frosear: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	futuricar: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	lumoss: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	lumonster: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

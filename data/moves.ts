@@ -90279,7 +90279,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	icastfireball: {
 		num: 53,
 		accuracy: 100,
-		basePower: 75,
+		basePower: 70,
 		category: "Special",
 		name: "I Cast Fireball!",
 		pp: 5,
