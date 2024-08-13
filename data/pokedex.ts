@@ -46884,7 +46884,7 @@ tectodon: {
 		types: ["Rock", "Ground"],
                 genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 85, atk: 105, def: 75, spa: 75, spd: 75, spe: 120},
-		abilities: {0: "Dry Skin", 1: "Sand Rush", H: "Arena Trap", S: "Multiscale"},
+		abilities: {0: "Iron Barbs", 1: "Sand Rush", H: "Arena Trap", S: "Multiscale"},
 		heightm: 2.1,
 		weightkg: 123.4,
 		color: "Brown",
