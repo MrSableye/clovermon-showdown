@@ -47041,7 +47041,7 @@ pinstatic: {
 		types: ["Bug", "Electric"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 90, atk: 125, def: 90, spa: 55, spd: 65, spe: 75},
-		abilities: {0: "Motor Drive", 1: "Static", H: "Teravolt" S: "Transistor"},
+		abilities: {0: "Motor Drive", 1: "Static", H: "Teravolt", S: "Transistor"},
 		heightm: 1.2,
 		weightkg: 55.5,
 		color: "Green",
