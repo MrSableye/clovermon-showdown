@@ -25244,7 +25244,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Thunder Drop",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, kick: 1, gravity: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
 		onModifyMove(move, source) {
 			if (!source.volatiles['skydrop']) {
 				move.accuracy = true;
@@ -90466,6 +90466,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Cool",
+	},
+	chaosdive: {
+		num: 686,
+		accuracy: 100,
+		basePower: 95,
+		category: "Physical",
+		name: "Chaos Dive",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		onModifyType(move, pokemon) {
+			if (pokemon.getTypes()[1]) {
+				move.type = pokemon.getTypes()[1];
+			} else {
+				move.type = pokemon.getTypes()[0];
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+		contestType: "Clever",
 	},
 	solarhunger: {
 		num: 42009,

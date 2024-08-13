@@ -9270,6 +9270,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Enclose",
 		shortDesc: "Protects the user from damaging attacks. Confuses the foe if made contact with while protecting. ",
 	},
+	chaosdive: {
+		name: "Chaos Dive",
+		shortDesc: "Type varies based on the user's secondary type.",
+	},
 	extinction: {
 		name: "Extinction",
 		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",
