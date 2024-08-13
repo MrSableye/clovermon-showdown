@@ -10415,6 +10415,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	dorslaughter: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	dorslaughtercorrupt: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	araclump: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	moldswarm: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pinstatic: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",

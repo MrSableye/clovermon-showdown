@@ -179,4 +179,29 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	dorslaughter: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	dorslaughtercorrupt: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	araclump: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	moldswarm: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	pinstatic: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
