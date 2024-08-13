@@ -48249,7 +48249,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: null,
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -55128,7 +55128,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -56015,7 +56015,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -56201,7 +56201,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -56260,7 +56260,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -62588,7 +62588,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -62970,7 +62970,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -67350,7 +67350,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -69430,7 +69430,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -73940,7 +73940,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -87461,7 +87461,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -87942,7 +87942,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -88642,7 +88642,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: null,
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
