@@ -172,7 +172,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	lumoss: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "LC",
 	},
 	lumonster: {
 		inherit: true,
