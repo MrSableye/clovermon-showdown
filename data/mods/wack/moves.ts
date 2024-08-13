@@ -1237,7 +1237,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 5,
 		self: null,
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -1902,7 +1902,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {contact: 1, protect: 1, recharge: 1, mirror: 1},
 		onAfterHit() {},
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -4443,7 +4443,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {contact: 1, recharge: 1, protect: 1, mirror: 1},
 		self: null,
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
@@ -4586,7 +4586,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {contact: 1, recharge: 1, protect: 1, mirror: 1},
 		self: null,
 		onHit(target, source) {
-			if (!target.hp) {
+			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
 		},
