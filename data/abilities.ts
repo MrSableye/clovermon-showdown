@@ -8400,6 +8400,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(50);
 			}
 		},
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['max']) {
+				return this.chainModify(50);
+			}
+		},
 		name: "G-Max Comatose",
 		isNonstandard: "Future",
 		rating: 4,
