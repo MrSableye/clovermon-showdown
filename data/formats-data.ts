@@ -10435,6 +10435,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	mysticle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mawricle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	radiabit: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pinkelp: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	joyfae: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
