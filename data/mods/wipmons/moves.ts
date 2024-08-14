@@ -654,6 +654,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	armthrust: {
+		inherit: true,
+		basePower: 25,
+		isNonstandard: null,
+	},
 	zippyzap: {
 		inherit: true,
 		basePower: 50,
