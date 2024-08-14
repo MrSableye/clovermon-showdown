@@ -126,6 +126,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	doomguard: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	izanamisrage: {
 		inherit: true,
 		isNonstandard: null,

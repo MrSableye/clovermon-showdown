@@ -229,4 +229,29 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	quezixie: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	spiricoatl: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	quezareil: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sickayda: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sparkalee: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
