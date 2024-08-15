@@ -81,6 +81,30 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	protosynthesis: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	quarkdrive: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	steelyspirit: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	windrider: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	windpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	eartheater: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	/* WIPMon Abilities */
 	leech: {
 		inherit: true,
@@ -131,6 +155,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	izanamisrage: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	enclose: {
 		inherit: true,
 		isNonstandard: null,
 	},
