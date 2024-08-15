@@ -15137,6 +15137,20 @@ malediction: {
 		num: 305,
 	   isNonstandard: "Future",
 	},
+	surprise: {
+		onModifyMovePriority: 1,
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.baseSpecies !== 'Jakubrik' || attacker.transformed) return;
+			if (move.category === 'Status' && move.id !== 'enclose') return;
+			const targetForme = (move.id === 'enclose' ? 'Jakubrik' : 'Jakubrik-Active');
+			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+		},
+		isPermanent: true,
+		name: "Surprise!",
+		rating: 4,
+		num: 176,
+		isNonstandard: "Future",
+	},
 	polite: {
 		onFractionalPriority: -0.1,
 		onModifyMove(move) {
