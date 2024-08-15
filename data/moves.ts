@@ -90463,7 +90463,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 85,
 		basePowerCallback(pokemon, target, move) {
-			if (target.newlySwitched || this.queue.willMove(target)) {
+			if (this.queue.willMove(target)) {
 				this.debug('Ancient Rend damage boost');
 				return move.basePower * 1.5;
 			}
