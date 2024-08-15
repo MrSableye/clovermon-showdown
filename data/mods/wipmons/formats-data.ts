@@ -204,4 +204,54 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	mysticle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	mawricle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	radiabit: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	pinkelp: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	joyfae: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	quezixie: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	spiricoatl: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	quezareil: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sickayda: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sparkalee: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
