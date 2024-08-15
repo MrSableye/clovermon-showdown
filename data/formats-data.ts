@@ -10475,6 +10475,30 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	mistlino: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	evergraze: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	frigoblin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ordinard: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cognistical: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	spectrition: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
