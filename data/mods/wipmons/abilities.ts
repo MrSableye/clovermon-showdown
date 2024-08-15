@@ -158,7 +158,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	enclose: {
+	surprise: {
 		inherit: true,
 		isNonstandard: null,
 	},
