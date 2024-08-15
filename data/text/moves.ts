@@ -9274,6 +9274,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Chaos Dive",
 		shortDesc: "Type varies based on the user's secondary type.",
 	},
+	ancientrend: {
+		name: "Ancient Rend",
+		shortDesc: "Type varies based on the user's primary type. 1.5x damage if the user goes first.",
+	},
 	extinction: {
 		name: "Extinction",
 		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",
