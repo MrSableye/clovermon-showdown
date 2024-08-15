@@ -47341,7 +47341,7 @@ julienne: {
 		types: ["Steel", "Flying"],
                 gender: "F",
 		baseStats: {hp: 81, atk: 141, def: 71, spa: 51, spd: 61, spe: 71},
-		abilities: {0: "Hyper Cutter", 1: "Infiltrator", H: "Blademaster", S: "Techinician"},
+		abilities: {0: "Hyper Cutter", 1: "Infiltrator", H: "Blademaster", S: "Technician"},
 		heightm: 1,
 		weightkg: 105.2,
 		color: "Grey",
