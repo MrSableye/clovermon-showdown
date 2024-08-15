@@ -284,4 +284,29 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	jakubrik: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	jakubrikactive: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	julienne: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	crimsdon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	aquamariene: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

@@ -10499,6 +10499,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	jakubrik: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	jakubrikactive: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	julienne: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	crimsdon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	aquamariene: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",

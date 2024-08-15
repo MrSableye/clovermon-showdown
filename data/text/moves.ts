@@ -9268,7 +9268,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	enclose: {
 		name: "Enclose",
-		shortDesc: "Protects the user from damaging attacks. Confuses the foe if made contact with while protecting. ",
+		shortDesc: "Protects the user. Raises Spdef by 1 upon successful use. Higher chance of failing with each successful use. Changes Jakubrik's forme. ",
 	},
 	chaosdive: {
 		name: "Chaos Dive",

@@ -4034,6 +4034,10 @@ malediction: {
 		name: "Mossy Exterior",
 		shortDesc: "This pokemon draws in water-type moves to raise Spdef. by 1. Water immunity.",
 	},
+	surprise: {
+		name: "Surprise!",
+		shortDesc: "If Jakubrik, changes Forme to Active before attacks and Dormant before Enclose.",
+	},
 	polite: {
 		name: "Polite",
 		shortDesc: "Moves last. STAB increased to 2.",
