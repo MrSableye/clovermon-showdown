@@ -254,4 +254,34 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	mistlino: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	evergraze: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	frigoblin: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ordinard: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	cognistical: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	spectrition: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
