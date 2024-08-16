@@ -9685,19 +9685,41 @@ export const Items: {[itemid: string]: ItemData} = {
 	partnerspendant: {
 		name: "Partner's Pendant",
 		spritenum: 300,
-		onResidualOrder: 28,
-		onResidualSubOrder: 3,
-		onStart(pokemon) {
-			if (pokemon.species.name !== 'Blobbos-Partner') return;
-			this.boost({
-				atk: 1,
-				def: 1,
-				spa: 1,
-				spd: 1,
-				spe: 1,
-				evasion: 1,
-				accuracy: 1,
-			});
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Partner') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Partner') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyDefPriority: 1,
+		onModifyDef(def, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Partner') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpDPriority: 1,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Partner') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpePriority: 1,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Partner') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyAccuracyPriority: 1,
+		onModifyAccuracy(accuracy, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Partner') {
+				return this.chainModify(1.5);
+			}
 		},
 		itemUser: ["Blobbos-Partner"], 
 		num: 2512,
@@ -10125,6 +10147,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	powerrush: {
 		name: "Power Rush",
+		spritenum: 663,
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, pokemon) {
 			if (pokemon.species.id !== 'blobbospaper') return;
@@ -10202,6 +10225,8 @@ export const Items: {[itemid: string]: ItemData} = {
 		rating: 1,
 	},
 	kapala: {
+		name: "Kapala",
+		spritenum: 745,
 		onModifyMove(move) {
 			if (!move?.flags['contact'] || move.target === 'self') return;
 		},
@@ -10213,7 +10238,6 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		itemUser: ["Blobbos-Spelunky"],
-		name: "Kapala",
 		isNonstandard: "Future",
 	},
 	eyedropper: {
