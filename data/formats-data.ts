@@ -10519,6 +10519,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	dracomplete: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	arctotal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tozolt: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	finvished: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
