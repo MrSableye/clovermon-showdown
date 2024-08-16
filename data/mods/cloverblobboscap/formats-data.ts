@@ -2773,6 +2773,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	 crolord: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	 braxitytan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,
