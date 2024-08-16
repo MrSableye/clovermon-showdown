@@ -90458,6 +90458,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		contestType: "Clever",
 	},
+	ancientrend: {
+		num: 686,
+		accuracy: 100,
+		basePower: 85,
+		basePowerCallback(pokemon, target, move) {
+			if (this.queue.willMove(target)) {
+				this.debug('Ancient Rend damage boost');
+				return move.basePower * 1.5;
+			}
+			this.debug('Ancient Rend NOT boosted');
+			return move.basePower;
+		},
+		category: "Physical",
+		name: "Ancient Rend",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+		contestType: "Clever",
+	},
 	solarhunger: {
 		num: 42009,
 		accuracy: 100,
