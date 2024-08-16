@@ -309,4 +309,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	dracomplete: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	arctotal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	tozolt: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	finvished: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
