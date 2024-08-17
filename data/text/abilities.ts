@@ -4028,7 +4028,7 @@ malediction: {
 	},
 	you: {
 		name: "You.",
-		shortDesc: "Lowers target defense by 1 on switch-in.",
+		shortDesc: "Lowers target defense by 1 once per battle on switch-in.",
 	},
 	izanamisrage: {
 		name: "Izanami's Rage",

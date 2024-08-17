@@ -15088,6 +15088,9 @@ malediction: {
 	},
 		you: {
 		onStart(pokemon) {
+			if (pokemon.syrupTriggered) return;
+			pokemon.syrupTriggered = true;
+			this.add('-ability', pokemon, 'You.');
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
 				if (!activated) {
