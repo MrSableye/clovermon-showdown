@@ -354,4 +354,29 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	finghost: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	blazulous: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	fishulous: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sparkulous: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	leafal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

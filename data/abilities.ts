@@ -13532,6 +13532,15 @@ malediction: {
 		rating: 4,
 		isNonstandard: "Future",
 	},
+	"invertedfate": {
+		name: "Inverted Fate",
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: Inverted Fate');
+			this.field.addPseudoWeather('trickroom');
+		},
+		rating: 4,
+		isNonstandard: "Future",
+	},
 	carbonated: {
 		name: "Carbonated",
 		onStart(pokemon) {
