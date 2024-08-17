@@ -3608,6 +3608,10 @@ malediction: {
 		name: "3D",
 		shortDesc: "On switch-in, summons Magic, Wonder and Trick room at the same time for 5 Turns.",
 	},
+	"invertedfate": {
+		name: "Inverted Fate",
+		shortDesc: "On switch-in, summons Trick room for 5 Turns.",
+	},
 	carbonated: {
 		name: "Carbonated",
 		shortDesc: "On switch-in, +1 Atk and +1 SpA. After 2 turns, -1 Atk and -1 SpA.",
