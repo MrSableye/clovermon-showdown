@@ -10555,6 +10555,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	finghost: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	fishulous: {
 		tier: "Illegal",
 		isNonstandard: "Future",
