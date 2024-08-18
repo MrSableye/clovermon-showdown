@@ -379,4 +379,29 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	sturget: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	pestilith: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	frighting: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	deiscent: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	izamoru: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
