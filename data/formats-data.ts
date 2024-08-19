@@ -10595,6 +10595,30 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	sablestump: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	frosmaw: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	daggid: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	accursword: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	icleecle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	combarcane: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
