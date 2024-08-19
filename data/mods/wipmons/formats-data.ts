@@ -404,4 +404,34 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	sablestump: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	frosmaw: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	daggid: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	accursword: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	icleecle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	combarcane: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
