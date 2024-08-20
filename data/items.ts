@@ -9336,6 +9336,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	phylactery: {
 		name: "Phylactery",
+		spritenum: 751,
 		isNonstandard: "Future",
 		onResidual(pokemon) {
 			if (['blobboslich', 'blobboslichmortal'].includes(pokemon.species.id)) return;
