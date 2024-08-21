@@ -11558,6 +11558,18 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	unjoymegaxd: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	phantashmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	haremitmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	blobbosforbidden: {
 		tier: "OU",
 		isNonstandard: null,

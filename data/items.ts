@@ -9367,6 +9367,51 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	unjoyitexd: {
+		name: "Unjoyite XD",
+		spritenum: 577,
+		megaStone: "Unjoy-Mega-XD",
+		megaEvolves: "Unjoy",
+		itemUser: ["Unjoy"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	phantashite: {
+		name: "Phantashite",
+		spritenum: 577,
+		megaStone: "Phantash-Mega",
+		megaEvolves: "Phantash",
+		itemUser: ["Phantash"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	haremite: {
+		name: "Haremite",
+		spritenum: 577,
+		megaStone: "Haremit-Mega",
+		megaEvolves: "Haremit",
+		itemUser: ["Haremit"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	fusjiniumz: {
 		name: "Fusjinium Z",
 		spritenum: 686,

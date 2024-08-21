@@ -2295,6 +2295,18 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	unjoyitexd: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	phantashite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	haremite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	plasticgem: {
 		inherit: true,
 		isNonstandard: null,

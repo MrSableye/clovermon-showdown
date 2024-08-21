@@ -51592,6 +51592,101 @@ combarcane: {
 		gen: 8,
 		requiredItem: "Spookscarite",
 	},
+	unjoymegaxd: {
+		num: 69117,
+		name: "Unjoy-Mega-XD",
+		baseSpecies: "Unjoy",
+		forme: "Mega",
+		types: [
+			"Ghost",
+			"Dark"
+		],
+		gender: "F",
+		baseStats: {
+			hp: 255,
+			atk: 125,
+			def: 145,
+			spa: 20,
+			spd: 30,
+			spe: 65,
+		},
+		abilities: {
+			0: "Intimidate",
+		},
+		heightm: 1.5,
+		weightkg: 46.8,
+		color: "Pink",
+		eggGroups: [
+			"Fairy",
+			"Amorphous",
+		],
+		gen: 8,
+		requiredItem: "Unjoyite XD",
+	},
+	phantashmega: {
+		num: 69189,
+		name: "Phantash-Mega",
+		baseSpecies: "Phantash",
+		types: [
+			"Flying",
+		],
+		genderRatio: {
+			M: 0.5,
+			F: 0.5,
+		},
+		baseStats: {
+			hp: 90,
+			atk: 85,
+			def: 85,
+			spa: 140,
+			spd: 120,
+			spe: 100,
+		}, 
+		abilities: {
+			0: "Contrary",
+		},
+		heightm: 1.5,
+		weightkg: 0.1,
+		color: "Gray",
+		eggGroups: [
+			"Grass",
+			"Mineral",
+		],
+		gen: 8,
+		requiredItem: "Phantashite",
+	},
+	haremitmega: {
+		num: 69064,
+		name: "Haremit-Mega",
+		types: [
+			"Normal",
+			"Rock",
+		],
+		genderRatio: {
+			M: 0.25,
+			F: 0.75,
+		},
+		baseStats: {
+			hp: 105,
+			atk: 95,
+			def: 170,
+			spa: 50,
+			spd: 130,
+			spe: 75,
+		},
+		abilities: {
+			0: "Solid Rock",
+		},
+		heightm: 1.4,
+		weightkg: 65.5,
+		color: "Brown",
+		eggGroups: [
+			"Water 3",
+			"Field",
+		],
+		gen: 8,
+		requiredItem: "Harmite",
+	},
 	woot: {
 		num: 666000,
 		name: "Woot",
