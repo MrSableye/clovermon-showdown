@@ -51685,7 +51685,7 @@ combarcane: {
 			"Field",
 		],
 		gen: 8,
-		requiredItem: "Harmite",
+		requiredItem: "Haremite",
 	},
 	woot: {
 		num: 666000,
