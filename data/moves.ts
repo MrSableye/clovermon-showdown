@@ -90537,6 +90537,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bite: 1, contact: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('torment');
+			}
+		},
 		// Damage boost in Rain applied in conditions.ts
 		secondary: null,
 		target: "normal",
