@@ -51659,6 +51659,7 @@ combarcane: {
 	haremitmega: {
 		num: 69064,
 		name: "Haremit-Mega",
+		baseSpecies: "Haremit",
 		forme: "Mega",
 		types: [
 			"Normal",
