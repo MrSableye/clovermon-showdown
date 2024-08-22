@@ -51645,7 +51645,7 @@ illumoth: {
 		num: 69117,
 		name: "Unjoy-Mega-XD",
 		baseSpecies: "Unjoy",
-		forme: "Mega",
+		forme: "Mega-XD",
 		types: [
 			"Ghost",
 			"Dark"
@@ -51675,6 +51675,7 @@ illumoth: {
 	phantashmega: {
 		num: 69189,
 		name: "Phantash-Mega",
+		forme: "Mega",
 		baseSpecies: "Phantash",
 		types: [
 			"Flying",
@@ -51707,6 +51708,7 @@ illumoth: {
 	haremitmega: {
 		num: 69064,
 		name: "Haremit-Mega",
+		forme: "Mega",
 		types: [
 			"Normal",
 			"Rock",
