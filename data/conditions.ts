@@ -491,6 +491,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 				this.debug('Rain Dance Phantom Jaw boost');
 				return this.chainModify(1.5);
 			}
+			if (defender.hasItem('utilityumbrella')) return;
 			if (move.type === 'Water') {
 				this.debug('Rain Dance water boost');
 				return this.chainModify(1.5);
@@ -500,6 +501,22 @@ export const Conditions: {[k: string]: ConditionData} = {
 				this.debug('Rain Dance fire suppress');
 				return this.chainModify(0.5);
 			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'RainDance', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'RainDance');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'RainDance', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
 		},
 	},
 	primordialsea: {
