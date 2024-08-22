@@ -2643,6 +2643,18 @@ export const ItemsText: {[k: string]: ItemText} = {
 		transform: "  OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!!!",
 		activate: "OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!!",
 	},
+	unjoyitexd: {
+		name: "Unjoyite XD",
+		desc: "If held by an Unjoy, this item allows it to Mega Evolve in battle.",
+	},
+	phantashite: {
+		name: "Phantashite",
+		desc: "If held by a Phantash, this item allows it to Mega Evolve in battle.",
+	},
+	haremite: {
+		name: "Haremite",
+		desc: "If held by an Haremite, this item allows it to Mega Evolve in battle.",
+	},
 	masamune: {
 		name: "Masamune",
 		desc: "If held by a Blobbos-Ninja, its Attack and Sp. Attack is 1.5x.",
