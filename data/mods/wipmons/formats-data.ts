@@ -434,4 +434,19 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	larvite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	mothite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	illumoth: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

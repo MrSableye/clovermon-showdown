@@ -10619,6 +10619,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	larvite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	illumoth: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mothite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
