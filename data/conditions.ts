@@ -492,6 +492,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 				this.debug('rain water boost');
 				return this.chainModify(1.5);
 			}
+			onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (move.id === 'phantomjaw' && !attacker.hasItem('utilityumbrella')) {
+				this.debug('Rain Dance Phantom Jaw boost');
+				return this.chainModify(1.5);
+			}
 			if (move.type === 'Fire') {
 				this.debug('rain fire suppress');
 				return this.chainModify(0.5);
