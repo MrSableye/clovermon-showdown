@@ -10647,6 +10647,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	haremitmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	phantashmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	unjoymegaxd: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	chaneddit: {
 		tier: "Illegal",
 		isNonstandard: "Future",
