@@ -10631,6 +10631,42 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	sapplind: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	rootisque: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	planatural: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	spuplish: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	hydrark: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	liquignave: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tikablaze: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	birgression: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	salvian: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",

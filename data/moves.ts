@@ -90498,8 +90498,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		drain: [1, 2],
 		secondary: null,
 		onBasePower(basePower, source) {
-			if (this.field.isTerrain('psychicterrain')) {
-				this.debug('terrain buff');
+			if (this.field.isTerrain('psychicterrain') && source.isGrounded()) {
+				this.debug('psychic terrain boost');
 				return this.chainModify(1.5);
 			}
 		},
@@ -90531,7 +90531,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	phantomjaw: {
 		num: 876,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 75,
 		category: "Physical",
 		name: "Phantom Jaw",
 		pp: 10,

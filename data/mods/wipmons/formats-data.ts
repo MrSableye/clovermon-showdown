@@ -449,4 +449,49 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	sapplind: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	rootisque: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	planatural: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	spuplish: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	hydrark: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	liquignave: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	tikablaze: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	birgression: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	salvian: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
