@@ -9278,6 +9278,18 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Ancient Rend",
 		shortDesc: "Type varies based on the user's primary type. 1.5x damage if the user goes first.",
 	},
+	ignitionwing: {
+		name: "Ignition Wing",
+		shortDesc: "10% Chance to burn the foe. Applies Focus Energy to the user.",
+	},
+	psychodrain: {
+		name: "Psycho Drain",
+		shortDesc: "Heals for 50% of damage done to the target. Does 1.5x more damage under Psychic Terrain.",
+	},
+	phantomjaw: {
+		name: "Phantom Jaw",
+		shortDesc: "Torments the foe upon hit. 1.5x Damage under Rain or Primordial Sea.",
+	},
 	extinction: {
 		name: "Extinction",
 		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",

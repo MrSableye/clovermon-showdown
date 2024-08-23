@@ -90486,6 +90486,67 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		contestType: "Clever",
 	},
+	psychodrain: {
+		num: 875,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Psycho Drain",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
+		secondary: null,
+		onBasePower(basePower, source) {
+			if (this.field.isTerrain('psychicterrain')) {
+				this.debug('terrain buff');
+				return this.chainModify(1.5);
+			}
+		},
+		target: "normal",
+		type: "Grass",
+		isNonstandard: "Future",
+	},
+	ignitionwing: {
+		num: 99,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Ignition Wing",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		secondary: {
+			chance: 10,
+			volatileStatus: 'brn',
+		},
+		self: {
+			volatileStatus: 'focusenergy',
+		},
+		target: "normal",
+		type: "Flying",
+		contestType: "Tough",
+	},
+	phantomjaw: {
+		num: 876,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Phantom Jaw",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, bite: 1, contact: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('torment');
+			}
+		},
+		// Damage boost in Rain applied in conditions.ts
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+	},
 	solarhunger: {
 		num: 42009,
 		accuracy: 100,

@@ -487,13 +487,18 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return 5;
 		},
 		onWeatherModifyDamage(damage, attacker, defender, move) {
-			if (defender.hasItem('utilityumbrella')) return;
-			if (move.type === 'Water') {
-				this.debug('rain water boost');
+			if (move.id === 'phantomjaw' && !attacker.hasItem('utilityumbrella')) {
+				this.debug('Rain Dance Phantom Jaw boost');
 				return this.chainModify(1.5);
 			}
+			if (defender.hasItem('utilityumbrella')) return;
+			if (move.type === 'Water') {
+				this.debug('Rain Dance water boost');
+				return this.chainModify(1.5);
+			}
+			if (defender.hasItem('utilityumbrella')) return;
 			if (move.type === 'Fire') {
-				this.debug('rain fire suppress');
+				this.debug('Rain Dance fire suppress');
 				return this.chainModify(0.5);
 			}
 		},

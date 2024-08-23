@@ -737,6 +737,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	psychodrain: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ignitionwing: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	phantomjaw: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	jetpunch: {
 		inherit: true,
 		isNonstandard: null,
