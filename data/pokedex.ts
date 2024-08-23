@@ -47878,7 +47878,7 @@ birgression: {
 		heightm: 0.9,
 		weightkg: 46.7,
 		color: "Red",
-		prevo: "Sapplind",
+		prevo: "Tikablaze",
 		evoLevel: 17,
                 evos: ["Salvian"],
 		eggGroups: ["Flying", "Field"], 
