@@ -9612,7 +9612,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	banana: {
 		name: "Banana",
-		shortDesc: "Upon this moves use, 30+ different effects can occur.",
+		shortDesc: "After Banana hits, any of the following can happen after: You can poison yourself, You can burn yourself, You can para yourself, You can Freeze Yourself, You can confuse yourself and all of these can happen to the opponent, You can force switchout, your opponent can force switchout, You and the opponent can levitate, any dance move can be used, you or your opponent can get instantly KO'd, you can add any type to the opponent, you or your opponent can get +6 in every stat, you or your opponents stats can get lowered, you can taunt yourself, you can use Poison Gas, you can set any weather or terrain, you can use transform, you can auto fling your item or knock off the opponents item, you or your opponent can get heal 100% of health, you can use any sleeping move, you can use Banana AGAIN therefore procing any effect again, you can torment yourself or the opponent or you or the opponent can instantly win the battle.",
 	},
 	surpriseattack: {
 		name: "Surprise",
