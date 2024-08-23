@@ -9290,6 +9290,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Phantom Jaw",
 		shortDesc: "Torments the foe upon hit. 1.5x Damage under Rain or Primordial Sea.",
 	},
+	consume: {
+		name: "Consume",
+		shortDesc: "Consumes the target.",
+	},
 	extinction: {
 		name: "Extinction",
 		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",
