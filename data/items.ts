@@ -9225,7 +9225,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	creampuffite: {
 		name: "Creampuffite",
-		spritenum: 596,
+		spritenum: 615,
 		megaStone: "Blobbos-Creampuff-Mega",
 		megaEvolves: "Blobbos-Creampuff",
 		itemUser: ["Blobbos-Creampuff"],
