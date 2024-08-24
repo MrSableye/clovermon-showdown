@@ -247,13 +247,13 @@
       }
     ]
   },
-   "ballboa": {
+   "braxitytan": {
     "nicknames": [
-      "Ballboa",
-      "Ballboa",
-      "Ballboa",
-      "Ballboa",
-      "Ballboa",
+      "Braxitytan",
+      "Braxitytan",
+      "Braxitytan",
+      "Braxitytan",
+      "Braxitytan",
       "Ballboa",
       "Rocky",
       "Baller"
@@ -261,24 +261,27 @@
     "sets": [
       {
         "abilities": [
-          "ironfist",
-          "skilllink"
+          "synchronize",
+          "sturdy", 
+          "weakarmor"
         ],
         "items": [
           "lifeorb",
-          "leftovers"
+          "leftovers",
+          "weaknesspolicy"
         ],
          "moves": [
-          "armthrust",
-          "bulletseed",
+          "gunkshot",
+          "thunderdrop",
           "drainpunch",
-          "coil",
-          "earthquake"
+          "bulkup",
+          "stealthrock",
+          "meteormash"
         ],
         "lockedMoves": [
-          "rockclock"
+          "blockbuster"
         ],
-        "level": 80
+        "level": 83
       }
     ]
   },
@@ -1146,6 +1149,74 @@
           "bulletseed",
           "shinestrike",
           "sharpen"
+        ],
+        "level": 82
+      }
+    ]
+  },
+  "crolord": {
+    "nicknames": [
+      "Cro'lord",
+      "Cro'lord",
+      "Cro'lord",
+      "Cro'lord",
+      "Cro'lord",
+      "Cro'lord",
+      "Mauler",
+      "Fear"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "cursedbody",
+          "dryskin",
+          "degradation"
+        ],
+        "items": [
+          "leftovers",
+          "lifeorb",
+          "sitrusberry",
+          "loadeddice"
+        ],
+        "moves": [
+          "gunkshot",
+          "uturn",
+          "leafblade",
+          "spiritshackle",
+          "zenheadbutt",
+          "superpower",
+          "waterfall"
+        ],
+        "lockedMoves": [
+          "swordsdance",
+          "drillpeck",
+          "brutalmauling"
+        ],
+        "level": 82
+      },
+      {
+        "abilities": [
+         "cursedbody",
+         "dryskin",
+         "degradation"
+        ],
+        "items": [
+          "lifeorb",
+          "leftovers",
+          "sitrusberry"
+        ],
+        "moves": [
+          "earthpower",
+          "fireblast",
+          "flamethrower",
+          "thunderbolt",
+          "icebeam",
+          "focusblast"
+        ],
+        "lockedMoves": [
+          "calmmind",
+          "aeroblast",
+          "blackbomb"
         ],
         "level": 82
       }
