@@ -11123,6 +11123,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosfishmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobboschameleon: {
 		tier: "Illegal",
 		isNonstandard: "Future",
