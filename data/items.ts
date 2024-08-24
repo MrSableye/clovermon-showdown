@@ -9223,6 +9223,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	creampuffite: {
+		name: "Creampuffite",
+		spritenum: 596,
+		megaStone: "Blobbos-Creampuff-Mega",
+		megaEvolves: "Blobbos-Creampuff",
+		itemUser: ["Blobbos-Creampuff"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	plasticgem: {
 		name: "Plastic Gem",
 		spritenum: 53,
