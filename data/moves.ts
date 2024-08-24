@@ -90548,13 +90548,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Ghost",
 	},
-	consume: {
+	consuming: {
 		num: 12,
 		accuracy: true,
 		basePower: 0,
 		category: "Physical",
 		isNonstandard: "Future",
-		name: "Consume",
+		name: "Consuming",
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},

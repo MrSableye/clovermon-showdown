@@ -9290,8 +9290,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Phantom Jaw",
 		shortDesc: "Torments the foe upon hit. 1.5x Damage under Rain or Primordial Sea.",
 	},
-	consume: {
-		name: "Consume",
+	consuming: {
+		name: "Consuming",
 		shortDesc: "Consumes the target.",
 	},
 	extinction: {
