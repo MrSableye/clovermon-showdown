@@ -87,6 +87,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	creampuffite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	masamune: {
 		inherit: true,
 		isNonstandard: null,
