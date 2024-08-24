@@ -10683,6 +10683,30 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	nochoice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	begleamer: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sneevil: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	shelperl: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	gorabyssal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	caretail: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
