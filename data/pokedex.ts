@@ -44842,6 +44842,22 @@ iwik: {
 			"Fairy",
 		],
 		gen: 8,
+	    otherFormes: ["Blobbos-Creampuff-Mega"],
+		formeOrder: ["Blobbos-Creampuff", "Blobbos-Creampuff-Mega"],
+	},
+	blobboscreampuffmega: {
+		num: 69132,
+		name: "Blobbos-Creampuff-Mega",
+		baseSpecies: "Blobbos-Creampuff",
+		forme: "Mega",
+		types: ["Poison", "Bug"],
+		baseStats: {hp: 90, atk: 105, def: 170, spa: 90, spd: 65, spe: 55},
+		abilities: {0: "Inedible"},
+		heightm: 1.5,
+		weightkg: 562.4,
+		color: "Blue",
+		eggGroups: ["Fairy"],
+		requiredItem: "Creampuffite",
 	},
 
 	blobbosyarn: {
