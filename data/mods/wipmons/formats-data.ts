@@ -494,4 +494,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	guiraffe: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	haniwail: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	bandiwa: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	elegyroid: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
