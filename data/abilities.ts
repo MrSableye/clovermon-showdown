@@ -9317,6 +9317,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 5,
 		isNonstandard: "Future",
 	},
+	inedible: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Fairy' && !noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+				move.type = 'Bug';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify(1.5);
+		},
+		name: "Inedible",
+		isNonstandard: "Future",
+		rating: 4,
+		num: 182,
+	},
 	captchahorni: {
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {

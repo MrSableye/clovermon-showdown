@@ -4044,6 +4044,10 @@ malediction: {
 		name: "Surprise!",
 		shortDesc: "If Jakubrik, changes Forme to Active before attacks and Dormant before Enclose.",
 	},
+	inedible: {
+		name: "Inedible",
+		shortDesc: "Fairy type moves are now Bug type and have 1.5x more power.",
+	},
 	polite: {
 		name: "Polite",
 		shortDesc: "Moves last. STAB increased to 2.",

@@ -10667,6 +10667,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	guiraffe: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	haniwail: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bandiwa: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	elegyroid: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -11076,6 +11092,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	blobbosmariopartymega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscreampuffmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
