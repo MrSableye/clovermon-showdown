@@ -544,4 +544,29 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	regibrains: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	regibrawl: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	regiblaze: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	regidivine: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	questrelet: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
 };

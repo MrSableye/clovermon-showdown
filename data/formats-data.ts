@@ -10707,6 +10707,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	regibrains: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	regibrawl: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	regiblaze: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	regidivine: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	questrelet: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",

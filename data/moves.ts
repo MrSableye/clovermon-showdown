@@ -90567,6 +90567,119 @@ export const Moves: {[moveid: string]: MoveData} = {
 		maxMove: {basePower: 130},
 		contestType: "Cool",
 	},
+	tobeornottobe: {
+		num: 339,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "TO BE OR NOT TO BE",
+		pp: 5,
+		priority: 0,
+		flags: {sound: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spa: 1,
+				spe: 1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
+	gripofdivinity: {
+		num: 473,
+		accuracy: 100,
+		basePower: 130,
+		category: "Special",
+		isNonstandard: "Future",
+		overrideDefensiveStat: 'def',
+		name: "Grip of Divinity",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		noSketch: true,
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
+		onTry(source) {
+			if (source.species.baseSpecies === 'Regidivine') {
+				return;
+			}
+			this.attrLastMove('[still]');
+			this.add('-fail', source, 'move: Grip Of Divinity');
+			this.hint("A worthless being you are to try and grasp my power.");
+			return null;
+		},
+		ignoreImmunity: true,
+		ignoreEvasion: true,
+		ignoreDefensive: true,
+		ignoreAbility: true,
+		breaksProtect: true,
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Beautiful",
+	},
+	glimmerflare: {
+		num: 189,
+		accuracy: 85,
+		basePower: 135,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Glimmer Flare",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			boosts: {
+				accuracy: -1,
+			},
+		},
+		target: "allAdjacentFoes",
+		type: "Fire",
+		contestType: "Cute",
+	},
+	fistofgod: {
+		num: 42006,
+		accuracy: 100,
+		basePower: 105,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Fist of God",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Fighting",
+		contestType: "Tough",
+	},
+	brainblast: {
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Brain Blast",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		ignoreImmunity: {'Psychic': true},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Dark') return 0;
+		},
+		target: "normal",
+		type: "Psychic",
+		isNonstandard: "Future",
+		contestType: "Clever",
+	},
 	solarhunger: {
 		num: 42009,
 		accuracy: 100,
