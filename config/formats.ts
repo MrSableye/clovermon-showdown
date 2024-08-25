@@ -1688,6 +1688,20 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: '[Gen 8 WIPMons Only] Ubers',
+		mod: 'wipmons',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'! Nickname Clause',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Baton Pass',
+		],
+	},
+	{
 		name: "[Gen 1] Ubers",
 		mod: 'gen1',
 		searchShow: false,
