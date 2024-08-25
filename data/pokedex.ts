@@ -41785,7 +41785,7 @@ iwik: {
 		types: ["Fairy", "Normal"],
 		gender: "N",
 		baseStats: {
-			hp: 80,
+			hp: 90,
 			atk: 60,
 			def: 95,
 			spa: 60,
@@ -46418,6 +46418,35 @@ blobbosprism: {
 		     "Mineral",
 		],
 			gen: 8,
+	},
+	blobbosdoodle: {
+		num: 69132,
+		name: "Blobbos-Doodle",
+		baseSpecies: "Blobbos",
+		forme: "Doodle",
+		types: ["Bug", "Water"],
+		gender: "M",
+		baseStats: {
+			hp: 60,
+			atk: 75,
+			def: 60,
+			spa: 75,
+			spd: 60,
+			spe: 100,
+		},
+		abilities: {
+			0: "Skill Link",
+                        1: "Technician",
+                        H: "Mass Hopping",
+                        S: "Sniper",
+		},
+		heightm: 0.7,
+		weightkg: 13.23,
+		color: "Blue",
+		eggGroups: [
+			"Water 3", "Bug"
+		],
+		gen: 8,
 	},
 	infected: {
 		num: 42999,

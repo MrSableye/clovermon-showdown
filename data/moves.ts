@@ -90589,7 +90589,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	gripofdivinity: {
 		num: 473,
-		accuracy: 100,
+		accuracy: true,
 		basePower: 130,
 		category: "Special",
 		isNonstandard: "Future",
