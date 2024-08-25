@@ -9290,6 +9290,26 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Phantom Jaw",
 		shortDesc: "Torments the foe upon hit. 1.5x Damage under Rain or Primordial Sea.",
 	},
+	tobeornottobe: {
+		name: "TO BE OR NOT TO BE",
+		shortDesc: "Raises Speed and Special Attack by 1 stage upon hit.",
+	},
+	gripofdivinity: {
+		name: "Grip of Divinity",
+		shortDesc: "Damages target based on Defense, not Sp. Def. Breaks Screens, goes through Protect, Ignores Abilities, Ignores stat buffs and Ignores Immunities.",
+	},
+	glimmerflare: {
+		name: "Glimmer Flare",
+		shortDesc: "30% Chance to lower the targets accuracy by 1 stage.",
+	},
+	fistofgod: {
+		name: "Fist of God",
+		shortDesc: "100% Chance to inflict confusion upon the opponent.",
+	},
+	brainblast: {
+		name: "Brain Blast",
+		shortDesc: "Hits Dark-Types for neutral effectiveness.",
+	},
 	consuming: {
 		name: "Consuming",
 		shortDesc: "Consumes the target.",
