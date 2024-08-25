@@ -749,6 +749,26 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	gripofdivinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tobeornottobe: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glimmerflare: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fistofgod: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	brainblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	jetpunch: {
 		inherit: true,
 		isNonstandard: null,
