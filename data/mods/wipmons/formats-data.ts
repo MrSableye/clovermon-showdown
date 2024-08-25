@@ -569,4 +569,34 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	},
+	fossilfuel: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	ironfossil: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	lilsucker: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	levialeech: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	cryogisp: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	iceage: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
