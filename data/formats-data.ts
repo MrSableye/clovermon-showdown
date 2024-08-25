@@ -10731,6 +10731,30 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	lilsucker: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	levialeech: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	iceage: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cryogisp: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fossilfuel: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ironfossil: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
