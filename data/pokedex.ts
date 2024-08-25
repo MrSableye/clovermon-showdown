@@ -48092,7 +48092,7 @@ begleamer: {
 	},
 shelperl: {
 		num: -184,
-		name: "Sherlperl",
+		name: "Shelperl",
 		types: ["Water"],
                 genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 35, atk: 65, def: 100, spa: 65, spd: 40, spe: 35},
