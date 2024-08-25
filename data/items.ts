@@ -9238,6 +9238,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	fishite: {
+		name: "Fishite",
+		spritenum: 586,
+		megaStone: "Blobbos-Fish-Mega",
+		megaEvolves: "Blobbos-Fish",
+		itemUser: ["Blobbos-Fish"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	plasticgem: {
 		name: "Plastic Gem",
 		spritenum: 53,
