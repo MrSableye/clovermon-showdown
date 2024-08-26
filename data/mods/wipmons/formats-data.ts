@@ -624,4 +624,49 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	nosval: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	springoid: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	jiangshill: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	jelismol: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	venocyst: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	letharjee: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	dozoff: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	knyan: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	bouldabee: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
