@@ -48701,7 +48701,7 @@ conimaiden: {
 		heightm: 1.1,
 		weightkg: 143.8,
 		color: "Green",
-		prevo: "Funji",
+		prevo: "Minitree",
 		evoLevel: 24,
                 evos: ["Arbroad"],
 		eggGroups: ["Grass", "Human-Like"], 
