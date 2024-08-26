@@ -10811,6 +10811,38 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	funji: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	funjis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	funjistical: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tremlett: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tremosaur: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulcore: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	floefrost: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	outerstite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
