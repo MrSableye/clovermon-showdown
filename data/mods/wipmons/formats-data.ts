@@ -4,6 +4,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	hailsanta: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	analgae: {
 		inherit: true,
 		isNonstandard: "Past",
