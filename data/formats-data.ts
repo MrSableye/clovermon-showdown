@@ -10843,6 +10843,50 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	minitree: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	conimaiden: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	arbroad: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	model01: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	t33v33: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	program999: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	newtini: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	chonkard: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	komodotic: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ariguana: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	frillazar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
