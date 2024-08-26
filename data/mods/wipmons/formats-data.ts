@@ -669,4 +669,44 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	funji: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	funjis: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	funjistical: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	tremlett: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	tremosaur: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulcore: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	floefrost: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	outerstite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
