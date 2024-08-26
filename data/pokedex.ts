@@ -48759,7 +48759,7 @@ t33v33: {
 program999: {
 		num: -226,
 		name: "Program-999",
-		ttypes: ["Electric"],
+		types: ["Electric"],
                 gender: "N",
 		baseStats: {hp: 89, atk: 99, def: 109, spa: 119, spd: 79, spe: 49},
 		abilities: {0: "Download", 1: "Static", H: "Electromorphosis", S: "Teravolt"},
