@@ -186,8 +186,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	ribbizap: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "NFE",
+		isNonstandard: "Past",
 	},
 	elephas: {
 		inherit: true,
@@ -220,8 +219,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	anaconduke: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "NFE",
+		isNonstandard: "Past",
 	},
 	fishnism: {
 		inherit: true,
@@ -269,13 +267,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	smogaroben: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "LC",
+		isNonstandard: "Past",
 	},
 	smoxilon: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Past",
 	},
 	machmona: {
 		inherit: true,
@@ -972,8 +968,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	honrade: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "NFE",
+		isNonstandard: "Past",
 	},
 	embortion: {
 		inherit: true,
@@ -1217,13 +1212,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	diobat: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "LC",
+		isNonstandard: "Past",
 	},
 	warudio: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Past",
 	},
 	docee: {
 		inherit: true,
