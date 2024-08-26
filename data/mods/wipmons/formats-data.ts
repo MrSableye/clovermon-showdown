@@ -599,4 +599,29 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	masquis: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	frightstage: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	dramperil: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	caltrocadet: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	ticranium: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
