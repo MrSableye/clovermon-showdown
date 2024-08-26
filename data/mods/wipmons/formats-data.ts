@@ -4,6 +4,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	hailsanta: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	analgae: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -214,8 +218,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	spanke: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "LC",
+		isNonstandard: "Past",
 	},
 	anaconduke: {
 		inherit: true,
@@ -327,8 +330,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	pengas: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "NFE",
+		isNonstandard: "Past",
+	},
+	blobbos: {
+		inherit: true,
+		isNonstandard: "Past",
 	},
 	praeteur: {
 		inherit: true,
