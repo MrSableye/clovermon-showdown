@@ -114,10 +114,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	/* WIPMon Abilities */
-	leech: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	desolateland: {
 		inherit: true,
 		isNonstandard: null,
@@ -168,6 +164,30 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	surprise: {
 		inherit: true,
+		isNonstandard: null,
+	},
+	surgesurfer: {
+		onModifySpe(spe) {
+			if (this.field.isTerrain('electricterrain')) {
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Surge Surfer",
+		rating: 3,
+		num: 207,
+	},
+	leech: {
+		onModifyMove(move) {
+			if (!move?.flags['contact'] || move.target === 'self') return;
+		},
+		onAfterMoveSecondarySelfPriority: -1,
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (move.totalDamage) {
+				this.heal(move.totalDamage / 4, pokemon);
+			}
+		},
+		name: "Leech",
+		rating: 3.5,
 		isNonstandard: null,
 	},
 	battlearmor: {

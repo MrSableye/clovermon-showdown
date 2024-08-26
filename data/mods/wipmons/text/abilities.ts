@@ -25,6 +25,14 @@ export const AbilitiesText: {[k: string]: ModdedAbilityText} = {
 		inherit: true,
 		shortDesc: "Boosts users speed by 1.5x under Sandstorm. Sandstorm Immunity.",
 	},
+	surgesurfer: {
+		inherit: true,
+		shortDesc: "Boosts users speed by 1.5x under Electric Terrain.",
+	},
+	leech: {
+		inherit: true,
+		shortDesc: "User recovers 25% of damage dealt.",
+	},
 	unnerve: {
 		inherit: true,
 		desc: "Foes cannot use Berries, Berry Juice, Leftovers, Milk Drink, Focus Munch, Soft-Boiled or Fruit Juice.",
