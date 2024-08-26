@@ -709,4 +709,59 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	minitree: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	conimaiden: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	arbroad: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	model01: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	t33v33: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	program999: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	newtini: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	chonkard: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	komodotic: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ariguana: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	frillazar: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
