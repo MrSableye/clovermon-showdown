@@ -10755,6 +10755,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	masquis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	frightstage: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	dramperil: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	caltrocadet: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ticranium: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
