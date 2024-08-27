@@ -29706,7 +29706,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	shuttleloop: {
 		num: 812,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 50,
 		category: "Physical",
 		name: "Shuttle Loop",
 		pp: 5,
@@ -29727,7 +29727,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Hold It!",
 		pp: 5,
 		priority: 0,
-		flags: {snatch: 1, heal: 1},
+		flags: {snatch: 1, sound: 1, heal: 1},
 		heal: [5, 5],
 		onHit(target) {
 			if (!target.volatiles['dynamax']) {
@@ -29749,7 +29749,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Objection!",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {sound: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 20,
 			volatileStatus: 'flinch',
@@ -29767,7 +29767,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Take That!",
 		pp: 5,
 		priority: 0,
-		flags: {reflectable: 1, mirror: 1},
+		flags: {reflectable: 1, mirror: 1, sound: 1},
 		onHit(target, source, move) {
 			return target.addVolatile('trapped', source, move, 'trapper');
 		},
