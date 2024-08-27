@@ -46448,6 +46448,35 @@ blobbosprism: {
 		],
 		gen: 8,
 	},
+	blobboscamel: {
+		num: 69132,
+		name: "Blobbos-Camel",
+		baseSpecies: "Blobbos",
+		forme: "Camel",
+		types: ["Ground", "Rock"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 103,
+			atk: 83,
+			def: 126,
+			spa: 71,
+			spd: 81,
+			spe: 45,
+		},
+		abilities: {
+			0: "Tangled Feet",
+                        1: "Sand Spit",
+                        H: "Sand Force",
+                        S: "Water Absorb",
+		},
+		heightm: 1.85,
+		weightkg: 650,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
