@@ -90726,7 +90726,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 
 				const ppDeducted = target.deductPP(move.id, 1);
 				if (!ppDeducted) return;
-				this.add('-activate', target, 'move: Eerie Spell', move.name, ppDeducted);
+				this.add('-activate', target, 'move: Soul Drain', move.name, ppDeducted);
 			},
 		},
 		target: "normal",
