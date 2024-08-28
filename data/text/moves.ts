@@ -7898,6 +7898,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power doubles if the user was hit by the target this turn. User recovers 50% of the damage dealt.",
 		shortDesc: "Power doubles if user is damaged by the target. User recovers 50% of the damage dealt.",
 	},
+	assimilate: {
+		name: "Assimilate",
+		desc: "Power doubles if the user was hit by the target this turn. User recovers 50% of the damage dealt.",
+		shortDesc: "Power doubles if user is damaged by the target. User recovers 50% of the damage dealt.",
+	},
 	grandbat: {
 		name: "Grand Bat",
 		shortDesc: "Forces the target to switch to a random ally.",
@@ -9309,6 +9314,14 @@ export const MovesText: {[k: string]: MoveText} = {
 	brainblast: {
 		name: "Brain Blast",
 		shortDesc: "Hits Dark-Types for neutral effectiveness.",
+	},
+	sunkensanity: {
+		name: "Sunken Sanity",
+		shortDesc: "100% chance to confuse the target.",
+	},
+	souldrain: {
+		name: "Soul Drain",
+		shortDesc: "Heals for 50% of damage done to the target. Subtracts 1 PP from the last move the target used.",
 	},
 	consuming: {
 		name: "Consuming",
