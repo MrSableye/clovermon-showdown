@@ -1668,6 +1668,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	    },
+
+	/* Enabled Mons */
+
 	dunebug: {
 		inherit: true, 
       isNonstandard: null,
