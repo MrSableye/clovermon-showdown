@@ -90252,6 +90252,32 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
+	assimilate: {
+		num: 42018,
+		accuracy: 100,
+		basePower: 50,
+		basePowerCallback(pokemon, target, move) {
+			const damagedByTarget = pokemon.attackedBy.some(
+				p => p.source === target && p.damage > 0 && p.thisTurn
+			);
+			if (damagedByTarget) {
+				this.debug('BP doubled for getting hit by ' + target);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		category: "Special",
+		name: "Assimilate",
+		pp: 10,
+		priority: -4,
+		flags: {contact: 1, protect: 1, mirror: 1, heal:1},
+		drain: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
 	scarletchant: {
 		num: 42018,
 		accuracy: 100,
@@ -90679,6 +90705,51 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 		isNonstandard: "Future",
 		contestType: "Clever",
+	},
+	souldrain: {
+		num: 826,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Soul Drain",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				if (!target.hp) return;
+				let move: Move | ActiveMove | null = target.lastMove;
+				if (!move || move.isZ) return;
+				if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
+
+				const ppDeducted = target.deductPP(move.id, 1);
+				if (!ppDeducted) return;
+				this.add('-activate', target, 'move: Soul Drain', move.name, ppDeducted);
+			},
+		},
+		target: "normal",
+		type: "Ghost",
+		isNonstandard: "Future",
+	},
+	sunkensanity: {
+		num: 146,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Sunken Sanity",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1,},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Dark",
+		contestType: "Cute",
 	},
 	solarhunger: {
 		num: 42009,
