@@ -1452,7 +1452,7 @@ export const Formats: FormatList = [
 		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct'],
 	},
 	{
-		name: '[Gen 8 Clover Blobbos CAP Draft Only] Ubers',
+		name: '[Gen 8 Clover Blobbos CAP Only] Draft',
 		mod: 'cloverblobboscap',
 		ruleset: [
 			'Terastal Clause',
@@ -1469,6 +1469,7 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 		],
 		banlist: ['Baton Pass', 'Moody', 'Mating Press', 'Rage Fist', 'Revival Blessing', 'Shed Tail', 'Loaded Disk', 'Banana', 'Glomp :3', 'Sexite Y', 'Nimble Metal Body', 'Arena Trap', 'Shadow Tag', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct', 'Power Herb + Geomancy', 'Last Respects + Blobbos-Paldea', 'Huge Power + Blobbos-Chad', 'Pure Power + Blobbos-Chad', 'Power Herb + Awaken', 'Baitite', 'Star Rod + Victory Dance', 'Blobbos-Zero', 'A Blobbos', 'Blobbos-Adventurer', 'Blobbos-Extradimensional', 'Blobbos-Nice', 'Blobbos-Lich', 'Blobbos-Gay', 'Infection', 'Blobbos-Arceus', 'Blobbos-Clover', 'Blobbos-Dark Matter', 'Blobbos-Forbidden', 'Blobbos-Horse', 'Blobbos-Primal', "Partner's Pendant + Super Snore"],
+		unbanlist: ['Blobbos-King'],
 	},
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Random Battle',
