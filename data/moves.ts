@@ -57161,6 +57161,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sun: 1},
+		onTry() {
+			return this.field.isWeather(['sunnyday', 'desolateland']);
+		},
+		onAfterHit(target, source) {
+			this.field.clearWeather();
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -67851,6 +67857,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			def: 3,
+		},
 		secondary: null,
 		target: "self",
 		type: "Steam",
@@ -72041,6 +72050,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			spd: 1,
+			spe: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Steam",
@@ -73730,7 +73743,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
+		multihit: [2, 5],
 		target: "normal",
 		type: "Normal",
 		isNonstandard: "Future",
@@ -87384,7 +87401,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
