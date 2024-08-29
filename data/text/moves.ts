@@ -9323,6 +9323,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Soul Drain",
 		shortDesc: "Heals for 50% of damage done to the target. Subtracts 1 PP from the last move the target used.",
 	},
+	poisonousdarts: {
+		name: "Poisonous Darts",
+		shortDesc: "Hits 4 times. Each hit has a 10% chance to inflict poison.",
+	},
 	consuming: {
 		name: "Consuming",
 		shortDesc: "Consumes the target.",
