@@ -3513,4 +3513,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	},
+	ouroblack: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	reveloros: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
