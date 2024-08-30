@@ -1462,7 +1462,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Baton Pass', 'Moody', 'Mating Press', 'Rage Fist', 'Revival Blessing', 'Shed Tail', 'Loaded Disk', 'Banana', 'Glomp :3', 'Sexite Y', 'Nimble Metal Body', 'Arena Trap', 'Shadow Tag', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct', 'Power Herb + Geomancy', 'Last Respects + Blobbos-Paldea', 'Huge Power + Blobbos-Chad', 'Pure Power + Blobbos-Chad', 'Power Herb + Awaken', 'Baitite', 'Zeroite', 'Star Rod + Victory Dance', 'A Blobbos', 'Blobbos-Adventurer', 'Blobbos-Extradimensional', 'Blobbos-Nice', 'Blobbos-Lich', 'Blobbos-Gay', 'Infection', 'Blobbos-Arceus', 'Blobbos-Clover', 'Blobbos-Dark Matter', 'Blobbos-Zero', 'Blobbos-Forbidden', 'Blobbos-Horse', 'Blobbos-Primal', "Partner's Pendant + Super Snore"],
+		banlist: ['Baton Pass', 'Uber', 'Moody', 'Mating Press', 'Soul Crusher', 'Rage Fist', 'Revival Blessing', 'Shed Tail', 'Loaded Disk', 'Banana', 'Glomp :3', 'Sexite Y', 'Nimble Metal Body', 'Arena Trap', 'Shadow Tag', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct', 'Power Herb + Geomancy', 'Last Respects + Blobbos-Paldea', 'Sketch + Blobbos-Doodle', 'Huge Power + Blobbos-Chad', 'Pure Power + Blobbos-Chad', 'Power Herb + Awaken', 'Baitite', 'Zeroite', 'Star Rod + Victory Dance', 'A Blobbos', 'Blobbos-Adventurer', 'Blobbos-Extradimensional', 'Blobbos-Nice', 'Blobbos-Lich', 'Blobbos-Gay', 'Infection', 'Blobbos-Arceus', 'Blobbos-Clover', 'Blobbos-Dark Matter', 'Blobbos-Zero', 'Blobbos-Forbidden', 'Blobbos-Horse', 'Blobbos-Lich', 'Blobbos-Primal', "Partner's Pendant + Super Snore"],
 		unbanlist: ['Blobbos-King'],
 	},
 	{
