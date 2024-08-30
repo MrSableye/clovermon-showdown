@@ -2725,6 +2725,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	ouroblack: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	reveloros: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	hookling: {
 		tier: "Illegal",
 		isNonstandard: "Future",

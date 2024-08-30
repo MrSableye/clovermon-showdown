@@ -25461,7 +25461,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	rocketpunch: {
 		accuracy: 100,
-		basePower: 45,
+		basePower: 50,
 		category: "Physical",
 		name: "Rocket Punch",
 		pp: 10,
@@ -90499,7 +90499,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Cool",
-		isNonstandard: "Future",
 	},
 	chaosdive: {
 		num: 686,
