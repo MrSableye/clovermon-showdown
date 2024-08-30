@@ -1383,6 +1383,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	ouroblack: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	reveloros: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,
