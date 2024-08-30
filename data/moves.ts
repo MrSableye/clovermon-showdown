@@ -90583,7 +90583,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: {
 			chance: 10,
-			volatileStatus: 'brn',
+			status: 'brn',
 		},
 		self: {
 			volatileStatus: 'focusenergy',
@@ -90769,6 +90769,36 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Ghost",
+		isNonstandard: "Future",
+	},
+	theflamesofdisaster: {
+		num: 69049,
+		accuracy: true,
+		basePower: 200,
+		category: "Special",
+		name: "THE FLAMES OF DISASTER",
+		pp: 40,
+		priority: 4,
+		target: "allAdjacentFoes",
+		type: "Fire",
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('torment');
+				target.addVolatile('taunt');
+				target.addVolatile('disable');
+			}
+		},
+		ignoreImmunity: true,
+		ignoreEvasion: true,
+		ignoreDefensive: true,
+		ignoreAbility: true,
+		breaksProtect: true,
+	   noSketch: true,
 		isNonstandard: "Future",
 	},
 	sunkensanity: {
