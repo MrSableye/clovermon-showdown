@@ -5383,7 +5383,7 @@
           "unaware"
         ],
         "items": [
-          "angel powder",
+          "angelpowder",
           "lifeorb"
         ],
         "moves": [     
@@ -5438,7 +5438,7 @@
           "hustle"
         ],
         "items": [
-          "angel powder",
+          "angelpowder",
           "lifeorb"
         ],
         "moves": [     
@@ -5556,6 +5556,390 @@
         ],
         "level": 84        
       } 
+    ]
+  },
+  "pmrmime": {
+    "nicknames": [
+      "Paint Mr. Mime"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "encore",
+          "batonpass",
+          "artgallery",
+          "nastyplot"
+        ],
+        "lockedMoves": [
+          "substitute",
+          "inkblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Beachutsuho": {
+    "nicknames": [
+      "Beachutsuho"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "drizzle"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "hydropump",
+          "thunder",
+          "apexmutation"
+        ],
+        "lockedMoves": [
+          "abyssnova"
+        ],
+        "level": 76
+      }
+    ]
+  },
+  "babamon": {
+    "nicknames": [
+      "Babamon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "mercuryorb",
+          "jupiterorb"
+        ],
+        "moves": [
+          "dazzlingpetals",
+          "earthpower",
+          "agingcurse",
+          "spikes",
+          "painsplit"
+        ],
+        "lockedMoves": [
+          "blackmagic"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "bdriftblim": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "cloudnine",
+          "unburden"
+        ],
+        "items": [
+          "flyinggem",
+          "watergem"
+        ],
+        "moves": [
+          "defog",
+          "roost",
+          "energyball"
+        ],
+        "lockedMoves": [
+          "arcrobatics",
+          "scald"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "kijyokoyo": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "infiltrator"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "flamethrower",
+          "thunderbolt",
+          "crunch",
+          "ancientpower"
+        ],
+        "lockedMoves": [
+          "dragondance",
+          "momijigari"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "sgolem": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "adaptability"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "steamscald",
+          "autotomize",
+          "overheat",
+          "energyball",
+          "focusblast",
+          "surf"
+        ],
+        "lockedMoves": [
+          "steamblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "sbellsprout": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "vastknowledge"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "invokedeity"
+        ],
+        "lockedMoves": [
+          "pray"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Aukomala": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "flamebody",
+          "insomnia"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "rapidspin",
+          "burningbranch",
+          "hypervoice",
+          "protect",
+          "firespin"
+        ],
+        "lockedMoves": [
+          "wish",
+          "flamethrower"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "duckhuntdog": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "parentalbond"
+        ],
+        "items": [
+          "shatteringhammer"
+        ],
+        "moves": [
+          "bulletseed",
+          "mines"
+        ],
+        "lockedMoves": [
+          "doubleedge",
+          "boomerang"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "metaletemon": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "filter",
+          "moxie"
+        ],
+        "items": [
+          "assaultvest",
+          "choiceband",
+          "choicescarf"
+        ],
+        "moves": [
+          "sonicpunch",
+          "jumpkick",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "brassknuckle"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "altermew": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "pressure",
+          "unnerve"
+        ],
+        "items": [
+          "shatteringhammer"
+        ],
+        "moves": [
+          "disable",
+          "mimic",
+          "zenheadbutt"
+        ],
+        "lockedMoves": [
+          "crushclaw"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Beachsakuya": {
+    "nicknames": [
+      "Beach Sakuya"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "solarpower"
+        ],
+        "items": [
+          "heatrock"
+        ],
+        "moves": [
+          "eternalmeek",
+          "tropicalwave"
+        ],
+        "lockedMoves": [
+          "sunnyday",
+          "zawarudo"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Beachalice": {
+    "nicknames": [
+      "Beach Alice"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "mercuryorb",
+          "jupiterorb",
+          "shatteringhammer"
+        ],
+        "moves": [
+          "chargebeam",
+          "strugglebug",
+          "magictrap",
+          "mindboost",
+          "dollarmy"
+        ],
+        "lockedMoves": [
+          "arcaneenergy",
+          "waterpulse"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Beachreimu": {
+    "nicknames": [
+      "Beach Reimu"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "waterabsorb"
+        ],
+        "items": [
+          "mercuryorb",
+          "jupiterorb",
+          "shatteringhammer"
+        ],
+        "moves": [
+          "exorcise",
+          "earthquake",
+          "recover",
+          "revolvingillusion",
+          "doubleedge"
+        ],
+        "lockedMoves": [
+          "fantasyseal"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "beachpatchi": {
+    "nicknames": [
+      "Beach Patchi"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "stormdrain"
+        ],
+        "items": [
+          "assaultvest",
+          "choicespecs",
+          "choicescarf"
+        ],
+        "moves": [
+          "pulpblast",
+          "earthpower",
+          "flamethrower",
+          "icebeam",
+          "lunarwave",
+          "sludgewave",
+          "thunderbolt",
+          "tropicalwave",
+          "mercurywave"
+        ],
+        "lockedMoves": [
+          "abyssnova"
+        ],
+        "level": 84
+      }
     ]
   },
   "standohermitpurple": {

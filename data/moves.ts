@@ -48809,7 +48809,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Wood",
 		isNonstandard: "Future",
@@ -50033,6 +50036,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		multihit: [2, 5],
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -51750,6 +51754,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(2.5);
+			}
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Water",
@@ -80843,6 +80852,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
+		onHit(target, source) {
+			const bestStat = source.getBestStat(true, true);
+			this.boost({[bestStat]: 2}, source);
+		},
 		secondary: null,
 		target: "self",
 		type: "Nuclear",
@@ -88855,7 +88868,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		recoil: [33, 100],
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Dragon",
 		isNonstandard: "Future",
