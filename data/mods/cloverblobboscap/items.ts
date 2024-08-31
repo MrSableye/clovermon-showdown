@@ -91,6 +91,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fossilite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	masamune: {
 		inherit: true,
 		isNonstandard: null,

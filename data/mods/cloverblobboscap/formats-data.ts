@@ -3913,6 +3913,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosfossilmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	blobboschameleon: {
 		inherit: true,
 		isNonstandard: null,
