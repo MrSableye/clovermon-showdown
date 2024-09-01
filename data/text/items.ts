@@ -2858,6 +2858,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Mirror Claw",
 		desc: "Each turn, holder has a 5% chance to have its damaging move hit twice",
 	},
+	unownite: {
+		name: "Unownite",
+		desc: "If held by an Unown, this item allows it to Mega Evolve in battle.",
+	},
 	rope: {
 		name: "Rope",
 		desc: "At the end of the turn, if the holder has less than 33% HP (41% if Fairy-type), it faints and curse is applied to all foes.",
