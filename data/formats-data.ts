@@ -11467,6 +11467,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	unownmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	yamigiri: {
 		tier: "Illegal",
 		isNonstandard: "Future",
