@@ -4106,6 +4106,15 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			behemothbash: ["8L1"],
 		}
 	},
+	unown: {
+		learnset: {
+			hiddenpower: ["8L1"],
+			cosmicpower: ["8L1"],
+			powergem: ["8L1"],
+			earthpower: ["8L1"],
+			storedpower: ["8L1"],
+			ancientpower: ["8L1"],
+		},
 	ginocchio: {
 		learnset: {
 			acrobatics: ["8L1"],
