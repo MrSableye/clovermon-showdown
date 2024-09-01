@@ -15183,6 +15183,36 @@ malediction: {
 		num: 176,
 		isNonstandard: "Future",
 	},
+	mrshadow: {
+		name: "MR-Shadow",
+		onAnyEffectiveness(typemod, target, type, move) {
+			const mrshadowUser = this.effectState.target;
+
+			if (mrshadowUser !== this.activePokemon) return;
+
+			if (move.type === 'Ghost' && ['Normal', 'Dark'].includes(type)) {
+				return 0;
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Ground') {
+				if (!this.heal(target.baseMaxhp / 100)) {
+					this.add('-immune', target, '[from] ability: MR-Shadow');
+				}
+				return null;
+			}
+		},
+		onSourceDamagingHit(damage, target, source, move) {
+			// Despite not being a secondary, Shield Dust / Covert Cloak block MR-Shadow's effect
+			if (target.hasAbility('shielddust') || target.hasItem('covertcloak')) return;
+
+			if (this.randomChance(5, 10)) {
+				target.trySetStatus('tox', source);
+			}
+		},
+		rating: 3,
+		isNonstandard: "Future",
+	},
 	polite: {
 		onFractionalPriority: -0.1,
 		onModifyMove(move) {
