@@ -43852,7 +43852,7 @@ iwik: {
 		baseSpecies: "Blobbos-Fossil",
 		forme: "Mega",
 		types: ["Water", "Rock"],
-		baseStats: {hp: 75, atk: 119, def: 125, spa: 119, spd: 91, spe: 80},
+		baseStats: {hp: 75, atk: 119, def: 134, spa: 119, spd: 95, spe: 79},
 		abilities: {0: "Long Reach"},
 		heightm: 2.9,
 		weightkg: 658.7,

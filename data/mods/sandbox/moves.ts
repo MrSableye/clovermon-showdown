@@ -4707,4 +4707,88 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	icastfireball: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glasshammer: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rottingkick: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mawofsight: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	overgrownmoss: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	enclose: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mindjack: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	orbponder: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	chaosdive: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ancientrend: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psychodrain: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ignitionwing: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	phantomjaw: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	gripofdivinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tobeornottobe: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glimmerflare: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fistofgod: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	brainblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sunkensanity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	theflamesofdisaster: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	vanish: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
