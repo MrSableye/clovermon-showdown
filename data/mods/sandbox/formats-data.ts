@@ -12691,4 +12691,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	unownmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

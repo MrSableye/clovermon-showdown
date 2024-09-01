@@ -2339,6 +2339,10 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	unownite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	focusspecs: {
 		inherit: true,
 		isNonstandard: null,

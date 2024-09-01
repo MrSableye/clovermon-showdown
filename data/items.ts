@@ -9842,6 +9842,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	unownite: {
+		name: "Unownite",
+		spritenum: 576,
+		megaStone: "Unown-Mega",
+		megaEvolves: "Unown",
+		itemUser: ["Unown"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	focusspecs: {
 		name: "Focus Specs",
 		spritenum: 70,

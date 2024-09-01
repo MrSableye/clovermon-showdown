@@ -54,6 +54,17 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 13,
 		},
 	},
+	unown: {
+		inherit: true,
+		baseStats: {
+			hp: 88,
+			atk: 108,
+			def: 88,
+			spa: 108,
+			spd: 88,
+			spe: 48,
+		},
+	},
 	pengas: {
 		inherit: true,
 		evos: ["Oengas"],
@@ -414,6 +425,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	rhydon: {
 		inherit: true,
 		abilities: {0: "Lightning Rod", 1: "Rock Head", H: "Reckless", S: "Old School"},
+
+	},
+	gengar: {
+		inherit: true,
+		abilities: {0: "Cursed Body", 1: "Levitate", H: "Shadow Aura"},
 
 	},
 	indignifly: {

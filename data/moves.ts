@@ -90421,7 +90421,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				target.addVolatile('disable');
 			}
 		},
-	   noSketch: true,
+	    noSketch: true,
 		isNonstandard: "Future",
 	},
 	mawofsight: {
@@ -90822,6 +90822,40 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Dark",
 		contestType: "Cute",
+	},
+	mrterrorscreech: {
+		num: 506,
+		accuracy: 100,
+		basePower: 70,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status || target.hasAbility('comatose')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		category: "Special",
+		isNonstandard: "Future",
+		name: "MR-Terror Screech",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1},
+		secondary: {
+			chance: 50,
+			status: 'brn',
+		},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('torment');
+				target.addVolatile('disable');
+			}
+		},
+		infiltrates: true,
+		breaksProtect: true,
+		target: "normal",
+		type: "Ghost",
+		zMove: {basePower: 160},
+		contestType: "Clever",
 	},
 	solarhunger: {
 		num: 42009,
