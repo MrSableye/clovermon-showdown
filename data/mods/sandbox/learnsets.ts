@@ -4106,29 +4106,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			behemothbash: ["8L1"],
 		}
 	},
-	unown: {
-		learnset: {
-			hiddenpower: ["8L1"],
-			cosmicpower: ["8L1"],
-			powergem: ["8L1"],
-			earthpower: ["8L1"],
-			storedpower: ["8L1"],
-			ancientpower: ["8L1"],
-			superpower: ["8L1"],
-			secretpower: ["8L1"],
-			powersplit: ["8L1"],
-			powerswap: ["8L1"],
-			powertrick: ["8L1"],
-			mysticalpower: ["8L1"],
-			judgment: ["8L1"],
-			recover: ["8L1"],
-			nastyplot: ["8L1"],
-			shadowball: ["8L1"],
-			astralbarrage: ["8L1"],
-			darkpulse: ["8L1"],
-			sackedsanity: ["8L1"],
-			trickroom: ["8L1"],
-		},
 	ginocchio: {
 		learnset: {
 			acrobatics: ["8L1"],
@@ -4254,9 +4231,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			shockwave: ["8L1"],
 			focusblast: ["8L1"],
 		},
-		eventData: [
-			{ generation: 9, level: 50, moves: ["genesisboost", "earthpower", "kingsshield", "nastyplot"], pokeball: "cherishball" },
-		],
 	},
 	towhorse: {
 		learnset: {
@@ -5658,6 +5632,30 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			xscissor: ["8M", "7M"],
 			earthquake: ["8M"],
 			uturn: ["8M"],
+		},
+	},
+	unown: {
+		learnset: {
+			hiddenpower: ["8L1"],
+			cosmicpower: ["8L1"],
+			powergem: ["8L1"],
+			earthpower: ["8L1"],
+			storedpower: ["8L1"],
+			ancientpower: ["8L1"],
+			superpower: ["8L1"],
+			secretpower: ["8L1"],
+			powersplit: ["8L1"],
+			powerswap: ["8L1"],
+			powertrick: ["8L1"],
+			mysticalpower: ["8L1"],
+			judgment: ["8L1"],
+			recover: ["8L1"],
+			nastyplot: ["8L1"],
+			shadowball: ["8L1"],
+			astralbarrage: ["8L1"],
+			darkpulse: ["8L1"],
+			sackedsanity: ["8L1"],
+			trickroom: ["8L1"],
 		},
 	},
 };
