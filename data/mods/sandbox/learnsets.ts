@@ -5654,7 +5654,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			shadowball: ["8L1"],
 			astralbarrage: ["8L1"],
 			darkpulse: ["8L1"],
-			sackedsanity: ["8L1"],
+			sunkensanity: ["8L1"],
 			trickroom: ["8L1"],
 		},
 	},

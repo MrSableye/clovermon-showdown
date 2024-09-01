@@ -4050,7 +4050,7 @@ malediction: {
 	},
 	mrshadow: {
 		name: "MR-Shadow",
-		shortDesc: "Immune to Ground-type moves and heals for 1% of HP if hit by a Ground-type move. Ghost-type moves do neutral damage on Normal and Ghost Pokemon. Every attack has a 50% chance of inflicting toxic on the foe.",
+		shortDesc: "Immune to Ground-type moves and heals for 1% of HP if hit by a Ground-type move. Ghost-type moves do neutral damage on Normal and Dark Pokemon. Every attack has a 50% chance of inflicting toxic on the foe.",
 	},
 	polite: {
 		name: "Polite",
