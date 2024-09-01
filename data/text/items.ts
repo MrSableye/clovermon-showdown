@@ -2721,6 +2721,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Creampuffite",
 		desc: "If held by a Blobbos-Creampuff, this item allows it to Mega Evolve in battle.",
 	},
+	fossilite: {
+		name: "Fossilite",
+		desc: "If held by a Blobbos-Fossil, this item allows it to Mega Evolve in battle.",
+	},
 	negite: {
 		name: "Negite",
 		desc: "If held by a Blobbos-Nega, this item allows it to Mega Evolve in battle.",
