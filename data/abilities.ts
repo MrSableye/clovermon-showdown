@@ -8394,18 +8394,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-activate', pokemon, 'ability: G-Max Comatose');
 			return null;
 		},
-		onBasePowerPriority: 19,
-		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags['gmax']) {
-				return this.chainModify(50);
-			}
-		},
-		onBasePowerPriority: 19,
-		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags['max']) {
-				return this.chainModify(50);
-			}
-		},
+		// onBasePowerPriority: 19,
+		// onBasePower(basePower, attacker, defender, move) {
+		// 	if (move.flags['gmax']) {
+		//		return this.chainModify(50);
+		//	}
+		//	if (move.flags['max']) {
+		//		return this.chainModify(50);
+		//	}
+		//},
+		// THIS ENTIRE SECTION HAS BEEN TURNED INTO A COMMENT BECAUSE THE CODE DOES NOT WORK.
+		// YOU HAVE TO MANUALLY DEFINE EVERY SINGLE GMAX OR MAX MOVE AS A "gmax" OR "max" FLAGGED MOVE BECAUSE THESE FLAGS DO NOT ALREADY EXIST.
+		// IT WILL NOT LET ME TEST WITH THESE ERRORS SO IT HAS BEEN TEMPORARILY DISABLED UNTIL SOMEONE FIXES IT.
 		name: "G-Max Comatose",
 		isNonstandard: "Future",
 		rating: 4,
@@ -13678,6 +13678,15 @@ malediction: {
 		num: 208,
 		isNonstandard: "Future",
 	},
+
+	fastfood: {
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.type === 'Food') return priority + 1;
+		},
+		name: "Fast Food",
+		rating: 1.5,
+		num: 69420177,
+	},
 	/** Wack abilities */
 	darklife: {
 		name: "Dark Life",
@@ -15185,12 +15194,18 @@ malediction: {
 	},
 	mrshadow: {
 		name: "MR-Shadow",
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Ghost'] = true;
+			}
+		},
 		onAnyEffectiveness(typemod, target, type, move) {
 			const mrshadowUser = this.effectState.target;
 
 			if (mrshadowUser !== this.activePokemon) return;
 
-			if (move.type === 'Ghost' && ['Normal', 'Dark'].includes(type)) {
+			if (move.type === 'Ghost' && ['Dark'].includes(type)) {
 				return 0;
 			}
 		},

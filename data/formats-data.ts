@@ -7913,6 +7913,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	virtuita: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	turturret: {
 		tier: "Illegal",
 		isNonstandard: "Future",
