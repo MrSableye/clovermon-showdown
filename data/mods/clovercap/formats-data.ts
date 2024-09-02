@@ -1073,7 +1073,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "LC",
 	},
-	peashroom: {
+	virtuita: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

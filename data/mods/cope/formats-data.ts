@@ -2671,6 +2671,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	virtuita: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	rootchew: {
 		inherit: true,
 		isNonstandard: null,
