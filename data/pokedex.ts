@@ -34673,7 +34673,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Water", "Dark"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 65, atk: 120, def: 95, spa: 45, spd: 65, spe: 110},
-		abilities: {0: "Illusion", 1: "Impostor", H: "Inner Focus", S: "Infiltrator"},
+		abilities: {0: "Illusion", 1: "Imposter", H: "Inner Focus", S: "Infiltrator"},
 		heightm: 0.5,
 		weightkg: 60.3,
 		color: "Red",
