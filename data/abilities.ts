@@ -15185,12 +15185,18 @@ malediction: {
 	},
 	mrshadow: {
 		name: "MR-Shadow",
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Ghost'] = true;
+			}
+		},
 		onAnyEffectiveness(typemod, target, type, move) {
 			const mrshadowUser = this.effectState.target;
 
 			if (mrshadowUser !== this.activePokemon) return;
 
-			if (move.type === 'Ghost' && ['Normal', 'Dark'].includes(type)) {
+			if (move.type === 'Ghost' && ['Dark'].includes(type)) {
 				return 0;
 			}
 		},
