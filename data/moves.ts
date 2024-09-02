@@ -34687,6 +34687,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			this.add('-prepare', attacker, move.name);
 			this.boost({atk: 1}, attacker, attacker, move);
+			if (this.field.getPseudoWeather('factory')) {
+				this.boost({
+					accuracy: 1,
+				});
+			}
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
 				return;
 			}
@@ -34749,9 +34754,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
-		boosts: {
-			spa: 1,
-			spd: 1,
+		onHit(target) {
+			if (this.field.getPseudoWeather('factory')) {
+				this.boost({
+					spa: 1,
+					spd: 2,
+				});
+			} else {
+				this.boost({
+					spa: 1,
+					spd: 1,
+				});
+			}
 		},
 		secondary: null,
 		target: "self",
@@ -49537,8 +49551,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		onBasePower(basePower, pokemon) {
-			if (pokemon.volatiles['perishsong']) {
+			if (pokemon.volatiles['attract']) {
 				return this.chainModify(2);
+			}
+		},
+		onHit(target) {
+			if (target.volatiles['attract']) {
+				target.removeVolatile('attract');
 			}
 		},
 		flags: {protect: 1, mirror: 1},
@@ -49556,6 +49575,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['attract']) {
+				return this.chainModify(2);
+			}
+		},
+		onHit(target) {
+			if (target.volatiles['attract']) {
+				target.removeVolatile('attract');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -50985,6 +51014,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['attract']) {
+				return this.chainModify(2);
+			}
+		},
+		onHit(target) {
+			if (target.volatiles['attract']) {
+				target.removeVolatile('attract');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
@@ -53236,7 +53275,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		damageCallback(pokemon, target) {
-			return this.clampIntRange(target.getUndynamaxedHP() / 2, 1);
+			if (this.field.getPseudoWeather('arboreum')){
+				return this.clampIntRange(target.getUndynamaxedHP() / 3, 4);
+			}
+				else {			
+					return this.clampIntRange(target.getUndynamaxedHP() / 1, 2);
+				}
+		},
+
+		onModifyMove(move) {
+			if (this.field.getPseudoWeather('arboreum')) move.accuracy = true;
 		},
 		secondary: null,
 		target: "normal",
@@ -53252,7 +53300,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 90,
+			onHit(target, source) {
+				if (this.field.getPseudoWeather('factory')) {
+					this.boost({spa: 1, spd: 1,}, source, source);
+				} else {
+					this.boost({
+						spa: 1,
+					}, source, source);
+				}
+			},
+		},
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -53266,6 +53325,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onHit(target) {
+			if (this.field.getPseudoWeather('factory')) {
+				this.boost({
+					spa: -1,
+					spd: -1,
+				});
+			} else {
+				this.boost({
+					spd: -1,
+				});
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Tech",
@@ -53281,6 +53352,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		multihit: 3,
+		onModifyMove(move, attacker) {
+			if (this.field.getPseudoWeather('factory')) {
+				move.multihit = 4;
+			}
+		},
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -53294,6 +53371,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		onHit(target, pokemon) {
+			const i = this.random(3);
+						
+			let move = 'addition';
+			if (i == 0) {
+				move = 'subtract';
+			} else if (i == 1) {
+				move = 'multiply';
+			} else if (i == 2) {
+				move = 'divid';
+			} 
+			const fullMove = this.dex.getActiveMove(move);
+			fullMove.flags = {...fullMove.flags, naturePower: 1};
+			this.actions.useMove(move, pokemon, target);
+			return null;
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Tech",
@@ -53452,6 +53545,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['attract']) {
+				return this.chainModify(2);
+			}
+		},
+		onHit(target) {
+			if (target.volatiles['attract']) {
+				target.removeVolatile('attract');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Heart",
@@ -53466,7 +53569,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			volatileStatus: 'attract',
+		},
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -55214,6 +55320,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['attract']) {
+				return this.chainModify(2);
+			}
+		},
+		onHit(target) {
+			if (target.volatiles['attract']) {
+				target.removeVolatile('attract');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Electric",
@@ -56103,6 +56219,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Optic Camo",
 		pp: 10,
 		priority: 1,
+		onHit(target) {
+			if (this.field.getPseudoWeather('factory')) {
+				this.boost({
+					evasion: 1,
+					spe: 1,
+				});
+			} else {
+				this.boost({
+					evasion: 1,
+				});
+			}
+		},
 		flags: {snatch: 1},
 		secondary: null,
 		target: "self",
@@ -57069,6 +57197,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Dark', type);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -57800,7 +57931,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Fear",
 		isNonstandard: "Future",
@@ -57938,6 +58072,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {snatch: 1},
+		pseudoWeather: 'lunatictime',
+		condition: {
+			duration: 6,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Lunatic Time', '[of] ' + source);
+			},
+			onModifyType(move, pokemon) {
+				const noModifyType = [
+					'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+				];
+				if (!noModifyType.includes(move.id) &&
+					!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+					move.type = 'Chaos';
+					move.typeChangerBoosted = this.effect;
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Lunatic Time');
+			},
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Chaos",
@@ -63689,6 +63845,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		boosts: {
+			atk: 2,
+		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
 		type: "Fighting",
@@ -64217,6 +64376,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['attract']) {
+				return this.chainModify(2);
+			}
+		},
+		onHit(target) {
+			if (target.volatiles['attract']) {
+				target.removeVolatile('attract');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Heart",
@@ -64547,6 +64716,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['attract']) {
+				return this.chainModify(2);
+			}
+		},
+		onHit(target) {
+			if (target.volatiles['attract']) {
+				target.removeVolatile('attract');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Heart",
@@ -66556,6 +66735,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['attract']) {
+				return this.chainModify(2);
+			}
+		},
+		onHit(target) {
+			if (target.volatiles['attract']) {
+				target.removeVolatile('attract');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Heart",
@@ -68208,7 +68397,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		volatileStatus: 'partiallytrapped',
+		secondary: {
+			chance: 100,
+			volatileStatus: 'attract',
+		},
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -70075,7 +70268,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			volatileStatus: 'attract',
+		},
 		target: "normal",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -77316,6 +77512,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
+		volatileStatus: 'confusion',
+		status: 'par',
 		target: "allAdjacentFoes",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -78770,6 +78968,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target, source) {
+			if (target.hasType('Flying')) {
+				this.boost({atk: 1}, source);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Flying",
@@ -79758,6 +79961,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {pulse: 1},
 		secondary: null,
+		pseudoWeather: 'factory',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('mechanicrock')) {
+					return 10;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Factory', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Tech') {
+					this.debug('factory increase');
+					return this.chainModify([1.5]);
+				}
+			},
+			onResidualOrder: 6,
+			onResidual(pokemon) {
+				if (pokemon.hasType('Tech')|| pokemon.hasType('Steel')) this.heal(pokemon.baseMaxhp / 14);
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Arboreum');
+			},
+		},
 		target: "scripted",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -80572,6 +80804,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onAfterHit (source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 3,
+				move: 'trojanrush',
+				source: source,
+				moveData: {
+					id: 'trojanrush',
+					name: "Trojan Rush",
+					accuracy: 95,
+					basePower: 90,
+					category: "Physical",
+					priority: 0,
+					flags: {allyanim: 1, futuremove: 1},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					type: 'Virus',
+				},
+			});
+			this.add('-start', source, 'move: Trojan Rush');
+			return this.NOT_FAIL;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Virus",
@@ -82000,6 +82254,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Gangbang",
 		pp: 10,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			const currentSpecies = move.allies!.shift()!.species;
+			const bp = 5 + Math.floor(currentSpecies.baseStats.atk / 10);
+			this.debug('BP for ' + currentSpecies.name + ' hit: ' + bp);
+			return bp;
+		},
+		onModifyMove(move, pokemon) {
+			move.allies = pokemon.side.pokemon.filter(ally => ally === pokemon || !ally.fainted && !ally.status);
+			move.multihit = move.allies.length;
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",

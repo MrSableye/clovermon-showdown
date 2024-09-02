@@ -13678,6 +13678,15 @@ malediction: {
 		num: 208,
 		isNonstandard: "Future",
 	},
+
+	fastfood: {
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.type === 'Food') return priority + 1;
+		},
+		name: "Fast Food",
+		rating: 1.5,
+		num: 69420177,
+	},
 	/** Wack abilities */
 	darklife: {
 		name: "Dark Life",
