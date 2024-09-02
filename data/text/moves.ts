@@ -9333,6 +9333,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Poisonous Darts",
 		shortDesc: "Hits 4 times. Each hit has a 10% chance to inflict poison.",
 	},
+	mrterrorscreech: {
+		name: "MR-Terror Screech",
+		shortDesc: "50% Chance to burn the target. Goes through protection and ignores Light Screen/Reflect/Aurora Veil. Disables and Torments the foe. Double damage if the target already has a status condition inflicted.",
+	},
 	consuming: {
 		name: "Consuming",
 		shortDesc: "Consumes the target.",
