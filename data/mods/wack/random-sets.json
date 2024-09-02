@@ -5882,6 +5882,209 @@
       }
     ]
   },
+  "calcusus": {
+    "nicknames": [
+      "Calcusus"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "download"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "nastyplot",
+          "factory",
+          "configure"
+        ],
+        "lockedMoves": [
+          "calculator"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "nmuk": {
+    "nicknames": [
+      "Nuked Muk"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "irradiated"
+        ],
+        "items": [
+          "blacksludge"
+        ],
+        "moves": [
+          "painsplit",
+          "poisonjab",
+          "poweruppunch"
+        ],
+        "lockedMoves": [
+          "hallucinogen"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mukma": {
+    "nicknames": [
+      "Mukma"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magmaarmor"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "painsplit",
+          "shadowsneak",
+          "stompingtantrum",
+          "stealthrock",
+          "hallucinogen"
+        ],
+        "lockedMoves": [
+          "firepunch"
+        ],
+        "level": 86
+      }
+    ]
+  },
+  "dillon": {
+    "nicknames": [
+      "Dillon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "owntempo"
+        ],
+        "items": [
+          "lumberry"
+        ],
+        "moves": [
+          "rapidspin",
+          "uturn",
+          "bodypress",
+          "rest"
+        ],
+        "lockedMoves": [
+          "highhorsepower"
+        ],
+        "level": 86
+      }
+    ]
+  },
+  "rpboomb1": {
+    "nicknames": [
+      "Rpboomb1"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "bulletproof"
+        ],
+        "items": [
+          "powerherb"
+        ],
+        "moves": [
+          "explosion",
+          "rockslide",
+          "enginecharge",
+          "oilup"
+        ],
+        "lockedMoves": [
+          "dogfight",
+          "megamissile"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "negarman": {
+    "nicknames": [
+      "Negarman"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "powerherb"
+        ],
+        "moves": [
+          "schizoboost",
+          "throatchop",
+          "voidsmaw",
+          "insanitybolt"
+        ],
+        "lockedMoves": [
+          "thenword",
+          "eldritchgoop"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "youkawaii": {
+    "nicknames": [
+      "Youkawaii"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "cutecharm"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "hexpunch",
+          "loveburst",
+          "breakup"
+        ],
+        "lockedMoves": [
+          "buttslam",
+          "murmur"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "lustubust": {
+    "nicknames": [
+      "Lustubust"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "cutecharm"
+        ],
+        "items": [
+          "heavydutyboots",
+          "rockyhelmet"
+        ],
+        "moves": [
+          "eggbomb",
+          "playrough",
+          "thunderbolt",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "cleavage",
+          "seduction"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "Beachreimu": {
     "nicknames": [
       "Beach Reimu"

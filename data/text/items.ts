@@ -4993,6 +4993,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Steamy Rock",
 		desc: "Extends the duration of the move Sauna used by the holder.",
 	},
+	mechanicrock: {
+		name: "Mechanic Rock",
+		desc: "Extends the duration of the move Factory used by the holder.",
+	},
 	featherrock: {
 		name: "Feather Rock",
 		desc: "Extends the duration of the move Steady Wind and Tailwind used by the holder.",

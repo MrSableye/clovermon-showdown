@@ -15033,6 +15033,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Starfield Capsule",
 		spritenum: 0,
 		num: 67180,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('starfield');
+			target.useItem();
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -15040,6 +15044,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Library Capsule",
 		spritenum: 0,
 		num: 67181,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('library');
+			target.useItem();
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -15466,6 +15474,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Cyberspace Capsule",
 		spritenum: 0,
 		num: 67214,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('cyberspace');
+			target.useItem();
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -15473,6 +15485,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Gallery Capsule",
 		spritenum: 0,
 		num: 67215,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('artgallery');
+			target.useItem();
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -17395,6 +17411,10 @@ export const Items: {[itemid: string]: ItemData} = {
 	pandemiccapsule: {/* TODO when introduced **/
 		name: "Pandemic Capsule",
 		spritenum: 0,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('pandemic');
+			target.useItem();
+		},
 		num: 67312,
 		isNonstandard: "Future",
 		rating: 1,
@@ -17781,6 +17801,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Arboreum Capsule",
 		spritenum: 0,
 		num: 67353,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('arboreum');
+			target.useItem();
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -17788,6 +17812,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Sauna Capsule",
 		spritenum: 0,
 		num: 67354,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('sauna');
+			target.useItem();
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -17830,6 +17858,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Factory Capsule",
 		spritenum: 0,
 		num: 67358,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('factory');
+			target.useItem();
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -18055,6 +18087,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Inverted Capsule",
 		spritenum: 0,
 		num: 67382,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('inverseroom');
+			target.useItem();
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
