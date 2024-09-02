@@ -2733,6 +2733,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	virtuita: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	hookling: {
 		tier: "Illegal",
 		isNonstandard: "Future",

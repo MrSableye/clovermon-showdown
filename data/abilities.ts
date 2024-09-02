@@ -8394,18 +8394,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-activate', pokemon, 'ability: G-Max Comatose');
 			return null;
 		},
-		onBasePowerPriority: 19,
-		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags['gmax']) {
-				return this.chainModify(50);
-			}
-		},
-		onBasePowerPriority: 19,
-		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags['max']) {
-				return this.chainModify(50);
-			}
-		},
+		// onBasePowerPriority: 19,
+		// onBasePower(basePower, attacker, defender, move) {
+		// 	if (move.flags['gmax']) {
+		//		return this.chainModify(50);
+		//	}
+		//	if (move.flags['max']) {
+		//		return this.chainModify(50);
+		//	}
+		//},
+		// THIS ENTIRE SECTION HAS BEEN TURNED INTO A COMMENT BECAUSE THE CODE DOES NOT WORK.
+		// YOU HAVE TO MANUALLY DEFINE EVERY SINGLE GMAX OR MAX MOVE AS A "gmax" OR "max" FLAGGED MOVE BECAUSE THESE FLAGS DO NOT ALREADY EXIST.
+		// IT WILL NOT LET ME TEST WITH THESE ERRORS SO IT HAS BEEN TEMPORARILY DISABLED UNTIL SOMEONE FIXES IT.
 		name: "G-Max Comatose",
 		isNonstandard: "Future",
 		rating: 4,
