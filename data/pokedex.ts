@@ -51280,7 +51280,7 @@ frillazar: {
 		types: ["Ghost"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 109, atk: 106, def: 66, spa: 73, spd: 89, spe: 51},
-		abilities: {0: "Intimidate", 1: "Swift Swim", H: "Guts", S: "Levitate"},
+		abilities: {0: "Intimidate", 1: "Phantasma", H: "Guts", S: "Levitate"},
 		heightm: 4.9,
 		weightkg: 1670,
 		color: "Blue",
