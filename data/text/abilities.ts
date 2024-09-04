@@ -3203,6 +3203,14 @@ malediction: {
 		activate: "  [TARGET]'s [MOVE] was revealed!",
 		activateNoTarget: "  [POKEMON]'s Fourwarn alerted it to [MOVE]!",
 	},
+	snooping: {
+		name: "Snooping",
+		desc: "On switch-in, this Pokemon is alerted to every opponent's move.",
+		shortDesc: "On switch-in, this Pokemon is alerted to every opponent's move.",
+
+		activate: "  [TARGET]'s [MOVE] was revealed!",
+		activateNoTarget: "  [POKEMON] is snooping as usual and was alerted to [MOVE]!",
+	},
 	anythingyoucando: {
 		name: "Anything You Can Do",
 		shortDesc: "All foes that used the same move as this Pokemon lose 1/8 HP at the end of the turn.",

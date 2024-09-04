@@ -7770,7 +7770,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	niceface: {
 		onStart(pokemon) {
-			if (this.field.isTerrain('grassyterrain') && pokemon.species.id === 'blobbosnoice' && !pokemon.transformed) {
+			if (this.field.isTerrain('grassyterrain') && 
+            pokemon.species.id === 'blobbosnoicce' && !pokemon.transformed) {
 				this.add('-activate', pokemon, 'ability: Nice Face');
 				this.effectState.busted = false;
 				pokemon.formeChange('Blobbos-Nice', this.effect, true);
@@ -8394,18 +8395,68 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-activate', pokemon, 'ability: G-Max Comatose');
 			return null;
 		},
-		// onBasePowerPriority: 19,
-		// onBasePower(basePower, attacker, defender, move) {
-		// 	if (move.flags['gmax']) {
-		//		return this.chainModify(50);
-		//	}
-		//	if (move.flags['max']) {
-		//		return this.chainModify(50);
-		//	}
-		//},
-		// THIS ENTIRE SECTION HAS BEEN TURNED INTO A COMMENT BECAUSE THE CODE DOES NOT WORK.
-		// YOU HAVE TO MANUALLY DEFINE EVERY SINGLE GMAX OR MAX MOVE AS A "gmax" OR "max" FLAGGED MOVE BECAUSE THESE FLAGS DO NOT ALREADY EXIST.
-		// IT WILL NOT LET ME TEST WITH THESE ERRORS SO IT HAS BEEN TEMPORARILY DISABLED UNTIL SOMEONE FIXES IT.
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			const maxMoves = [
+				'gmaxblobbomb',
+				'gmaxbefuddle',
+				'gmaxcannonade',
+				'gmaxchistrike',
+				'gmaxcentiferno',
+				'gmaxcuddle',
+				'gmaxdepletion',
+				'gmaxdepletion',
+				'gmaxdrumsolo',
+				'gmaxfinale',
+				'gmaxfireball',
+				'gmaxfoamburst',
+				'gmaxgoldrush',
+				'gmaxgravitas',
+				'gmaxoneblow',
+				'gmaxhydrosnipe',
+				'gmaxmalodor',
+				'gmaxmeltdown',
+				'gmaxrapidflow',
+				'gmaxreplenish',
+				'gmaxresonance',
+				'gmaxsandblast',
+				'gmaxsmite',
+				'gmaxsnooze',
+				'gmaxsteelsurge',
+				'gmaxstonesurge',
+				'gmaxstunshock',
+				'gmaxsweetness',
+				'gmaxtartness',
+				'gmaxterror',
+				'gmaxvinelash',
+				'gmaxvolcalith',
+				'gmaxvoltcrash',
+				'gmaxwildfire',
+				'gmaxwindrage',
+				'maxairstream',
+				'maxdarkness',
+				'maxflare',
+				'maxflutterby',
+				'maxgeyser',
+				'maxhailstorm',
+				'maxknuckle',
+				'maxlightning',
+				'maxmindstorm',
+				'maxooze',
+				'maxovergrowth',
+				'maxphantasm',
+				'maxquake',
+				'maxstarfall',
+				'maxrockfall',
+				'maxsteelspike',
+				'maxstrike',
+				'maxwyrmwind',
+			];
+			if (maxMoves.includes(move.id)) {
+				this.debug('G-Max Comatose boost');
+				return this.chainModify(50);
+			}
+		},
 		name: "G-Max Comatose",
 		isNonstandard: "Future",
 		rating: 4,
@@ -11207,6 +11258,18 @@ malediction: {
 			}
 		},
 		name: "Fourwarn",
+		isNonstandard: "Future",
+	},
+	snooping: {
+		onStart(pokemon) {
+			for (const target of pokemon.foes()) {
+				for (const moveSlot of target.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.move);
+					this.add('-activate', pokemon, 'ability: Fourwarn', move, '[of] ' + target);
+				}
+			}
+		},
+		name: "Snooping",
 		isNonstandard: "Future",
 	},
 	anythingyoucando: {
