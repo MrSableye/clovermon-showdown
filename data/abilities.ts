@@ -11210,6 +11210,18 @@ malediction: {
 		name: "Fourwarn",
 		isNonstandard: "Future",
 	},
+	snooping: {
+		onStart(pokemon) {
+			for (const target of pokemon.foes()) {
+				for (const moveSlot of target.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.move);
+					this.add('-activate', pokemon, 'ability: Fourwarn', move, '[of] ' + target);
+				}
+			}
+		},
+		name: "Snooping",
+		isNonstandard: "Future",
+	},
 	anythingyoucando: {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,
