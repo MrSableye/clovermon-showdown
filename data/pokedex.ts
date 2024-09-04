@@ -43105,7 +43105,7 @@ iwik: {
 		baseSpecies: "Blobbos",
 		forme: "Robotnik",
 		types: ["Fire", "Ice"],
-		gender: "N",
+		gender: "M",
 		baseStats: {
 			hp: 111,
 			atk: 17,
@@ -43118,12 +43118,13 @@ iwik: {
 			0: "Steelworker",
 			1: "Analytic",
 			H: "Frisk",
+			S: "Snooping",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
 		color: "Red",
 		eggGroups: [
-			"Ditto",
+			"Mineral",
 		],
 		gen: 8,
 	},

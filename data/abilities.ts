@@ -15291,6 +15291,17 @@ malediction: {
 		rating: 3,
 		isNonstandard: "Future",
 	},
+	ultimateregeneration: {
+		onResidualOrder: 4,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			this.heal(pokemon.baseMaxhp / 1);
+		},
+		name: "Ultimate Regeneration",
+		rating: 3,
+		num: 6697,
+		isNonstandard: "Future",
+	},
 	polite: {
 		onFractionalPriority: -0.1,
 		onModifyMove(move) {
