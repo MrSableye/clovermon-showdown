@@ -1920,6 +1920,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	highqualityrip: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	thunderdrop: {
 		accuracy: 90,
 		basePower: 100,

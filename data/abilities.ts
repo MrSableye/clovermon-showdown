@@ -11265,7 +11265,7 @@ malediction: {
 			for (const target of pokemon.foes()) {
 				for (const moveSlot of target.moveSlots) {
 					const move = this.dex.moves.get(moveSlot.move);
-					this.add('-activate', pokemon, 'ability: Fourwarn', move, '[of] ' + target);
+					this.add('-activate', pokemon, 'ability: Snooping', move, '[of] ' + target);
 				}
 			}
 		},

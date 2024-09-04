@@ -8722,18 +8722,19 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	qualityrip: {
 		name: "Quality Rip",
-		desc: "The power of this move varies; 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Damage doubles if the target is using Thunder Drop.",
-		shortDesc: "Hits adjacent Pokemon. Power varies; 2x on Thunder Drop.",
-		gen4: {
-			desc: "The power of this move varies. 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Power doubles if the target is using Thunder Drop.",
-		},
+		desc: "The power of this move varies; 5% chances for 10 and 150 power, 10% chances for 30 and 130 power, 20% chances for 50 and 70 power, and 30% chance for 90 power.",
+		shortDesc: "Hits adjacent Pokemon. Power varies between 30 and 150 power.",
 
-		activate: "  Rip Quality: [NUMBER]!",
+		activate: "Rip Quality: [NUMBER]!",
 	},
 	concussion: {
 		name: "Concussion",
 		desc: "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
 		shortDesc: "Lasts 2-3 turns. Confuses the user afterwards.",
+	},
+	highqualityrip: {
+		name: "High Quality Rip",
+		shortDesc: "Only works under terrain. Removes terrain upon use.",
 	},
 	shootingstar: {
 		name: "Shooting Star",
