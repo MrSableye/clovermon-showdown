@@ -7770,7 +7770,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	niceface: {
 		onStart(pokemon) {
-			if (this.field.isTerrain('grassyterrain') && pokemon.species.id === 'blobbosnoice' && !pokemon.transformed) {
+			if (this.field.isTerrain('grassyterrain') && 
+            pokemon.species.id === 'blobbosnoicce' && !pokemon.transformed) {
 				this.add('-activate', pokemon, 'ability: Nice Face');
 				this.effectState.busted = false;
 				pokemon.formeChange('Blobbos-Nice', this.effect, true);
