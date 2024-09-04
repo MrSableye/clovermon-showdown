@@ -11265,7 +11265,7 @@ malediction: {
 			for (const target of pokemon.foes()) {
 				for (const moveSlot of target.moveSlots) {
 					const move = this.dex.moves.get(moveSlot.move);
-					this.add('-activate', pokemon, 'ability: Fourwarn', move, '[of] ' + target);
+					this.add('-activate', pokemon, 'ability: Snooping', move, '[of] ' + target);
 				}
 			}
 		},
@@ -15289,6 +15289,17 @@ malediction: {
 			}
 		},
 		rating: 3,
+		isNonstandard: "Future",
+	},
+	ultimateregeneration: {
+		onResidualOrder: 4,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			this.heal(pokemon.baseMaxhp / 1);
+		},
+		name: "Ultimate Regeneration",
+		rating: 3,
+		num: 6697,
 		isNonstandard: "Future",
 	},
 	polite: {

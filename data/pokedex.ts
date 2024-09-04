@@ -36778,7 +36778,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	seaman: {
 	   num: -42042,
 	   name: "Seaman",
-	   types: ["???", "Water"],
+	   types: ["Water"],
 	   genderRatio: {M: 0.5, F: 0.5},
 	   baseStats: {hp: 89, atk: 46, def: 45, spa: 60, spd: 57, spe: 59},
 	   abilities: {0: "Oblivious", H: "Marvel Scale", S: "Swift Swim"},
@@ -36792,7 +36792,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	barabyss: {
 	   num: -42043,
 	   name: "Barabyss",
-	   types: ["???", "Water"],
+	   types: ["Water"],
 	   genderRatio: {M: 0.5, F: 0.5},
 	   baseStats: {hp: 89, atk: 131, def: 80, spa: 95, spd: 72, spe: 79},
 	   abilities: {0: "Pressure", H: "Stamina", S: "Swift Swim"},
@@ -43105,7 +43105,7 @@ iwik: {
 		baseSpecies: "Blobbos",
 		forme: "Robotnik",
 		types: ["Fire", "Ice"],
-		gender: "N",
+		gender: "M",
 		baseStats: {
 			hp: 111,
 			atk: 17,
@@ -43118,12 +43118,13 @@ iwik: {
 			0: "Steelworker",
 			1: "Analytic",
 			H: "Frisk",
+			S: "Snooping",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
 		color: "Red",
 		eggGroups: [
-			"Ditto",
+			"Mineral",
 		],
 		gen: 8,
 	},

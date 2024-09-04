@@ -4060,6 +4060,10 @@ malediction: {
 		name: "MR-Shadow",
 		shortDesc: "Immune to Ground-type moves and heals for 1% of HP if hit by a Ground-type move. Ghost-type moves do neutral damage on Normal and Dark Pokemon. Every attack has a 50% chance of inflicting toxic on the foe.",
 	},
+	ultimateregeneration: {
+		name: "Ultimate Regeneration",
+		shortDesc: "Heals the holder of this ability for 100% of their health at the end of each turn.",
+	},
 	polite: {
 		name: "Polite",
 		shortDesc: "Moves last. STAB increased to 2.",
