@@ -36778,7 +36778,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	seaman: {
 	   num: -42042,
 	   name: "Seaman",
-	   types: ["???", "Water"],
+	   types: ["Water"],
 	   genderRatio: {M: 0.5, F: 0.5},
 	   baseStats: {hp: 89, atk: 46, def: 45, spa: 60, spd: 57, spe: 59},
 	   abilities: {0: "Oblivious", H: "Marvel Scale", S: "Swift Swim"},
@@ -36792,7 +36792,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	barabyss: {
 	   num: -42043,
 	   name: "Barabyss",
-	   types: ["???", "Water"],
+	   types: ["Water"],
 	   genderRatio: {M: 0.5, F: 0.5},
 	   baseStats: {hp: 89, atk: 131, def: 80, spa: 95, spd: 72, spe: 79},
 	   abilities: {0: "Pressure", H: "Stamina", S: "Swift Swim"},
