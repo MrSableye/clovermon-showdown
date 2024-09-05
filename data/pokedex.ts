@@ -37215,7 +37215,7 @@ doomsay: {
 	types: ["Ghost", "Psychic"],
 	genderRatio: {M: 0.5, F: 0.5},
 	baseStats: {hp: 33, atk: 162, def: 33, spa: 100, spd: 100, spe: 101},
-	abilities: {0: "Levitate"},
+	abilities: {0: "Klutz", H: "Levitate", S: "Old School"},
 	heightm: 1.87,
 	weightkg: 80.37,
 	color: "Brown",
