@@ -15,6 +15,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			},
 		},
 	},
+	triattack: {
+		inherit: true,
+		desc: "Has a 20% chance to either burn, freeze, or paralyze the target. Physical if user's Atk > Sp. Atk.",
+		shortDesc: "20% chance to paralyze or burn or freeze target. Physical if user's Atk > Sp. Atk.",
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+	},
 	closeblobmat: {
 		inherit: true,
 		isNonstandard: null,
@@ -44,10 +52,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	skullcannon: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	dustcannon: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -488,14 +492,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	mouthmelter: {
 		inherit: true,
 		isNonstandard: null,
-	},
-	triattack: {
-		inherit: true,
-		desc: "Has a 20% chance to either burn, freeze, or paralyze the target. Physical if user's Atk > Sp. Atk.",
-		shortDesc: "20% chance to paralyze or burn or freeze target. Physical if user's Atk > Sp. Atk.",
-		onModifyMove(move, pokemon) {
-			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
-		},
 	},
 	terrainpulse: {
 		inherit: true,
@@ -1034,6 +1030,80 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		maxMove: {basePower: 140},
 		desc: "Hits three times. Each hit increases by 20 power but each hit can also miss.",
 		shortDesc: "Hits three times. Each hit can miss but power rises.",
+		inherit: true,
+		isNonstandard: null,
+	},
+	hydrosteam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psyblade: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bloodmoon: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	syrupbomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	snaptrap: {
+		num: 779,
+		accuracy: 100,
+		basePower: 45,
+		category: "Physical",
+		name: "Snap Trap",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+	},
+	crosspoison: {
+		num: 440,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Cross Poison",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, slicing: 1, mirror: 1},
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		desc: "Always Crits.",
+		shortDesc: "Always results in a critical hit.",
+	},
+	ivycudgel: {
+		num: 904,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Ivy Cudgel",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		critRatio: 2,
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Beautiful",
+		desc: "Uses the users Primary typing for the typing of this move. High crit ratio.",
+		shortDesc: "Type varies based on user's primary type. +2 Crit Ratio.",
+	},
+	matchagotcha: {
+		inherit: true,
+		isNonstandard: null,
 	},
 	mortalspin: {
 		inherit: true,
@@ -1063,7 +1133,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	
 	makeitrain: {
 		inherit: true,
 		isNonstandard: null,
@@ -1161,27 +1230,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	hydrosteam: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	psyblade: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	bloodmoon: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	syrupbomb: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	
-	matchagotcha: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	laserbeam: {
 		inherit: true,
 		isNonstandard: null,
@@ -1231,6 +1279,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	tridentcharge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blackfire: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1383,6 +1435,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	dustcannon: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	squash: {
 		inherit: true,
 		isNonstandard: null,
@@ -1447,6 +1503,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	scavenge: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	glacialgroove: {
 		inherit: true,
 		isNonstandard: null,
@@ -1458,58 +1518,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	carcrash: {
 		inherit: true,
 		isNonstandard: null,
-	},
-	snaptrap: {
-		num: 779,
-		accuracy: 100,
-		basePower: 45,
-		category: "Physical",
-		name: "Snap Trap",
-		pp: 15,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		volatileStatus: 'partiallytrapped',
-		secondary: null,
-		target: "normal",
-		type: "Steel",
-	},
-	crosspoison: {
-		num: 440,
-		accuracy: 100,
-		basePower: 75,
-		category: "Physical",
-		name: "Cross Poison",
-		pp: 5,
-		priority: 0,
-		flags: {contact: 1, protect: 1, slicing: 1, mirror: 1},
-		willCrit: true,
-		secondary: null,
-		target: "normal",
-		type: "Poison",
-		desc: "Always Crits.",
-		shortDesc: "Always results in a critical hit.",
-	},
-	ivycudgel: {
-		num: 904,
-		accuracy: 100,
-		basePower: 100,
-		category: "Physical",
-		name: "Ivy Cudgel",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		critRatio: 2,
-		onModifyType(move, pokemon) {
-			let type = pokemon.getTypes()[0];
-			if (type === "Bird") type = "???";
-			move.type = type;
-		},
-		secondary: null,
-		target: "normal",
-		type: "Normal",
-		contestType: "Beautiful",
-		desc: "Uses the users Primary typing for the typing of this move. High crit ratio.",
-		shortDesc: "Type varies based on user's primary type. +2 Crit Ratio.",
 	},
 	ominouswind: {
 		num: 466,
@@ -1662,6 +1670,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		desc: "Has a 20% chance of lowering special attack upon hit",
 		shortDesc: "20% chance to lower the target's Spatk. by 1.",
 	},
+	armthrust: {
+		inherit: true,
+		basePower: 25,
+		isNonstandard: null,
+	},
 	spore: {
 		num: 147,
 		accuracy: 100,
@@ -1677,6 +1690,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Grass",
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Beautiful",
+	},
+	cuttingwaves: {
+		inherit: true,
+		isNonstandard: null,
 	},
 	uturn: {
 		inherit: true,
@@ -1703,11 +1720,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		basePower: 65,
 		isNonstandard: null,
 	},
-	armthrust: {
-		inherit: true,
-		basePower: 25,
-		isNonstandard: null,
-	},
 	sadpoem: {
 		inherit: true,
 		isNonstandard: null,
@@ -1724,6 +1736,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	haste: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	sharpeyes: {
 		inherit: true,
 		isNonstandard: null,
@@ -1737,10 +1753,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	errpkmn: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	cuttingwaves: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1773,6 +1785,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	genesisboost: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	scryingwish: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	techslash: {
 		inherit: true,
 		isNonstandard: null,
@@ -1802,14 +1822,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	genesisblast: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	genesisboost: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	scryingwish: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1905,6 +1917,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	frostyterrain: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	highqualityrip: {
 		inherit: true,
 		isNonstandard: null,
 	},

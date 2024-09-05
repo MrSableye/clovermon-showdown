@@ -3203,6 +3203,14 @@ malediction: {
 		activate: "  [TARGET]'s [MOVE] was revealed!",
 		activateNoTarget: "  [POKEMON]'s Fourwarn alerted it to [MOVE]!",
 	},
+	snooping: {
+		name: "Snooping",
+		desc: "On switch-in, this Pokemon is alerted to every opponent's move.",
+		shortDesc: "On switch-in, this Pokemon is alerted to every opponent's move.",
+
+		activate: "  [TARGET]'s [MOVE] was revealed!",
+		activateNoTarget: "  [POKEMON] is snooping as usual and was alerted to [MOVE]!",
+	},
 	anythingyoucando: {
 		name: "Anything You Can Do",
 		shortDesc: "All foes that used the same move as this Pokemon lose 1/8 HP at the end of the turn.",
@@ -4051,6 +4059,10 @@ malediction: {
 	mrshadow: {
 		name: "MR-Shadow",
 		shortDesc: "Immune to Ground-type moves and heals for 1% of HP if hit by a Ground-type move. Ghost-type moves do neutral damage on Normal and Dark Pokemon. Every attack has a 50% chance of inflicting toxic on the foe.",
+	},
+	ultimateregeneration: {
+		name: "Ultimate Regeneration",
+		shortDesc: "Heals the holder of this ability for 100% of their health at the end of each turn.",
 	},
 	polite: {
 		name: "Polite",

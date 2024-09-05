@@ -18080,6 +18080,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Tempest Capsule",
 		spritenum: 0,
 		num: 67381,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('tempest');
+			target.useItem();
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},

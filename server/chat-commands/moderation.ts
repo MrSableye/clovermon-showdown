@@ -1072,9 +1072,13 @@ export const commands: Chat.ChatCommands = {
 
 	forceglobalban: 'globalban',
 	gban: 'globalban',
+	yearglobalban: 'globalban',
+	forceyearglobalban: 'globalban',
+	yearforceglobalban: 'globalban',
 	async globalban(target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help globalban');
 		const force = cmd.includes('force');
+		const isYear = cmd.includes('year');
 
 		const {targetUser, inputUsername, targetUsername, rest: reason} = this.splitUser(target);
 		let userid: ID = toID(targetUsername);
@@ -1116,12 +1120,12 @@ export const commands: Chat.ChatCommands = {
 		targetUser?.popup(
 			`|modal|${user.name} has globally banned you.${(publicReason ? `\n\nReason: ${publicReason}` : ``)} ` +
 			`${(Config.appealurl ? `\n\nIf you feel that your ban was unjustified, you can appeal:\n${Config.appealurl}` : ``)}` +
-			`\n\nYour ban will expire in a few days.`
+			`\n\nYour ban will expire in a ${isYear ? 'year' : 'few days'}.`
 		);
 
 		this.addGlobalModAction(`${name} was globally banned by ${user.name}.${(publicReason ? ` (${publicReason})` : ``)}`);
 
-		const affected = await Punishments.ban(userid, null, null, false, publicReason);
+		const affected = await Punishments.ban(userid, isYear ? Date.now() + 365 * 24 * 60 * 60 * 1000 : null, null, false, publicReason);
 		const acAccount = (targetUser && targetUser.autoconfirmed !== userid && targetUser.autoconfirmed);
 		let displayMessage = '';
 		if (affected.length > 1) {
