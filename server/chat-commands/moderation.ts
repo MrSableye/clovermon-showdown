@@ -1073,6 +1073,8 @@ export const commands: Chat.ChatCommands = {
 	forceglobalban: 'globalban',
 	gban: 'globalban',
 	yearglobalban: 'globalban',
+	forceyearglobalban: 'globalban',
+	yearforceglobalban: 'globalban',
 	async globalban(target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help globalban');
 		const force = cmd.includes('force');
