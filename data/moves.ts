@@ -23222,6 +23222,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rock",
 		contestType: "Tough",
 	},
+	carvingbeak: {
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Carving Beak",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.status === 'par') {
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
 	awaken: {
 		num: 42007,
 		accuracy: true,

@@ -2550,6 +2550,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "At the end of every turn, heals user and allies for 1/10 of their max HP and 1 PP to one of their moves.",
 		activate: "  [SOURCE]'s Dispenser restored the PP of [TARGET]'s [MOVE] by 1!",
 	},
+	fakeassdispenserclone: {
+		name: "Fake-Ass Dispenser Clone",
+		shortDesc: "At the end of every turn, heals user and allies for 1/16 of their max HP and recycles the user's item.",
+		addItem: "  [POKEMON] dispensed another [ITEM]!",
+	},
 	eclipse: {
 		name: "Eclipse",
 		desc: "On switch-in, removes Sunny Day and Desolate Land for a stat boost.",
@@ -2573,7 +2578,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	oldschool: {
 		name: "Old School",
-		desc: "THe user's high crit ratio moves always crit.",
+		desc: "The user's high crit ratio moves always crit.",
 	},
 	omniscience: {
 		name: "Omniscience",
