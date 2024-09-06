@@ -7454,6 +7454,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add('-heal', ally, ally.getHealth);
 			}
 			if (pokemon.hp && !pokemon.item) {
+				if (pokemon.item || !pokemon.lastItem) return false;
 				pokemon.setItem(pokemon.lastItem);
 				pokemon.lastItem = '';
 				this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Fake-Ass Dispenser Clone');
@@ -11856,7 +11857,6 @@ malediction: {
 		name: "Color Boost",
 		onAfterTypeChange(typeChange, pokemon) {
 			if (this.effectState.colorBoost) return;
-			console.log(typeChange);
 			const [oldTypes, newTypes] = typeChange;
 			if (oldTypes.join('/') === newTypes.join('/')) return;
 			pokemon.addVolatile('colorboost');
