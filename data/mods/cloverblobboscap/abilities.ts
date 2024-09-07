@@ -636,6 +636,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	snooping: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	regenerator: {
 		onSwitchOut(pokemon) {
 			pokemon.heal(pokemon.baseMaxhp / 5);

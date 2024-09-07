@@ -330,7 +330,7 @@
           "sludgebomb"
         ],
         "lockedMoves": [
-          "bloodbpump"
+          "bloodpump"
         ],
         "level": 84
       }
@@ -5453,7 +5453,7 @@
           "wifebeater"
         ],
         "lockedMoves": [
-          "kingshield"
+          "kingsshield"
         ],
         "level": 84       
       }
@@ -5469,7 +5469,7 @@
       ],
       "items": [
         "boisonberry",
-        "silfscarf",
+        "silkscarf",
         "toxicorb"
       ],
       "moves": [     
@@ -6085,6 +6085,65 @@
       }
     ]
   },
+  "tbreloom": {
+    "nicknames": [
+      "TBreloom"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "lifeorb",
+          "focussash",
+          "shatteringhammer"
+        ],
+        "moves": [
+          "aerialace",
+          "swordsdance",
+          "bulldoze",
+          "brutalswing",
+          "lowsweep",
+          "poisontail",
+          "pollenseason"
+        ],
+        "lockedMoves": [
+          "decaytouch",
+          "bulletseed"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "quachildust": {
+    "nicknames": [
+      "Quachildust"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "cursedbody"
+        ],
+        "items": [
+          "lifeorb",
+          "rockyhelmet",
+          "angelpowder"
+        ],
+        "moves": [
+          "paranoia",
+          "calmmind",
+          "thunderwave",
+          "invokedread"
+        ],
+        "lockedMoves": [
+          "decaytouch",
+          "dusttodust"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "Beachreimu": {
     "nicknames": [
       "Beach Reimu"
@@ -6308,7 +6367,134 @@
       }
     ]
   },
-
+"shinigazam": {
+    "nicknames": [
+      "Shinigazam"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicguard"
+        ],
+        "items": [
+          "lifeorb",
+          "focussash"
+        ],
+        "moves": [
+          "bloodspikes",
+          "fellblood",
+          "knockoff",
+          "firepunch",
+          "icepunch",
+          "thunderpunch",
+          "guardsplit"
+        ],
+        "lockedMoves": [
+          "gash"
+        ],
+        "level": 82
+      }
+    ]
+  },
+  "lilithmon": {
+    "nicknames": [
+      "Lilithmon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "siphon"
+        ],
+        "items": [
+          "vampirefangs"
+        ],
+        "moves": [
+          "mindfogger",
+          "bloodbite",
+          "vampirebite"
+        ],
+        "lockedMoves": [
+          "darknesslove",
+          "loveburst"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "azombarill": {
+    "nicknames": [
+      "Azombarill"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "hugepower"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "glitzblitz",
+          "knockoff",
+          "shamble"
+        ],
+        "lockedMoves": [
+          "undeadagony",
+          "aquatail"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "ridleyuge": {
+    "nicknames": [
+      "Isridley"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "dracometeor",
+          "fireblast",
+          "meteormash"
+        ],
+        "lockedMoves": [
+          "deepimpact"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ironreaper": {
+    "nicknames": [
+      "Isridley"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "pinpoint",
+          "aerialace",
+          "clamp",
+          "rottedclaw"
+        ],
+        "lockedMoves": [
+          "takeflight"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "standoearthwindandfire": {
     "nicknames": [
       "Stando-EarthWindandFire"

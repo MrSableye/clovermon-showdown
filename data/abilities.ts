@@ -7440,6 +7440,30 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		isNonstandard: "Future",
 	},
+	fakeassdispenserclone: {
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onResidual(pokemon, source, effect) {
+			let activated = false;
+			for (const ally of pokemon.alliesAndSelf()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Fake-Ass Dispenser Clone');
+					activated = true;
+				}
+				ally.heal(ally.baseMaxhp / 16);
+				this.add('-heal', ally, ally.getHealth);
+			}
+			if (pokemon.hp && !pokemon.item) {
+				if (pokemon.item || !pokemon.lastItem) return false;
+				pokemon.setItem(pokemon.lastItem);
+				pokemon.lastItem = '';
+				this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Fake-Ass Dispenser Clone');
+			}
+		},
+		name: "Fake-Ass Dispenser Clone",
+		rating: 4,
+		isNonstandard: "Future",
+	},
 	leech: {
 		onModifyMove(move) {
 			if (!move?.flags['contact'] || move.target === 'self') return;
@@ -7770,7 +7794,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	niceface: {
 		onStart(pokemon) {
-			if (this.field.isTerrain('grassyterrain') && pokemon.species.id === 'blobbosnoice' && !pokemon.transformed) {
+			if (this.field.isTerrain('grassyterrain') && 
+            pokemon.species.id === 'blobbosnoicce' && !pokemon.transformed) {
 				this.add('-activate', pokemon, 'ability: Nice Face');
 				this.effectState.busted = false;
 				pokemon.formeChange('Blobbos-Nice', this.effect, true);
@@ -8394,18 +8419,68 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-activate', pokemon, 'ability: G-Max Comatose');
 			return null;
 		},
-		// onBasePowerPriority: 19,
-		// onBasePower(basePower, attacker, defender, move) {
-		// 	if (move.flags['gmax']) {
-		//		return this.chainModify(50);
-		//	}
-		//	if (move.flags['max']) {
-		//		return this.chainModify(50);
-		//	}
-		//},
-		// THIS ENTIRE SECTION HAS BEEN TURNED INTO A COMMENT BECAUSE THE CODE DOES NOT WORK.
-		// YOU HAVE TO MANUALLY DEFINE EVERY SINGLE GMAX OR MAX MOVE AS A "gmax" OR "max" FLAGGED MOVE BECAUSE THESE FLAGS DO NOT ALREADY EXIST.
-		// IT WILL NOT LET ME TEST WITH THESE ERRORS SO IT HAS BEEN TEMPORARILY DISABLED UNTIL SOMEONE FIXES IT.
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			const maxMoves = [
+				'gmaxblobbomb',
+				'gmaxbefuddle',
+				'gmaxcannonade',
+				'gmaxchistrike',
+				'gmaxcentiferno',
+				'gmaxcuddle',
+				'gmaxdepletion',
+				'gmaxdepletion',
+				'gmaxdrumsolo',
+				'gmaxfinale',
+				'gmaxfireball',
+				'gmaxfoamburst',
+				'gmaxgoldrush',
+				'gmaxgravitas',
+				'gmaxoneblow',
+				'gmaxhydrosnipe',
+				'gmaxmalodor',
+				'gmaxmeltdown',
+				'gmaxrapidflow',
+				'gmaxreplenish',
+				'gmaxresonance',
+				'gmaxsandblast',
+				'gmaxsmite',
+				'gmaxsnooze',
+				'gmaxsteelsurge',
+				'gmaxstonesurge',
+				'gmaxstunshock',
+				'gmaxsweetness',
+				'gmaxtartness',
+				'gmaxterror',
+				'gmaxvinelash',
+				'gmaxvolcalith',
+				'gmaxvoltcrash',
+				'gmaxwildfire',
+				'gmaxwindrage',
+				'maxairstream',
+				'maxdarkness',
+				'maxflare',
+				'maxflutterby',
+				'maxgeyser',
+				'maxhailstorm',
+				'maxknuckle',
+				'maxlightning',
+				'maxmindstorm',
+				'maxooze',
+				'maxovergrowth',
+				'maxphantasm',
+				'maxquake',
+				'maxstarfall',
+				'maxrockfall',
+				'maxsteelspike',
+				'maxstrike',
+				'maxwyrmwind',
+			];
+			if (maxMoves.includes(move.id)) {
+				this.debug('G-Max Comatose boost');
+				return this.chainModify(50);
+			}
+		},
 		name: "G-Max Comatose",
 		isNonstandard: "Future",
 		rating: 4,
@@ -11209,6 +11284,18 @@ malediction: {
 		name: "Fourwarn",
 		isNonstandard: "Future",
 	},
+	snooping: {
+		onStart(pokemon) {
+			for (const target of pokemon.foes()) {
+				for (const moveSlot of target.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.move);
+					this.add('-activate', pokemon, 'ability: Snooping', move, '[of] ' + target);
+				}
+			}
+		},
+		name: "Snooping",
+		isNonstandard: "Future",
+	},
 	anythingyoucando: {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,
@@ -11770,7 +11857,6 @@ malediction: {
 		name: "Color Boost",
 		onAfterTypeChange(typeChange, pokemon) {
 			if (this.effectState.colorBoost) return;
-			console.log(typeChange);
 			const [oldTypes, newTypes] = typeChange;
 			if (oldTypes.join('/') === newTypes.join('/')) return;
 			pokemon.addVolatile('colorboost');
@@ -15226,6 +15312,17 @@ malediction: {
 			}
 		},
 		rating: 3,
+		isNonstandard: "Future",
+	},
+	ultimateregeneration: {
+		onResidualOrder: 4,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			this.heal(pokemon.baseMaxhp / 1);
+		},
+		name: "Ultimate Regeneration",
+		rating: 3,
+		num: 6697,
 		isNonstandard: "Future",
 	},
 	polite: {

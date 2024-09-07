@@ -15,6 +15,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			},
 		},
 	},
+	triattack: {
+		inherit: true,
+		desc: "Has a 20% chance to either burn, freeze, or paralyze the target. Physical if user's Atk > Sp. Atk.",
+		shortDesc: "20% chance to paralyze or burn or freeze target. Physical if user's Atk > Sp. Atk.",
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+	},
 	closeblobmat: {
 		inherit: true,
 		isNonstandard: null,
@@ -52,10 +60,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	gunshot: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	recoilshot: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -282,15 +286,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	electromagnetism: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	splishysplash: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	titaniumclap: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -470,30 +466,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	waterpledge: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	glassing: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	meltedplastic: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	recycleray: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	plasticterrain: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	fadereflection: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	plasticblaze: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1038,6 +1010,98 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	tripledive: {
+		num: 865,
+		accuracy: 95,
+		basePower: 30,
+		basePowerCallback(pokemon, target, move) {
+			return 20 * move.hit;
+		},
+		category: "Physical",
+		name: "Triple Dive",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 3,
+		multiaccuracy: true,
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		zMove: {basePower: 120},
+		maxMove: {basePower: 140},
+		desc: "Hits three times. Each hit increases by 20 power but each hit can also miss.",
+		shortDesc: "Hits three times. Each hit can miss but power rises.",
+		inherit: true,
+		isNonstandard: null,
+	},
+	hydrosteam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psyblade: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bloodmoon: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	syrupbomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	snaptrap: {
+		num: 779,
+		accuracy: 100,
+		basePower: 45,
+		category: "Physical",
+		name: "Snap Trap",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+	},
+	crosspoison: {
+		num: 440,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Cross Poison",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, slicing: 1, mirror: 1},
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		desc: "Always Crits.",
+		shortDesc: "Always results in a critical hit.",
+	},
+	ivycudgel: {
+		num: 904,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Ivy Cudgel",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		critRatio: 2,
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Beautiful",
+		desc: "Uses the users Primary typing for the typing of this move. High crit ratio.",
+		shortDesc: "Type varies based on user's primary type. +2 Crit Ratio.",
+	},
+	matchagotcha: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1066,10 +1130,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	aquastep: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	ragingbull: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1375,6 +1435,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	dustcannon: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	squash: {
 		inherit: true,
 		isNonstandard: null,
@@ -1534,6 +1598,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Steel",
 		contestType: "Beautiful",
+		desc: "Has a 20% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "20% chance to lower the target's Spdef. by 1.",
 	},
 	rockslide: {
 		num: 157,
@@ -1601,6 +1667,13 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Fairy",
 		contestType: "Beautiful",
+		desc: "Has a 20% chance of lowering special attack upon hit",
+		shortDesc: "20% chance to lower the target's Spatk. by 1.",
+	},
+	armthrust: {
+		inherit: true,
+		basePower: 25,
+		isNonstandard: null,
 	},
 	spore: {
 		num: 147,
@@ -1617,6 +1690,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Grass",
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Beautiful",
+	},
+	cuttingwaves: {
+		inherit: true,
+		isNonstandard: null,
 	},
 	uturn: {
 		inherit: true,
@@ -1696,13 +1773,23 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
-		drain: [3, 4],
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
 		contestType: "Cute",
+		desc: "The user heals for 1/2 of how much damage dealt to the opponent.",
+		shortDesc: "Heals for 50% of damage dealt to the opponent.",
 	},
 	rocketboost: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	genesisboost: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	scryingwish: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1738,9 +1825,268 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-
-coldreception: {
+	meteor: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	unload: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	prismspray: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dragoonslash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hydropump: {
+		num: 56,
+		accuracy: 85,
+		basePower: 110,
+		category: "Special",
+		name: "Hydro Pump",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "normal",
+		type: "Water",
+		contestType: "Beautiful",
+		desc: "Has a 10% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "10% chance to lower the target's Speed by 1.",
+	},
+		focusblast: {
+		inherit: true,
+		accuracy: 85,
+		basePower: 110,
+		isNonstandard: null,
+	},
+	dualwingbeat: {
+		inherit: true,
+		accuracy: 100,
+		isNonstandard: null,
+	},
+	dreameater: {
+		num: 138,
+		accuracy: 100,
+		basePower: 65,
+		category: "Special",
+		name: "Dream Eater",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		onBasePower(basePower, pokemon, target) {
+			if (target.status === 'slp' || target.hasAbility('comatose')) {
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		zMove: {basePower: 160},
+		contestType: "Clever",
+		desc: "The initial damage of this move is altered only when the target is asleep. Then, this moves power is doubled. Only doubles in power for sleeping targets.",
+		shortDesc: "User gains 1/2 of targets HP inflicted. Doubles damage against sleeping targets.",
+	},
+	finishingtouch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lasagnatoss: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	needlepulse: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lightningblastwave: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fivenights: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	frostyterrain: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	highqualityrip: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	thunderdrop: {
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		name: "Thunder Drop",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		onMoveFail(target, source) {
+			source.trySetStatus('par');
+			},
+		secondary: {
+			chance: 20,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Electric",
+		desc: "20% Chance to Para. If this attack misses, hits a protection move or a ground type, paralyzes the user.",
+		shortDesc: "20% Para chance. Paralyzes user if this move fails.",
+	},
+	ragingbull: {
+		num: 873,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Raging Bull",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		desc: "Uses the users Primary typing for the typing of this move. Destroys Reflect, Light Screen and Aurora Veil.",
+		shortDesc: "Type varies based on user's primary type. Destroys screens.",
+	},
+	toxic: {
+		num: 92,
+		accuracy: 90,
+		basePower: 0,
+		category: "Status",
+		name: "Toxic",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		// No Guard-like effect for Poison-type users implemented in Scripts#tryMoveHit
+		status: 'tox',
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		zMove: {boost: {def: 1}},
+		contestType: "Clever",
+	},
+	protect: {
+		num: 182,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Protect",
+		pp: 5,
+		priority: 4,
+		flags: {noassist: 1, failcopycat: 1},
+		stallingMove: true,
+		volatileStatus: 'protect',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect']) {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				return this.NOT_FAIL;
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Cute",
+	},
+	eggbomb: {
+		num: 121,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Egg Bomb",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
+		},
+		target: "normal",
+		type: "Normal",
+		contestType: "Cute",
+		desc: "Has a 100% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "100% chance to lower the target's Defense by 1.",
+	},
+	suffocate: {
+		num: 42017,
+		accuracy: 70,
+		basePower: 15,
+		category: "Physical",
+		name: "Suffocate",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Dark",
+		contestType: "Beautiful",
+	},
+	landswrath: {
+		inherit: true,
+		basePower: 80,
+		pp: 5,
+		onModifyMove(move, pokemon) {
+			if (this.field.terrain && pokemon.isGrounded()) {
+				move.basePower *= 2;
+				this.debug('BP doubled in Terrain');
+			}
+		},
+		desc: "Power doubles if the user is grounded and a terrain is active.",
+		shortDesc: "User on terrain: power doubles.",
 	},
 };

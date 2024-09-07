@@ -2550,6 +2550,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "At the end of every turn, heals user and allies for 1/10 of their max HP and 1 PP to one of their moves.",
 		activate: "  [SOURCE]'s Dispenser restored the PP of [TARGET]'s [MOVE] by 1!",
 	},
+	fakeassdispenserclone: {
+		name: "Fake-Ass Dispenser Clone",
+		shortDesc: "At the end of every turn, heals user and allies for 1/16 of their max HP and recycles the user's item.",
+		addItem: "  [POKEMON] dispensed another [ITEM]!",
+	},
 	eclipse: {
 		name: "Eclipse",
 		desc: "On switch-in, removes Sunny Day and Desolate Land for a stat boost.",
@@ -2573,7 +2578,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	oldschool: {
 		name: "Old School",
-		desc: "THe user's high crit ratio moves always crit.",
+		desc: "The user's high crit ratio moves always crit.",
 	},
 	omniscience: {
 		name: "Omniscience",
@@ -3202,6 +3207,14 @@ malediction: {
 
 		activate: "  [TARGET]'s [MOVE] was revealed!",
 		activateNoTarget: "  [POKEMON]'s Fourwarn alerted it to [MOVE]!",
+	},
+	snooping: {
+		name: "Snooping",
+		desc: "On switch-in, this Pokemon is alerted to every opponent's move.",
+		shortDesc: "On switch-in, this Pokemon is alerted to every opponent's move.",
+
+		activate: "  [TARGET]'s [MOVE] was revealed!",
+		activateNoTarget: "  [POKEMON] is snooping as usual and was alerted to [MOVE]!",
 	},
 	anythingyoucando: {
 		name: "Anything You Can Do",
@@ -4051,6 +4064,10 @@ malediction: {
 	mrshadow: {
 		name: "MR-Shadow",
 		shortDesc: "Immune to Ground-type moves and heals for 1% of HP if hit by a Ground-type move. Ghost-type moves do neutral damage on Normal and Dark Pokemon. Every attack has a 50% chance of inflicting toxic on the foe.",
+	},
+	ultimateregeneration: {
+		name: "Ultimate Regeneration",
+		shortDesc: "Heals the holder of this ability for 100% of their health at the end of each turn.",
 	},
 	polite: {
 		name: "Polite",
