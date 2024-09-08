@@ -3214,7 +3214,7 @@ malediction: {
 		shortDesc: "On switch-in, this Pokemon is alerted to every opponent's move.",
 
 		activate: "  [TARGET]'s [MOVE] was revealed!",
-		activateNoTarget: "  [POKEMON] is snooping as usual and was alerted to [MOVE]!",
+		activateNoTarget: "  [POKEMON]'s Snooping alerted it to [MOVE]!",
 	},
 	anythingyoucando: {
 		name: "Anything You Can Do",
