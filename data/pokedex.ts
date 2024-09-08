@@ -52923,6 +52923,36 @@ frillazar: {
 		gen: 8,
 		requiredItem: "Haremite",
 	},
+	hyletrackmega: {
+		num: 69065,
+		name: "Hyletrack-Mega",
+		baseSpecies: "Hyletrack",
+		forme: "Mega",
+		types: [
+			"Fire",
+			"Steel",
+		],
+		gender: "N",
+		baseStats: {
+			hp: 80,
+			atk: 115,
+			def: 110,
+			spa: 90,
+			spd: 95,
+			spe: 135,
+		},
+		abilities: {
+			0: "Turboblaze",
+		},
+		heightm: 12.8,
+		weightkg: 1330,
+		color: "Gray",
+		eggGroups: [
+			"Mineral",
+		],
+		gen: 8,
+		requiredItem: "Hyletrackite",
+	},
 	woot: {
 		num: 666000,
 		name: "Woot",

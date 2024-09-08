@@ -10947,6 +10947,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	hyletrackmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	chaneddit: {
 		tier: "Illegal",
 		isNonstandard: "Future",
