@@ -4326,7 +4326,7 @@
           "hydropump"
         ],
         "lockedMoves": [
-          "disharge"
+          "discharge"
         ],
         "level": 84
       },
@@ -6329,7 +6329,7 @@
         ],
         "moves": [
           "guro",
-          "rustedsword",
+          "rustyblade",
           "spite",
           "marssword"
         ],

@@ -11573,6 +11573,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	hyletrackmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	blobbosforbidden: {
 		tier: "OU",
 		isNonstandard: null,

@@ -2653,7 +2653,11 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	haremite: {
 		name: "Haremite",
-		desc: "If held by an Haremite, this item allows it to Mega Evolve in battle.",
+		desc: "If held by a Haremite, this item allows it to Mega Evolve in battle.",
+	},
+	hyletrackite: {
+		name: "Hyletrackite",
+		desc: "If held by a Hyletrack, this item allows it to Mega Evolve in battle.",
 	},
 	masamune: {
 		name: "Masamune",
