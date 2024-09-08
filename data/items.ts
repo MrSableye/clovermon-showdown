@@ -9457,6 +9457,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	hyletrackite: {
+		name: "Hyletrackite",
+		spritenum: 577,
+		megaStone: "Hyletrack-Mega",
+		megaEvolves: "Hyletrack",
+		itemUser: ["Hyletrack"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	fusjiniumz: {
 		name: "Fusjinium Z",
 		spritenum: 686,

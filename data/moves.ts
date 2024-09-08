@@ -42219,6 +42219,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		multihit: [2, 5],
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -42233,6 +42234,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bullet: 1},
 		secondary: null,
+		multihit: [2, 5],
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -51381,6 +51383,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		onModifyMove(move, pokemon) {
+			if (['hail', 'snow'].includes(pokemon.effectiveWeather())) move.boosts = {def: 2, spd: 2};
+		},
+		boosts: {
+			def: 1,
+			spd: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Ice",
@@ -52627,7 +52636,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -58897,6 +58909,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, bullet: 1},
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+		},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -60927,7 +60942,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future",
@@ -63134,7 +63156,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -64064,6 +64089,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		boosts: {
+			atk: 1,
+			spa: 1,
+		},
 		target: "adjacentAlly",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -72590,7 +72619,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -81913,6 +81947,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		multihit: [2, 5],
 		target: "normal",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -86883,6 +86918,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['attract']) {
+				return this.chainModify(1.5);
+			}
+		},
+		volatileStatus: 'partiallytrapped',
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -88133,6 +88174,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: null,
+		multihit: [2, 5],
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
