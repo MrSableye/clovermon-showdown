@@ -28778,8 +28778,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	gmaxblobbomb: {
 		num: 69028,
-		accuracy: 100,
-		basePower: 160,
+		accuracy: true,
+		basePower: 10,
 		category: "Physical",
 		name: "G-Max Blob Bomb",
 		pp: 5,
