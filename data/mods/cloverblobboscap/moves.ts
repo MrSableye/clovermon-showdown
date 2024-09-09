@@ -2702,7 +2702,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	gmaxfireball: {
 		num: 1000,
 		accuracy: true,
-		basePower: 60,
+		basePower: 10,
 		category: "Physical",
 		name: "G-Max Fireball",
 		pp: 5,
