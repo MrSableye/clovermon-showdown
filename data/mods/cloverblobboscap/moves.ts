@@ -2076,6 +2076,1217 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Dark",
 		contestType: "Beautiful",
 	},
+	maxairstream: {
+		num: 766,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "Max Airstream",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, wind: 1},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				for (const pokemon of source.alliesAndSelf()) {
+					this.boost({spe: 1}, pokemon);
+				}
+			},
+		},
+		target: "adjacentFoe",
+		type: "Flying",
+		contestType: "Cool",
+	},
+	maxdarkness: {
+		num: 772,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "Max Darkness",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				for (const pokemon of source.foes()) {
+					this.boost({spd: -1}, pokemon);
+				}
+			},
+		},
+		target: "adjacentFoe",
+		type: "Dark",
+		contestType: "Cool",
+	},
+	maxflare: {
+		num: 757,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		isNonstandard: "Past",
+		name: "Max Flare",
+		pp: 10,
+		priority: 0,
+	   flags: {protect: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				this.field.setWeather('sunnyday');
+			},
+		},
+		target: "adjacentFoe",
+		type: "Fire",
+		contestType: "Cool",
+	},
+	maxflutterby: {
+		num: 758,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "Max Flutterby",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				for (const pokemon of source.foes()) {
+					this.boost({spa: -1}, pokemon);
+				}
+			},
+		},
+		target: "adjacentFoe",
+		type: "Bug",
+		contestType: "Cool",
+	},
+	maxgeyser: {
+		num: 765,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "Max Geyser",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				this.field.setWeather('raindance');
+			},
+		},
+		target: "adjacentFoe",
+		type: "Water",
+		contestType: "Cool",
+	},
+	maxguard: {
+		num: 743,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Max Guard",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'protect',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'Max Guard');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				const bypassesMaxGuard = [
+					'acupressure', 'afteryou', 'allyswitch', 'aromatherapy', 'aromaticmist', 'coaching', 'confide', 'copycat', 'curse', 'decorate', 'doomdesire', 'feint', 'futuresight', 'gmaxoneblow', 'gmaxrapidflow', 'healbell', 'holdhands', 'howl', 'junglehealing', 'lifedew', 'meanlook', 'perishsong', 'playnice', 'powertrick', 'roar', 'roleplay', 'tearfullook',
+				];
+				if (bypassesMaxGuard.includes(move.id)) return;
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Max Guard');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				return this.NOT_FAIL;
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		contestType: "Cool",
+	},
+	maxhailstorm: {
+		num: 763,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "Max Hailstorm",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				this.field.setWeather('hail');
+			},
+		},
+		target: "adjacentFoe",
+		type: "Ice",
+		contestType: "Cool",
+	},
+	maxknuckle: {
+		num: 761,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "Max Knuckle",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				for (const pokemon of source.alliesAndSelf()) {
+					this.boost({atk: 1}, pokemon);
+				}
+			},
+		},
+		target: "adjacentFoe",
+		type: "Fighting",
+		contestType: "Cool",
+	},
+	maxlightning: {
+		num: 759,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "Max Lightning",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				this.field.setTerrain('electricterrain');
+			},
+		},
+		target: "adjacentFoe",
+		type: "Electric",
+		contestType: "Cool",
+	},
+	maxmindstorm: {
+		num: 769,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "Max Mindstorm",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				this.field.setTerrain('psychicterrain');
+			},
+		},
+		target: "adjacentFoe",
+		type: "Psychic",
+		contestType: "Cool",
+	},
+	maxooze: {
+		num: 764,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "Max Ooze",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				for (const pokemon of source.alliesAndSelf()) {
+					this.boost({spa: 1}, pokemon);
+				}
+			},
+		},
+		target: "adjacentFoe",
+		type: "Poison",
+		contestType: "Cool",
+	},
+	maxovergrowth: {
+		num: 773,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "Max Overgrowth",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				this.field.setTerrain('grassyterrain');
+			},
+		},
+		target: "adjacentFoe",
+		type: "Grass",
+		contestType: "Cool",
+	},
+	maxphantasm: {
+		num: 762,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "Max Phantasm",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				for (const pokemon of source.foes()) {
+					this.boost({def: -1}, pokemon);
+				}
+			},
+		},
+		target: "adjacentFoe",
+		type: "Ghost",
+		contestType: "Cool",
+	},
+	maxquake: {
+		num: 771,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "Max Quake",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				for (const pokemon of source.alliesAndSelf()) {
+					this.boost({spd: 1}, pokemon);
+				}
+			},
+		},
+		target: "adjacentFoe",
+		type: "Ground",
+		contestType: "Cool",
+	},
+	maxrockfall: {
+		num: 770,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "Max Rockfall",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				this.field.setWeather('sandstorm');
+			},
+		},
+		target: "adjacentFoe",
+		type: "Rock",
+		contestType: "Cool",
+	},
+	maxstarfall: {
+		num: 767,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "Max Starfall",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				this.field.setTerrain('mistyterrain');
+			},
+		},
+		target: "adjacentFoe",
+		type: "Fairy",
+		contestType: "Cool",
+	},
+	maxsteelspike: {
+		num: 774,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "Max Steelspike",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				for (const pokemon of source.alliesAndSelf()) {
+					this.boost({def: 1}, pokemon);
+				}
+			},
+		},
+		target: "adjacentFoe",
+		type: "Steel",
+		contestType: "Cool",
+	},
+	maxstrike: {
+		num: 760,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "Max Strike",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				for (const pokemon of source.foes()) {
+					this.boost({spe: -1}, pokemon);
+				}
+			},
+		},
+		target: "adjacentFoe",
+		type: "Normal",
+		contestType: "Cool",
+	},
+	maxwyrmwind: {
+		num: 768,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "Max Wyrmwind",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (!source.volatiles['dynamax']) return;
+				for (const pokemon of source.foes()) {
+					this.boost({atk: -1}, pokemon);
+				}
+			},
+		},
+		target: "adjacentFoe",
+		type: "Dragon",
+		contestType: "Cool",
+	},
+	gmaxbefuddle: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "G-Max Befuddle",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.foes()) {
+					const result = this.random(3);
+					if (result === 0) {
+						pokemon.trySetStatus('slp', source);
+					} else if (result === 1) {
+						pokemon.trySetStatus('par', source);
+					} else {
+						pokemon.trySetStatus('psn', source);
+					}
+				}
+			},
+		},
+		target: "adjacentFoe",
+		type: "Bug",
+		contestType: "Cool",
+	},
+	gmaxcannonade: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "G-Max Cannonade",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('gmaxcannonade');
+				}
+			},
+		},
+		condition: {
+			duration: 4,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'G-Max Cannonade');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (!target.hasType('Water')) this.damage(target.baseMaxhp / 6, target);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'G-Max Cannonade');
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Water",
+		contestType: "Cool",
+	},
+	gmaxcentiferno: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "G-Max Centiferno",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.foes()) {
+					pokemon.addVolatile('partiallytrapped', source, this.dex.getActiveMove('G-Max Centiferno'));
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Fire",
+		contestType: "Cool",
+	},
+	gmaxchistrike: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Chi Strike",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.alliesAndSelf()) {
+					pokemon.addVolatile('gmaxchistrike');
+				}
+			},
+		},
+		condition: {
+			noCopy: true,
+			onStart(target, source, effect) {
+				this.effectState.layers = 1;
+				if (!['costar', 'imposter', 'psychup', 'transform'].includes(effect?.id)) {
+					this.add('-start', target, 'move: G-Max Chi Strike');
+				}
+			},
+			onRestart(target, source, effect) {
+				if (this.effectState.layers >= 3) return false;
+				this.effectState.layers++;
+				if (!['costar', 'imposter', 'psychup', 'transform'].includes(effect?.id)) {
+					this.add('-start', target, 'move: G-Max Chi Strike');
+				}
+			},
+			onModifyCritRatio(critRatio) {
+				return critRatio + this.effectState.layers;
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Fighting",
+		contestType: "Cool",
+	},
+	gmaxcuddle: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Cuddle",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.foes()) {
+					pokemon.addVolatile('attract');
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Normal",
+		contestType: "Cool",
+	},
+	gmaxdepletion: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "G-Max Depletion",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.foes()) {
+					let move: Move | ActiveMove | null = pokemon.lastMove;
+					if (!move || move.isZ) continue;
+					if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
+
+					const ppDeducted = pokemon.deductPP(move.id, 2);
+					if (ppDeducted) {
+						this.add("-activate", pokemon, 'move: G-Max Depletion', move.name, ppDeducted);
+						// Don't return here because returning early doesn't trigger
+						// activation text for the second Pokemon in doubles
+					}
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Dragon",
+		contestType: "Cool",
+	},
+	gmaxdrumsolo: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Drum Solo",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		ignoreAbility: true,
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Grass",
+		contestType: "Cool",
+	},
+	gmaxfinale: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "G-Max Finale",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(target, source, move) {
+				for (const pokemon of source.alliesAndSelf()) {
+					this.heal(pokemon.maxhp / 6, pokemon, source, move);
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Fairy",
+		contestType: "Cool",
+	},
+	gmaxfireball: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Fireball",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		ignoreAbility: true,
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Fire",
+		contestType: "Cool",
+	},
+	gmaxfoamburst: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "G-Max Foam Burst",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.foes()) {
+					this.boost({spe: -2}, pokemon);
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Water",
+		contestType: "Cool",
+	},
+	gmaxgoldrush: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Gold Rush",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.foes()) {
+					pokemon.addVolatile('confusion');
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Normal",
+		contestType: "Cool",
+	},
+	gmaxgravitas: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "G-Max Gravitas",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			pseudoWeather: 'gravity',
+		},
+		target: "adjacentFoe",
+		type: "Psychic",
+		contestType: "Cool",
+	},
+	gmaxhydrosnipe: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "G-Max Hydrosnipe",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		ignoreAbility: true,
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Water",
+		contestType: "Cool",
+	},
+	gmaxmalodor: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Malodor",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.foes()) {
+					pokemon.trySetStatus('psn', source);
+				}
+			},
+		},
+		target: "adjacentFoe",
+		type: "Poison",
+		contestType: "Cool",
+	},
+	gmaxmeltdown: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Meltdown",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source, target, effect) {
+				for (const pokemon of source.foes()) {
+					if (!pokemon.volatiles['dynamax']) pokemon.addVolatile('torment', source, effect);
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Steel",
+		contestType: "Cool",
+	},
+	gmaxoneblow: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max One Blow",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Dark",
+		contestType: "Cool",
+	},
+	gmaxrapidflow: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Rapid Flow",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Water",
+		contestType: "Cool",
+	},
+	gmaxreplenish: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Replenish",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				if (this.random(2) === 0) return;
+				for (const pokemon of source.alliesAndSelf()) {
+					if (pokemon.item) continue;
+
+					if (pokemon.lastItem && this.dex.items.get(pokemon.lastItem).isBerry) {
+						const item = pokemon.lastItem;
+						pokemon.lastItem = '';
+						this.add('-item', pokemon, this.dex.items.get(item), '[from] move: G-Max Replenish');
+						pokemon.setItem(item);
+					}
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Normal",
+		contestType: "Cool",
+	},
+	gmaxresonance: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Resonance",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			sideCondition: 'auroraveil',
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Ice",
+		contestType: "Cool",
+	},
+	gmaxsandblast: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Sandblast",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.foes()) {
+					pokemon.addVolatile('partiallytrapped', source, this.dex.getActiveMove('G-Max Sandblast'));
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Ground",
+		contestType: "Cool",
+	},
+	gmaxsmite: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Smite",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.foes()) {
+					pokemon.addVolatile('confusion', source);
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Fairy",
+		contestType: "Cool",
+	},
+	gmaxsnooze: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Snooze",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		onHit(target) {
+			if (target.status || !target.runStatusImmunity('slp')) return;
+			if (this.random(2) === 0) return;
+			target.addVolatile('yawn');
+		},
+		onAfterSubDamage(damage, target) {
+			if (target.status || !target.runStatusImmunity('slp')) return;
+			if (this.random(2) === 0) return;
+			target.addVolatile('yawn');
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Dark",
+		contestType: "Cool",
+	},
+	gmaxsteelsurge: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Steelsurge",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('gmaxsteelsurge');
+				}
+			},
+		},
+		condition: {
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: G-Max Steelsurge');
+			},
+			onEntryHazard(pokemon) {
+				if (pokemon.hasItem('heavydutyboots')) return;
+				// Ice Face and Disguise correctly get typed damage from Stealth Rock
+				// because Stealth Rock bypasses Substitute.
+				// They don't get typed damage from Steelsurge because Steelsurge doesn't,
+				// so we're going to test the damage of a Steel-type Stealth Rock instead.
+				const steelHazard = this.dex.getActiveMove('Stealth Rock');
+				steelHazard.type = 'Steel';
+				const typeMod = this.clampIntRange(pokemon.runEffectiveness(steelHazard), -6, 6);
+				this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 8);
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Steel",
+		contestType: "Cool",
+	},
+	gmaxstonesurge: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Stonesurge",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('stealthrock');
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Water",
+		contestType: "Cool",
+	},
+	gmaxstunshock: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "G-Max Stun Shock",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.foes()) {
+					const result = this.random(2);
+					if (result === 0) {
+						pokemon.trySetStatus('par', source);
+					} else {
+						pokemon.trySetStatus('psn', source);
+					}
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Electric",
+		contestType: "Cool",
+	},
+	gmaxsweetness: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "G-Max Sweetness",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const ally of source.side.pokemon) {
+					ally.cureStatus();
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Grass",
+		contestType: "Cool",
+	},
+	gmaxtartness: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Tartness",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.foes()) {
+					this.boost({evasion: -1}, pokemon);
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Grass",
+		contestType: "Cool",
+	},
+	gmaxterror: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "G-Max Terror",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.foes()) {
+					pokemon.addVolatile('trapped', source, null, 'trapper');
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Ghost",
+		contestType: "Cool",
+	},
+	gmaxvinelash: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Vine Lash",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('gmaxvinelash');
+				}
+			},
+		},
+		condition: {
+			duration: 4,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'G-Max Vine Lash');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (!target.hasType('Grass')) this.damage(target.baseMaxhp / 6, target);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'G-Max Vine Lash');
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Grass",
+		contestType: "Cool",
+	},
+	gmaxvolcalith: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Volcalith",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('gmaxvolcalith');
+				}
+			},
+		},
+		condition: {
+			duration: 4,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'G-Max Volcalith');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (!target.hasType('Rock')) this.damage(target.baseMaxhp / 6, target);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'G-Max Volcalith');
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Rock",
+		contestType: "Cool",
+	},
+	gmaxvoltcrash: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Volt Crash",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const pokemon of source.foes()) {
+					pokemon.trySetStatus('par', source);
+				}
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Electric",
+		contestType: "Cool",
+	},
+	gmaxwildfire: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Special",
+		name: "G-Max Wildfire",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('gmaxwildfire');
+				}
+			},
+		},
+		condition: {
+			duration: 4,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'G-Max Wildfire');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (!target.hasType('Fire')) this.damage(target.baseMaxhp / 6, target);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'G-Max Wildfire');
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Fire",
+		contestType: "Cool",
+	},
+	gmaxwindrage: {
+		num: 1000,
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "G-Max Wind Rage",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		self: {
+			onHit(source) {
+				let success = false;
+				const removeTarget = [
+					'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'luckyroll',
+					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+				];
+				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+				for (const targetCondition of removeTarget) {
+					if (source.side.foe.removeSideCondition(targetCondition)) {
+						if (!removeAll.includes(targetCondition)) continue;
+						this.add('-sideend', source.side.foe, this.dex.conditions.get(targetCondition).name, '[from] move: G-Max Wind Rage', '[of] ' + source);
+						success = true;
+					}
+				}
+				for (const sideCondition of removeAll) {
+					if (source.side.removeSideCondition(sideCondition)) {
+						this.add('-sideend', source.side, this.dex.conditions.get(sideCondition).name, '[from] move: G-Max Wind Rage', '[of] ' + source);
+						success = true;
+					}
+				}
+				this.field.clearTerrain();
+				return success;
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Flying",
+		contestType: "Cool",
+	},
 	landswrath: {
 		inherit: true,
 		basePower: 80,
