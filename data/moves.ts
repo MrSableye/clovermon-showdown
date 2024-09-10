@@ -41582,7 +41582,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, kick: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Dragon",
@@ -44472,6 +44479,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1},
+		hasCrashDamage: true,
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -44560,6 +44571,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		drain: [1, 2], //needs the bleed bonus still
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -46288,6 +46300,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, sun: 1},
 		secondary: null,
+		self: {
+			onHit(source) {
+				this.field.setWeather('sunnyday');
+			},
+		},
 		target: "normal",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -47948,7 +47965,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
-		secondary: null,
+		boosts: {
+			accuracy: 2,
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -55633,6 +55652,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1, above: 1},
+		hasCrashDamage: true,
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -58909,6 +58932,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, bullet: 1},
+		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
 		},
@@ -59675,7 +59699,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {snatch: 1},
 		pseudoWeather: 'freezepoint',
 		condition: {
-			duration: 6,
+			duration: 10,
 			onFieldStart(field, source) {
 				this.add('-fieldstart', 'move: Freeze Point', '[of] ' + source);
 			},
@@ -59781,6 +59805,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {snatch: 1},
+		pseudoWeather: 'thawing',
+		condition: {
+			duration: 10,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Thawing', '[of] ' + source);
+			},
+			onModifyType(move, pokemon) {
+				const noModifyType = [
+					'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+				];
+				if (move.type === 'Ice' && !noModifyType.includes(move.id) &&
+					!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+					move.type = 'Water';
+					move.typeChangerBoosted = this.effect;
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Thawing');
+			},
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Fire",
@@ -66049,7 +66095,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -72740,7 +72789,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('slp', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('psn', source);
+				}
+			},
+		},
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future",
@@ -73404,7 +73465,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				atk: -1,
+			},
+		},
 		target: "normal",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -76612,7 +76678,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -77017,6 +77086,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		sideCondition: 'powderveil',
+		condition: {
+			duration: 10,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('lightclay') || source?.hasItem('silverpowder') || source?.hasItem('swarmedrock') || source?.hasAbility('shielddust') || source?.hasAbility('builder')) {
+					this.add('-activate', source, 'extending item/ability', '[move] Powder Veil');
+					return 15;
+				}
+				return 10;
+			},
+			onSideStart(side, source) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-sidestart', side, 'move: Powder Veil', 'extender');
+				} else {
+					this.add('-sidestart', side, 'move: Powder Veil');
+				}
+			},
+			onModifySecondaries(secondaries) {
+				this.debug('Shield Dust prevent secondary');
+				return secondaries.filter(effect => !!(effect.self || effect.dustproof));
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 5,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Powder Veil');
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Bug",
@@ -78602,6 +78698,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target, source) {
+			if (target.getTypes().join() === 'Dark' || !target.setType('Dark', false, source, this.effect)) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Dark');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -78756,7 +78861,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
-		secondary: null,
+		secondary: {
+			chance: 80,
+			boosts: {
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -78770,7 +78880,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'frz',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Ice",
@@ -81303,6 +81416,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {},
+		pseudoWeather: 'darksport',
+		condition: {
+			duration: 5,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Dark Sport', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Psychic') {
+					this.debug('dark sport weaken');
+					return this.chainModify([1352, 4096]);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Dark Sport');
+			},
+		},
+		onHit(target, source) {
+			if (this.field.isWeather('midnight')) {
+					this.boost({atk: 1, spa: 1, spd: 1}, source);
+			} else {
+				
+					this.boost({spd: 1}, source);
+				};
+		},
 		secondary: null,
 		target: "all",
 		type: "Dark",
@@ -84179,6 +84319,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		multihit: 9,
 		target: "normal",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -84425,6 +84566,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 3,
 		flags: {},
+		volatileStatus: 'followme',
+		boosts: {
+			def: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Steel",
@@ -86971,7 +87116,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		volatileStatus: 'attract',
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('slp', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('psn', source);
+				}
+			},
+		},
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future",

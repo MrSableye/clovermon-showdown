@@ -11298,6 +11298,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	eelspectra: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	pasdawggambino: {
 		inherit: true,
 		tier: "OU",
