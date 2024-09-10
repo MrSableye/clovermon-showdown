@@ -27,6 +27,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	absorption: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	terradozer: {
 		inherit: true,
 		isNonstandard: null,
