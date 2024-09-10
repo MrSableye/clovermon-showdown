@@ -1010,6 +1010,99 @@
       }
     ]
   },
+  "scorpiofree": {  
+    "nicknames": [
+      "Free Win"
+    ], 
+    "sets": [
+      {
+        "abilities": [   
+          "intimidate"
+        ],
+        "items": [
+          "tempestcapsule", 
+          "invertedcapsule",
+          "gravitycapsule",
+          "acidycapsule"
+        ],
+        "moves": [     
+          "lunge",    
+          "nectortap",
+          "tailwind"
+        ],
+        "lockedMoves": [   
+          "powderveil",
+          "befuddlepowder"
+        ],
+        "level": 88       
+      }
+    ]
+  },
+  "dglalie": {  
+    "nicknames": [
+      "Dark Glalie"
+    ], 
+    "sets": [
+      {
+        "abilities": [   
+          "filter",
+          "sandforce"
+        ],
+        "items": [
+          "murkycapsule", 
+          "sandycapsule"
+        ],
+        "moves": [     
+          "explosion",    
+          "headsmash",
+          "stoneedge",
+          "earthquake",
+          "swordsdance",
+          "suckerpunch",
+          "stealthrock",
+          "spikes",
+          "darkgather"
+        ],
+        "lockedMoves": [   
+          "darksport",
+          "devastate"
+        ],
+        "level": 88       
+      }
+    ]
+  },
+  "remilire": {  
+    "nicknames": [
+      "Remilire"
+    ], 
+    "sets": [
+      {
+        "abilities": [   
+          "pride",
+          "moxie",
+          "dryskin"
+        ],
+        "items": [
+          "murkycapsule", 
+          "gouraberry"
+        ],
+        "moves": [     
+          "earthquake",    
+          "uturn",
+          "draculacradle",
+          "energyball",
+          "fireblast",
+          "vampirebite",
+          "painplit"
+        ],
+        "lockedMoves": [   
+          "scarletmist",
+          "bloodgungnir"
+        ],
+        "level": 84       
+      }
+    ]
+  },
   "rogyst": {
     "nicknames": [
       "Rogyst"
