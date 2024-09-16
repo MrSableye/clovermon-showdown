@@ -7809,6 +7809,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "If this attack does not miss, the effects of Reflect, Light Screen, and Aurora Veil end for the target's side of the field before damage is calculated. Has a 30% chance to lower the target's Defense by 1 stage.",
 		shortDesc: "Destroys screens; 30% to drop target Def.",
 	},
+	carvingbeak: {
+		name: "Carving Beak",
+		desc: "Power doubles if the target is paralyzed.",
+		shortDesc: "Power doubles if the target is paralyzed.",
+	},
 	awaken: {
 		name: "Awaken",
 		desc: "Raises the user's Attack, Defense, and Speed by 2 stages. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",

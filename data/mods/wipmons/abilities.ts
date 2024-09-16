@@ -89,6 +89,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	parentalbond: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	steelyspirit: {
 		inherit: true,
 		isNonstandard: null,

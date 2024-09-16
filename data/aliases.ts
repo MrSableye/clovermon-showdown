@@ -565,6 +565,7 @@ export const Aliases: {[alias: string]: string} = {
 	stag: "Shadow Tag",
 	stride: "AIN'T NOTHIN' GONNA BREAK MY STRIDE",
 	angbms: "AIN'T NOTHIN' GONNA BREAK MY STRIDE",
+	fadc: "Fake-Ass Dispenser Clone",
 
 	// items
 	assvest: "Assault Vest",
@@ -700,6 +701,7 @@ export const Aliases: {[alias: string]: string} = {
 	arceusnormal: "Arceus",
 	ashgren: "Greninja-Ash",
 	azu: "Azumarill",
+	bane: "Weatherbane",
 	bdrill: "Beedrill",
 	beanquaza: "Beayquaza",
 	bee: "Beedrill",

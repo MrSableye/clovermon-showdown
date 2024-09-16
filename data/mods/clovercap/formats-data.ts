@@ -1523,7 +1523,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	goryannusmega: {
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	spookscaremega: {
 		isNonstandard: null,

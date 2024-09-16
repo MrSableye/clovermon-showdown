@@ -130,5 +130,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spd: 85,
 			spe: 75,
 		},
+		
 	},
 };

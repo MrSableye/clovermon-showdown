@@ -11298,6 +11298,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	eelspectra: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	pasdawggambino: {
 		inherit: true,
 		tier: "OU",
@@ -11569,6 +11574,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	haremitmega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	hyletrackmega: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
