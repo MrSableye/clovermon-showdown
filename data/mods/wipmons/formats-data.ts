@@ -1919,7 +1919,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	sickayda: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	sparkalee: {
 		inherit: true,
