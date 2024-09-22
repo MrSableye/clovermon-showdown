@@ -91135,6 +91135,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Dark",
+		isNonstandard: "Future",
 	},
  
 // WIPMON EXCLUSIVE MOVES (and solar hunger lol)
