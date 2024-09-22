@@ -434,7 +434,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	indignifly: {
 		inherit: true,
-		abilities: {0: "Pressure", 1: "Synchronoise", H: "Filter", S: "Tinted Lens"},
+		abilities: {0: "Pressure", 1: "Synchronize", H: "Filter", S: "Tinted Lens"},
 
 	},
 	cirnumiru: {
@@ -529,6 +529,29 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spa: 157,
 			spd: 89,
 			spe: 113,
+		},
+	},
+	polossus: {
+		inherit: true,
+		abilities: {0: "Pollution", 1: "Effect Spore", H: "Tetanus", S: "Shield Dust"},
+		baseStats: {
+			hp: 150,
+			atk: 115,
+			def: 85,
+			spa: 35,
+			spd: 85,
+			spe: 35,
+		},
+	},
+	hydroil: {
+		inherit: true,
+		baseStats: {
+			hp: 92,
+			atk: 62,
+			def: 102,
+			spa: 122,
+			spd: 92,
+			spe: 52,
 		},
 	},
 	doubtlaw: {

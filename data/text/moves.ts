@@ -7918,6 +7918,20 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "No additional effect",
 		shortDesc: "No additional effect",
 	},
+	real: {
+		name: "Real",
+		shortDesc: "Tsuchinoko Real.",
+	},
+	brazilwings: {
+		name: "Brazil Wings",
+		desc: "30% chance to burn the target.",
+		shortDesc: "30% chance to burn the target.",
+	},
+	trickedblow: {
+		name: "Tricked Blow",
+		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
+		shortDesc: "Always results in a critical hit.",
+	},
 	phasethrough: {
 		name: "Phase Through",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
