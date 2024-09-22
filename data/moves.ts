@@ -91122,6 +91122,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
+	trickedblow: {
+		num: 817,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Tricked Blow",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, slicing: 1, mirror: 1},
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
  
 // WIPMON EXCLUSIVE MOVES (and solar hunger lol)
 
