@@ -91090,6 +91090,38 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 		isNonstandard: "Future",
 	}, 
+	real: {
+		num: 6,
+		accuracy: 100,
+		basePower: 250,
+		category: "Physical",
+		name: "Real",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+	},
+	brazilwings: {
+		num: 53,
+		accuracy: 85,
+		basePower: 120,
+		category: "Special",
+		name: "Brazil Wings",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, wind: 1},
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Flying",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
  
 // WIPMON EXCLUSIVE MOVES (and solar hunger lol)
 
