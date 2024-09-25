@@ -49081,7 +49081,7 @@ curdiscope: {
 		name: "Curdiscope",
 		types: ["Rock", "Psychic"],
                 gender: "N",
-		baseStats: {hp: 90, atk: 120, def: 115, spa: 40, spd: 50, spe: 100},
+		baseStats: {hp: 83, atk: 45, def: 115, spa: 96, spd: 74, spe: 86},
 		abilities: {0: "Prism Armor", 1: "Huge Power", S: "Telepathy"},
 		heightm: 1.1,
 		weightkg: 372.4,
