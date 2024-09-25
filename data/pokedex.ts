@@ -49074,6 +49074,26 @@ frillazar: {
 	},
 
 
+	/* wip gen 2 is real */
+
+curdiscope: {
+		num: -232,
+		name: "Curdiscope",
+		types: ["Rock", "Psychic"],
+                gender: "N",
+		baseStats: {hp: 90, atk: 120, def: 115, spa: 40, spd: 50, spe: 100},
+		abilities: {0: "Prism Armor", 1: "Huge Power", S: "Telepathy"},
+		heightm: 1.1,
+		weightkg: 372.4,
+		color: "Pink",
+		eggGroups: ["Mineral"], 
+                gen: 9,
+		creator: "shyguywarrior",
+	},
+
+	
+
+
 
 	/* gen 2 isn't real */
 	peasol: {
