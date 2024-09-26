@@ -2436,4 +2436,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	curdiscope: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
