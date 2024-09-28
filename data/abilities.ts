@@ -15228,7 +15228,6 @@ malediction: {
 		onStart(pokemon) {
 			const bestStat = source.getBestStat(true, true);
 				this.boost({[bestStat]: length}, source);
-			}
 		},
 		name: "Moth's Majesty",
 		rating: 4,
