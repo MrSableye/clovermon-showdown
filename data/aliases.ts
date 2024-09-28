@@ -872,6 +872,7 @@ export const Aliases: {[alias: string]: string} = {
 	somethingiswrong: "The Forest",
 	smox: "Smoxilon",
 	snips: "Drapion",
+	sparky: "FireRed",
 	spenj: "Spenjbab",
 	spunch: "Spenjbab",
 	shiiva: "Pyroshiiva",
