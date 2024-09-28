@@ -52990,8 +52990,8 @@ curdiscope: {
 	unjoymegaxd: {
 		num: 69117,
 		name: "Unjoy-Mega-XD",
-		baseSpecies: "Unjoy",
-		forme: "Mega-XD",
+		baseSpecies: "Unjoy-Mega",
+		forme: "XD",
 		types: [
 			"Ghost",
 			"Dark"
