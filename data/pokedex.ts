@@ -46710,7 +46710,7 @@ blobbosspeed: {
 		baseStats: {
 			hp: 79,
 			atk: 85,
-			def: 70,
+			def: 80,
 			spa: 96,
 			spd: 82,
 			spe: 80,
@@ -46719,7 +46719,7 @@ blobbosspeed: {
 			0: "Shield Dust",
                         1: "Swarm",
                         H: "Compound Eyes",
-                        S: "Moth's Majesty",
+                        S: "Wonder Skin",
 		},
 		heightm: 0.8,
 		weightkg: 34,
