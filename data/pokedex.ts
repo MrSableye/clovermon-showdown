@@ -46700,6 +46700,35 @@ blobbosspeed: {
 		eggGroups: ["Undiscovered"],
                 gen: 8,
 	},
+	blobbosmoth: {
+		num: 69132,
+		name: "Blobbos-Moth",
+		baseSpecies: "Blobbos",
+		forme: "Moth",
+		types: ["Bug", "Fire"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 79,
+			atk: 85,
+			def: 70,
+			spa: 96,
+			spd: 82,
+			spe: 80,
+		},
+		abilities: {
+			0: "Shield Dust",
+                        1: "Swarm",
+                        H: "Compound Eyes",
+                        S: "Moth's Majesty",
+		},
+		heightm: 0.8,
+		weightkg: 34,
+		color: "Brown",
+		eggGroups: [
+			"Bug"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
