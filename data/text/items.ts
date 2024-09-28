@@ -1691,7 +1691,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	souldew: {
 		name: "Soul Dew",
-		desc: "If held by a Latias/Latios, its Dragon- and Psychic-type moves have 1.2x power.",
+		desc: "If held by a Latias/Latios or Blobbos-Eon/Blobbos-Eon-F, its Dragon- and Psychic-type moves have 1.2x power.",
 		gen6: {
 			desc: "If held by a Latias or a Latios, its Sp. Atk and Sp. Def are 1.5x.",
 		},
