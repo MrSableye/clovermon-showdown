@@ -15224,6 +15224,15 @@ malediction: {
 		num: 22,
 		isNonstandard: "Future",
 	},
+	mothsmajesty: {
+		onStart(pokemon) {
+			const bestStat = source.getBestStat(true, true);
+				this.boost({[bestStat]: length}, source);
+		},
+		name: "Moth's Majesty",
+		rating: 4,
+		num: 234,
+	},
 	mossyexterior: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Water') {
