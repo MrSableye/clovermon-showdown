@@ -5823,7 +5823,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				return this.chainModify([4915, 4096]);
 			}
 		},
-		itemUser: ["Latios", "Latias"],
+		itemUser: ["Latios", "Latias", "Blobbos-Eon", "Blobbos-Eon-F"],
 		num: 225,
 		gen: 3,
 		isNonstandard: "Past",

@@ -268,6 +268,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	souldew: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	punchingglove: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	partnerspendant: {
 		inherit: true,
 		isNonstandard: null,
