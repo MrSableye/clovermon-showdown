@@ -9361,6 +9361,18 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Consuming",
 		shortDesc: "Consumes the target.",
 	},
+	biteof87: {
+		name: "Bite of 87",
+		shortDesc: "Hits 87 times. Each hit can miss. 87% chance to inflict a random effect from bite-based moves.",
+	},
+	supernovaultimate: {
+		name: "Supernova Ultimate",
+		shortDesc: "Charges on turn 1, Hits on turn 2. Instantly KO's all adjacent pokemon. User cannot move next turn.",
+	},
+	worldbreaker: {
+		name: "Worldbreaker",
+		shortDesc: "Inverts stat changes, disables last used move and supressed ability of opponent upon use.",
+	},
 	extinction: {
 		name: "Extinction",
 		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",
