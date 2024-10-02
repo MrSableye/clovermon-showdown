@@ -21202,6 +21202,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			case 'sandstorm':
 				move.type = 'Rock';
 				break;
+			case 'deltastream':
+				move.type = 'Flying';
+				break;
 			case 'hail':
 			case 'snow':
 				move.type = 'Ice';
