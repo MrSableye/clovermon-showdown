@@ -91678,4 +91678,183 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Grass",
 	},
+
+    // HORRORS //
+
+
+	biteof87: {
+		num: 161,
+		accuracy: 87,
+		basePower: 87,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Bite of 87",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1, bite: 1},
+		multihit: 87,
+		multiaccuracy: true,
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
+		secondaries: [
+			{
+				chance: 87,
+				status: 'brn',
+			},{
+				chance: 87,
+				status: 'par',
+			},{
+				chance: 87,
+				status: 'frz',
+			},{
+				chance: 87,
+				status: 'psn',
+			},{
+				chance: 87,
+				volatileStatus: 'flinch',
+			},{
+				chance: 87,
+				volatileStatus: 'curse',
+			},{
+				chance: 87,
+				volatileStatus: 'partiallytrapped',
+			},  
+		],
+		target: "normal",
+		type: "Ghost",
+		contestType: "Beautiful",
+	},
+	supernovaultimate: {
+		num: 143,
+		accuracy: true,
+		basePower: 0,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Supernova Ultimate",
+		pp: 5,
+		priority: 0,
+		flags: {charge: 1, protect: 1, mirror: 1, distance: 1, nosleeptalk: 1, failinstruct: 1},
+		ohko: true,
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		target: "allAdjacent",
+		type: "Fire",
+		contestType: "Cool",
+	},
+	worldbreaker: {
+		num: 687,
+		accuracy: 100,
+		basePower: 140,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Worldbreaker",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('gastroacid');
+				target.addVolatile('disable');
+				let success = false;
+			let i: BoostID;
+			for (i in target.boosts) {
+				if (target.boosts[i] === 0) continue;
+				target.boosts[i] = -target.boosts[i];
+				success = true;
+			}
+			if (!success) return false;
+			this.add('-invertboost', target, '[from] move: Topsy-Turvy');
+			}
+		},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Fighting",
+		zMove: {basePower: 140},
+		contestType: "Tough",
+	},
+	obliviontears: {
+		num: 202,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Oblivion Tears",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [50, 1],
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+		contestType: "Clever",
+	},
+	whirlingrods: {
+		num: 42008,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Whirling Rods",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 2,
+		onAfterHit(target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'luckyroll',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'luckyroll'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
+		target: "allAdjacent",
+		type: "Flying",
+		contestType: "Cool",
+	},
 };
