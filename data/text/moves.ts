@@ -9385,6 +9385,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Enraging Shadow Flurry",
 		shortDesc: "Always crits. Breaks Protection and Screens. Usually goes first.",
 	},
+	voltaicshadow: {
+		name: "Voltaic Shadow",
+		desc: "If this move is successful and the user has not fainted, the effects of Leech Seed and binding moves end for the user, and all hazards are removed from the user's side of the field. 30% Chance to apply curse to the foe.",
+		shortDesc: "Free user from hazards/bind/Leech Seed. 30% chance to inflict curse.",
+	},
 	extinction: {
 		name: "Extinction",
 		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",

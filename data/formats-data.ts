@@ -11023,6 +11023,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	krackgar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	schiztarf: {
 		tier: "Illegal",
 		isNonstandard: "Future",

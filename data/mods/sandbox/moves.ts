@@ -4795,4 +4795,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	voltaicshadow: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
