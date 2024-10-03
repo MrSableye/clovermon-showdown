@@ -12706,4 +12706,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	gengotoro: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
