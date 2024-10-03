@@ -15240,6 +15240,7 @@ malediction: {
 		},
 		name: "Moth's Majesty",
 		rating: 4,
+		isNonstandard: "Future",
 		num: 234,
 	},
 	mossyexterior: {
