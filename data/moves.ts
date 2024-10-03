@@ -91857,4 +91857,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Flying",
 		contestType: "Cool",
 	},
+	enragingshadowflurry: {
+		num: 42001,
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		name: "Enraging Shadow Flurry",
+		pp: 5,
+		priority: 1,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		noSketch: true,
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
+		willCrit: true,
+		breaksProtect: true,
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		isNonstandard: "Future",
+	},
 };

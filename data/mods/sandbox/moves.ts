@@ -4791,4 +4791,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	enragingshadowflurry: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

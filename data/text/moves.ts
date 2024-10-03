@@ -9381,6 +9381,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Whirling Rods",
 		shortDesc: "Hits twice. Raises users speed by 1. Free user from hazards/bind/Leech Seed.",
 	},
+	enragingshadowflurry: {
+		name: "Enraging Shadow Flurry",
+		shortDesc: "Always crits. Breaks Protection and Screens. Usually goes first.",
+	},
 	extinction: {
 		name: "Extinction",
 		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",
