@@ -51,6 +51,7 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		typeChange: "  [POKEMON]'s type changed to [TYPE]!",
 		typeChangeFromEffect: "  [POKEMON]'s [EFFECT] made it the [TYPE] type!",
 		typeAdd: "  [TYPE] type was added to [POKEMON]!",
+		typeReset: "  [POKEMON]'s returned to its original type!",
 
 		start: "  ([EFFECT] started on [POKEMON]!)",
 		end: "  [POKEMON] was freed from [EFFECT]!",
