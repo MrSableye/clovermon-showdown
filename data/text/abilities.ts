@@ -4073,6 +4073,10 @@ malediction: {
 		name: "Ultimate Regeneration",
 		shortDesc: "Heals the holder of this ability for 100% of their health at the end of each turn.",
 	},
+	bulletreflect: {
+		name: "Bullet Reflect",
+		shortDesc: "Reflects back Bomb/Bullet based moves at the user.",
+	},
 	polite: {
 		name: "Polite",
 		shortDesc: "Moves last. STAB increased to 2.",
