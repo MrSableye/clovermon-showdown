@@ -15348,6 +15348,35 @@ malediction: {
 		num: 6697,
 		isNonstandard: "Future",
 	},
+	bulletreflect: {
+		name: "Bullet Reflect",
+		onTryHitPriority: 1,
+		onTryHit(target, source, move) {
+			if (target === source || move.hasBounced || !move.flags['bullet']) {
+				return;
+			}
+			const newMove = this.dex.getActiveMove(move.id);
+			newMove.hasBounced = true;
+			this.actions.useMove(newMove, target, source);
+			return null;
+		},
+		onAllyTryHitSide(target, source, move) {
+			if (target.isAlly(source) || move.hasBounced || !move.flags['bullet']) {
+				return;
+			}
+			const newMove = this.dex.getActiveMove(move.id);
+			newMove.hasBounced = true;
+			this.actions.useMove(newMove, this.effectState.target, source);
+			return null;
+		},
+		condition: {
+			duration: 1,
+		},
+		isBreakable: true,
+		isNonstandard: "Future",
+		rating: 4,
+		num: 156,
+	},
 	polite: {
 		onFractionalPriority: -0.1,
 		onModifyMove(move) {
