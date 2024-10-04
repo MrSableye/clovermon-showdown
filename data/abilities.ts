@@ -7740,6 +7740,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		rating: 2,
+		isPermanent: true,
+		isNonstandard: "Future",
 	},
 	catalyst: {
 		name: "Catalyst",
@@ -7758,6 +7760,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		rating: 2,
+		isNonstandard: "Future",
 	},
 	delusion: {
 		name: "Delusion",
@@ -7800,6 +7803,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.boost(boost, pokemon, pokemon);
 		},
 		rating: 2,
+		isNonstandard: "Future",
 	},
 	niceface: {
 		onStart(pokemon) {
