@@ -12711,4 +12711,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	krackgar: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
