@@ -49694,7 +49694,7 @@ curdiscope: {
 		name: "Krackgar",
 		types: ["Ghost", "Dark"],
                 genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 60, atk: 130, def: 75, spa: 60, spd: 65, spe: 110},
+		baseStats: {hp: 73, atk: 64, def: 69, spa: 149, spd: 90, spe: 109},
 		abilities: {0: "Cloud Nine", 1: "Cursed Body", S: "Iron Barbs", H: "Levitate"},
 		heightm: 1.5,
 		weightkg: 666,
