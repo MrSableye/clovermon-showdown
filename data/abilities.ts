@@ -7736,7 +7736,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (!target.removeVolatile('transfusion')) continue;
 				const types = Dex.species.get(target.species).types;
 				target.setType(types);
-				this.add('-start', target, 'typechange', types.join('/'), '[from] ability: Transfusion', '[of] ' + pokemon);
+				this.add('-start', target, 'typereset', '[from] ability: Transfusion', '[of] ' + pokemon);
 			}
 		},
 		rating: 2,
