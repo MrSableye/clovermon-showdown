@@ -10319,6 +10319,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosdreaming: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosparasleep: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosdreamingmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosparasleepmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	dunebug: {
 		tier: "Illegal",
 		isNonstandard: "Future",

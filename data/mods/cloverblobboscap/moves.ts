@@ -1131,14 +1131,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	metronomeifitwasfunny: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	meatballmash: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	blandybland: {
 		inherit: true,
 		isNonstandard: null,
