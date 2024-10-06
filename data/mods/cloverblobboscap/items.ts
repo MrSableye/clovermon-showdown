@@ -276,6 +276,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	parasleepite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dreamite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	partnerspendant: {
 		inherit: true,
 		isNonstandard: null,

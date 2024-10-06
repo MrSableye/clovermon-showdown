@@ -9268,6 +9268,36 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	parasleepite: {
+		name: "Parasleepite",
+		spritenum: 586,
+		megaStone: "Blobbos-Parasleep-Mega",
+		megaEvolves: "Blobbos-Parasleep",
+		itemUser: ["Blobbos-Parasleep"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	dreamite: {
+		name: "Dreamite",
+		spritenum: 586,
+		megaStone: "Blobbos-Dreaming-Mega",
+		megaEvolves: "Blobbos-Dreaming",
+		itemUser: ["Blobbos-Dreaming"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	plasticgem: {
 		name: "Plastic Gem",
 		spritenum: 53,
