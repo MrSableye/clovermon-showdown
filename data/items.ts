@@ -8423,7 +8423,7 @@ export const Items: {[itemid: string]: ItemData} = {
 					this.add('-message', 'The power from the Moluganion cured the status!');
 					pokemon.cureStatus();
 					pokemon.removeVolatile('confusion');
-				} else {
+			if (pokemon.baseSpecies.baseSpecies !== 'Noxilium' && !pokemon.volatiles['confusion'])
 					this.add('-message', 'The holder is unable to comprehend the Moluganion!');
 					pokemon.addVolatile('confusion');
 				}
