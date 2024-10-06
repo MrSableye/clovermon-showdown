@@ -9271,7 +9271,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	parasleepite: {
 		name: "Parasleepite",
-		spritenum: 586,
+		spritenum: 577,
 		megaStone: "Blobbos-Parasleep-Mega",
 		megaEvolves: "Blobbos-Parasleep",
 		itemUser: ["Blobbos-Parasleep"],
@@ -9286,7 +9286,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	dreamite: {
 		name: "Dreamite",
-		spritenum: 586,
+		spritenum: 577,
 		megaStone: "Blobbos-Dreaming-Mega",
 		megaEvolves: "Blobbos-Dreaming",
 		itemUser: ["Blobbos-Dreaming"],
