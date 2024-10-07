@@ -2561,7 +2561,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	fogofwar: {
 		name: "Fog Of War",
-		shortDesc: "On switch-in, this Pokemon summons Dense Fog.",
+		shortDesc: "On switch-in, this Pokemon summons Dense Fog which disables all status moves on both sides for 5 Turns.",
 	},
 	hewillbedragon: {
 		name: "He Will Be Dragon",
