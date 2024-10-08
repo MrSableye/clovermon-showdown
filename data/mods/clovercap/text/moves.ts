@@ -58,8 +58,8 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	},
 	sharpen: {
 		inherit: true,
-		desc: "Raises the user's Attack by 1 stage. Applies a stackable buff to the user that raises their critical hit change by 1 stage.",
-		shortDesc: "Raises the user's Attack and crit stage by 1.",
+		desc: "Raises the user's Attack by 1 stage. Uses Focus Energy at the same time.",
+		shortDesc: "Raises the user's Attack by 1. Applies Focus Energy to the user.",
 	},
 	mistball: {
 		name: "Mist Ball",
