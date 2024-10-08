@@ -51666,7 +51666,7 @@ curdiscope: {
 		name: "Bullepede",
 		types: ["Bug", "Steel"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 100, atk: 95, def: 75, spa: 50, spd: 50, spe: 130},
+		baseStats: {hp: 105, atk: 100, def: 75, spa: 40, spd: 50, spe: 130},
 		abilities: {0: "Rock Head", 1: "Motor Drive", H: "Light Metal", S: "Speed Boost"},
 		heightm: 14.81,
 		weightkg: 3075.1,
