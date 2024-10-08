@@ -22419,7 +22419,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: -6,
 		target: "normal",
 		type: "Normal",
-		flags: {contact: 1, protect: 1},
+		flags: {contact: 1, protect: 1, failcopycat: 1},
 		forceSwitch: true,
 		isNonstandard: "Future",
 	},
@@ -23557,7 +23557,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Wings Of Correction",
 		pp: 5,
 		priority: -6,
-		flags: {protect: 1, mirror: 1, bypasssub: 1},
+		flags: {protect: 1, mirror: 1, bypasssub: 1, failcopycat: 1},
 		forceSwitch: true,
 		onHit(target, source, move) {
 			let success = false;
@@ -29979,7 +29979,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: -6,
 		target: "normal",
 		type: "Bug",
-		flags: {contact: 1, protect: 1},
+		flags: {contact: 1, protect: 1, failcopycat: 1},
 		forceSwitch: true,
 		isNonstandard: "Future",
 	},
@@ -30533,7 +30533,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Scary Story",
 		pp: 5,
 		priority: -6,
-		flags: {reflectable: 1, mirror: 1, sound: 1, bypasssub: 1, allyanim: 1},
+		flags: {reflectable: 1, mirror: 1, sound: 1, bypasssub: 1, allyanim: 1, failcopycat: 1},
 		forceSwitch: true,
 		secondary: {
 			chance: 100,
