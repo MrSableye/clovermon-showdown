@@ -49798,7 +49798,7 @@ curdiscope: {
 	dussrade: {
 		num: -5096,
 		name: "Dussrade",
-		types: ["Dark", "Fight"],
+		types: ["Dark", "Fighting"],
                 genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 80, atk: 140, def: 81, spa: 121, spd: 96, spe: 83},
 		abilities: {0: "Blademaster", 1: "Dark Aura", S: "No Guard", H: "Merciless"},
