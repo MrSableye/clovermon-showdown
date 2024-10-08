@@ -1178,7 +1178,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	hallmonitor: {
+	ryokami: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
