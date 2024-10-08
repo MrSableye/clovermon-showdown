@@ -2508,6 +2508,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	ryokami: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	amalgum: {
 		tier: "Illegal",
 		isNonstandard: "Future",
