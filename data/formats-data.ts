@@ -11043,6 +11043,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	dussrade: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	schiztarf: {
 		tier: "Illegal",
 		isNonstandard: "Future",
