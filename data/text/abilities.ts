@@ -2879,6 +2879,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	reconstruct: {
 		name: "Reconstruct",
 		shortDesc: "Rebuilds item on switchout. Does not rebuild knocked off items.",
+
+		activate: "  [POKEMON] obatined one [ITEM]!",
 	},
 	ultraego: {
 		name: "Ultra Ego",
