@@ -482,24 +482,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		boosts: {
 			atk: 1,
 		},
-		volatileStatus: 'sharpen',
-		condition: {
-			onStart(target) {
-				this.effectState.stacks = 1;
-				this.add('-start', target, 'sharpen' + this.effectState.stacks);
-			},
-			onRestart(target) {
-				if (this.effectState.stacks >= 3) return false;
-				this.effectState.stacks++;
-				this.add('-start', target, 'sharpen' + this.effectState.stacks);
-			},
-			onModifyCritRatio(critRatio) {
-				return critRatio + this.effectState.stacks;
-			},
-			onEnd(target) {
-				this.add('-end', target, 'Sharpen');
-			},
-		},
+		volatileStatus: 'focusenergy',
 	},
 	shellsidearm: {
 		inherit: true,
