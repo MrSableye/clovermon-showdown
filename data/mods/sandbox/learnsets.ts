@@ -5905,6 +5905,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			moonblast: ["8L1"],
 			psychic: ["8L1"],
 			energyball: ["8L1"],
+			splishysplash: ["8L1"],
 		},
 	},
 	krokizon: {
