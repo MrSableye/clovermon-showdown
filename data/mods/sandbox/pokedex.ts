@@ -588,4 +588,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		baseStats: {hp: 80, atk: 120, def: 135, spa: 55, spd: 135, spe: 25},
 		abilities: {0: "Pressure", 1: "Iron Fist", H: "Frisk", S: "Leech"},
 	},
+	luvdisc: {
+		inherit: true,
+		baseStats: {hp: 67, atk: 30, def: 65, spa: 90, spd: 101, spe: 107},
+		abilities: {0: "Swift Swim", H: "Hydration", S: "Soul-Heart"},
+	},
 };
