@@ -50936,7 +50936,7 @@ curdiscope: {
 		name: "Ryokami",
 		types: ["Normal", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 83, atk: 107, def: 47, spa: 84, spd: 47, spe: 115},
+		baseStats: {hp: 83, atk: 113, def: 47, spa: 84, spd: 47, spe: 115},
 		abilities: {0: "Normalize", 1: "Adaptability", H: "Super Luck", S: "Trace"},
 		heightm: 1.40,
 		weightkg: 6.0,
