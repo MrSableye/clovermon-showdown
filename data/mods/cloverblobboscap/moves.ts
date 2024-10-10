@@ -1700,6 +1700,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	waddlecopter: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	frostyterrain: {
 		inherit: true,
 		isNonstandard: null,

@@ -9263,6 +9263,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  [POKEMON] is waiting for you.",
 		activate: "  [TARGET] has experienced the 5th Night!",
 	},
+	waddlecopter: {
+		name: "Waddle Copter",
+		shortDesc: "Hits 2-5 times. Free user from hazards/bind/Leech Seed.",
+	},
 	icastfireball: {
 		name: "I Cast Fireball!",
 		shortDesc: "20% Chance to burn.",
