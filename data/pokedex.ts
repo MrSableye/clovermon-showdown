@@ -46821,6 +46821,35 @@ blobbosdreaming: {
 		eggGroups: ["Fairy", "Flying"],
 		requiredItem: "Dreamite",
 	},
+	blobbosbandanadee: {
+		num: 69132,
+		name: "Blobbos-Bandana Dee",
+		baseSpecies: "Blobbos",
+		forme: "Bandana Dee",
+		types: ["Flying", "Fighting"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 75,
+			atk: 105,
+			def: 70,
+			spa: 70,
+			spd: 70,
+			spe: 120,
+		},
+		abilities: {
+			0: "Long Reach",
+                        1: "Justified",
+                        H: "Oblivious",
+                        S: "Skill Link",
+		},
+		heightm: 0.5,
+		weightkg: 32,
+		color: "Brown",
+		eggGroups: [
+			"Fairy"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
