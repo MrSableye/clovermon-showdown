@@ -245,6 +245,7 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		ruleset: [
 			'Standard NatDex',
+			'Terastal Clause',
 			'! Nickname Clause',
 			'Same Type Clause',
 			'Sleep Clause Mod',
@@ -252,7 +253,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Heavy-Duty Boots', 'Shadow Tag', 'Baton Pass'],
 		unbanlist: ['Darmanitan-Galar', 'Deoxys-Speed', 'Regieleki', 'Melmetal', 'Shedinja', 'Cinderace', 'Roaring Moon', 'Walking Wake'],
 	},
 	{
@@ -1501,7 +1502,49 @@ export const Formats: FormatList = [
 		rated: false,
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
+   {
+		name: '[Gen 8 Clover Blobbos CAP Only] Pokebilities',
+		mod: 'cloverblobboscap',
+		rated: false,
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Blobbos Only',
+			'! Nickname Clause',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Uber', 'Baton Pass',
+			'Shadow Tag', 'Arena Trap', 'Moody',
+			'Blobbos-Chad', 'Cell Construct', 'Stink Bomb',
+			'Blobbos-Bunny', 'Neutralizing Gas',
+		],
+		onBegin() {
+			for (const pokemon of this.getAllPokemon()) {
+				const ruleTable = this.dex.formats.getRuleTable(this.format);
 
+				pokemon.m.innates = Object.keys(pokemon.species.abilities)
+					.map(key => this.toID(pokemon.species.abilities[key as "0" | "1" | "H" | "S"]))
+					.filter(ability => !ruleTable.isBanned(`ability:${ability}`))
+					.filter(ability => ability !== pokemon.ability);
+			}
+		},
+		onSwitchInPriority: 2,
+		onSwitchIn(pokemon) {
+			if (pokemon.m.innates) {
+				for (const innate of pokemon.m.innates) {
+					pokemon.addVolatile("ability:" + innate, pokemon);
+				}
+			}
+		},
+		onAfterMega(pokemon) {
+			for (const innate of Object.keys(pokemon.volatiles).filter(i => i.startsWith('ability:'))) {
+				pokemon.removeVolatile(innate);
+			}
+			pokemon.m.innates = undefined;
+		},
+	},
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Pokebilities FFA Random Battle',
 		mod: 'cloverblobboscap',
