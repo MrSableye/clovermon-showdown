@@ -5629,6 +5629,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				move.forceSTAB = true;
 			}
 		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.species.id !== 'blobbos-fools') return;
+			if (['Dark', '???'].includes(move.type)) {
+				move.forceSTAB = true;
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.species.id !== 'blobbos-artist') return;
+			if (['Normal', '???'].includes(move.type)) {
+				move.forceSTAB = true;
+			}
+		},
 		rating: 2,
 		isNonstandard: "Future",
 	},
