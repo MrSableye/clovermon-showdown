@@ -253,7 +253,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Heavy-Duty Boots', 'Shadow Tag', 'Baton Pass'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass'],
 		unbanlist: ['Darmanitan-Galar', 'Deoxys-Speed', 'Regieleki', 'Melmetal', 'Shedinja', 'Cinderace', 'Roaring Moon', 'Walking Wake'],
 	},
 	{
@@ -1508,11 +1508,17 @@ export const Formats: FormatList = [
 		rated: false,
 		ruleset: [
 			'Terastal Clause',
-			'Standard',
+			'Obtainable',
+			'Team Preview',
+			'Sleep Clause Mod',
 			'Blobbos Only',
-			'! Nickname Clause',
+			'Endless Battle Clause',
+			'HP Percentage Mod',
+			'Cancel Mod',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
+			'OHKO Clause',
+			'Evasion Moves Clause',
 		],
 		banlist: [
 			'Uber', 'Baton Pass',
@@ -1545,6 +1551,7 @@ export const Formats: FormatList = [
 			pokemon.m.innates = undefined;
 		},
 	},
+	
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Pokebilities FFA Random Battle',
 		mod: 'cloverblobboscap',
