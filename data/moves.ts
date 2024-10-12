@@ -27056,6 +27056,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (target.hasItem('choicescarf')) {
 					this.boost({spe: 1}, source);
 				}
+				if (target.hasItem('brightpowder')) {
+					this.boost({evasion: 1}, source);
+				}
 				if (target.hasItem('assaultvest')) {
 					this.boost({spd: 1}, source);
 				}
@@ -27070,7 +27073,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (target.hasItem('weaknesspolicy')) {
 					this.boost({spa: 2}, source);
 					this.boost({atk: 2}, source);
-					this.add('-message', 'oh fug oh shid');
+					this.add('-message', 'UH OH!');
+				}
+				if (target.hasItem('focussash')) {
+					this.boost({def: 2}, source);
+					this.boost({spd: 2}, source);
+					this.add('-message', 'WINNERS NEVER DIE!');
+				}
+				if (target.hasItem('focusband')) {
+					this.boost({def: 2}, source);
+					this.boost({spd: 2}, source);
+					this.add('-message', 'I CAN STILL FIGHT!');
 				}
 				if (target.hasItem('whiteherb')) {
 					let activate = false;
@@ -28921,8 +28934,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	waddlecopter: {
 		num: 350,
-		accuracy: 90,
-		basePower: 25,
+		accuracy: 95,
+		basePower: 20,
 		category: "Physical",
 		name: "Waddle Copter",
 		pp: 10,

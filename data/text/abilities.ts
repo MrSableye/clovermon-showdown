@@ -2240,7 +2240,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	gradient: {
 		name: "Gradient",
-		shortDesc: "Changes type in battle based on the foe's color. Biteki always has STAB with Ice and Psychic moves.",
+		shortDesc: "Changes type in battle based on the foe's color. Biteki always has STAB with Ice and Psychic moves, Blobbos-Fool's always has STAB with Dark and ??? moves and Blobbos-Artist always has STAB with Normal and ??? moves.",
 		desc: "Changes type in battle based on the foe's color. Biteki always has STAB with Ice and Psychic moves. Red = Fire, Blue = Water, Yellow = Electric, Green = Grass, Black = Dark, Brown = Ground, Purple = Poison, Gray = Steel, White = Flying, Pink = Fairy.",
 	},
 	anyability: {
