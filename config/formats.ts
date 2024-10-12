@@ -253,7 +253,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Heavy-Duty Boots', 'Shadow Tag', 'Baton Pass'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass'],
 		unbanlist: ['Darmanitan-Galar', 'Deoxys-Speed', 'Regieleki', 'Melmetal', 'Shedinja', 'Cinderace', 'Roaring Moon', 'Walking Wake'],
 	},
 	{
