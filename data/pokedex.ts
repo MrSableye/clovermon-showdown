@@ -46850,6 +46850,35 @@ blobbosdreaming: {
 		],
 		gen: 8,
 	},
+	blobbosfug: {
+		num: 69132,
+		name: "Blobbos-Fug",
+		baseSpecies: "Blobbos",
+		forme: "Fug",
+		types: ["Dragon", "Ice"],
+		gender: "N",
+		baseStats: {
+			hp: 75,
+			atk: 120,
+			def: 70,
+			spa: 120,
+			spd: 70,
+			spe: 95,
+		},
+		abilities: {
+			0: "Air Lock",
+                        1: "Shower Power",
+                        H: "Presage",
+                        S: "Delta Stream",
+		},
+		heightm: 6.1,
+		weightkg: 205.4,
+		color: "Blue",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",

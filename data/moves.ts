@@ -23431,9 +23431,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onModifyMove(move, pokemon) {
-			move.basePower = Math.max(move.basePower * pokemon.hp / pokemon.maxhp, 100);
-		},
 		selfdestruct: "always",
 		overrideOffensiveStat: "def",
 		secondary: null,
@@ -33803,6 +33800,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
+	blobascent: {
+		num: 370,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Blob Ascent",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, distance: 1},
+		self: {
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+		contestType: "Tough",
+	},
 	skillroom: {
 		accuracy: true,
 		basePower: 0,
@@ -33876,7 +33894,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	finishingtouch: {
 		accuracy: 100,
-		basePower: 90,
+		basePower: 10,
 		category: "Physical",
 		name: "Finishing Touch",
 		pp: 5,
@@ -33884,7 +33902,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1, wind: 1},
 		onBasePower(basePower, pokemon, target) {
 			if (target.hp * 2 <= target.maxhp) {
-				return this.chainModify(3.125);
+				return this.chainModify(30.125);
 			}
 		},
 		secondary: null,

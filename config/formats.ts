@@ -1524,7 +1524,9 @@ export const Formats: FormatList = [
 			'Uber', 'Baton Pass',
 			'Shadow Tag', 'Arena Trap', 'Moody',
 			'Blobbos-Chad', 'Cell Construct', 'Stink Bomb',
-			'Blobbos-Bunny', 'Neutralizing Gas',
+			'Blobbos-Bunny', 'Neutralizing Gas', 'Blobbos-Nega',
+			'Ascension', 'Mitosis Mash', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs', 
+         'Power Herb + Geomancy', 'Power Herb + Awaken', 'Baitite + Destiny Bond', 'Star Rod + Victory Dance', 
 		],
 		onBegin() {
 			for (const pokemon of this.getAllPokemon()) {

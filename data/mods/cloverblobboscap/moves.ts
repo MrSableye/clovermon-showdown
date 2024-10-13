@@ -1704,6 +1704,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	blobascent: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	frostyterrain: {
 		inherit: true,
 		isNonstandard: null,
