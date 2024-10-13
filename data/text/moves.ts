@@ -7841,8 +7841,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	tombstoner: {
 		name: "Tombstoner",
-		desc: "Power is equal to (user's current HP * 300 / user's maximum HP), rounded down, but not less than 100. The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
-		shortDesc: "Power = HP%. The user faints, uses user's Def stat as Atk.",
+		desc: "The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
+		shortDesc: "The user faints, uses user's Def stat as Atk.",
 	},
 	fruitjuice: {
 		name: "Fruit Juice",
@@ -9267,6 +9267,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Waddle Copter",
 		shortDesc: "Hits 2-5 times. Free user from hazards/bind/Leech Seed.",
 	},
+	blobascent: {
+		name: "Blob Ascent",
+		shortDesc: "Lowers user's Defense and Special Defense by 1.",
+	},
 	icastfireball: {
 		name: "I Cast Fireball!",
 		shortDesc: "20% Chance to burn.",
@@ -9772,8 +9776,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	finishingtouch: {
 		name: "Finishing Touch",
-		desc: "3.125x power if the target has less than or equal to half of its maximum HP remaining.",
-		shortDesc: "3.125x power if the target's HP is 50% or less.",
+		desc: "30.125x power if the target has less than or equal to half of its maximum HP remaining.",
+		shortDesc: "30.125x power if the target's HP is 50% or less.",
 	},
 	runeofluck: {
 		name: "Rune of Luck",
