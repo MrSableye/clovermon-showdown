@@ -2470,7 +2470,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowervr: {
 		name: "Board Power (/vr/)",
-		shortDesc: "Sets Magic Room and sppresses all other abilities other than Comatose and Board Power on switch-in.",
+		shortDesc: "Sets Magic Room and suppresses all other abilities other than Comatose and Board Power on switch-in.",
 	},
 	boardpowerx: {
 		name: "Board Power (/x/)",
