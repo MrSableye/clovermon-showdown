@@ -46826,7 +46826,7 @@ blobbosdreaming: {
 		name: "Blobbos-Bandana Dee",
 		baseSpecies: "Blobbos",
 		forme: "Bandana Dee",
-		types: ["Flying", "Fighting"],
+		types: ["Fighting", "Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {
 			hp: 75,
@@ -46876,6 +46876,35 @@ blobbosdreaming: {
 		color: "Blue",
 		eggGroups: [
 			"Undiscovered"
+		],
+		gen: 8,
+	},
+	blobboscentipede: {
+		num: 69132,
+		name: "Blobbos-Centipede",
+		baseSpecies: "Blobbos",
+		forme: "Centipede",
+		types: ["Bug", "Poison"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 70,
+			atk: 91,
+			def: 79,
+			spa: 55,
+			spd: 80,
+			spe: 127,
+		},
+		abilities: {
+			0: "Unnerve",
+                        1: "Merciless",
+                        H: "Leech",
+                        S: "Strong Jaw",
+		},
+		heightm: 0.089,
+		weightkg: 0.08,
+		color: "Black",
+		eggGroups: [
+			"Bug", "Monster"
 		],
 		gen: 8,
 	},
