@@ -49330,6 +49330,20 @@ curdiscope: {
                 gen: 9,
 		creator: "shyguywarrior",
 	},
+	amatitans: {
+		num: -233,
+		name: "Amatitans",
+		types: ["Ghost", "???"],
+                gender: "M",
+		baseStats: {hp: 73, atk: 127, def: 116, spa: 79, spd: 92, spe: 34},
+		abilities: {0: "Defeatist", 1: "Cursed Body", S: "Stakeout", H: "Iron Fist"},
+		heightm: 2.2,
+		weightkg: 937.3,
+		color: "Grey",
+		eggGroups: ["Undiscovered"], 
+                gen: 9,
+		creator: "C3ll",
+	},
 
 	
 
