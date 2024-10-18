@@ -11107,7 +11107,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	ryokami: {
+	oryugami: {
 		tier: "Illegal",
 		isNonstandard: "Future",	
 	},

@@ -1178,7 +1178,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	ryokami: {
+	oryugami: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
