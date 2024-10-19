@@ -51003,9 +51003,9 @@ curdiscope: {
 		gen: 8,
 		creator: "Zac",
 		},
-	ryokami: {
+	oryugami: {
 		num: -8600,
-		name: "Ryokami",
+		name: "Oryugami",
 		types: ["Normal", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 83, atk: 113, def: 47, spa: 84, spd: 47, spe: 115},
