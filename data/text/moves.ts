@@ -9849,6 +9849,43 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Meowsa",
 		desc: "Uses Assist after the move hits.",
 	},
+	seedburst: {
+		name: "Seed Burst",
+		shortDesc: "25% chance to inflict Leech Seed on hit.",
+	},
+	sealedgash: {
+		name: "Sealed Gash",
+		shortDesc: "25% chance to inflict burn on hit.",
+	},
+	voidtendrils: {
+		name: "Void Tendrils",
+		shortDesc: "25% chance to inflict bad poison on hit.",
+	},
+	internalpurge: {
+		name: "Internal Purge",
+		shortDesc: "Fails if user is not poisoned. 50% recoil. Cures user's poisoning.",
+	},
+	dualcrystalcrash: {
+		name: "Dual Crystal Crash",
+		shortDesc: "Hits twice. 30% chance to flinch.",
+	},
+	atomblast: {
+		name: "Atom Blast",
+		shortDesc: "Hits 2-5 times.",
+	},
+	shatterstrike: {
+		name: "Shatter Strike",
+		shortDesc: "50% chance to lower target's Defense by 1.",
+	},
+	burnout: {
+		name: "Burn Out",
+		shortDesc: "Changes target's ability to Dry Skin. Fails against permanent abilities.",
+	},
+	euthanize: {
+		name: "Euthanize",
+		shortDesc: "33% chance to put the target to sleep.",
+	},
+
 
 	// WACK MOVES
 	hijumpkick: {
