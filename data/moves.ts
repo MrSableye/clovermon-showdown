@@ -34453,6 +34453,170 @@ export const Moves: {[moveid: string]: MoveData} = {
 		maxMove: {basePower: 140},
 		isNonstandard: "Future",
 	},
+	seedburst: {
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		name: "Seed Burst",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		contestType: "Tough",
+		onHit(target, source) {
+			if (this.randomChance(1, 4)) {
+				target.addVolatile('leechseed');
+			}
+		},
+		isNonstandard: "Future",
+	},
+	sealedgash: {
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Sealed Gash",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		thawsTarget: true,
+		secondary: {
+			chance: 25,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Fire",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	voidtendrils: {
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		name: "Void Tendrils",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1},
+		secondary: {
+			chance: 25,
+			status: 'tox',
+		},
+		target: "normal",
+		type: "Water",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	internalpurge: {
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Internal Purge",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1},
+		recoil: [1, 2],
+		onHit(pokemon, self) {
+			if (['', 'slp', 'frz', 'brn', 'par'].includes(self.status)) return false;
+			self.cureStatus(); // i have no idea if this works or not LMAO -rex
+		},
+		secondary: null,
+		target: "self",
+		type: "Poison",
+		isNonstandard: "Future",
+	},
+	dualcrystalcrash: {
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Dual Crystal Crash",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		multihit: 2,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Poison",
+		isNonstandard: "Future",
+	},
+	atomblast: {
+		accuracy: 100,
+		basePower: 25,
+		category: "Physical",
+		name: "Atom Blast",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
+	shatterstrike: {
+		accuracy: 95,
+		basePower: 75,
+		category: "Physical",
+		name: "Shatter Strike",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, mirror: 1, protect: 1},
+		secondary: {
+			chance: 50,
+			boosts: {
+				def: -1,
+			},
+		},
+		target: "normal",
+		type: "Ice",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	burnout: {
+		accuracy: 100,
+		basePower: 55,
+		category: "Special",
+		name: "Burn Out",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent) {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('dryskin');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Dry Skin', '[from] move: Burn Out');
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		isNonstandard: "Future",
+	},
+	euthanize: {
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Euthanize",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 33,
+			status: 'slp',
+		},
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
 	hijumpkick: {
 		num: 666084,
 		accuracy: 90,
