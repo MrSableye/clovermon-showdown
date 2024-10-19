@@ -2508,7 +2508,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	ryokami: {
+	oryugami: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
