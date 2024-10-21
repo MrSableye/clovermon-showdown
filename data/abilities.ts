@@ -7738,12 +7738,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Transfusion",
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
-			const types = target.getTypes();
-			source.setType(types);
-			this.add('-start', source, 'typechange', types.join('/'), '[from] ability: Transfusion', '[of] ' + target);
-			source.addVolatile('transfusion');
+			const type = target.getTypes()[0];
+			if (type && source.setType(type)) {
+				this.add('-start', source, 'typechange', type, '[from] ability: Transfusion', '[of] ' + target);
+				source.addVolatile('transfusion');
+			}
 		},
-		onEnd(pokemon) {
+		onSwitchOut(pokemon) {
 			for (const target of this.getAllActive()) {
 				if (!target.removeVolatile('transfusion')) continue;
 				const types = Dex.species.get(target.species).types;
