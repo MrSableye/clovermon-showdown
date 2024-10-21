@@ -4799,4 +4799,24 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	headlongrush: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mountaingale: {
+		num: 836,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Mountain Gale",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, bite: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Ice",
+	},
 };

@@ -4079,6 +4079,14 @@ malediction: {
 		name: "Bullet Reflect",
 		shortDesc: "Reflects back Bomb/Bullet based moves at the user.",
 	},
+	walker: {
+		name: "Walker",
+		shortDesc: "Raises Attack and Speed by 1 each turn.",
+	},
+	shipwrecker: {
+		name: "Shipwrecker",
+		shortDesc: "Ice type moves are super-effective against Steel types.",
+	},
 	polite: {
 		name: "Polite",
 		shortDesc: "Moves last. STAB increased to 2.",

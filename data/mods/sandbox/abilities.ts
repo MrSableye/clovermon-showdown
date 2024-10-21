@@ -568,8 +568,37 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	normalize: {
-		inherit: true,
-		isNonstandard: null,
+		onModifyTypePriority: 1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'hiddenpower', 'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'struggle', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (!(move.isZ && move.category !== 'Status') && !noModifyType.includes(move.id) &&
+				// TODO: Figure out actual interaction
+				!(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Normal';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([2, 4]);
+		},
+		name: "Normalize",
+		shortDesc: "All moves this Pokemon uses become normal type and gain a 1.5x Boost in power.",
+		rating: 0,
+		num: 96,
+	},
+	quickfeet: {
+		onModifySpe(spe, pokemon) {
+			if (pokemon.status) {
+				return this.chainModify(2);
+			}
+		},
+		name: "Quick Feet",
+		shortDesc: "If this Pokemon is statused, its Speed is 2x; ignores Speed drop from paralysis.",
+		rating: 2.5,
+		num: 95,
 	},
 	oblivious: {
 		inherit: true,
@@ -683,10 +712,6 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	quickfeet: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	raindish: {
 		inherit: true,
 		isNonstandard: null,
@@ -736,8 +761,21 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	sandforce: {
-		inherit: true,
-		isNonstandard: null,
+		name: "Sand Force",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon) {
+			if (['sandstorm'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+		onWeather(target, source, effect) {
+			if (target.hasItem('utilityumbrella')) return;
+			if (effect.id === 'sandstorm') {
+				this.damage(target.baseMaxhp / 8, target, target);
+			}
+		},
+		rating: 2,
+		shortDesc: "If Sandstorm is active, this Pokemon's Atk is 1.5x; loses 1/8 max HP per turn.",
 	},
 	sandrush: {
 		inherit: true,
@@ -1996,6 +2034,14 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	warden: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	walker: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shipwrecker: {
 		inherit: true,
 		isNonstandard: null,
 	},

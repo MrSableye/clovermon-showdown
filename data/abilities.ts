@@ -8376,6 +8376,33 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 		num: 3,
 	},
+	walker: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				this.boost({spe: 1, atk: 1});
+			}
+		},
+		name: "Walker",
+		isNonstandard: "Future",
+		rating: 4.5,
+		num: 3,
+	},
+	shipwrecker: {
+		name: "Shipwrecker",
+		onAnyEffectiveness(typemod, target, type, move) {
+			const degradationUser = this.effectState.target;
+
+			if (degradationUser !== this.activePokemon) return;
+
+			if (move.type === 'Ice' && ['Steel'].includes(type)) {
+				return 1;
+			}
+		},
+		rating: 3,
+		isNonstandard: "Future",
+	},
 	armorplate: {
 		onModifyTypePriority: -1,
 		onModifyType(move, pokemon) {
