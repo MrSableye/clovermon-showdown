@@ -2610,7 +2610,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	transfusion: {
 		name: "Transfusion",
-		shortDesc: "Upon being hit, changes the opponent's type to the type of the ability-holder. When the ability-holder leaves, change their types back.",
+		shortDesc: "Upon being hit, changes the opponent's type to the primary type of the ability-holder. When the ability-holder switches out, change their types back.",
 	},
 	catalyst: {
 		name: "Catalyst",
