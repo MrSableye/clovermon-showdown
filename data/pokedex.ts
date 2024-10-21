@@ -37597,7 +37597,7 @@ mootant: {
 ganglython: {
 	num: -8262,
 	name: "Ganglython",
-	types: ["Psychic", "Bug"],
+	types: ["Bug", "Psychic"],
 	genderRatio: {M: 0.5, F: 0.5},
 	baseStats: {hp: 70, atk: 103, def: 48, spa: 31, spd: 62, spe: 135},
 	abilities: {0: "Brain Power", H: "Own Tempo", S: "Transfusion"},

@@ -92166,4 +92166,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		contestType: "Cool",
 	},
+	spitfire: {
+		num: 786,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "SPITFIRE",
+		isNonstandard: "Future",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		secondary: {
+			chance: 20,
+			status: 'brn',
+		},
+		target: "allAdjacentFoes",
+		type: "Fire",
+	},
 };
