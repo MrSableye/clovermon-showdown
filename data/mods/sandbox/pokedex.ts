@@ -594,7 +594,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		baseStats: {hp: 67, atk: 30, def: 65, spa: 90, spd: 101, spe: 107},
 		abilities: {0: "Swift Swim", H: "Hydration", S: "Soul-Heart"},
 	},
-	klingklang: {
+	klinklang: {
 		inherit: true,
 		types: ["Steel", "Electric"],
 		baseStats: {hp: 80, atk: 110, def: 115, spa: 70, spd: 85, spe: 100},
