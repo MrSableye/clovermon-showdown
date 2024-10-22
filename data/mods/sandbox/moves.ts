@@ -4613,6 +4613,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	radishpunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psychicd: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	recoverd: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	garudaimpact: {
 		inherit: true,
 		isNonstandard: null,
