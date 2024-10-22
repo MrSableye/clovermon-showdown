@@ -86,6 +86,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Assault Vest",
 		desc: "Holder's Sp. Def is 1.5x, but it can only select damaging moves.",
 	},
+	assaultjacket: {
+		name: "Assault Jacket",
+		desc: "Holder's Def. is 1.5x, but it can only select status moves.",
+	},
 	audinite: {
 		name: "Audinite",
 		desc: "If held by an Audino, this item allows it to Mega Evolve in battle.",
