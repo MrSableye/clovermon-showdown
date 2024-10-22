@@ -2921,6 +2921,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	stickywebshot: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	stockpile: {
 		inherit: true,
 		isNonstandard: null,
@@ -4876,5 +4880,25 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		target: "normal",
 		type: "Ice",
+	},
+	psyshieldbash: {
+		num: 828,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Psyshield Bash",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					def: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Psychic",
 	},
 };
