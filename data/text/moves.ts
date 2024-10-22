@@ -9402,6 +9402,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "SPITFIRE",
 		shortDesc: "20% CHANCE TO BURN THE TARGETTED FOE, THOUGH THOSE FLAMES OF RAPP BE HITTIN' ADJACENT FOES HOES.",
 	},
+	psychicd: {
+		name: "Psychic-D",
+		shortDesc: "33% chance to lower the opponents Special Attack and Special Defense by 1.",
+	},
+	recoverd: {
+		name: "Recover-D",
+		shortDesc: "Heals the user by 50% of its max HP.",
+	},
 	extinction: {
 		name: "Extinction",
 		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",
