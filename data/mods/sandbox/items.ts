@@ -2395,4 +2395,8 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	assaultjacket: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
