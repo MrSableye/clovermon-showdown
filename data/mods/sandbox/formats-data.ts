@@ -11682,6 +11682,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	star: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	fuckerultra: {
 		inherit: true,
 		isNonstandard: null,
