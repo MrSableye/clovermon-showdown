@@ -2921,6 +2921,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	stickywebshot: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	stockpile: {
 		inherit: true,
 		isNonstandard: null,

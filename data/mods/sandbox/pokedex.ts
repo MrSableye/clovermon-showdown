@@ -696,4 +696,26 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		baseStats: {hp: 55, atk: 160, def: 140, spa: 160, spd: 145, spe: 30},
 		abilities: {0: "Schooling"},
 	},
+	spidops: {
+		inherit: true,
+		types: ["Bug"],
+		baseStats: {hp: 78, atk: 84, def: 119, spa: 42, spd: 96, spe: 30},
+		abilities: {0: "Insomnia", 1: "Stakeout", H: "Gooey", S: "Magic Guard"},
+	},
+	stantler: {
+		inherit: true,
+		types: ["Normal"],
+		baseStats: {hp: 73, atk: 95, def: 62, spa: 85, spd: 65, spe: 85},
+		abilities: {0: "Intimidate", 1: "Frisk", H: "Sap Sipper", S: "Simple"},
+		evos: ["Wyrdeer"],
+	},
+	wyrdeer: {
+		inherit: true,
+		types: ["Normal", "Psychic"],
+		baseStats: {hp: 108, atk: 110, def: 82, spa: 110, spd: 75, spe: 65},
+		abilities: {0: "Intimidate", 1: "Frisk", H: "Sap Sipper", S: "Reckless"},
+		prevo: "Stantler",
+	    evoType: "other",
+	    evoCondition: "Use Psyshield Bash a couple of times or some shit.",
+	},
 };
