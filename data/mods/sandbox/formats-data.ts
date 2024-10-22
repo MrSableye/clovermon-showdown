@@ -9558,6 +9558,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+    garble: {
+	inherit: true,
+	tier: "OU",
+	isNonstandard: null,
+    },
+    horstuba: {
+    inherit: true,
+    tier: "OU",
+    isNonstandard: null,
+    },
+    volbrat: {
+    inherit: true,
+    tier: "OU",
+    isNonstandard: null,
+    },
 	toastort: {
 		inherit: true,
 		tier: "OU",
