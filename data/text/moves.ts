@@ -9400,7 +9400,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	spitfire: {
 		name: "SPITFIRE",
-		shortDesc: "20% CHANCE TO BURN THE FOE. HITS ADJACENT FOES.",
+		shortDesc: "20% CHANCE TO BURN THE TARGETTED FOE, THOUGH THOSE FLAMES OF RAPP BE HITTIN' ADJACENT FOES HOES.",
 	},
 	extinction: {
 		name: "Extinction",

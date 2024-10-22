@@ -37324,7 +37324,7 @@ epipheror: {
 		types: ["???"],
 		gender: "N",
 		baseStats: {hp: 44, atk: 35, def: 88, spa: 52, spd: 75, spe: 6},
-		abilities: {0: "Trace", 1: "Slow Start", H: "Wait For It", S: "Tablets of Ruin"},
+		abilities: {0: "Trace", 1: "Slow Start", H: "Moody", S: "Inversion"},
 		heightm: 0.1,
 		weightkg: 1.4,
 		color: "Black",
@@ -37597,7 +37597,7 @@ mootant: {
 ganglython: {
 	num: -8262,
 	name: "Ganglython",
-	types: ["Bug", "Psychic"],
+	types: ["Psychic", "Bug"],
 	genderRatio: {M: 0.5, F: 0.5},
 	baseStats: {hp: 70, atk: 103, def: 48, spa: 31, spd: 62, spe: 135},
 	abilities: {0: "Brain Power", H: "Own Tempo", S: "Transfusion"},
