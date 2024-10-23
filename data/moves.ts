@@ -26589,12 +26589,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 	twintowertumblingterror: {
 		accuracy: true,
 		basePower: 290,
-		category: "Physical",
+		category: "Special",
 		isNonstandard: "Future",
 		name: "Twin Tower Tumbling Terror",
 		pp: 1,
 		priority: 0,
-		flags: {contact: 1, hammer: 1},
+		flags: {defrost: 1, hammer: 1},
 		isZ: "sableviumz",
 		onAfterMove(source) {
 			source.trySetStatus('brn');
@@ -26612,7 +26612,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
 		target: "normal",
-		type: "Steel",
+		type: "Normal",
 		contestType: "Smart",
 	},
 	toppingtoss: {

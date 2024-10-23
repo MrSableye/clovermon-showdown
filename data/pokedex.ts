@@ -39481,14 +39481,14 @@ iwik: {
 		baseSpecies: "Blobbos",
 		forme: "Rembered",
 		types: ["Flying", "Ice"],
-		gender: "N",
+		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {
-			hp: 100,
+			hp: 105,
 			atk: 70,
 			def: 70,
-			spa: 135,
+			spa: 105,
 			spd: 80,
-			spe: 75,
+			spe: 70,
 		},
 		abilities: {
 			0: "Magic Guard",
@@ -39499,7 +39499,7 @@ iwik: {
 		weightkg: 5.7,
 		color: "Blue",
 		eggGroups: [
-			"Ditto",
+			"Flying", "Mineral"
 		],
 		gen: 8,
 	},
@@ -39726,12 +39726,12 @@ iwik: {
 		baseSpecies: "Blobbos",
 		forme: "Angel",
 		types: ["Ghost", "Flying"],
-		gender: "N",
+		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {
 			hp: 150,
-			atk: 40,
+			atk: 50,
 			def: 65,
-			spa: 85,
+			spa: 75,
 			spd: 70,
 			spe: 90,
 		},
@@ -39745,7 +39745,7 @@ iwik: {
 		weightkg: 5.7,
 		color: "Pink",
 		eggGroups: [
-			"Ditto",
+			"Flying", "Amorphous"
 		],
 		gen: 8,
 	},
@@ -40229,14 +40229,15 @@ iwik: {
 		baseSpecies: "Blobbos",
 		forme: "Chef",
 		types: ["Steel", "Fire"],
-		gender: "N",
+				genderRatio: {M: 0.5, F: 0.5},
+
 		baseStats: {
 			hp: 95,
 			atk: 100,
 			def: 75,
-			spa: 85,
-			spd: 100,
-			spe: 81,
+			spa: 100,
+			spd: 85,
+			spe: 61,
 		},
 		abilities: {
 			0: "Heatproof",
@@ -40248,7 +40249,7 @@ iwik: {
 		weightkg: 5.7,
 		color: "Gray",
 		eggGroups: [
-			"Ditto",
+			"Mineral",
 		],
 		gen: 8,
 	},
@@ -40508,7 +40509,7 @@ iwik: {
 		baseSpecies: "Blobbos",
 		forme: "Skeleton",
 		types: ["Dark", "Ground"],
-		gender: "N",
+		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {
 			hp: 55,
 			atk: 80,
@@ -40519,7 +40520,7 @@ iwik: {
 		},
 		abilities: {
 			0: "Bone Zone",
-			1: "Boner Zoner",
+			1: "Unnerve",
 			H: "Insomnia",
 			S: "Cursed Body",
 		},
@@ -40527,7 +40528,7 @@ iwik: {
 		weightkg: 5.7,
 		color: "White",
 		eggGroups: [
-			"Ditto",
+			"Mineral", "Amorphous"
 		],
 		gen: 8,
 	},
@@ -41347,8 +41348,8 @@ iwik: {
 		gender: "M",
 		baseStats: {
 			hp: 70,
-			atk: 105,
-			def: 65,
+			atk: 95,
+			def: 75,
 			spa: 80,
 			spd: 85,
 			spe: 105,
@@ -41363,7 +41364,7 @@ iwik: {
 		weightkg: 5.7,
 		color: "Black",
 		eggGroups: [
-			"Ditto",
+			"Amorphous", "Human-Like"
 		],
 		gen: 8,
 	},
@@ -42994,14 +42995,14 @@ iwik: {
 		baseSpecies: "Blobbos",
 		forme: "Salt",
 		types: ["Rock"],
-		gender: "N",
+		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {
-			hp: 100,
-			atk: 45,
+			hp: 75,
+			atk: 50,
 			def: 90,
-			spa: 100,
-			spd: 130,
-			spe: 15,
+			spa: 80,
+			spd: 120,
+			spe: 20,
 		},
 		abilities: {
 			0: "Lingering Aroma",
@@ -43013,7 +43014,7 @@ iwik: {
 		weightkg: 16.3,
 		color: "Brown",
 		eggGroups: [
-			"Ditto",
+			"Mineral",
 		],
 		gen: 8,
 	},
@@ -45952,17 +45953,17 @@ blobbostengu: {
 		types: ["Flying", "Ghost"],
 		gender: "M",
 		baseStats: {
-			hp: 73,
+			hp: 63,
 			atk: 71,
-			def: 80,
-			spa: 87,
-			spd: 76,
-			spe: 153,
+			def: 72,
+			spa: 79,
+			spd: 77,
+			spe: 133,
 		},
 		abilities: {
 			0: "Wind Power",
                         1: "Wind Rider",
-                        H: "Delta Stream",
+                        H: "Prankster",
                         S: "Blademaster",
 		},
 		heightm: 1.67,
@@ -46116,10 +46117,10 @@ blobbosvalkyrie: {
 		gender: "F",
 		baseStats: {
 			hp: 77,
-			atk: 111,
-			def: 97,
-			spa: 60,
-			spd: 67,
+			atk: 101,
+			def: 77,
+			spa: 80,
+			spd: 77,
 			spe: 92,
 		},
 		abilities: {
