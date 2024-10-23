@@ -41448,7 +41448,7 @@ iwik: {
 		baseSpecies: "Blobbos",
 		forme: "Paper",
 		types: ["Normal", "Grass"],
-		gender: "N",
+		gender: "M",
 		baseStats: {
 			hp: 80,
 			atk: 105,
@@ -41458,10 +41458,9 @@ iwik: {
 			spe: 110,
 		},
 		abilities: {
-			0: "Paper Power",
-			1: "More Room",
-			H: "Sticky Hold",
-			S: "Color Change",
+			0: "Color Change",
+			1: "Sticky Hold",
+			H: "Paper Power",
 		},
 		heightm: 0.4,
 		weightkg: 0.1,

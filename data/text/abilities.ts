@@ -2802,7 +2802,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	gmaxcomatose: {
 		name: "GMax Comatose",
-		shortDesc: "Protection from status, moves that restrict choices, and switching. Max and G-Max moves have 50x power.",
+		shortDesc: "Protection from status, moves that restrict choices, and switching. Max and G-Max moves have 25x power.",
 	},
 	bloodthirsty: {
 		name: "Bloodthirsty",

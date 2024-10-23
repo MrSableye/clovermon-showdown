@@ -8531,7 +8531,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			];
 			if (maxMoves.includes(move.id)) {
 				this.debug('G-Max Comatose boost');
-				return this.chainModify(50);
+				return this.chainModify(25);
 			}
 		},
 		name: "G-Max Comatose",
