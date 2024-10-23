@@ -8425,7 +8425,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	peaceandtranquility: {
 		onModifyCritRatio(critRatio, target, source, move) {
-			if (target.hp <= target.maxhp / 3) { return critRatio + 3; }
+			if (target.hp <= target.maxhp / 2) { return critRatio + 3; }
 		},
 		name: "Peace and Tranquility",
 		isNonstandard: "Future",
@@ -9378,6 +9378,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			];
 			if (move.type === 'Dark' && !noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
 				move.type = 'Bug';
+				move.typeChangerBoosted = this.effect;
+			}
+			if (move.type === 'Water' && !noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+				move.type = 'Dark';
 				move.typeChangerBoosted = this.effect;
 			}
 		},

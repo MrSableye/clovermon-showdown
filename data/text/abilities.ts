@@ -2794,7 +2794,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	peaceandtranquility: {
 		name: "Peace and Tranquility",
-		shortDesc: "This Pokemon's attacks will always land a critical hit if this Pokemon is under 1/3 max HP.",
+		shortDesc: "This Pokemon's attacks will always land a critical hit if this Pokemon is under 1/2 max HP.",
 	},
 	darkthoughts: {
 		name: "Dark Thoughts",
@@ -3008,7 +3008,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	masterbait: {
 		name: "Masterbait",
-		shortDesc: "This Pokemon's Dark-type moves become Bug type and have 1.2x power.",
+		shortDesc: "This Pokemon's Dark-type moves become Bug-type and Water-Type moves become Dark-type and have 1.2x power.",
 	},
 	captchahorni: {
 		name: "Captcha: Horni",
