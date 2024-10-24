@@ -26589,12 +26589,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 	twintowertumblingterror: {
 		accuracy: true,
 		basePower: 290,
-		category: "Physical",
+		category: "Special",
 		isNonstandard: "Future",
 		name: "Twin Tower Tumbling Terror",
 		pp: 1,
 		priority: 0,
-		flags: {contact: 1, hammer: 1},
+		flags: {defrost: 1, hammer: 1},
 		isZ: "sableviumz",
 		onAfterMove(source) {
 			source.trySetStatus('brn');
@@ -26612,7 +26612,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
 		target: "normal",
-		type: "Steel",
+		type: "Normal",
 		contestType: "Smart",
 	},
 	toppingtoss: {
@@ -28496,6 +28496,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		overrideOffensiveStat: 'def',
 		onModifyMove(move, pokemon, target) {
 			pokemon.abilityState.irresistable = true;
 			if (move.category !== "Status") {
@@ -33288,6 +33289,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
+	snappingfrost: {
+		num: 803,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Snapping Frost",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, source) {
+			if (this.field.isTerrain('frostyterrain') && source.isGrounded()) {
+				this.debug('terrain buff');
+				return this.chainModify(1.5);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		isNonstandard: "Future",
+		type: "Ice",
+		contestType: "Cool",
+	},
 	banana: {
 		accuracy: 100,
 		basePower: 5,
@@ -33853,6 +33875,113 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Ice",
 		contestType: "Tough",
+	},
+	lovelyhug: {
+		num: 609,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Lovely Hug",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
+		},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		onModifyType(move, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Sexy-Mega-X') {
+				move.type = 'Dark';
+			} else {
+				move.type = 'Fairy';
+			}
+		},
+		onTry(source) {
+			if (source.species.baseSpecies === 'Blobbos-Sexy') {
+				return;
+			}
+			this.attrLastMove('[still]');
+			this.add('-fail', source, 'move: Lovely Hug');
+			this.hint("Not lovely enough! <3.");
+			return null;
+		},
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cute",
+	},
+	ufftoyyoyoing: {
+		num: 660,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Uff Toyyoyoing",
+		pp: 10,
+		priority: 2,
+		flags: {protect: 1, mirror: 1},
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Uff Toyyoyoing only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Cute",
+	},
+	transrights: {
+		num: 339,
+		accuracy: 100,
+		basePower: 45,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Trans Rights",
+		pp: 10,
+		priority: 0,
+		flags: {sound: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spa: 1,
+				spe: 1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	ultimateflex: {
+		num: 837,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Future",
+		name: "Ultimate Flex",
+		pp: 5,
+		priority: 1,
+		flags: {snatch: 1},
+		boosts: {
+			atk: 1,
+			def: 1,
+			spe: 2,
+		},
+		onTry(source) {
+			if (source.species.baseSpecies === 'Blobbos-Chad') {
+				return;
+			}
+			this.attrLastMove('[still]');
+			this.add('-fail', source, 'move: Ultimate Flex');
+			this.hint("NOT. SWOLE. ENOUGH.");
+			return null;
+		},
+		volatileStatus: 'focusenergy',
+		secondary: null,
+		target: "self",
+		type: "Fighting",
 	},
 	skillroom: {
 		accuracy: true,

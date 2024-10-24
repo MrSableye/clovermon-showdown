@@ -144,10 +144,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	sandysnore: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	amogus: {
 		inherit: true,
 		isNonstandard: null,
@@ -330,10 +326,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	nosedive: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	shadowstrike: {
 		inherit: true,
 		accuracy: 100,
@@ -360,14 +352,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	bloodshot: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	malicepowder: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mushroomshot: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1613,10 +1597,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	unload: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	prismspray: {
 		inherit: true,
 		isNonstandard: null,
@@ -1705,6 +1685,26 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	blobascent: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	snappingfrost: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	transrights: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ultimateflex: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ufftoyyoyoing: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lovelyhug: {
 		inherit: true,
 		isNonstandard: null,
 	},

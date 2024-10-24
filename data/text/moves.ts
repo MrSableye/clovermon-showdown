@@ -9271,6 +9271,26 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Blob Ascent",
 		shortDesc: "Lowers user's Defense and Special Defense by 1.",
 	},
+	snappingfrost: {
+		name: "Snapping Frost",
+		shortDesc: "1.5x Damage under Frosty Terrain.",
+	},
+	ufftoyyoyoing: {
+		name: "Uff Toyyoyoing",
+		shortDesc: "Works First Turn out only. Usually goes first.",
+	},
+	ultimateflex: {
+		name: "Ultimate Flex",
+		shortDesc: "Usually goes first. Raises the users Attack and Defense by 1 and Speed by 2. Applies Focus Energy onto the user.",
+	},
+	transrights: {
+		name: "Trans Rights",
+		shortDesc: "Raises Special Attack and Speed after hitting.",
+	},
+	lovelyhug: {
+		name: "Lovely Hug",
+		shortDesc: "30% Chance to Paralyze the target. Fairy if Blobbos-Sexy and Blobbos-Sexy-Mega-Y; Dark if Blobbos-Sexy-Mega-X. Special if Spatk > Attack.",
+	},
 	icastfireball: {
 		name: "I Cast Fireball!",
 		shortDesc: "20% Chance to burn.",
