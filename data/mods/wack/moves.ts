@@ -5444,6 +5444,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	trailblaze: {
 		inherit: true,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		desc: "Uses the user's Speed stat in damage calculation rather than Attack stat.",
+		shortDesc: "Uses the user's Speed stat in damage calculation rather than Attack stat.",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		overrideOffensiveStat: 'spe',
+		secondary: null,
+		target: "normal",
+		type: "Fire",
 		isNonstandard: null,
 	},
 	transform: {
