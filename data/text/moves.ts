@@ -7819,8 +7819,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Lowers the targets defense by 2 if they're part Steel-Type.",
 		shortDesc: "Lowers the targets defense by 2 if they're part Steel-Type.",
 	},
-	drumroll: {
-		name: "Drumroll",
+	drumrollcap: {
+		name: "Drumroll (CAP)",
 		desc: "Randomly selects a move that is 110 Power or more for use.",
 		shortDesc: "Randomly selects a move that is 110 Power or more for use.",
 	},
