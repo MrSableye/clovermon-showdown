@@ -33900,15 +33900,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move.type = 'Fairy';
 			}
 		},
-		onTry(source) {
-			if (source.species.baseSpecies === 'Blobbos-Sexy') {
-				return;
-			}
-			this.attrLastMove('[still]');
-			this.add('-fail', source, 'move: Lovely Hug');
-			this.hint("Not lovely enough! <3.");
-			return null;
-		},
+		noSketch: true,
 		target: "normal",
 		type: "Fairy",
 		contestType: "Cute",
@@ -33969,15 +33961,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			def: 1,
 			spe: 2,
 		},
-		onTry(source) {
-			if (source.species.baseSpecies === 'Blobbos-Chad') {
-				return;
-			}
-			this.attrLastMove('[still]');
-			this.add('-fail', source, 'move: Ultimate Flex');
-			this.hint("NOT. SWOLE. ENOUGH.");
-			return null;
-		},
+		noSketch: true,
 		volatileStatus: 'focusenergy',
 		secondary: null,
 		target: "self",
