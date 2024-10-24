@@ -25787,11 +25787,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Bug",
 		isNonstandard: "Future",
 	},
-	drumroll: {
+	drumrollcap: {
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		name: "Drumroll",
+		name: "Drumroll (CAP)",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
@@ -25800,7 +25800,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
 				!move.realMove && !move.isZ && !move.isMax &&
 				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
-				move.basePower > 109 && move.id !== 'drumroll'
+				move.basePower > 109 && move.id !== 'drumrollcap'
 			));
 			let randomMove = '';
 			if (moves.length) {
