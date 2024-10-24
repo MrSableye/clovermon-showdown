@@ -7814,6 +7814,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power doubles if the target is paralyzed.",
 		shortDesc: "Power doubles if the target is paralyzed.",
 	},
+	borebite: {
+		name: "Bore Bite",
+		desc: "Lowers the targets Defense by 2 if they're part Steel-Type.",
+		shortDesc: "Lowers the targets Defense by 2 if they're part Steel-Type.",
+	},
 	awaken: {
 		name: "Awaken",
 		desc: "Raises the user's Attack, Defense, and Speed by 2 stages. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
