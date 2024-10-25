@@ -4881,6 +4881,35 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Ice",
 	},
+	drumroll: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Drumroll",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.basePower > 109 && move.id !== 'drumrollcap'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
+		secondary: null,
+		shortDesc: "A random attacking move that is 110 Power or more is selected for use.",
+		target: "self",
+		type: "Normal",
+	},
 	psyshieldbash: {
 		num: 828,
 		accuracy: 100,

@@ -7816,13 +7816,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	borebite: {
 		name: "Bore Bite",
-		desc: "Lowers the targets defense by 2 if they're part Steel-Type.",
-		shortDesc: "Lowers the targets defense by 2 if they're part Steel-Type.",
-	},
-	drumrollcap: {
-		name: "Drumroll (CAP)",
-		desc: "Randomly selects a move that is 110 Power or more for use.",
-		shortDesc: "Randomly selects a move that is 110 Power or more for use.",
+		desc: "Lowers the targets Defense by 2 if they're part Steel-Type.",
+		shortDesc: "Lowers the targets Defense by 2 if they're part Steel-Type.",
 	},
 	awaken: {
 		name: "Awaken",
