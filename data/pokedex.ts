@@ -51026,7 +51026,7 @@ curdiscope: {
 		heightm: 1.87,
 		weightkg: 95.0,
 		color: "Red",
-		eggGroups: ["Monster", "Mineral"],
+		eggGroups: ["Human-Like", "Mineral"],
 		gen: 8,
 		creator: "Toad",
 	},
