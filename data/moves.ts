@@ -25770,6 +25770,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rock",
 		isNonstandard: "Future",
 	},
+	borebite: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Bore Bite",
+		pp: 10,
+		priority: 0,
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		onHit(target, source) {
+			if (target.getTypes().includes('Steel')) {
+				this.boost({def: -2}, target, source);
+			}
+		},
+		target: "normal",
+		type: "Bug",
+		isNonstandard: "Future",
+	},
 	mirageveil: {
 		accuracy: true,
 		basePower: 0,
