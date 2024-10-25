@@ -51029,7 +51029,6 @@ curdiscope: {
 			eggGroups: ["Monster", "Human-Like"],
 			gen: 8,
 			creator: "Toad",
-		},
 	},
 	starhiro: {
 		num: -8180,
