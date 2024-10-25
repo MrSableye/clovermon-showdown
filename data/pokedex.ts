@@ -51022,7 +51022,7 @@ curdiscope: {
 			types: ["Fire", "Steel"],
 			genderRatio: {M: 0.5, F: 0.5},
 			baseStats: {hp: 93, atk: 69, def: 103, spa: 121, spd: 60, spe: 65},
-			abilities: {0: "Iron Fist", 1: "Flash Fire", H: "Boombox", S: "Flame Body"},
+			abilities: {0: "Full Metal Body", 1: "Flash Fire", H: "Boombox", S: "Turboblaze"},
 			heightm: 1.87,
 			weightkg: 95.0,
 			color: "Red",
