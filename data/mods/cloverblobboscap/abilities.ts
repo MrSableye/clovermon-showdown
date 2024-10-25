@@ -640,9 +640,35 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mothsmajesty: {
-		inherit: true,
-		isNonstandard: null,
+	ballfetch: {
+		name: "Ball Fetch",
+		onTryHitPriority: 1,
+		onTryHit(target, source, move) {
+			if (target === source || move.hasBounced || !move.flags['bullet']) {
+				return;
+			}
+			const newMove = this.dex.getActiveMove(move.id);
+			newMove.hasBounced = true;
+			this.actions.useMove(newMove, target, source);
+			return null;
+		},
+		onAllyTryHitSide(target, source, move) {
+			if (target.isAlly(source) || move.hasBounced || !move.flags['bullet']) {
+				return;
+			}
+			const newMove = this.dex.getActiveMove(move.id);
+			newMove.hasBounced = true;
+			this.actions.useMove(newMove, this.effectState.target, source);
+			return null;
+		},
+		condition: {
+			duration: 1,
+		},
+		shortDesc: "Reflects back Bullet/Ball-based moves at the user.",
+		isBreakable: true,
+		isNonstandard: "Future",
+		rating: 4,
+		num: 156,
 	},
 	regenerator: {
 		onSwitchOut(pokemon) {

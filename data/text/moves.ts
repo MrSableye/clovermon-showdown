@@ -7814,6 +7814,16 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power doubles if the target is paralyzed.",
 		shortDesc: "Power doubles if the target is paralyzed.",
 	},
+	borebite: {
+		name: "Bore Bite",
+		desc: "Lowers the targets defense by 2 if they're part Steel-Type.",
+		shortDesc: "Lowers the targets defense by 2 if they're part Steel-Type.",
+	},
+	drumrollcap: {
+		name: "Drumroll (CAP)",
+		desc: "Randomly selects a move that is 110 Power or more for use.",
+		shortDesc: "Randomly selects a move that is 110 Power or more for use.",
+	},
 	awaken: {
 		name: "Awaken",
 		desc: "Raises the user's Attack, Defense, and Speed by 2 stages. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
@@ -9270,6 +9280,26 @@ export const MovesText: {[k: string]: MoveText} = {
 	blobascent: {
 		name: "Blob Ascent",
 		shortDesc: "Lowers user's Defense and Special Defense by 1.",
+	},
+	snappingfrost: {
+		name: "Snapping Frost",
+		shortDesc: "1.5x Damage under Frosty Terrain.",
+	},
+	ufftoyyoyoing: {
+		name: "Uff Toyyoyoing",
+		shortDesc: "Works First Turn out only. Usually goes first.",
+	},
+	ultimateflex: {
+		name: "Ultimate Flex",
+		shortDesc: "Usually goes first. Raises the users Attack and Defense by 1 and Speed by 2. Applies Focus Energy onto the user.",
+	},
+	transrights: {
+		name: "Trans Rights",
+		shortDesc: "Raises Special Attack and Speed after hitting.",
+	},
+	lovelyhug: {
+		name: "Lovely Hug",
+		shortDesc: "30% Chance to Paralyze the target. Fairy if Blobbos-Sexy and Blobbos-Sexy-Mega-Y; Dark if Blobbos-Sexy-Mega-X. Special if Spatk > Attack.",
 	},
 	icastfireball: {
 		name: "I Cast Fireball!",

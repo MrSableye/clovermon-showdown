@@ -10344,7 +10344,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Tumultuous Tibia",
 		spritenum: 379,
 		fling: {
-			basePower: 50,
+			basePower: 75,
 			volatileStatus: 'curse',
 		},
 		onModifyAtkPriority: 1,
@@ -10357,6 +10357,29 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	}, 
+	sacredbong: {
+		name: "Sacred Bong",
+		spritenum: 140,
+		fling: {
+			basePower: 40,
+			status: 'slp',
+		},
+		onModifyDefPriority: 1,
+		onModifyDef(def, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Rasta') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpePriority: 1,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Rasta') {
+				return this.chainModify(1.5);
+			}
+		},
+		itemUser: ["Blobbos-Rasta"],
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	usbdrive: {
 		name: "USB Drive",
 		spritenum: 103,

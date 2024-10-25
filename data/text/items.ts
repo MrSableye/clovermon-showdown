@@ -2920,6 +2920,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Partner's Pendant",
 		desc: "An item to be held by Blobbos-Partner. Raises all of the user's stats by 1.5x (including Accuracy).",
 	},
+	sacredbong: {
+		name: "Sacred Bong",
+		desc: "An item to be held by Blobbos-Rasta. Raises Speed and Defense by 1.",
+	},
 	kikeousorb: {
 		name: "Kikeous Orb",
 		desc: "If held by a Jewipede, its Normal- and Bug-type attacks have 1.2x power.",
