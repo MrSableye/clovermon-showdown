@@ -1020,6 +1020,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	borebite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	flintfang: {
 		inherit: true,
 		isNonstandard: null,
