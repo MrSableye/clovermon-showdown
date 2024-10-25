@@ -9263,11 +9263,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
-	emeffyume: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
-	},
 	bubbasaur: {
 		inherit: true,
 		tier: "OU",
