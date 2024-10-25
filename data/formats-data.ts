@@ -11109,6 +11109,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	},
 	oryugami: {
 		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	emeffyume: {
+		tier: "Illegal",
 		isNonstandard: "Future",	
 	},
 	amalgum: {
