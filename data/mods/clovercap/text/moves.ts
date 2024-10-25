@@ -76,6 +76,11 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		desc: "Has a 100% chance to raise the user's Special Attack by 1 stage.",
 		shortDesc: "100% chance to raise the user's Sp. Atk by 1.",
 	},
+	drumroll: {
+		inherit: true,
+		desc: "A random attacking move that is 110 Power or more is selected for use.",
+		shortDesc: "A random attacking move that is 110 Power or more is selected for use.",
+	},
 	sleazyspores: {
 		inherit: true,
 		shortDesc: "Lowers Speed of foes by 1 on switch-in. Grass-type Pokemon remove it on switch-in.",
