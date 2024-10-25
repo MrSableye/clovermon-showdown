@@ -1860,6 +1860,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	emeffyume: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	bubbasaur: {
 		inherit: true,
 		isNonstandard: "Past",

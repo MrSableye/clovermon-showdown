@@ -358,6 +358,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	emeffyume: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	bubbasaur: {
 		inherit: true,
 		isNonstandard: null,

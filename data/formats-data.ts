@@ -8201,6 +8201,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	emeffyume: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	bubbasaur: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -10335,18 +10339,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	blobbosbandanadee: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	blobbosfug: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	blobboscentipede: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
+blobbosbandanadee: {
+	tier: "Illegal",
+	isNonstandard: "Future",
+},
+blobbosfug: {
+	tier: "Illegal",
+	isNonstandard: "Future",
+},
+blobboscentipede: {
+	tier: "Illegal",
+	isNonstandard: "Future",
+},
 	dunebug: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -11107,7 +11111,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	oryugami: {
+    oryugami: {
 		tier: "Illegal",
 		isNonstandard: "Future",	
 	},
@@ -11611,14 +11615,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	emaneko: { // this being CLOU legal for at LEAST a full year is super funny
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	star: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
+		emaneko: { // this being CLOU legal for at LEAST a full year is super funny
+			tier: "Illegal",
+			isNonstandard: "Future",
+		},
+		star: {
+			tier: "Illegal",
+			isNonstandard: "Future",
+		},
 	podostroud: {
 		tier: "Illegal",
 		isNonstandard: "Future",
