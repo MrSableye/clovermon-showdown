@@ -2512,6 +2512,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	emeffyume: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	amalgum: {
 		tier: "Illegal",
 		isNonstandard: "Future",
