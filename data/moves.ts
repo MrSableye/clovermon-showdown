@@ -33837,7 +33837,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	doublegarf: {
 		accuracy: 100,
-		basePower: 70,
+		basePower: 78,
 		category: "Physical",
 		name: "Double Garf",
 		pp: 5,
