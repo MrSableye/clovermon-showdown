@@ -33847,7 +33847,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Normal",
 		contestType: "Tough",
-		multihitCallback(this, pokemon, move) {
+		multihitCallback(pokemon, move) {
 			const isMonday = new Date().getDay() === 1; // Monday
 			return isMonday ? 1 : 2;
 		},
