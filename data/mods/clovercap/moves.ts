@@ -65,16 +65,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bulletseed: {
-		inherit: true,
-		onHit(target, source) {
-			if (source.types.includes('Grass')) {
-				if (this.randomChance(1, 16)) {
-					target.addVolatile('leechseed');
-				}
-			}
-		},
-	},
 	burningjealousy: {
 		inherit: true,
 		isNonstandard: null,
