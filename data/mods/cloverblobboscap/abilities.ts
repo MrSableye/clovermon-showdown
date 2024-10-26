@@ -666,7 +666,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		shortDesc: "Reflects back Bullet/Ball-based moves at the user.",
 		isBreakable: true,
-		isNonstandard: "Future",
 		rating: 4,
 		num: 156,
 	},

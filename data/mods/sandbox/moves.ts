@@ -4865,6 +4865,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	spitfire: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	trickedblow: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	mountaingale: {
 		num: 836,
 		accuracy: 100,
