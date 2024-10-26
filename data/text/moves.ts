@@ -9811,6 +9811,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Genesis Blast",
 		desc: "30% chance to lower the target's accuracy by 1.",
 	},
+	doublegarf: {
+		name: "Double Garf",
+		desc: "Hits twice if it isn't Monday.",
+	},
 	finishingtouch: {
 		name: "Finishing Touch",
 		desc: "30.125x power if the target has less than or equal to half of its maximum HP remaining.",

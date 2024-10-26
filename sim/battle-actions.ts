@@ -841,7 +841,9 @@ export class BattleActions {
 		move.totalDamage = 0;
 		pokemon.lastDamage = 0;
 		let targetHits = move.multihit || 1;
-		if (Array.isArray(targetHits)) {
+		if (move.multihitCallback) {
+			targetHits = move.multihitCallback(this.battle, pokemon, move);
+		} else if (Array.isArray(targetHits)) {
 			// yes, it's hardcoded... meh
 			if (targetHits[0] === 2 && targetHits[1] === 5) {
 				if (this.battle.gen >= 5) {

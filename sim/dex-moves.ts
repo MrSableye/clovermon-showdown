@@ -158,6 +158,7 @@ export interface MoveEventMethods {
 	onTryImmunity?: CommonHandlers['ResultMove'];
 	onTryMove?: CommonHandlers['ResultSourceMove'];
 	onUseMoveMessage?: CommonHandlers['VoidSourceMove'];
+	multihitCallback?: (this: Battle, pokemon: Pokemon, move: ActiveMove) => number;
 }
 
 export interface MoveData extends EffectData, MoveEventMethods, HitEffect {

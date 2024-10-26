@@ -33835,6 +33835,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
+	doublegarf: {
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Double Garf",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Tough",
+		multihitCallback(this, pokemon, move) {
+			const isMonday = new Date().getDay() === 1; // Monday
+			return isMonday ? 1 : 2;
+		},
+		isNonstandard: "Future",
+	},
 	fivenights: {
 		accuracy: 100,
 		basePower: 250,
