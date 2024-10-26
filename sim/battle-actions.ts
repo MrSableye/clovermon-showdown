@@ -842,7 +842,7 @@ export class BattleActions {
 		pokemon.lastDamage = 0;
 		let targetHits = move.multihit || 1;
 		if (move.multihitCallback) {
-			targetHits = move.multihitCallback(this.battle, pokemon, move);
+			targetHits = move.multihitCallback.call(this.battle, pokemon, move);
 		} else if (Array.isArray(targetHits)) {
 			// yes, it's hardcoded... meh
 			if (targetHits[0] === 2 && targetHits[1] === 5) {
