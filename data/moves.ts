@@ -66062,7 +66062,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (!result) return result;
 			source.statusState.time = 3;
 			source.statusState.startTime = 3;
-			this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+			this.heal(source.maxhp, target, source); // Aesthetic only as the healing happens after you fall asleep in-game
 		},
 		secondary: null,
 		target: "allAdjacentFoes",
