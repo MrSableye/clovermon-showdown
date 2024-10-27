@@ -46987,35 +46987,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Enuma Elish",
 		pp: 5,
 		priority: 0,
-		onHit(target, source, move) {
-			let success = false;
-			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
-			const removeTarget = [
-				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
-				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
-			];
-			const removeAll = [
-				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
-				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
-			];
-			for (const targetCondition of removeTarget) {
-				if (target.side.removeSideCondition(targetCondition)) {
-					if (!removeAll.includes(targetCondition)) continue;
-					this.add('-sideend', target.side, this.dex.conditions.get(targetCondition).name, '[from] move: Enuma Elish', '[of] ' + source);
-					success = true;
-				}
-			}
-			for (const sideCondition of removeAll) {
-				if (source.side.removeSideCondition(sideCondition)) {
-					this.add('-sideend', source.side, this.dex.conditions.get(sideCondition).name, '[from] move: Enuma Elish', '[of] ' + source);
-					success = true;
-				}
-			}
-			this.field.clearTerrain();
-			return success;
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
 		},
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		status: 'par',
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -48986,6 +48965,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihitCallback(pokemon, move) {
+			const Infinite = [2,2,2,3,3,4,5,5,5,5,6,6,6,7,7,8,8,9,9,10,10,10,11,12,12,14,15,16,17,18,18,19,20,20,21,22,23,24,25,26,27,28,29,30,32,34,37,40,44,45,50,60,100]; 
+			const randomHit = this.sample(Infinite);
+			return randomHit;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Time",
@@ -49000,6 +48984,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihitCallback(pokemon, move) {
+			const Infinite = [2,2,2,3,3,4,5,5,5,5,6,6,6,7,7,8,8,9,9,10,10,10,11,12,12,14,15,16,17,18,18,19,20,20,21,22,23,24,25,26,27,28,29,30,32,34,37,40,44,45,50,60,100]; 
+			const randomHit = this.sample(Infinite);
+			return randomHit;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -58550,6 +58539,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 40,
 		priority: 0,
 		flags: {},
+		onHit(target, pokemon) {
+			const i = this.random(7);
+						
+			let move = 'seventrumpets';
+			if (i == 0) {
+				move = 'firsttrumpet';
+			} else if (i == 1) {
+				move = 'secondtrumpet';
+			} else if (i == 2) {
+				move = 'thirdtrumpet';
+			} else if (i == 3) {
+				move = 'fourthtrumpet';
+			} else if (i == 4) {
+				move = 'fifthtrumpet';
+			} else if (i == 5) {
+				move = 'sixthtrumpet';
+			} else if (i == 6) {
+				move = 'seventhtrumpet';
+			} 
+			const fullMove = this.dex.getActiveMove(move);
+			fullMove.flags = {...fullMove.flags, naturePower: 1};
+			this.actions.useMove(move, pokemon, target);
+			return null;
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Divine",
@@ -58611,29 +58624,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 100,
 			status: 'tox',
 		},
-		priorityChargeCallback(pokemon) {
-			pokemon.addVolatile('focuspunch');
-		},
-		beforeMoveCallback(pokemon) {
-			if (pokemon.volatiles['focuspunch']?.lostFocus) {
-				this.add('cant', pokemon, 'Third Trumpet', 'Third Trumpet');
-				return true;
-			}
-		},
-		condition: {
-			duration: 1,
-			onStart(pokemon) {
-				this.add('-singleturn', pokemon, 'move: Third Trumpet');
-			},
-			onHit(pokemon, source, move) {
-				if (move.category !== 'Status') {
-					this.effectState.lostFocus = true;
-				}
-			},
-			onTryAddVolatile(status, pokemon) {
-				if (status.id === 'flinch') return null;
-			},
-		},
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -58689,6 +58679,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		multihitCallback(pokemon, move) {
+			const Infinite = [2,2,2,3,3,4,5,5,5,5,6,6,6,7,7,8,8,9,9,10,10,10,11,12,12,14,15,16,17,18,18,19,20,20,21,22,23,24,25,26,27,28,29,30,32,34,37,40,44,45,50,60,100]; 
+			const randomHit = this.sample(Infinite);
+			return randomHit;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -58821,6 +58816,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
 		secondary: null,
+		multihitCallback(pokemon, move) {
+			const Infinite = [2,2,2,3,3,4,5,5,5,5,6,6,6,7,7,8,8,9,9,10,10,10,11,12,12,14,15,16,17,18,18,19,20,20,21,22,23,24,25,26,27,28,29,30,32,34,37,40,44,45,50,60,100]; 
+			const randomHit = this.sample(Infinite);
+			return randomHit;
+		},
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future",
@@ -59157,6 +59157,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {snatch: 1},
+		pseudoWeather: 'equalize',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				return 7;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Equalize', '[of] ' + source);
+			},
+			onModifyType(move, pokemon) {
+				const noModifyType = [
+					'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+				];
+				if (!noModifyType.includes(move.id) &&
+					!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+					move.type = '???';
+					move.typeChangerBoosted = this.effect;
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Equalize');
+			},
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Divine",
@@ -65667,6 +65692,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, punch: 1},
+		multihitCallback(pokemon, move) {
+			const Infinite = [2,2,2,3,3,4,5,5,5,5,6,6,6,7,7,8,8,9,9,10,10,10,11,12,12,14,15,16,17,18,18,19,20,20,21,22,23,24,25,26,27,28,29,30,32,34,37,40,44,45,50,60,100]; 
+			const randomHit = this.sample(Infinite);
+			return randomHit;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ground",
