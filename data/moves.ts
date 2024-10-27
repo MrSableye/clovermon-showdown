@@ -47792,15 +47792,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		onHit(target, pokemon) {
-			const i = this.random(3);
+			const i = this.random(4);
 						
-			let move = 'fireblast';
+			let move = 'elementalattack';
 			if (i == 0) {
 				move = 'solarbeam';
 			} else if (i == 1) {
 				move = 'hurricane';
 			} else if (i == 2) {
 				move = 'hydropump';
+			} else if (i == 3) {
+				move = 'fireblast';
 			} 
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
@@ -49901,6 +49903,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, punch: 1, arrow: 1},
+		multihitCallback(pokemon, move) {
+			const Infinite = [2,2,2,3,3,4,5,5,5,5,6,6,6,7,7,8,8,9,9,10,10,10,11,12,12,14,15,16,17,18,18,19,20,20,21,22,23,24,25,26,27,28,29,30,32,34,37,40,44,45,50,60,100]; 
+			const randomHit = this.sample(Infinite);
+			return randomHit;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -54120,15 +54127,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		onHit(target, pokemon) {
-			const i = this.random(3);
+			const i = this.random(4);
 						
-			let move = 'addition';
+			let move = 'calculator';
 			if (i == 0) {
 				move = 'subtract';
 			} else if (i == 1) {
 				move = 'multiply';
 			} else if (i == 2) {
 				move = 'divide';
+			}  else if (i == 2) {
+				move = 'addition';
 			} 
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
@@ -58709,6 +58718,36 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		onHit(target, pokemon) {
+			const i = this.random(10);
+						
+			let move = 'tenplagues';
+			if (i == 0) {
+				move = 'firstplague';
+			} else if (i == 1) {
+				move = 'secondplague';
+			} else if (i == 2) {
+				move = 'thirdplague';
+			} else if (i == 3) {
+				move = 'fourthplague';
+			} else if (i == 4) {
+				move = 'fifthplague';
+			} else if (i == 5) {
+				move = 'sixthplague';
+			} else if (i == 6) {
+				move = 'seventhplague';
+			} else if (i == 7) {
+				move = 'eigthplague';
+			} else if (i == 8) {
+				move = 'ninthplague';
+			} else if (i == 9) {
+				move = 'tenthplague';
+			} 
+			const fullMove = this.dex.getActiveMove(move);
+			fullMove.flags = {...fullMove.flags, naturePower: 1};
+			this.actions.useMove(move, pokemon, target);
+			return null;
+		},
 		target: "scripted",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -58723,6 +58762,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		self: {
+			volatileStatus: 'dryspell',
+		},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Water') return 1;
+		},
+		onBasePower(basePower, target) {
+			if (target.hasType('Water'))  {
+				this.debug('too much power');
+				return this.chainModify(4);
+			}
+		},
+		
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -58736,6 +58788,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 1,
 		priority: 2,
 		flags: {},
+		breaksProtect: true,
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -58750,7 +58803,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'tox',
+		},
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future",
@@ -58778,6 +58834,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onHit(target, source) {
+			const oldAbility = target.setAbility('infected');
+			if (oldAbility) {
+				this.add('-ability', source, 'Infected', '[from] move: Fourth Plague');
+				return;
+			}
+			return false;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -58809,7 +58873,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+		self: {
+			onHit(source) {
+				this.field.setWeather('hail');
+			},
+		},
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -58824,6 +58896,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('healblock');
+			}
+		},
+		onAfterHit(target, source) {
+			if (source.hp) {
+				const item = target.takeItem();
+				if (item) {
+					this.add('-enditem', target, item.name, '[from] move: Knock Off', '[of] ' + source);
+				}
+			}
+		},
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future",
@@ -58837,7 +58922,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				accuracy: -12,
+			},
+		},
+		self: {
+			onHit(source) {
+				this.field.setWeather('midnight');
+			},
+		},
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -58852,6 +58947,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -65954,7 +66050,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		onHit(target) {
 			if (!target.volatiles['dynamax']) {
-				target.addVolatile('taunt');
+				target.addVolatile('encore');
 			}
 		},
 		secondary: null,
@@ -67377,7 +67473,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (!result) return result;
 			target.statusState.time = 2;
 			target.statusState.startTime = 2;
-			this.heal(target.baseMaxhp / 2); // Aesthetic only as the healing happens after you fall asleep in-game
+			this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
 		},
 		flags: {snatch: 1, bite: 1},
 		secondary: null,
@@ -71505,7 +71601,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		onTry(source) {
+			return source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz') || source.hasAbility('lethargic');
+		},
+		secondary: {
+			chance: 15,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Normal",
 		isNonstandard: "Future",
@@ -82141,7 +82243,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				duration: 3,
 				move: 'trojanrush',
 				source: source,
-				target: target,
 				moveData: {
 					id: 'trojanrush',
 					name: "Trojan Rush",
@@ -85327,6 +85428,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -88488,9 +88590,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		secondary: null,
 		onHit(target, pokemon) {
-			const i = this.random(17);
+			const i = this.random(20);
 						
-			let move = 'sizz';
+			let move = 'magicmenu';
 			if (i == 0) {
 				move = 'sizzle';
 			} else if (i == 1) {
@@ -88527,6 +88629,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'zoom';
 			} else if (i == 17) {
 				move = 'oomph';
+			}  else if (i == 18) {
+				move = 'sizz';
 			} 
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
