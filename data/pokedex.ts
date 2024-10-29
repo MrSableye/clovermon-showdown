@@ -35292,7 +35292,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 2.15,
 		weightkg: 40,
 		color: "Gray",
-		eggGroups: ["Amorphous"],
+		eggGroups: ["Amorphous", "Flying"],
 		gen: 8,
 	},
 	disbeary: {
@@ -36422,7 +36422,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 11.5,
 		color: "White",
 		evos: ["Xeninter"],
-		eggGroups: ["Dragon", "Monster"],
+		eggGroups: ["Monster", "Dragon"],
 		gen: 8,
 	},
 	xeninter: {
@@ -36438,13 +36438,13 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		prevo: "Icehugger",
 		evoType: "useItem",
 		evoItem: "Moon Stone",
-		eggGroups: ["Dragon", "Monster"],
+		eggGroups: ["Monster", "Dragon"],
 		gen: 8,
 	},
 	borkosmos: {
 		num: 42081,
 		name: "Borkosmos",
-		types: ["Flying", "Fire"],
+		types: ["Fire", "Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 45, atk: 52, def: 48, spa: 42, spd: 43, spe: 50},
 		abilities: {0: "Cloud Nine", 1: "Cute Charm", H: "Magic Guard", S: "Drought"},
@@ -36458,7 +36458,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	skallaxy: {
 		num: 42082,
 		name: "Skallaxy",
-		types: ["Flying", "Fire"],
+		types: ["Fire", "Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 85, atk: 114, def: 56, spa: 93, spd: 73, spe: 100},
 		abilities: {0: "Cloud Nine", 1: "Moxie", H: "Magic Guard", S: "Eclipse"},
@@ -37206,7 +37206,7 @@ epilate: {
 	heightm: 2.1,
 	weightkg: 22.37,
 	color: "Red",
-	eggGroups: ["Monster", "Flying"],
+	eggGroups: ["Amorphous", "Flying"],
 	gen: 8,
 },
 doomsay: {
@@ -51096,7 +51096,7 @@ curdiscope: {
 		heightm: 2.49,
 		weightkg: 126.9,
 		color: "Black",
-		eggGroups: ["Monster", "Field"],
+		eggGroups: ["Water 2", "Water 3"],
 		gen: 8,
 		creator: "Karma",
 	},
@@ -51241,7 +51241,7 @@ curdiscope: {
 	inkrow: {
 		num: -8191,
 		name: "Inkrow",
-		types: ["Flying", "Poison"],
+		types: ["Poison", "Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 30, atk: 40, def: 60, spa: 55, spd: 51, spe: 30},
 		abilities: {0: "Liquid Ooze", 1: "Sticky Hold", H: "Trace", S: "Curious Medicine"},
@@ -51256,7 +51256,7 @@ curdiscope: {
 	liquill: {
 		num: -8192,
 		name: "Liquill",
-		types: ["Flying", "Poison"],
+		types: ["Poison", "Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 65, atk: 65, def: 75, spa: 85, spd: 66, spe: 49},
 		abilities: {0: "Liquid Ooze", 1: "Sticky Hold", H: "Trace", S: "Curious Medicine"},
@@ -51273,7 +51273,7 @@ curdiscope: {
 	ravarnish: {
 		num: -8193,
 		name: "Ravarnish",
-		types: ["Flying", "Poison"],
+		types: ["Poison", "Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 85, atk: 86, def: 100, spa: 95, spd: 81, spe: 61},
 		abilities: {0: "Liquid Ooze", 1: "Sticky Hold", H: "Trace", S: "Neutralizing Gas"},
@@ -51289,7 +51289,7 @@ curdiscope: {
 	larvatrice: {
 		num: -8194,
 		name: "Larvatrice",
-		types: ["Dark", "Flying"],
+		types: ["Flying", "Dark"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 43, atk: 63, def: 33, spa: 51, spd: 33, spe: 77},
 		abilities: {0: "Reckless", 1: "Keen Eye", H: "Hustle", S: "Dragon's Maw"},
@@ -51304,7 +51304,7 @@ curdiscope: {
 	brashalisk: {
 		num: -8195,
 		name: "Brashalisk",
-		types: ["Dark", "Flying"],
+		types: ["Flying", "Dark"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 76, atk: 97, def: 56, spa: 76, spd: 48, spe: 72},
 		abilities: {0: "Reckless", 1: "Keen Eye", H: "Hustle", S: "Dragon's Maw"},
@@ -51321,7 +51321,7 @@ curdiscope: {
 	kokaiju: {
 		num: -8196,
 		name: "Kokaiju",
-		types: ["Dark", "Flying"],
+		types: ["Flying", "Dark"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 104, atk: 130, def: 99, spa: 80, spd: 67, spe: 70},
 		abilities: {0: "Battle Armor", 1: "Infiltrator", H: "Defiant", S: "Dragon's Maw"},
@@ -51354,7 +51354,7 @@ curdiscope: {
 	flockarrion: {
 		num: -8198,
 		name: "Flockarrion",
-		types: ["Flying", "Ghost"],
+		types: ["Ghost", "Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 47, atk: 60, def: 90, spa: 65, spd: 78, spe: 30},
 		abilities: {0: "Overcoat", 1: "Anticipation", H: "Soul-Heart", S: "Merciless"},
@@ -51369,7 +51369,7 @@ curdiscope: {
 	sepulture: {
 		num: -8199,
 		name: "Sepulture",
-		types: ["Flying", "Ghost"],
+		types: ["Ghost", "Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 78, atk: 91, def: 133, spa: 97, spd: 111, spe: 40},
 		abilities: {0: "Overcoat", 1: "Anticipation", H: "Soul-Heart", S: "Merciless"},
@@ -51464,7 +51464,7 @@ curdiscope: {
 		name: "Guertenity",
 		types: ["Grass", "Water"],
 		gender: "N",
-		baseStats: {hp: 54, atk: 71, def: 109, spa: 127, spd: 127, spe: 54},
+		baseStats: {hp: 64, atk: 76, def: 109, spa: 127, spd: 127, spe: 39},
 		abilities: {0: "Water Absorb", 1: "Rain Dish", H: "Natural Cure", S: "Flower Gift"},
 		heightm: 1.6,
 		weightkg: 94.5,

@@ -7819,6 +7819,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Lowers the targets Defense by 2 if they're part Steel-Type.",
 		shortDesc: "Lowers the targets Defense by 2 if they're part Steel-Type.",
 	},
+	brackishgash: {
+		name: "Brackish Gash",
+		desc: "For 1 turn, the target is prevented from restoring any HP as long as it remains active. During the effect, healing and draining moves are unusable, and Abilities and items that grant healing will not heal the user. If an affected Pokemon uses Baton Pass, the replacement will remain unable to restore its HP. Pain Split and the Regenerator Ability are unaffected.",
+		shortDesc: "For 1 turn, the foe(s) is prevented from healing.",
+	},
 	awaken: {
 		name: "Awaken",
 		desc: "Raises the user's Attack, Defense, and Speed by 2 stages. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
