@@ -226,10 +226,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	baller: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	desolateland: {
 		inherit: true,
 		isNonstandard: null,
