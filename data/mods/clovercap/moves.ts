@@ -954,10 +954,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	frigidend: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	cherrybomb: {
 		inherit: true,
 		isNonstandard: null,
@@ -1011,6 +1007,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	borebite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	brackishgash: {
 		inherit: true,
 		isNonstandard: null,
 	},
