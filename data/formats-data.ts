@@ -11615,6 +11615,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	zangursed: { // THIS BEING CLOU LEGAL FOR FUCKING WHO KNOWS HOW LONG IS HILARIOUS, GOODBYE SWEET PRINCE O7
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	emaneko: { // this being CLOU legal for at LEAST a full year is super funny
 		tier: "Illegal",
 		isNonstandard: "Future",
