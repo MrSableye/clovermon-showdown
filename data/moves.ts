@@ -25828,6 +25828,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spa: 1}},
 		isNonstandard: "Future",
 	},
+	brackishgash: {
+		num: 42014,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Brackish Gash",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1, slicing: 1},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'healblock',
+		},
+		target: "normal",
+		type: "Water",
+		isNonstandard: "Future",
+	},
 	neosporin: {
 		accuracy: 100,
 		basePower: 0,

@@ -190,10 +190,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	fogofwar: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	jihad: {
 		inherit: true,
 		isNonstandard: null,

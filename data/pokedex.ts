@@ -44898,7 +44898,7 @@ iwik: {
 		abilities: {
 			0: "Download",
 			1: "Vital Spirit",
-			H: "Fog Of War",
+			H: "Shed Skin",
 			S: "Reckless",
 		},
 		heightm: 3.9,

@@ -954,10 +954,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	frigidend: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	cherrybomb: {
 		inherit: true,
 		isNonstandard: null,
