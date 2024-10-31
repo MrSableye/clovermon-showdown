@@ -40283,8 +40283,8 @@ iwik: {
 		eggGroups: [
 			"Ditto",
 		],
-		otherFormes: ["Blobbos-Omori-Happy"],
-		formeOrder: ["Blobbos-Omori", "Blobbos-Omori-Happy"],
+		otherFormes: ["Blobbos-Omori-Happy", "Blobbos-Omori-Sad", "Blobbos-Omori-Angry"],
+		formeOrder: ["Blobbos-Omori", "Blobbos-Omori-Happy", "Blobbos-Omori-Sad", "Blobbos-Omori-Angry"],
 		gen: 8,
 	},
 
@@ -40318,8 +40318,8 @@ iwik: {
 	blobbosomorisad: {
 		num: 69132,
 		name: "Blobbos-Omori-Sad",
-		baseSpecies: "Blobbos",
-		forme: "Omori-Sad",
+		baseSpecies: "Blobbos-Omori",
+		forme: "Sad",
 		types: ["Ghost", "Dark"],
 		gender: "M",
 		baseStats: {
@@ -40340,12 +40340,13 @@ iwik: {
 			"Ditto",
 		],
 		gen: 8,
+		battleOnly: "Blobbos-Omori",
 	},
 	blobbosomoriangry: {
 		num: 69132,
 		name: "Blobbos-Omori-Angry",
-		baseSpecies: "Blobbos",
-		forme: "Omori-Angry",
+		baseSpecies: "Blobbos-Omori",
+		forme: "Angry",
 		types: ["Ghost", "Dark"],
 		gender: "M",
 		baseStats: {
@@ -40366,6 +40367,7 @@ iwik: {
 			"Ditto",
 		],
 		gen: 8,
+		battleOnly: "Blobbos-Omori",
 	},
 	blobbosglover: {
 		num: 69132,
