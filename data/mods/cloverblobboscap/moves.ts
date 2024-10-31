@@ -209,10 +209,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	butterflykick: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	inverserush: {
 		inherit: true,
 		isNonstandard: null,
@@ -250,14 +246,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bouncybubble: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	buzzybuzz: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	windwhip: {
 		inherit: true,
 		isNonstandard: null,
@@ -279,14 +267,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	fruitjuice: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	sizzlyslide: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	splishysplash: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -395,10 +375,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	freezyfrost: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	grasspledge: {
 		inherit: true,
 		isNonstandard: null,
@@ -442,10 +418,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	quash: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	sappyseed: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -574,10 +546,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	sparklyswirl: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	swamp: {
 		inherit: true,
 		isNonstandard: null,
@@ -627,10 +595,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	flurryfist: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	rawvenom: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -824,6 +788,20 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	syrupbomb: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	seedbomb: {
+		num: 402,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Seed Bomb",
+		pp: 15,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		contestType: "Tough",
 	},
 	snaptrap: {
 		num: 779,
@@ -1112,10 +1090,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Steel",
 	},
 	strifedicekind: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	blandybland: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1447,6 +1421,13 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		basePower: 25,
 		isNonstandard: null,
 	},
+	detect: {
+		inherit: true,
+		boosts: {
+			accuracy: 1,
+		},
+		isNonstandard: null,
+	},
 	spore: {
 		num: 147,
 		accuracy: 100,
@@ -1463,6 +1444,42 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Beautiful",
 	},
+	sharpen: {
+		num: 159,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sharpen",
+		pp: 30,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			atk: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {boost: {atk: 1}},
+		contestType: "Cute",
+	},
+	geargrind: {
+		num: 544,
+		accuracy: 100,
+		basePower: 50,
+		category: "Physical",
+		isNonstandard: "Past",
+		name: "Gear Grind",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 2,
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+		zMove: {basePower: 180},
+		maxMove: {basePower: 130},
+		contestType: "Clever",
+	},
 	cuttingwaves: {
 		inherit: true,
 		isNonstandard: null,
@@ -1470,6 +1487,16 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	uturn: {
 		inherit: true,
 		basePower: 65,
+		isNonstandard: null,
+	},
+	lusterpurge: {
+		inherit: true,
+		basePower: 70,
+		isNonstandard: null,
+	},
+	mistball: {
+		inherit: true,
+		basePower: 70,
 		isNonstandard: null,
 	},
 	voltswitch: {
@@ -1535,6 +1562,33 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	mitosismash: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	maxmemeitude: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	electroball: {
+		num: 486,
+		accuracy: 100,
+		basePower: 0,
+		basePowerCallback(pokemon, target) {
+			let ratio = Math.floor(pokemon.getStat('spe') / target.getStat('spe'));
+			if (!isFinite(ratio)) ratio = 0;
+			const bp = [60, 80, 100, 140, 180][Math.min(ratio, 4)];
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		category: "Special",
+		name: "Electro Ball",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		zMove: {basePower: 160},
+		maxMove: {basePower: 130},
+		contestType: "Cool",
 	},
 	drumroll: {
 		accuracy: true,
@@ -1813,56 +1867,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		zMove: {boost: {def: 1}},
 		contestType: "Clever",
 	},
-	protect: {
-		num: 182,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Protect",
-		pp: 5,
-		priority: 4,
-		flags: {noassist: 1, failcopycat: 1},
-		stallingMove: true,
-		volatileStatus: 'protect',
-		onPrepareHit(pokemon) {
-			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
-		},
-		onHit(pokemon) {
-			pokemon.addVolatile('stall');
-		},
-		condition: {
-			duration: 1,
-			onStart(target) {
-				this.add('-singleturn', target, 'Protect');
-			},
-			onTryHitPriority: 3,
-			onTryHit(target, source, move) {
-				if (!move.flags['protect']) {
-					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
-					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
-					return;
-				}
-				if (move.smartTarget) {
-					move.smartTarget = false;
-				} else {
-					this.add('-activate', target, 'move: Protect');
-				}
-				const lockedmove = source.getVolatile('lockedmove');
-				if (lockedmove) {
-					// Outrage counter is reset
-					if (source.volatiles['lockedmove'].duration === 2) {
-						delete source.volatiles['lockedmove'];
-					}
-				}
-				return this.NOT_FAIL;
-			},
-		},
-		secondary: null,
-		target: "self",
-		type: "Normal",
-		zMove: {effect: 'clearnegativeboost'},
-		contestType: "Cute",
-	},
 	eggbomb: {
 		num: 121,
 		accuracy: 100,
@@ -1887,7 +1891,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	suffocate: {
 		num: 42017,
 		accuracy: 70,
-		basePower: 15,
+		basePower: 10,
 		category: "Physical",
 		name: "Suffocate",
 		pp: 10,
@@ -1909,7 +1913,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		name: "Max Airstream",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, wind: 1},
+		flags: {wind: 1},
 		self: {
 			onHit(source) {
 				if (!source.volatiles['dynamax']) return;
@@ -1930,7 +1934,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		name: "Max Darkness",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {},
 		self: {
 			onHit(source) {
 				if (!source.volatiles['dynamax']) return;
@@ -1952,7 +1956,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		name: "Max Flare",
 		pp: 10,
 		priority: 0,
-	   flags: {protect: 1, mirror: 1},
+	   flags: {},
 		self: {
 			onHit(source) {
 				if (!source.volatiles['dynamax']) return;

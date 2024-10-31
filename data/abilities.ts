@@ -8528,6 +8528,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'maxsteelspike',
 				'maxstrike',
 				'maxwyrmwind',
+				'maxmemeitude',
 			];
 			if (maxMoves.includes(move.id)) {
 				this.debug('G-Max Comatose boost');

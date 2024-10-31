@@ -9118,7 +9118,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	strifedicekind: {
 		name: "Strife: Dicekind",
-		desc: "Physical if user's Atk > Sp. Atk. Hits 8 times. Each hit can miss. 4% to permanently improve's the user's side's luck by 5% up to 3 times. +1 crit at 3 stacks.",
+		desc: "Physical if user's Atk > Sp. Atk. Hits 8 times. Each hit can miss. 8% to permanently improve's the user's side's luck by 5% up to 3 times. +1 crit at 3 stacks.",
 	},
 	cumblast: {
 		name: "Cum Blast",

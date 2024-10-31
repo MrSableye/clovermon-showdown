@@ -717,6 +717,22 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	battlearmor: {
+		onCriticalHit: false,
+		isBreakable: true,
+		name: "Battle Armor",
+		shortDesc: "The holder of this ability cannot be hit with a critical hit.",
+		rating: 1,
+		num: 4,
+	},
+	shellarmor: {
+		onCriticalHit: false,
+		isBreakable: true,
+		name: "Shell Armor",
+		shortDesc: "The holder of this ability cannot be hit with a critical hit.",
+		rating: 1,
+		num: 75,
+	},
 	fireaffinity: {
 		inherit: true,
 		isNonstandard: null,

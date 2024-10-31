@@ -15074,9 +15074,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 	lightningblastwave: {
 		num: 889,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 65,
 		basePowerCallback(pokemon) {
-			return Math.min(158, 80 + 10 * pokemon.timesAttacked);
+			return Math.min(158, 65 + 10 * pokemon.timesAttacked);
 		},
 		category: "Physical",
 		name: "Lightning Blast Wave",
@@ -21757,7 +21757,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		isMax: true,
+		volatileStatus: 'noretreat',
+		onTry(source, target, move) {
+			if (source.volatiles['noretreat']) return false;
+			if (source.volatiles['trapped']) {
+				delete move.volatileStatus;
+			}
+		},
+		condition: {
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'move: Max Memeitude');
+			},
+			onTrapPokemon(pokemon) {
+				pokemon.tryTrap();
+			},
+		},
+		boosts: {
+			atk: 1,
+			def: 1,
+			spa: 1,
+			spd: 1,
+			spe: 1,
+		},
 		target: "adjacentFoe",
+		isNonstandard: "Future",
 		type: "???",
 		contestType: "Cool",
 	},
@@ -26423,11 +26446,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	edgequake: {
-		accuracy: 100,
+		accuracy: 90,
 		basePower: 100,
 		category: "Physical",
 		name: "Edgequake",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		target: "normal",
 		noSketch: true,
@@ -26674,7 +26697,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Heaven's Blessing",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {snatch: 1, heal: 1},
 		slotCondition: 'Wish',
@@ -30223,7 +30246,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	strifedicekind: {
 		name: "Strife: Dicekind",
 		basePower: 18,
-		accuracy: 98,
+		accuracy: 88,
 		multihit: 8,
 		pp: 8,
 		noPPBoosts: true,
@@ -30234,7 +30257,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
 		secondary: {
-			chance: 4, // ::::(
+			chance: 8, // ::::(
 			onHit(target, source) {
 				source.side.addSideCondition('luckyroll');
 			},
@@ -30665,7 +30688,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Invigorate",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		target: "self",
 		type: "Fighting",
@@ -31919,7 +31942,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Crystal Slash",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, contact: 1},
+		flags: {protect: 1, mirror: 1, contact: 1, slicing: 1},
 		secondary: {
 			chance: 10,
 			boosts: {

@@ -43402,13 +43402,12 @@ iwik: {
 		},
 		abilities: {
 			0: "Plundered Luck",
-			1: "Ascension",
 		},
-		heightm: 0.4,
-		weightkg: 5.7,
+		heightm: 0.8,
+		weightkg: 5.8,
 		color: "Black",
 		eggGroups: [
-			"Ditto",
+			"Bug", "Fairy"
 		],
 		gen: 8,
 		creator: "Mr. Sableye",
@@ -46411,10 +46410,10 @@ blobbosprism: {
 		gender: "N",
 		baseStats: {
 			hp: 80,
-			atk: 100,
-			def: 85,
-			spa: 100,
-			spd: 85,
+			atk: 85,
+			def: 80,
+			spa: 85,
+			spd: 80,
 			spe: 80,
 		},
 		abilities: {
@@ -46439,7 +46438,7 @@ blobbosprism: {
 		baseSpecies: "Blobbos-Mario Party",
 		forme: "Mega",
 		types: ["???"],
-		baseStats: {hp: 80, atk: 125, def: 100, spa: 125, spd: 100, spe: 100},
+		baseStats: {hp: 80, atk: 110, def: 95, spa: 110, spd: 95, spe: 100},
 		abilities: {0: "No Guard"},
 		heightm: 1.2,
 		weightkg: 5311.4,
