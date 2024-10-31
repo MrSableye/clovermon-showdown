@@ -30621,15 +30621,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 	thunderblitz: {
 		num: 2424,
 		accuracy: 90,
-		basePower: 35,
+		basePower: 100,
 		category: "Physical",
 		name: "Thunder Blitz",
-		pp: 5,
+		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		multihit: 2,
-		willCrit: true,
-		secondary: null,
+		onMoveFail(target, source) {
+			source.trySetStatus('par');
+			},
+		secondary: {
+			chance: 20,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Electric",
 		maxMove: {basePower: 80},

@@ -1803,26 +1803,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	thunderdrop: {
-		accuracy: 90,
-		basePower: 100,
-		category: "Physical",
-		name: "Thunder Drop",
-		pp: 10,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
-		onMoveFail(target, source) {
-			source.trySetStatus('par');
-			},
-		secondary: {
-			chance: 20,
-			status: 'par',
-		},
-		target: "normal",
-		type: "Electric",
-		desc: "20% Chance to Para. If this attack misses, hits a protection move or a ground type, paralyzes the user.",
-		shortDesc: "20% Para chance. Paralyzes user if this move fails.",
-	},
 	ragingbull: {
 		num: 873,
 		accuracy: 100,

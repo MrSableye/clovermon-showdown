@@ -9160,7 +9160,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	thunderblitz: {
 		name: "Thunder Blitz",
-		shortDesc: "Hits twice. Always lands a critical hit.",
+		shortDesc: "20% chance to paralyze. Paralyzes self on miss.",
 	},
 	scarystory: {
 		name: "Scary Story",
