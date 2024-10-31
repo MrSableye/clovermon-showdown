@@ -42849,7 +42849,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bullet: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Grass",
 		isNonstandard: "Future",
@@ -52746,7 +52749,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -61330,6 +61340,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Dark', type);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Sound",
@@ -66079,7 +66092,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (!result) return result;
 			source.statusState.time = 3;
 			source.statusState.startTime = 3;
-			this.heal(source.maxhp, target, source); // Aesthetic only as the healing happens after you fall asleep in-game
+			this.heal(source.maxhp, source, target); // Aesthetic only as the healing happens after you fall asleep in-game
 		},
 		secondary: null,
 		target: "allAdjacentFoes",
@@ -74673,6 +74686,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		multihit: [2, 5],
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -76237,6 +76251,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Paper",
@@ -78929,7 +78944,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		volatileStatus: 'confusion',
-		status: 'par',
+		status: 'psn',
 		target: "allAdjacentFoes",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -79697,7 +79712,41 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
-		
+		onHit(target) {
+
+			this.boost({atk: 12, def: 12, spa: 12, spd: 12, spe: 12}, target);
+		},
+		onAfterHit(target, source, move) {
+			let result = false;
+			let message = false;
+			for (const pokemon of this.getAllActive()) {
+				if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
+					this.add('-miss', source, pokemon);
+					result = true;
+				} else if (this.runEvent('TryHit', pokemon, source, move) === null) {
+					result = true;
+				} else if (!pokemon.volatiles['perishsong']) {
+					pokemon.addVolatile('perishsong');
+					this.add('-start', pokemon, 'perish3', '[silent]');
+					result = true;
+					message = true;
+				}
+			}
+			if (!result) return false;
+			if (message) this.add('-fieldactivate', 'move: Perish Song');
+		},
+		condition: {
+			duration: 2,
+			onEnd(target) {
+				this.add('-start', target, 'perish0');
+				target.faint();
+			},
+			onResidualOrder: 24,
+			onResidual(pokemon) {
+				const duration = pokemon.volatiles['perishsong'].duration;
+				this.add('-start', pokemon, 'perish' + duration);
+			},
+		},
 		target: "self",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -86062,7 +86111,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Fire",
 		isNonstandard: "Future",
