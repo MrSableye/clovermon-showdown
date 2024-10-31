@@ -6701,13 +6701,385 @@
         ],
         "moves": [
           "recover",
-          "thunderwave",
+          "calmmind",
           "taunt"
         ],
         "lockedMoves": [
           "5impossiblerequests"
         ],
         "level": 84
+      }
+    ]
+  },
+  "hglalie": {
+    "nicknames": [
+      "Hglalie"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "harvest"
+        ],
+        "items": [
+          "sitrusberry"
+        ],
+        "moves": [
+          "midnight",
+          "leechseed",
+          "purefear",
+          "icebeam"
+        ],
+        "lockedMoves": [
+          "pumpkinbomb",
+          "gasterblaster"
+        ],
+        "level": 88
+      }
+    ]
+  },
+  "hfrosslass": {
+    "nicknames": [
+      "HFrosslass"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "shadowcall"
+        ],
+        "items": [
+          "sitrusberry"
+        ],
+        "moves": [
+          "nastyplot",
+          "trickortreat",
+          "gasterblaster",
+          "icebeam"
+        ],
+        "lockedMoves": [
+          "purefear",
+          "arcanebolt"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pumpkinopunch": {
+    "nicknames": [
+      "Pumpkinopunch"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "flamebody"
+        ],
+        "items": [
+          "murkycapsule",
+          "flameplate",
+          "firegem"
+        ],
+        "moves": [
+          "haunt",
+          "trickortreat",
+          "pumpkinbomb"
+        ],
+        "lockedMoves": [
+          "kinopunch",
+          "firepunch"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "gogengar": {
+    "nicknames": [
+      "Go Gengar"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "murkycapsule",
+          "flameplate",
+          "firegem"
+        ],
+        "moves": [
+          "fearpulse",
+          "trickortreat"
+        ],
+        "lockedMoves": [
+          "maxterror",
+          "moonblast"
+        ],
+        "level": 78
+      }
+    ]
+  },
+  "wtrevenant": {
+    "nicknames": [
+      "WackTrevor"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "harvest"
+        ],
+        "items": [
+          "sitrusberry"
+        ],
+        "moves": [
+          "barkskin",
+          "trickortreat",
+          "phantomforce",
+          "leechlife",
+          "woodhammer"
+        ],
+        "lockedMoves": [
+          "rootcrush"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "hexmaniac": {
+    "nicknames": [
+      "Hex Maniac"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "shadowcall"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "rubberray",
+          "arcanebolt",
+          "necromancy",
+          "milkdrink"
+        ],
+        "lockedMoves": [
+          "ectoblast",
+          "exorcise"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "sweetergeist": {
+    "nicknames": [
+      "Sweetergeist"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sugarrush"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "toxiccopy",
+          "suckercharge"
+        ],
+        "lockedMoves": [
+          "shadowstrike",
+          "trickortreat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "trickish": {
+    "nicknames": [
+      "Trickish"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "chlorophyll"
+        ],
+        "items": [
+          "lifeorb",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "sunnyday",
+          "moonlight",
+          "spicypowder",
+          "pollenseason"
+        ],
+        "lockedMoves": [
+          "deliverance",
+          "gigadrain"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "gourgeist": {
+    "nicknames": [
+      "Gourgeist"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "insomnia"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "shadowsneak",
+          "phantomforce",
+          "flareblitz",
+          "leechseed",
+          "synthesis",
+          "willowisp"
+        ],
+        "lockedMoves": [
+          "trickortreat",
+          "pumpkinbomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mimikyu": {
+    "nicknames": [
+      "Mimikyu"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "multiscale"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "shadowsneak",
+          "woodhammer",
+          "playrough",
+          "painsplit"
+        ],
+        "lockedMoves": [
+          "trickortreat",
+          "shadowclaw"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "tmimikyu": {
+    "nicknames": [
+      "MimiT"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "multiscale"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "woodhammer",
+          "painsplit"
+        ],
+        "lockedMoves": [
+          "playrough",
+          "trickortreat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mimikyufeast": {
+    "nicknames": [
+      "MimiFeast"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "multiscale"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "shadowsneak",
+          "painsplit",
+          "honeclaws"
+        ],
+        "lockedMoves": [
+          "shadowclaw",
+          "trickortreat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pumpkapie": {
+    "nicknames": [
+      "Pumpkapie"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sugarrush"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "poundcake",
+          "haunt",
+          "pumpkinbomb",
+          "compost"
+        ],
+        "lockedMoves": [
+          "cakeslice",
+          "trickortreat"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "whitegengar": {
+    "nicknames": [
+      "Whitoid"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "scrappy"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "fearpulse",
+          "curse"
+        ],
+        "lockedMoves": [
+          "shadowball",
+          "trickortreat"
+        ],
+        "level": 80
       }
     ]
   },
