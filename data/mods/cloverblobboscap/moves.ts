@@ -1097,10 +1097,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	scarystory: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	moonstrike: {
 		inherit: true,
 		isNonstandard: null,
