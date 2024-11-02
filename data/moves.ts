@@ -8390,7 +8390,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(target, source, effect) {
-				if (effect?.name === "Frozen Song") {
+				if (effect?.name === "Frozen Song" || "Brackish Gash") {
 					return 2;
 				}
 				if (source?.hasAbility('persistent')) {
