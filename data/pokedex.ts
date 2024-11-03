@@ -36005,7 +36005,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	jarumite: {
 		num: 42055,
 		name: "Jarumite",
-		types: ["Dragon", "Water"],
+		types: ["Water", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 57, atk: 69, def: 50, spa: 65, spd: 40, spe: 42},
 		abilities: {0: "Water Absorb", 1: "Shell Armor", H: "Dragon's Maw", S: "Primordial Sea"},
@@ -36019,7 +36019,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	serpotine: {
 		num: 42056,
 		name: "Serpotine",
-		types: ["Dragon", "Water"],
+		types: ["Water", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 75, atk: 85, def: 61, spa: 85, spd: 55, spe: 52},
 		abilities: {0: "Water Absorb", 1: "Shell Armor", H: "Dragon's Maw", S: "Primordial Sea"},
@@ -36035,7 +36035,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	tsemani: {
 		num: 42057,
 		name: "Tsemani",
-		types: ["Dragon", "Water"],
+		types: ["Water", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 80, atk: 90, def: 120, spa: 100, spd: 80, spe: 60},
 		abilities: {0: "Water Absorb", 1: "Shell Armor", H: "Dragon's Maw", S: "Primordial Sea"},
@@ -39427,17 +39427,17 @@ iwik: {
 		types: ["Poison", "Dark"],
 		gender: "F",
 		baseStats: {
-			hp: 103,
-			atk: 72,
-			def: 52,
-			spa: 72,
+			hp: 106,
+			atk: 83,
+			def: 60,
+			spa: 85,
 			spd: 85,
 			spe: 69,
 		},
 		abilities: {
-			0: "Propeller Tail",
+			0: "Sheer Force",
 			1: "Normalize",
-			H: "Meme Power",
+			H: "Hustle",
 			S: "Levitate",
 		},
 		heightm: 0.4,
@@ -40283,8 +40283,8 @@ iwik: {
 		eggGroups: [
 			"Ditto",
 		],
-		otherFormes: ["Blobbos-Omori-Happy"],
-		formeOrder: ["Blobbos-Omori", "Blobbos-Omori-Happy"],
+		otherFormes: ["Blobbos-Omori-Happy", "Blobbos-Omori-Sad", "Blobbos-Omori-Angry"],
+		formeOrder: ["Blobbos-Omori", "Blobbos-Omori-Happy", "Blobbos-Omori-Sad", "Blobbos-Omori-Angry"],
 		gen: 8,
 	},
 
@@ -40318,8 +40318,8 @@ iwik: {
 	blobbosomorisad: {
 		num: 69132,
 		name: "Blobbos-Omori-Sad",
-		baseSpecies: "Blobbos",
-		forme: "Omori-Sad",
+		baseSpecies: "Blobbos-Omori",
+		forme: "Sad",
 		types: ["Ghost", "Dark"],
 		gender: "M",
 		baseStats: {
@@ -40340,12 +40340,13 @@ iwik: {
 			"Ditto",
 		],
 		gen: 8,
+		battleOnly: "Blobbos-Omori",
 	},
 	blobbosomoriangry: {
 		num: 69132,
 		name: "Blobbos-Omori-Angry",
-		baseSpecies: "Blobbos",
-		forme: "Omori-Angry",
+		baseSpecies: "Blobbos-Omori",
+		forme: "Angry",
 		types: ["Ghost", "Dark"],
 		gender: "M",
 		baseStats: {
@@ -40366,6 +40367,7 @@ iwik: {
 			"Ditto",
 		],
 		gen: 8,
+		battleOnly: "Blobbos-Omori",
 	},
 	blobbosglover: {
 		num: 69132,
@@ -43400,13 +43402,12 @@ iwik: {
 		},
 		abilities: {
 			0: "Plundered Luck",
-			1: "Ascension",
 		},
-		heightm: 0.4,
-		weightkg: 5.7,
+		heightm: 0.8,
+		weightkg: 5.8,
 		color: "Black",
 		eggGroups: [
-			"Ditto",
+			"Bug", "Fairy"
 		],
 		gen: 8,
 		creator: "Mr. Sableye",
@@ -45499,12 +45500,12 @@ blobbosextradimensional: {
 		types: ["Dragon", "Rock"],
 		gender: "F",
 		baseStats: {
-			hp: 85,
-			atk: 108,
-			def: 75,
+			hp: 95,
+			atk: 118,
+			def: 85,
 			spa: 95,
 			spd: 85,
-			spe: 72,
+			spe: 55,
 		},
 		abilities: {
 			0: "Tough Claws",
@@ -46409,10 +46410,10 @@ blobbosprism: {
 		gender: "N",
 		baseStats: {
 			hp: 80,
-			atk: 100,
-			def: 85,
-			spa: 100,
-			spd: 85,
+			atk: 85,
+			def: 80,
+			spa: 85,
+			spd: 80,
 			spe: 80,
 		},
 		abilities: {
@@ -46437,7 +46438,7 @@ blobbosprism: {
 		baseSpecies: "Blobbos-Mario Party",
 		forme: "Mega",
 		types: ["???"],
-		baseStats: {hp: 80, atk: 125, def: 100, spa: 125, spd: 100, spe: 100},
+		baseStats: {hp: 80, atk: 110, def: 95, spa: 110, spd: 95, spe: 100},
 		abilities: {0: "No Guard"},
 		heightm: 1.2,
 		weightkg: 5311.4,

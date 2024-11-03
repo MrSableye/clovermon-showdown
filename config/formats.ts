@@ -721,24 +721,41 @@ export const Formats: FormatList = [
 				if (species.isNonstandard && !this.ruleTable.has(`+${this.toID(species.isNonstandard)}`)) {
 					return [`${species.baseSpecies} does not exist in gen 8.`];
 				}
+				if (natdex && species.name.startsWith('Necrozma-') && item.id === 'ultranecroziumz') {
+					continue;
+				}
+				if (this.ruleTable.isRestrictedSpecies(species) || this.toID(set.ability) === 'powerconstruct') {
+					return [`${species.name} is not allowed to hold ${item.name}.`];
+				}
+				if (itemTable.has(item.id)) {
+					return [`You are limited to one of each mega stone.`, `(You have more than one ${item.name})`];
+				}
+				itemTable.add(item.id);
 			}
 		},
 		onBegin() {
 			for (const pokemon of this.getAllPokemon()) {
-				if (pokemon.baseAbility.includes('0')) {
-					const donor = pokemon.baseAbility.split('0')[1];
-					pokemon.m.donor = this.toID(donor);
-					pokemon.baseAbility = this.toID(pokemon.baseAbility.split('0')[0]);
-					pokemon.ability = pokemon.baseAbility;
-				}
+				pokemon.m.originalSpecies = pokemon.baseSpecies.name;
 			}
 		},
 		onSwitchIn(pokemon) {
-			if (!pokemon.m.donor) return;
-			const donorTemplate = this.dex.species.get(pokemon.m.donor);
-			if (!donorTemplate.exists) return;
-			// Place volatiles on the Pokémon to show the donor details.
-			this.add('-start', pokemon, donorTemplate.name, '[silent]');
+			// @ts-ignore
+			const oMegaSpecies = this.dex.species.get(pokemon.species.originalMega);
+			if (oMegaSpecies.exists && pokemon.m.originalSpecies !== oMegaSpecies.baseSpecies) {
+				// Place volatiles on the Pokémon to show its mega-evolved condition and details
+				this.add('-start', pokemon, oMegaSpecies.requiredItem || oMegaSpecies.requiredMove, '[silent]');
+				const oSpecies = this.dex.species.get(pokemon.m.originalSpecies);
+				if (oSpecies.types.length !== pokemon.species.types.length || oSpecies.types[1] !== pokemon.species.types[1]) {
+					this.add('-start', pokemon, 'typechange', pokemon.species.types.join('/'), '[silent]');
+				}
+			}
+		},
+		onSwitchOut(pokemon) {
+			// @ts-ignore
+			const oMegaSpecies = this.dex.species.get(pokemon.species.originalMega);
+			if (oMegaSpecies.exists && pokemon.m.originalSpecies !== oMegaSpecies.baseSpecies) {
+				this.add('-end', pokemon, oMegaSpecies.requiredItem || oMegaSpecies.requiredMove, '[silent]');
+			}
 		},
 	},
 	{
@@ -1411,7 +1428,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct', 'Power Herb + Geomancy', 'Power Herb + Awaken', 'Ultimate Flex', 'Star Rod + Victory Dance', "Partner's Pendant + Super Snore"],
+		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Sleep Talk + Comatose', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct', 'Power Herb + Geomancy', 'Power Herb + Awaken', 'Ultimate Flex', 'Star Rod + Victory Dance', "Partner's Pendant + Super Snore"],
 	},
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Ubers',
