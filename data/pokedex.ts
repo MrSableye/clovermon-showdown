@@ -36005,7 +36005,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	jarumite: {
 		num: 42055,
 		name: "Jarumite",
-		types: ["Dragon", "Water"],
+		types: ["Water", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 57, atk: 69, def: 50, spa: 65, spd: 40, spe: 42},
 		abilities: {0: "Water Absorb", 1: "Shell Armor", H: "Dragon's Maw", S: "Primordial Sea"},
@@ -36019,7 +36019,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	serpotine: {
 		num: 42056,
 		name: "Serpotine",
-		types: ["Dragon", "Water"],
+		types: ["Water", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 75, atk: 85, def: 61, spa: 85, spd: 55, spe: 52},
 		abilities: {0: "Water Absorb", 1: "Shell Armor", H: "Dragon's Maw", S: "Primordial Sea"},
@@ -36035,7 +36035,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	tsemani: {
 		num: 42057,
 		name: "Tsemani",
-		types: ["Dragon", "Water"],
+		types: ["Water", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 80, atk: 90, def: 120, spa: 100, spd: 80, spe: 60},
 		abilities: {0: "Water Absorb", 1: "Shell Armor", H: "Dragon's Maw", S: "Primordial Sea"},
