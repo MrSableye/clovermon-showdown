@@ -30621,17 +30621,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 	thunderblitz: {
 		num: 2424,
 		accuracy: 90,
-		basePower: 100,
+		basePower: 120,
 		category: "Physical",
 		name: "Thunder Blitz",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onMoveFail(target, source) {
-			source.trySetStatus('par');
+			source.trySetStatus('brn');
 			},
 		secondary: {
-			chance: 20,
+			chance: 10,
 			status: 'par',
 		},
 		target: "normal",
