@@ -802,6 +802,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Grass",
 		contestType: "Tough",
+		desc: "No additional effect.",
+		shortDesc: "No additional effect.",
 	},
 	snaptrap: {
 		num: 779,
@@ -1423,6 +1425,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			accuracy: 1,
 		},
 		isNonstandard: null,
+		desc: "Protects moves from affecting the user this turn. Raises Accuracy by 1 upon successful use.",
+		shortDesc: "Protects moves from affecting the user this turn. Raises Accuracy by 1 upon successful use.",
 	},
 	spore: {
 		num: 147,
@@ -1474,6 +1478,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		zMove: {basePower: 180},
 		maxMove: {basePower: 130},
 		contestType: "Clever",
+		desc: "Hits Twice.",
+		shortDesc: "Hits Twice.",
 	},
 	cuttingwaves: {
 		inherit: true,
