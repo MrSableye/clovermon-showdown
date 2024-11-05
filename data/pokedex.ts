@@ -51039,7 +51039,7 @@ curdiscope: {
 		types: ["Steel", "Poison"],
         genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 79, atk: 51, def: 103, spa: 90, spd: 74, spe: 105},
-		abilities: {0: "Poison Point", 1: "Storm Drain", S: "Liquid Ooze", H: "Pollution"},
+		abilities: {0: "Poison Point", 1: "Storm Drain", H: "Liquid Ooze", S: "Pollution"},
 		heightm: 0.91,
 		weightkg: 25,
 		color: "Purple",
