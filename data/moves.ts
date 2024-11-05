@@ -49961,7 +49961,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 100,
 			boosts: {
-				def: -12,
+				spa: -12,
 				spd: -12,
 			},
 		},
@@ -83072,7 +83072,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 19,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('pandemic');
+				},
+			},
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
