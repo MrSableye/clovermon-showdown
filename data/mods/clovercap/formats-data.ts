@@ -9,11 +9,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	bulbfrog: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	sabsute: {
 		inherit: true,
 		isNonstandard: null,
