@@ -11115,6 +11115,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",	
 	},
+	foxcet: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
 	amalgum: {
 		tier: "Illegal",
 		isNonstandard: "Future",

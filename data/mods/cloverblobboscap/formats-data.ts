@@ -2516,6 +2516,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	foxcet: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	amalgum: {
 		tier: "Illegal",
 		isNonstandard: "Future",
