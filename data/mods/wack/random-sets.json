@@ -255,7 +255,7 @@
   },
   "betalapras": {
     "nicknames": [
-      "Beta Lapras"
+      "Beta Lrn2swim"
     ],
     "sets": [
       {
@@ -277,6 +277,34 @@
         ],
         "lockedMoves": [
           "freezingwave"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "blumineon": {
+    "nicknames": [
+      "Beta than Nothen"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "stormdrain",
+          "serenegrace"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "uturn",
+          "moonblast",
+          "icebeam",
+          "thunderbolt"
+        ],
+        "lockedMoves": [
+          "scald",
+          "enlighten"
         ],
         "level": 84
       }
@@ -639,8 +667,10 @@
         ],
         "moves": [     
           "teleportaway",
+          "warpaway", 
+          "warpaway", 
           "warpaway",    
-          "dragonclaws",
+          "dragonclaw",
           "glare",
           "dracometeor", 
           "closeencounter", 
@@ -774,7 +804,7 @@
           "pray"
         ],
         
-        "level": 80
+        "level": 76
       }
     ]
   },
@@ -855,7 +885,31 @@
       }
     ]
   },
-
+  "ndragonite": {
+    "nicknames": [
+      "N Tower Meltdown"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "multiscale"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "playrough",
+          "chemotherapy",
+          "apexmutation"
+        ],
+        "lockedMoves": [
+          "atombomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "pollugong": {
     "nicknames": [
       "Pollugong"
@@ -988,6 +1042,38 @@
       }
     ]
   },
+  "Kickkecleon": {
+    "nicknames": [
+      "Kickkecleon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "furiousfeet",
+          "protean"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "blunderpolicy"
+        ],
+        "moves": [
+          "dustkick",
+          "elastickick",
+          "blazekick",
+          "bugkick",
+          "holykick",
+          "frostkick",
+          "seismickick",
+          "voltkick"
+        ],
+        "lockedMoves": [
+          "drainpunch"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "regiweather": {
     "nicknames": [
       "Regiweather"
@@ -1007,6 +1093,29 @@
           "hurricane"
         ],
         "level": 72
+      }
+    ]
+  },
+  "kerkecleon": {
+    "nicknames": [
+      "Kerkecleon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "blunderpolicy"
+        ],
+        "moves": [
+          "achillesheel",
+          "bask",
+          "suckerpunch",
+          "dynamicpunch",
+          "shadowclaw"
+        ],
+        "level": 86
       }
     ]
   },
@@ -1476,7 +1585,7 @@
           "taunt",
           "icecage",
           "protect",
-          "spaghettiwrap",
+          "spagettiwrap",
           "icecage",
           "detect",
           "macabredance",
@@ -2723,6 +2832,30 @@
         ],
         "lockedMoves": [
           "micromissiles"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "standoskyhigh": {
+    "nicknames": [
+      "Sky High"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "defiant"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "tailwind",
+          "reflect"
+        ],
+        "lockedMoves": [
+          "defog",
+          "airbomb"
         ],
         "level": 84
       }
@@ -4236,7 +4369,7 @@
           "vampirefangs"
         ],
         "moves": [
-          "viruspropagate",
+          "viruspropogate",
           "painsplit",
           "infooverload"
         ],
@@ -5677,6 +5810,107 @@
       }
     ]
   },
+  "wweezing": {
+    "nicknames": [
+      "Planetary Intergalactic"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "starfieldcapsule"
+        ],
+        "moves": [
+          "leechseed",
+          "stargaze",
+          "nastyplot"
+        ],
+        "lockedMoves": [
+          "steamblast",
+          "cosmicgas"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "redmist": {
+    "nicknames": [
+      "Red Mist"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "static",
+          "whitesmoke"
+        ],
+        "items": [
+          "saunacapsule"
+        ],
+        "moves": [
+          "steam",
+          "invokedread",
+          "darkpulse"
+        ],
+        "lockedMoves": [
+          "stemascald"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pizzaurex": {
+    "nicknames": [
+      "Pizzaurex"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magmaarmor"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "meatmash",
+          "flareblitz",
+          "seasoning"
+        ],
+        "lockedMoves": [
+          "pizzaspin"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pwtgolem": {
+    "nicknames": [
+      "Pwt Golem"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "focus",
+          "marvelscale"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "pulpblast",
+          "bodypress",
+          "arcanebolt",
+          "sapspray"
+        ],
+        "lockedMoves": [
+          "spellorb"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "Beachutsuho": {
     "nicknames": [
       "Beachutsuho"
@@ -5698,6 +5932,32 @@
           "abyssnova"
         ],
         "level": 76
+      }
+    ]
+  },
+  "coronablat": {
+    "nicknames": [
+      ">:D"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "infected"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "batbite",
+          "anaphylacticshock",
+          "soopsplash"
+        ],
+        "lockedMoves": [
+          "defog",
+          "coronavirus"
+        ],
+        "level": 84
       }
     ]
   },
@@ -5799,6 +6059,53 @@
         ],
         "lockedMoves": [
           "steamblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "wdgolem": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "rockhead",
+          "filter"
+        ],
+        "items": [
+          "arboreumcapsule"
+        ],
+        "moves": [
+          "woodhammer",
+          "barkskin",
+          "rootcrush"
+        ],
+        "lockedMoves": [
+          "bolderbash",
+          "treesmash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "mtorkoal": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "isolation"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "avalanche",
+          "bodypress",
+          "flamethrower",
+          "bask"
+        ],
+        "lockedMoves": [
+          "chargespin"
         ],
         "level": 84
       }
@@ -5917,6 +6224,32 @@
         ],
         "lockedMoves": [
           "crushclaw"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "smewtwo": {
+    "nicknames": [
+      "I am the night,,,"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "pressure",
+          "unnerve"
+        ],
+        "items": [
+          "murkycapsule"
+        ],
+        "moves": [
+          "shadowbolt",
+          "shadowbreak",
+          "shadowfire",
+          "shadowchill"
+        ],
+        "lockedMoves": [
+          "shadownova"
         ],
         "level": 84
       }
@@ -6435,7 +6768,8 @@
   },
   "hsalamence": {
     "nicknames": [
-      "H"
+      "H",
+      "Hellamancoa"
     ],
     "sets": [
       {
@@ -6457,6 +6791,108 @@
           "gash"
         ],
         "level": 88
+      }
+    ]
+  },
+  "sxsalamence": {
+    "nicknames": [
+      "Aint Gonna Suk Itself"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "heavydutyboots",
+          "rockyhelmet"
+        ],
+        "moves": [
+          "dracometeor",
+          "dragonwings",
+          "fireblast",
+          "bask",
+          "solidify"
+        ],
+        "lockedMoves": [
+          "cbt"
+        ],
+        "level": 80
+      }
+    ]
+  },
+  "rushedsalamence": {
+    "nicknames": [
+      "meep meep"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "speedboost"
+        ],
+        "items": [
+          "heavydutyboots",
+          "rockyhelmet"
+        ],
+        "moves": [
+          "aquajet",
+          "fakeout",
+          "flamecharge",
+          "sneaze",
+          "fly"
+        ],
+        "lockedMoves": [
+          "extremespeed"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "zsalamence": {
+    "nicknames": [
+      "WWZ"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "murkycapsule"
+        ],
+        "moves": [
+          "odynocharge",
+          "raid",
+          "zombiebite"
+        ],
+        "lockedMoves": [
+          "undeadagony"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "salamence": {
+    "nicknames": [
+      "The OG"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "dracometeor",
+          "fireblast",
+          "earthquake"
+        ],
+        "lockedMoves": [
+          "outrage"
+        ],
+        "level": 84
       }
     ]
   },
@@ -6589,6 +7025,103 @@
       }
     ]
   },
+  "scizors": {
+    "nicknames": [
+      "Scizors"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "rocksmash",
+          "aerialace"
+        ],
+        "lockedMoves": [
+          "uturn",
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "dootbirb": {
+    "nicknames": [
+      "Dooters"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "soundproof"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "bluster",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "sonicpulse",
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "choruseph": {
+    "nicknames": [
+      "Choruseph"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "soundproof"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "nightshade",
+          "roost"
+        ],
+        "lockedMoves": [
+          "uturn",
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Bhoothoot": {
+    "nicknames": [
+      "Beta Watch Out"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "dreamcatcher",
+          "tintedlens"
+        ],
+        "items": [
+          "eviolite"
+        ],
+        "moves": [
+          "fowlplay",
+          "roost"
+        ],
+        "lockedMoves": [
+          "uturn",
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "flyongolyp": {
     "nicknames": [
       "Flyongolyp"
@@ -6611,6 +7144,32 @@
         "lockedMoves": [
           "typhoon",
           "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "Maglamp": {
+    "nicknames": [
+      "Maggy"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magmaarmor"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "recover",
+          "fireblast",
+          "prismray",
+          "quartzbeam"
+        ],
+        "lockedMoves": [
+          "caldera"
         ],
         "level": 84
       }
