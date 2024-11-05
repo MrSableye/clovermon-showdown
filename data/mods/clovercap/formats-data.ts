@@ -1196,7 +1196,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	fryzzle: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "LC",
 	},
 	carpedian: {
 		inherit: true,
