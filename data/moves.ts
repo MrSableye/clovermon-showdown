@@ -25582,7 +25582,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Flak Cannon",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, pulse: 1, mirror: 1, allyanim: 1},
+		flags: {protect: 1, pulse: 1, bullet: 1, mirror: 1, allyanim: 1},
 		willCrit: true,
 		onPrepareHit(target, source, move) {
 			if (source.ignoringItem()) return false;
