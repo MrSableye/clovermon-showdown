@@ -2520,6 +2520,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	shaikle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	amalgum: {
 		tier: "Illegal",
 		isNonstandard: "Future",
