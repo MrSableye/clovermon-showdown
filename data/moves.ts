@@ -21750,14 +21750,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 	/* Fake Clover Exclusive Move */
 	maxmemeitude: {
 		accuracy: true,
-		basePower: 10,
+		basePower: 15,
 		category: "Physical",
 		name: "Max Memeitude",
 		pp: 10,
 		priority: 0,
 		flags: {},
 		isMax: true,
-		volatileStatus: 'noretreat',
 		onTry(source, target, move) {
 			if (source.volatiles['noretreat']) return false;
 			if (source.volatiles['trapped']) {
@@ -21766,7 +21765,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		condition: {
 			onStart(pokemon) {
-				this.add('-start', pokemon, 'move: Max Memeitude');
+				this.add('-start', pokemon, 'move: No Retreat');
 			},
 			onTrapPokemon(pokemon) {
 				pokemon.tryTrap();
