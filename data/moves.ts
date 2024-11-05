@@ -21753,26 +21753,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 10,
 		category: "Physical",
 		name: "Max Memeitude",
-		pp: 10,
+		pp: 1,
+		noPPBoosts: true,
 		priority: 0,
 		flags: {},
 		isMax: true,
 		volatileStatus: 'noretreat',
-		onTry(source, target, move) {
-			if (source.volatiles['noretreat']) return false;
-			if (source.volatiles['trapped']) {
-				delete move.volatileStatus;
-			}
-		},
-		condition: {
-			onStart(pokemon) {
-				this.add('-start', pokemon, 'move: Max Memeitude');
-			},
-			onTrapPokemon(pokemon) {
-				pokemon.tryTrap();
-			},
-		},
-		boosts: {
+		secondary: {
+			chance: 100,
+			self: {
 			atk: 1,
 			def: 1,
 			spa: 1,
