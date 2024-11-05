@@ -9,11 +9,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	bulbfrog: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	sabsute: {
 		inherit: true,
 		isNonstandard: null,
@@ -1201,7 +1196,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	fryzzle: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "LC",
 	},
 	carpedian: {
 		inherit: true,

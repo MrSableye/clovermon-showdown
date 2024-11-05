@@ -458,6 +458,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	scaleshot: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, bullet: 1},
+		isNonstandard: null,
 	},
 	scorchingsands: {
 		inherit: true,
