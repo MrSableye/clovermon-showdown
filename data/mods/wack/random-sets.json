@@ -1202,7 +1202,7 @@
           "energyball",
           "fireblast",
           "vampirebite",
-          "painplit"
+          "painsplit"
         ],
         "lockedMoves": [   
           "scarletmist",
@@ -3400,6 +3400,46 @@
       }
     ]
   },
+  "cultulzu": {   
+    "sets": [
+      {
+        "abilities": [   
+          "intimidate"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [     
+          "darkvoid",    
+          "sanityleech",
+          "scald",
+          "icebeam",
+          "bulkup",
+          "recover",
+          "earthquake"
+        ],
+        "lockedMoves": [   
+          "cosmichorror"
+        ],
+        "level": 84       
+      },
+         {
+        "abilities": [
+          "baddreams"
+        ],
+        "items": [
+          "angelpowder"    
+        ],
+        "lockedMoves": [
+          "darkvoid",
+          "rest",
+          "cosmichorror",
+          "nightmare"
+        ],
+        "level": 93        
+      } 
+    ]
+  },
   "chunli": {   
     "nicknames": [   
       "letsgojustin",       
@@ -3475,6 +3515,192 @@
           "facade"
         ],
         "level": 84
+      }
+    ]
+  },
+  "huntorror": {   
+    "sets": [
+      {
+        "abilities": [   
+          "intimidate"
+        ],
+        "items": [
+          "angelpower",
+          "sausages" 
+        ],
+        "moves": [     
+          "glare",    
+          "knockoff",
+          "retaliate",
+          "roost",
+          "waterfall",
+          "divebomb",
+          "honeclaws",
+          "uturn"
+        ],
+        "lockedMoves": [   
+          "madness",
+          "taunt"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "hecatiaology": {   
+    "sets": [
+      {
+        "abilities": [   
+          "protean"
+        ],
+        "items": [
+          "angelpower",
+          "heavydutyboots" 
+        ],
+        "moves": [     
+          "triattack",    
+          "fireblast",
+          "hydropump",
+          "psyshock"
+        ],
+        "lockedMoves": [   
+          "arcanebolt"
+        ],
+        "level": 78       
+      }
+    ]
+  },
+  "enkiduvine": {   
+    "sets": [
+      {
+        "abilities": [   
+          "protean"
+        ],
+        "items": [
+          "angelpower",
+          "heavydutyboots" 
+        ],
+        "moves": [     
+          "trickroom",    
+          "equalize",
+          "acupressure"
+        ],
+        "lockedMoves": [   
+          "ageofbabylon"
+        ],
+        "level": 78       
+      }
+    ]
+  },
+  "eldreye": {   
+    "sets": [
+      {
+        "abilities": [   
+          "levitate",
+          "souleater"
+        ],
+        "items": [
+          "choicescarf",
+          "gravitycapsule",
+          "focussash" 
+        ],
+        "moves": [     
+          "deliverance",    
+          "psybolt",
+          "beacon",
+          "insanitybolt",
+          "hurricane"
+        ],
+        "lockedMoves": [   
+          "chaosrift"
+        ],
+        "level": 84       
+      },
+         {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "powerherb"    
+        ],
+        "lockedMoves": [
+          "ritual",
+          "hyperspacehole",
+          "beacon",
+          "chaosrift"
+        ],
+        "level": 84        
+      } 
+    ]
+  }, 
+"Clownpairy": {   
+    "sets": [
+      {
+        "abilities": [   
+          "colorchange"
+        ],
+        "items": [
+          "angelpower",
+          "heavydutyboots" 
+        ],
+        "moves": [     
+          "moonblast",    
+          "painsplit",
+          "lunatictime"
+        ],
+        "lockedMoves": [   
+          "purgatoryflicker"
+        ],
+        "level": 78       
+      }
+    ]
+  },
+  "wcanvast": {   
+    "sets": [
+      {
+        "abilities": [   
+          "colorchange"
+        ],
+        "items": [
+          "angelpower",
+          "heavydutyboots" 
+        ],
+        "moves": [     
+          "fusionbolt",    
+          "fusionflare",
+          "thermochromia"
+        ],
+        "lockedMoves": [   
+          "envelope"
+        ],
+        "level": 78       
+      }
+    ]
+  },
+  "nitegant": {   
+    "sets": [
+      {
+        "abilities": [   
+          "prankster",
+          "intimidate"
+        ],
+        "items": [
+          "eviolite" 
+        ],
+        "moves": [     
+          "glare",    
+          "knockoff",
+          "madness",
+          "taunt",
+          "confuseray",
+          "divebomb",
+          "zenheadbutt",
+          "pursuit",
+          "uturn"
+        ],
+        "lockedMoves": [   
+          "roost"
+        ],
+        "level": 84       
       }
     ]
   },
