@@ -14,4 +14,9 @@ export const AbilitiesText: {[k: string]: ModdedAbilityText} = {
 		desc: "Foes cannot use Berries, Berry Juice, Leftovers, Milk Drink, Focus Munch, Soft-Boiled or Fruit Juice.",
 		shortDesc: "Foes cannot use Berries, Berry Juice, Leftovers, Milk Drink, Focus Munch, Soft-Boiled or Fruit Juice.",
 	},
+	ironfist: {
+		inherit: true,
+		desc: "This Pokemon's punch-based attacks have 1.2x power.",
+		shortDesc: "This Pokemon's punch-based attacks have 1.2x power.",
+	},
 };

@@ -4,6 +4,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, distance: 1, slicing: 1},
 	},
+	moonblast: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, bullet: 1},
+	},
+	fireblast: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, bullet: 1},
+	},
 	abyssalwave: {
 		inherit: true,
 		isNonstandard: null,
@@ -449,6 +457,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	scaleshot: {
 		inherit: true,
+		flags: {protect: 1, mirror: 1, bullet: 1},
 		isNonstandard: null,
 	},
 	scorchingsands: {
