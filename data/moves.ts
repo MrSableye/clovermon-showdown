@@ -52469,7 +52469,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		recoil: [33, 100],
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -58121,6 +58125,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sun: 1},
+		self: {
+			onHit(source) {
+				this.field.setWeather('sunnyday');
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Grass",
@@ -58403,7 +58412,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (source.moveSlots.length < 2) return false; // Last Resort fails unless the user knows at least 2 moves
 			let hasLastResort = false; // User must actually have Last Resort for it to succeed
 			for (const moveSlot of source.moveSlots) {
-				if (moveSlot.id === 'lastresort') {
+				if (moveSlot.id === 'getterbeam') {
 					hasLastResort = true;
 					continue;
 				}
@@ -58472,7 +58481,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (source.moveSlots.length < 2) return false; // Last Resort fails unless the user knows at least 2 moves
 			let hasLastResort = false; // User must actually have Last Resort for it to succeed
 			for (const moveSlot of source.moveSlots) {
-				if (moveSlot.id === 'lastresort') {
+				if (moveSlot.id === 'finale') {
 					hasLastResort = true;
 					continue;
 				}
@@ -66871,6 +66880,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTry(source) {
+			if (source.moveSlots.length < 2) return false; // Last Resort fails unless the user knows at least 2 moves
+			let hasLastResort = false; // User must actually have Last Resort for it to succeed
+			for (const moveSlot of source.moveSlots) {
+				if (moveSlot.id === 'grendelbuster') {
+					hasLastResort = true;
+					continue;
+				}
+				if (!moveSlot.used) return false;
+			}
+			return hasLastResort;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -75566,7 +75587,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (source.moveSlots.length < 2) return false; // Last Resort fails unless the user knows at least 2 moves
 			let hasLastResort = false; // User must actually have Last Resort for it to succeed
 			for (const moveSlot of source.moveSlots) {
-				if (moveSlot.id === 'lastresort') {
+				if (moveSlot.id === 'grandslam') {
 					hasLastResort = true;
 					continue;
 				}
@@ -89881,7 +89902,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (source.moveSlots.length < 2) return false; // Last Resort fails unless the user knows at least 2 moves
 			let hasLastResort = false; // User must actually have Last Resort for it to succeed
 			for (const moveSlot of source.moveSlots) {
-				if (moveSlot.id === 'lastresort') {
+				if (moveSlot.id === 'catastrophe') {
 					hasLastResort = true;
 					continue;
 				}
