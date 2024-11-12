@@ -44609,7 +44609,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, tail: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -47033,12 +47036,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Enuma Elish",
 		pp: 5,
 		priority: 0,
-		secondary: {
-			chance: 100,
-			boosts: {
-				def: -1,
+		secondaries: [
+			{
+				chance: 100,
+				boosts: {
+					def: -1,
+				},
+			}, {
+				chance: 100,
+				volatileStatus: 'confusion',
 			},
-		},
+		],
 		flags: {protect: 1, mirror: 1},
 		status: 'par',
 		target: "normal",
@@ -48981,7 +48989,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {snatch: 1},
 		boosts: {
 			atk: 1,
-			spe: 1,
+			spe: 2,
 		},
 		secondary: null,
 		target: "self",
@@ -58307,7 +58315,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onAfterHit(target, source) {
 			this.field.clearWeather();
 		},
-		secondary: null,
+		
+		secondaries: [
+			{
+				chance: 100,
+				status: 'brn',
+			}, {
+				chance: 100,
+				volatileStatus: 'confusion',
+			},
+		],
 		target: "normal",
 		type: "Fire",
 		isNonstandard: "Future",
