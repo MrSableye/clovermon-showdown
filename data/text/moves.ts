@@ -9531,6 +9531,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "All-Out Irony",
 		shortDesc: "If a foe is switching out, hits it at 2x power. 100x power against Krackokind or Weedlekind Pokemon.",
 	},
+	requiemrend: {
+		name: "Requiem Rend",
+		shortDesc: "20% chance to lower target speed. Uses 'Mourning Lament' instead if in Dullahan form.",
+	},
+	mourninglament: {
+		name: "Mourning Lament",
+		shortDesc: "+50 power for each time a party member fainted. Reverts the user's form back to default.",
+	},
 	eatrocks: {
 		name: "Eat Rocks",
 		shortDesc: "Removes Spikes, Toxic Spikes, and Stealth Rock from the user's side. If it removes a hazard this way, it heals 60%. Otherwise, 40%.",

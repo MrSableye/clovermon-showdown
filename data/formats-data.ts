@@ -11687,6 +11687,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	wyldhaunt: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wyldhauntrequiem: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	popecap: {
 		tier: "Illegal",
 		isNonstandard: "Future",

@@ -10159,6 +10159,28 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		isNonstandard: "Future",
 	},
+	bereavement: {
+		onStart(pokemon) {
+			if (pokemon.swordBoost = true) {
+				if (pokemon.species.baseSpecies !== 'Wyldhaunt' || pokemon.transformed) return;
+				if (pokemon.species.forme !== 'Dullahan') {
+					pokemon.formeChange('Wyldhaunt-Dullahan');
+				}
+			} else {
+				if (pokemon.species.baseSpecies !== 'Wyldhaunt' || pokemon.transformed) return;
+				if (pokemon.species.forme == 'Dullahan') {
+					pokemon.formeChange('Wyldhaunt');
+				}
+			}
+			if (pokemon.side.faintedLastTurn) {
+				this.debug('Bereavement activation from faint last turn');
+				if (pokemon.species.baseSpecies !== 'Wyldhaunt' || pokemon.transformed) pokemon.swordBoost = true;
+			}
+		},
+		isPermanent: true,
+		name: "Bereavement",
+		rating: 5,
+	},
 	kattapillarssecretpower: {
 		name: "Kattapillar's Secret Power",
 		rating: 0, // LMAO YOU ACTUALLY THOUGHT THIS SHIT HAD REAL EFFECTS LMAOOOOOOOO
