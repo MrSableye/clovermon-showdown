@@ -31608,6 +31608,58 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	requiemrend: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Requiem Rend",
+		pp: 7,
+		noPPBoosts: true,
+		priority: 0,
+		flags: {failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1, protect:1},
+		onTryHit(target, pokemon) {
+			if (pokemon.swordBoost != true) return;
+			let move = 'mourninglament';
+			const fullMove = this.dex.getActiveMove(move);
+			fullMove.flags = {...fullMove.flags, naturePower: 1};
+			this.actions.useMove(move, pokemon, target);
+			return null;
+		},
+		secondary: {
+			chance: 20,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "normal",
+		type: "Ghost",
+	},
+	mourninglament: {
+		accuracy: 100,
+		basePower: 50,
+		basePowerCallback(pokemon, target, move) {
+			return 50 + 50 * pokemon.side.totalFainted;
+		},
+		onAfterMove(source) {
+			if (source.swordBoost != true) return;
+			if (source.species.baseSpecies !== 'Wyldhaunt') return;
+			if (source.species.forme == 'Dullahan') {
+				source.swordBoost = false;
+				source.formeChange('Wyldhaunt');
+			}
+		},
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Mourning Lament",
+		pp: 1,
+		noPPBoosts: true,
+		priority: 0,
+		flags: {failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1, protect: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
 	eatrocks: {
 		accuracy: 100,
 		basePower: 0,

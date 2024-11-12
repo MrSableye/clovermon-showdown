@@ -16,6 +16,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fling: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	appleacid: {
 		inherit: true,
 		isNonstandard: null,
