@@ -68192,6 +68192,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onAfterHit(target, source) {
+			this.add('-activate', source, 'move: CREAMFINALE');
+			let success = false;
+			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
+			for (const ally of allies) {
+				if (ally !== source && ally.hasAbility(['soundproof', 'cacophony'])) continue;
+				if (ally.cureStatus()) success = true;
+			}
+			return success;
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Food",
