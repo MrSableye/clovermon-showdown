@@ -337,6 +337,33 @@
       }
     ]
   },
+  "bbattora": {
+    "nicknames": [
+      "Bbattora"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "scrappy",
+          "sadist"
+        ],
+        "items": [
+          "lumberry",
+          "chaosdust"
+        ],
+        "moves": [
+          "knockoff",
+          "madepiphany"
+        ],
+        "lockedMoves": [
+          "lunatictime",
+          "blacktruth",
+          "avarice"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "bloodoom": {
     "nicknames": [
       "Bloodoom"
@@ -1147,6 +1174,31 @@
       }
     ]
   },
+  "sarieangel": {
+    "nicknames": [
+      "Sarieangel"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "zenmode"
+        ],
+        "items": [
+          "lumberry",
+          "chaosdust"
+        ],
+        "moves": [
+          "equalize",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "pray",
+          "invocation"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "dglalie": {  
     "nicknames": [
       "Dark Glalie"
@@ -1473,6 +1525,81 @@
           "suckerpunch"
         ],
         "level": 88       
+      }
+    ]
+  },
+  "israfel": {
+    "nicknames": [
+      "Israfel"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "soundproof"
+        ],
+        "items": [
+          "divinedust",
+          "chaosdust"
+        ],
+        "moves": [
+          "bonemerang",
+          "fierydance"
+        ],
+        "lockedMoves": [
+          "boomburst",
+          "doubleedge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "avengergorgon": {
+    "nicknames": [
+      "Avengergorgon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "divinedust",
+          "chaosdust"
+        ],
+        "moves": [
+          "anchorshot",
+          "darkpulse",
+          "balmscour"
+        ],
+        "lockedMoves": [
+          "bloodandromeda",
+          "pandemoniumcetus"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "saberlion": {
+    "nicknames": [
+      "Saberlion"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "gluttony"
+        ],
+        "items": [
+          "invertedcapsule"
+        ],
+        "moves": [
+          "slackoff",
+          "crazytackle",
+          "meatcalibur"
+        ],
+        "lockedMoves": [
+          "doubleedge"
+        ],
+        "level": 84
       }
     ]
   },
@@ -5341,12 +5468,13 @@
         "moves": [
           "grassknot",
           "psychic",
-          "lowkick"
+          "lowkick",
+          "calmmind"
         ],
         "lockedMoves": [
-          "explosion"
+          "synthesis"
         ],
-        "level": 84
+        "level": 92
       }
     ]
   },
@@ -5395,6 +5523,31 @@
           "sharkbite"
         ],
         "level": 84
+      }
+    ]
+  },
+  "demiurge": {
+    "nicknames": [
+      "Demiurge"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "filter"
+        ],
+        "items": [
+          "supressionstone"
+        ],
+        "moves": [
+          "explosion",
+          "invocation",
+          "spacialrend",
+          "return"
+        ],
+        "lockedMoves": [
+          "lunatictime"
+        ],
+        "level": 72
       }
     ]
   },
@@ -8424,6 +8577,33 @@
           "sing"
         ],
         "level": 84       
+      }
+    ]
+  },
+  "ygolonacol": {
+    "nicknames": [
+      "Ygolonacol"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "murkycapsule",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "brainrot",
+          "pastalavista",
+          "trickroom"
+        ],
+        "lockedMoves": [
+          "lunatictime",
+          "knockoff"
+        ],
+        "level": 84
       }
     ]
   },
