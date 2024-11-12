@@ -4938,4 +4938,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Psychic",
 	},
+	requiemrend: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

@@ -12761,4 +12761,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	wyldhaunt: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
