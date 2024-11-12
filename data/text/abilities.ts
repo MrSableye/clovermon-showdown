@@ -3097,6 +3097,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] real!",
 	},
+	bereavement: {
+		name: "Bereavement",
+		shortDesc: "Transforms into Dullahan state if active on the turn after an ally faints.",
+	},
 	kattapillarssecretpower: {
 		name: "Kattapillar's Secret Power",
 		shortDesc: "Has a variety of effects depending on certain circumstances.",
