@@ -1136,7 +1136,7 @@
         ],
         "moves": [     
           "lunge",    
-          "nectortap",
+          "nectartap",
           "tailwind"
         ],
         "lockedMoves": [   
@@ -2232,7 +2232,7 @@
           "accelerock",
           "bodypress",
           "batteringram",
-          "bolderbash",
+          "boulderbash",
           "flintstrike",
           "heatcrash",
           "megadrill",
@@ -6080,7 +6080,7 @@
           "darkpulse"
         ],
         "lockedMoves": [
-          "stemascald"
+          "steamscald"
         ],
         "level": 84
       }
@@ -6307,7 +6307,7 @@
           "rootcrush"
         ],
         "lockedMoves": [
-          "bolderbash",
+          "boulderbash",
           "treesmash"
         ],
         "level": 84
@@ -8089,7 +8089,7 @@
     "sets": [
       {
         "abilities": [
-          "flashfire"
+          "keeneye"
         ],
         "items": [
           "heavydutyboots"
