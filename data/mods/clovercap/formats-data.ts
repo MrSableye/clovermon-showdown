@@ -498,16 +498,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	canamaple: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "LC",
-	},
-	frozweed: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	noxilium: {
 		inherit: true,
 		isNonstandard: null,
