@@ -51186,7 +51186,7 @@ tamanaut: {
 		color: "Purple",
 		prevo: "Tamanaut",
 		evoType: "useItem",
-	    evoItem: "Dawn Stone",
+	    evoItem: "Dusk Stone",
 		eggGroups: ["Amorphous", "Human-Like"],
 		gen: 8,
 		creator: "Zac",
