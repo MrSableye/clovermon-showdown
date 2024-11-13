@@ -35481,6 +35481,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 0.777,
 		weightkg: 111,
 		color: "White",
+		prevo: "Jahl",
+		evoLevel: 33,
 		eggGroups: ["Field"],
 		gen: 8,
 		creator: "Mr. Sableye",
