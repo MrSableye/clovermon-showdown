@@ -3652,7 +3652,7 @@
           "intimidate"
         ],
         "items": [
-          "angelpower",
+          "angelpowder",
           "sausages" 
         ],
         "moves": [     
@@ -4045,7 +4045,10 @@
       }
     ]
   },
-  "astrolotl": {   
+  "astrolotl": {  
+    "nicknames": [
+      "Asstrolotlel"
+    ], 
     "sets": [
       {
         "abilities": [   
@@ -5463,7 +5466,7 @@
           "unnerve"
         ],
         "items": [
-          "leftovers"
+          "angelpowder"
         ],
         "moves": [
           "grassknot",
