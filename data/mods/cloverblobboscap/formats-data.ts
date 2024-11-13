@@ -2532,6 +2532,22 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	firvid: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cholefir: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tamanaut: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	jahl: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	amalgum: {
 		tier: "Illegal",
 		isNonstandard: "Future",
