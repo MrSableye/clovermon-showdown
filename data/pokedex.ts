@@ -50337,6 +50337,18 @@ curdiscope: {
 		color: "Pink",
 		gen: 8,
 	},
+	mauslice: {
+		num: -42069925,
+		name: "Mauslice",
+		types: ["Normal", "Steel",],
+		gender: "N",
+		baseStats: {hp: 74, atk: 106, def: 45, spa: 65, spd: 75, spe: 110},
+		abilities: {0: "Steadfast", 1: "Defiant", H: "Technician", S: "Blademaster"},
+		heightm: 0.3,
+		weightkg: 2.3,
+		color: "White",
+		eggGroups: ["Field", "Fairy"],
+	},
 	mammudha: {
 		num: -42069049,
 		name: "Mammudha",

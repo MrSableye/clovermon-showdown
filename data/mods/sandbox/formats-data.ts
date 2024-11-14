@@ -11303,6 +11303,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	mauslice: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	jumpeon: {
 		inherit: true,
 		tier: "OU",
