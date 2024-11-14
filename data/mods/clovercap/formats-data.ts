@@ -1198,7 +1198,27 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "LC",
 	},
+	firvid: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	tamanaut: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	jahl: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
 	carpedian: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	cholefir: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
