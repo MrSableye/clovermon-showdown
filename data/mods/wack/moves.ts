@@ -1032,7 +1032,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	darkvoid: {
 		inherit: true,
+		desc: "Causes the target to fall asleep.",
+		shortDesc: "Causes the foe(s) to fall asleep.",
 		accuracy: 80,
+		onTry() { return; },
 		isNonstandard: null,
 	},
 	decorate: {

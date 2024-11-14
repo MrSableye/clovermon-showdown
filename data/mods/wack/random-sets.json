@@ -2583,7 +2583,7 @@
           "throatchop"
         ],
         
-        "level": 84
+        "level": 78
       }
     ]
   },
@@ -2932,6 +2932,30 @@
           "toxicinfo"
         ],
         "level": 84
+      }
+    ]
+  },
+  "mspinda": {
+    "nicknames": [
+      "Mega Spinda"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "contrary"
+        ],
+        "items": [
+          "chaosdust"
+        ],
+        "moves": [
+          "madepiphany",
+          "schizoboost",
+          "doubleedge"
+        ],
+        "lockedMoves": [
+          "lunatictime"
+        ],
+        "level": 83
       }
     ]
   },
@@ -6038,6 +6062,71 @@
       }
     ]
   },
+  "demohate": {   
+    "sets": [
+      {
+        "abilities": [   
+          "intimidate"
+        ],
+        "items": [
+          "loverock"
+        ],
+        "moves": [     
+          "cbt",
+          "heartbreak"
+        ],
+        "lockedMoves": [
+          "matingseason", 
+          "loveburst"
+        ],
+        "level": 88       
+      }
+    ]
+  },
+  "domineko": {   
+    "sets": [
+      {
+        "abilities": [   
+          "guts",
+          "sadist"
+        ],
+        "items": [
+          "loverock"
+        ],
+        "moves": [     
+          "rubberwhip",
+          "playrough"
+        ],
+        "lockedMoves": [
+          "matingseason", 
+          "cbt"
+        ],
+        "level": 88       
+      }
+    ]
+  },
+  "Phallusaur": {   
+    "sets": [
+      {
+        "abilities": [   
+          "thickfat"
+        ],
+        "items": [
+          "loverock"
+        ],
+        "moves": [     
+          "quartzbeam",
+          "rockgather",
+          "studynotes"
+        ],
+        "lockedMoves": [
+          "matingseason", 
+          "eromangasaurus"
+        ],
+        "level": 88       
+      }
+    ]
+  },
   "nidoking": {   
     "sets": [
       {
@@ -6258,6 +6347,31 @@
           "meatmash",
           "flareblitz",
           "seasoning"
+        ],
+        "lockedMoves": [
+          "pizzaspin"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "pepperoari": {
+    "nicknames": [
+      "Pepperoari"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "liquidooze",
+          "stickyhold"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "delivery",
+          "flamethrower",
+          "pizzabite"
         ],
         "lockedMoves": [
           "pizzaspin"
