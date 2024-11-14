@@ -9344,6 +9344,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Future",
 	},
+	mauslice: {
+		inherit: true,
+		isNonstandard: "Future",
+	},
 	mammudha: {
 		inherit: true,
 		isNonstandard: "Future",

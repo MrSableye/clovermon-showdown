@@ -11035,6 +11035,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	mauslice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	jumpeon: {
 		tier: "Illegal",
 		isNonstandard: "Future",
