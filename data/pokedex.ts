@@ -46914,6 +46914,35 @@ blobbosdreaming: {
 		],
 		gen: 8,
 	},
+	blobbosbatteryacid: {
+		num: 69132,
+		name: "Blobbos-Battery Acid",
+		baseSpecies: "Blobbos",
+		forme: "Battery Acid",
+		types: ["Electric", "Poison"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 83,
+			atk: 58,
+			def: 79,
+			spa: 81,
+			spd: 102,
+			spe: 69,
+		},
+		abilities: {
+			0: "Battery",
+                        1: "Plus",
+                        H: "Transistor",
+                        S: "Corrosion",
+		},
+		heightm: 0.4,
+		weightkg: 7.7,
+		color: "Grey",
+		eggGroups: [
+			"Amorphous", "Mineral"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
