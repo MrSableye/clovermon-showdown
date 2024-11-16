@@ -51145,7 +51145,7 @@ curdiscope: {
 		baseStats: {hp: 51, atk: 57, def: 58, spa: 44, spd: 36, spe: 68},
 		abilities: {0: "Slush Rush", 1: "Overcoat", H: "Rough Skin", S: "Grass Pelt"},
 		heightm: 0.5,
-		weightkg: 0.91,
+		weightkg: 0.92,
 		color: "Brown",
 		evos: ["Cholefir"],
 		eggGroups: ["Monster", "Grass"],
