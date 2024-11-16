@@ -10347,6 +10347,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosbatteryacid: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	dunebug: {
 		tier: "Illegal",
 		isNonstandard: "Future",
