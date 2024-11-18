@@ -7437,15 +7437,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					this.add('-ability', pokemon, 'Dispenser');
 					activated = true;
 				}
-				ally.heal(ally.baseMaxhp / 10);
+				ally.heal(ally.baseMaxhp / 16);
 				this.add('-heal', ally, ally.getHealth);
-				const moveSlots = ally.moveSlots.filter(move => move.pp < move.maxpp);
-				if (moveSlots.length) {
-					const moveSlot = this.sample(moveSlots);
-					moveSlot.pp += 1;
-					if (moveSlot.pp > moveSlot.maxpp) moveSlot.pp = moveSlot.maxpp;
-					this.add('-activate', ally, 'ability: Dispenser', moveSlot.move, '[of] ' + pokemon);
-				}
+			}
+			if (pokemon.hp && !pokemon.item) {
+				if (pokemon.item || !pokemon.lastItem && !this.dex.items.get(pokemon.lastItem).isBerry) return false;
+				pokemon.setItem(pokemon.lastItem);
+				pokemon.lastItem = '';
+				this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Dispenser');
 			}
 		},
 		name: "Dispenser",
@@ -7466,7 +7465,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add('-heal', ally, ally.getHealth);
 			}
 			if (pokemon.hp && !pokemon.item) {
-				if (pokemon.item || !pokemon.lastItem) return false;
+				if (pokemon.item || !pokemon.lastItem && !this.dex.items.get(pokemon.lastItem).isBerry) return false;
 				pokemon.setItem(pokemon.lastItem);
 				pokemon.lastItem = '';
 				this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Fake-Ass Dispenser Clone');
