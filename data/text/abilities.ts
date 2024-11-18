@@ -2551,11 +2551,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "At the end of every turn, heals user and allies for 1/16 of their max HP and recycles the user's item, unless it's a berry.",
 		addItem: "  [POKEMON] dispensed one [ITEM]!",
 	},
-	fakeassdispenserclone: {
-		name: "Fake-Ass Dispenser Clone",
-		shortDesc: "At the end of every turn, heals user and allies for 1/16 of their max HP and recycles the user's item.",
-		addItem: "  [POKEMON] dispensed another [ITEM]!",
-	},
 	eclipse: {
 		name: "Eclipse",
 		desc: "On switch-in, removes Sunny Day and Desolate Land for a stat boost.",
