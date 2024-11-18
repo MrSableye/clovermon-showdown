@@ -2548,7 +2548,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	dispenser: {
 		name: "Dispenser",
 		
-		shortDesc: "At the end of every turn, heals user and allies for 1/16 of their max HP and recycles the user's item.",
+		shortDesc: "At the end of every turn, heals user and allies for 1/16 of their max HP and recycles the user's item, unless it's a berry.",
 		addItem: "  [POKEMON] dispensed one [ITEM]!",
 	},
 	fakeassdispenserclone: {

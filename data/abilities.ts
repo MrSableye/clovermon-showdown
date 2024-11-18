@@ -7451,30 +7451,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		isNonstandard: "Future",
 	},
-	fakeassdispenserclone: {
-		onResidualOrder: 26,
-		onResidualSubOrder: 1,
-		onResidual(pokemon, source, effect) {
-			let activated = false;
-			for (const ally of pokemon.alliesAndSelf()) {
-				if (!activated) {
-					this.add('-ability', pokemon, 'Fake-Ass Dispenser Clone');
-					activated = true;
-				}
-				ally.heal(ally.baseMaxhp / 16);
-				this.add('-heal', ally, ally.getHealth);
-			}
-			if (pokemon.hp && !pokemon.item) {
-				if (pokemon.item || !pokemon.lastItem && !this.dex.items.get(pokemon.lastItem).isBerry) return false;
-				pokemon.setItem(pokemon.lastItem);
-				pokemon.lastItem = '';
-				this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Fake-Ass Dispenser Clone');
-			}
-		},
-		name: "Fake-Ass Dispenser Clone",
-		rating: 4,
-		isNonstandard: "Future",
-	},
 	leech: {
 		onModifyMove(move) {
 			if (!move?.flags['contact'] || move.target === 'self') return;
