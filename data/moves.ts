@@ -34097,6 +34097,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "self",
 		type: "Fighting",
 	},
+	psiblobbin: {
+		accuracy: 90,
+		basePower: 120,
+		category: "Special",
+		name: "PSI Blobbin'",
+		pp: 5,
+		priority: -1,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 33,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "allAdjacentFoes",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
 	skillroom: {
 		accuracy: true,
 		basePower: 0,

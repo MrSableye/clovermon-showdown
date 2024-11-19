@@ -1396,14 +1396,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	moonblast: {
 		num: 585,
 		accuracy: 100,
-		basePower: 90,
+		basePower: 95,
 		category: "Special",
 		name: "Moonblast",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-			chance: 20,
+			chance: 10,
 			boosts: {
 				spa: -1,
 			},
@@ -1411,8 +1411,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Fairy",
 		contestType: "Beautiful",
-		desc: "Has a 20% chance of lowering special attack upon hit",
-		shortDesc: "20% chance to lower the target's Spatk. by 1.",
+		desc: "Has a 10% chance of lowering special attack upon hit",
+		shortDesc: "10% chance to lower the target's Spatk. by 1.",
 	},
 	armthrust: {
 		inherit: true,
@@ -1793,6 +1793,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	lovelyhug: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psiblobbin: {
 		inherit: true,
 		isNonstandard: null,
 	},

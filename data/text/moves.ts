@@ -9301,6 +9301,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Lovely Hug",
 		shortDesc: "30% Chance to Paralyze the target. Fairy if Blobbos-Sexy and Blobbos-Sexy-Mega-Y; Dark if Blobbos-Sexy-Mega-X. Special if Spatk > Attack.",
 	},
+	psiblobbin: {
+		name: "PSI Blobbin'",
+		shortDesc: "33% Chance to lower the targets Special Defense by 1. Hits all Adjacent foes.",
+	},
 	icastfireball: {
 		name: "I Cast Fireball!",
 		shortDesc: "20% Chance to burn.",
