@@ -8,6 +8,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, bullet: 1},
 	},
+	technoblast: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, bullet: 1},
+	},
 	fireblast: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, bullet: 1},
