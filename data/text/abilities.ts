@@ -2553,7 +2553,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	eclipse: {
 		name: "Eclipse",
-		desc: "On switch-in, removes Sunny Day and Desolate Land for a stat boost.",
+		desc: "On switch-in, removes Sunny Day for a boost in Attack and Special Attack by 2 stages and in Desolate Land for a boost in all stats (excluding acc/eva).",
 	},
 	fogofwar: {
 		name: "Fog Of War",
