@@ -268,6 +268,53 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 1,
 		num: 75,
 	},
+	keeneye: {
+		onTryBoost(boost, target, source, effect) {
+			let showMsg = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost.accuracy && boost.accuracy < 0) {
+					delete boost[i];
+					showMsg = true;
+					if (!(effect as ActiveMove).secondaries) {
+						this.add("-fail", target, "unboost", "accuracy", "[from] ability: Keen Eye", "[of] " + target);
+				}
+			}
+			
+				if (!(effect as ActiveMove).secondaries) {
+					this.add("-fail", target, "unboost", "accuracy", "[from] ability: Keen Eye", "[of] " + target);
+				}
+			}
+		},
+		onModifyMove(move) {
+			move.ignoreEvasion = true;
+		},
+		isBreakable: true,
+		name: "Keen Eye",
+		rating: 0.5,
+		num: 51,
+	},
+	hypercutter: {
+		onTryBoost(boost, target, source, effect) {
+			let showMsg = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost.atk && boost.atk < 0) {
+					delete boost[i];
+					showMsg = true;
+					if (!(effect as ActiveMove).secondaries) {
+						this.add("-fail", target, "unboost", "Attack", "[from] ability: Hyper Cutter", "[of] " + target);
+				}
+			}
+			
+				if (!(effect as ActiveMove).secondaries) {
+					this.add("-fail", target, "unboost", "Attack", "[from] ability: Hyper Cutter", "[of] " + target);
+				}
+			}
+		},
+		isBreakable: true,
+		name: "Hyper Cutter",
+	},
 	unnerve: {
 		inherit: true,
 		onFoeTryMove(target, source, effect) {
