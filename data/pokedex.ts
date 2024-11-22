@@ -34183,6 +34183,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoType: "levelFriendship",
 		eggGroups: ["Field", "Monster"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	regishort: {
 		num: 42127,
@@ -34235,6 +34236,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		eggGroups: ["Mineral", "Field"],
 		gen: 8,
+		creator: "Zac",
 	},
 	ouroblack: {
 		num: 42156,
@@ -34894,6 +34896,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Bungaloon"],
 		eggGroups: ["Fairy, Amorphous"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	bungaloon: {
 		num: 42086,
@@ -34910,6 +34913,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoCondition: "with a Envile",
 		eggGroups: ["Fairy", "Amorphous"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	envile: {
 		num: 42087,
@@ -34924,6 +34928,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Kaustikrok"],
 		eggGroups: ["Monster", "Amorphous"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	kaustikrok: {
 		num: 42088,
@@ -34940,6 +34945,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoCondition: "with a Bubbasaur",
 		eggGroups: ["Monster", "Amorphous"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	skubmarine: {
 		num: 42011,
@@ -34994,6 +35000,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoType: "levelFriendship",
 		eggGroups: ["Field", "Monster"],
 		gen: 8,
+		creator: "Abel",
 	},
 	pegui: {
 		num: 42073,
@@ -35295,6 +35302,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		eggGroups: ["Human-Like"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	noxilium: {
 		num: 42124,
@@ -35462,6 +35470,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	    evoLevel: 46,
 		eggGroups: ["Dragon", "Monster"],
 		gen: 8,
+		creator: "CAPSLOCK",
 	},
 	wycern: {
 		num: 42096,
@@ -35600,6 +35609,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Lepooze"],
 		eggGroups: ["Field"],
 		gen: 8,
+		creator: "Clown",
 	},
 	lepooze: {
 		num: 42062,
@@ -35616,6 +35626,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Lunabbit"],
 		eggGroups: ["Field"],
 		gen: 8,
+		creator: "Clown",
 	},
 	lunabbit: {
 		num: 42063,
@@ -35631,6 +35642,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 36,
 		eggGroups: ["Field"],
 		gen: 8,
+		creator: "Clown",
 	},
 	tadpoison: {
 		num: 42058,
@@ -35645,6 +35657,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Bretkhelm"],
 		eggGroups: ["Water 1"],
 		gen: 8,
+		creator: "Clown",
 	},
 	bretkhelm: {
 		num: 42059,
@@ -35661,6 +35674,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Berfgoyle"],
 		eggGroups: ["Water 1"],
 		gen: 8,
+		creator: "Clown",
 	},
 	berfgoyle: {
 		num: 42060,
@@ -35676,6 +35690,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 36,
 		eggGroups: ["Water 1"],
 		gen: 8,
+		creator: "Clown",
 	},
 	helmata: {
 		num: 42064,
@@ -35690,6 +35705,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Punkuyu"],
 		eggGroups: ["Dragon"],
 		gen: 8,
+		creator: "Clown",
 	},
 	punkuyu: {
 		num: 42065,
@@ -35706,6 +35722,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Chamelee"],
 		eggGroups: ["Dragon"],
 		gen: 8,
+		creator: "Clown",
 	},
 	chamelee: {
 		num: 42066,
@@ -35721,6 +35738,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 36,
 		eggGroups: ["Dragon"],
 		gen: 8,
+		creator: "Clown/Zac",
 	},
 	wawho: {
 		num: 42150,
@@ -35810,6 +35828,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 44,
 		eggGroups: ["Monster", "Water 3"],
 		gen: 8,
+		creator: "Zac",
 	},
 	equuan: {
 		num: 42109,
@@ -36026,6 +36045,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Field", "Amorphous"],
 		gen: 8,
+		creator: "The 1054",
 	},
 	sokumite: {
 		num: -42055,
@@ -36209,6 +36229,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Purple",
 		eggGroups: ["Amorphous", "Fairy"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	whipsicuffs: {
 		num: 42071,
@@ -36536,6 +36557,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Amorphous"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	monkite: {
 		num: 42078,
@@ -36767,6 +36789,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   evos: ["Sabsute", "Dollghost"],
 	   eggGroups: ["Field", "Monster"],
 	   gen: 8,
+	   creator: "Jewipede",
 	},
 	nebulite: {
 	   num: 42180,
@@ -36795,6 +36818,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   evos: ["Horntuba"],
 	   eggGroups: ["Monster", "Water 3"],
 	   gen: 8,
+	   creator: "Fiend",
 	},
 	winkhulu: {
 		num: 42202,
@@ -36808,6 +36832,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		evos: ["Temawria", "Retwina"],
 		eggGroups: ["Monster"],
+		gen: 8,
+	    creator: "Yan",
 	},
 	temawria: {
 		num: 42203,
@@ -36823,6 +36849,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoType: "useItem",
 		evoItem: "Cursed Fang",
 		eggGroups: ["Undiscovered"],
+		gen: 8,
+	    creator: "Jewipede",
 	},
 	retwina: {
 		num: 42204,
@@ -36838,6 +36866,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoType: "useItem",
 		evoItem: "Crimson Lens",
 		eggGroups: ["Undiscovered"],
+		gen: 8,
+	    creator: "Jewipede",
 	},
 	seaman: {
 	   num: -42042,
@@ -36852,6 +36882,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   evos: ["Barabyss"],
 	   eggGroups: ["Monster", "Water 2"],
 	   gen: 8,
+	   creator: "Zac",
 	},
 	barabyss: {
 	   num: -42043,
@@ -36867,6 +36898,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   evoLevel: 48,
 	   eggGroups: ["Monster", "Water 2"],
 	   gen: 8,
+	   creator: "Zac",
 	},
 	flubbster: {
 	   num: -8665,
@@ -37104,6 +37136,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Yellow",
 		eggGroups: ["Field", "Fairy"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	gojifiend: {
 		num: -8226,
@@ -37190,6 +37223,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Fractyvern"],
 		eggGroups: ["Dragon", "Monster"],
 		gen: 8,
+	    creator: "C3ll",
 	},
 	fractyvern: {
 		num: -8233,
@@ -37206,6 +37240,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Dragon Scale",
 		eggGroups: ["Dragon", "Monster"],
 		gen: 8,
+		creator: "C3ll/Karma",
 	},
 	sleepsy: {
 		num: -8234,
@@ -37633,6 +37668,7 @@ jumblinart: {
 	color: "Blue",
 	eggGroups: ["Monster", "Field"],
 	gen: 8,
+	creator: "Hobo",
 },
 jumblegore: {
 	num: -8260,
@@ -37646,6 +37682,7 @@ jumblegore: {
 	color: "Red",
 	eggGroups: ["Monster", "Field"],
 	gen: 8,
+	creator: "Hobo",
 },
 mootant: {
 	num: -8261,
@@ -38210,6 +38247,7 @@ iwik: {
 	   evos: ["Volbrat"],
 	   eggGroups: ["Dragon", "Monster"],
 	   gen: 8,
+	   creator: "Zac",
 	},
 	volbrat: {
 	   num: 42190,
@@ -38226,6 +38264,7 @@ iwik: {
 	   evos: ["Voliath"],
 	   eggGroups: ["Dragon", "Monster"],
 	   gen: 8,
+	   creator: "Zac",
 	},
 	garookie: {
 	   num: 42191,
@@ -38360,6 +38399,8 @@ iwik: {
 		eggGroups: ["Ditto"],
 		otherFormes: ["Polybrawn-H", "Polybrawn-W", "Polybrawn-I", "Polybrawn-P", "Polybrawn-K"],
 		formeOrder: ["Polybrawn", "Polybrawn-H", "Polybrawn-W", "Polybrawn-I", "Polybrawn-P", "Polybrawn-K"],
+		gen: 8,
+	    creator: "Zac",
 	},
 	polybrawnh: {
 		num: 42199,
@@ -38375,6 +38416,8 @@ iwik: {
 		color: "Red",
 		eggGroups: ["Ditto"],
 		changesFrom: "Polybrawn",
+		gen: 8,
+	    creator: "Fiend",
 	},
 	polybrawnw: {
 		num: 42199,
@@ -38390,6 +38433,8 @@ iwik: {
 		color: "Yellow",
 		eggGroups: ["Ditto"],
 		changesFrom: "Polybrawn",
+		gen: 8,
+	    creator: "Fiend",
 	},
 	polybrawni: {
 		num: 42199,
@@ -38405,6 +38450,8 @@ iwik: {
 		color: "Blue",
 		eggGroups: ["Ditto"],
 		changesFrom: "Polybrawn",
+		gen: 8,
+	    creator: "Fiend",
 	},
 	polybrawnp: {
 		num: 42199,
@@ -38420,6 +38467,8 @@ iwik: {
 		color: "Green",
 		eggGroups: ["Ditto"],
 		changesFrom: "Polybrawn",
+		gen: 8,
+	    creator: "Fiend",
 	},
 	polybrawnk: {
 		num: 42199,
@@ -38435,6 +38484,8 @@ iwik: {
 		color: "Pink",
 		eggGroups: ["Ditto"],
 		changesFrom: "Polybrawn",
+		gen: 8,
+	    creator: "Fiend",
 	},
 	katir: {
 		num: 42241,
@@ -50955,7 +51006,7 @@ curdiscope: {
 		color: "Brown",
 		eggGroups: ["Mineral", "Dragon"],
 		gen: 0,
-		creator: "C3ll10u5",
+		creator: "Spicdex",
 	},
 	vermingio: {
 		num: -42008,
@@ -50968,7 +51019,7 @@ curdiscope: {
 		weightkg: 0.6,
 		color: "Yellow",
 		eggGroups: ["Field"],
-		creator: "hell if i know",
+		creator: "Clown",
 	},
 	rootchew: {
 		num: 42171,
@@ -50982,6 +51033,8 @@ curdiscope: {
 		color: "Brown",
 		evos: ["Toofgrew", "Hognaw"],
 		eggGroups: ["Field"],
+		gen: 8,
+		creator: "Zac",
 	},
 	toofgrew: {
 		num: 42169,
@@ -50997,6 +51050,8 @@ curdiscope: {
 		evoType: "useItem",
 		evoItem: "Leaf Stone",
 		eggGroups: ["Field"],
+		gen: 8,
+		creator: "Zac",
 	},
 	hognaw: {
 		num: 42170,
@@ -51011,6 +51066,8 @@ curdiscope: {
 		prevo: "Rootchew",
 		evoLevel: 40,
 		eggGroups: ["Field"],
+		gen: 8,
+		creator: "Zac",
 	},
 	ointmite: {
 		num: -42011,
