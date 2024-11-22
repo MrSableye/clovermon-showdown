@@ -35311,6 +35311,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		otherFormes: ["Disbeary-Ebil"],
 		formeOrder: ["Disbeary", "Disbeary-Ebil"],
 		gen: 8,
+		creator: "Zac",
 	},
 	disbearyebil: {
 		num: 42031,
@@ -35328,6 +35329,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		requiredAbility: "Temperamental",
 		battleOnly: "Disbeary",
 		gen: 8,
+		creator: "Zac",
 	},
 	eccosmic: {
 		num: 42052,
@@ -35827,6 +35829,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Hazelnaut"],
 		eggGroups: ["Grass", "Fairy"],
 		gen: 8,
+		creator: "Zac/Genocity",
 	},
 	hazelnaut: {
 		num: 42002,
@@ -35843,6 +35846,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Ginocchio"],
 		eggGroups: ["Grass", "Fairy"],
 		gen: 8,
+		creator: "Zac/Genocity",
 	},
 	ginocchio: {
 		num: 42003,
@@ -35858,6 +35862,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 36,
 		eggGroups: ["Grass", "Fairy"],
 		gen: 8,
+		creator: "Zac/Genocity",
 	},
 	magmata: {
 		num: 42004,
@@ -35872,6 +35877,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Delava"],
 		eggGroups: ["Monster", "Dragon"],
 		gen: 8,
+		creator: "Zac",
 	},
 	delava: {
 		num: 42005,
@@ -35888,6 +35894,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Salezerker"],
 		eggGroups: ["Monster", "Dragon"],
 		gen: 8,
+		creator: "Zac/GML",
 	},
 	salezerker: {
 		num: 42006,
@@ -35903,6 +35910,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 36,
 		eggGroups: ["Monster", "Dragon"],
 		gen: 8,
+		creator: "Zac",
 	},
 	frudge: {
 		num: 42007,
@@ -35917,6 +35925,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Aquaos"],
 		eggGroups: ["Amorphous"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	aquaos: {
 		num: 42008,
@@ -35933,6 +35942,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Lemirethun"],
 		eggGroups: ["Amorphous"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	lemirethun: {
 		num: 42009,
@@ -35948,6 +35958,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 36,
 		eggGroups: ["Amorphous"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	venireal: {
 		num: 42092,
@@ -36064,6 +36075,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Mogeria"],
 		eggGroups: ["Grass"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	mogeria: {
 		num: 42034,
@@ -36080,6 +36092,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoMove: "Petal Dance",
 		eggGroups: ["Grass"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	hamstatic: {
 		num: 42029,
@@ -36094,6 +36107,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Ampstar"],
 		eggGroups: ["Field"],
 		gen: 8,
+		creator: "Spectralized/Emilight",
 	},
 	ampstar: {
 		num: 42030,
@@ -36109,6 +36123,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 17,
 		eggGroups: ["Field"],
 		gen: 8,
+		creator: "Spectralized/Emilight",
 	},
 	hyduck: {
 		num: 42026,
@@ -36182,6 +36197,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 37,
 		eggGroups: ["Bug", "Monster"],
 		gen: 8,
+		creator: "Gojira/Emilight",
 	},
 	nyanonite: {
 		num: 42143,
@@ -36311,6 +36327,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Grumpoon"],
 		eggGroups: ["Bug", "Field"],
 		gen: 8,
+		creator: "Zac",
 	},
 	grumpoon: {
 		num: 42024,
@@ -36327,6 +36344,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Konekoth"],
 		eggGroups: ["Bug", "Field"],
 		gen: 8,
+		creator: "Zac",
 	},
 	konekoth: {
 		num: 42025,
@@ -36342,6 +36360,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoType: "levelFriendship",
 		eggGroups: ["Bug", "Field"],
 		gen: 8,
+		creator: "Zac",
 	},
 	drattel: {
 		num: 42090,
@@ -36501,6 +36520,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Konglide"],
 		eggGroups: ["Human-Like", "Field"],
 		gen: 8,
+		creator: "Zac",
 	},
 	konglide: {
 		num: 42079,
@@ -36517,6 +36537,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Yokite"],
 		eggGroups: ["Human-Like", "Field"],
 		gen: 8,
+		creator: "Zac",
 	},
 	yokite: {
 		num: 42080,
@@ -36532,6 +36553,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 37,
 		eggGroups: ["Human-Like", "Field"],
 		gen: 8,
+		creator: "Zac",
 	},
 	doomsday: {
 		num: 42152,
@@ -36578,6 +36600,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Disbeary"],
 		eggGroups: ["Field"],
 		gen: 8,
+		creator: "Zac",
 	    },
 	burnugget: {
 		num: 42178,
@@ -38085,6 +38108,7 @@ iwik: {
 	   evos: ["Whipscuffle"],
 	   eggGroups: ["Bug", "Monster"],
 	   gen: 8,
+	   creator: "Zac",
 	},
 	whipscuffle: {
 	   num: 42186,
@@ -38101,6 +38125,7 @@ iwik: {
 	   evos: ["Whipsicuffs"],
 	   eggGroups: ["Bug", "Monster"],
 	   gen: 8,
+	   creator: "Zac",
 	},
 	moblin: {
 	   num: 42187,
