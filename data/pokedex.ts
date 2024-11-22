@@ -34801,6 +34801,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Naughtycoot"],
 		eggGroups: ["Field"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	naughtycoot: {
 		num: 42016,
@@ -34816,6 +34817,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 34,
 		eggGroups: ["Field"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	moyalith: {
 		num: 42100,
@@ -34951,6 +34953,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		otherFormes: ["Skubmarine-Anti"],
 		formeOrder: ["Skubmarine", "Skubmarine-Anti"],
 		gen: 8,
+		creator: "CAPSLOCK/Genocity",
 	},
 	skubmarineanti: {
 		num: 42011,
@@ -34969,6 +34972,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoCondition: "Level up without holding a Skub after level 30",
 		eggGroups: ["Water 2"],
 		gen: 8,
+		creator: "CAPSLOCK/Genocity",
 	},
 	dollghost: {
 		num: 42050,
@@ -35150,6 +35154,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 29,
 		eggGroups: ["Grass"],
 		gen: 8,
+		creator: "Fiend/Zac",
 	},
 	mamini: {
 		num: 42115,
@@ -35206,6 +35211,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Erochre", "Pillaia","Geomortus"],
 		eggGroups: ["Mineral"],
 		gen: 8,
+		creator: "Fiend/Genocity",
 	},
 	erochre: {
 		num: 42038,
@@ -35222,6 +35228,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Soft Sand",
 		eggGroups: ["Mineral"],
 		gen: 8,
+		creator: "Fiend/Genocity",
 	},
 	pillaia: {
 		num: 42037,
@@ -35238,6 +35245,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Miracle Seed",
 		eggGroups: ["Mineral"],
 		gen: 8,
+		creator: "Fiend/Genocity",
 	},
 	canamaple: {
 		num: 42039,
@@ -35397,6 +35405,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Picantero"],
 		eggGroups: ["Grass", "Amorphous"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	picantero: {
 		num: 42018,
@@ -35413,6 +35422,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Sherifuego"],
 		eggGroups: ["Grass", "Amorphous"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	sherifuego: {
 		num: 42019,
@@ -35428,6 +35438,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 40,
 		eggGroups: ["Grass", "Amorphous"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	voliath: {
 		num: 42094,
@@ -35530,6 +35541,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 2,
 		color: "Gray",
 		eggGroups: ["Field"],
+		gen: 8,
+		creator: "AbyssalLeviathan/Genocity",
 		otherFormes: ["Jermin-Swarm"],
 		formeOrder: ["Jermin", "Jermin-Swarm"],
 	},
@@ -35545,6 +35558,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 200,
 		color: "Gray",
 		eggGroups: ["Field"],
+		gen: 8,
+		creator: "AbyssalLeviathan/Genocity",
 		requiredAbility: "Swarming",
 		battleOnly: "Jermin",
 	},
@@ -35802,6 +35817,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 34,
 		eggGroups: ["Field"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	tarquail: {
 		num: 42051,
@@ -36298,6 +36314,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Bug"],
 		gen: 8,
+		creator: "Abel/Zac",
 	},
 	flarhea: {
 		num: 42035,
@@ -36313,6 +36330,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 37,
 		eggGroups: ["Flying"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	larvitty: {
 		num: 42023,
@@ -36615,6 +36633,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Flarhea"],
 		eggGroups: ["Flying"],
 		gen: 8,
+		creator: "Fiend",
 	    },
 	shroomag: {
 		num: 42177,
@@ -36629,6 +36648,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Fungnet"],
 		eggGroups: ["Grass"],
 		gen: 8,
+		creator: "Karma",
 	    },
 	skuba: {
 		num: 42176,
@@ -36646,6 +36666,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		otherFormes: ["Skuba-Anti"],
 		formeOrder: ["Skuba", "Skuba-Anti"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	skubaanti: {
 		num: 42176,
@@ -36662,6 +36683,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Skubmarine-Anti"],
 		eggGroups: ["Water 2"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	turtini: {
 	        num: 42175,
@@ -38260,6 +38282,7 @@ iwik: {
 	   evos: ["Equuan"],
 	   eggGroups: ["Field"],
 	   gen: 8,
+	   creator: "Frozen Seraphim",
 	},
 	poltire: {
 	   num: 42196,
