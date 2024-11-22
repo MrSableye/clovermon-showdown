@@ -34298,6 +34298,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 30,
 		eggGroups: ["Water 1", "Field"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	semmush: {
 		num: 42120,
@@ -34505,6 +34506,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Krackodemon", "Krackowalker", "Susko", "Shroomko", "Krakenwalker"],
 		eggGroups: ["Monster", "Amorphous"],
 		gen: 8,
+		creator: "Arsej",
 		tags: ["Krackokind"],
 	},
 	krackodemon: {
@@ -34522,6 +34524,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Thunder Stone",
 		eggGroups: ["Monster", "Amorphous"],
 		gen: 8,
+		creator: "Arsej/Fiend/Genocity",
 		tags: ["Krackokind"],
 	},
 	dubsnake: {
@@ -34607,6 +34610,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 31,
 		eggGroups: ["Field"],
 		gen: 8,
+		creator: "Spectralized/Genocity",
 	},
 	korokami: {
 		num: 42048,
@@ -34697,6 +34701,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 30,
 		eggGroups: ["Water 3"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	ankhira: {
 		num: 42144,
@@ -34861,6 +34866,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 38,
 		eggGroups: ["Monster", "Amorphous"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	indignifly: {
 		num: 42126,
@@ -35378,6 +35384,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Gray",
 		eggGroups: ["Flying", "Mineral"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	cyclonian: {
 		num: 42045,
@@ -35391,6 +35398,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Purple",
 		eggGroups: ["Amorphous", "Mineral"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	frijolero: {
 		num: 42017,
@@ -36154,6 +36162,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Bluduck", "Platylics"],
 		eggGroups: ["Water 1", "Field"],
 		gen: 8,
+		creator: "Zac",
 	},
 	bluduck: {
 		num: 42027,
@@ -36169,6 +36178,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 33,
 		eggGroups: ["Water 1", "Field"],
 		gen: 8,
+		creator: "Zac",
 	},
 	platylics: {
 		num: 42028,
@@ -36185,6 +36195,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Moon Stone",
 		eggGroups: ["Water 1", "Field"],
 		gen: 8,
+		creator: "Zac",
 	},
 	impfection: {
 		num: 42110,
@@ -36423,6 +36434,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 28,
 		eggGroups: ["Bug"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	yuukiino: {
 		num: 42076,
@@ -36698,6 +36710,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	        evos: ["Turturret"],
 	        eggGroups: ["Field", "Water 1"],
 	        gen: 8,
+			creator: "Fiend",
 	},
 	mimikrab: {
 	   num: 42174,
@@ -36712,6 +36725,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   evos: ["Spycrab"],
 	   eggGroups: ["Field", "Water 1"],
 	   gen: 8,
+	   creator: "Frozen Seraphim",
 	},
 	pascal: {
 	   num: 42173,
@@ -36867,6 +36881,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   evos: ["Blubbastard", "Slub"],
 	   eggGroups: ["Undiscovered"],
 	   gen: 8,
+	   creator: "Fiend",
 	},
 	blubbastard: {
 	   num: -8666,
@@ -36883,6 +36898,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   evoItem: "Water Stone",
 	   eggGroups: ["Undiscovered"],
 	   gen: 8,
+	   creator: "Fiend",
 	},
 	devante: {
 		num: -42668,
@@ -38102,6 +38118,7 @@ iwik: {
 	   evos: ["Cheesetah"],
 	   eggGroups: ["Monster", "Field"],
 	   gen: 8,
+	   creator: "Sylph",
 	},
 	triderling: {
 	   num: 42184,
@@ -38116,6 +38133,7 @@ iwik: {
 	   evos: ["Tarantagon"],
 	   eggGroups: ["Bug"],
 	   gen: 8,
+	   creator: "Sylph",
 	},
 	whimple: {
 	   num: 42185,
@@ -38252,6 +38270,7 @@ iwik: {
 	   evos: ["Ramboom"],
 	   eggGroups: ["Grass"],
 	   gen: 8,
+	   creator: "Yan",
 	},
 	ramboom: {
 	   num: 42194,
@@ -38268,6 +38287,7 @@ iwik: {
 	   evos: ["Vinebomb", "Explovine"],
 	   eggGroups: ["Grass"],
 	   gen: 8,
+	   creator: "Corkie",
 	},
 	juankey: {
 	   num: 42195,
@@ -38297,6 +38317,7 @@ iwik: {
 	   evos: ["Junkgeist"],
 	   eggGroups: ["Monster", "Amorphous"],
 	   gen: 8,
+	   creator: "Fiend",
 	},
 	primitool: {
 	   num: 42197,
@@ -49492,6 +49513,8 @@ curdiscope: {
 		evoType: "useItem",
 		evoItem: "Fire Stone",
 		eggGroups: ["Grass"],
+		gen: 8,
+		creator: "Corkie/Sylph",
 	},
 	fucker: {
 		num: 42165,
