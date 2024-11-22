@@ -34139,6 +34139,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Kumataro"],
 		eggGroups: ["Human-Like", "Field"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	kumataro: {
 		num: 42054,
@@ -34155,6 +34156,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Sun Stone",
 		eggGroups: ["Human-Like", "Field"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	bulbfrog: {
 		num: 42118,
@@ -34197,6 +34199,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Yellow",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Metomb",
 	},
 	regicide: {
 		num: 42128,
@@ -34210,6 +34213,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Metomb",
 	},
 	ballboa: {
 		num: 42119,
@@ -34253,6 +34257,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Water 1", "Dragon"],
 		gen: 8,
+		creator: "Karma",
 	},
 	reveloros: {
 		num: 42157,
@@ -34269,6 +34274,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Water 1", "Dragon"],
 		gen: 8,
+		creator: "Karma",
 	},
 	virtuita: {
 		num: 42158,
@@ -34347,6 +34353,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Martin",
 	},
 	loituma: {
 		num: 42134,
@@ -34360,6 +34367,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Martin",
 	},
 	ignifatu: {
 		num: 42135,
@@ -34373,6 +34381,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Martin",
 	},
 	spenjbab: {
 		num: 42136,
@@ -34386,6 +34395,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Yellow",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Martin",
 	},
 	gigapuddi: {
 		num: 42137,
@@ -34399,6 +34409,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Martin",
 	},
 	empidae: {
 		num: 42138,
@@ -34412,6 +34423,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Yellow",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Zac",
 	},
 	phantorney: {
 		num: 42139,
@@ -34425,6 +34437,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	cirnumiru: {
 		num: 42140,
@@ -34438,6 +34451,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Corkie",
 	},
 	seraphill: {
 		num: 42141,
@@ -34451,6 +34465,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Yellow",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Zac",
 	},
 	shiribiko: {
 		num: 42142,
@@ -34464,6 +34479,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Corkie",
 	},
 	simionach: {
 		num: 42046,
@@ -34576,6 +34592,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Zac/Genocity",
 	},
 	galvadeux: {
 		num: 42131,
@@ -34589,6 +34606,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Yellow",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Zac/Genocity",
 	},
 	pyrotrois: {
 		num: 42132,
@@ -34602,6 +34620,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	cheesetah: {
 		num: 42070,
@@ -34648,6 +34667,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Cocken"],
 		eggGroups: ["Dragon", "Flying"],
 		gen: 8,
+		creator: "Abel",
 	},
 	cocken: {
 		num: 42102,
@@ -34665,6 +34685,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 		otherFormes: ["Cocken-Mega"],
 		formeOrder: ["Cocken", "Cocken-Mega"],
+		creator: "Abel",
 	},
 	cockenmega: {
 		num: 42102,
@@ -34681,6 +34702,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Dragon", "Flying"],
 		gen: 8,
 		requiredMove: "Ancient Power",
+		creator: "Abel",
 	},
 	regigigone: {
 		num: 42129,
@@ -34694,6 +34716,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Zac/The 1054",
 	},
 	spycrab: {
 		num: 42043,
@@ -34724,6 +34747,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Ankhpu"],
 		eggGroups: ["Amorphous", "Mineral"],
 		gen: 8,
+		creator: "Zac",
 	},
 	ankhpu: {
 		num: 42145,
@@ -34740,6 +34764,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Ankhurah"],
 		eggGroups: ["Amorphous", "Mineral"],
 		gen: 8,
+		creator: "Zac",
 	},
 	ankhurah: {
 		num: 42146,
@@ -34755,6 +34780,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 65,
 		eggGroups: ["Amorphous", "Mineral"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	squithee: {
 		num: 42147,
@@ -34769,6 +34795,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Goblazer"],
 		eggGroups: ["Human-Like", "Fairy"],
 		gen: 8,
+		creator: "Abel/AbyssalLeviathan",
 	},
 	goblazer: {
 		num: 42148,
@@ -34785,6 +34812,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Warghork"],
 		eggGroups: ["Human-Like", "Fairy"],
 		gen: 8,
+		creator: "Zac/AbyssalLeviathan",
 	},
 	warghork: {
 		num: 42149,
@@ -34800,6 +34828,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 65,
 		eggGroups: ["Human-Like", "Fairy"],
 		gen: 8,
+		creator: "Zac/AbyssalLeviathan",
 	},
 	bandicute: {
 		num: 42015,
@@ -34844,6 +34873,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Gray",
 		eggGroups: ["Mineral"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	molterra: {
 		num: 42106,
@@ -34859,6 +34889,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 35,
 		eggGroups: ["Mineral", "Amorphous"],
 		gen: 8,
+		creator: "Zac",
 	},
 	junkgeist: {
 		num: 42111,
@@ -34888,6 +34919,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		eggGroups: ["Bug"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	bubbasaur: {
 		num: 42085,
@@ -35117,6 +35149,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Selaghast", "Karkutlass"],
 		eggGroups: ["Amorphous", "Water 2"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	selaghast: {
 		num: 42013,
@@ -35133,6 +35166,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Dusk Stone",
 		eggGroups: ["Amorphous", "Water 2"],
 		gen: 8,
+		creator: "Abel/BEAST-_-/Arsej",
 	},
 	karkutlass: {
 		num: 42014,
@@ -35149,6 +35183,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Water Stone",
 		eggGroups: ["Amorphous", "Water 2"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	mafiadon: {
 		num: 42095,
@@ -35332,6 +35367,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Gray",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Jet2012",
 	},
 	disbeary: {
 		num: 42031,
@@ -35395,6 +35431,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		eggGroups: ["Water 2", "Field"],
 		gen: 8,
+		creator: "Genocity",
 	},
 	weatherbane: {
 		num: 42044,
@@ -35615,6 +35652,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Dragon Scale",
 		eggGroups: ["Flying"],
 		gen: 8,
+		creator: "AbyssalLeviathan",
 	},
 	flubunny: {
 		num: 42061,
@@ -35772,6 +35810,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Gray",
 		eggGroups: ["Amorphous"],
 		gen: 8,
+		creator: "Arsej",
 	},
 	sablini: {
 		num: 42151,
@@ -35785,6 +35824,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Gray",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Zac",
 	},
 	gargarramer: {
 		num: 42123,
@@ -35880,6 +35920,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Flying", "Amorphous"],
 		gen: 8,
+		creator: "GML",
 	},
 	maplage: {
 		num: 42001,
@@ -36038,6 +36079,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Apocamise"],
 		eggGroups: ["Amorphous"],
 		gen: 8,
+		creator: "Emilight",
 	},
 	apocamise: {
 		num: 42093,
@@ -36054,6 +36096,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Dusk Stone",
 		eggGroups: ["Amorphous"],
 		gen: 8,
+		creator: "Emilight",
 	},
 	"3dawg": {
 		num: 42089,
@@ -36096,6 +36139,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Serpotine"],
 		eggGroups: ["Dragon", "Amorphous"],
 		gen: 8,
+		creator: "Spectralized/Toad/Zac",
 	},
 	serpotine: {
 		num: 42056,
@@ -36112,6 +36156,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Tsemani"],
 		eggGroups: ["Dragon", "Amorphous"],
 		gen: 8,
+		creator: "Spectralized/Toad/Zac",
 	},
 	tsemani: {
 		num: 42057,
@@ -36127,6 +36172,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 42,
 		eggGroups: ["Dragon", "Amorphous"],
 		gen: 8,
+		creator: "Spectralized/Toad/Zac",
 	},
 	floribel: {
 		num: 42033,
@@ -36281,6 +36327,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Pink",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Emilight/Spectralized",
 	},
 	primiteve: {
 		num: 42103,
@@ -36296,6 +36343,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 40,
 		eggGroups: ["Mineral", "Human-Like"],
 		gen: 8,
+		creator: "Sylph",
 	},
 	tokoyaki: {
 		num: 42104,
@@ -36341,6 +36389,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Draklown"],
 		eggGroups: ["Dragon", "Amorphous"],
 		gen: 8,
+		creator: "Abel",
 	},
 	draklown: {
 		num: 42099,
@@ -36357,6 +36406,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
         evoItem: "Dragon Scale",
 		eggGroups: ["Dragon", "Amorphous"],
 		gen: 8,
+		creator: "Abel",
 	},
 	arachnote: {
 		num: 42041,
@@ -36449,6 +36499,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Zillichina"],
 		eggGroups: ["Dragon", "Mineral"],
 		gen: 8,
+		creator: "Emilight",
 	},
 	zillichina: {
 		num: 42091,
@@ -36464,6 +36515,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoType: "levelFriendship",
 		eggGroups: ["Dragon", "Mineral"],
 		gen: 8,
+		creator: "Emilight",
 	},
 	tarantagon: {
 		num: 42072,
@@ -36525,6 +36577,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Xeninter"],
 		eggGroups: ["Monster", "Dragon"],
 		gen: 8,
+		creator: "Zac",
 	},
 	xeninter: {
 		num: 42084,
@@ -36541,6 +36594,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Moon Stone",
 		eggGroups: ["Monster", "Dragon"],
 		gen: 8,
+		creator: "Corkie",
 	},
 	borkosmos: {
 		num: 42081,
@@ -36555,6 +36609,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Skallaxy"],
 		eggGroups: ["Amorphous", "Field"],
 		gen: 8,
+		creator: "Frozen Seraphim",
 	},
 	skallaxy: {
 		num: 42082,
@@ -36570,6 +36625,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 43,
 		eggGroups: ["Amorphous", "Field"],
 		gen: 8,
+		creator: "Frozen Seraphim",
 	},
 	wattitude: {
 		num: 42047,
@@ -36647,6 +36703,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		otherFormes: ["Doomsday-Revenant"],
 		formeOrder: ["Doomsday", "Doomsday-Revenant"],
 		gen: 8,
+		creator: "Doomsday is a Pokegod.",
 	},
 	doomsdayrevenant: {
 		num: 42152,
@@ -36832,6 +36889,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   evos: ["Eccosmic"],
 	   eggGroups: ["Field", "Water 2"],
 	   gen: 8,
+	   creator: "Zac",
 	},
 	doomter: {
 	   num: 42181,
@@ -36972,6 +37030,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		eggGroups: ["Fairy", "Field"],
 		gen: 8,
+		creator: "Bugs",
 	 },
 	 vergilion: {
 		num: -42669,
@@ -36985,6 +37044,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Fairy", "Field"],
 		gen: 8,
+		creator: "Bugs",
 	 },
 	 dugwalker: {
 		num: -42700,
@@ -37221,6 +37281,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		eggGroups: ["Mineral"],
 		gen: 8,
+		creator: "Zac",
 	},
 	costrike: { // that one guy who reflects physical
 		num: -8230,
@@ -37237,6 +37298,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		eggGroups: ["Mineral"],
 		gen: 8,
+		creator: "Zac",
 	},
 	hookling: {
 		num: -8232,
@@ -37337,6 +37399,7 @@ epilate: {
 	color: "Red",
 	eggGroups: ["Amorphous", "Flying"],
 	gen: 8,
+	creator: "Karma",
 },
 doomsay: {
 	num: -8238,
@@ -37350,6 +37413,7 @@ doomsay: {
 	color: "Brown",
 	eggGroups: ["Monster"],
 	gen: 8,
+	creator: "Doomsay is a Pokegod.",
 },
 arctiglobe: {
 	num: -8239,
@@ -37465,6 +37529,7 @@ epipheror: {
 		evos: ["Essention"],
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Fiend/Zac",
 	},
 	essention: {
 		num: -8245,
@@ -37481,6 +37546,7 @@ epipheror: {
 		evos: ["Termagnius"],
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Fiend/Zac",
 	},
 	termagnius: {
 		num: -8246,
@@ -37496,6 +37562,7 @@ epipheror: {
 		evoLevel: 66,
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Fiend/Zac",
 	},
 	firered: {
 		num: -8247,
@@ -37864,6 +37931,7 @@ piurette: {
 	color: "Brown",
 	eggGroups: ["Amorphous"],
 	gen: 8,
+	creator: "Zac",
 },
 crolord: {
 	num: -8208,
@@ -38413,6 +38481,7 @@ iwik: {
 	   evos: ["Primiteve"],
 	   eggGroups: ["Mineral", "Human-Like"],
 	   gen: 8,
+	   creator: "Sylph",
 	},
 	moltama: {
 	   num: 42198,
@@ -38427,6 +38496,7 @@ iwik: {
 	   evos: ["Molterra"],
 	   eggGroups: ["Mineral", "Amorphous"],
 	   gen: 8,
+	   creator: "Zac",
 	},
 	polybrawn: {
 		num: 42199,
@@ -49658,6 +49728,7 @@ curdiscope: {
 		weightkg: 64,
 		color: "Blue",
 		eggGroups: ["Amorphous", "Human-Like"],
+		creator: "Genocity",
 	},
 	sporestool: {
 		num: 42167,
