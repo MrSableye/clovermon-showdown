@@ -2540,6 +2540,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	adentity: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	tamanaut: {
 		tier: "Illegal",
 		isNonstandard: "Future",
