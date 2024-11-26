@@ -47172,6 +47172,35 @@ blobbosdreaming: {
 		],
 		gen: 8,
 	},
+	blobbosbasilisk: {
+		num: 69132,
+		name: "Blobbos-Basilisk",
+		baseSpecies: "Blobbos",
+		forme: "Basilisk",
+		types: ["Dragon", "Steel"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 87,
+			atk: 127,
+			def: 124,
+			spa: 110,
+			spd: 41,
+			spe: 51,
+		},
+		abilities: {
+			0: "Keen Eye",
+                        1: "Perish Touch",
+                        H: "Kingly Majesty",
+                        S: "Marvel Scale",
+		},
+		heightm: 2.7,
+		weightkg: 598.3,
+		color: "Blue",
+		eggGroups: [
+			"Dragon", "Water 3"
+		],
+		gen: 8,
+	},s
 	infected: {
 		num: 42999,
 		name: "Infected",
