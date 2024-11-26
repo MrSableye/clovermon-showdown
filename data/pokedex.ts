@@ -47200,7 +47200,7 @@ blobbosdreaming: {
 			"Dragon", "Water 3"
 		],
 		gen: 8,
-	},s
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
