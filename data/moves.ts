@@ -25809,6 +25809,26 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Bug",
 		isNonstandard: "Future",
 	},
+	mirrorcannon: {
+		num: 354,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Mirror Cannon",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, bullet: 1},
+		self: {
+			boosts: {
+				accuracy: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+		contestType: "Clever",
+	},
 	mirageveil: {
 		accuracy: true,
 		basePower: 0,
