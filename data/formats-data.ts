@@ -10355,6 +10355,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbostraffic: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosfridge: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscrimson: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmadoka: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	dunebug: {
 		tier: "Illegal",
 		isNonstandard: "Future",
