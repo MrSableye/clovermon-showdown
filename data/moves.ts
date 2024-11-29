@@ -36765,7 +36765,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Encrypt",
 		pp: 10,
 		priority: 4,
-		flags: {},
+		volatileStatus: 'protect',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		flags: {noassist: 1, failcopycat: 1},
 		secondary: null,
 		target: "self",
 		type: "Cyber",
@@ -49155,7 +49162,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -50175,7 +50189,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Steel",
@@ -57912,9 +57933,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
-		boosts: {
-			accuracy: 1,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					accuracy: 1,
+				},
+			},
 		},
 		target: "normal",
 		type: "Steel",
@@ -61111,6 +61136,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {pulse: 1},
+		onHitField(target, source) {
+			const targets: Pokemon[] = [];
+			let anyAirborne = false;
+			for (const pokemon of this.getAllActive()) {
+				
+				if (pokemon.hasType('Grass')) {
+					// This move affects every grounded Grass-type Pokemon in play.
+					targets.push(pokemon);
+				}
+			}
+			if (!targets.length) return false; // Fails when there are no grounded Grass types or airborne Pokemon
+			for (const pokemon of targets) {
+				this.boost({atk: 1, spa: 1}, pokemon, source);
+			}
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Bug",
@@ -68457,7 +68497,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		boosts: {
-			def: 2,
+			spd: 2,
 		},
 		secondary: null,
 		target: "self",
@@ -68473,7 +68513,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Glass",
 		isNonstandard: "Future",
@@ -74588,7 +74631,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Plastic",
 		isNonstandard: "Future",
@@ -76637,6 +76683,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (['hail', 'snow'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -76838,6 +76889,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		onBasePower(basePower, pokemon) {
+			if (['hail', 'snow'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -78618,7 +78674,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'tox',
+		},
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -80328,7 +80387,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -80641,7 +80703,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Fairy') return 1;
+		},
+		secondary: {
+			chance: 15,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Dragon",
 		isNonstandard: "Future",
@@ -81629,15 +81697,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (attacker.gender && defender.gender) {
 				if (attacker.gender === defender.gender) {
 					this.debug('Rivalry boost');
-					return this.chainModify(1.75);
+					return this.chainModify(0.75);
 				} else {
 					this.debug('Rivalry weaken');
-					return this.chainModify(0.75);
+					return this.chainModify(1.75);
 				}
 			}
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (this.checkMoveMakesContact(move, source, target)) {
+			 {
 				if (this.randomChance(3, 10)) {
 					source.addVolatile('attract', this.effectState.target);
 				}
@@ -85147,6 +85215,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, west: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Dark') return 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Tech",
@@ -88264,7 +88335,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Shadow",
 		isNonstandard: "Future",
@@ -90308,6 +90382,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Dark') return 1;
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -90422,6 +90499,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Dark') return 1;
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Sound",
@@ -90968,6 +91048,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Dark') return 1;
+		},
 		target: "allAdjacentFoes",
 		type: "Divine",
 		isNonstandard: "Future",
