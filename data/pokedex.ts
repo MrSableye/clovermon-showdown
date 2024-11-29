@@ -47284,6 +47284,35 @@ blobbosfridge: {
 		],
 		gen: 8,
 	},
+	blobbosmadoka: {
+		num: 69132,
+		name: "Blobbos-Madoka",
+		baseSpecies: "Blobbos",
+		forme: "Madoka",
+		types: ["Fairy", "Psychic"],
+		gender: "F",
+		baseStats: {
+			hp: 83,
+			atk: 62,
+			def: 79,
+			spa: 124,
+			spd: 82,
+			spe: 100,
+		},
+		abilities: {
+			0: "Misty Surge",
+                        1: "Telepathy",
+                        H: "Wonderland", 
+                        S: "Magical Realm",
+		},
+		heightm: 0.5,
+		weightkg: 7.4,
+		color: "Pink",
+		eggGroups: [
+			"Fairy"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
