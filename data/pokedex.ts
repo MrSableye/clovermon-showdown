@@ -51567,7 +51567,21 @@ curdiscope: {
 		gen: 8,
 		creator: "NeyOkaou",
 	},
-jahl: {
+	dredgod: {
+		num: -8611,
+		name: "Dredgod",
+		types: ["Ghost", "Dragon"],
+		gender: "N",
+		baseStats: {hp: 66, atk: 108, def: 70, spa: 80, spd: 61, spe: 125},
+		abilities: {0: "Suddenly", 1: "Unnerve", H: "Tough Claws", S: "Shadow Tag"},
+		heightm: 1,
+		weightkg: 7,
+		color: "Red",
+		eggGroups: ["Amorphous", "Monster"],
+		gen: 8,
+		creator: "Engineer Gameplays",
+	},
+	jahl: {
 		num: -8608,
 		name: "Jahl",
 		types: ["???", "Ground"],

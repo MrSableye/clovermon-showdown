@@ -11179,6 +11179,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",	
 	},
+	dredgod: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
 	amalgum: {
 		tier: "Illegal",
 		isNonstandard: "Future",
