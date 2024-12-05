@@ -2871,16 +2871,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-		daemonix: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-		achaethena: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 		geomortus: {
 		inherit: true,
 		isNonstandard: null,

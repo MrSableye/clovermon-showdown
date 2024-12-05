@@ -7678,10 +7678,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				target.formeChange('Arctiglobe' + arctiglobeform, this.effect, true, '[msg]');
 				this.effectState.busted = true;
 			}
-			if (!move.damage && !move.damageCallback && target.getMoveHitData(move).typeMod == 0) {
-				if (target.baseSpecies.baseSpecies !== 'Arctiglobe' || target.transformed) return;
-				return this.chainModify(0.5);
-			}
 		},
 		onUpdate(pokemon) {
 			if (['arctiglobe'].includes(pokemon.species.id) && this.effectState.busted) {
