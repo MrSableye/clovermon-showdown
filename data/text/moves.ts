@@ -7857,7 +7857,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	tombstoner: {
 		name: "Tombstoner",
 		desc: "The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
-		shortDesc: "The user faints, uses user's Def stat as Atk.",
+		shortDesc: "The user faints upon use. Uses user's Def stat as Atk.",
 	},
 	fruitjuice: {
 		name: "Fruit Juice",
@@ -7867,7 +7867,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	phantomfang: {
 		name: "Phantom Fang",
 		desc: "Has a 20% chance to Curse the target.",
-		shortDesc: "20% to Curse, Lowers the user's Speed by 1.",
+		shortDesc: "20% to Curse. Lowers the user's Speed by 1.",
 	},
 	earthshatter: {
 		name: "Earth Shatter",
@@ -8016,7 +8016,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	turnabout: {
 		name: "Turnabout",
 		desc: "The user swaps all its stat stage changes with the target and switches the Mist, Light Screen, Reflect, Spikes, Safeguard, Tailwind, Toxic Spikes, Stealth Rock, Water Pledge, Fire Pledge, Grass Pledge, Sticky Web, Aurora Veil, G-Max Steelsurge, G-Max Cannonade, G-Max Vine Lash, and G-Max Wildfire effects from the user's side to the opposing side and vice versa.",
-		shortDesc: "Swaps all stat changes and hazards with opponent.",
+		shortDesc: "Swaps all stat changes, field effects and hazards with opponent.",
 	},
 	memepunch: {
 		name: "Meme Punch",
