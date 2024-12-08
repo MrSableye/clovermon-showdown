@@ -22,6 +22,10 @@ export const AbilitiesText: {[k: string]: ModdedAbilityText} = {
 		inherit: true,
 		shortDesc: "Prevents Accuracy from being lowered by foe or self. Ignores evasiveness.",
 	},
+	transistor: {
+		inherit: true,
+		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using an Electric-type attack.",
+	},
 	ironfist: {
 		inherit: true,
 		desc: "This Pokemon's punch-based attacks have 1.2x power.",
