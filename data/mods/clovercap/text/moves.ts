@@ -76,6 +76,11 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		desc: "A random attacking move that is 110 Power or more is selected for use.",
 		shortDesc: "A random attacking move that is 110 Power or more is selected for use.",
 	},
+	meteorhammer: {
+		inherit: true,
+		desc: "Lowers the user's Speed by 1.",
+		shortDesc: "Lowers the user's Speed by 1.",
+	},
 	sleazyspores: {
 		inherit: true,
 		shortDesc: "Lowers Speed of foes by 1 on switch-in. Grass-type Pokemon remove it on switch-in.",
