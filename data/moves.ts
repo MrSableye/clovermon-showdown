@@ -25829,26 +25829,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		contestType: "Clever",
 	},
-	meteorhammer: {
-		num: 359,
-		accuracy: 100,
-		basePower: 100,
-		category: "Physical",
-		isNonstandard: "Future",
-		name: "Meteor Hammer",
-		pp: 10,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		self: {
-			boosts: {
-				spe: -1,
-			},
-		},
-		secondary: null,
-		target: "normal",
-		type: "Rock",
-		contestType: "Tough",
-	},
 	mirageveil: {
 		accuracy: true,
 		basePower: 0,

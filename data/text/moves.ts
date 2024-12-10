@@ -7829,11 +7829,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Lowers the user's Accuracy by 1 stage.",
 		shortDesc: "Lowers the user's Accuracy by 1.",
 	},
-	meteorhammer: {
-		name: "Meteor Hammer",
-		desc: "Lowers the user's Speed by 1 stage.",
-		shortDesc: "Lowers the user's Speed by 1.",
-	},
 	awaken: {
 		name: "Awaken",
 		desc: "Raises the user's Attack, Defense, and Speed by 2 stages. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
