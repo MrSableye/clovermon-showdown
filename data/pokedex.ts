@@ -37434,7 +37434,7 @@ arctiglobefreed: {
 	name: "Arctiglobe-Freed",
 	baseSpecies: "Arctiglobe",
 	forme: "Freed",
-	types: ["Ice"],
+	types: ["Ice", "Dark"],
 	gender: "N",
 	baseStats: {hp: 87, atk: 131, def: 31, spa: 131, spd: 34, spe: 121},
 	abilities: {0: "Frozen Bunker"},
