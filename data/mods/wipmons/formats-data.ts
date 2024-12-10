@@ -2446,4 +2446,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	maysugeki: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

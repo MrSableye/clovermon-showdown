@@ -4,6 +4,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	keeberry: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	marangaberry: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	dracoplate: {
 		inherit: true,
 		isNonstandard: null,
