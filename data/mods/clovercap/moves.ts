@@ -1534,7 +1534,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Normal",
 	},
 	meteorhammer: {
-		num: 359,
+		inherit: true,
+		isNonstandard: null,
 		accuracy: 100,
 		basePower: 100,
 		category: "Physical",

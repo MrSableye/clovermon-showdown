@@ -12771,4 +12771,29 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	maysugeki: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	dredgod: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	shaikle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	carpedian: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	fryzzle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

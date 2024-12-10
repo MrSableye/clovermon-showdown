@@ -49749,6 +49749,20 @@ curdiscope: {
                 gen: 9,
 		creator: "C3ll",
 	},
+	maysugeki: {
+		num: -234,
+		name: "Maysugeki",
+		types: ["Fighting", "Water"],
+                gender: "F",
+		baseStats: {hp: 71, atk: 121, def: 70, spa: 61, spd: 71, spe: 117},
+		abilities: {0: "Swift Swim", 1: "Reckless", H: "Steelworker"},
+		heightm: 2,
+		weightkg: 330.7,
+		color: "Brown",
+		eggGroups: ["Field", "Water 2"], 
+                gen: 9,
+		creator: "C3ll",
+	},
 
 	
 
