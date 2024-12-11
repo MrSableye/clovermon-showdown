@@ -12,6 +12,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mirrorherb: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	dracoplate: {
 		inherit: true,
 		isNonstandard: null,

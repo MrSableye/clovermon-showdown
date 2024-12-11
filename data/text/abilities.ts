@@ -4025,10 +4025,6 @@ malediction: {
 		shortDesc: "Reduces Super Effective moves by 50%.",
 		desc: "Super effective damage taken is halved.",
 	},
-	mothsmajesty: {
-		name: "Moth's Majesty",
-		shortDesc: "Raises highest stat by 1 on switch-in.",
-	},
 	nuclearization: {
 		name: "Nuclearization",
 		shortDesc: "Normal type moves are Super Effective on Poison and Normal types.",
@@ -4062,6 +4058,18 @@ malediction: {
 	surprise: {
 		name: "Surprise!",
 		shortDesc: "If Jakubrik, changes Forme to Active before attacks and Dormant before Enclose.",
+	},
+	almightyidiot: {
+		name: "Almighty Idiot",
+		shortDesc: "Uses Torment and sets up Wonder Room and Magic Room on switch-in.",
+	},
+	selfish: {
+		name: "Selfish",
+		shortDesc: "This Pokemon's attacks that are super effective against the target do 0.7x damage.",
+	},
+	mothsmajesty: {
+		name: "Moth's Majesty",
+		shortDesc: "Raises highest stat by 1 on switch-in.",
 	},
 	inedible: {
 		name: "Inedible",

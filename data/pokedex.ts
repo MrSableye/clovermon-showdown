@@ -46954,7 +46954,7 @@ blobbosspeed: {
 			0: "Shield Dust",
                         1: "Swarm",
                         H: "Compound Eyes",
-                        S: "Wonder Skin",
+                        S: "Moth's Majesty",
 		},
 		heightm: 0.8,
 		weightkg: 34,

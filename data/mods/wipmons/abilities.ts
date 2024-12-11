@@ -170,6 +170,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	almightyidiot: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	selfish: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	surgesurfer: {
 		onModifySpe(spe) {
 			if (this.field.isTerrain('electricterrain')) {

@@ -9386,6 +9386,13 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Sunken Sanity",
 		shortDesc: "100% chance to confuse the target.",
 	},
+	unabletograsp: {
+		name: "Unable to Grasp",
+		shortDesc: "You cannot grasp the true form of this attack!",
+
+		start: "  You cannot grasp the true form of [POKEMON]'s attack!",
+		activate: "  You cannot grasp the true form of [POKEMON]'s attack!",
+	},
 	souldrain: {
 		name: "Soul Drain",
 		shortDesc: "Heals for 50% of damage done to the target. Subtracts 1 PP from the last move the target used.",

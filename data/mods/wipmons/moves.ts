@@ -773,6 +773,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	unabletograsp: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	jetpunch: {
 		inherit: true,
 		isNonstandard: null,
