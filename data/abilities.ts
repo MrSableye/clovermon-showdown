@@ -5624,21 +5624,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onModifyMove(move, pokemon) {
-			if (pokemon.species.id !== 'biteki') return;
-			if (['Ice', 'Psychic'].includes(move.type)) {
-				move.forceSTAB = true;
-			}
-		},
-		onModifyMove(move, pokemon) {
-			if (pokemon.species.id !== 'blobbos-fools') return;
-			if (['Dark', '???'].includes(move.type)) {
-				move.forceSTAB = true;
-			}
-		},
-		onModifyMove(move, pokemon) {
-			if (pokemon.species.id !== 'blobbos-artist') return;
-			if (['Normal', '???'].includes(move.type)) {
-				move.forceSTAB = true;
+			if (pokemon.species.id === 'biteki') {
+				if (['Ice', 'Psychic'].includes(move.type)) {
+					move.forceSTAB = true;
+				}
+			} else if (pokemon.species.id === 'blobbosfools') {
+				if (['Dark', '???'].includes(move.type)) {
+					move.forceSTAB = true;
+				}
+			} else if (pokemon.species.id === 'blobbosartist') {
+				if (['Normal', '???'].includes(move.type)) {
+					move.forceSTAB = true;
+				}
 			}
 		},
 		rating: 2,
