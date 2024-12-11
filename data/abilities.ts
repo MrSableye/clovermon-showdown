@@ -15274,8 +15274,8 @@ malediction: {
 	},
 	mothsmajesty: {
 		onStart(pokemon) {
-			const bestStat = source.getBestStat(true, true);
-				this.boost({[bestStat]: length}, source);
+			const bestStat = pokemon.getBestStat(true, true);
+				this.boost({[bestStat]: length}, pokemon);
 		},
 		name: "Moth's Majesty",
 		rating: 4,
@@ -15422,7 +15422,6 @@ malediction: {
 		num: 6726,
 		isNonstandard: "Future",
 	},
-
 	raservant: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
@@ -15433,18 +15432,16 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-
 	copyandpaste: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('Knight of Owner'), pokemon);
 		},
-		name: "Copy and Paste ",
+		name: "Copy and Paste",
 		rating: 3,
 		num: 422,
 		isNonstandard: "Future",
 	},
-
 	babymonster: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
@@ -15455,7 +15452,6 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-
 	regate: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
@@ -15466,7 +15462,6 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-
 	dezgraça: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
@@ -15477,7 +15472,6 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-
 	firstyou: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
@@ -15488,7 +15482,6 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-
 	saback: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
@@ -15600,6 +15593,4 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-
-
 };
