@@ -640,6 +640,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mothsmajesty: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	ballfetch: {
 		name: "Ball Fetch",
 		onTryHitPriority: 1,

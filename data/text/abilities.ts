@@ -4067,6 +4067,10 @@ malediction: {
 		name: "Selfish",
 		shortDesc: "This Pokemon's attacks that are super effective against the target do 0.7x damage.",
 	},
+	mothsmajesty: {
+		name: "Moth's Majesty",
+		shortDesc: "Raises highest stat by 1 on switch-in.",
+	},
 	inedible: {
 		name: "Inedible",
 		shortDesc: "Fairy type moves are now Bug type and have 1.5x more power.",
