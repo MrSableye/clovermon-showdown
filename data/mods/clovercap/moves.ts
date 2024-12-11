@@ -1539,7 +1539,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		accuracy: 100,
 		basePower: 100,
 		category: "Physical",
-		isNonstandard: "Future",
 		name: "Meteor Hammer",
 		pp: 10,
 		priority: 0,
