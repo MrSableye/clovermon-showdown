@@ -5624,21 +5624,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onModifyMove(move, pokemon) {
-			if (pokemon.species.id !== 'biteki') return;
-			if (['Ice', 'Psychic'].includes(move.type)) {
-				move.forceSTAB = true;
-			}
-		},
-		onModifyMove(move, pokemon) {
-			if (pokemon.species.id !== 'blobbos-fools') return;
-			if (['Dark', '???'].includes(move.type)) {
-				move.forceSTAB = true;
-			}
-		},
-		onModifyMove(move, pokemon) {
-			if (pokemon.species.id !== 'blobbos-artist') return;
-			if (['Normal', '???'].includes(move.type)) {
-				move.forceSTAB = true;
+			if (pokemon.species.id === 'biteki') {
+				if (['Ice', 'Psychic'].includes(move.type)) {
+					move.forceSTAB = true;
+				}
+			} else if (pokemon.species.id === 'blobbosfools') {
+				if (['Dark', '???'].includes(move.type)) {
+					move.forceSTAB = true;
+				}
+			} else if (pokemon.species.id === 'blobbosartist') {
+				if (['Normal', '???'].includes(move.type)) {
+					move.forceSTAB = true;
+				}
 			}
 		},
 		rating: 2,
@@ -7685,7 +7682,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (['arctiglobe'].includes(source.species.id) && this.effectState.busted) {
+			if (['arctiglobe'].includes(source.species.id)) {
 				if (target.getMoveHitData(move).typeMod == 0) {
 					this.debug('Frozen Bunker neutralize');
 					return this.chainModify(0.5);
@@ -15451,7 +15448,6 @@ malediction: {
 		num: 6726,
 		isNonstandard: "Future",
 	},
-
 	raservant: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
@@ -15462,18 +15458,16 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-
 	copyandpaste: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('Knight of Owner'), pokemon);
 		},
-		name: "Copy and Paste ",
+		name: "Copy and Paste",
 		rating: 3,
 		num: 422,
 		isNonstandard: "Future",
 	},
-
 	babymonster: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
@@ -15484,7 +15478,6 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-
 	regate: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
@@ -15495,7 +15488,6 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-
 	dezgraça: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
@@ -15506,7 +15498,6 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-
 	firstyou: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
@@ -15517,7 +15508,6 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-
 	saback: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
@@ -15629,6 +15619,4 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-
-
 };
