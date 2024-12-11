@@ -15275,15 +15275,30 @@ malediction: {
 		num: 22,
 		isNonstandard: "Future",
 	},
-	mothsmajesty: {
-		onStart(pokemon) {
-			const bestStat = source.getBestStat(true, true);
-				this.boost({[bestStat]: length}, source);
+	almightyidiot: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Torment'), pokemon);
 		},
-		name: "Moth's Majesty",
-		rating: 4,
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: Almighty Idiot');
+			this.field.addPseudoWeather('wonderroom');
+			this.field.addPseudoWeather('magicroom');
+		},
+		name: "Almighty Idiot",
+		rating: 3,
+		num: 422,
 		isNonstandard: "Future",
-		num: 234,
+	},
+	selfish: {
+		onModifyDamage(damage, source, target, move) {
+			if (move && target.getMoveHitData(move).typeMod > 0) {
+				return this.chainModify(0.7);
+			}
+		},
+		name: "Selfish",
+		rating: 2.5,
+		isNonstandard: "Future",
 	},
 	mossyexterior: {
 		onTryHit(target, source, move) {
@@ -15339,6 +15354,7 @@ malediction: {
 		num: 176,
 		isNonstandard: "Future",
 	},
+
 	mrshadow: {
 		name: "MR-Shadow",
 		onModifyMove(move) {

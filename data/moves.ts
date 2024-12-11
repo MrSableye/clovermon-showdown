@@ -93201,6 +93201,84 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		contestType: "Cute",
 	},
+	unabletograsp: {
+		accuracy: true,
+		basePower: 50,
+		category: "Special",
+		name: "Unable to Grasp",
+		pp: 64,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		noSketch: true,
+		onHit(target, source) {
+			const numberEffects = 18;
+			const effect: number = this.random(numberEffects);
+			switch (effect) {
+			case 0:
+				target.setStatus('psn', source, this.effect);
+				break;
+			case 1:
+				target.setStatus('brn', source, this.effect);
+				break;
+			case 2:
+				target.setStatus('frz', source, this.effect);
+				break;
+			case 3:
+				target.setStatus('par', source, this.effect);
+				break;
+			case 4:
+				target.addVolatile('confusion', source, this.effect);
+				break;
+			case 5:
+				source.setStatus('psn', source, this.effect);
+				break;
+			case 6:
+				source.setStatus('brn', source, this.effect);
+				break;
+			case 7:
+				source.setStatus('frz', source, this.effect);
+				break;
+			case 8:
+				source.setStatus('par', source, this.effect);
+				break;
+			case 9:
+				source.addVolatile('confusion', source, this.effect);
+				break;
+			case 10:
+				source.faint(source, this.effect);
+				break;
+			case 11:
+				target.faint(source, this.effect);
+				break;
+			case 12:
+				source.addVolatile('taunt', source, this.effect);
+				break;
+			case 13:
+				const terrain = this.sample(['grassyterrain', 'electricterrain', 'mistyterrain', 'psychicterrain']);
+				this.field.setTerrain(terrain, source, this.effect);
+				break;
+			case 14:
+				source.addVolatile('torment', source, this.effect);
+				break;
+			case 15:
+				target.addVolatile('torment', source, this.effect);
+				break;
+			case 16:
+				source.transformInto(target);
+				break;
+			case 17:
+				target.addVolatile('telekinesis');
+				break;
+			case 18:
+				source.addVolatile('telekinesis');
+				break;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "???",
+		isNonstandard: "Future",
+	},
 	mrterrorscreech: {
 		num: 506,
 		accuracy: 100,

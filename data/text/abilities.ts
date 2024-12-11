@@ -4063,6 +4063,14 @@ malediction: {
 		name: "Surprise!",
 		shortDesc: "If Jakubrik, changes Forme to Active before attacks and Dormant before Enclose.",
 	},
+	almightyidiot: {
+		name: "Almighty Idiot",
+		shortDesc: "Uses Torment and sets up Wonder Room and Magic Room on switch-in.",
+	},
+	selfish: {
+		name: "Selfish",
+		shortDesc: "This Pokemon's attacks that are super effective against the target do 0.7x damage.",
+	},
 	inedible: {
 		name: "Inedible",
 		shortDesc: "Fairy type moves are now Bug type and have 1.5x more power.",
