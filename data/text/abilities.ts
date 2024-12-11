@@ -4025,10 +4025,6 @@ malediction: {
 		shortDesc: "Reduces Super Effective moves by 50%.",
 		desc: "Super effective damage taken is halved.",
 	},
-	mothsmajesty: {
-		name: "Moth's Majesty",
-		shortDesc: "Raises highest stat by 1 on switch-in.",
-	},
 	nuclearization: {
 		name: "Nuclearization",
 		shortDesc: "Normal type moves are Super Effective on Poison and Normal types.",
