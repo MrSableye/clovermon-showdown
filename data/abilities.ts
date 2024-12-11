@@ -15275,6 +15275,16 @@ malediction: {
 		num: 22,
 		isNonstandard: "Future",
 	},
+	mothsmajesty: {
+		onStart(pokemon) {
+			const bestStat = pokemon.getBestStat(true, true);
+				this.boost({[bestStat]: length}, pokemon);
+		},
+		name: "Moth's Majesty",
+		rating: 4,
+		num: 22,
+		isNonstandard: "Future",
+	},
 	almightyidiot: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
