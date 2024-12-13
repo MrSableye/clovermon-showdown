@@ -92631,10 +92631,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 50,
 		basePowerCallback(pokemon, target, move) {
-			const damagedByTarget = pokemon.attackedBy.some(
+			const lastDamagedBy = pokemon.attackedBy.some(
 				p => p.source === target && p.damage > 0 && p.thisTurn
 			);
-			if (damagedByTarget) {
+			if (lastDamagedBy) {
 				this.debug('BP doubled for getting hit by ' + target);
 				return move.basePower * 2;
 			}
@@ -92644,7 +92644,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Assimilate",
 		pp: 10,
 		priority: -4,
-		flags: {contact: 1, protect: 1, mirror: 1, heal:1},
+		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
 		drain: [1, 2],
 		secondary: null,
 		target: "normal",
