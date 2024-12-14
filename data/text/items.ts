@@ -2924,6 +2924,38 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Sacred Bong",
 		desc: "An item to be held by Blobbos-Rasta. Raises Speed and Defense by 1.",
 	},
+	vortexorb: {
+		name: "Vortex Orb",
+		desc: "An item to be held by Paralotl. Raises Speed and Spatk. sharply if under half health.",
+	},
+	cursedcharm: {
+		name: "Cursed Charm",
+		desc: "An item to be held by Begleamer and Sneevil. Torments the user but boosts the power of all attacks by 1.5x.",
+	},
+	beserkroot: {
+		name: "Beserk Root",
+		shortDesc: "If held by a Rooterot, user recovers 50% of damage dealt.",
+	},
+	iceskates: {
+		name: "Ice Skates",
+		shortDesc: "If held by a Novikate or Verdicent, the users speed is boosted by 1.3x at the cost of 10% of the users health.",
+	},
+	magicianswand: {
+		name: "Magicians Wand",
+		shortDesc: "If held by a Bitician or Mysticket, the users SpAtk. is doubled.",
+	},
+	attackband: {
+		name: "Attack Band",
+		shortDesc: "An item to be held by Enmajor. Changes forme to Attack.",
+	},
+	speedband: {
+		name: "Speed Band",
+		shortDesc: "An item to be held by Enmajor. Changes forme to Speed.",
+	},
+	defenseband: {
+		name: "Defense Band",
+		shortDesc: "An item to be held by Enmajor. Changes forme to Defense.",
+	},
 	kikeousorb: {
 		name: "Kikeous Orb",
 		desc: "If held by a Jewipede, its Normal- and Bug-type attacks have 1.2x power.",

@@ -180,4 +180,36 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	vortexorb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	beserkroot: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cursedcharm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	magicianswand: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	iceskates: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	attackband: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	defenseband: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	speedband: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

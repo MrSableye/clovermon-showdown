@@ -10340,6 +10340,146 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Paper"],
 		rating: 1,
 	},
+	vortexorb: {
+		name: "Vortex Orb",
+		spritenum: 459,
+		onModifySpAPriority: 5,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.species.id !== 'Paralotl') return;
+			if (pokemon.hp <= pokemon.maxhp / 2) {
+				return this.chainModify(2);
+			}
+		},
+		onModifySpePriority: 5,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.species.id !== 'Paralotl') return;
+			if (pokemon.hp <= pokemon.maxhp / 2) {
+				return this.chainModify(2);
+			}
+		},
+		isNonstandard: "Future",
+		itemUser: ["Paralotl"],
+		rating: 1,
+	},
+	cursedcharm: {
+		name: "Cursed Charm",
+		spritenum: 180,
+		onResidualOrder: 28,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			if (pokemon.species.id !== 'Begleamer' || pokemon.species.id!== 'Sneevil') return;
+			pokemon.addVolatile('torment');
+		},
+		fling: {
+			basePower: 30,
+		},
+		onModifyDamage(damage, source, target, move) {
+			if (source.species.name === 'Begleamer' || source.species.name === 'Sneevil') return;
+			return this.chainModify(1.5);
+		},
+		num: 67339,
+		itemUser: ["Begleamer", "Sneevil"],
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	berserkroot: {
+		name: "Berserk Root",
+		spritenum: 29,
+		onModifyMove(move) {
+			if (!move?.flags['contact'] || move.target === 'self') return;
+		},
+		onAfterMoveSecondarySelfPriority: -1,
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (pokemon.species.id !== 'rooterot') return;
+			if (move.totalDamage) {
+				this.heal(move.totalDamage / 2, pokemon);
+			}
+		},
+		itemUser: ["Rooterot"],
+		isNonstandard: "Future",
+	},
+	attackband: {
+		name: "Attack Band",
+		spritenum: 68,
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.name === 'Enmajor') || pokemon.baseSpecies.name === 'Enmajor-Attack') {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Enmajor-Attack",
+		itemUser: ["Enmajor-Attack"],
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	speedband: {
+		name: "Speed Band",
+		spritenum: 68,
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.name === 'Enmajor') || pokemon.baseSpecies.name === 'Enmajor-Speed') {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Enmajor-Speed",
+		itemUser: ["Enmajor-Speed"],
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	defenseband: {
+		name: "Defense Band",
+		spritenum: 68,
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.name === 'Enmajor') || pokemon.baseSpecies.name === 'Enmajor-Defense') {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Enmajor-Defense",
+		itemUser: ["Enmajor-Defense"],
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	iceskates: {
+		name: "Ice Skates",
+		spritenum: 715,
+		fling: {
+			basePower: 30,
+		},
+		onModifySpe(spe, pokemon) {
+			if (pokemon.species.name === 'Novickate' || pokemon.species.name === 'Verdicent') return;
+			return this.chainModify([5324, 4096]);
+		},
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (source && source !== target && move && move.category !== 'Status' && !source.forceSwitchFlag) {
+				this.damage(source.baseMaxhp / 10, source, source, this.dex.items.get('lifeorb'));
+			}
+		},
+		num: 270,
+		itemUser: ["Novickate", "Verdicent"],
+		isNonstandard: "Future",
+		gen: 8,
+		rating: 3,
+	},
+	magicianswand: {
+		name: "Magicians Wand",
+		spritenum: 343,
+		fling: {
+			basePower: 30,
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.species.name === 'Bitician' || pokemon.species.name === 'Mysticket') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Bitician", "Mysticket"],
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	tumultuoustibia: {
 		name: "Tumultuous Tibia",
 		spritenum: 379,
