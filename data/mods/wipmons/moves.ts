@@ -777,6 +777,42 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	nethercoating: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	phasingsand: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boostcharge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	backpetal: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	gutsypunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	gotobed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bubbleburst: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bloomdesire: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	itsbleak: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	jetpunch: {
 		inherit: true,
 		isNonstandard: null,

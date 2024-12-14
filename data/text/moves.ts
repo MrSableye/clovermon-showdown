@@ -9386,6 +9386,44 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Sunken Sanity",
 		shortDesc: "100% chance to confuse the target.",
 	},
+	nethercoating: {
+		name: "Nether Coating",
+		shortDesc: "Raises Defense and Special Defense by 1. Sets up Magic Coat.",
+	},
+	phasingsand: {
+		name: "Phasing Sand",
+		shortDesc: "Resets all of the target's stat stages to 0.",
+	},
+	boostcharge: {
+		name: "Boost Charge",
+		shortDesc: "Has a 100% chance to raise the user's Speed by 1 stage.",
+	},
+	backpetal: {
+		name: "Backpetal",
+		shortDesc: "User switches out after damaging the target.",
+
+		switchOut: "#uturn",
+	},
+	gutsypunch: {
+		name: "Gutsy Punch",
+		shortDesc: "20% chance to paralyze the target.",
+	},
+	gotobed: {
+		name: "Go to Bed",
+		shortDesc: "Double damage if the target is asleep. Can be used while asleep.",
+	},
+	bubbleburst: {
+		name: "Bubble Burst",
+		shortDesc: "100% chance to harshly lower the speed of the foe by 2 stages.",
+	},
+	bloomdesire: {
+		name: "Bloom Desire",
+		shortDesc: "33% Recoil.",
+	},
+	itsbleak: {
+		name: "It's Bleak",
+		shortDesc: "100% chance to inflict torment, prevent healing and curse the target.",
+	},
 	unabletograsp: {
 		name: "Unable to Grasp",
 		shortDesc: "You cannot grasp the true form of this attack!",

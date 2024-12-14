@@ -4067,6 +4067,32 @@ malediction: {
 		name: "Selfish",
 		shortDesc: "This Pokemon's attacks that are super effective against the target do 0.7x damage.",
 	},
+	rustedremembrance: {
+		name: "Rusted Remembrance",
+		shortDesc: "Any source of damage changes Urnirate's form.",
+	},
+	ohmyswirls: {
+		name: "Oh My Swirls!",
+		shortDesc: "Raises all stats (not acc/eva) if HP reaches 1/4 or under.",
+	},
+	hunter: {
+		name: "Hunter",
+		shortDesc: "At the cost of both defenses being halved, Speed is doubled and Crit Ratio is increased by +2.",
+	},
+	goodnight: {
+		name: "Good Night",
+		shortDesc: "Status moves cannot miss. Causes sleeping foes to lose 1/8 of their max HP at the end of each turn. Additionally, this Pokemon restores 1/16 of its max HP if it or its opposing Pokemon is asleep. If both are asleep, it heals 2/16. Holder of this ability acts as if they are sleeping. ",
+	},
+	solidgem: {
+		name: "Solid Gem",
+		shortDesc: "Super Effective moves used on this pokemon have 50% less power. Takes 10x from Physical attacks. ",
+	},
+	awakening: {
+		name: "Awakening",
+		shortDesc: "Boosts Atk, Def, Spe and SpD stats sharply after 9 turns.",
+		start: "  [POKEMON] senses a great prescence...",
+		end: "  [POKEMON] found a Great Orb!",
+	},
 	mothsmajesty: {
 		name: "Moth's Majesty",
 		shortDesc: "Raises highest stat by 1 on switch-in.",

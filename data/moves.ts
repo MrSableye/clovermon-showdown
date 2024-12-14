@@ -92631,10 +92631,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 50,
 		basePowerCallback(pokemon, target, move) {
-			const damagedByTarget = pokemon.attackedBy.some(
+			const lastDamagedBy = pokemon.attackedBy.some(
 				p => p.source === target && p.damage > 0 && p.thisTurn
 			);
-			if (damagedByTarget) {
+			if (lastDamagedBy) {
 				this.debug('BP doubled for getting hit by ' + target);
 				return move.basePower * 2;
 			}
@@ -92644,7 +92644,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Assimilate",
 		pp: 10,
 		priority: -4,
-		flags: {contact: 1, protect: 1, mirror: 1, heal:1},
+		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
 		drain: [1, 2],
 		secondary: null,
 		target: "normal",
@@ -93275,8 +93275,181 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		secondary: null,
+		target: "allAdjacentFoes",
+		type: "???",
+		isNonstandard: "Future",
+	},
+	nethercoating: {
+		num: 322,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Nether Coating",
+		pp: 5,
+		priority: 1,
+		flags: {snatch: 1},
+		beforeTurnCallback(pokemon) {
+			pokemon.addVolatile('magiccoat');
+		},
+		boosts: {
+			def: 1,
+			spd: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Poison",
+		isNonstandard: "Future",
+		contestType: "Beautiful",
+	},
+	phasingsand: {
+		num: 499,
+		accuracy: true,
+		basePower: 80,
+		category: "Physical",
+		name: "Phasing Sand",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onHit(target) {
+			target.clearBoosts();
+			this.add('-clearboost', target);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ground",
+		isNonstandard: "Future",
+		contestType: "Beautiful",
+	},
+	boostcharge: {
+		num: 872,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Boost Charge",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Steel",
+		isNonstandard: "Future",
+		contestType: "Cool",
+	},
+	backpetal: {
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Backpetal",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	gutsypunch: {
+		num: 9,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Gutsy Punch",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		secondary: {
+			chance: 20,
+			status: 'par',
+		},
 		target: "normal",
 		type: "???",
+		isNonstandard: "Future",
+		contestType: "Cool",
+	},
+	gotobed: {
+		num: 69007,
+		accuracy: 80,
+		basePower: 100,
+		category: "Special",
+		name: "Go to Bed",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, bypasssub: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.status === 'slp') {
+				return this.chainModify(2);
+			}
+		},
+		sleepUsable: true,
+		target: "normal",
+		type: "Ghost",
+		isNonstandard: "Future",
+	},
+	bubbleburst: {
+		num: 196,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Bubble Burst",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -2,
+			},
+		},
+		target: "allAdjacentFoes",
+		type: "Water",
+		isNonstandard: "Future",
+		contestType: "Beautiful",
+	},
+	bloomdesire: {
+		num: 394,
+		accuracy: 90,
+		basePower: 140,
+		category: "Physical",
+		name: "Bloom Desire",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		recoil: [33, 100],
+		target: "normal",
+		type: "Grass",
+		isNonstandard: "Future",
+		contestType: "Cool",
+	},
+	itsbleak: {
+		num: 69049,
+		accuracy: 80,
+		basePower: 15,
+		category: "Special",
+		name: "It's Bleak",
+		pp: 5,
+		priority: 0,
+		target: "normal",
+		type: "Dark",
+		flags: {protect: 1, mirror: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('healblock');
+				target.addVolatile('torment');
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'curse',
+		},
 		isNonstandard: "Future",
 	},
 	mrterrorscreech: {

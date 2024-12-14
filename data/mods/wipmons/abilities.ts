@@ -178,6 +178,30 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ohmyswirls: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hunter: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rustedremembrance: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	goodnight: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	solidgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	awakening: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	surgesurfer: {
 		onModifySpe(spe) {
 			if (this.field.isTerrain('electricterrain')) {
