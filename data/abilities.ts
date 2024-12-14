@@ -15307,6 +15307,159 @@ malediction: {
 		rating: 2.5,
 		isNonstandard: "Future",
 	},
+	rustedremembrance: {
+		onStart(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Urnirate' || pokemon.transformed) return;
+			if (pokemon.hp < pokemon.maxhp) {
+				if (pokemon.species.id === 'Urnirate') {
+					pokemon.formeChange('Urnirate-Shattered');
+				}
+			} else {
+				if (pokemon.species.id === 'urnirateshattered') {
+					pokemon.formeChange('Urnirate');
+				}
+			}
+		},
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			if (
+				pokemon.baseSpecies.baseSpecies !== 'Urnirate' ||
+				pokemon.transformed || !pokemon.hp
+			) return;
+			if (pokemon.hp < pokemon.maxhp) {
+				if (pokemon.species.id === 'urnirate') {
+					pokemon.formeChange('Urnirate-Shattered');
+				}
+			} else {
+				if (pokemon.species.id === 'urnirateshattered') {
+					pokemon.formeChange('Urnirate');
+				}
+			}
+		},
+		isPermanent: true,
+		name: "Rusted Remembrance",
+		rating: 3,
+		isNonstandard: "Future",
+	},
+	hunter: {
+		onModifySpePriority: 6,
+		onModifySpe(spe) {
+			return this.chainModify(2);
+		},
+		onModifyDefPriority: 6,
+		onModifyDef(def) {
+			return this.chainModify(0.5);
+		},
+		onModifySpDPriority: 6,
+		onModifySpD(spd) {
+			return this.chainModify(0.5);
+		},
+		onModifyCritRatio(critRatio) {
+			return critRatio + 2;
+		},
+		isBreakable: true,
+		name: "Hunter",
+		isNonstandard: "Future",
+		rating: 4,
+		num: 169,
+	},
+	awakening: {
+		name: "Awakening",
+		onStart(pokemon) {
+			pokemon.addVolatile('awakening');
+		},
+		onEnd(pokemon) {
+			delete pokemon.volatiles['awakening'];
+			this.add('-end', pokemon, 'Awakening', '[silent]');
+		},
+		condition: {
+			duration: 9,
+			onStart(target) {
+				this.add('-start', target, 'ability: Awakening');
+			},
+			onEnd(target) {
+				this.boost({
+					atk: 2,
+					def: 2,
+					spa: 2,
+					spd: 2,
+				});
+				this.add('-end', target, 'Awakening');
+			},
+		},
+		rating: 2,
+		isNonstandard: "Future",
+	},
+	ohmyswirls: {
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			if (pokemon.volatiles['ohmyswirls']) {
+				return;
+			}
+			if (pokemon.hp <= pokemon.maxhp / 4) {
+				this.boost({atk: 1}, pokemon);
+				this.boost({def: 1}, pokemon);
+				this.boost({spa: 1}, pokemon);
+				this.boost({spd: 1}, pokemon);
+				this.boost({spe: 1}, pokemon);
+				pokemon.addVolatile('ohmyswirls');
+			}
+		},
+		name: "Oh My Swirls!",
+		rating: 1.5,
+		num: 123,
+		isNonstandard: "Future",
+	},
+	goodnight: {
+		name: "Good Night",
+		onAnyAccuracy(accuracy, target, source, move) {
+			if (move.category === 'Status') {
+				this.debug('Good Night - ensuring perfect accuracy');
+				return true;
+			}
+			return accuracy;
+		},
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onResidual(pokemon) {
+			let factor = 0;
+			if (pokemon.status === 'slp') {
+				factor++;
+			}
+			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			if (target && target.status === 'slp') {
+				factor++;
+			}
+			if (factor) {
+				this.heal(factor * (pokemon.baseMaxhp / 16));
+			}
+			if (!pokemon.hp) return;
+			for (const target of pokemon.foes()) {
+				if (target.status === 'slp' || target.hasAbility('comatose') ||
+				target.hasAbility('lethargic') || target.hasAbility('boardpowerz')) {
+					this.damage(target.baseMaxhp / 8, target, pokemon);
+				}
+			}
+		},
+		rating: 3,
+		isNonstandard: "Future",
+	},
+	solidgem: {
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.category === 'Physical') {
+				return this.chainModify(10);
+			}
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Solid Gem neutralize');
+				return this.chainModify(0.55);
+			}
+		},
+		isBreakable: true,
+		name: "Solid Gem",
+		isNonstandard: "Future",
+		rating: 3.5,
+		num: 218,
+	},
 	mossyexterior: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Water') {
