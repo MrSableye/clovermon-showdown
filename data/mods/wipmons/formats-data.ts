@@ -2451,4 +2451,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	datadactyl: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	pterobyte: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	invizard: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	gastrmeal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
