@@ -10995,6 +10995,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	datadactyl: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pterobyte: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	invizard: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	gastrmeal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
