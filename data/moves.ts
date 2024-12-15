@@ -42571,7 +42571,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Fear",
 		isNonstandard: "Future",
@@ -56980,7 +56983,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 200,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -58027,6 +58035,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onHit(target) {
+			target.clearBoosts();
+			this.add('-clearboost', target);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -60601,6 +60613,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onHit(target, source, move) {
+			for (const ally of target.adjacentAllies()) {
+				this.damage(ally.baseMaxhp / 16, ally, source, this.dex.conditions.get('Flame Burst'));
+			}
+		},
+		onAfterSubDamage(damage, target, source, move) {
+			for (const ally of target.adjacentAllies()) {
+				this.damage(ally.baseMaxhp / 16, ally, source, this.dex.conditions.get('Flame Burst'));
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Tech",
@@ -65347,7 +65369,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Shadow",
