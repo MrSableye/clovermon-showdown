@@ -12845,6 +12845,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'recycleray';
 			} else if (this.field.isTerrain('volcanicterrain')) {
 				move = 'lavasplash';
+			} else if (this.field.isTerrain('icyterrain')) {
+				move = 'icebeam';
 			}
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
@@ -33380,10 +33382,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 					return this.chainModify([5325, 4096]);
 				}
 			},
-			onSetStatus(status, target, source, effect) {
-				if (!target.isGrounded() || target.isSemiInvulnerable()) return;
-				if (status.id === 'brn') return false;
+			onModifyDefPriority: 10,
+			onModifySpe(spe, pokemon) {
+				if (pokemon.hasType('Ice')) {
+					return this.chainModify([1.5]);
+				}
+				else {
+					return this.chainModify([0.5]);
+
+				}
 			},
+			
 			onFieldStart(field, source, effect) {
 				if (effect?.effectType === 'Ability') {
 					this.add('-fieldstart', 'move: Frosty Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
@@ -62286,6 +62295,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
+
+	
 	icyterrain: {
 		num: 668150,
 		accuracy: true,
@@ -62295,8 +62306,65 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {pulse: 1},
+		terrain: 'icyterrain',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')|| source?.hasItem('icyrock')) {
+					return 8;
+				}
+				return 5;
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Ice' && attacker.isGrounded()) {
+					this.debug('icy terrain boost');
+					return this.chainModify([1.5]);
+				}
+			},
+			onModifyDefPriority: 10,
+			onModifySpe(spe, pokemon) {
+				if (pokemon.hasType('Ice')) {
+					return this.chainModify([1.5]);
+				}
+				else {
+					return this.chainModify([0.5]);
+
+				}
+			},
+			
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Icy Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Icy Terrain');
+				}
+			},
+			onTryBoost(boost, target, source, effect) {
+				if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+				if (effect.effectType === 'Move' && effect.infiltrates && !target.isAlly(source)) return;
+				if (source && target !== source) {
+					let showMsg = false;
+					let i: BoostID;
+					for (i in boost) {
+						if (boost[i]! < 0) {
+							delete boost[i];
+							showMsg = true;
+						}
+					}
+					if (showMsg && !(effect as ActiveMove).secondaries) {
+						this.add('-activate', target, 'move: Icy Terrain');
+					}
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Frosty Terrain');
+			},
+		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Ice",
 		isNonstandard: "Future",
 	},
@@ -62309,6 +62377,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, source) {
+			if (this.field.isTerrain('icyterrain')) {
+				this.debug('figureeight icy terrain boost');
+				return this.chainModify(2.0);
+			}
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Ice",
@@ -80151,6 +80225,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bullet: 1},
+		onModifyMove(move, attacker) {
+			if (this.field.isTerrain('icyterrain')) {
+				move.multihit = 5;
+			}
+		},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -80236,7 +80316,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		onModifyMove(move, attacker) {
+			if (this.field.isTerrain('icyterrain')) {
+				move.multihit = 5;
+			}
+		},
 		secondary: null,
+		multihit: [2, 5],
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -80838,6 +80924,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		pseudoWeather: 'icesport',
+		condition: {
+			duration: 5,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Ice Sport', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Flying') {
+					this.debug('ice sport weaken');
+					return this.chainModify([1352, 4096]);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Ice Sport');
+			},
+		},
+		onHit(target, source) {
+			if (this.field.isWeather('hail')|| this.field.isTerrain('icyterrain')) {
+					this.boost({atk: 1, spa: 1, spd: 1}, source);
+			} else {
+				
+					this.boost({spd: 1}, source);
+				};
+		},
 		target: "all",
 		type: "Ice",
 		isNonstandard: "Future",
