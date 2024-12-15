@@ -442,6 +442,102 @@
       }
     ]
   },
+  "christree": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "snowwarning"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "cooldown",
+          "snowfort",
+          "tailglow",
+          "pulpblast",
+          "freezingwave"
+        ],
+        "lockedMoves": [
+          "mistletoe",
+          "blizzard"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cmstantler": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "snowrush"
+        ],
+        "items": [
+          "assaultvest",
+          "choicescarf",
+          "choiceband"
+        ],
+        "moves": [
+          "sledrush",
+          "megahorn",
+          "hornleech",
+          "pulpblast",
+          "freezingwave"
+        ],
+        "lockedMoves": [
+          "arcticcrash",
+          "doubleedge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cmtorterra": {
+    "sets": [
+      {
+        "abilities": [
+          "snowwarning"
+        ],
+        "items": [
+          "safetyhelmet"
+        ],
+        "moves": [
+          "synthesis",
+          "terrahammer",
+          "headsmash"
+        ],
+        "lockedMoves": [
+          "arcticcrash",
+          "woodhammer"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "cmserperior": {
+    "sets": [
+      {
+        "abilities": [
+          "contrary"
+        ],
+        "items": [
+          "snowycapsule"
+        ],
+        "moves": [
+          "dracometeor",
+          "present",
+          "flamethrower",
+          "blizzard"
+        ],
+        "lockedMoves": [
+          "leafstorm"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "coommate": {
     "nicknames": [
       "Coommate"
@@ -1244,6 +1340,541 @@
         "lockedMoves": [
           "pray",
           "invocation"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santaltah": {
+    "sets": [
+      {
+        "abilities": [
+          "snowrush"
+        ],
+        "items": [
+          "snowycapsule"
+        ],
+        "moves": [
+          "swordsedge",
+          "present",
+          "sacredsword",
+          "mount"
+        ],
+        "lockedMoves": [
+          "vortigern",
+          "slushcrush"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santacirno": {
+    "sets": [
+      {
+        "abilities": [
+          "icebody"
+        ],
+        "items": [
+          "snowycapsule"
+        ],
+        "moves": [
+          "freezingwave",
+          "present",
+          "mistletoe",
+          "knockoff",
+          "icegatling"
+        ],
+        "lockedMoves": [
+          "moonblast",
+          "icebeam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santaparsee": {
+    "sets": [
+      {
+        "abilities": [
+          "unaware",
+          "competitive",
+          "icebody"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "painsplit",
+          "mistletoe",
+          "disable"
+        ],
+        "lockedMoves": [
+          "enviousburst",
+          "enviousheart"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santakisume": {
+    "sets": [
+      {
+        "abilities": [
+          "snowcloak",
+          "sturdy",
+          "icebody"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "carpetburn",
+          "earthpower",
+          "energyball",
+          "toxic",
+          "destinybond",
+          "firespin"
+        ],
+        "lockedMoves": [
+          "rapidspin",
+          "icebeam",
+          "flamethrower"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santajoon": {
+    "sets": [
+      {
+        "abilities": [
+          "snowrush",
+          "ironfist"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "insultandinjury",
+          "brassknuckle",
+          "bulkup"
+        ],
+        "lockedMoves": [
+          "icepunch",
+          "extortionpummel"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santajynx": {
+    "sets": [
+      {
+        "abilities": [
+          "snowrush",
+          "filter"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "mistletoe",
+          "aurasphere",
+          "lovelykiss",
+          "calmmind"
+        ],
+        "lockedMoves": [
+          "moonblast",
+          "coldfront"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santamystia": {
+    "sets": [
+      {
+        "abilities": [
+          "snowrush",
+          "snowcloak"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "mistletoe",
+          "tuning",
+          "darksweets",
+          "nightsparrowsong",
+          "calmmind",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "sorrowfultune",
+          "icebeam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santarumia": {
+    "sets": [
+      {
+        "abilities": [
+          "snowrush",
+          "icebody",
+          "moldbreaker"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule",
+          "murkycapsule"
+        ],
+        "moves": [
+          "mistletoe",
+          "powergem",
+          "thunderbolt",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "darksweets",
+          "icebeam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santashion": {
+    "sets": [
+      {
+        "abilities": [
+          "prankster",
+          "snowwarning"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "murkycapsule"
+        ],
+        "moves": [
+          "leechseed",
+          "present",
+          "strengthsap",
+          "disable",
+          "curse"
+        ],
+        "lockedMoves": [
+          "destitutiondrain"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "santawriggle": {
+    "sets": [
+      {
+        "abilities": [
+          "compoundeyes"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "powerwhip",
+          "veryhijumpkick",
+          "rocketkick",
+          "voltkick",
+          "nectartap"
+        ],
+        "lockedMoves": [
+          "bugkick",
+          "frostkick"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "icevictini": {
+    "sets": [
+      {
+        "abilities": [
+          "victorystar"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "glaciate",
+          "sledrush",
+          "shotgunblast"
+        ],
+        "lockedMoves": [
+          "encycloray",
+          "vcreate"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "agyarados": {
+    "sets": [
+      {
+        "abilities": [
+          "snowrush",
+          "intimidate",
+          "moxie"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "slipaway",
+          "sledrush",
+          "iceburg"
+        ],
+        "lockedMoves": [
+          "aquatail",
+          "arcticcrash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "noseer": {
+    "sets": [
+      {
+        "abilities": [
+          "illuminate"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb",
+          "snowycapsule"
+        ],
+        "moves": [
+          "uturn",
+          "swordsdance",
+          "hornleech",
+          "megahorn",
+          "doubleedge",
+          "closecombat",
+          "odynocharge"
+        ],
+        "lockedMoves": [
+          "slushcrush",
+          "achillesheel"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "sweateryeti": {
+    "sets": [
+      {
+        "abilities": [
+          "furcoat"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "knockoff",
+          "slushcrush"
+        ],
+        "lockedMoves": [
+          "sweaterslam",
+          "cooldown"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "ghift": {
+    "sets": [
+      {
+        "abilities": [
+          "furcoat"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "uturn",
+          "rapidspin",
+          "icebeam"
+        ],
+        "lockedMoves": [
+          "freezingwave",
+          "cooldown"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "krampusird": {
+    "sets": [
+      {
+        "abilities": [
+          "slushrush"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "fakeout",
+          "rapidspin",
+          "meatmash",
+          "cooldown",
+          "spicypowder"
+        ],
+        "lockedMoves": [
+          "playrough",
+          "coalthrow"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "krampird": {
+    "sets": [
+      {
+        "abilities": [
+          "slushrush"
+        ],
+        "items": [
+          "eviolate",
+          "eviocicle"
+        ],
+        "moves": [
+          "fakeout",
+          "rapidspin",
+          "meatmash",
+          "cooldown",
+          "spicypowder"
+        ],
+        "lockedMoves": [
+          "playrough",
+          "coalthrow"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "delidelibird": {
+    "sets": [
+      {
+        "abilities": [
+          "insomnia"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "bravebird",
+          "destinybond",
+          "spicypowder",
+          "foodray"
+        ],
+        "lockedMoves": [
+          "meatmash",
+          "icepunch"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "swallice": {
+    "sets": [
+      {
+        "abilities": [
+          "thickfat"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "icecreambeam",
+          "icicles",
+          "toxic"
+        ],
+        "lockedMoves": [
+          "essencedrain",
+          "icebeam"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "stalagcola": {
+    "sets": [
+      {
+        "abilities": [
+          "sugarrush",
+          "waterabsorb"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "fruityburst",
+          "hydropump",
+          "powergem"
+        ],
+        "lockedMoves": [
+          "muddywater",
+          "iciclecrash"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "colorspace": {
+    "sets": [
+      {
+        "abilities": [
+          "cursedbody"
+        ],
+        "items": [
+          "starfieldcapsule",
+          "gallerycapsule"
+        ],
+        "moves": [
+          "thermochromia",
+          "leechseed"
+        ],
+        "lockedMoves": [
+          "cosmichorror",
+          "unknowncolor"
         ],
         "level": 84
       }
@@ -5212,7 +5843,7 @@
         "moves": [
           "arcticcrash",
           "rotfangs",
-          "hornleach"
+          "hornleech"
         ],
         "lockedMoves": [
           "zombiespread",
