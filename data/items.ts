@@ -15454,6 +15454,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Skates",
 		spritenum: 0,
 		num: 67195,
+		fling: {
+			basePower: 50,
+		},
+		onModifySpe(spe, pokemon) {
+			if (this.field.isTerrain('icyterrain')) {
+				return this.chainModify(1.25);
+			}
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -15462,7 +15470,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		onTryBoost(boost, target, source, effect) {
 			if (source && target === source) return;
-			if (!this.field.isWeather('hail')) return;
+			if (!this.field.isWeather('hail') || !this.field.isTerrain('icyterrain')) return;
 			if (boost.spe && boost.spe < 0) {
 				delete boost.spe;
 				if (!(effect as ActiveMove).secondaries) {
