@@ -836,6 +836,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ruination: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	trickstab: {
 		inherit: true,
 		isNonstandard: null,
