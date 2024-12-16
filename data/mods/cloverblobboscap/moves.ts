@@ -3113,4 +3113,21 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		desc: "Power doubles if the user is grounded and a terrain is active.",
 		shortDesc: "User on terrain: power doubles.",
 	},
+	kinesis: {
+		accuracy: 80,
+		basePower: 0,
+		category: "Status",
+		name: "Kinesis",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		boosts: {
+			accuracy: -1,
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		zMove: {boost: {evasion: 1}},
+		contestType: "Clever",
+	},
 };

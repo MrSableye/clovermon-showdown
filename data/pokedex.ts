@@ -34402,7 +34402,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Gigapuddi",
 		types: ["Fairy"],
 		gender: "N",
-		baseStats: {hp: 107, atk: 79, def: 89, spa: 139, spd: 109, spe: 47},
+		baseStats: {hp: 107, atk: 59, def: 109, spa: 139, spd: 109, spe: 47},
 		abilities: {0: "Beast Boost", H: "Sweet Veil", S: "Aroma Veil"},
 		heightm: 3.6,
 		weightkg: 72,

@@ -1055,10 +1055,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	meteorhammer: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	flintfang: {
 		inherit: true,
 		isNonstandard: null,
@@ -1190,10 +1186,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			},
 		},
 	},
-	aquacutter: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	aquastep: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -1250,10 +1242,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	glaiverush: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	headlongrush: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -1302,19 +1290,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	ragefist: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	ragingbull: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
 	revivalblessing: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	ruination: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -1572,6 +1552,28 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Rock",
 		contestType: "Tough",
+	},
+	kinesis: {
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Kinesis",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 1;
+		},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Psychic",
+		contestType: "Beautiful",
+		isNonstandard: null,
 	},
 	sleazyspores: {
 		inherit: true,
