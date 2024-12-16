@@ -834,6 +834,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	ragefist: {
 		inherit: true,
 		isNonstandard: null,
+		noSketch: true,
 	},
 	shelter: {
 		inherit: true,

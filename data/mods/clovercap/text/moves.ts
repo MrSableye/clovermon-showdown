@@ -86,4 +86,9 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		shortDesc: "Lowers Speed of foes by 1 on switch-in. Grass-type Pokemon remove it on switch-in.",
 		desc: "Sets up a hazard on the opposing side of the field, lowering the Speed by 1 stage of each opposing Pokemon that switches in, unless it is immune to powder moves. Fails if the effect is already active on the opposing side. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, is hit by Defog. Grass-type Pokemon, upon switching in, will remove the hazard.",
 	},
+	kinesis: {
+		inherit: true,
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage. This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1. Super effective on Steel.",
+	},
 };
