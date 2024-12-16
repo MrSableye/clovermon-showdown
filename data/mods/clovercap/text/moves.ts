@@ -91,4 +91,9 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage. This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1. Super effective on Steel.",
 	},
+	ragefist: {
+		inherit: true,
+		desc: "Power is equal to 50+(X*25), where X is the total number of times the user has been hit by a damaging attack during the battle, even if the user did not lose HP from the attack. X cannot be greater than 6 and does not reset upon switching out or fainting. Each hit of a multi-hit attack is counted, but confusion damage is not counted.",
+		shortDesc: "+25 power for each time user was hit. Max 6 hits.",
+	}
 };
