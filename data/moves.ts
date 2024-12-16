@@ -77007,6 +77007,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {snatch: 1},
+		pseudoWeather: 'flamewar',
+		condition: {
+			duration: 6,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Flame War', '[of] ' + source);
+			},
+			onModifyType(move, pokemon) {
+				const noModifyType = [
+					'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+				];
+				if (!noModifyType.includes(move.id) &&
+					!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+					move.type = 'Fire';
+					move.typeChangerBoosted = this.effect;
+				}
+			},
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Fire",
