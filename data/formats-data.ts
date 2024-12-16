@@ -11011,6 +11011,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	elmage: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	eggstosterone: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sketchoui: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",

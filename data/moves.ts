@@ -93556,7 +93556,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 394,
 		accuracy: 90,
 		basePower: 140,
-		category: "Physical",
+		category: "Special",
 		name: "Bloom Desire",
 		pp: 5,
 		priority: 0,
