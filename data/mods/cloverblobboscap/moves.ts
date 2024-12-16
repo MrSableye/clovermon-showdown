@@ -805,6 +805,28 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		desc: "No additional effect.",
 		shortDesc: "No additional effect.",
 	},
+	superpower: {
+		num: 276,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Superpower",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				atk: -1,
+				def: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Tough",
+		desc: "Lowers the users Attack and Defense by 1 stage.",
+		shortDesc: "Lowers the users Attack and Defense by 1 stage.",
+	},
 	snaptrap: {
 		num: 779,
 		accuracy: 100,

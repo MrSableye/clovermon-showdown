@@ -827,38 +827,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	glaiverush: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	ragefist: {
-		inherit: true,
-		basePowerCallback(pokemon) {
-			return Math.min(200, 50 + 25 * pokemon.timesAttacked);
-		},
-		category: "Physical",
-		name: "Rage Fist",
-		pp: 10,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
-		target: "normal",
-		type: "Ghost",
-		isNonstandard: null,
-		noSketch: true,
-	},
-	shelter: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	aquacutter: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	ruination: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	trickstab: {
 		inherit: true,
 		isNonstandard: null,
@@ -1516,6 +1484,26 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Electric",
 		contestType: "Beautiful",
+	},
+	superpower: {
+		num: 210,
+		accuracy: 100,
+		basePower: 100,
+		basePowerCallback(pokemon, target, move) {
+            if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
+                pokemon.addVolatile('furycutter');
+            }
+            const bp = this.clampIntRange(move.basePower / pokemon.volatiles['furycutter'].multiplier, 25, 100);
+            return bp;
+        },
+		category: "Physical",
+		name: "Superpower",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
 	},
 	drumroll: {
 		accuracy: true,
