@@ -827,6 +827,26 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	glaiverush: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ragefist: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shelter: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aquacutter: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ruination: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	trickstab: {
 		inherit: true,
 		isNonstandard: null,
