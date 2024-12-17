@@ -1233,6 +1233,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	camerex: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	manatank: {
 		inherit: true,
 		isNonstandard: null,

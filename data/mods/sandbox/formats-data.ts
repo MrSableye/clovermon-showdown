@@ -12816,4 +12816,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	camerex: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	elmage: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sketchoui: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	eggstosterone: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
