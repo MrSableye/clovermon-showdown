@@ -2822,8 +2822,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	kinglymajesty: {
 		name: "Kingly Majesty",
-		desc: "Priority moves used by opposing Pokemon targeting this Pokemon or its allies are prevented from having an effect.",
-		shortDesc: "This Pokemon and its allies are protected from opposing priority moves.",
+		desc: "Negative priority moves used by opposing Pokemon targeting this Pokemon or its allies are prevented from having an effect.",
+		shortDesc: "This Pokemon and its allies are protected from opposing negative priority moves.",
 
 		block: "#damp",
 	},
