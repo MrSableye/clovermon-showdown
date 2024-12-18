@@ -7362,9 +7362,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 
 			const dazzlingHolder = this.effectState.target;
-			if ((source.side === dazzlingHolder.side || move.target === 'all') && move.priority > 0.1) {
+			if ((source.side === dazzlingHolder.side || move.target === 'all') && move.priority < 0) {
 				this.attrLastMove('[still]');
-				this.add('cant', dazzlingHolder, 'ability: Queenly Majesty', move, '[of] ' + target);
+				this.add('cant', dazzlingHolder, 'ability: Kingly Majesty', move, '[of] ' + target);
 				return false;
 			}
 		},
