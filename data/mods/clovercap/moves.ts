@@ -1487,7 +1487,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	superpower: {
 		num: 210,
-		accuracy: 100,
+		accuracy: 120,
 		basePower: 100,
 		basePowerCallback(pokemon, target, move) {
             if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
