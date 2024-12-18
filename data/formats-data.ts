@@ -11219,6 +11219,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",	
 	},
+	shelbert: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	mollunite: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	armollusk: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
 	amalgum: {
 		tier: "Illegal",
 		isNonstandard: "Future",

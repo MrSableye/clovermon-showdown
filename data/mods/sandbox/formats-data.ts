@@ -12836,4 +12836,19 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	shelbert: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	mollunite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	armollusk: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
