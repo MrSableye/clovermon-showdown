@@ -36509,7 +36509,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 12497.2,
 		color: "White",
 		prevo: "Drattel",
-		evoType: "levelFriendship",
+		evoLevel: 40,
 		eggGroups: ["Dragon", "Mineral"],
 		gen: 8,
 		creator: "Emilight",
