@@ -1488,12 +1488,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	superpower: {
 		num: 210,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 120,
 		basePowerCallback(pokemon, target, move) {
             if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
                 pokemon.addVolatile('furycutter');
             }
-            const bp = this.clampIntRange(move.basePower / pokemon.volatiles['furycutter'].multiplier, 25, 100);
+            const bp = this.clampIntRange(move.basePower / pokemon.volatiles['furycutter'].multiplier, 25, 120);
             return bp;
         },
 		category: "Physical",
