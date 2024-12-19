@@ -1285,6 +1285,50 @@ export const Formats: FormatList = [
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Condoom + Unaware'],
 	},
 	{
+		name: "[Gen 8 Clover CAP Only] Pokebilities",
+		desc: `Pok&eacute;mon have all of their released abilities simultaneously.`,
+		mod: 'clovercap',
+		searchShow: false,
+		rated: false,
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'! Nickname Clause',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Uber', 'Baton Pass',
+			'Shadow Tag', 'Arena Trap', 'Moody',
+			'Bunnorgy', 'Sprucifix', 'Traumobra',
+			'Hohohoming', 'Condoom', 'Bluduck',
+		],
+		onBegin() {
+			for (const pokemon of this.getAllPokemon()) {
+				const ruleTable = this.dex.formats.getRuleTable(this.format);
+
+				pokemon.m.innates = Object.keys(pokemon.species.abilities)
+					.map(key => this.toID(pokemon.species.abilities[key as "0" | "1" | "H" | "S"]))
+					.filter(ability => !ruleTable.isBanned(`ability:${ability}`))
+					.filter(ability => ability !== pokemon.ability);
+			}
+		},
+		onSwitchInPriority: 2,
+		onSwitchIn(pokemon) {
+			if (pokemon.m.innates) {
+				for (const innate of pokemon.m.innates) {
+					pokemon.addVolatile("ability:" + innate, pokemon);
+				}
+			}
+		},
+		onAfterMega(pokemon) {
+			for (const innate of Object.keys(pokemon.volatiles).filter(i => i.startsWith('ability:'))) {
+				pokemon.removeVolatile(innate);
+			}
+			pokemon.m.innates = undefined;
+		},
+	},
+	{
 		name: '[Gen 8 Clover CAP Only] Anything Goes',
 		mod: 'clovercap',
 		ruleset: ['Terastal Clause', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', 'Sketch Post-Gen 7 Moves', 'Dynamax Clause'],
