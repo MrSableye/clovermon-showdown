@@ -51719,7 +51719,7 @@ sketchoui: {
 	airuite: {
 	 num: -8614,
 	 name: "Airuite",
-	 types: ["Water", "Flying"],
+	 types: ["Flying", "Water"],
 	 genderRatio: {M: 0.75, F: 0.25},
 	 baseStats: {hp: 41, atk: 53, def: 45, spa: 61, spd: 55, spe: 90},
 	 abilities: {0: "Swift Swim", 1: "Shower Power", S: "Multiscale", H: "Liquid Voice"},
@@ -51733,7 +51733,7 @@ sketchoui: {
    kaquapo: {
 	num: -8613,
 	name: "Kaquapo",
-	types: ["Water", "Flying"],
+	types: ["Flying", "Water"],
 	genderRatio: {M: 0.75, F: 0.25},
 	baseStats: {hp: 101, atk: 79, def: 70, spa: 95, spd: 80, spe: 70},
 	abilities: {0: "Propeller Tail", 1: "Shower Power", S: "Multiscale", H: "Liquid Voice"},
