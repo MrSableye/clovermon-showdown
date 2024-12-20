@@ -49916,7 +49916,7 @@ cephsludge: {
 		evoLevel: 43,
 		eggGroups: ["Amorphous"], 
                 gen: 9,
-		creator: C3ll",
+		creator: "C3ll",
 	},
 bitician: {
 		num: -245,
