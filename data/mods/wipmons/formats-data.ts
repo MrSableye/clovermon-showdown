@@ -2486,4 +2486,29 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	bitician: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	gooper: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	acidaze: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	cephsludge: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	mysticket: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
