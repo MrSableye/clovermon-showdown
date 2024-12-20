@@ -11023,6 +11023,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	gooper: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	acidaze: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cephsludge: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bitician: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mysticket: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
