@@ -1238,6 +1238,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	kaquapo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	airuite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
 	manatank: {
 		inherit: true,
 		isNonstandard: null,

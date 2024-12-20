@@ -12821,6 +12821,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	airuite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	kaquapo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	elmage: {
 		inherit: true,
 		isNonstandard: null,
