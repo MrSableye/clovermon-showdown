@@ -11217,7 +11217,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	},
 	camerex: {
 		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	airuite: {
+		tier: "Illegal",
 		isNonstandard: "Future",	
+	},
+	kaquapo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	shelbert: {
 		tier: "Illegal",
