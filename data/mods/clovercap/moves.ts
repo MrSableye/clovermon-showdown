@@ -1139,7 +1139,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		name: "Sonic Boom",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, sound: 1},
 		mindBlownRecoil: true,
 		onAfterMove(pokemon, target, move) {
 			if (move.mindBlownRecoil && !move.multihit) {
