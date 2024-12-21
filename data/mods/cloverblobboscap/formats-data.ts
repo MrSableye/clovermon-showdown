@@ -2548,6 +2548,18 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	kaquapo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	airuite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	camerex: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	tamanaut: {
 		tier: "Illegal",
 		isNonstandard: "Future",

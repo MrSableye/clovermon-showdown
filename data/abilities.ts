@@ -7683,7 +7683,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onSourceModifyDamage(damage, source, target, move) {
 			if (['arctiglobe'].includes(source.species.id)) {
-				if (target.getMoveHitData(move).typeMod == 0) {
+				if (target.getMoveHitData(move).typeMod === 0) {
 					this.debug('Frozen Bunker neutralize');
 					return this.chainModify(0.5);
 				}

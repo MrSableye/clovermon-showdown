@@ -1139,7 +1139,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		name: "Sonic Boom",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, sound: 1},
 		mindBlownRecoil: true,
 		onAfterMove(pokemon, target, move) {
 			if (move.mindBlownRecoil && !move.multihit) {
@@ -1493,7 +1493,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
             if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
                 pokemon.addVolatile('furycutter');
             }
-            const bp = this.clampIntRange(move.basePower / pokemon.volatiles['furycutter'].multiplier, 25, 120);
+            const bp = this.clampIntRange(move.basePower / pokemon.volatiles['furycutter'].multiplier, 30, 120);
             return bp;
         },
 		category: "Physical",
