@@ -12816,4 +12816,74 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	camerex: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	airuite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	kaquapo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	elmage: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sketchoui: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	eggstosterone: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	shelbert: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	mollunite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	armollusk: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	bitician: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	gooper: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	acidaze: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	cephsludge: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	mysticket: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

@@ -11023,6 +11023,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	gooper: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	acidaze: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cephsludge: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bitician: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mysticket: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -11212,6 +11232,30 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",	
 	},
 	dredgod: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	camerex: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	airuite: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	kaquapo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	shelbert: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	mollunite: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	armollusk: {
 		tier: "Illegal",
 		isNonstandard: "Future",	
 	},

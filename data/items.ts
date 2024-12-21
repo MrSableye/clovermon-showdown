@@ -9871,9 +9871,10 @@ export const Items: {[itemid: string]: ItemData} = {
 				return this.chainModify(1.5);
 			}
 		},
-		onModifyAccuracyPriority: 1,
-		onModifyAccuracy(accuracy, pokemon) {
-			if (pokemon.species.name === 'Blobbos-Partner') {
+		onSourceModifyAccuracyPriority: 1,
+		onSourceModifyAccuracy(accuracy, target, source) {
+			if (source.species.name === 'Blobbos-Partner') {
+				this.debug('compoundeyes - enhancing accuracy');
 				return this.chainModify(1.5);
 			}
 		},
