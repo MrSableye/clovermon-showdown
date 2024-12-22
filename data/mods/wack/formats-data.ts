@@ -14775,6 +14775,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	maidcoreshblade: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	flandryre: {
 		inherit: true,
 		tier: "UU",

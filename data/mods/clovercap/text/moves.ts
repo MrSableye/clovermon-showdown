@@ -93,7 +93,7 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	},
 	superpower: {
 		inherit: true,
-		desc: "Power halves with each successful hit, up to a minimum of 25 power. The power is reset if this move misses or another move is used.",
-		shortDesc: "Power halves with each hit, down to 25.",
+		desc: "Power halves with each successful hit, up to a minimum of 30 power. The power is reset if this move misses or another move is used.",
+		shortDesc: "Power halves with each hit, down to 30.",
 	},
 };
