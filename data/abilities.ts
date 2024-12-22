@@ -7682,12 +7682,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (['arctiglobe'].includes(source.species.id)) {
+			if (!['arctiglobe'].includes(target.species.id)) {
 				if (target.getMoveHitData(move).typeMod === 0) {
 					this.debug('Frozen Bunker neutralize');
 					return this.chainModify(0.5);
 				}
 			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if (target.species.id !== 'arctiglobe' || target.transformed) return;
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Frozen Bunker');
+			}
+			return false;
 		},
 		isPermanent: true,
 		name: "Frozen Bunker",
