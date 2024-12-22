@@ -2597,7 +2597,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	frozenbunker: {
 		name: "Frozen Bunker",
-		desc: "This Pokémon permanently changes into Freed forme upon taking supereffective damage. Takes half damage from neutral hits in base forme.",
+		desc: "This Pokémon permanently changes into Freed forme upon taking supereffective damage. Base forme takes half damage from neutral hits and is immune to status conditions.",
 	},
 	boundary: {
 		name: "Boundary",
