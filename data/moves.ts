@@ -25831,6 +25831,29 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		contestType: "Clever",
 	},
+	evocation: {
+		num: 354,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Evocation",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		self: {
+			boosts: {
+				atk: -1,
+				spa: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "???",
+	},
 	mirageveil: {
 		accuracy: true,
 		basePower: 0,
