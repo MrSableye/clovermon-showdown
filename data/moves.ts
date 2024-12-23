@@ -93384,7 +93384,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 50,
 		category: "Special",
 		name: "Unable to Grasp",
-		pp: 64,
+		pp: 40,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		noSketch: true,
