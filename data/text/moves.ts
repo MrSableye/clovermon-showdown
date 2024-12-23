@@ -7817,7 +7817,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	borebite: {
 		name: "Bore Bite",
 		desc: "Lowers the targets Defense by 2 if they're part Steel-Type.",
-		shortDesc: "Lowers the targets Defense by 2 if they're part Steel-Type.",
+		shortDesc: "100% chance to lower Steel-types' Defense by 2.",
 	},
 	brackishgash: {
 		name: "Brackish Gash",
@@ -7849,7 +7849,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	boilover: {
 		name: "Boil Over",
 		desc: "Power doubles if Rain Dance or Sunny Day is active, and this move's type changes to match the other. Fire type during Primordial Sea or Rain Dance and Water type during Desolate Land or Sunny Day.",
-		shortDesc: "Under Rain/Sun, power doubles. Fire type under Rain, Water type under Sun.",
+		shortDesc: "2x power under Rain/Sun. Rain = Fire, Sun = Water.",
 		move: "Breakneck Blitz turned into [MOVE] due to the weather!",
 	},
 	soulcrusher: {
@@ -7926,7 +7926,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	assimilate: {
 		name: "Assimilate",
 		desc: "Power doubles if the user was hit by the target this turn. User recovers 50% of the damage dealt.",
-		shortDesc: "Power doubles if user is damaged by the target. User recovers 50% of the damage dealt.",
+		shortDesc: "Power doubles when hit. Drains 50% of damage dealt.",
 	},
 	grandbat: {
 		name: "Grand Bat",
@@ -7976,7 +7976,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	brutalpunishment: {
 		name: "Brutal Punishment",
 		desc: "Has a 100% chance to raise the user's Attack and Special Attack by 1 stage. If the user is a Disbeary in Nice Mode, this move is Fairy type. If the user is a Disbeary in Ebil Mode, this move is Dark type. This move cannot be used successfully unless the user's current form, while considering Transform, is Nice or Ebil Mode Disbeary.",
-		shortDesc: "Disbeary: Fairy; Ebil: Dark; 100% +1 Atk and Sp. Atk.",
+		shortDesc: "Type depends on forme; 100% +1 Atk and Sp. Atk.",
 	},
 	shinestrike: {
 		name: "Shine Strike",
@@ -8041,17 +8041,17 @@ export const MovesText: {[k: string]: MoveText} = {
 	nuclearwinter: {
 		name: "Nuclear Winter",
 		desc: "Has a 10% chance to freeze the target. This move's type effectiveness against Poison is changed to be super effective no matter what this move's type is. If the weather is Hail, this move does not check accuracy.",
-		shortDesc: "10% chance to freeze. Super effective on Poison. Cannot miss under Hail or Snow.",
+		shortDesc: "10% freeze. S.E. on Poison. Can't miss in hail.",
 	},
 	badeggs: {
 		name: "Bad Eggs",
 		desc: "Hits three times. Power increases to 40 for the second hit and 60 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times. Each hit has a 10% chance to poison the target.",
-		shortDesc: "Hits 3 times. Each hit can miss and gets stronger per hit. 10% psn.",
+		shortDesc: "Hits 3 times. Gets stronger. 10% poison chance.",
 	},
 	backdraft: {
 		name: "Backdraft",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities. Summons Tailwind for two turns after landing.",
-		shortDesc: "User switches out. Swapped in mon has doubled speed for a turn.",
+		shortDesc: "User switches. Next mon has doubled Speed..",
 		start: "  The Backdraft blew from behind [TEAM]!",
 		end: "  [TEAM]'s Backdraft petered out!",
 		switchOut: "#uturn",
@@ -8075,7 +8075,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	purge: {
 		name: "Purge",
 		desc: "Power triples if the target has a non-volatile status condition.",
-		shortDesc: "Power is tripled if target is statused. Cures the target.",
+		shortDesc: "Power is tripled if target is statused. Cures target.",
 	},
 	uproot: {
 		name: "Uproot",
@@ -8085,7 +8085,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mirageveil: {
 		name: "Mirage Veil",
-		shortDesc: "For 5 turns, damage done by allies is 1.5x. Sand only.",
+		shortDesc: " For 5 turns, boosts allied damage by 1.5x. Sand only.",
 
 		start: "  Mirage Veil made [TEAM] physical and special moves stronger!",
 		end: "  [TEAM]'s Mirage Veil wore off!",
@@ -8375,7 +8375,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	flakcannon: {
 		name: "Flak Cannon",
-		shortDesc: "Requires held item to use. Removes user's held item. Always crits.",
+		shortDesc: "Destroys user's held item and always crits.",
 
 		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",
 	},

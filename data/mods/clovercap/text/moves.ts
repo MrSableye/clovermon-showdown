@@ -32,7 +32,7 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	rototiller: {
 		inherit: true,
 		desc: "Raises the user's Attack and Special Attack by 1 stage. If the weather is Sandstorm, this move raises the user's Attack and Special Attack by 2 stages.",
-		shortDesc: "Raises user's Attack and Sp. Atk by 1; 2 in Sandstorm.",
+		shortDesc: "Raises user's Attack and Sp. Atk. by 1; 2 in Sand.",
 	},
 	skyuppercut: {
 		inherit: true,
@@ -74,7 +74,7 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	drumroll: {
 		inherit: true,
 		desc: "A random attacking move that is 110 Power or more is selected for use.",
-		shortDesc: "A random attacking move that is 110 Power or more is selected for use.",
+		shortDesc: "Picks a random move with a 110 BP or higher.",
 	},
 	meteorhammer: {
 		inherit: true,
@@ -89,7 +89,7 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	kinesis: {
 		inherit: true,
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage. This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
-		shortDesc: "10% chance to lower the target's Sp. Def by 1. Super effective on Steel.",
+		shortDesc: "10% chance to lower Sp. Def. Super effective on Steel..",
 	},
 	superpower: {
 		inherit: true,
