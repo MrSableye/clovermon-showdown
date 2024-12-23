@@ -2599,6 +2599,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Frozen Bunker",
 		desc: "Halved damage from neutral hits in base form. Switches to Freed forme on S.E. damage. Immune to status.",
 	},
+	shortcircuit: {
+		name: "Short Circuit",
+		desc: "When hit by a Water-type move, halves this Pokemon's and attacker's HP and sets Heal Block.",
+	},
 	boundary: {
 		name: "Boundary",
 		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.5.",

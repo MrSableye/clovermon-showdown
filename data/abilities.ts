@@ -7682,6 +7682,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onSourceModifyDamage(damage, source, target, move) {
+			if (['arctiglobe'].includes(target.species.id)) {
 				if (target.getMoveHitData(move).typeMod === 0) {
 					this.debug('Frozen Bunker neutralize');
 					return this.chainModify(0.5);
@@ -7708,6 +7709,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Boundary",
 		rating: 2.5,
 	},
+	shortcircuit: {
+        onDamagingHit(damage, target, source, move) {
+            if (target !== source && move.type === 'Water') {
+                this.add('-immune', target, '[from] ability: Short Circuit');
+                this.damage(source.baseMaxhp/2, source, target);
+                this.damage(target.baseMaxhp/2, target, target);
+                source.addVolatile('healblock', this.effectState.target);
+                target.addVolatile('healblock', this.effectState.target);
+            }
+        },
+        isBreakable: true,
+        name: "Short Circuit",
+        isNonstandard: "Future",
+    },
 	transfusion: {
 		name: "Transfusion",
 		onDamagingHitOrder: 1,
