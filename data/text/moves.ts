@@ -7831,8 +7831,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	evocation: {
 		name: "Evocation",
-		desc: "Lowers the user's Atk and Spatk by 1 stage.",
-		shortDesc: "Lowers the user's Atk and Sp. Atk by 1 stage. hysical if user's Atk > Sp. Atk.",
+		desc: "Lowers the user's Atk and Spatk by 1 stage. Physical if user's Atk > Sp. Atk.",
+		shortDesc: "Lowers the user's Atk and Sp. Atk by 1 stage. Physical if user's Atk > Sp. Atk.",
 	},
 	awaken: {
 		name: "Awaken",
