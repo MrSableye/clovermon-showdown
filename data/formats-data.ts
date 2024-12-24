@@ -11247,6 +11247,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	yardstein: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	faustival: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	shelbert: {
 		tier: "Illegal",
 		isNonstandard: "Future",	
