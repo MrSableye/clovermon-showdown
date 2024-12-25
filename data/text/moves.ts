@@ -7831,8 +7831,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	evocation: {
 		name: "Evocation",
-		desc: "Lowers the user's Atk and Spatk by 1 stage.",
-		shortDesc: "Lowers the user's Atk and Sp. Atk by 1 stage. hysical if user's Atk > Sp. Atk.",
+		desc: "Lowers the user's Atk and Spatk by 1 stage. Physical if user's Atk > Sp. Atk.",
+		shortDesc: "Lowers the user's Atk and Sp. Atk by 1 stage. Physical if user's Atk > Sp. Atk.",
 	},
 	awaken: {
 		name: "Awaken",
@@ -8051,7 +8051,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	backdraft: {
 		name: "Backdraft",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities. Summons Tailwind for two turns after landing.",
-		shortDesc: "User switches. Next mon has doubled Speed..",
+		shortDesc: "User switches. Next mon has doubled Speed.",
 		start: "  The Backdraft blew from behind [TEAM]!",
 		end: "  [TEAM]'s Backdraft petered out!",
 		switchOut: "#uturn",
