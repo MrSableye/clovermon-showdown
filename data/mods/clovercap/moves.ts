@@ -1546,10 +1546,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	pixiepummel: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	greatrage: {
 		inherit: true,
 		isNonstandard: "Past",
