@@ -7710,19 +7710,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2.5,
 	},
 	shortcircuit: {
-        onDamagingHit(damage, target, source, move) {
-            if (target !== source && move.type === 'Water') {
-                this.add('-immune', target, '[from] ability: Short Circuit');
-                this.damage(source.baseMaxhp/2, source, target);
-                this.damage(target.baseMaxhp/2, target, target);
-                source.addVolatile('healblock', this.effectState.target);
-                target.addVolatile('healblock', this.effectState.target);
-            }
-        },
-        isBreakable: true,
-        name: "Short Circuit",
-        isNonstandard: "Future",
-    },
+		onTryHit(target, source, move) {
+			if (target === source) return;
+			if (move.type !== 'Water') return;
+			if (move.category === 'Status') return;
+			this.add('-immune', target, '[from] ability: Short Circuit');
+			this.damage(this.clampIntRange(Math.floor(source.getUndynamaxedHP() / 2)), source, target);
+			this.damage(this.clampIntRange(Math.floor(target.getUndynamaxedHP() / 2)), target, target);
+			source.addVolatile('healblock', target);
+			target.addVolatile('healblock', target);
+			return null;
+		},
+		isBreakable: true,
+		name: "Short Circuit",
+		isNonstandard: "Future",
+	},
 	transfusion: {
 		name: "Transfusion",
 		onDamagingHitOrder: 1,
