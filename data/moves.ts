@@ -30631,6 +30631,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Flying",
+		isNonstandard: "Future",
 		contestType: "Cool",
 	},
 	blandybland: {
