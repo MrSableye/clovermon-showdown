@@ -38456,7 +38456,7 @@ iwik: {
 	   types: ["Poison", "Ghost"],
 	   genderRatio: {M: 0.5, F: 0.5},
 	   baseStats: {hp: 64, atk: 74, def: 49, spa: 69, spd: 49, spe: 66},
-	   abilities: {0: "Stench", 1: "Tetanus", H: "Poison Touch", S: "Technician"},
+	   abilities: {0: "Tetanus", 1: "Poison Touch", H: "Pollution", S: "Technician"},
 	   heightm: 0.99,
 	   weightkg: 6.3,
 	   color: "Green",

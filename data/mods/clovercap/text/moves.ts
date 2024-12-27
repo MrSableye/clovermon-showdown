@@ -89,7 +89,7 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	kinesis: {
 		inherit: true,
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage. This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
-		shortDesc: "10% chance to lower Sp. Def. Super effective on Steel..",
+		shortDesc: "10% chance to lower Sp. Def. Super effective on Steel.",
 	},
 	superpower: {
 		inherit: true,

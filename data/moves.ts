@@ -25838,7 +25838,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Evocation",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
@@ -30631,6 +30631,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Flying",
+		isNonstandard: "Future",
 		contestType: "Cool",
 	},
 	blandybland: {

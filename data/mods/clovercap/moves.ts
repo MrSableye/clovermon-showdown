@@ -1418,6 +1418,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	shelter: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	eructlas: {
 		inherit: true,
 		isNonstandard: "Past",
