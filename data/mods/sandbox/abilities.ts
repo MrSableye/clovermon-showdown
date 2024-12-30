@@ -781,6 +781,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	rustedremembrance: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	sandspit: {
 		inherit: true,
 		isNonstandard: null,

@@ -12886,4 +12886,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	mystijar: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	jarenity: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	hydrollution: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	urnirate: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
