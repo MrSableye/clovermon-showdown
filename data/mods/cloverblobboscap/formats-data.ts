@@ -2548,7 +2548,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	kaquapo: {
+	faustival: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	yardstein: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kaquapo:{
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
