@@ -35610,7 +35610,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseForme: "Solo",
 		types: ["Normal", "Poison"],
 		baseStats: {hp: 90, atk: 50, def: 55, spa: 60, spd: 45, spe: 105},
-		abilities: {0: "Merciless", 1: "Emergency Exit", H: "Sturdy", S: "Swarming"},
+		abilities: {0: "Swarming", H: "Sturdy", S: "Madman"},
 		heightm: 0.5,
 		weightkg: 2,
 		color: "Gray",
