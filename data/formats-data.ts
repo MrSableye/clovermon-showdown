@@ -11063,6 +11063,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	narwhice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mondelight: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	piemon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",

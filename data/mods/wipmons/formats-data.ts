@@ -2531,4 +2531,19 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	narwhice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	mondelight: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	piemon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
