@@ -338,7 +338,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	unnerve: {
 		inherit: true,
 		onFoeTryMove(target, source, effect) {
-			if (['milkdrink', 'focusmunch', 'fruitjuice', 'softboiled'].includes(effect.id)) {
+			if (['milkdrink', 'focusmunch', 'swallow', 'stuffcheeks', 'teatime', 'softboiled'].includes(effect.id)) {
 				this.attrLastMove('[still]');
 				this.add('cant', this.effectState.target, 'ability: Unnerve', effect, '[of] ' + target);
 				return false;

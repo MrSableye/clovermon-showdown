@@ -11043,6 +11043,38 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	mystijar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	jarenity: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	hydrollution: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	urnirate: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	urnirateshattered: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	narwhice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mondelight: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	piemon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",

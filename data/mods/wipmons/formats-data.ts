@@ -2511,4 +2511,39 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	mystijar: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	jarenity: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	hydrollution: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	urnirate: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	narwhice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	mondelight: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	piemon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
