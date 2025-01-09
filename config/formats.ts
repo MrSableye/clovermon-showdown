@@ -1438,7 +1438,7 @@ export const Formats: FormatList = [
 		unbanlist: ['THROBAK + Wonder Guard'],
 	},
 {
-		name: '[Gen 8 Cope Draft Only] Season 3',
+		name: '[Gen 8 Cope CAP CAB Draft Only] S1',
 		mod: 'copedraft',
 		ruleset: [
 			'Terastal Clause',

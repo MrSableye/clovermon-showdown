@@ -2990,7 +2990,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	/* Clover CAP Mons */
+	/* Clover CAB Mons */
 	blobbos: {
 		inherit: true,
 		tier: "OU",

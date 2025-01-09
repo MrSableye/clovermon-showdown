@@ -5409,6 +5409,1561 @@ smellox: {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobboshenesys: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgalar: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgalarcrowned: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosvalian: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdouble: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosunova: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmagic: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosarceus: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosalola: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboseedle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboseedletrue: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdust: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospostmodern: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshoenn: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnoice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosultra: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgnome: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboschad: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmini: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosking: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosfish: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosfnaf: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostherian: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostriple: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosretro: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospika: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosathlete: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbossexy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdemifiend: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgay: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosreverse: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	blobbossnek: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbossus: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboskeks: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosviol: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosrembered: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosjohto: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbossinnoh: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostandor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshorse: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosbirb: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmountain: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboskalos: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboskalosmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosangel: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmexican: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospizza: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosexplosion: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbossneed: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosslepp: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbossexymegay: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbossexymegax: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosreversemega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosshining: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosengineer: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdrill: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmetal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboskaiju: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshat: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboselectric: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbossurfer: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmuhpalms: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboseggdog: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdalle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosorangeisles: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboschef: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosomori: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosomorihappy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosglover: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosglovercrystalball: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgloverballbearing: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgloverbowlingball: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosspeen: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosskeleton: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosvampire: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnightmare: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosjackolantern: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboseye: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	}, 
+	blobboseyemouth: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbloody: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosshadow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosinfected: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscreature: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdrowned: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmoniker: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosayylien: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscandycorn: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmummy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosspooky: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosexe: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmimikyu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnegamega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdustmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshologram: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdarkmatter: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosnoke: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosclassy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosui: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosue: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosartist: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmushroom: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscup: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdelinquent: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboszero: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobboszeromega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobboshardcore: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospaper: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscap: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscalamity: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmarx: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdoctor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosplok: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbee: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosshoreline: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmuhmentum: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstrand: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosclause: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospresent: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbossnowman: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshorni: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmandm: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosadventurer: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosadventurerlegendary: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosprimal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosswamp: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboskirby: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgigantamax: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgene: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosninja: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosfirefighter: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospirate: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscaca: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosjannie: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdevil: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbait: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbaitmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosfools: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboslawnmower: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostrap: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboslambdal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscloud: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosspamton: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboschainsaw: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosfox: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosforbidden: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	sobbolb: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosswitch: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosswitchblue: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosswitchred: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdoll: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdollpossessed: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmimikyubusted: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdemon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosvolcano: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosocean: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstarfy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstarfymonstar: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstarfystarpedo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstarfyroostar: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstarfystarfright: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbossalt: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ironblob: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	cavernsnore: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospaldea: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshisui: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscell: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosrobotnik: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmidjourney: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmetaknight: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosattorney: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosogre: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosshrimp: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbeetle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosperi: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosporing: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikmin: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminyellow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminblue: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminpurple: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminwhite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminflying: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminrock: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminglow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminparasite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshomestuck: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboslich: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosduelist: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospizzamega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbeemega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmarxmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmariopartymega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscreampuffmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosfishmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosfossilmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboschameleon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosfossil: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnut: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosobese: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosconvergent: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	chibomon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscherry: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosidiot: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosartiffy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosfallen: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ablobbos: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosslug: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosrasta: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosquartz: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshole: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmech: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmechfire: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmechwater: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmechelectric: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdragonmaid: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgl17ch: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnymph: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshollow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosclover: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosmechice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboskracko: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospartner: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmermaid: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostaxi: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosspider: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosteyvat: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscircus: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospterois: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmitosis: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmitosiscomplete: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosblackmage: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosflask: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospuddle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosscrying: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdragonfly: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmedusa: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmoogle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosminesweeper: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosraiju: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscaterpillar: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosladybug: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscolony: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscolonycolonized: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboschroma: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstingray: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosraptor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospodoboo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboslofi: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosyolked: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbrasil: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosjunkheap: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostengu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostherianincarnate: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostiki: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbell: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboswaterwraith: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscar: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosvalkyrie: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbossoda: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosprism: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbunny: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosspelunky: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostrans: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdeepai: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgeno: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosyarn: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshotpot: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosparasite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosplasma: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscreampuff: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostapu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosminion: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmythical: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospseudo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboswisp: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosaxolotl: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscactshot: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgarfield: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscooler: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmr: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosboobos: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboslamia: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmarioparty: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbeast: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosscorpion: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdoodle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscamel: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmanticore: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosattack: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosdefense: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosspeed: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboseon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboseonf: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmoth: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosparasleep: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdreaming: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosparasleepmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdreamingmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbandanadee: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosfug: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscentipede: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbatteryacid: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbasilisk: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscrimson: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostraffic: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosfridge: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmadoka: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosextradimensional: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	doomsday: {
 		isNonstandard: null,
 		tier: "AG",
