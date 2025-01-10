@@ -24991,7 +24991,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	darkening: {
 		accuracy: 100,
-		basePower: 135,
+		basePower: 152,
 		category: "Physical",
 		name: "Darkening",
 		pp: 10,
