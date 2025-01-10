@@ -1987,4 +1987,248 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fireaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wateraffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	electricityaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	strengthaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	poisonaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rockaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	flightaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	iceaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lightaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	parasiteaffinity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	paralysisheal: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	brainwash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	medusascurse: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sweetdreams: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stringpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	colonization: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	codename: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	vampiric: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	"3d": {
+		inherit: true,
+		isNonstandard: null,
+	},
+	carbonated: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hadronengine: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rockypayload: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mrshield: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	beyondultimate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	invertedfate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	inedible: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	windpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	onaquest: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	legendary: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	swamped: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	revvingmalice: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pooperpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lingeringaroma: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	seedsower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	frostysurge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	electromorphosis: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	myceliummight: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	deadlypincers: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	possessed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	toxicchain: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hospitality: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	purifyingsalt: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	windrider: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	plunderedluck: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	gogetter: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	homogeneity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	colorboost: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	kantonaut: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dramatic: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	masshopping: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fallenangel: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	madlad: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	amplifier: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	digger: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	windglider: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	woodchipper: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wonderland: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	malevolentsoul: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cellconstruct: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	thermalfumes: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	snooping: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
