@@ -1439,7 +1439,7 @@ export const Formats: FormatList = [
 	},
 {
 		name: '[Gen 8 Cope CAP CAB Draft Only] S1',
-		mod: 'copedraft',
+		mod: 'copecapcabdraft',
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
