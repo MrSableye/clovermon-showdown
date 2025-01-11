@@ -1890,7 +1890,7 @@ export const Formats: FormatList = [
 			'Baton Pass + Substitute'
 		],
 		unbanlist: [
-			'THROBAK + Wonder Guard', 'Blobbos-King],
+			'THROBAK + Wonder Guard', 'Blobbos-King'],
 },
 	{
 		name: "[Gen 1] Ubers",
