@@ -1871,7 +1871,6 @@ export const Formats: FormatList = [
 			'Krackocean',
 			'Pixilate + Extreme Speed',
 			'Raidenetti + Speed Boost',
-			'Alberfect Cell + Pure Power',
 			'Stingulor + Toke',
          	'Rendalopod + Fishious Rend',
 			'Rendalopod + Bolt Beak',
@@ -1891,7 +1890,7 @@ export const Formats: FormatList = [
 			'Baton Pass + Substitute'
 		],
 		unbanlist: [
-			'THROBAK + Wonder Guard'],
+			'THROBAK + Wonder Guard', 'Blobbos-King'],
 },
 	{
 		name: "[Gen 1] Ubers",
