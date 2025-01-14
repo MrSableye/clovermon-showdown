@@ -1886,7 +1886,6 @@ export const Formats: FormatList = [
 			'Trick Stab + Illusion',
 			'Sly Squall + Illusion',
 			'Star Rod + Victory Dance',
-			'Loaded Disk',  
          'Banana',
 			'Glomp :3',
 			'Nimble Metal Body', 
