@@ -47321,12 +47321,12 @@ blobbosfridge: {
 		types: ["Normal", "Ghost"],
 		gender: "M",
 		baseStats: {
-			hp: 90,
-			atk: 34,
-			def: 88,
-			spa: 115,
-			spd: 80,
-			spe: 106,
+			hp: 55,
+			atk: 102,
+			def: 69,
+			spa: 55,
+			spd: 60,
+			spe: 111,
 		},
 		abilities: {
 			0: "Blaze",
