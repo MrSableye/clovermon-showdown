@@ -7,6 +7,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	metagaming: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	aerilate: {
 		inherit: true,
 		isNonstandard: null,
