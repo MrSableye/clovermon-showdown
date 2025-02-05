@@ -53257,7 +53257,7 @@ tamanaut: {
 		types: ["Bug"],
 		gender: "M", 
 		baseStats: {hp: 50, atk: 70, def: 70, spa: 135, spd: 75, spe: 170},
-		abilities: {0: "Levitate", 1: "Protean", H: "Speed Boots"},
+		abilities: {0: "Levitate", 1: "Protean"},
 		heightm: 1.7,
 		weightkg: 50,
 		color: "Brown",
