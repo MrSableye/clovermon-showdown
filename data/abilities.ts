@@ -15795,4 +15795,158 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
+	flameborne: {
+		onResidualOrder: 28,
+  	onResidualSubOrder: 2,
+  	onResidual(pokemon) {
+    	if (pokemon.status === 'brn') {  // Se o Pokémon está queimado
+      	this.debug('Flameborne - Poder dos golpes dobrado devido à queimadura');
+    	}
+  	},
+
+  	onModifyDamage(damage, source, target, move) {
+    	if (source.status === 'brn') {  // Se o Pokémon que usa o movimento está queimado
+      	if (move.category !== 'Status') {  // Verifica se o movimento não é de status
+        	this.debug('Flameborne - Dobrando o poder do golpe');
+        	return this.chainModify(2);  // Dobra o poder do movimento
+      	}
+    	}
+    	return damage;
+  	},
+		name: "Flameborne",
+		rating: 4.5,
+		num: 425,  // Use um número único para a habilidade
+		isNonstandard: "Future",
+	  	},
+	contactweaken: {
+		onDamagingHit(damage, target, source, move) {
+			if (move.category === 'Physical') {  // Verifica se o movimento é físico
+			this.debug('Contact Weaken - Oponente perdeu 1 estágio de Ataque por contato físico');
+			this.boost({atk: -1}, source);  // Diminui 1 estágio de Ataque do oponente
+			}
+			return damage;
+		},
+		  
+		name: "Contact Weaken",
+		rating: 3.5,  // Avaliação da habilidade
+		num: 124,  // Número único da habilidade
+		isNonstandard: "Future",  // Se a habilidade for para versões futuras
+		},
+
+	phantomdoom: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Phantom Doom');
+		},
+		
+		// Impede o oponente de trocar, igual ao Shadow Tag
+		onFoeTrapPokemon(pokemon) {
+			if (!pokemon.hasAbility('phantomdoom') && pokemon.isAdjacent(this.effectState.target)) {
+				pokemon.tryTrap(true);
+				this.add('-message', `${pokemon.name} está preso por uma aura fantasmagórica!`);
+			}
+		},
+		
+		onFoeMaybeTrapPokemon(pokemon, source) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			if (!pokemon.hasAbility('phantomdoom')) {
+				pokemon.maybeTrapped = true;
+			}
+		},
+		
+		// Garante que o oponente flinche no próximo turno
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			const target = pokemon.side.foe.active[0];
+			if (target && !target.hasAbility('innerfocus')) {
+				target.addVolatile('flinch');
+				this.add('-message', `${target.name} está paralisado de medo e não pode se mover!`);
+			}
+		},
+	
+		// Se esse Pokémon desmaia por um golpe de contato, o atacante também desmaia
+		onDamagingHit(damage, target, source, move) {
+			if (target.hp <= 0 && move.flags['contact']) {
+				this.add('-message', `${target.name} amaldiçoou ${source.name} para o submundo!`);
+				source.faint();
+			}
+		},
+		
+		name: "Phantom Doom",
+		rating: 5,
+		num: 125, // Defina um número único para a habilidade
+		isNonstandard: "Future",
+	},
+
+	evasionboost: {
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy, source, target) {
+		  if (source.hasAbility('evasionboost') && source.volatiles['evasionboost']) {
+			return this.chainModify([2, 1]); // Aumenta a evasão do usuário (multiplica por 2)
+		  }
+		  return accuracy; // Se a habilidade não for ativa, a precisão é mantida
+		},
+		onStart(pokemon) {
+		  pokemon.addVolatile('evasionboost'); // Aplica o aumento de evasão ao Pokémon quando ele entra em batalha
+		},
+		onEnd(pokemon) {
+		  pokemon.removeVolatile('evasionboost'); // Remove o aumento de evasão ao terminar a batalha ou a habilidade
+		},
+		name: "Evasão Elevada",
+		rating: 2,
+		isNonstandard: "Future",
+	},
+	
+	mysticstones: {
+		onStart(pokemon) {
+			const item = pokemon.getItem();
+	
+			if (item.id === 'sunstone') {
+				this.add('-ability', pokemon, 'Mystic Stones (Sun Stone)');
+			} else if (item.id === 'shinystone') {
+				this.add('-ability', pokemon, 'Mystic Stones (Shiny Stone)');
+				for (const target of pokemon.side.foe.active) {
+					if (!target || !target.isActive) continue;
+					target.addVolatile('gastroacid'); // Suprime habilidades do oponente
+					target.addVolatile('torment'); // Prende o oponente no último movimento usado
+				}
+			} else if (item.id === 'moonstone') {
+				this.add('-ability', pokemon, 'Mystic Stones (Moon Stone)');
+			}
+		},
+	
+		// Efeito da Sun Stone: Remove efeitos secundários dos ataques do oponente e reduz o poder deles em 10%.
+		onModifyMovePriority: -1,
+		onModifyMove(move, source, target) {
+			if (source.getItem().id === 'sunstone') {
+				if (move.secondaries) {
+					delete move.secondaries;
+					move.hasSheerForce = true;
+				}
+				move.basePower = this.modify(move.basePower, 0.9);
+			}
+		},
+	
+		// Efeito da Moon Stone: Aumenta o dano de moves super efetivos para o dobro e de moves neutros em 25%.
+		onModifyDamage(damage, source, target, move) {
+			if (source.getItem().id === 'moonstone') {
+				const typeMod = this.dex.getEffectiveness(move.type, target);
+				if (typeMod > 0) {
+					return this.chainModify(2);
+				} else if (typeMod === 0) {
+					return this.chainModify(1.25);
+				}
+			}
+		},
+	
+		name: "Mystic Stones",
+		rating: 4.5,
+		num: 1001,
+	},
+	
+	
+
+		
+		
+	  
 };

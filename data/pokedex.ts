@@ -53220,6 +53220,160 @@ tamanaut: {
 		gen: 0,
 		creator: "feneto_ OCB",
 	},
+	/** Novos pokemons dos OCB*/
+	dialzan: { 
+		num: -50010,
+		name: "Dialzan",
+		types: ["Fight", "Steel"],
+		gender: "M", 
+		baseStats: {hp: 70, atk: 125, def: 90, spa: 50, spd: 95, spe: 125},
+		abilities: {0: "Mozart", 1: "Moxie", H: "Intimidate"},
+		heightm: 1.8,
+		weightkg: 80,
+		color: "Black",
+		eggGroups: ["Field"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
+
+	veltran: { 
+		num: -50011,
+		name: "Veltran",
+		types: ["Dark"],
+		gender: "M", 
+		baseStats: {hp: 110, atk: 60, def: 50, spa: 120, spd: 80, spe: 100},
+		abilities: {0: "Dazzling", 1: "Arena Trap", H: "Dark Aura"},
+		heightm: 1.9,
+		weightkg: 85,
+		color: "Blue",
+		eggGroups: ["Human-Like"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
+
+	megax: { 
+		num: -50012,
+		name: "Megax",
+		types: ["Bug"],
+		gender: "M", 
+		baseStats: {hp: 50, atk: 70, def: 70, spa: 135, spd: 75, spe: 170},
+		abilities: {0: "Levitate", 1: "Protean", H: "Speed Boots"},
+		heightm: 1.7,
+		weightkg: 50,
+		color: "Brown",
+		eggGroups: ["Monster"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	},//feito//
+
+	blazer: { 
+		num: -50013,
+		name: "Blazer",
+		types: ["Fire", "Flying"],
+		gender: "M", 
+		baseStats: {hp: 100, atk: 110, def: 90, spa: 90, spd: 85, spe: 124},
+		abilities: {0: "Flameborne", 1: "Adaptability", H: "Gale Wings"},
+		heightm: 2.0,
+		weightkg: 95,
+		color: "Black",
+		eggGroups: ["Field"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
+
+	gengold: { 
+		num: -50014,
+		name: "Gengold",
+		types: ["Ghost", "Ghost"],
+		gender: "M", 
+		baseStats: {hp: 80, atk: 70, def: 80, spa: 135, spd: 85, spe: 137},
+		abilities: {0: "Scrappy", 1: "Contact Weaken", H: "Shadow Tag"},
+		heightm: 1.6,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: ["Dragon"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
+
+	maltina: { 
+		num: -50015,
+		name: "Maltina",
+		types: ["Ice", "Water"],
+		gender: "F", 
+		baseStats: {hp: 130, atk: 60, def: 80, spa: 130, spd: 90, spe: 100},
+		abilities: {0: "Fur Coat", 1: "Snow Rush", H: "Snow Cloak"},
+		heightm: 2.1,
+		weightkg: 90,
+		color: "White",
+		eggGroups: ["Dragon"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
+
+	mentum: { 
+		num: -50016,
+		name: "Mentum",
+		types: ["Rock", "Psychic"],
+		gender: "M", 
+		baseStats: {hp: 130, atk: 120, def: 80, spa: 70, spd: 110, spe: 85},
+		abilities: {0: "Regenerator", 1: "Unaware", H: "Corrosion"},
+		heightm: 1.6,
+		weightkg: 65,
+		color: "Purple",
+		eggGroups: ["Bug"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	},//feito//
+
+	maldade: { 
+		num: -50017,
+		name: "Maldade",
+		types: ["Ghost"],
+		gender: "F", 
+		baseStats: {hp: 90, atk: 70, def: 70, spa: 150, spd: 100, spe: 104},
+		abilities: {0: "Phantom Doom", 1: "Telepathy", H: "Cursed Body"},
+		heightm: 1.7,
+		weightkg: 50,
+		color: "Pink",
+		eggGroups: ["Amorphous"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	},//feito//
+
+	galequake: { 
+		num: -50018,
+		name: "Galequake",
+		types: ["Flying", "Ground"],
+		gender: "M", 
+		baseStats: {hp: 100, atk: 135, def: 100, spa: 70, spd: 90, spe: 100},
+		abilities: {0: "Mystic Stones", 1: "Dark Aura", H: "Intimidate"},
+		heightm: 2.5,
+		weightkg: 120,
+		color: "Black",
+		eggGroups: ["Dragon"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	},//feito//
+
+	floraciel: { 
+		num: -50019,
+		name: "Floraciel",
+		types: ["Grass", "Fairy"],
+		gender: "F", 
+		baseStats: {hp: 80, atk: 75, def: 60, spa: 150, spd: 80, spe: 145},
+		abilities: {0: "Dazzling", 1: "Pixilate", H: "Triage"},
+		heightm: 1.3,
+		weightkg: 40,
+		color: "Green",
+		eggGroups: ["Fairy"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	},//feito//
+
+
+
+	/** Novos pokemons dos OCB*/
 	wyldhaunt: {
 		num: -12888,
 		name: "Wyldhaunt",
