@@ -859,6 +859,119 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 		},
 	},
+	//Novos//
+	megax: {
+		onModifyAccuracyPriority: -2,
+		onModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			this.debug('megax - decreasing accuracy');
+			return this.chainModify(0.6);
+		},
+	},
+	
+	dialzan: {
+		onModifyMovePriority: -1,
+		onModifyMove(move, source) {
+		  if (move.basePower) {
+			this.debug('Dialzan - aumentando poder do golpe em 30%');
+			move.basePower = this.modify(move.basePower, 1.3);
+		  }
+		  if (typeof move.accuracy === 'number') {
+			this.debug('Dialzan - aumentando precisão do golpe em 30%');
+			move.accuracy = Math.min(move.accuracy * 1.3, 100);
+		  }
+		},
+	  },
+	veltran: {
+		onSourceModifyDamage(damage, source, target, move) {
+		  if (move.category === 'Special') {
+			this.debug('Veltran - reduzindo dano de golpes especiais para 20%');
+			return this.chainModify(0.2);
+		  }
+		},
+	  },
+	blazer:{
+		onStart(pokemon) {
+			const sideConditions = [
+				'spikes',
+				'toxicspikes',
+				'stealthrock',
+				'stickyweb',
+				'gmaxsteelsurge',
+				'sleazyspores',
+				'shattershard',
+			];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+		},
+	},
+	gengold:{
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.hp >= target.maxhp) {
+				this.debug('Multiscale weaken');
+				return this.chainModify(0.5);
+			}
+		}
+	},
+	maltina:{
+		onStart(source) {
+			this.field.setWeather('snow');
+		},
+	},
+
+	mentum:{
+		onStart(source) {
+			this.field.setWeather('densefog');
+		},
+		onSourceModifyAccuracy(acc, pokemon) {
+			if (pokemon.hasItem('utilityumbrella')) return;
+			if (this.field.isWeather('densefog')) {
+				return this.chainModify(2);
+			}
+		}
+
+	},
+	maldade:{
+		onModifyMove(move) {
+			move.infiltrates = true;
+		}
+	},
+	galequake:{
+		onBasePowerPriority: 21,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['contact']) {
+				return this.chainModify([5325, 4096]);
+			}
+		}
+	},
+	floraciel:{
+		onTryHitPriority: 1,
+		onTryHit(target, source, move) {
+			if (target === source || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			const newMove = this.dex.getActiveMove(move.id);
+			newMove.hasBounced = true;
+			newMove.pranksterBoosted = false;
+			this.actions.useMove(newMove, target, source);
+			return null;
+		},
+		onAllyTryHitSide(target, source, move) {
+			if (target.isAlly(source) || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			const newMove = this.dex.getActiveMove(move.id);
+			newMove.hasBounced = true;
+			newMove.pranksterBoosted = false;
+			this.actions.useMove(newMove, this.effectState.target, source);
+			return null;
+		}
+	}
+
+	
 };
 /**
 	 * TODO:
