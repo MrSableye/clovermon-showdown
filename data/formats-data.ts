@@ -11291,6 +11291,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	vanitwin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	vanitwinf: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bambuya: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraint: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	displacerk: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	shelbert: {
 		tier: "Illegal",
 		isNonstandard: "Future",	

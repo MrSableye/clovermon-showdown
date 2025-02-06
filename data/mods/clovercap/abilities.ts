@@ -262,6 +262,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	paletteswap: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	battlearmor: {
 		onDamage(damage, target, source, effect) {
 			if (effect.id === 'recoil') {

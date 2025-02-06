@@ -3120,6 +3120,116 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	vanitwin: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	vanitwinf: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	bambuya: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	displacerk: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraint: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintbug: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintdark: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintdragon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintelectric: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintfairy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintfighting: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintfire: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintflying: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintghost: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintgrass: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintground: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintpoison: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintpsychic: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintrock: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintsteel: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ulmiraintwater: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	doomsday: {
 		inherit: true,
 		isNonstandard: null,

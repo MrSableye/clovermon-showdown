@@ -2587,6 +2587,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 121,
 	},
+	paletteswap: {
+		// Palette Swap's type-changing itself is implemented in conditions.js
+		isPermanent: true,
+		name: "Palette Swap",
+		isNonstandard: "Future",
+		rating: 4,
+		num: 121,
+	},
 	mummy: {
 		name: "Mummy",
 		onDamagingHit(damage, target, source, move) {

@@ -1093,6 +1093,21 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return [type];
 		},
 	},
+	ulmiraint: {
+		name: 'Ulmiraint',
+		onTypePriority: 1,
+		onType(types, pokemon) {
+			if (pokemon.transformed || pokemon.ability !== 'paletteswap' && this.gen >= 8) return types;
+			let type: string | undefined = 'Normal';
+			if (pokemon.ability === 'paletteswap') {
+				type = pokemon.getItem().onPlate;
+				if (!type) {
+					type = 'Normal';
+				}
+			}
+			return [type];
+		},
+	},
 	rolloutstorage: {
 		name: 'rolloutstorage',
 		duration: 2,
