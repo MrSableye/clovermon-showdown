@@ -16009,21 +16009,31 @@ malediction: {
 
 	bleedimmunity: {
 		onStart(pokemon) {
-		  this.add('-start', pokemon, 'Bleed');
+			this.add('-start', pokemon, 'Bleed Immunity');
 		},
+	
 		onResidualOrder: 13,
 		onResidual(pokemon) {
-		  // Aplica o efeito Bleed: dano proporcional à vida máxima do Pokémon
-		  this.damage(pokemon.baseMaxhp / (this.field.getPseudoWeather('bloodrain') ? 10 : 14));
+			for (const target of pokemon.side.foe.active) {
+				if (target && target.isActive) {
+					this.add('-message', `${target.name} está sangrando devido a ${pokemon.name}!`);
+					this.damage(target.baseMaxhp / (this.field.getPseudoWeather('bloodrain') ? 10 : 14), target, pokemon);
+				}
+			}
 		},
+	
 		onEnd(pokemon) {
-		  this.add('-end', pokemon, 'Bleed');
+			this.add('-end', pokemon, 'Bleed Immunity');
 		},
+	
 		onModifyMove(move, pokemon) {
-		  if (pokemon.side.foe) {
-			// Bloqueia itens do adversário enquanto o Pokémon estiver em campo
-			move.ignoreAbility = true;
-		  }
+			for (const target of pokemon.side.foe.active) {
+				if (target && target.isActive) {
+					// Bloqueia habilidades do oponente enquanto o Pokémon estiver em campo
+					target.addVolatile('gastroacid'); // Simula o efeito do golpe Gastro Acid
+					this.add('-ability', target, 'null', '[from] ability: Bleed Immunity');
+				}
+			}
 		},
 		isPermanent: true,
 		name: "Bleed Immunity",
@@ -16160,7 +16170,7 @@ malediction: {
 	  
 		name: "Status Thief",
 		rating: 4.5,
-		num: 1005, // Substitua pelo número que você quiser atribuir à habilidade
+		num: 1006, // Substitua pelo número que você quiser atribuir à habilidade
 		isNonstandard: "Future",
 	  },
 	  fairyenchanter: {
@@ -16206,9 +16216,289 @@ malediction: {
 		num: 1010, // Substitua pelo número que você quiser atribuir à habilidade
 		isNonstandard: "Future",
 	  },
-	  
-	  
 	
+	  mindcontrol: {
+		name: "Mind Control",
+		rating: 4.5,
+		num: 1010, // Número pode ser ajustado conforme necessário
+		isNonstandard: "Future",
+		shortDesc: "Impede trocas. Após 5 turnos, convence o Pokémon oponente a se juntar à equipe.",
+		
+		// Impede o oponente de trocar enquanto este Pokémon estiver em campo
+		onFoeTrapPokemon(pokemon) {
+		  if (this.effectState.target !== pokemon) {
+			this.add('-message', `${pokemon.name} não pode escapar da influência de Mind Control!`);
+		  }
+		  pokemon.trapped = true;
+		},
+	
+		// Inicializa o contador ao entrar em campo
+		onStart(pokemon) {
+		  this.add('-ability', pokemon, 'Mind Control');
+		  pokemon.abilityState.mindcontrolTurns = 0;
+		},
+	
+		// A cada turno, aumenta o contador e exibe a contagem para os jogadores
+		onResidualOrder: 5,
+		onResidual(pokemon) {
+		  if (!pokemon.abilityState.mindcontrolUsed) {
+			pokemon.abilityState.mindcontrolTurns++;
+			this.add('-message', `Mind Control: ${pokemon.abilityState.mindcontrolTurns}/5 turnos completos!`);
+		  }
+	
+		  // Se atingir 5 turnos, convence o oponente a mudar de equipe
+		if (pokemon.abilityState.mindcontrolTurns >= 5 && !pokemon.abilityState.mindcontrolUsed) {
+    		const foe = pokemon.side.foe.active[0]; // Obtém o Pokémon adversário ativo
+    		if (foe && !foe.fainted) {
+        this.add('-message', `${foe.name} foi completamente dominado por Mind Control e mudou de equipe!`);
+        
+        // Faz o Pokémon adversário sair do campo como se estivesse trocando
+        foe.switchFlag = true;
+        
+        // Marca que Mind Control foi usado para não ativar mais de uma vez
+        pokemon.abilityState.mindcontrolUsed = true;
+    	}
+		}
+		}
+		},
+
+		primalflames: {
+			shortDesc: "Com Red Orb, dobra o poder dos moves. Com Sunny Day, anula habilidades do oponente.",
+			name: "Primal Flames",
+			rating: 4.5,
+			num: 1017, // Número pode ser ajustado conforme necessário
+			isNonstandard: "Future",
+		
+			onModifyMovePriority: -1,
+			onModifyMove(move, pokemon) {
+			  if (pokemon.item === 'redorb') {
+				move.basePower *= 2;
+			  }
+			},
+		
+			// Ativação da habilidade ao entrar em campo
+			onStart(pokemon) {
+			  if (this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) {
+				this.add('-ability', pokemon, 'Primal Flames');
+				this.add('-message', `${pokemon.name} suprimiu todas as habilidades do oponente!`);
+		
+				pokemon.abilityState.ending = false;
+				const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
+		
+				for (const target of this.getAllActive()) {
+				  if (target.hasItem('Ability Shield')) {
+					this.add('-block', target, 'item: Ability Shield');
+					continue;
+				  }
+				  if (target.volatiles['commanding']) continue; // Evita interação com Tatsugiri + Dondozo
+				  if (target.illusion) {
+					this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, pokemon, 'primalflames');
+				  }
+				  if (target.volatiles['slowstart']) {
+					delete target.volatiles['slowstart'];
+					this.add('-end', target, 'Slow Start', '[silent]');
+				  }
+				  if (strongWeathers.includes(target.getAbility().id)) {
+					this.singleEvent('End', this.dex.abilities.get(target.getAbility().id), target.abilityState, target, pokemon, 'primalflames');
+				  }
+				}
+			  }
+			},
+		
+			// Mantém a supressão de habilidades ao trocar de Pokémon
+			onAnySwitchIn(pokemon) {
+			  if (this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) {
+				this.add('-message', `${pokemon.name} suprimiu todas as habilidades do oponente!`);
+		
+				for (const target of this.getAllActive()) {
+				  if (target !== pokemon) {
+					if (!target.getAbility().isPermanent) {
+					  this.singleEvent('End', target.getAbility(), target.abilityState, target);
+					}
+				  }
+				}
+			  }
+			},
+		
+			// Quando o usuário sai, as habilidades voltam ao normal
+			onEnd(source) {
+			  if (source.transformed) return;
+		
+			  for (const pokemon of this.getAllActive()) {
+				if (pokemon !== source && pokemon.hasAbility('Primal Flames')) {
+				  return;
+				}
+			  }
+		
+			  this.add('-end', source, 'ability: Primal Flames');
+		
+			  if (source.abilityState.ending) return;
+			  source.abilityState.ending = true;
+		
+			  for (const pokemon of this.getAllActive()) {
+				if (!pokemon.getAbility().isPermanent) {
+				  this.singleEvent('Start', pokemon.getAbility(), pokemon.abilityState, pokemon);
+				}
+			  }
+			},
+		  },
+		
+		  toxicreign: {
+			shortDesc: "Contato = Bad Poison; Poison causa dano dobrado; Cura 100% se envenenado desmaiar.",
+			name: "Toxic Reign",
+			rating: 4.5,
+			num: 1018, // Número pode ser ajustado conforme necessário
+			isNonstandard: "Future",
+		
+			// Quando atingido por um golpe de contato, envenena gravemente o oponente
+			onDamagingHit(damage, target, source, move) {
+			  if (move.flags['contact']) { // Se for um golpe de contato
+				this.add('-ability', target, 'Toxic Reign');
+				source.trySetStatus('tox', target);
+				this.add('-message', `${source.name} foi intoxicado ao tocar ${target.name}!`);
+			  }
+			},
+		
+			// Enquanto esse Pokémon estiver em campo, poison dá dano dobrado
+			onResidualOrder: 9,
+			onResidual() {
+			  for (const pokemon of this.getAllActive()) {
+				if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+				  this.damage(pokemon.maxhp / 8, pokemon); // Aplica dano extra de poison
+				  this.add('-message', `${pokemon.name} sofre dano dobrado do envenenamento!`);
+				}
+			  }
+			},
+		
+			// Se um oponente envenenado desmaiar, cura o HP do usuário para 100%
+			onFaint(target, source, effect) {
+			  if (source && source !== target && target.status === 'psn' || target.status === 'tox') {
+				this.add('-ability', source, 'Toxic Reign');
+				source.heal(source.maxhp);
+				this.add('-message', `${source.name} absorveu a essência do veneno e se curou completamente!`);
+			  }
+			},
+		  },
+
+		  adaptivearmor: {
+			shortDesc: "Reduz dano de ataques neutros e resistidos. Moves Normais viram STAB e não erram.",
+			name: "Adaptive Armor",
+			rating: 4.5,
+			num: 1019, // Número pode ser ajustado conforme necessário
+			isNonstandard: "Future",
+		
+			// Modifica o dano recebido para fortalecer resistências
+			onEffectiveness(typeMod, target, type, move) {
+			  if (!target) return;
+			  const effectiveness = this.dex.getEffectiveness(move.type, target.types);
+			  
+			  if (effectiveness === -1) { // Move originalmente faria 1/2 do dano (resistido)
+				return typeMod - 1; // Reduz ainda mais, para 1/4 de dano
+			  }
+			  if (effectiveness === 0) { // Move originalmente faria 1x (neutro)
+				return typeMod - 1; // Passa a fazer 1/2 de dano
+			  }
+			},
+		
+			// Transforma moves Normais no tipo primário do Pokémon e faz com que nunca errem
+			onModifyType(move, pokemon) {
+			  if (move.type === 'Normal' && pokemon.types.length > 0) {
+				move.type = pokemon.types[0]; // Transforma no tipo primário do Pokémon
+			  }
+			},
+			onModifyMove(move) {
+			  if (move.type !== 'Normal') return;
+			  move.accuracy = true; // Faz com que o golpe nunca erre
+			},
+		  },
+		
+		  permafrost: {
+			shortDesc: "Invoca Hail ao entrar. Em Hail, +1 Def/SpD oculto, 30% de congelar oponente e -30% precisão dele.",
+			name: "Permafrost",
+			rating: 4.5,
+			num: 1020, // Número pode ser ajustado conforme necessário
+			isNonstandard: "Future",
+		
+			// Ao entrar em campo, invoca Hail/Snow
+			onStart(pokemon) {
+			  this.add('-ability', pokemon, 'Permafrost');
+			  this.field.setWeather('snow'); // "snow" substituiu "hail" na mecânica moderna
+			},
+		
+			// Enquanto Hail/Snow estiver ativo
+			onModifyDefPriority: 6,
+			onModifyDef(def, pokemon) {
+			  if (this.field.isWeather('snow')) {
+				return this.chainModify(1.5); // +1 estágio oculto equivale a 1.5x na fórmula do jogo
+			  }
+			},
+			onModifySpDPriority: 6,
+			onModifySpD(spd, pokemon) {
+			  if (this.field.isWeather('snow')) {
+				return this.chainModify(1.5);
+			  }
+			},
+		
+			// Reduz a precisão dos moves do oponente em 30% durante Snow
+			onModifyAccuracy(accuracy, target, source, move) {
+			  if (this.field.isWeather('snow') && typeof accuracy === 'number') {
+				return this.chainModify(0.7); // Reduz precisão para 70%
+			  }
+			},
+		
+			// No final de cada turno, oponente tem 30% de chance de ser congelado
+			onResidual(target) {
+			  const foe = target.side.foe.active[0]; // Oponente ativo
+			  if (this.field.isWeather('snow') && foe && this.randomChance(3, 10)) {
+				this.add('-message', `${foe.name} foi congelado pelo frio intenso!`);
+				foe.trySetStatus('frz', target);
+			  }
+			},
+		  },
+	
+		  electricascension: {
+			shortDesc: "Absorve golpes elétricos, converte Normal em Elétrico (+50% poder), buffa evasão e usa Thunder triplo se HP < 1/4.",
+			name: "Electric Ascension",
+		
+			// Absorve golpes do tipo Elétrico, cura 50% e aumenta todos os status em 1
+			onTryHit(target, source, move) {
+			  if (move.type === 'Electric') {
+				this.add('-ability', target, 'Electric Ascension');
+				this.add('-message', `${target.name} absorveu a energia elétrica!`);
+				target.heal(target.maxhp / 2); // Cura 50% do HP
+				this.boost({ atk: 1, def: 1, spa: 1, spd: 1, spe: 1 }, target); // Aumenta todos os status em +1
+				return null; // Anula o golpe elétrico
+			  }
+			},
+		
+			// Converte moves Normais para Elétrico e dá +50% de poder
+			onModifyTypePriority: -1,
+			onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Electric';
+				move.typeChangerBoosted = this.effect;
+			}
+			},
+			onBasePowerPriority: 23,
+			onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
+			},
+		
+			// Se o HP estiver abaixo de 1/4, aumenta Evasão ao máximo e usa Thunder triplicado
+			onResidual(pokemon) {
+			  if (pokemon.hp <= pokemon.maxhp / 4) {
+				this.add('-message', `${pokemon.name} atingiu sua Ascensão Elétrica!`);
+				this.boost({ evasion: 6 }, pokemon); // Aumenta evasão ao máximo
+				this.actions.useMove(Dex.moves.get('thunder'), pokemon); // Usa Thunder automaticamente
+				const thunderMove = this.dex.getActiveMove('thunder');
+				thunderMove.basePower *= 3; // Multiplica o poder de Thunder por 3
+			  }
+			},
+		  },
 	
 	
 
