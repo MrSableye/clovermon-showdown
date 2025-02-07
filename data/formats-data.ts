@@ -11423,6 +11423,46 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blazer: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	dialzan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	floraciel: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	galequake: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	gengold: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	maldade: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	maltina: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	megax: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mentum: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	veltran: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosswitch: {
 		tier: "Illegal",
 		isNonstandard: "Future",

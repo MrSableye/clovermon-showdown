@@ -9852,6 +9852,46 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	blaze: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	dialzan: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	floraciel: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	galequake: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	gengold: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	maldade: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	maltina: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	megax: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	mentum: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	veltran: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	oogabugamega: {
 		inherit: true,
 		isNonstandard: "Past",

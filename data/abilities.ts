@@ -15803,4 +15803,424 @@ malediction: {
 		num: 422,
 		isNonstandard: "Future",
 	},
+
+	infernoguardian: {
+		onStart(pokemon) {
+			if (pokemon.hasType('Fire') && pokemon.getItem().id === 'flameorb') {
+				this.add('-ability', pokemon, 'Inferno Guardian');
+				this.add('-message', pokemon.name + " liberou seu poder flamejante!");
+				this.field.addPseudoWeather('inferno_guardian');
+			}
+		},
+	
+		// Aumento de poder e chance de queimadura se tiver Flame Orb
+		onModifyMove(move, source, target) {
+			if (source.hasAbility('infernoguardian') && source.getItem().id === 'flameorb' && move.type === 'Fire') {
+				this.add('-message', "As chamas de " + source.name + " queimam mais intensamente!");
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 50,
+					status: 'brn',
+				});
+			}
+		},
+	
+		// Dobra o poder de movimentos Fire
+		onBasePower(basePower, attacker, defender, move) {
+			if (attacker.hasAbility('infernoguardian') && attacker.getItem().id === 'flameorb' && move.type === 'Fire') {
+				this.add('-message', "O poder das chamas de " + attacker.name + " aumenta sob o Flame Orb!");
+				return this.chainModify(2);
+			}
+		},
+	
+		// Efeitos contínuos se Sunny Day estiver ativo
+		onResidualOrder: 5,
+		onResidualSubOrder: 1,
+		onResidual(pokemon) {
+			if (this.field.isWeather('sunnyday') && pokemon.hasAbility('infernoguardian')) {
+				this.add('-message', pokemon.name + " brilha sob o sol, tornando-se impenetrável!");
+				this.add('-activate', pokemon, 'move: Safeguard'); // Visualmente indica imunidade
+				this.field.addPseudoWeather('inferno_guardian_sun'); // Anula habilidades inimigas
+			}
+		},
+	
+		// Neutraliza habilidades de oponentes que entrarem
+		onSwitchIn(pokemon) {
+			if (this.field.getPseudoWeather('inferno_guardian_sun')) {
+				this.add('-message', pokemon.name + " não pode usar sua habilidade sob este sol ardente!");
+				pokemon.addVolatile('gastroacid'); // Neutraliza habilidades do oponente
+			}
+		},
+	
+		name: "Inferno Guardian",
+		rating: 5,
+		num: 1002,
+		isNonstandard: "Future",
+	},
+	
+	
+
+	phantomdoom: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Phantom Doom');
+		},
+		
+		onFoeMaybeTrapPokemon(pokemon, source) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			if (!pokemon.hasAbility('phantomdoom')) {
+				pokemon.maybeTrapped = true;
+			}
+		},
+		
+		// Garante que o oponente flinche no próximo turno
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			const target = pokemon.side.foe.active[0];
+			if (target && !target.hasAbility('innerfocus')) {
+				target.addVolatile('flinch');
+				this.add('-message', `${target.name} está paralisado de medo e não pode se mover!`);
+			}
+		},
+	
+		// Se esse Pokémon desmaia por um golpe de contato, o atacante também desmaia
+		onDamagingHit(damage, target, source, move) {
+			if (target.hp <= 0 && move.flags['contact']) {
+				this.add('-message', `${target.name} amaldiçoou ${source.name} para o submundo!`);
+				source.faint();
+			}
+		},
+		
+		name: "Phantom Doom",
+		rating: 5,
+		num: 125, // Defina um número único para a habilidade
+		isNonstandard: "Future",
+	},
+
+	evasionboost: {
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy, source, target) {
+		  if (source.hasAbility('evasionboost') && source.volatiles['evasionboost']) {
+			return this.chainModify([2, 1]); // Aumenta a evasão do usuário (multiplica por 2)
+		  }
+		  return accuracy; // Se a habilidade não for ativa, a precisão é mantida
+		},
+		onStart(pokemon) {
+		  pokemon.addVolatile('evasionboost'); // Aplica o aumento de evasão ao Pokémon quando ele entra em batalha
+		},
+		onEnd(pokemon) {
+		  pokemon.removeVolatile('evasionboost'); // Remove o aumento de evasão ao terminar a batalha ou a habilidade
+		},
+		name: "Evasão Elevada",
+		rating: 2,
+		isNonstandard: "Future",
+	},
+	
+	mysticstones: {
+		onStart(pokemon) {
+		  const item = pokemon.getItem();
+		  if (item.id === 'sunstone') {
+			this.add('-ability', pokemon, 'Mystic Stones (Sun Stone)');
+			this.field.addPseudoWeather('mysticstones_sun');
+			this.add('-message', "O brilho da Sun Stone envolve o campo!");
+		  } else if (item.id === 'shinystone') {
+			this.add('-ability', pokemon, 'Mystic Stones (Shiny Stone)');
+			this.field.addPseudoWeather('mysticstones_shiny');
+			this.add('-message', "O poder da Shiny Stone suprime as habilidades inimigas!");
+		  } else if (item.id === 'moonstone') {
+			this.add('-ability', pokemon, 'Mystic Stones (Moon Stone)');
+			this.field.addPseudoWeather('mysticstones_moon');
+			this.add('-message', "O brilho místico da Moon Stone aumenta o dano dos ataques!");
+		  }
+		},
+	  
+		onSwitchIn(pokemon) {
+		  if (this.field.getPseudoWeather('mysticstones_shiny')) {
+			const target = pokemon.side.foe.active[0];
+			if (target) {
+			  this.add('-message', target.name + " foi afetado pela Mystic Stones (Shiny Stone)!");
+			  target.addVolatile('gastroacid'); // Suprime habilidades
+			  target.addVolatile('torment'); // Prende no último move usado
+			}
+		  }
+		},
+	  
+		onModifyMove(move, source) {
+		  if (this.field.getPseudoWeather('mysticstones_sun')) {
+			this.add('-message', "O calor da Sun Stone reduz os efeitos dos ataques inimigos!");
+			if (move.secondaries) {
+			  delete move.secondaries;
+			  move.hasSheerForce = true;
+			}
+			move.basePower = this.modify(move.basePower, 0.9);
+		  }
+		},
+	  
+		onModifyDamage(damage, source, target, move) {
+		  if (this.field.getPseudoWeather('mysticstones_moon') && source === this.effectState.target) {
+			this.add('-message', "O brilho da Moon Stone fortalece o ataque!");
+			const typeMod = this.dex.getEffectiveness(move.type, target);
+			if (typeMod > 0) {
+			  return this.chainModify(2);
+			} else if (typeMod === 0) {
+			  return this.chainModify(1.25);
+			}
+		  }
+		},
+	  
+		name: "Mystic Stones",
+		rating: 4.5,
+		num: 1001,
+		isNonstandard: "Future",
+	  },
+
+	frostbiteveil: {
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			this.add('-ability', pokemon, 'Frostbite Veil');
+			if (this.field.isWeather('hail')) {
+				// Aumenta as defesas em 1.5x de forma oculta
+				pokemon.addVolatile('frostbiteveilboost');
+			}
+		},
+		onResidual(pokemon) {
+			if (this.field.isWeather('hail')) {
+				// 30% de chance de congelar o oponente
+				for (const target of pokemon.side.foe.active) {
+					if (target && !target.status && this.randomChance(3, 10)) {
+						target.setStatus('frz', pokemon);
+					}
+				}
+				// Reduz a precisão dos golpes do oponente em 30%
+				for (const target of pokemon.side.foe.active) {
+					if (target) {
+						this.add('-activate', pokemon, 'ability: Frostbite Veil');
+						this.boost({accuracy: -0.3}, target, pokemon, null, true);
+					}
+				}
+			}
+		},
+		onEnd(pokemon) {
+			pokemon.removeVolatile('frostbiteveilboost');
+		},
+		condition: {
+			onModifyDefPriority: 6,
+			onModifyDef(def) {
+				return this.chainModify(1.5);
+			},
+		},
+		name: "Frostbite Veil",
+		rating: 4, // Ajuste a avaliação conforme necessário
+		num: 1005, // Defina um número único para a habilidade
+		isNonstandard: "Future", // Defina como "Future" ou outro valor apropriado
+	},
+
+	bleedimmunity: {
+		onStart(pokemon) {
+		  this.add('-start', pokemon, 'Bleed');
+		},
+		onResidualOrder: 13,
+		onResidual(pokemon) {
+		  // Aplica o efeito Bleed: dano proporcional à vida máxima do Pokémon
+		  this.damage(pokemon.baseMaxhp / (this.field.getPseudoWeather('bloodrain') ? 10 : 14));
+		},
+		onEnd(pokemon) {
+		  this.add('-end', pokemon, 'Bleed');
+		},
+		onModifyMove(move, pokemon) {
+		  if (pokemon.side.foe) {
+			// Bloqueia itens do adversário enquanto o Pokémon estiver em campo
+			move.ignoreAbility = true;
+		  }
+		},
+		isPermanent: true,
+		name: "Bleed Immunity",
+		rating: 3.5,
+		num: 999,  // Substitua pelo número que você quiser atribuir à habilidade
+	  },
+
+	  reincarnation: {
+		onStart(pokemon) {
+			// Aplica Curse no oponente ao entrar em campo
+			for (const target of pokemon.side.foe.active) {
+				if (target && target.isActive && !target.hasType('Ghost')) {
+					this.add('-message', `${pokemon.name} lançou uma maldição sobre ${target.name}!`);
+					this.directDamage(target.maxhp / 4, target, pokemon); // Dano equivalente ao efeito de Curse
+					target.addVolatile('curse');
+				}
+			}
+		},
+		// Impede o oponente de trocar, igual ao Shadow Tag
+		onFoeTrapPokemon(pokemon) {
+			if (!pokemon.hasAbility('phantomdoom') && pokemon.isAdjacent(this.effectState.target)) {
+				pokemon.tryTrap(true);
+				this.add('-message', `${pokemon.name} está preso por uma aura fantasmagórica!`);
+			}
+		},
+	
+		onSourceFaint(target, source, effect) {
+			if (!source || !target) return;
+	
+			const sourceSide = source.side;
+			const targetSet = target.set;
+	
+			// Nome do Pokémon reencarnado
+			const reincarnatedName = `Reincarnation of ${target.name || target.species}`;
+	
+			// Criando o novo Pokémon na equipe
+			const reincarnatedPokemon = new Pokemon({
+				...targetSet,
+				name: reincarnatedName,
+			}, sourceSide);
+	
+			// Adiciona o Pokémon à equipe do usuário
+			reincarnatedPokemon.position = sourceSide.pokemon.length;
+			sourceSide.pokemon.push(reincarnatedPokemon);
+			sourceSide.pokemonLeft += 1;
+	
+			this.add('teamsize', sourceSide.id, sourceSide.pokemon.length);
+			this.add('-message', `${target.name} foi reencarnado na equipe de ${source.name}!`);
+		},
+	
+		name: "Reincarnation",
+		rating: 5,
+		num: 1007,
+		isNonstandard: "Future", // Defina como "Future" ou outro valor apropriado
+	},
+
+	ironwill: {
+		onModifyDamage(damage, source, target, move) {
+			const typeMod = this.dex.getEffectiveness(move.type, target);
+			
+			if (typeMod < 0) { // Move que o Pokémon resiste (1/2 de dano originalmente)
+				return this.chainModify(0.5); // Reduz mais uma vez, totalizando 1/4 de dano
+			} else if (typeMod === 0) { // Move neutro (1x de dano)
+				return this.chainModify(0.67); // Reduz para 1/3 de dano
+			}
+		},
+	
+		onHit(target, source, move) {
+			if (this.dex.getEffectiveness(move.type, target) > 0) { // Move super efetivo
+				this.add('-ability', target, 'Iron Will');
+				this.boost({
+					atk: -6,
+					def: -6,
+					spa: -6,
+					spd: -6,
+					spe: -6,
+					accuracy: -6,
+					evasion: -6
+				}, source, target, null, true);
+			}
+		},
+	
+		name: "Iron Will",
+		rating: 4.5,
+		num: 1008,
+		isNonstandard: "Future", // Defina como "Future" ou outro valor apropriado
+	},
+
+	cursedgold: {
+		onDamagingHit(damage, target, source, move) {
+			if (target.item === 'stickybarb' && move.flags['contact']) {
+				this.add('-message', `${source.name} pegou a Maldição Dourada!`);
+				source.setItem('stickybarb');
+				target.setItem('');
+			}
+		},
+		name: "Cursed Gold",
+		rating: 3.5,
+		num: 1009,
+		isNonstandard: "Future", // Defina como "Future" ou outro valor apropriado
+	},
+
+	statusthief: {
+		onStart(pokemon) {
+		  // Rouba todos os aumentos de status dos Pokémon adversários ao entrar em campo
+		  for (const target of pokemon.side.foe.active) {
+			if (target && target.isActive) {
+			  const boosts: SparseBoostsTable = {};
+			  let stolen = false;
+			  for (const stat in target.boosts) {
+				if (target.boosts[stat as keyof SparseBoostsTable] > 0) {
+				  boosts[stat as keyof SparseBoostsTable] = target.boosts[stat as keyof SparseBoostsTable];
+				  target.boosts[stat as keyof SparseBoostsTable] = 0;
+				  stolen = true;
+				}
+			  }
+			  if (stolen) {
+				this.add('-ability', pokemon, 'Status Thief');
+				this.add('-message', `${pokemon.name} roubou os aumentos de status de ${target.name}!`);
+				this.boost(boosts, pokemon, pokemon);
+			  }
+			}
+		  }
+		},
+	  
+		onFoeSwitchIn(target) {
+		  // Remove o item do Pokémon adversário ao trocar
+		  if (target.item) {
+			this.add('-ability', this.effectState.target, 'Status Thief');
+			this.add('-message', `${target.name} perdeu seu ${target.item} devido à Status Thief!`);
+			target.clearItem();
+		  }
+		},
+	  
+		name: "Status Thief",
+		rating: 4.5,
+		num: 1005, // Substitua pelo número que você quiser atribuir à habilidade
+		isNonstandard: "Future",
+	  },
+	  fairyenchanter: {
+		// Imunidade a golpes de prioridade
+		onTryHit(pokemon, target, move) {
+		  if (move.priority > 0) {
+			this.add('-immune', pokemon, '[from] ability: Fairy Enchanter');
+			return null;
+		  }
+		},
+	  
+		onStart(pokemon) {
+		  // Transforma o tipo do Pokémon adversário em Fada
+		  const target = pokemon.side.foe.active[0];
+		  if (target && target.isActive) {
+			const oldTypes = target.getTypes();
+			target.setType('Fairy');
+			this.add('-ability', pokemon, 'Fairy Enchanter');
+			this.add('-message', `${target.name} foi transformado em tipo Fada!`);
+			this.add('-start', target, 'typechange', 'Fairy', '[from] ability: Fairy Enchanter');
+		  }
+		},
+	  
+		onResidualOrder: 5,
+		onResidualSubOrder: 5,
+		onResidual(pokemon) {
+		  // Efeito no final de cada turno
+		  for (const target of pokemon.side.foe.active) {
+			if (target && target.isActive && target.hasType('Fairy')) {
+			  // Pokémon inimigos do tipo Fada perdem 1 estágio de ataque e ataque especial
+			  this.boost({ atk: -1, spa: -1 }, target, pokemon);
+			  this.add('-message', `${target.name} perdeu 1 estágio de ataque e ataque especial!`);
+			}
+		  }
+	  
+		  // O usuário ganha 1 estágio de ataque e ataque especial
+		  this.boost({ atk: 1, spa: 1 }, pokemon);
+		  this.add('-message', `${pokemon.name} ganhou 1 estágio de ataque e ataque especial!`);
+		},
+	  
+		name: "Fairy Enchanter",
+		rating: 4.5,
+		num: 1010, // Substitua pelo número que você quiser atribuir à habilidade
+		isNonstandard: "Future",
+	  },
+	  
+	  
+	
+	
+	
+
+		
+		
+	  
 };
