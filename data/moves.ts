@@ -25854,6 +25854,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "???",
 	},
+	lunarimpact: {
+		num: 210,
+		accuracy: 100,
+		basePower: 120,
+		basePowerCallback(pokemon, target, move) {
+            if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
+                pokemon.addVolatile('furycutter');
+            }
+            const bp = this.clampIntRange(move.basePower / pokemon.volatiles['furycutter'].multiplier, 30, 120);
+            return bp;
+        },
+		category: "Physical",
+		name: "Lunar Impact",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		isNonstandard: "Future",
+		target: "normal",
+		type: "Fairy",
+	},
 	mirageveil: {
 		accuracy: true,
 		basePower: 0,
