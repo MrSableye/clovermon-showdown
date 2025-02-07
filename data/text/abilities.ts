@@ -2608,6 +2608,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.5.",
 		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.5x damage.",
 	},
+	paletteswap: {
+		name: "Palette Swap",
+		desc: "If this Pokemon is an Ulmiraint, its type changes to match its held Plate, Memory or Z-Crystal.",
+	},
 	transfusion: {
 		name: "Transfusion",
 		shortDesc: "Upon being hit, changes the opponent's type to the primary type of the ability-holder. When the ability-holder switches out, change their types back.",
