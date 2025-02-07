@@ -865,7 +865,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		onModifyAccuracy(accuracy) {
 			if (typeof accuracy !== 'number') return;
 			this.debug('megax - decreasing accuracy');
-			return this.chainModify(0.6);
+			return this.chainModify(0.4);
 		},
 	},
 	
@@ -873,15 +873,16 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		onModifyMovePriority: -1,
 		onModifyMove(move, source) {
 		  if (move.basePower) {
-			this.debug('Dialzan - aumentando poder do golpe em 30%');
-			move.basePower = this.modify(move.basePower, 1.3);
+			this.debug('Dialzan - aumentando poder do golpe em 50%');
+			move.basePower = this.modify(move.basePower, 1.5);
 		  }
 		  if (typeof move.accuracy === 'number') {
-			this.debug('Dialzan - aumentando precisão do golpe em 30%');
-			move.accuracy = Math.min(move.accuracy * 1.3, 100);
+			this.debug('Dialzan - aumentando precisão do golpe em 50%');
+			move.accuracy = Math.min(move.accuracy * 1.5, 100);
 		  }
 		},
 	  },
+
 	veltran: {
 		onSourceModifyDamage(damage, source, target, move) {
 		  if (move.category === 'Special') {
@@ -890,6 +891,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		  }
 		},
 	  },
+
 	blazer:{
 		onStart(pokemon) {
 			const sideConditions = [
@@ -908,45 +910,56 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 		},
 	},
+
 	gengold:{
 		onSourceModifyDamage(damage, source, target, move) {
 			if (target.hp >= target.maxhp) {
 				this.debug('Multiscale weaken');
-				return this.chainModify(0.5);
+				return this.chainModify(0.1);
 			}
 		}
 	},
+
 	maltina:{
 		onStart(source) {
 			this.field.setWeather('snow');
 		},
-	},
+	}, 
 
 	mentum:{
-		onStart(source) {
-			this.field.setWeather('densefog');
-		},
-		onSourceModifyAccuracy(acc, pokemon) {
-			if (pokemon.hasItem('utilityumbrella')) return;
-			if (this.field.isWeather('densefog')) {
-				return this.chainModify(2);
+		onAnyModifyBoost(boosts, pokemon) {
+			const unawareUser = this.effectState.target;
+			if (unawareUser === pokemon) return;
+			if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+				boosts['def'] = 0;
+				boosts['spd'] = 0;
+				boosts['evasion'] = 0;
+			}
+			if (pokemon === this.activePokemon && unawareUser === this.activeTarget) {
+				boosts['atk'] = 0;
+				boosts['def'] = 0;
+				boosts['spa'] = 0;
+				boosts['accuracy'] = 0;
 			}
 		}
 
-	},
+	}, //unaware
+
 	maldade:{
 		onModifyMove(move) {
 			move.infiltrates = true;
 		}
 	},
+
 	galequake:{
 		onBasePowerPriority: 21,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['contact']) {
 				return this.chainModify([5325, 4096]);
 			}
-		}
+		} //toughclaws
 	},
+
 	floraciel:{
 		onTryHitPriority: 1,
 		onTryHit(target, source, move) {
@@ -968,7 +981,8 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			newMove.pranksterBoosted = false;
 			this.actions.useMove(newMove, this.effectState.target, source);
 			return null;
-		}
+		},
+
 	}
 
 	
