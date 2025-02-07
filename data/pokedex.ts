@@ -52176,7 +52176,7 @@ ulmiraintfire: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-                requiredItems: ["Fire Plate", "Firinium Z", "Fire Memory"],
+                requiredItems: ["Flame Plate", "Firinium Z", "Fire Memory"],
 		changesFrom: "Ulmiraint",
 	},
 ulmiraintflying: {
@@ -52194,7 +52194,7 @@ ulmiraintflying: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-                requiredItems: ["Flying Plate", "Flyinium Z", "Flying Memory"],
+                requiredItems: ["Sky Plate", "Flyinium Z", "Flying Memory"],
 		changesFrom: "Ulmiraint",
 	},
 ulmiraintghost: {
@@ -53611,7 +53611,7 @@ tamanaut: {
 	dialzan: { 
 		num: -50010,
 		name: "Dialzan",
-		types: ["Fight", "Steel"],
+		types: ["Fighting", "Steel"],
 		gender: "M", 
 		baseStats: {hp: 90, atk: 145, def: 90, spa: 50, spd: 95, spe: 125},
 		abilities: {0: "Mozart", 1: "Iron Will", H: "Intimidate"},
