@@ -52284,7 +52284,7 @@ ulmiraintpoison: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-                requiredItems: ["Toxic Plate", "Poisonium Z", "Poison Memory"],],
+                requiredItems: ["Toxic Plate", "Poisonium Z", "Poison Memory"],
 		changesFrom: "Ulmiraint",
 	},
 ulmiraintpsychic: {
