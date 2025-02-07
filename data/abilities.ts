@@ -2589,6 +2589,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	paletteswap: {
 		// Palette Swap's type-changing itself is implemented in conditions.js
+		onTakeItem(item, pokemon, source) {
+			if (!this.activeMove) throw new Error("Battle.activeMove is null");
+			if (!pokemon.hp || pokemon.item === 'stickybarb') return;
+			if ((source && source !== pokemon) || this.activeMove.id === 'knockoff') {
+				this.add('-activate', pokemon, 'ability: Palette Swap');
+				return false;
+			}
+		},
 		isPermanent: true,
 		name: "Palette Swap",
 		isNonstandard: "Future",
