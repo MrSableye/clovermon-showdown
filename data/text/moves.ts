@@ -7834,6 +7834,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Lowers the user's Atk and Spatk by 1 stage. Physical if user's Atk > Sp. Atk.",
 		shortDesc: "Lowers the user's Atk and Sp. Atk by 1 stage. Physical if user's Atk > Sp. Atk.",
 	},
+	lunarimpact: {
+		name: "Lunar Impact",
+		desc: "Power halves with each hit, down to 30.",
+		shortDesc: "Power halves with each hit, down to 30.",
+	},
 	awaken: {
 		name: "Awaken",
 		desc: "Raises the user's Attack, Defense, and Speed by 2 stages. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
