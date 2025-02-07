@@ -52104,7 +52104,7 @@ ulmiraintdragon: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-                requiredItems: ["Draco Plate", "Dragonium Z, "Dragon Memory"],
+                requiredItems: ["Draco Plate", "Dragonium Z", "Dragon Memory"],
 		changesFrom: "Ulmiraint",
 	},
 ulmiraintelectric: {
