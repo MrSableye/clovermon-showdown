@@ -53224,7 +53224,7 @@ tamanaut: {
 	dialzan: { 
 		num: -50010,
 		name: "Dialzan",
-		types: ["Fighting", "Steel"],
+		types: ["Steel","Fighting"],
 		gender: "M", 
 		baseStats: {hp: 90, atk: 145, def: 90, spa: 50, spd: 95, spe: 125},
 		abilities: {0: "Mozart", 1: "Adaptive Armor", H: "Intimidate"},
@@ -53256,7 +53256,7 @@ tamanaut: {
 		name: "Megax",
 		types: ["Bug"],
 		gender: "M", 
-		baseStats: {hp: 50, atk: 70, def: 70, spa: 135, spd: 75, spe: 170},
+		baseStats: {hp: 90, atk: 70, def: 70, spa: 135, spd: 75, spe: 155},
 		abilities: {0: "Levitate", 1: "Protean"},
 		heightm: 1.7,
 		weightkg: 50,
@@ -53284,7 +53284,7 @@ tamanaut: {
 	gengold: { 
 		num: -50014,
 		name: "Gengold",
-		types: ["Ghost", "Ghost"],
+		types: ["Ghost"],
 		gender: "M", 
 		baseStats: {hp: 80, atk: 70, def: 80, spa: 135, spd: 85, spe: 137},
 		abilities: {0: "Scrappy", 1: "Reincarnation", H: "Shadow Tag"},

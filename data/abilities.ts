@@ -15908,63 +15908,50 @@ malediction: {
 		isNonstandard: "Future",
 	},
 	
-	mysticstones: {
+	mindlock: {
 		onStart(pokemon) {
-		  const item = pokemon.getItem();
-		  if (item.id === 'sunstone') {
-			this.add('-ability', pokemon, 'Mystic Stones (Sun Stone)');
-			this.field.addPseudoWeather('mysticstones_sun');
-			this.add('-message', "O brilho da Sun Stone envolve o campo!");
-		  } else if (item.id === 'shinystone') {
-			this.add('-ability', pokemon, 'Mystic Stones (Shiny Stone)');
-			this.field.addPseudoWeather('mysticstones_shiny');
-			this.add('-message', "O poder da Shiny Stone suprime as habilidades inimigas!");
-		  } else if (item.id === 'moonstone') {
-			this.add('-ability', pokemon, 'Mystic Stones (Moon Stone)');
-			this.field.addPseudoWeather('mysticstones_moon');
-			this.add('-message', "O brilho místico da Moon Stone aumenta o dano dos ataques!");
-		  }
-		},
-	  
-		onSwitchIn(pokemon) {
-		  if (this.field.getPseudoWeather('mysticstones_shiny')) {
-			const target = pokemon.side.foe.active[0];
-			if (target) {
-			  this.add('-message', target.name + " foi afetado pela Mystic Stones (Shiny Stone)!");
-			  target.addVolatile('gastroacid'); // Suprime habilidades
-			  target.addVolatile('torment'); // Prende no último move usado
+			this.add('-ability', pokemon, 'Mind Lock');
+	
+			const foe = pokemon.side.foe.active[0]; // Considerando batalhas individuais (1v1)
+			if (!foe || foe.fainted) return;
+	
+			// Supressão de habilidades, como Neutralizing Gas
+			if (foe.hasItem('Ability Shield')) {
+				this.add('-block', foe, 'item: Ability Shield');
+			} else {
+				this.add('-message', `${foe.name} teve sua habilidade suprimida!`);
+				foe.addVolatile('gastroacid');
 			}
-		  }
-		},
-	  
-		onModifyMove(move, source) {
-		  if (this.field.getPseudoWeather('mysticstones_sun')) {
-			this.add('-message', "O calor da Sun Stone reduz os efeitos dos ataques inimigos!");
-			if (move.secondaries) {
-			  delete move.secondaries;
-			  move.hasSheerForce = true;
+	
+			// Bloqueia o último golpe do oponente
+			if (foe.lastMove) {
+				foe.addVolatile('encore');
+				foe.volatiles['encore'].duration = 0; // Dura até o usuário sair do campo
+				foe.volatiles['encore'].move = foe.lastMove.id;
+				this.add('-message', `${foe.name} foi forçado a repetir ${this.dex.moves.get(foe.lastMove.id).name}!`);
 			}
-			move.basePower = this.modify(move.basePower, 0.9);
-		  }
 		},
-	  
-		onModifyDamage(damage, source, target, move) {
-		  if (this.field.getPseudoWeather('mysticstones_moon') && source === this.effectState.target) {
-			this.add('-message', "O brilho da Moon Stone fortalece o ataque!");
-			const typeMod = this.dex.getEffectiveness(move.type, target);
-			if (typeMod > 0) {
-			  return this.chainModify(2);
-			} else if (typeMod === 0) {
-			  return this.chainModify(1.25);
+	
+		onEnd(source) {
+			for (const foe of source.side.foe.active) {
+				if (foe.volatiles['encore']) {
+					this.add('-end', foe, 'Encore');
+					delete foe.volatiles['encore'];
+				}
+				if (foe.volatiles['gastroacid']) {
+					this.add('-end', foe, 'Gastro Acid');
+					delete foe.volatiles['gastroacid'];
+				}
 			}
-		  }
 		},
-	  
-		name: "Mystic Stones",
-		rating: 4.5,
-		num: 1001,
+	
+		name: "Mind Lock",
+		shortDesc: "Ao entrar, trava o oponente no último golpe usado e suprime sua habilidade.",
+		rating: 5,
+		num: 1022,
 		isNonstandard: "Future",
-	  },
+	},
+	
 
 	frostbiteveil: {
 		onSwitchInPriority: 4,
@@ -16007,51 +15994,98 @@ malediction: {
 		isNonstandard: "Future", // Defina como "Future" ou outro valor apropriado
 	},
 
-	bleedimmunity: {
+	bloodshackles: {
+		// Ao entrar em campo, ativa os efeitos
 		onStart(pokemon) {
-			this.add('-start', pokemon, 'Bleed Immunity');
+			this.add('-ability', pokemon, 'Blood Shackles');
+	
+			// Aplica Bleed no oponente
+			for (const target of pokemon.side.foe.active) {
+				if (target && target.isActive) {
+					this.add('-message', `${target.name} começa a sangrar devido à presença de ${pokemon.name}!`);
+					target.addVolatile('bleed'); // Marca o alvo com o efeito Bleed
+				}
+			}
+	
+			// Anula os efeitos dos itens do oponente
+			for (const target of pokemon.side.foe.active) {
+				if (target && target.isActive && !target.hasAbility('unaware')) {
+					this.add('-start', target, 'Embargo', '[from] ability: Blood Shackles');
+					this.singleEvent('End', target.getItem(), target.itemState, target);
+				}
+			}
 		},
 	
+		// Impede o oponente de trocar
+		onFoeTrapPokemon(pokemon) {
+			if (!pokemon.hasAbility('bloodshackles') && pokemon.isAdjacent(this.effectState.target)) {
+				pokemon.tryTrap(true);
+				this.add('-message', `${pokemon.name} está preso pelo sangue amaldiçoado de ${this.effectState.target.name}!`);
+			}
+		},
+	
+		onFoeMaybeTrapPokemon(pokemon, source) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			if (!pokemon.hasAbility('bloodshackles')) {
+				pokemon.maybeTrapped = true;
+			}
+		},
+	
+		// Causa dano residual de sangramento
 		onResidualOrder: 13,
 		onResidual(pokemon) {
 			for (const target of pokemon.side.foe.active) {
-				if (target && target.isActive) {
-					this.add('-message', `${target.name} está sangrando devido a ${pokemon.name}!`);
+				if (target && target.isActive && target.volatiles['bleed']) {
+					this.add('-message', `${target.name} continua a sangrar!`);
 					this.damage(target.baseMaxhp / (this.field.getPseudoWeather('bloodrain') ? 10 : 14), target, pokemon);
 				}
 			}
 		},
 	
+		// Remove os efeitos ao sair de campo
 		onEnd(pokemon) {
-			this.add('-end', pokemon, 'Bleed Immunity');
+			for (const target of pokemon.side.foe.active) {
+				if (target.volatiles['bleed']) {
+					delete target.volatiles['bleed'];
+					this.add('-message', `${target.name} parou de sangrar!`);
+				}
+				if (target.item) {
+					this.add('-end', target, 'Embargo');
+				}
+			}
 		},
 	
-		onModifyMove(move, pokemon) {
-			for (const target of pokemon.side.foe.active) {
-				if (target && target.isActive) {
-					// Bloqueia habilidades do oponente enquanto o Pokémon estiver em campo
-					target.addVolatile('gastroacid'); // Simula o efeito do golpe Gastro Acid
-					this.add('-ability', target, 'null', '[from] ability: Bleed Immunity');
-				}
-			}
-		},
-		isPermanent: true,
-		name: "Bleed Immunity",
-		rating: 3.5,
-		num: 999,  // Substitua pelo número que você quiser atribuir à habilidade
-	  },
+		name: "Blood Shackles",
+		shortDesc: "Impede trocas, aplica Bleed e anula itens do oponente.",
+		rating: 5,
+		num: 1023,
+		isNonstandard: "Future",
+	},
+	
+	
 
-	  reincarnation: {
+	reincarnation: {
+		// Flag para controlar se a Maldição já foi aplicada
 		onStart(pokemon) {
-			// Aplica Curse no oponente ao entrar em campo
-			for (const target of pokemon.side.foe.active) {
-				if (target && target.isActive && !target.hasType('Ghost')) {
-					this.add('-message', `${pokemon.name} lançou uma maldição sobre ${target.name}!`);
-					this.directDamage(target.maxhp / 4, target, pokemon); // Dano equivalente ao efeito de Curse
-					target.addVolatile('curse');
+			pokemon.m.reincarnationCurseApplied = false;
+		},
+	
+		// Aplica Curse no final do primeiro turno
+		onResidualOrder: 15,
+		onResidual(pokemon) {
+			if (!pokemon.m.reincarnationCurseApplied) {
+				for (const target of pokemon.side.foe.active) {
+					if (target && target.isActive && !target.hasType('Ghost')) {
+						this.add('-message', `${pokemon.name} lançou uma maldição sobre ${target.name}!`);
+						this.directDamage(target.maxhp / 4, target, pokemon); // Dano equivalente ao efeito de Curse
+						target.addVolatile('curse');
+					}
 				}
+				pokemon.m.reincarnationCurseApplied = true; // Marca que o efeito foi aplicado
 			}
 		},
+	
 		// Impede o oponente de trocar, igual ao Shadow Tag
 		onFoeTrapPokemon(pokemon) {
 			if (!pokemon.hasAbility('phantomdoom') && pokemon.isAdjacent(this.effectState.target)) {
@@ -16060,6 +16094,7 @@ malediction: {
 			}
 		},
 	
+		// Reencarnação ao desmaiar um oponente
 		onSourceFaint(target, source, effect) {
 			if (!source || !target) return;
 	
@@ -16085,10 +16120,12 @@ malediction: {
 		},
 	
 		name: "Reincarnation",
+		shortDesc: "Aplica Curse no final do 1º turno, impede trocas e reencarna inimigos derrotados.",
 		rating: 5,
 		num: 1007,
-		isNonstandard: "Future", // Defina como "Future" ou outro valor apropriado
+		isNonstandard: "Future",
 	},
+	
 
 	ironwill: {
 		onModifyDamage(damage, source, target, move) {
@@ -16217,131 +16254,140 @@ malediction: {
 		isNonstandard: "Future",
 	  },
 	
-	  mindcontrol: {
-		name: "Mind Control",
-		rating: 4.5,
-		num: 1010, // Número pode ser ajustado conforme necessário
-		isNonstandard: "Future",
-		shortDesc: "Impede trocas. Após 5 turnos, convence o Pokémon oponente a se juntar à equipe.",
-		
-		// Impede o oponente de trocar enquanto este Pokémon estiver em campo
-		onFoeTrapPokemon(pokemon) {
-		  if (this.effectState.target !== pokemon) {
-			this.add('-message', `${pokemon.name} não pode escapar da influência de Mind Control!`);
-		  }
-		  pokemon.trapped = true;
-		},
-	
-		// Inicializa o contador ao entrar em campo
+	  mindcorruption: {
+		// Flag para controlar o número de turnos
 		onStart(pokemon) {
-		  this.add('-ability', pokemon, 'Mind Control');
-		  pokemon.abilityState.mindcontrolTurns = 0;
+			pokemon.m.mindCorruptionTurns = 0;
 		},
 	
-		// A cada turno, aumenta o contador e exibe a contagem para os jogadores
-		onResidualOrder: 5,
+		// Contagem de turnos e ativação do efeito no final do 3º turno
+		onResidualOrder: 14,
 		onResidual(pokemon) {
-		  if (!pokemon.abilityState.mindcontrolUsed) {
-			pokemon.abilityState.mindcontrolTurns++;
-			this.add('-message', `Mind Control: ${pokemon.abilityState.mindcontrolTurns}/5 turnos completos!`);
-		  }
+			pokemon.m.mindCorruptionTurns++;
 	
-		  // Se atingir 5 turnos, convence o oponente a mudar de equipe
-		if (pokemon.abilityState.mindcontrolTurns >= 5 && !pokemon.abilityState.mindcontrolUsed) {
-    		const foe = pokemon.side.foe.active[0]; // Obtém o Pokémon adversário ativo
-    		if (foe && !foe.fainted) {
-        this.add('-message', `${foe.name} foi completamente dominado por Mind Control e mudou de equipe!`);
-        
-        // Faz o Pokémon adversário sair do campo como se estivesse trocando
-        foe.switchFlag = true;
-        
-        // Marca que Mind Control foi usado para não ativar mais de uma vez
-        pokemon.abilityState.mindcontrolUsed = true;
-    	}
-		}
-		}
+			if (pokemon.m.mindCorruptionTurns === 3) {
+				for (const target of pokemon.side.foe.active) {
+					if (target && target.isActive) {
+						this.add('-message', `${target.name} foi completamente corrompido pela mente de ${pokemon.name}!`);
+						target.addVolatile('trapped'); // Impede a troca
+						target.addVolatile('disableSwapMoves'); // Impede moves de troca
+					}
+				}
+			}
 		},
+	
+		// Cria um Volatile para bloquear movimentos de troca
+		onTryMovePriority: -1,
+		onTryMove(pokemon, target, move) {
+			const swapMoves = ['teleport', 'uturn', 'voltswitch', 'partingshot', 'flipturn', 'batonpass'];
+	
+			if (pokemon.volatiles['disableSwapMoves'] && swapMoves.includes(move.id)) {
+				this.add('-fail', pokemon, move, '[from] ability: Mind Corruption');
+				return false;
+			}
+		},
+	
+		name: "Mind Corruption",
+		shortDesc: "Após 3 turnos, impede a troca do oponente e bloqueia moves de troca.",
+		rating: 5,
+		num: 1018,
+		isNonstandard: "Future",
+	},
+	
+	
 
-		primalflames: {
-			shortDesc: "Com Red Orb, dobra o poder dos moves. Com Sunny Day, anula habilidades do oponente.",
-			name: "Primal Flames",
-			rating: 4.5,
-			num: 1017, // Número pode ser ajustado conforme necessário
-			isNonstandard: "Future",
-		
-			onModifyMovePriority: -1,
-			onModifyMove(move, pokemon) {
-			  if (pokemon.item === 'redorb') {
+	primalflames: {
+		shortDesc: "Com Red Orb, dobra o poder dos moves. Sob Sunny Day, suprime habilidades e reduz a precisão do oponente.",
+		name: "Primal Flames",
+		rating: 4.5,
+		num: 1017, // Número pode ser ajustado conforme necessário
+		isNonstandard: "Future",
+	
+		// Dobra o poder dos movimentos se estiver segurando Red Orb
+		onModifyMovePriority: -1,
+		onModifyMove(move, pokemon) {
+			if (pokemon.item === 'redorb') {
 				move.basePower *= 2;
-			  }
-			},
-		
-			// Ativação da habilidade ao entrar em campo
-			onStart(pokemon) {
-			  if (this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) {
+			}
+		},
+	
+		// Ativação da habilidade ao entrar em campo
+		onPreStart(pokemon) {
+			if (this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) {
 				this.add('-ability', pokemon, 'Primal Flames');
 				this.add('-message', `${pokemon.name} suprimiu todas as habilidades do oponente!`);
-		
 				pokemon.abilityState.ending = false;
+	
 				const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
-		
 				for (const target of this.getAllActive()) {
-				  if (target.hasItem('Ability Shield')) {
-					this.add('-block', target, 'item: Ability Shield');
-					continue;
-				  }
-				  if (target.volatiles['commanding']) continue; // Evita interação com Tatsugiri + Dondozo
-				  if (target.illusion) {
-					this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, pokemon, 'primalflames');
-				  }
-				  if (target.volatiles['slowstart']) {
-					delete target.volatiles['slowstart'];
-					this.add('-end', target, 'Slow Start', '[silent]');
-				  }
-				  if (strongWeathers.includes(target.getAbility().id)) {
-					this.singleEvent('End', this.dex.abilities.get(target.getAbility().id), target.abilityState, target, pokemon, 'primalflames');
-				  }
-				}
-			  }
-			},
-		
-			// Mantém a supressão de habilidades ao trocar de Pokémon
-			onAnySwitchIn(pokemon) {
-			  if (this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) {
-				this.add('-message', `${pokemon.name} suprimiu todas as habilidades do oponente!`);
-		
-				for (const target of this.getAllActive()) {
-				  if (target !== pokemon) {
-					if (!target.getAbility().isPermanent) {
-					  this.singleEvent('End', target.getAbility(), target.abilityState, target);
+					if (target.hasItem('Ability Shield')) {
+						this.add('-block', target, 'item: Ability Shield');
+						continue;
 					}
-				  }
+					if (target.volatiles['commanding']) continue; // Evita interação com Tatsugiri + Dondozo
+					if (target.illusion) {
+						this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, pokemon, 'primalflames');
+					}
+					if (target.volatiles['slowstart']) {
+						delete target.volatiles['slowstart'];
+						this.add('-end', target, 'Slow Start', '[silent]');
+					}
+					if (strongWeathers.includes(target.getAbility().id)) {
+						this.singleEvent('End', this.dex.abilities.get(target.getAbility().id), target.abilityState, target, pokemon, 'primalflames');
+					}
 				}
-			  }
-			},
-		
-			// Quando o usuário sai, as habilidades voltam ao normal
-			onEnd(source) {
-			  if (source.transformed) return;
-		
-			  for (const pokemon of this.getAllActive()) {
+			}
+		},
+	
+		// Mantém a supressão de habilidades ao trocar de Pokémon enquanto Sunny Day estiver ativo
+		onAnySwitchIn(pokemon) {
+			if (this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) {
+				this.add('-message', `${pokemon.name} continua a suprimir todas as habilidades do oponente!`);
+				for (const target of this.getAllActive()) {
+					if (target !== pokemon && !target.getAbility().isPermanent) {
+						this.singleEvent('End', target.getAbility(), target.abilityState, target);
+					}
+				}
+			}
+		},
+	
+		// Efeito adicional: No final de cada turno, reduz a precisão do oponente em 1 estágio
+		onResidualOrder: 15,
+		onResidual(pokemon) {
+			for (const target of pokemon.side.foe.active) {
+				if (target && target.isActive) {
+					this.boost({ accuracy: -1 }, target, pokemon);
+					this.add('-message', `${target.name} está tendo dificuldade em acertar seus golpes devido ao calor intenso de ${pokemon.name}!`);
+				}
+			}
+		},
+	
+		// Quando o usuário sai, as habilidades voltam ao normal
+		onEnd(source) {
+			if (source.transformed) return;
+	
+			// Verifica se ainda há outro Pokémon com a mesma habilidade para evitar reativação prematura
+			for (const pokemon of this.getAllActive()) {
 				if (pokemon !== source && pokemon.hasAbility('Primal Flames')) {
-				  return;
+					return;
 				}
-			  }
-		
-			  this.add('-end', source, 'ability: Primal Flames');
-		
-			  if (source.abilityState.ending) return;
-			  source.abilityState.ending = true;
-		
-			  for (const pokemon of this.getAllActive()) {
+			}
+	
+			this.add('-end', source, 'ability: Primal Flames');
+	
+			// Marca a habilidade como terminada para que Pokémon#ignoringAbility pare de ignorá-la
+			if (source.abilityState.ending) return;
+			source.abilityState.ending = true;
+	
+			// Restaura habilidades dos oponentes
+			for (const pokemon of this.getAllActive()) {
 				if (!pokemon.getAbility().isPermanent) {
-				  this.singleEvent('Start', pokemon.getAbility(), pokemon.abilityState, pokemon);
+					this.singleEvent('Start', pokemon.getAbility(), pokemon.abilityState, pokemon);
 				}
-			  }
-			},
-		  },
+			}
+		},
+	},
+	
 		
 		  toxicreign: {
 			shortDesc: "Contato = Bad Poison; Poison causa dano dobrado; Cura 100% se envenenado desmaiar.",
@@ -16499,6 +16545,10 @@ malediction: {
 			  }
 			},
 		  },
+		
+		
+		
+		
 	
 	
 
