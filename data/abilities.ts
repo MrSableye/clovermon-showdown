@@ -35,6 +35,7 @@ Ratings and how they work:
 import {Pokemon} from "../sim";
 import {FS} from "../sim";
 
+
 export const Abilities: {[abilityid: string]: AbilityData} = {
 	noability: {
 		isNonstandard: "Past",
@@ -16254,45 +16255,86 @@ malediction: {
 		isNonstandard: "Future",
 	  },
 	
+	  
+	  
 	  mindcorruption: {
-		// Flag para controlar o número de turnos
+		onFoeTrapPokemon(pokemon) {
+			
+			if (!pokemon.isAdjacent(this.effectState.target)) return;
+			if (pokemon.isGrounded()) {
+				pokemon.tryTrap(true);
+			}
+		},
+		onFoeMaybeTrapPokemon(pokemon, source) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			if (pokemon.isGrounded(!pokemon.knownType)) { // Negate immunity if the type is unknown
+				pokemon.maybeTrapped = true;
+			}
+		},
+		// Ao entrar em campo, inicia o contador de turnos para cada inimigo
 		onStart(pokemon) {
-			pokemon.m.mindCorruptionTurns = 0;
+		  for (const target of pokemon.side.foe.active) {
+			if (target && target.isActive) {
+			  this.add('-message', `${pokemon.name} começa a corromper a mente de ${target.name}!`);
+			  
+			  // Inicializa mindCorruptionTurns se não existir
+			  if (!(target as any).mindCorruptionTurns) {
+				(target as any).mindCorruptionTurns = 0; // Inicia o contador para cada alvo
+			  }
+			}
+		  }
 		},
-	
-		// Contagem de turnos e ativação do efeito no final do 3º turno
-		onResidualOrder: 14,
+	  
+		// A cada turno, aumenta o contador de turnos do inimigo que ficou no campo
 		onResidual(pokemon) {
-			pokemon.m.mindCorruptionTurns++;
-	
-			if (pokemon.m.mindCorruptionTurns === 3) {
-				for (const target of pokemon.side.foe.active) {
-					if (target && target.isActive) {
-						this.add('-message', `${target.name} foi completamente corrompido pela mente de ${pokemon.name}!`);
-						target.addVolatile('trapped'); // Impede a troca
-						target.addVolatile('disableSwapMoves'); // Impede moves de troca
-					}
-				}
+		  for (const target of pokemon.side.foe.active) {
+			if (target && target.isActive) {
+			  // Verifica e inicializa mindCorruptionTurns se necessário
+			  if (typeof (target as any).mindCorruptionTurns !== 'number') {
+				(target as any).mindCorruptionTurns = 0; // Inicializa caso não exista
+			  }
+			  (target as any).mindCorruptionTurns++;
+	  
+			  this.add('-message', `${target.name} está sob influência da corrupção mental (${(target as any).mindCorruptionTurns}/5 turnos).`);
+	  
+			  // Se o contador chegar a 5, converte o Pokémon inimigo para o lado aliado
+			  if ((target as any).mindCorruptionTurns >= 5) {
+				this.add('-message', `${target.name} foi completamente corrompido e agora luta pelo lado de ${pokemon.side.name}!`);
+	  
+				const foeSide = target.side;
+				const allySide = pokemon.side;
+	  
+				// Criação do novo Pokémon na equipe aliada
+				const clonedPokemon = new Pokemon({
+				  ...target.set,
+				  name: target.name,
+				}, allySide);
+	  
+				// Adiciona o Pokémon clonado à equipe aliada
+				clonedPokemon.position = allySide.pokemon.length;
+				allySide.pokemon.push(clonedPokemon);
+				allySide.pokemonLeft += 1;
+	  
+				this.add('teamsize', allySide.id, allySide.pokemon.length);
+				this.add('-message', `${target.name} agora pertence à equipe de ${pokemon.side.name}!`);
+	  
+				// Remove o Pokémon original da equipe adversária
+				foeSide.pokemonLeft -= 1;
+				target.faint();
+			  }
 			}
+		  }
 		},
-	
-		// Cria um Volatile para bloquear movimentos de troca
-		onTryMovePriority: -1,
-		onTryMove(pokemon, target, move) {
-			const swapMoves = ['teleport', 'uturn', 'voltswitch', 'partingshot', 'flipturn', 'batonpass'];
-	
-			if (pokemon.volatiles['disableSwapMoves'] && swapMoves.includes(move.id)) {
-				this.add('-fail', pokemon, move, '[from] ability: Mind Corruption');
-				return false;
-			}
-		},
-	
+	  
 		name: "Mind Corruption",
-		shortDesc: "Após 3 turnos, impede a troca do oponente e bloqueia moves de troca.",
+		shortDesc: "Se o inimigo ficar 5 turnos consecutivos no campo, ele muda de equipe.",
 		rating: 5,
-		num: 1018,
+		num: 1020,
 		isNonstandard: "Future",
-	},
+	  },
+	  
+	  
 	
 	
 

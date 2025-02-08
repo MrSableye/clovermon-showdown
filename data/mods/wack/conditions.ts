@@ -865,7 +865,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		onModifyAccuracy(accuracy) {
 			if (typeof accuracy !== 'number') return;
 			this.debug('megax - decreasing accuracy');
-			return this.chainModify(0.4);
+			return this.chainModify(0.3);
 		},
 	},
 	
@@ -921,9 +921,19 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 	},
 
 	maltina:{
-		onStart(source) {
-			this.field.setWeather('snow');
-		},
+		onFoeTryMove(target, source, move) {
+			const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+			if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) {
+				return;
+			}
+
+			const dazzlingHolder = this.effectState.target;
+			if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+				this.attrLastMove('[still]');
+				this.add('cant', dazzlingHolder, 'ability: Dazzling', move, '[of] ' + target);
+				return false;
+			}
+		}
 	}, 
 
 	mentum:{
