@@ -53242,7 +53242,7 @@ tamanaut: {
 		types: ["Dark"],
 		gender: "M", 
 		baseStats: {hp: 110, atk: 60, def: 50, spa: 120, spd: 80, spe: 100},
-		abilities: {0: "Bleed Immunity", 1: "Arena Trap", H: "Dark Aura"},
+		abilities: {0: "Blood Shackles", 1: "Arena Trap", H: "Dark Aura"},
 		heightm: 1.9,
 		weightkg: 85,
 		color: "Blue",
