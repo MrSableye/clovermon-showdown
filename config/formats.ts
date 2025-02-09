@@ -1900,6 +1900,7 @@ export const Formats: FormatList = [
 			'Catalyst',
 			'Transfusion',
 			'More Room',
+			'Hidden Power',
 			'Cocken + Ancient Power',
 			'Fuk U',
 			'Stink Bomb',
