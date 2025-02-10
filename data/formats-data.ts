@@ -11311,6 +11311,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	cofferule: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	shelbert: {
 		tier: "Illegal",
 		isNonstandard: "Future",	

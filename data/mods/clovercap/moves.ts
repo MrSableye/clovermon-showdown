@@ -417,8 +417,25 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		contestType: "Clever",
 	},
 	multiattack: {
-		inherit: true,
-		isNonstandard: null,
+		num: 449,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Multi Attack",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		onModifyType(move, pokemon) {
+			if (pokemon.ignoringItem()) return;
+			const item = pokemon.getItem();
+			if (item.id && item.onPlate && !item.onMemory) {
+				move.type = item.onPlate;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Beautiful",
 	},
 	needlearm: {
 		inherit: true,
