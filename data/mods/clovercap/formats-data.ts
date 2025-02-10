@@ -3225,6 +3225,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	cofferule: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	doomsday: {
 		inherit: true,
 		isNonstandard: null,
