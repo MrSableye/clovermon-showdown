@@ -53272,7 +53272,7 @@ tamanaut: {
 		types: ["Fire", "Flying"],
 		gender: "M", 
 		baseStats: {hp: 100, atk: 125, def: 90, spa: 76, spd: 85, spe: 121},
-		abilities: {0: "Primal Flames", 1: "Adaptability", H: "Gale Wings"},
+		abilities: {0: "Overwhelming Fumes", 1: "Adaptability", H: "Gale Wings"},
 		heightm: 2.0,
 		weightkg: 95,
 		color: "Black",

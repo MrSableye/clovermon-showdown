@@ -893,22 +893,24 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 	  },
 
 	blazer:{
-		onStart(pokemon) {
-			const sideConditions = [
-				'spikes',
-				'toxicspikes',
-				'stealthrock',
-				'stickyweb',
-				'gmaxsteelsurge',
-				'sleazyspores',
-				'shattershard',
-			];
-			for (const condition of sideConditions) {
-				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
-					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
-				}
+		onBeforeMove(source, target, move) {
+			if (move.category === 'Status') return;
+			const sunMoves = ['solarbeam', 'solarblade'];
+			const rainMoves = ['thunder', 'hurricane'];
+			const isInRain = ['raindance', 'primordialsea'].includes(target.effectiveWeather());
+			const isInSun = ['sunnyday', 'desolateland'].includes(target.effectiveWeather());
+			const isInHail = ['hail'].includes(target.effectiveWeather());
+
+			if (!isInSun && (sunMoves.includes(move.id) || move.type === 'Fire')) {
+				this.field.setWeather('sunnyday');
+			} else if (!isInRain && (rainMoves.includes(move.id) || move.type === 'Water')) {
+				this.field.setWeather('raindance');
+			} else if (!isInHail && move.type === 'Ice') {
+				this.field.setWeather('hail');
+			} else if (move.type === 'Normal' && move.id !== 'weatherball') {
+				this.field.clearWeather();
 			}
-		},
+		}
 	},
 
 	gengold:{
