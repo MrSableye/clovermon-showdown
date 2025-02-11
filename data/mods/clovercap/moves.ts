@@ -431,6 +431,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			if (item.id && item.onPlate && !item.onMemory) {
 				move.type = item.onPlate;
 			}
+			else move.type = this.runEvent('Memory', pokemon, null, move, 'Normal');
 		},
 		secondary: null,
 		target: "normal",
