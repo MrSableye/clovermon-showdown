@@ -957,8 +957,8 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 
 	maldade:{
 		onModifyMove(move) {
-			move.infiltrates = true;
-		}
+			if (move.flags['mirror']) delete move.flags['protect'];
+		},
 	},
 
 	galequake:{
