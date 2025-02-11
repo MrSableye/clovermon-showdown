@@ -16357,7 +16357,7 @@ malediction: {
 		onPreStart(pokemon) {
 			if (!this.field.isWeather('sunnyday') || pokemon.transformed) return;
 	
-			this.add('-ability', pokemon, 'Scorching Pressure');
+			this.add('-ability', pokemon, 'Primal Flames');
 			pokemon.abilityState.ending = false;
 			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
 	
@@ -16371,14 +16371,14 @@ malediction: {
 					continue;
 				}
 				if (target.illusion) {
-					this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, pokemon, 'scorchingpressure');
+					this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, pokemon, 'primalflames');
 				}
 				if (target.volatiles['slowstart']) {
 					delete target.volatiles['slowstart'];
 					this.add('-end', target, 'Slow Start', '[silent]');
 				}
 				if (strongWeathers.includes(target.getAbility().id)) {
-					this.singleEvent('End', this.dex.abilities.get(target.getAbility().id), target.abilityState, target, pokemon, 'scorchingpressure');
+					this.singleEvent('End', this.dex.abilities.get(target.getAbility().id), target.abilityState, target, pokemon, 'primalflames');
 				}
 			}
 	
@@ -16394,18 +16394,18 @@ malediction: {
 
 		onModifyMove(move, attacker) {
 			if (attacker.hasItem('redorb')) {
-				this.debug('Scorching Pressure boost');
+				this.debug('Primal Flames boost');
 				move.basePower = this.modify(move.basePower, 2); // Dobra o poder dos golpes
 			}
 		},
 		onEnd(source) {
 			if (source.transformed) return;
 			for (const pokemon of this.getAllActive()) {
-				if (pokemon !== source && pokemon.hasAbility('Scorching Pressure')) {
+				if (pokemon !== source && pokemon.hasAbility('Primal Flames')) {
 					return;
 				}
 			}
-			this.add('-end', source, 'ability: Scorching Pressure');
+			this.add('-end', source, 'ability: Primal Flames');
 	
 			// Marcação para restaurar habilidades ao sair
 			if (source.abilityState.ending) return;
