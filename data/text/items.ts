@@ -2725,6 +2725,14 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Mariopartite",
 		desc: "If held by a Blobbos-Mario Party, this item allows it to Mega Evolve in battle.",
 	},
+	candycornite: {
+		name: "Candycornite",
+		desc: "If held by a Blobbos-Candycorn, this item allows it to Mega Evolve in battle.",
+	},
+	fishite: {
+		name: "Fishite",
+		desc: "If held by a Blobbos-Fish, this item allows it to Mega Evolve in battle.",
+	},
 	parasleepite: {
 		name: "Parasleepite",
 		desc: "If held by a Blobbos-Parasleep, this item allows it to Mega Evolve in battle.",
