@@ -16352,62 +16352,48 @@ malediction: {
 	
 	
 
-	primalflames: {
-		
+	  overwhelmingfumes: {
 		onPreStart(pokemon) {
-			if (!this.field.isWeather('sunnyday') || pokemon.transformed) return;
-	
-			this.add('-ability', pokemon, 'Primal Flames');
+			if (pokemon.transformed) return;
+			this.add('-ability', pokemon, 'Overwhelming Fumes');
 			pokemon.abilityState.ending = false;
 			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
-	
 			for (const target of this.getAllActive()) {
 				if (target.hasItem('Ability Shield')) {
 					this.add('-block', target, 'item: Ability Shield');
 					continue;
 				}
-				// Não pode suprimir um Tatsugiri dentro do Dondozo
 				if (target.volatiles['commanding']) {
 					continue;
 				}
 				if (target.illusion) {
-					this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, pokemon, 'primalflames');
+					this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, pokemon, 'overwhelmingfumes');
 				}
 				if (target.volatiles['slowstart']) {
 					delete target.volatiles['slowstart'];
 					this.add('-end', target, 'Slow Start', '[silent]');
 				}
 				if (strongWeathers.includes(target.getAbility().id)) {
-					this.singleEvent('End', this.dex.abilities.get(target.getAbility().id), target.abilityState, target, pokemon, 'primalflames');
+					this.singleEvent('End', this.dex.abilities.get(target.getAbility().id), target.abilityState, target, pokemon, 'overwhelmingfumes');
 				}
 			}
+		},
 	
-			// Reduz a precisão do oponente em 30% apenas ao entrar em campo
-			for (const target of pokemon.side.foe.active) {
-				if (!target || target.fainted) continue;
-				if (target && target.isActive) {
-					this.boost({ accuracy: -1 }, target, pokemon);
-					this.add('-message', `${target.name}'s accuracy fell due to the heat!`);
-				}
+		onModifyMove(move, attacker, defender) {
+			if (defender?.hasItem('redorb')) {
+				this.debug('Overwhelming Fumes boosts move power due to Red Orb');
+				move.basePower *= 2;
 			}
 		},
-
-		onModifyMove(move, attacker) {
-			if (attacker.hasItem('redorb')) {
-				this.debug('Primal Flames boost');
-				move.basePower = this.modify(move.basePower, 2); // Dobra o poder dos golpes
-			}
-		},
+	
 		onEnd(source) {
 			if (source.transformed) return;
 			for (const pokemon of this.getAllActive()) {
-				if (pokemon !== source && pokemon.hasAbility('Primal Flames')) {
+				if (pokemon !== source && pokemon.hasAbility('Overwhelming Fumes')) {
 					return;
 				}
 			}
-			this.add('-end', source, 'ability: Primal Flames');
-	
-			// Marcação para restaurar habilidades ao sair
+			this.add('-end', source, 'ability: Overwhelming Fumes');
 			if (source.abilityState.ending) return;
 			source.abilityState.ending = true;
 			const sortedActive = this.getAllActive();
@@ -16415,8 +16401,6 @@ malediction: {
 			for (const pokemon of sortedActive) {
 				if (pokemon !== source) {
 					if (pokemon.getAbility().isPermanent) continue;
-	
-					// Restaura habilidades ao sair
 					this.singleEvent('Start', pokemon.getAbility(), pokemon.abilityState, pokemon);
 					if (pokemon.ability === "gluttony") {
 						pokemon.abilityState.gluttony = false;
@@ -16424,12 +16408,14 @@ malediction: {
 				}
 			}
 		},
-		shortDesc: "Com Red Orb, dobra o poder dos moves. Sob Sunny Day, suprime habilidades e reduz a precisão do oponente.",
-		name: "Primal Flames",
-		rating: 4.5,
-		num: 1017, // Número pode ser ajustado conforme necessário
+	
+		shortDesc: "Negates abilities; Doubles move power if the foe has Red Orb; Lowers foe's accuracy by 30% on first turn.",
+		name: "Overwhelming Fumes",
+		rating: 5,
+		num: 1020,
 		isNonstandard: "Future",
 	},
+	
 
 
 	
