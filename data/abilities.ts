@@ -15916,14 +15916,6 @@ malediction: {
 			const foe = pokemon.side.foe.active[0]; // Considerando batalhas individuais (1v1)
 			if (!foe || foe.fainted) return;
 	
-			// Supressão de habilidades, como Neutralizing Gas
-			if (foe.hasItem('Ability Shield')) {
-				this.add('-block', foe, 'item: Ability Shield');
-			} else {
-				this.add('-message', `${foe.name} teve sua habilidade suprimida!`);
-				foe.addVolatile('gastroacid');
-			}
-	
 			// Bloqueia o último golpe do oponente
 			if (foe.lastMove) {
 				foe.addVolatile('encore');
@@ -15933,25 +15925,38 @@ malediction: {
 			}
 		},
 	
+		// Impede que o oponente fuja, baseado no efeito de Arena Trap
+		onFoeTrapPokemon(pokemon) {
+			if (!pokemon.isAdjacent(this.effectState.target)) return;
+			if (pokemon.isGrounded()) {
+				pokemon.tryTrap(true);
+			}
+		},
+	
+		onFoeMaybeTrapPokemon(pokemon, source) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			if (pokemon.isGrounded(!pokemon.knownType)) { // Negate immunity if the type is unknown
+				pokemon.maybeTrapped = true;
+			}
+		},
+	
 		onEnd(source) {
 			for (const foe of source.side.foe.active) {
 				if (foe.volatiles['encore']) {
 					this.add('-end', foe, 'Encore');
 					delete foe.volatiles['encore'];
 				}
-				if (foe.volatiles['gastroacid']) {
-					this.add('-end', foe, 'Gastro Acid');
-					delete foe.volatiles['gastroacid'];
-				}
 			}
 		},
 	
 		name: "Mind Lock",
-		shortDesc: "Ao entrar, trava o oponente no último golpe usado e suprime sua habilidade.",
+		shortDesc: "Trava o oponente no último golpe usado e impede fuga se estiver no chão.",
 		rating: 5,
 		num: 1022,
 		isNonstandard: "Future",
 	},
+	
 	
 
 	frostbiteveil: {
@@ -16211,49 +16216,43 @@ malediction: {
 		num: 1006, // Substitua pelo número que você quiser atribuir à habilidade
 		isNonstandard: "Future",
 	  },
+
 	  fairyenchanter: {
 		// Imunidade a golpes de prioridade
 		onTryHit(pokemon, target, move) {
-		  if (move.priority > 0) {
-			this.add('-immune', pokemon, '[from] ability: Fairy Enchanter');
-			return null;
-		  }
-		},
-	  
-		onStart(pokemon) {
-		  // Transforma o tipo do Pokémon adversário em Fada
-		  const target = pokemon.side.foe.active[0];
-		  if (target && target.isActive) {
-			const oldTypes = target.getTypes();
-			target.setType('Fairy');
-			this.add('-ability', pokemon, 'Fairy Enchanter');
-			this.add('-message', `${target.name} foi transformado em tipo Fada!`);
-			this.add('-start', target, 'typechange', 'Fairy', '[from] ability: Fairy Enchanter');
-		  }
-		},
-	  
-		onResidualOrder: 5,
-		onResidualSubOrder: 5,
-		onResidual(pokemon) {
-		  // Efeito no final de cada turno
-		  for (const target of pokemon.side.foe.active) {
-			if (target && target.isActive && target.hasType('Fairy')) {
-			  // Pokémon inimigos do tipo Fada perdem 1 estágio de ataque e ataque especial
-			  this.boost({ atk: -1, spa: -1 }, target, pokemon);
-			  this.add('-message', `${target.name} perdeu 1 estágio de ataque e ataque especial!`);
+			if (move.priority > 0) {
+				this.add('-immune', pokemon, '[from] ability: Fairy Enchanter');
+				return null;
 			}
-		  }
-	  
-		  // O usuário ganha 1 estágio de ataque e ataque especial
-		  this.boost({ atk: 1, spa: 1 }, pokemon);
-		  this.add('-message', `${pokemon.name} ganhou 1 estágio de ataque e ataque especial!`);
 		},
-	  
+	
+		// Efeito ao entrar em campo
+		onStart(pokemon) {
+			// Transforma o tipo do Pokémon adversário em Fada
+			const target = pokemon.side.foe.active[0];
+			if (target && target.isActive) {
+				const oldTypes = target.getTypes();
+				target.setType('Fairy');
+				this.add('-ability', pokemon, 'Fairy Enchanter');
+				this.add('-message', `${target.name} foi transformado em tipo Fada!`);
+				this.add('-start', target, 'typechange', 'Fairy', '[from] ability: Fairy Enchanter');
+	
+				// Reduz os estágios de ataque e ataque especial do oponente
+				this.boost({ atk: -1, spa: -1 }, target, pokemon);
+				this.add('-message', `${target.name} perdeu 1 estágio de ataque e ataque especial!`);
+	
+				// O usuário ganha 1 estágio de ataque e ataque especial
+				this.boost({ atk: 1, spa: 1 }, pokemon);
+				this.add('-message', `${pokemon.name} ganhou 1 estágio de ataque e ataque especial!`);
+			}
+		},
+	
 		name: "Fairy Enchanter",
 		rating: 4.5,
 		num: 1010, // Substitua pelo número que você quiser atribuir à habilidade
 		isNonstandard: "Future",
-	  },
+		},
+	
 	
 	  
 	  
@@ -16320,7 +16319,6 @@ malediction: {
 				this.add('-message', `${target.name} agora pertence à equipe de ${pokemon.side.name}!`);
 	  
 				// Remove o Pokémon original da equipe adversária
-				foeSide.pokemonLeft -= 1;
 				target.faint();
 			  }
 			}
@@ -16339,96 +16337,85 @@ malediction: {
 	
 
 	primalflames: {
+		
+		onPreStart(pokemon) {
+			if (!this.field.isWeather('sunnyday') || pokemon.transformed) return;
+	
+			this.add('-ability', pokemon, 'Scorching Pressure');
+			pokemon.abilityState.ending = false;
+			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
+	
+			for (const target of this.getAllActive()) {
+				if (target.hasItem('Ability Shield')) {
+					this.add('-block', target, 'item: Ability Shield');
+					continue;
+				}
+				// Não pode suprimir um Tatsugiri dentro do Dondozo
+				if (target.volatiles['commanding']) {
+					continue;
+				}
+				if (target.illusion) {
+					this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, pokemon, 'scorchingpressure');
+				}
+				if (target.volatiles['slowstart']) {
+					delete target.volatiles['slowstart'];
+					this.add('-end', target, 'Slow Start', '[silent]');
+				}
+				if (strongWeathers.includes(target.getAbility().id)) {
+					this.singleEvent('End', this.dex.abilities.get(target.getAbility().id), target.abilityState, target, pokemon, 'scorchingpressure');
+				}
+			}
+	
+			// Reduz a precisão do oponente em 30% apenas ao entrar em campo
+			for (const target of pokemon.side.foe.active) {
+				if (!target || target.fainted) continue;
+				if (target && target.isActive) {
+					this.boost({ accuracy: -1 }, target, pokemon);
+					this.add('-message', `${target.name}'s accuracy fell due to the heat!`);
+				}
+			}
+		},
+
+		onModifyMove(move, attacker) {
+			if (attacker.hasItem('redorb')) {
+				this.debug('Scorching Pressure boost');
+				move.basePower = this.modify(move.basePower, 2); // Dobra o poder dos golpes
+			}
+		},
+		onEnd(source) {
+			if (source.transformed) return;
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon !== source && pokemon.hasAbility('Scorching Pressure')) {
+					return;
+				}
+			}
+			this.add('-end', source, 'ability: Scorching Pressure');
+	
+			// Marcação para restaurar habilidades ao sair
+			if (source.abilityState.ending) return;
+			source.abilityState.ending = true;
+			const sortedActive = this.getAllActive();
+			this.speedSort(sortedActive);
+			for (const pokemon of sortedActive) {
+				if (pokemon !== source) {
+					if (pokemon.getAbility().isPermanent) continue;
+	
+					// Restaura habilidades ao sair
+					this.singleEvent('Start', pokemon.getAbility(), pokemon.abilityState, pokemon);
+					if (pokemon.ability === "gluttony") {
+						pokemon.abilityState.gluttony = false;
+					}
+				}
+			}
+		},
 		shortDesc: "Com Red Orb, dobra o poder dos moves. Sob Sunny Day, suprime habilidades e reduz a precisão do oponente.",
 		name: "Primal Flames",
 		rating: 4.5,
 		num: 1017, // Número pode ser ajustado conforme necessário
 		isNonstandard: "Future",
-	
-		// Dobra o poder dos movimentos se estiver segurando Red Orb
-		onModifyMovePriority: -1,
-		onModifyMove(move, pokemon) {
-			if (pokemon.item === 'redorb') {
-				move.basePower *= 2;
-			}
-		},
-	
-		// Ativação da habilidade ao entrar em campo
-		onPreStart(pokemon) {
-			if (this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) {
-				this.add('-ability', pokemon, 'Primal Flames');
-				this.add('-message', `${pokemon.name} suprimiu todas as habilidades do oponente!`);
-				pokemon.abilityState.ending = false;
-	
-				const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
-				for (const target of this.getAllActive()) {
-					if (target.hasItem('Ability Shield')) {
-						this.add('-block', target, 'item: Ability Shield');
-						continue;
-					}
-					if (target.volatiles['commanding']) continue; // Evita interação com Tatsugiri + Dondozo
-					if (target.illusion) {
-						this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, pokemon, 'primalflames');
-					}
-					if (target.volatiles['slowstart']) {
-						delete target.volatiles['slowstart'];
-						this.add('-end', target, 'Slow Start', '[silent]');
-					}
-					if (strongWeathers.includes(target.getAbility().id)) {
-						this.singleEvent('End', this.dex.abilities.get(target.getAbility().id), target.abilityState, target, pokemon, 'primalflames');
-					}
-				}
-			}
-		},
-	
-		// Mantém a supressão de habilidades ao trocar de Pokémon enquanto Sunny Day estiver ativo
-		onAnySwitchIn(pokemon) {
-			if (this.field.isWeather('sunnyday') || this.field.isWeather('desolateland')) {
-				this.add('-message', `${pokemon.name} continua a suprimir todas as habilidades do oponente!`);
-				for (const target of this.getAllActive()) {
-					if (target !== pokemon && !target.getAbility().isPermanent) {
-						this.singleEvent('End', target.getAbility(), target.abilityState, target);
-					}
-				}
-			}
-		},
-	
-		// Efeito adicional: No final de cada turno, reduz a precisão do oponente em 1 estágio
-		onResidualOrder: 15,
-		onResidual(pokemon) {
-			for (const target of pokemon.side.foe.active) {
-				if (target && target.isActive) {
-					this.boost({ accuracy: -1 }, target, pokemon);
-					this.add('-message', `${target.name} está tendo dificuldade em acertar seus golpes devido ao calor intenso de ${pokemon.name}!`);
-				}
-			}
-		},
-	
-		// Quando o usuário sai, as habilidades voltam ao normal
-		onEnd(source) {
-			if (source.transformed) return;
-	
-			// Verifica se ainda há outro Pokémon com a mesma habilidade para evitar reativação prematura
-			for (const pokemon of this.getAllActive()) {
-				if (pokemon !== source && pokemon.hasAbility('Primal Flames')) {
-					return;
-				}
-			}
-	
-			this.add('-end', source, 'ability: Primal Flames');
-	
-			// Marca a habilidade como terminada para que Pokémon#ignoringAbility pare de ignorá-la
-			if (source.abilityState.ending) return;
-			source.abilityState.ending = true;
-	
-			// Restaura habilidades dos oponentes
-			for (const pokemon of this.getAllActive()) {
-				if (!pokemon.getAbility().isPermanent) {
-					this.singleEvent('Start', pokemon.getAbility(), pokemon.abilityState, pokemon);
-				}
-			}
-		},
 	},
+
+
 	
 		
 		  toxicreign: {
@@ -16507,40 +16494,40 @@ malediction: {
 			num: 1020, // Número pode ser ajustado conforme necessário
 			isNonstandard: "Future",
 		
-			// Ao entrar em campo, invoca Hail/Snow
-			onStart(pokemon) {
-			  this.add('-ability', pokemon, 'Permafrost');
-			  this.field.setWeather('snow'); // "snow" substituiu "hail" na mecânica moderna
+			onStart(source) {
+				this.field.setWeather('snow');
 			},
-		
-			// Enquanto Hail/Snow estiver ativo
-			onModifyDefPriority: 6,
-			onModifyDef(def, pokemon) {
-			  if (this.field.isWeather('snow')) {
-				return this.chainModify(1.5); // +1 estágio oculto equivale a 1.5x na fórmula do jogo
-			  }
-			},
-			onModifySpDPriority: 6,
-			onModifySpD(spd, pokemon) {
-			  if (this.field.isWeather('snow')) {
-				return this.chainModify(1.5);
-			  }
-			},
-		
-			// Reduz a precisão dos moves do oponente em 30% durante Snow
-			onModifyAccuracy(accuracy, target, source, move) {
-			  if (this.field.isWeather('snow') && typeof accuracy === 'number') {
-				return this.chainModify(0.7); // Reduz precisão para 70%
-			  }
-			},
-		
-			// No final de cada turno, oponente tem 30% de chance de ser congelado
 			onResidual(target) {
-			  const foe = target.side.foe.active[0]; // Oponente ativo
-			  if (this.field.isWeather('snow') && foe && this.randomChance(3, 10)) {
-				this.add('-message', `${foe.name} foi congelado pelo frio intenso!`);
-				foe.trySetStatus('frz', target);
-			  }
+				if (this.field.isWeather('snow')) {
+					for (const pokemon of target.side.active) {
+						if (this.randomChance(3, 10)) {
+							pokemon.trySetStatus('frz', target);
+						}
+					}
+				}
+			},
+			onModifyAccuracyPriority: -1,
+			onModifyAccuracy(accuracy, target, source, move) {
+				if (typeof accuracy === 'number') {
+					return this.chainModify([7, 10]); // Reduz a precisão do oponente em 30%
+				}
+			},
+			onModifyDefPriority: 5,
+			onModifySpDPriority: 5,
+			onModifyDef(def, pokemon) {
+				if (this.field.isWeather('snow')) {
+					return this.chainModify(1.5); // Aumento oculto de 1 estágio na Def
+				}
+			},
+			onModifySpD(spd, pokemon) {
+				if (this.field.isWeather('snow')) {
+					return this.chainModify(1.5); // Aumento oculto de 1 estágio na Sp. Def
+				}
+			},
+			onTryAddVolatile(status, target) {
+				if (this.field.isWeather('snow') && this.dex.conditions.get(status).status) {
+					return false; // Imunidade a moves de status sob Snow
+				}
 			},
 		  },
 	
@@ -16586,14 +16573,230 @@ malediction: {
 				thunderMove.basePower *= 3; // Multiplica o poder de Thunder por 3
 			  }
 			},
-		  },
-		
-		
-		
-		
-	
-	
 
+		  },
+
+		  lovetrap: {
+			// No final do turno, o adversário fica Infatuated e Confused
+			onResidualOrder: 25,
+			onResidualSubOrder: 1,
+			onResidual(pokemon) {
+				for (const target of pokemon.foes()) {
+					if (!target.volatiles['attract']) {
+						target.addVolatile('attract', pokemon);
+					}
+					if (!target.volatiles['confusion']) {
+						target.addVolatile('confusion', pokemon);
+					}
+				}
+			},
+		
+			// Se o oponente acertar esse Pokémon com um golpe, ele é forçado a trocar
+			onDamagingHit(damage, target, source, move) {
+				if (source.hp > 0 && source.side.pokemon.length > 1) {
+					source.forceSwitchFlag = true; // Força a troca do oponente
+				} else if (source.hp > 0) {
+					// Se for o último Pokémon do time, reduz o Ataque e o Ataque Especial dele
+					this.add('-message', `${source.name} não pode fugir e está ficando mais fraco!`);
+					this.boost({ atk: -1, spa: -1 }, source, target, this.dex.abilities.get('lovetrap'));
+				}
+			},
+		
+			shortDesc: "Fim do turno: adversário fica Infatuated e Confused. Se atacar, é forçado a trocar. Último mon perde 1 estágio de Atk e SpA.",
+			name: "Love Trap",
+			rating: 5,
+			num: 1022, // Número pode ser ajustado conforme necessário
+			isNonstandard: "Future",
+		},
+
+		supremacy: {
+			// Todos os golpes usados por esse Pokémon são Critical Hits garantidos
+			onModifyCritRatio(critRatio) {
+				return 5; // 5 é o valor máximo de crit ratio, garantindo sempre um Critical Hit
+			},
+		
+			// Imune a efeitos secundários de golpes do oponente
+			onModifySecondaries(secondaries, target, source, move) {
+				if (target !== source) {
+					this.debug('Supremacy bloqueia efeitos secundários');
+					return secondaries.filter(effect => !effect.self && !effect.status && !effect.boosts);
+				}
+			},
+		
+			// Imune a golpes de status (Will-O-Wisp, Toxic, Thunder Wave, etc.)
+			onTryHit(target, source, move) {
+				if (move.category === 'Status') {
+					this.add('-immune', target, '[from] ability: Supremacy');
+					return null;
+				}
+			},
+		
+			// Moves de prioridade contra ele têm precisão reduzida para 30%
+			onModifyAccuracy(accuracy, target, source, move) {
+				if (move.priority > 0) {
+					this.debug('Supremacy reduz precisão de moves de prioridade');
+					return 30;
+				}
+			},
+		
+			// Imune a qualquer efeito que impeça a troca (trapping effects)
+			onTrapPokemon(pokemon) {
+				pokemon.trapped = false;
+				this.add('-message', `${pokemon.name} é imune a efeitos de aprisionamento devido à Supremacy!`);
+			},
+		
+			// Imune aos efeitos de Nevasca e Tempestade de Areia
+			onWeather(target, source, effect) {
+				if (effect.id === 'hail' || effect.id === 'sandstorm') {
+					this.add('-immune', target, '[from] ability: Supremacy');
+					return null;
+				}
+			},
+		
+			// Não sofre dano de Hazards como Stealth Rock, Spikes, Toxic Spikes, etc.
+			onDamage(damage, target, source, effect) {
+				if (effect && effect.id && ['stealthrock', 'spikes', 'toxicspikes', 'stickyweb'].includes(effect.id)) {
+					this.add('-immune', target, '[from] ability: Supremacy');
+					return 0; // Impede o dano
+				}
+				return damage;
+			},
+		
+			// Invoca Endure ao entrar no campo
+			onSwitchInPriority: 4,
+			onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('Endure'), pokemon);
+			},
+		
+			// Invoca Bulk Up no final do primeiro turno
+			onResidual(pokemon) {
+				// Verifica se o Pokémon já ativou o efeito
+				if (pokemon.abilityState.bulkUpUsed) return;
+		
+				// Usa Bulk Up no final do primeiro turno
+				this.actions.useMove('bulkup', pokemon);
+				this.add('-message', `${pokemon.name} fortalece seu corpo com Bulk Up!`);
+		
+				// Marca que o efeito já foi ativado para não se repetir
+				pokemon.abilityState.bulkUpUsed = true;
+			},
+		
+			shortDesc: "Todos os golpes são críticos. Imune a efeitos secundários, golpes de status, trapping, weather, hazards, e moves prioritários têm precisão 30% contra ele. Invoca Endure ao entrar e Bulk Up no final do 1º turno.",
+			name: "Supremacy",
+			rating: 5,
+			num: 1024, // Número pode ser ajustado conforme necessário
+			isNonstandard: "Future",
+		},
+
+		abilitylock: {
+			// Quando o Pokémon com Ability Lock entra, muda a habilidade do oponente para Normalize
+			onStart(pokemon) {
+				let target = pokemon.side.foe.active[0]; // Seleciona o oponente ativo
+				if (!target || target.ability === 'truant') return; // Se já for Truant, não faz nada
+		
+				this.add('-ability', pokemon, 'Ability Lock');
+				this.add('-message', `${target.name} teve sua habilidade alterada para Normalize!`);
+				target.setAbility('normalize');
+		
+				// Define um marcador para ativar a mudança para Truant no turno seguinte
+				target.addVolatile('abilitylock');
+			},
+		
+			// No turno seguinte, a habilidade do oponente muda para Truant
+			onResidualOrder: 5,
+			onResidual(pokemon) {
+				let target = pokemon.side.foe.active[0];
+				if (!target || !target.volatiles['abilitylock']) return;
+		
+				this.add('-message', `${target.name} agora tem a habilidade Truant!`);
+				target.setAbility('truant');
+				target.removeVolatile('abilitylock'); // Remove o marcador após a mudança
+			},
+		
+			// Quando o oponente sai, sua habilidade original volta
+			onSwitchOut(pokemon) {
+				if (pokemon.ability === 'truant') {
+					this.add('-message', `${pokemon.name} recuperou sua habilidade original!`);
+					pokemon.ability = pokemon.baseAbility;
+				}
+			},
+		
+			shortDesc: "Ao entrar, muda a habilidade do oponente para Normalize e, no turno seguinte, para Truant até que ele saia.",
+			name: "Ability Lock",
+			rating: 5,
+			num: 1040, // Número ajustável
+			isNonstandard: "Future",
+		},
+
+		rainfirestorm: {
+			// Ao entrar em campo, invoca Rain Dance
+			onStart(source) {
+				for (const action of this.queue) {
+					if (action.choice === 'runPrimal' && action.pokemon === source && source.species.id === 'kyogre') return;
+					if (action.choice !== 'runSwitch' && action.choice !== 'runPrimal') break;
+				}
+				this.field.setWeather('raindance');
+			},
+		
+			// Quando o Pokémon usar um movimento do tipo Fire, se Rain Dance estiver ativo, invoca Thunder no final do turno
+			onAfterMoveSecondarySelf(pokemon, target, move) {
+				if (this.field.isWeather('rain') && move.type === 'Fire') {
+					// Invoca Thunder ao final do turno, após o movimento
+					this.add('-message', `${pokemon.name} usa a habilidade Rainfirestorm e invoca Thunder!`);
+					this.actions.useMove(Dex.moves.get('thunder'), pokemon); // Usa Thunder automaticamente
+					const thunderMove = this.dex.getActiveMove('thunder');
+				}
+			},
+		
+			name: "Rainfirestorm",
+			rating: 4.5,
+			num: 1021, // Número fictício, ajuste conforme necessário
+			isNonstandard: "Future",
+		},
+		
+		divinecore: {
+		// Muda o tipo do Pokémon baseado na Plate equipada
+		onStart(pokemon) {
+		const item = pokemon.getItem();
+		if (item.onPlate) {
+			this.add('-message', `${pokemon.name} sente o poder divino da ${item.name}!`);
+			pokemon.setType(item.onPlate); // Muda o tipo do Pokémon baseado na Plate equipada
+			this.add('-start', pokemon, 'typechange', item.onPlate, '[from] ability: Divine Core');
+		}
+		},
+
+		// Todos os moves Normal se tornam do tipo da Plate
+		onModifyType(move, pokemon) {
+		const item = pokemon.getItem();
+		if (move.type === 'Normal' && item.onPlate) {
+			move.type = item.onPlate;
+			this.add('-message', `${pokemon.name} converteu ${move.name} para o tipo ${item.onPlate}!`);
+		}
+		},
+
+		// Impede que o item do Pokémon seja removido ou trocado
+		onTakeItem(item, pokemon, source) {
+		if (pokemon.ability === 'divinecore') {
+			this.add('-fail', pokemon, 'move: Trick');
+			return false; // Impede remoção/troca do item
+		}
+		},
+
+		// Impede que Knock Off tenha efeito contra esse Pokémon
+		onDamage(damage, target, source, move) {
+			if (move.id === 'knockoff') {
+				this.add('-immune', target, '[from] ability: Divine Core'); 
+				return false; // Impede Knock Off de remover o item
+			}
+		},
+
+		shortDesc: "Muda o tipo com a Plate equipada. Moves Normal viram do tipo correspondente. O item não pode ser removido.",
+		name: "Divine Core",
+		rating: 5,
+		num: 1028, // Número pode ser ajustado conforme necessário
+		isNonstandard: "Future",
+	},
+	
 		
 		
 	  
