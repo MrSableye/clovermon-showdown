@@ -2644,6 +2644,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	cofferule: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kaquapo:{
 		tier: "Illegal",
 		isNonstandard: "Future",
