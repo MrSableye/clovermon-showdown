@@ -2556,6 +2556,94 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	bambuya: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	vanitwin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	vanitwinf: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraint: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintbug: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintdark: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintdragon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintelectric: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintfairy: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintfighting: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintfire: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintflying: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintghost: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintgrass: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintground: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintpoison: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintpsychic: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintrock: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintsteel: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ulmiraintwater: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	displacerk: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kaquapo:{
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -4551,6 +4639,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbosnyan: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscandycornmega: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

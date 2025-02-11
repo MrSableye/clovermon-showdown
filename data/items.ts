@@ -9288,6 +9288,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	candycornite: {
+		name: "Candycornite",
+		spritenum: 586,
+		megaStone: "Blobbos-Candycorn-Mega",
+		megaEvolves: "Blobbos-Candycorn",
+		itemUser: ["Blobbos-Candycorn"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	parasleepite: {
 		name: "Parasleepite",
 		spritenum: 577,
