@@ -16352,69 +16352,78 @@ malediction: {
 	
 	
 
-	  overwhelmingfumes: {
+	  	hellishvoid: {
+		// Habilidade que suprime todas as outras habilidades ao entrar em campo
+		shortDesc: "Suprime habilidades. Moves Ghost ganham 1.3x de poder. Com Red Orb, moves Fire dobram o poder.",
+		name: "Hellish Void",
+		rating: 4.5,
+		num: 1025, // Número pode ser ajustado conforme necessário
+		isNonstandard: "Future",
+	
+		// Suprime habilidades ao entrar em campo
 		onPreStart(pokemon) {
 			if (pokemon.transformed) return;
-			this.add('-ability', pokemon, 'Overwhelming Fumes');
+			this.add('-ability', pokemon, 'Hellish Void');
 			pokemon.abilityState.ending = false;
 			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
+	
 			for (const target of this.getAllActive()) {
 				if (target.hasItem('Ability Shield')) {
 					this.add('-block', target, 'item: Ability Shield');
 					continue;
 				}
-				if (target.volatiles['commanding']) {
-					continue;
-				}
+				// Evita interação com Tatsugiri dentro de Dondozo
+				if (target.volatiles['commanding']) continue;
 				if (target.illusion) {
-					this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, pokemon, 'overwhelmingfumes');
+					this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, pokemon, 'hellishvoid');
 				}
 				if (target.volatiles['slowstart']) {
 					delete target.volatiles['slowstart'];
 					this.add('-end', target, 'Slow Start', '[silent]');
 				}
 				if (strongWeathers.includes(target.getAbility().id)) {
-					this.singleEvent('End', this.dex.abilities.get(target.getAbility().id), target.abilityState, target, pokemon, 'overwhelmingfumes');
+					this.singleEvent('End', this.dex.abilities.get(target.getAbility().id), target.abilityState, target, pokemon, 'hellishvoid');
 				}
 			}
-		},
+			},
 	
-		onModifyMove(move, attacker, defender) {
-			if (defender?.hasItem('redorb')) {
-				this.debug('Overwhelming Fumes boosts move power due to Red Orb');
-				move.basePower *= 2;
-			}
-		},
-	
-		onEnd(source) {
+			// Quando o usuário sai, as habilidades voltam ao normal
+			onEnd(source) {
 			if (source.transformed) return;
+	
 			for (const pokemon of this.getAllActive()) {
-				if (pokemon !== source && pokemon.hasAbility('Overwhelming Fumes')) {
+				if (pokemon !== source && pokemon.hasAbility('Hellish Void')) {
 					return;
 				}
 			}
-			this.add('-end', source, 'ability: Overwhelming Fumes');
+	
+			this.add('-end', source, 'ability: Hellish Void');
+	
+			// Marca que a habilidade terminou para reativar os efeitos normais
 			if (source.abilityState.ending) return;
 			source.abilityState.ending = true;
-			const sortedActive = this.getAllActive();
-			this.speedSort(sortedActive);
-			for (const pokemon of sortedActive) {
-				if (pokemon !== source) {
-					if (pokemon.getAbility().isPermanent) continue;
+	
+			for (const pokemon of this.getAllActive()) {
+				if (!pokemon.getAbility().isPermanent) {
 					this.singleEvent('Start', pokemon.getAbility(), pokemon.abilityState, pokemon);
-					if (pokemon.ability === "gluttony") {
-						pokemon.abilityState.gluttony = false;
-					}
 				}
 			}
-		},
+			},
 	
-		shortDesc: "Negates abilities; Doubles move power if the foe has Red Orb; Lowers foe's accuracy by 30% on first turn.",
-		name: "Overwhelming Fumes",
-		rating: 5,
-		num: 1020,
-		isNonstandard: "Future",
-	},
+			// Buff para golpes do tipo Flying e Fire com Red Orb
+			onBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Flying') {
+				this.debug('Hellish Void boost');
+				return this.chainModify(1.3);
+			}
+			// Se o Pokémon estiver segurando Red Orb, dobra o poder dos golpes de Fogo
+			if (move.type === 'Fire' && attacker.item === 'redorb') {
+				this.debug('Hellish Void Red Orb Fire boost');
+				return this.chainModify(2);
+			}
+			},
+			},
+	
 	
 
 
@@ -16497,10 +16506,10 @@ malediction: {
 			isNonstandard: "Future",
 		
 			onStart(source) {
-				this.field.setWeather('snow');
+				this.field.setWeather('hail');
 			},
 			onResidual(target) {
-				if (this.field.isWeather('snow')) {
+				if (this.field.isWeather('hail')) {
 					for (const pokemon of target.side.active) {
 						if (this.randomChance(3, 10)) {
 							pokemon.trySetStatus('frz', target);
@@ -16517,17 +16526,17 @@ malediction: {
 			onModifyDefPriority: 5,
 			onModifySpDPriority: 5,
 			onModifyDef(def, pokemon) {
-				if (this.field.isWeather('snow')) {
+				if (this.field.isWeather('hail')) {
 					return this.chainModify(1.5); // Aumento oculto de 1 estágio na Def
 				}
 			},
 			onModifySpD(spd, pokemon) {
-				if (this.field.isWeather('snow')) {
+				if (this.field.isWeather('hail')) {
 					return this.chainModify(1.5); // Aumento oculto de 1 estágio na Sp. Def
 				}
 			},
 			onTryAddVolatile(status, target) {
-				if (this.field.isWeather('snow') && this.dex.conditions.get(status).status) {
+				if (this.field.isWeather('hail') && this.dex.conditions.get(status).status) {
 					return false; // Imunidade a moves de status sob Snow
 				}
 			},
@@ -16798,6 +16807,37 @@ malediction: {
 		num: 1028, // Número pode ser ajustado conforme necessário
 		isNonstandard: "Future",
 	},
+	
+	doomprophecy: {
+		// Habilidade que pode desmaiar o oponente ou o próprio usuário no final do turno
+		shortDesc: "No fim do turno: 20% de desmaiar o oponente; se falhar, 10% de desmaiar o usuário.",
+		name: "Doom Prophecy",
+		rating: 5,
+		num: 1026, // Número pode ser ajustado conforme necessário
+		isNonstandard: "Future",
+	
+		// Ativação no final do turno
+		onResidualOrder: 1,
+		onResidual(pokemon) {
+			// 20% de chance de desmaiar o adversário
+			for (const target of pokemon.side.foe.active) {
+				if (!target || target.fainted) continue;
+				if (this.randomChance(1, 5)) { // 20% de chance
+					this.add('-message', `${target.name} foi amaldiçoado pela Profecia Sombria!`);
+					target.faint();
+					return; // Se o adversário desmaiar, não calcula o do usuário
+				}
+			}
+	
+			// Se o adversário não desmaiou, 10% de chance do usuário desmaiar
+			if (this.randomChance(1, 10)) { // 10% de chance
+				this.add('-message', `${pokemon.name} foi consumido pela Profecia Sombria!`);
+				pokemon.faint();
+			}
+		},
+	},
+
+	
 	
 		
 		

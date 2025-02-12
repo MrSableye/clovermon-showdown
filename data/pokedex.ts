@@ -53689,7 +53689,7 @@ tamanaut: {
 		types: ["Fire", "Flying"],
 		gender: "M", 
 		baseStats: {hp: 100, atk: 125, def: 90, spa: 76, spd: 85, spe: 121},
-		abilities: {0: "Overwhelming Fumes", 1: "Adaptability", H: "Gale Wings"},
+		abilities: {0: "Hellish Void", 1: "Adaptability", H: "Gale Wings"},
 		heightm: 2.0,
 		weightkg: 95,
 		color: "Black",
@@ -53787,6 +53787,51 @@ tamanaut: {
 		gen: 0,
 		creator: "feneto_ OCB",
 	},//feito//
+
+	lovedeath: { 
+		num: -50020,
+		name: "Love Death",
+		types: ["Fairy", "Divine"],
+		gender: "F", 
+		baseStats: {hp: 100, atk: 50, def: 100, spa: 120, spd: 100, spe: 120},
+		abilities: {0: "Love Trap", 1: "Contrary", H: "Prankster"},
+		heightm: 1.8,
+		weightkg: 80,
+		color: "Black",
+		eggGroups: ["Field"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
+
+	ilusionist: { 
+		num: -50021,
+		name: "Ilusionist",
+		types: ["Ghost","Dark"],
+		gender: "M", 
+		baseStats: {hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 120},
+		abilities: {0: "Ability Lock", 1: "Pressure", H: "Intimidate"},
+		heightm: 1.8,
+		weightkg: 80,
+		color: "Black",
+		eggGroups: ["Field"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
+
+	arcano: { 
+		num: -50022,
+		name: "Arcano",
+		types: ["Steel", "Time"],
+		gender: "M", 
+		baseStats: {hp: 100, atk: 90, def: 100, spa: 90, spd: 100, spe: 100},
+		abilities: {0: "Doom Prophecy", 1: "Download", H: "Intimidate"},
+		heightm: 1.8,
+		weightkg: 500,
+		color: "Black",
+		eggGroups: ["Field"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
 
 
 
