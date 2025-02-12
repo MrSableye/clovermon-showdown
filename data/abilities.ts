@@ -16505,42 +16505,42 @@ malediction: {
 			num: 1020, // Número pode ser ajustado conforme necessário
 			isNonstandard: "Future",
 		
-			onStart(source) {
-				this.field.setWeather('hail');
-			},
-			onResidual(target) {
+			// Ao entrar em campo, invoca Hail/Snow
+			onStart(pokemon) {
+				this.add('-ability', pokemon, 'Permafrost');
+				this.field.setWeather('hail'); // "snow" substituiu "hail" na mecânica moderna
+			  },
+		  
+			  // Enquanto Hail/Snow estiver ativo
+			  onModifyDefPriority: 6,
+			  onModifyDef(def, pokemon) {
 				if (this.field.isWeather('hail')) {
-					for (const pokemon of target.side.active) {
-						if (this.randomChance(3, 10)) {
-							pokemon.trySetStatus('frz', target);
-						}
-					}
+				  return this.chainModify(1.5); // +1 estágio oculto equivale a 1.5x na fórmula do jogo
 				}
-			},
-			onModifyAccuracyPriority: -1,
-			onModifyAccuracy(accuracy, target, source, move) {
-				if (typeof accuracy === 'number') {
-					return this.chainModify([7, 10]); // Reduz a precisão do oponente em 30%
-				}
-			},
-			onModifyDefPriority: 5,
-			onModifySpDPriority: 5,
-			onModifyDef(def, pokemon) {
+			  },
+			  onModifySpDPriority: 6,
+			  onModifySpD(spd, pokemon) {
 				if (this.field.isWeather('hail')) {
-					return this.chainModify(1.5); // Aumento oculto de 1 estágio na Def
+				  return this.chainModify(1.5);
 				}
-			},
-			onModifySpD(spd, pokemon) {
-				if (this.field.isWeather('hail')) {
-					return this.chainModify(1.5); // Aumento oculto de 1 estágio na Sp. Def
+			  },
+		  
+			  // Reduz a precisão dos moves do oponente em 30% durante Snow
+			  onModifyAccuracy(accuracy, target, source, move) {
+				if (this.field.isWeather('hail') && typeof accuracy === 'number') {
+				  return this.chainModify(0.7); // Reduz precisão para 70%
 				}
-			},
-			onTryAddVolatile(status, target) {
-				if (this.field.isWeather('hail') && this.dex.conditions.get(status).status) {
-					return false; // Imunidade a moves de status sob Snow
+			  },
+		  
+			  // No final de cada turno, oponente tem 30% de chance de ser congelado
+			  onResidual(target) {
+				const foe = target.side.foe.active[0]; // Oponente ativo
+				if (this.field.isWeather('hail') && foe && this.randomChance(3, 10)) {
+				  this.add('-message', `${foe.name} foi congelado pelo frio intenso!`);
+				  foe.trySetStatus('frz', target);
 				}
+			  },
 			},
-		  },
 	
 		  electricascension: {
 			shortDesc: "Absorve golpes elétricos, converte Normal em Elétrico (+50% poder), buffa evasão e usa Thunder triplo se HP < 1/4.",
@@ -16810,7 +16810,7 @@ malediction: {
 	
 	doomprophecy: {
 		// Habilidade que pode desmaiar o oponente ou o próprio usuário no final do turno
-		shortDesc: "No fim do turno: 20% de desmaiar o oponente; se falhar, 10% de desmaiar o usuário.",
+		shortDesc: "No fim do turno: 10% de desmaiar o oponente; se falhar, 8% de desmaiar o usuário.",
 		name: "Doom Prophecy",
 		rating: 5,
 		num: 1026, // Número pode ser ajustado conforme necessário
@@ -16822,15 +16822,15 @@ malediction: {
 			// 20% de chance de desmaiar o adversário
 			for (const target of pokemon.side.foe.active) {
 				if (!target || target.fainted) continue;
-				if (this.randomChance(1, 5)) { // 20% de chance
+				if (this.randomChance(1, 10)) { // 10% de chance
 					this.add('-message', `${target.name} foi amaldiçoado pela Profecia Sombria!`);
 					target.faint();
 					return; // Se o adversário desmaiar, não calcula o do usuário
 				}
 			}
 	
-			// Se o adversário não desmaiou, 10% de chance do usuário desmaiar
-			if (this.randomChance(1, 10)) { // 10% de chance
+			// Se o adversário não desmaiou, 8% de chance do usuário desmaiar
+			if (this.randomChance(8, 100)) { // 8% de chance
 				this.add('-message', `${pokemon.name} foi consumido pela Profecia Sombria!`);
 				pokemon.faint();
 			}
