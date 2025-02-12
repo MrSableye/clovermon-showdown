@@ -995,7 +995,32 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			return null;
 		},
 
-	}
+	},
+
+	arcano:{
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['punch']) {
+				this.debug('Iron Fist boost');
+				return this.chainModify([4915, 4096]);
+			}
+		}
+	},
+
+	lovedeath:{
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Tablets of Ruin');
+		},
+		onAnyModifyAtk(atk, source, target, move) {
+			const abilityHolder = this.effectState.target;
+			if (source.hasAbility('Tablets of Ruin')) return;
+			if (!move.ruinedAtk) move.ruinedAtk = abilityHolder;
+			if (move.ruinedAtk !== abilityHolder) return;
+			this.debug('Tablets of Ruin Atk drop');
+			return this.chainModify(0.5);
+		},
+	}//te deixa fraquinho
 
 	
 };
