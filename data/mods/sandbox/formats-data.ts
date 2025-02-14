@@ -11003,6 +11003,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	lumini: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	parademise: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	winkhulu: {
 		inherit: true,
 		isNonstandard: null,
