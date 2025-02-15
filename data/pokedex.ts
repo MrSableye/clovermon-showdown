@@ -53832,6 +53832,65 @@ tamanaut: {
 		gen: 0,
 		creator: "feneto_ OCB",
 	}, //feito//
+	savage: { 
+		num: -50022,
+		name: "Savage",
+		types: ["Fire", "Grass"],
+		gender: "M", 
+		baseStats: {hp: 100, atk: 40, def: 90, spa: 130, spd: 90, spe: 145},
+		abilities: {0: "Grassy Surge", 1: "Inner Focus", H: "Savage to Supreme"},
+		heightm: 1.8,
+		weightkg: 80,
+		color: "Black",
+		eggGroups: ["Field"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
+	savagesupreme: { 
+		num: -50022,
+		name: "Savage-Supreme",
+		types: ["Divine", "Fire"],
+		gender: "M", 
+		baseStats: {hp: 110, atk: 100, def: 110, spa: 150, spd: 120, spe: 152},
+		abilities: {0: "Burning Armor"},
+		heightm: 1.8,
+		weightkg: 80,
+		color: "Black",
+		eggGroups: ["Field"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
+	berserker: { 
+		num: -50022,
+		name: "Berserker",
+		types: ["Shadow"],
+		gender: "M", 
+		baseStats: {hp: 100, atk: 130, def: 90, spa: 50, spd: 90, spe: 120},
+		abilities: {0: "No Pivot Block", 1: "Download", H: "Intimidate"},
+		heightm: 1.8,
+		weightkg: 30,
+		color: "Black",
+		eggGroups: ["Field"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
+	galactus: { 
+		num: -50022,
+		name: "Galactus",
+		types: ["Cosmic", "Ghost"],
+		gender: "M", 
+		baseStats: {hp: 100, atk: 30, def: 100, spa: 145, spd: 100, spe: 120},
+		abilities: {0: "Supremacy", 1: "Download", H: "Intimidate"},
+		heightm: 1.8,
+		weightkg: 500,
+		color: "Black",
+		eggGroups: ["Field"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
+
+
+
 
 
 
