@@ -1019,8 +1019,77 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			if (move.ruinedAtk !== abilityHolder) return;
 			this.debug('Tablets of Ruin Atk drop');
 			return this.chainModify(0.5);
+		},//te deixa fraquinho
+
+
+	},
+
+	savage:{
+		onResidual(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Savage' || pokemon.transformed) return;
+			if (pokemon.hp <= pokemon.maxhp / 2 && pokemon.species.forme !== 'Supreme') {
+				pokemon.formeChange('Savage-Supreme', this.effect, true);
+				pokemon.heal(pokemon.maxhp);
+				pokemon.cureStatus();
+				this.add('-activate', pokemon, 'ability: Savage to Supreme');
+			}
+		}
+	},
+	savagesupreme:{
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['sound']) {
+				this.debug('Mozart boost');
+				return this.chainModify([4915, 4096]);
+			}
 		},
-	}//te deixa fraquinho
+		onSourceModifyDamage(damage, source, target, move) {
+			if (['Fighting', 'Bug', 'Grass', 'Paper', 'Sound', 'Cosmic', 'Steel', 'Fire', 'Ice', 'Rubber', 'Food',
+			 'Paper', 'Flying', 'Electric', 'Wood', 'Tech', 'Nuclear', 'Water', 'Dragon', 'Plastic', 'Rock'].includes(move.type)) {
+				this.debug('Mozart weaken');
+				return this.chainModify(0.4);
+			}
+		}
+	},
+
+	berserker:{
+		onTryHitPriority: 1,
+		onTryHit(target, source, move) {
+			if (target === source || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			const newMove = this.dex.getActiveMove(move.id);
+			newMove.hasBounced = true;
+			newMove.pranksterBoosted = false;
+			this.actions.useMove(newMove, target, source);
+			return null;
+		},
+		onAllyTryHitSide(target, source, move) {
+			if (target.isAlly(source) || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			const newMove = this.dex.getActiveMove(move.id);
+			newMove.hasBounced = true;
+			newMove.pranksterBoosted = false;
+			this.actions.useMove(newMove, this.effectState.target, source);
+			return null;
+		},
+	},
+
+	galactus:{
+		onTryAddVolatile(status, pokemon) {
+			if (status.id === 'flinch') return null;
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (effect.name === 'Intimidate' && boost.atk) {
+				delete boost.atk;
+				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Inner Focus', '[of] ' + target);
+			}
+		}
+	}
+
+
+
 
 	
 };

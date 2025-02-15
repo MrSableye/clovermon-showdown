@@ -16821,6 +16821,80 @@ malediction: {
 		},
 	},
 
+	burningarmor: {
+		onStart(source) {
+			this.field.setTerrain('grassyterrain');
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (move.category === 'Physical') {
+				source.trySetStatus('brn', target);
+			}
+		},
+		onTrapPokemon(pokemon) {
+			pokemon.trapped = false;
+		},
+		name: "Burning Armor",
+		shortDesc: "Burns attackers on physical contact; immune to trapping moves.",
+		rating: 4,
+		num: 1021,
+		isNonstandard: "Future",
+	},
+	
+	nopivotblock: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'No Pivot Block');
+		},
+		onTryMove(target, source, move) {
+			if (move.selfSwitch) {
+				this.add('-fail', source, 'move: ' + move.name);
+				this.attrLastMove('[still]');
+				return false;
+			}
+		},
+		onFoeTrapPokemon(pokemon) {
+			if (!pokemon.hasType('Ghost') && pokemon.isAdjacent(this.effectState.target)) {
+				pokemon.tryTrap(true);
+			} else if (pokemon.hasType('Ghost') && pokemon.isAdjacent(this.effectState.target)) {
+				// Força o trapping mesmo para Pokémon do tipo Ghost
+				pokemon.trapped = true;
+			}
+		},
+		onFoeMaybeTrapPokemon(pokemon, source) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			if (!pokemon.hasType('Ghost')) {
+				pokemon.maybeTrapped = true;
+			} else {
+				pokemon.maybeTrapped = true; // Inclui Ghost-types no status "talvez preso"
+			}
+		},
+		shortDesc: "Impede o oponente de trocar ou usar movimentos de pivô (ex: Volt Switch, U-turn), incluindo tipos Ghost.",
+		name: "No Pivot Block",
+		rating: 4.5,
+		num: 1020, // Ajuste conforme necessário
+		isNonstandard: "Future",
+	},
+	savagetosupreme: {
+		onResidual(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Savage' || pokemon.transformed) return;
+			if (pokemon.hp <= pokemon.maxhp / 2 && pokemon.species.forme !== 'Supreme') {
+				pokemon.formeChange('Savage-Supreme', this.effect, true);
+				pokemon.heal(pokemon.maxhp);
+				pokemon.cureStatus();
+				this.add('-activate', pokemon, 'ability: Savage to Supreme');
+			}
+		},
+		isPermanent: true,
+		name: "Savage to Supreme",
+		shortDesc: "When HP is 50% or less, transforms into Savage-Supreme, fully heals and cures status.",
+		rating: 5,
+		num: 1019,
+		isNonstandard: "Future",
+	},
+	
+	
+	
+
 	
 	
 		
