@@ -162,6 +162,40 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 		},
 	},
+	lockdown: {
+		// Inicia o efeito de Lockdown no campo
+		onFieldStart() {
+			this.add('-message', 'Lockdown foi ativado! Nenhum Pokémon pode usar movimentos, apenas trocar!');
+		},
+		
+		// Durante o Lockdown, todos os Pokémon ficam impedidos de usar qualquer movimento
+		onTryMovePriority: 100,
+		onTryMove(move, pokemon) {
+    	this.add('-fail', pokemon, 'move: ' + move.name);
+    	this.add('-message', `${pokemon.name} não pode usar movimentos devido ao Lockdown!`);
+    	return false; // Impede qualquer movimento de ser usado
+},
+	
+		// Se um Pokémon entrar no campo, ele também fica impedido de usar movimentos
+		onSwitchIn(pokemon) {
+			this.add('-message', `${pokemon.name} entrou no campo e não pode usar movimentos devido ao Lockdown!`);
+		},
+	
+		// Define a duração do efeito - 3 turnos
+		duration: 3,
+	
+		// A cada turno, o Lockdown exibe uma mensagem para lembrar que está ativo
+		onResidualOrder: 25,
+		onResidual() {
+			this.add('-message', 'Lockdown continua! Nenhum Pokémon pode agir!');
+		},
+	
+		// Quando o efeito termina, permite que os Pokémon usem movimentos novamente
+		onFieldEnd() {
+			this.add('-message', 'Lockdown terminou! Os Pokémon podem usar movimentos novamente.');
+		},
+	},
+	
 	// Pokemon innate ability
 	// Destiny Bond and Perish Song immunities are handled in data/mod/wack/moves.ts
 	tapukoko: {

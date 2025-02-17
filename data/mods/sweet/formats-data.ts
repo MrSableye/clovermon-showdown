@@ -9892,6 +9892,30 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	savage: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	savagesupreme: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	arcano: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	berserker: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	galactus: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	overheaven: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	oogabugamega: {
 		inherit: true,
 		isNonstandard: "Past",

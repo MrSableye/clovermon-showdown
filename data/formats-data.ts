@@ -11467,6 +11467,30 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	savage: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	savagesupreme: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	arcano: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	berserker: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	galactus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	overheaven: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosswitch: {
 		tier: "Illegal",
 		isNonstandard: "Future",
