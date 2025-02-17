@@ -53891,7 +53891,7 @@ tamanaut: {
 	overheaven: { 
 		num: -50027,
 		name: "Over Heaven",
-		types: ["Light", "Fight"],
+		types: ["Light", "Fighting"],
 		gender: "M", 
 		baseStats: {hp: 100, atk: 120, def: 80, spa: 50, spd: 80, spe: 110},
 		abilities: {0: "Lockdown", 1: "Download"},
