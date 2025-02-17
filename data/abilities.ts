@@ -16843,6 +16843,19 @@ malediction: {
 	nopivotblock: {
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'No Pivot Block');
+			pokemon.addVolatile('nopivotblock');
+		},
+		condition: {
+			duration: 3, // Dura 3 turnos, mas no terceiro o Pokémon já pode sair
+			onStart(target) {
+				this.add('-start', target, 'No Pivot Block');
+			},
+			onResidualOrder: 17,
+			onResidual(pokemon) {
+				if (this.effectState.duration <= 1) {
+					this.add('-end', pokemon, 'No Pivot Block');
+				}
+			},
 		},
 		onTryMove(target, source, move) {
 			if (move.selfSwitch) {
@@ -16855,7 +16868,6 @@ malediction: {
 			if (!pokemon.hasType('Ghost') && pokemon.isAdjacent(this.effectState.target)) {
 				pokemon.tryTrap(true);
 			} else if (pokemon.hasType('Ghost') && pokemon.isAdjacent(this.effectState.target)) {
-				// Força o trapping mesmo para Pokémon do tipo Ghost
 				pokemon.trapped = true;
 			}
 		},
@@ -16868,12 +16880,13 @@ malediction: {
 				pokemon.maybeTrapped = true; // Inclui Ghost-types no status "talvez preso"
 			}
 		},
-		shortDesc: "Impede o oponente de trocar ou usar movimentos de pivô (ex: Volt Switch, U-turn), incluindo tipos Ghost.",
+		shortDesc: "Impede trocas e movimentos de pivô por 2 turnos.",
 		name: "No Pivot Block",
 		rating: 4.5,
 		num: 1020, // Ajuste conforme necessário
 		isNonstandard: "Future",
 	},
+	
 	savagetosupreme: {
 		onResidual(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Savage' || pokemon.transformed) return;
@@ -16891,6 +16904,53 @@ malediction: {
 		num: 1019,
 		isNonstandard: "Future",
 	},
+
+	lockdown: {
+		onStart(pokemon) {
+			pokemon.m.lockdownUsed = false;
+		},
+		onTryMovePriority: -1,
+		onTryMove(move, pokemon) {
+			if (move.name === 'protect' && !pokemon.m.lockdownUsed) {
+				pokemon.m.lockdownUsed = true;
+				this.add('-message', `${pokemon.name} ativou Lockdown! Nenhum Pokémon poderá usar movimentos por 3 turnos!`);
+				this.add('-fieldactivate', 'ability: Lockdown');
+	
+				// Ativa o efeito de campo sem usar addPseudoWeather
+				this.field.addPseudoWeather('lockdown');
+				return;
+			}
+		},
+		condition: {
+			duration: 3,
+			onFieldStart() {
+				this.add('-message', `Lockdown está ativo! Nenhum Pokémon pode usar movimentos, apenas trocar!`);
+			},
+			onResidualOrder: 25,
+			onResidual() {
+				this.add('-message', `Lockdown continua! Nenhum Pokémon pode agir!`);
+			},
+			onTryMovePriority: 100,
+			onTryMove(move, pokemon) {
+				this.add('-fail', pokemon, 'move: ' + move.name);
+				this.add('-message', `${pokemon.name} está sob efeito do Lockdown e não pode usar movimentos!`);
+				return false;
+			},
+			onSwitchIn(pokemon) {
+				this.add('-message', `${pokemon.name} entrou no campo e não pode usar movimentos devido ao Lockdown!`);
+			},
+			onFieldEnd() {
+				this.add('-message', `Lockdown terminou! Os Pokémon podem usar movimentos novamente.`);
+			},
+		},
+		shortDesc: "Ao usar Protect pela 1ª vez, por 3 turnos ninguém pode usar movimentos, apenas trocar, mesmo se o usuário sair de campo.",
+		name: "Lockdown",
+		rating: 5,
+		num: 1021,
+		isNonstandard: "Future",
+	},
+	
+	
 	
 	
 	

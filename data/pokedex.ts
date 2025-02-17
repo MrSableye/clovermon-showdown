@@ -53416,7 +53416,7 @@ tamanaut: {
 		creator: "feneto_ OCB",
 	}, //feito//
 	savage: { 
-		num: -50022,
+		num: -50023,
 		name: "Savage",
 		types: ["Fire", "Grass"],
 		gender: "M", 
@@ -53430,7 +53430,7 @@ tamanaut: {
 		creator: "feneto_ OCB",
 	}, //feito//
 	savagesupreme: { 
-		num: -50022,
+		num: -50024,
 		name: "Savage-Supreme",
 		types: ["Divine", "Fire"],
 		gender: "M", 
@@ -53444,7 +53444,7 @@ tamanaut: {
 		creator: "feneto_ OCB",
 	}, //feito//
 	berserker: { 
-		num: -50022,
+		num: -50025,
 		name: "Berserker",
 		types: ["Shadow"],
 		gender: "M", 
@@ -53458,7 +53458,7 @@ tamanaut: {
 		creator: "feneto_ OCB",
 	}, //feito//
 	galactus: { 
-		num: -50022,
+		num: -50026,
 		name: "Galactus",
 		types: ["Cosmic", "Ghost"],
 		gender: "M", 
@@ -53471,7 +53471,20 @@ tamanaut: {
 		gen: 0,
 		creator: "feneto_ OCB",
 	}, //feito//
-
+	overheaven: { 
+		num: -50027,
+		name: "Over Heaven",
+		types: ["Light", "Fight"],
+		gender: "M", 
+		baseStats: {hp: 100, atk: 120, def: 80, spa: 50, spd: 80, spe: 110},
+		abilities: {0: "Lockdown", 1: "Download"},
+		heightm: 1.8,
+		weightkg: 50,
+		color: "Black",
+		eggGroups: ["Field"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
 
 
 
