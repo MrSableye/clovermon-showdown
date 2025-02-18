@@ -164,35 +164,23 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 	},
 	lockdown: {
 		// Inicia o efeito de Lockdown no campo
-		onFieldStart() {
-			this.add('-message', 'Lockdown foi ativado! Nenhum Pokémon pode usar movimentos, apenas trocar!');
-		},
-		
-		// Durante o Lockdown, todos os Pokémon ficam impedidos de usar qualquer movimento
-		onTryMovePriority: 100,
-		onTryMove(move, pokemon) {
-    	this.add('-fail', pokemon, 'move: ' + move.name);
-    	this.add('-message', `${pokemon.name} não pode usar movimentos devido ao Lockdown!`);
-    	return false; // Impede qualquer movimento de ser usado
-},
-	
-		// Se um Pokémon entrar no campo, ele também fica impedido de usar movimentos
-		onSwitchIn(pokemon) {
-			this.add('-message', `${pokemon.name} entrou no campo e não pode usar movimentos devido ao Lockdown!`);
-		},
-	
-		// Define a duração do efeito - 3 turnos
 		duration: 3,
-	
-		// A cada turno, o Lockdown exibe uma mensagem para lembrar que está ativo
-		onResidualOrder: 25,
-		onResidual() {
-			this.add('-message', 'Lockdown continua! Nenhum Pokémon pode agir!');
+		onStart() {
+			this.add('-message', 'O campo foi envolto por uma energia de estase! Nenhum Pokémon pode agir!');
 		},
-	
-		// Quando o efeito termina, permite que os Pokémon usem movimentos novamente
-		onFieldEnd() {
-			this.add('-message', 'Lockdown terminou! Os Pokémon podem usar movimentos novamente.');
+		onBeforeMove(pokemon) {
+			this.add('-message', `${pokemon.name} está paralisado pela Zona de Estase e não pode agir!`);
+			return false;
+		},
+		onSwitchIn(pokemon) {
+			this.add('-message', `${pokemon.name} entrou no campo, mas está preso na Zona de Estase!`);
+			return false;
+		},
+		onResidual() {
+			this.add('-message', `A Zona de Estase enfraquece... (${this.effectState.duration} turnos restantes)`);
+		},
+		onEnd() {
+			this.add('-message', 'A Zona de Estase desapareceu! Os Pokémon podem agir novamente.');
 		},
 	},
 	
@@ -1120,6 +1108,36 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Inner Focus', '[of] ' + target);
 			}
 		}
+	},
+
+	ilusionist:{
+		onFoeTrapPokemon(pokemon) {
+			if (!pokemon.isAdjacent(this.effectState.target)) return;
+			if (pokemon.isGrounded()) {
+				pokemon.tryTrap(true);
+			}
+		},
+		onFoeMaybeTrapPokemon(pokemon, source) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			if (pokemon.isGrounded(!pokemon.knownType)) { // Negate immunity if the type is unknown
+				pokemon.maybeTrapped = true;
+			}
+		}
+	},
+	kitin:{
+		onTryHit(target, source, move) {
+            if (move.type === 'Electric') {
+                this.add('-immune', target, '[from] innate ability');
+                return null;
+            }
+        },
+        onHit(target, source, move) {
+            if (move.type === 'Electric') {
+                this.boost({evasion: 1, spa: 1}, target);
+                this.add("-message", `${target.name} absorbed the electricity and became stronger!`);
+            }
+        },
 	}
 
 

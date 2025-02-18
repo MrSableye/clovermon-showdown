@@ -53902,6 +53902,20 @@ tamanaut: {
 		gen: 0,
 		creator: "feneto_ OCB",
 	}, //feito//
+	kirin: { 
+		num: -50028,
+		name: "Kirin",
+		types: ["Electric", "Time"],
+		gender: "M", 
+		baseStats: {hp: 130, atk: 30, def: 100, spa: 110, spd: 90, spe: 135},
+		abilities: {0: "Stormcaller", 1: "Download"},
+		heightm: 2.0,
+		weightkg: 100,
+		color: "Yellow",
+		eggGroups: ["Field"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
 
 
 
