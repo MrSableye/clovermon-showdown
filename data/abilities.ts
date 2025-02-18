@@ -16906,58 +16906,60 @@ malediction: {
 	},
 
 	lockdown: {
-		onStart(pokemon) {
-			pokemon.m.lockdownUsed = false;
-		},
-		onTryMovePriority: -1,
-		onTryMove(move, pokemon) {
-			if (move.name === 'protect' && !pokemon.m.lockdownUsed) {
-				pokemon.m.lockdownUsed = true;
-				this.add('-message', `${pokemon.name} ativou Lockdown! Nenhum Pokémon poderá usar movimentos por 3 turnos!`);
-				this.add('-fieldactivate', 'ability: Lockdown');
+		onTryMove(source, target, move) {
+			// Verifica se o golpe usado é um Stalling Move e se a habilidade já foi ativada
+			if (move.stallingMove && !this.effectState.activated) {
+				this.add('-ability', source, 'Lockdown');
+				this.effectState.activated = true;
+				this.add('-message', `${source.name} ativou a Lockdown!`);
 	
-				// Ativa o efeito de campo sem usar addPseudoWeather
+				// Aplica o efeito de bloqueio de ações por 3 turnos
 				this.field.addPseudoWeather('lockdown');
-				return;
 			}
 		},
-		condition: {
-			duration: 3,
-			onFieldStart() {
-				this.add('-message', `Lockdown está ativo! Nenhum Pokémon pode usar movimentos, apenas trocar!`);
-			},
-			onResidualOrder: 25,
-			onResidual() {
-				this.add('-message', `Lockdown continua! Nenhum Pokémon pode agir!`);
-			},
-			onTryMovePriority: 100,
-			onTryMove(move, pokemon) {
-				this.add('-fail', pokemon, 'move: ' + move.name);
-				this.add('-message', `${pokemon.name} está sob efeito do Lockdown e não pode usar movimentos!`);
-				return false;
-			},
-			onSwitchIn(pokemon) {
-				this.add('-message', `${pokemon.name} entrou no campo e não pode usar movimentos devido ao Lockdown!`);
-			},
-			onFieldEnd() {
-				this.add('-message', `Lockdown terminou! Os Pokémon podem usar movimentos novamente.`);
-			},
-		},
-		shortDesc: "Ao usar Protect pela 1ª vez, por 3 turnos ninguém pode usar movimentos, apenas trocar, mesmo se o usuário sair de campo.",
+		shortDesc: "Após usar um Stalling Move, impede todos os Pokémon de agirem por 3 turnos. Só ativa uma vez por batalha.",
 		name: "Lockdown",
 		rating: 5,
 		num: 1021,
 		isNonstandard: "Future",
 	},
-	
-	
-	
-	
-	
 
-	
-	
-		
+	stormcaller: {
+        shortDesc: "Invokes Rain Dance on switch-in. At end of each turn, Thunder strikes both sides.",
+        name: "Stormcaller",
+        rating: 4,
+        num: 1025,
+        isNonstandard: "Future",
+        onStart(source) {
+			for (const action of this.queue) {
+				if (action.choice === 'runPrimal' && action.pokemon === source && source.species.id === 'kyogre') return;
+				if (action.choice !== 'runSwitch' && action.choice !== 'runPrimal') break;
+			}
+			this.field.setWeather('raindance');
+		},
+
+        onResidual(pokemon) {
+            if (!this.field.isWeather('raindance')) return;
+            this.add("-message", "Lightning crackles through the storm!");
+            
+            const thunderMove = this.dex.getActiveMove('thunder');
+            
+            // Primeiro atinge o lado do usuário
+            const userSide = pokemon.side.active.filter(p => !p.fainted);
+            if (userSide.length) {
+                const userTarget = this.sample(userSide);
+                this.actions.useMove(thunderMove, userTarget);
+            }
+            
+            // Depois atinge o lado do oponente
+            const foeSide = pokemon.side.foe.active.filter(p => !p.fainted);
+            if (foeSide.length) {
+                const foeTarget = this.sample(foeSide);
+                this.actions.useMove(thunderMove, foeTarget);
+            }
+    },
+
+}
 		
 	  
 };
