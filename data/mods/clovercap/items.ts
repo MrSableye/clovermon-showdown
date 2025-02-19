@@ -92,6 +92,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	whetstone: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	toxicplate: {
 		inherit: true,
 		isNonstandard: null,
