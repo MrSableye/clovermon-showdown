@@ -8568,6 +8568,39 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Past",
 		rating: 1,
 	},
+	whetstone: {
+        name: "Whetstone",
+        spritenum: 187,
+        fling: {
+            basePower: 90,
+        },
+        onTryBoost(boost, target, source, effect) {
+            let showMsg = false;
+            let i: BoostID;
+            for (i in boost) {
+                if (boost.atk && boost.atk < 0) {
+                    delete boost[i];
+                    showMsg = true;
+                    if (!(effect as ActiveMove).secondaries) {
+                        this.add("-fail", target, "unboost", "Attack", "[from] item: Whetstone", "[of] " + target);
+                    }
+                }
+            }
+            if (!(effect as ActiveMove).secondaries) {
+                this.add("-fail", target, "unboost", "Attack", "[from] item: Whetstone", "[of] " + target);
+            }
+        },
+        onBasePowerPriority: 19,
+        onBasePower(basePower, attacker, defender, move) {
+            if (move.flags['slicing']) {
+                this.debug('Whetstone blade boost');
+                return this.chainModify(1.1);
+            }
+        },
+        gen: 8,
+		  isNonstandard: "Future",
+        rating: 1,
+    },
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",
