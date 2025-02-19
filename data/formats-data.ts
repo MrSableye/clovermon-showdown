@@ -11491,6 +11491,30 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	aethernox: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ilusionist: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	zephandor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ragnarith: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	omnirath: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	drakorion: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosswitch: {
 		tier: "Illegal",
 		isNonstandard: "Future",
