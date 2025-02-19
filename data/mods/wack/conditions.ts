@@ -1147,7 +1147,102 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			pokemon.trapped = false;
 			this.add('-message', `${pokemon.name} é imune a efeitos de aprisionamento devido ao roubo de Ungoldbr!`);
 		},
-	}
+	},
+	aethernox:{
+		onTrapPokemon(pokemon) {
+			pokemon.trapped = false;
+		  },
+		  onFlinch(target) {
+			return false;
+		  },
+		  onUpdate(pokemon) {
+			if (pokemon.volatiles['confusion']) {
+			  pokemon.removeVolatile('confusion');
+			  this.add('-end', pokemon, 'confusion', '[from] ability: Autoridade Suprema');
+			}
+		  },
+		  onFoeModifyMove(move, target) {
+			if (move.priority > 0) {
+			  move.accuracy = 50;
+			}
+		  }
+	},
+	drakorion:{
+		onTrapPokemon(pokemon) {
+			pokemon.trapped = false;
+		  },
+		  onFlinch(target) {
+			return false;
+		  },
+		  onUpdate(pokemon) {
+			if (pokemon.volatiles['confusion']) {
+			  pokemon.removeVolatile('confusion');
+			  this.add('-end', pokemon, 'confusion', '[from] ability: Autoridade Suprema');
+			}
+		  },
+		  onFoeModifyMove(move, target) {
+			if (move.priority > 0) {
+			  move.accuracy = 50;
+			}
+		  }
+	},
+	omnirath:{
+		onTrapPokemon(pokemon) {
+			pokemon.trapped = false;
+		  },
+		  onFlinch(target) {
+			return false;
+		  },
+		  onUpdate(pokemon) {
+			if (pokemon.volatiles['confusion']) {
+			  pokemon.removeVolatile('confusion');
+			  this.add('-end', pokemon, 'confusion', '[from] ability: Autoridade Suprema');
+			}
+		  },
+		  onFoeModifyMove(move, target) {
+			if (move.priority > 0) {
+			  move.accuracy = 50;
+			}
+		  }
+	},
+	ragnarith:{
+		onTrapPokemon(pokemon) {
+			pokemon.trapped = false;
+		  },
+		  onFlinch(target) {
+			return false;
+		  },
+		  onUpdate(pokemon) {
+			if (pokemon.volatiles['confusion']) {
+			  pokemon.removeVolatile('confusion');
+			  this.add('-end', pokemon, 'confusion', '[from] ability: Autoridade Suprema');
+			}
+		  },
+		  onFoeModifyMove(move, target) {
+			if (move.priority > 0) {
+			  move.accuracy = 50;
+			}
+		  }
+	},
+	zephandor:{
+		onTrapPokemon(pokemon) {
+			pokemon.trapped = false;
+		  },
+		  onFlinch(target) {
+			return false;
+		  },
+		  onUpdate(pokemon) {
+			if (pokemon.volatiles['confusion']) {
+			  pokemon.removeVolatile('confusion');
+			  this.add('-end', pokemon, 'confusion', '[from] ability: Autoridade Suprema');
+			}
+		  },
+		  onFoeModifyMove(move, target) {
+			if (move.priority > 0) {
+			  move.accuracy = 50;
+			}
+		  }
+	},
 
 
 
