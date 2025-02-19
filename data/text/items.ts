@@ -2516,6 +2516,16 @@ export const ItemsText: {[k: string]: ItemText} = {
 		desc: "If held by a Winkhulu, its Atk is doubled. Evolves Winkhulu into Temawria.",
 		shortDesc: "If held by a Winkhulu, its Atk is doubled.",
 	},
+	toothpaste: {
+		name: "Toothpaste",
+		desc: "Raises holder's Attack by 1 stage after it uses a bite move. Single use.",
+		shortDesc: "Raises holder's Attack by 1 stage after it uses a bite move. Single use.",
+	},
+	whetstone: {
+		name: "Whetstone",
+		desc: "Slicing-based moves have a 1.1x boost when this item is held. Prevents Attack from being reduced by foe or self-inflicted attack reduction.",
+		shortDesc: "Boosts slicing-based moves by 1.1x. Prevents Attack from being reduced by foe or self.",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",
