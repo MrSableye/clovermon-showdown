@@ -6267,6 +6267,24 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		rating: 1,
 	},
+	toothpaste: {
+		name: "Toothpaste",
+		spritenum: 713,
+		fling: {
+			basePower: 30,
+		},
+		onAfterMoveSecondarySelf(target, source, move) {
+			if (move.flags['bite']) {
+				target.useItem();
+			}
+		},
+		boosts: {
+			atk: 1,
+		},
+		num: 1118,
+		gen: 8,
+		rating: 1,
+	},
 	thunderstone: {
 		name: "Thunder Stone",
 		spritenum: 492,
