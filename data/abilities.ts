@@ -16973,9 +16973,39 @@ malediction: {
                 const foeTarget = this.sample(foeSide);
                 this.actions.useMove(thunderMove, foeTarget);
             }
-    },
+    }
 
-}
+
+	},
+
+	primordialguard: {
+		onStart(pokemon) {
+			pokemon.addVolatile('primordialguard');
+		},
+		onDamage(damage, target, source, effect) {
+			if (target.volatiles['primordialguard']) {
+				const maxHP = target.maxhp;
+				const limitedDamage = Math.ceil(maxHP * 0.1);
+				const reflectedDamage = damage - limitedDamage;
+	
+				target.removeVolatile('primordialguard'); // Remove o efeito após o primeiro dano
+	
+				if (reflectedDamage > 0 && source) {
+					this.damage(reflectedDamage, source, target, effect); // Reflete o dano ao adversário
+				}
+	
+				return Math.min(damage, limitedDamage);
+			}
+		},
+		onSwitchIn(pokemon) {
+			pokemon.addVolatile('primordialguard'); // Reativa a habilidade ao entrar em campo
+		},
+		shortDesc: "Primeiro dano recebido ao entrar é 10% do HP máximo; 90% é refletido.",
+		name: "Primordial Guard",
+		rating: 5,
+		num: 1020, // Ajuste conforme necessário
+		isNonstandard: "Future",
+	},
 		
 	  
 };

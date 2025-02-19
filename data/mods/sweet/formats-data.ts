@@ -9916,6 +9916,30 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	ragnarith: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	drakorion: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	aethernox: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	zephandor: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	omnirath: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ilusionist: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	oogabugamega: {
 		inherit: true,
 		isNonstandard: "Past",
