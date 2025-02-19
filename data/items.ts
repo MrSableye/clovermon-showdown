@@ -6283,6 +6283,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1118,
 		gen: 8,
+		isNonstandard: "Future",
 		rating: 1,
 	},
 	thunderstone: {
