@@ -163,7 +163,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		},
 	},
 	lockdown: {
-		duration: 3, // Duração fixa de 3 turnos
+		duration: 4, // Duração fixa de 3 turnos
 		onStart(target, source) {
 			this.add('-message', 'O campo foi envolto por uma energia de estase! Os Pokémon adversários não podem agir!');
 		},
