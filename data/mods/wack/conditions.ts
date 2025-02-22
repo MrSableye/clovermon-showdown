@@ -163,28 +163,28 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		},
 	},
 	lockdown: {
-		// Inicia o efeito de Lockdown no campo
+		duration: 3, // Duração fixa de 3 turnos
 		onStart(target, source) {
-            this.add('-message', 'O campo foi envolto por uma energia de estase! Os Pokémon adversários não podem agir!');
-        },
-        onBeforeMove(pokemon) {
-            if (pokemon.side !== this.effectState.source.side) {
-                this.add('-message', `${pokemon.name} está paralisado pela Zona de Estase e não pode agir!`);
-                return false;
-            }
-        },
-        onSwitchIn(pokemon) {
-            if (pokemon.side !== this.effectState.source.side) {
-                this.add('-message', `${pokemon.name} entrou no campo, mas está preso na Zona de Estase!`);
-                return false;
-            }
-        },
-        onResidual() {
-            this.add('-message', `A Zona de Estase enfraquece... (${this.effectState.duration} turnos restantes)`);
-        },
-        onEnd() {
-            this.add('-message', 'A Zona de Estase desapareceu! Os Pokémon adversários podem agir novamente.');
-        },
+			this.add('-message', 'O campo foi envolto por uma energia de estase! Os Pokémon adversários não podem agir!');
+		},
+		onBeforeMove(pokemon) {
+			if (pokemon.side !== this.effectState.source.side) {
+				this.add('-message', `${pokemon.name} está paralisado pela Zona de Estase e não pode agir!`);
+				return false;
+			}
+		},
+		onSwitchIn(pokemon) {
+			if (pokemon.side !== this.effectState.source.side) {
+				this.add('-message', `${pokemon.name} entrou no campo, mas está preso na Zona de Estase!`);
+				return false;
+			}
+		},
+		onResidual() {
+			this.add('-message', `A Zona de Estase enfraquece... (${this.effectState.duration} turnos restantes)`);
+		},
+		onEnd() {
+			this.add('-message', 'A Zona de Estase desapareceu! Os Pokémon adversários podem agir novamente.');
+		}
     },
 	
 	// Pokemon innate ability
@@ -1143,9 +1143,9 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
         },
 	},
 	overheaven:{
+		onTrapPokemonPriority: -10,
 		onTrapPokemon(pokemon) {
-			pokemon.trapped = false;
-			this.add('-message', `${pokemon.name} é imune a efeitos de aprisionamento devido ao roubo de Ungoldbr!`);
+			pokemon.trapped = pokemon.maybeTrapped = false;
 		},
 	},
 	aethernox:{
