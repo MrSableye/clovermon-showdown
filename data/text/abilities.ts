@@ -2612,6 +2612,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Palette Swap",
 		desc: "If this Pokemon is an Ulmiraint, its type changes to match its held Plate, Memory or Z-Crystal.",
 	},
+	collapsingruin: {
+		name: "Collapsing Ruin",
+		desc: "Halves the damage from Rock-type's weaknesses. Stealth Rocks are set on the opposing side upon fainting.",
+	},
 	transfusion: {
 		name: "Transfusion",
 		shortDesc: "Upon being hit, changes the opponent's type to the primary type of the ability-holder. When the ability-holder switches out, change their types back.",

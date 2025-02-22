@@ -7742,6 +7742,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Short Circuit",
 		isNonstandard: "Future",
 	},
+	collapsingruin: {
+		name: "Collapsing Ruin",
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			const side = source.isAlly(target) ? source.side.foe : source.side;
+			const stealthRock = side.sideConditions['stealthrock'];
+			if (!target.hp) {
+				this.add('-activate', target, 'ability: Collapsing Ruin');
+				side.addSideCondition('stealthrock', target);
+			}
+		},
+		onSourceBasePowerPriority: 18,
+		onSourceBasePower(basePower, attacker, defender, move) {
+			if (['Grass', 'Steel', 'Fighting', 'Water', 'Ground'].includes(move.type)) {
+				return this.chainModify(0.5);
+			}
+		},
+		rating: 4,
+		isNonstandard: "Future",
+		num: 215,
+	},
 	transfusion: {
 		name: "Transfusion",
 		onDamagingHitOrder: 1,
