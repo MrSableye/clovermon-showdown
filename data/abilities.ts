@@ -10188,6 +10188,647 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		isNonstandard: "Future",
 	},
+	chineseramblings: {
+		onStart(pokemon) {
+			const random = this.random(4);
+			this.add('-ability', pokemon, 'Chinese Ramblings');
+			if (pokemon.status === 'frz') {
+				this.add('-message', `*slides into battle*`);
+			} else if (pokemon.status === 'brn') {
+				if (random === 0) {
+					this.add('-message', `EVERYTHING IS BURNED AWAY`);
+				}
+				if (random === 1) {
+					this.add('-message', `*is sent out as a burning writhing crisp*`);
+				}
+				if (random === 2) {
+					this.add('-message', `PUT ME OUT`);
+				}
+				if (random === 3) {
+					this.add('-message', `IM STILL ON FIRE`);
+				}
+			} else if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+				if (random === 0) {
+					this.add('-message', `im still intoxicated`);
+				}
+				if (random === 1) {
+					this.add('-message', `rot`);
+				}
+				if (random === 2) {
+					this.add('-message', `divulging soon`);
+				}
+				if (random === 3) {
+					this.add('-message', `never coming back`);
+				}
+			} else if (pokemon.status === 'par') {
+				if (random === 0) {
+					this.add('-message', `i must resist`);
+				}
+				if (random === 1) {
+					this.add('-message', `SPONGY CHEESELIKE FLESH`);
+				}
+				if (random === 2) {
+					this.add('-message', `its so over`);
+				}
+				if (random === 3) {
+					this.add('-message', `actually kill yourself man`);
+				}
+			} else if (pokemon.status === 'slp') {
+				if (random === 0) {
+					this.add('-message', `ZZZZZZZZZZZZZZ`);
+				}
+				if (random === 1) {
+					this.add('-message', `ZZZ`);
+				}
+				if (random === 2) {
+					this.add('-message', `*unconscious and fraying*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*flopped over on side*`);
+				}
+			}
+			if (random === 0) {
+				this.add('-message', `fuck you`);
+			}
+			if (random === 1) {
+				this.add('-message', `eautiufl creation`);
+			}
+			if (random === 2) {
+				this.add('-message', `i think you need to be euthanized`);
+			}
+			if (random === 3) {
+				this.add('-message', `I AM ALICE!`);
+			}
+		},
+		onResidualOrder: 29,
+		onResidualSubOrder: 1,
+		onTryAddVolatile(status, pokemon) {
+			const random = this.random(4);
+			if (status.id === 'confusion') {
+				if (pokemon.status === 'frz') {
+					this.add('-message', `*frozen silence*`);
+				}
+				if (pokemon.status === 'slp') {
+					this.add('-message', `*sleeps but confused now*`);
+				} else if (random === 0) {
+					this.add('-message', `*dizzy screech*`);
+				} else if (random === 1) {
+					this.add('-message', `*babble of confusion*`);
+				} else if (random === 2) {
+					this.add('-message', `i hate you`);
+				} else if (random === 3) {
+					this.add('-message', `9/11`);
+				}
+			} else if (status.id === 'leechseed') {
+				if (pokemon.status === 'frz') {
+					this.add('-message', `*is helpless to stop the seeds from sprouting*`);
+				}
+				if (pokemon.status === 'slp') {
+					this.add('-message', `*starts dreaming of plants*`);
+				} else if (random === 0) {
+					this.add('-message', `i will be adding seed sower to blubbastard`);
+				} else if (random === 1) {
+					this.add('-message', `that didnt hurt me at all`);
+				} else if (random === 2) {
+					this.add('-message', `seed`);
+				} else if (random === 3) {
+					this.add('-message', `i seed a 4`);
+				}
+			} else if (status.id === 'curse') {
+				if (pokemon.status === 'frz') {
+					this.add('-message', `*frozen insanity*`);
+				}
+				if (pokemon.status === 'slp') {
+					this.add('-message', `*thrashing while being tormented in dreams*`);
+				} else if (random === 0) {
+					this.add('-message', `WHAT IS WRONG WITH YOU`);
+				} else if (random === 1) {
+					this.add('-message', `*begins to go insane*`);
+				} else if (random === 2) {
+					this.add('-message', `my mind is breaking`);
+				} else if (random === 3) {
+					this.add('-message', `WHY WHY WHY WHY WHY WHY WHY`);
+				}
+			}
+		},
+		onResidual(pokemon) {
+			const random = this.random(4);
+			if (pokemon.status === 'frz') {
+				if (random === 0) {
+					this.add('-message', `*is frozen solid*`);
+				}
+				if (random === 1) {
+					this.add('-message', `*muffled frozen screaming*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*blinks*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*cums*`);
+				}
+			} else if (pokemon.status === 'brn') {
+				if (random === 0) {
+					this.add('-message', `dont do that to my mini`);
+				}
+				if (random === 1) {
+					this.add('-message', `*writhing*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*screams of agony*`);
+				}
+				if (random === 3) {
+					this.add('-message', `they circumcised my greedle`);
+				}
+			} else if (pokemon.status === 'tox') {
+				if (random === 0) {
+					this.add('-message', `*screams and writhes violently*`);
+				}
+				if (random === 1) {
+					this.add('-message', `hawk tuah!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*he screams as his eyes burn in the toxic sludge*`);
+				}
+				if (random === 3) {
+					this.add('-message', `sludge`);
+				}
+			} else if (pokemon.status === 'psn') {
+				if (random === 0) {
+					this.add('-message', `Irradiated V 0:49`);
+				}
+				if (random === 1) {
+					this.add('-message', `greed is a schizo`);
+				}
+				if (random === 2) {
+					this.add('-message', `rex play kingdom rush`);
+				}
+				if (random === 3) {
+					this.add('-message', `gore`);
+				}
+			} else if (pokemon.status === 'par') {
+				if (random === 0) {
+					this.add('-message', `free mega for 3 bucks`);
+				}
+				if (random === 1) {
+					this.add('-message', `holy shut`);
+				}
+				if (random === 2) {
+					this.add('-message', `DEMONS`);
+				}
+				if (random === 3) {
+					this.add('-message', `*hyperventilatinG*`);
+				}
+			} else if (pokemon.volatiles['nightmare']) {
+				if (random === 0) {
+					this.add('-message', `they're coming for me`);
+				}
+				if (random === 1) {
+					this.add('-message', `the firebringers will come for you next`);
+				}
+				if (random === 2) {
+					this.add('-message', `absolute faggotry assaulting my ears`);
+				}
+				if (random === 3) {
+					this.add('-message', `weedle`);
+				}
+			} else if (pokemon.status === 'slp') {
+				if (random === 0) {
+					this.add('-message', `wp is in my heart forever thouh`);
+				}
+				if (random === 1) {
+					this.add('-message', `aAAAAAHHHHHH`);
+				}
+				if (random === 2) {
+					this.add('-message', `WOAGH`);
+				}
+				if (random === 3) {
+					this.add('-message', `ffujgukher`);
+				}
+			} else if (pokemon.volatiles['leechseed']) {
+				if (random === 0) {
+					this.add('-message', `blood`);
+				}
+				if (random === 1) {
+					this.add('-message', `every minute that passes i lose more of my humanity`);
+				}
+				if (random === 2) {
+					this.add('-message', `IT'S DRINKING ME`);
+				}
+				if (random === 3) {
+					this.add('-message', `i am godless`);
+				}
+			} else if (pokemon.volatiles['curse']) {
+				if (random === 0) {
+					this.add('-message', `i eat kids`);
+				}
+				if (random === 1) {
+					this.add('-message', `MY MORAL COMPASS IS SPINNING OUT OF CONTROL`);
+				}
+				if (random === 2) {
+					this.add('-message', `the cursed umbrella`);
+				}
+				if (random === 3) {
+					this.add('-message', `have you not heard of sneel`);
+				}
+			} else if (pokemon.volatiles['attract']) {
+				if (random === 0) {
+					this.add('-message', `GOJIRA`);
+				}
+				if (random === 1) {
+					this.add('-message', `*sexes you*`);
+				}
+				if (random === 2) {
+					this.add('-message', `the legend`);
+				}
+				if (random === 3) {
+					this.add('-message', `wifebeater`);
+				}
+			} else if (pokemon.volatiles['substitute']) {
+				if (random === 0) {
+					this.add('-message', `BABYLON WAGES WAR ON BABYLON`);
+				}
+				if (random === 1) {
+					this.add('-message', `I SHOULD SKIN YOU WITH RUSTY SHEARS`);
+				}
+				if (random === 2) {
+					this.add('-message', `I SHOULD BURN YOU AT STAKE`);
+				}
+				if (random === 3) {
+					this.add('-message', `pyrotwah`);
+				}
+			} else {
+				if (random === 0) {
+					this.add('-message', `gatling icicle shrroom`);
+				}
+				if (random === 1) {
+					this.add('-message', `my mind is broken`);
+				}
+				if (random === 2) {
+					this.add('-message', `load moad lmao`);
+				}
+				if (random === 3) {
+					this.add('-message', `mitzi poster`);
+				}
+			}
+		},
+		onTakeItem(item, pokemon, source) {
+			const random = this.random(4);
+			if (pokemon.status === 'slp' || pokemon.status === 'tox') {
+				this.add('-message', `*is helpless to stop it from happening`);
+			} else if (pokemon.status === 'brn' || pokemon.status === 'par' || pokemon.status === 'psn' || pokemon.status === 'tox') {
+				this.add('-message', `on emomen`);
+			} else if (random === 0) {
+				this.add('-message', `PERPG is mine methinks`);
+			} else if (random === 1) {
+				this.add('-message', `every item is mine`);
+			} else if (random === 2) {
+				this.add('-message', `do not search which usurper was killed in 194`);
+			} else if (random === 3) {
+				this.add('-message', `you don't want to watch RED BULL sausage??`);
+			}
+		},
+		onEnd(pokemon) {
+			const random = this.random(4);
+			if (pokemon.status === 'frz') {
+				this.add('-message', `*slides away while frozen*`);
+			} else if (pokemon.status === 'slp') {
+				this.add('-message', `does it really needle of that though`);
+			} else if (pokemon.status === 'par') {
+				this.add('-message', `I'm sending slave race #3 to pillage your bedposts`);
+			} else if (pokemon.status === 'brn') {
+				if (random === 0) {
+					this.add('-message', `Can you imagine how paracelsus felt`);
+				}
+				if (random === 1) {
+					this.add('-message', `put me out`);
+				}
+				if (random === 2) {
+					this.add('-message', `Those who know`);
+				}
+				if (random === 3) {
+					this.add('-message', `*numb to the pain*`);
+				}
+			} else if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+				if (random === 0) {
+					this.add('-message', `jamacain cackle`);
+				}
+				if (random === 1) {
+					this.add('-message', `have sex`);
+				}
+				if (random === 2) {
+					this.add('-message', `Cope has bred a strange demographic of gigaautists it seems`);
+				}
+				if (random === 3) {
+					this.add('-message', `*vomits*`);
+				}
+			} else if (pokemon.volatiles['leechseed']) {
+				if (random === 0) {
+					this.add('-message', `*cums*`);
+				}
+				if (random === 1) {
+					this.add('-message', `my honest erection`);
+				}
+				if (random === 2) {
+					this.add('-message', `i fucking love behe`);
+				}
+				if (random === 3) {
+					this.add('-message', `eat shit and live`);
+				}
+			} else if (pokemon.volatiles['curse']) {
+				this.add('-message', `the curse`);
+			} else if (pokemon.volatiles['taunt']) {
+				if (random === 0) {
+					this.add('-message', `eat shit and DIE`);
+				}
+				if (random === 1) {
+					this.add('-message', `i seened!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*angry squeak* i dont want to talk to you`);
+				}
+				if (random === 3) {
+					this.add('-message', `the t shirt I will offer to my husband if he says yes when I will ask him to divorce me`);
+				}
+			} else if (pokemon.volatiles['torment']) {
+				if (random === 0) {
+					this.add('-message', `my sack is fat and red`);
+				}
+				if (random === 1) {
+					this.add('-message', `I'm rich soil`);
+				}
+				if (random === 2) {
+					this.add('-message', `Give me . Mod?`);
+				}
+				if (random === 3) {
+					this.add('-message', `pear`);
+				}
+			} else if (pokemon.volatiles['substitute']) {
+				if (random === 0) {
+					this.add('-message', `they circumcised my greedle`);
+				}
+				if (random === 1) {
+					this.add('-message', `have sex`);
+				}
+				if (random === 2) {
+					this.add('-message', `Why would Free Smiley Dealer do this?`);
+				}
+				if (random === 3) {
+					this.add('-message', `Unprotected sex`);
+				}
+			} else if (random === 0) {
+				this.add('-message', `whore`);
+			} else if (random === 1) {
+				this.add('-message', `bye`);
+			} else if (random === 2) {
+				this.add('-message', `Severed head script`);
+			} else if (random === 3) {
+				this.add('-message', `Pizza sauce incident`);
+			}
+		},
+		onEatItem(item, pokemon) {
+			const random = this.random(4);
+			if (pokemon.status === 'frz') {
+				this.add('-message', `i send you porn and this is how you repay me`);
+			} else if (pokemon.status === 'brn') {
+				if (random === 0) {
+					this.add('-message', `The grim raper`);
+				}
+				if (random === 1) {
+					this.add('-message', `I'm gonna have a mental break bro`);
+				}
+				if (random === 2) {
+					this.add('-message', `im going to hell before I die`);
+				}
+				if (random === 3) {
+					this.add('-message', `Bitch`);
+				}
+			} else if (pokemon.status === 'tox') {
+				if (random === 0) {
+					this.add('-message', `*downloads one song* *immedietly killed by shadow people*`);
+				}
+				if (random === 1) {
+					this.add('-message', `tetanus irl`);
+				}
+				if (random === 2) {
+					this.add('-message', `gore`);
+				}
+				if (random === 3) {
+					this.add('-message', `*starts choking*`);
+				}
+			} else if (pokemon.status === 'psn') {
+				if (random === 0) {
+					this.add('-message', `nothing ever happens`);
+				}
+				if (random === 1) {
+					this.add('-message', `weedle meteor`);
+				}
+				if (random === 2) {
+					this.add('-message', `weedle meteor`);
+				}
+				if (random === 3) {
+					this.add('-message', `weedle meteor`);
+				}
+			} else if (pokemon.status === 'par') {
+				if (random === 0) {
+					this.add('-message', `Tetojelq yourself`);
+				}
+				if (random === 1) {
+					this.add('-message', `weedle`);
+				}
+				if (random === 2) {
+					this.add('-message', `residue`);
+				}
+				if (random === 3) {
+					this.add('-message', `Throwing stones in glass houses`);
+				}
+			} else if (pokemon.volatiles['taunt']) {
+				if (random === 0) {
+					this.add('-message', `You dullard pillocj`);
+				}
+				if (random === 1) {
+					this.add('-message', `pupaspin2`);
+				}
+				if (random === 2) {
+					this.add('-message', `weedle meteor`);
+				}
+				if (random === 3) {
+					this.add('-message', `have sex`);
+				}
+			} else if (pokemon.volatiles['torment']) {
+				if (random === 0) {
+					this.add('-message', `your skin clolor is egregious`);
+				}
+				if (random === 1) {
+					this.add('-message', `I win! HAHA`);
+				}
+				if (random === 2) {
+					this.add('-message', `weedle meteor`);
+				}
+				if (random === 3) {
+					this.add('-message', `Ishmael queequeg ahab pip and starbuck`);
+				}
+			} else if (pokemon.volatiles['yawn']) {
+				if (random === 0) {
+					this.add('-message', `wanna teto frot?`);
+				}
+				if (random === 1) {
+					this.add('-message', `wanna teto frot?`);
+				}
+				if (random === 2) {
+					this.add('-message', `wanna teto frot?`);
+				}
+				if (random === 3) {
+					this.add('-message', `wanna teto frot?`);
+				}
+			} else if (pokemon.status === 'slp') {
+				if (random === 0) {
+					this.add('-message', `greedy bitch`);
+				}
+				if (random === 1) {
+					this.add('-message', `*eating unconsciously*`);
+				}
+				if (random === 2) {
+					this.add('-message', `FLICKERING GLYPHS OF UNDERSTANDING`);
+				}
+				if (random === 3) {
+					this.add('-message', `*snore*`);
+				}
+			} else if (pokemon.volatiles['leechseed']) {
+				if (random === 0) {
+					this.add('-message', `GORE`);
+				}
+				if (random === 1) {
+					this.add('-message', `I WILL EAT YOUR KIND`);
+				}
+				if (random === 2) {
+					this.add('-message', `ITS STEALING MY NUTRIENTS`);
+				}
+				if (random === 3) {
+					this.add('-message', `wanna teto frot?`);
+				}
+			} else if (pokemon.volatiles['curse']) {
+				if (random === 0) {
+					this.add('-message', `*digs in like a feral animal*`);
+				}
+				if (random === 1) {
+					this.add('-message', `*swallows it whole*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*foaming at the mouth*`);
+				}
+				if (random === 3) {
+					this.add('-message', `i need blood`);
+				}
+			} else if (pokemon.volatiles['attract']) {
+				if (random === 0) {
+					this.add('-message', `teeth`);
+				}
+				if (random === 1) {
+					this.add('-message', `nameless fetus`);
+				}
+				if (random === 2) {
+					this.add('-message', `gored alive`);
+				}
+				if (random === 3) {
+					this.add('-message', `does it really needle of that though`);
+				}
+			} else {
+				if (random === 0) {
+					this.add('-message', `im watching`);
+				}
+				if (random === 1) {
+					this.add('-message', `have sex`);
+				}
+				if (random === 2) {
+					this.add('-message', `you can't tame the fiend`);
+				}
+				if (random === 3) {
+					this.add('-message', `its yummer`);
+				}
+			}
+		},
+		onDamagingHit(damage, target, source, move) {
+			const random = this.random(4);
+			if (!target.hp) {
+				if (target.status === 'frz') {
+					this.add('-message', `*stops moving forever*`);
+				}
+				if (target.status === 'slp') {
+					this.add('-message', `*never wakes up*`);
+				} else if (random === 0) {
+					this.add('-message', `god bless`);
+				} else if (random === 1) {
+					this.add('-message', `i blame you`);
+				} else if (random === 2) {
+					this.add('-message', `frot`);
+				} else if (random === 3) {
+					this.add('-message', `*cums*`);
+				}
+			}
+			if (target.status === 'frz') {
+				this.add('-message', `*is incapable of moving*`);
+			}
+			if (target.status === 'brn' || target.status === 'psn' || target.status === 'tox') {
+				if (random === 0) {
+					this.add('-message', `you nitwit`);
+				}
+				if (random === 1) {
+					this.add('-message', `have sex`);
+				}
+				if (random === 2) {
+					this.add('-message', `i should boil your organs`);
+				}
+				if (random === 3) {
+					this.add('-message', `weedle`);
+				}
+			}
+			if (target.status === 'par') {
+				if (random === 0) {
+					this.add('-message', `13`);
+				}
+				if (random === 1) {
+					this.add('-message', `you can't tame the fiend`);
+				}
+				if (random === 2) {
+					this.add('-message', `have sex`);
+				}
+				if (random === 3) {
+					this.add('-message', `ashton`);
+				}
+			}
+			if (target.status === 'slp') {
+				if (random === 0) {
+					this.add('-message', `gore`);
+				}
+				if (random === 1) {
+					this.add('-message', `*cums more*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*writhes*`);
+				}
+				if (random === 3) {
+					this.add('-message', `wanna teto frot`);
+				}
+			} else {
+				if (random === 0) {
+					this.add('-message', `mixel hell`);
+				}
+				if (random === 1) {
+					this.add('-message', `g`);
+				}
+				if (random === 2) {
+					this.add('-message', `b`);
+				}
+				if (random === 3) {
+					this.add('-message', `n`);
+				}
+			}
+		},
+		name: "Chinese Ramblings",
+		isPermanent: true,
+		rating: 0,
+		isNonstandard: "Future",
+	},
 	bereavement: {
 		onStart(pokemon) {
 			if (pokemon.swordBoost = true) {
