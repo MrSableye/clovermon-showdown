@@ -120,7 +120,7 @@ export const commands: Chat.ChatCommands = {
 				this.runBroadcast();
 				checkBadgesEnabled();
 
-				return this.sendReplyBox('<b><u>Tour Win Leaderboard</b><br />' + createLeaderboardHtml(data));
+				return this.sendReplyBox('<b><u>Tour Win Leaderboard</u></b><br />' + createLeaderboardHtml(data));
 			},
 			get(target, room, user) {
 				checkBadgesEnabled();
