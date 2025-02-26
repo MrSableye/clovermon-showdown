@@ -11198,6 +11198,46 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	blobbert: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	hobbos: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	fiendlos: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	zaclos: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	nolos: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	monklos: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	toadlos: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	c3llos: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	stingulor: {
 		inherit: true,
 		tier: "OU",

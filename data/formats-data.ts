@@ -11167,6 +11167,38 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbert: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	hobbos: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	monklos: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fiendlos: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	nolos: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	zaclos: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	toadlos: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	c3llos: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	gengotoro: {
 		tier: "Illegal",
 		isNonstandard: "Future",
