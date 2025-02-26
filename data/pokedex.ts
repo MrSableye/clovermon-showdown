@@ -50757,7 +50757,7 @@ c3llos: {
 		name: "C3llos",
 		types: ["Ghost", "Fairy"],
 		gender: "F",
-		baseStats: {hp: 95, atk: 85, def: 80, spa: 15, spd: 25, spe: 70},
+		baseStats: {hp: 42, atk: 87, def: 80, spa: 130, spd: 95, spe: 130},
 		abilities: {0: "Fire Affinity", 1: "Cell Shield", H: "Transfusion", S: "Normalize"},
 		heightm: 0.4,
 		weightkg: 5.7,
