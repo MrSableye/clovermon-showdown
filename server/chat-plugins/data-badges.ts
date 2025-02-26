@@ -1,6 +1,6 @@
-import {REST, Routes} from 'discord.js';
-import {FS} from '../../lib';
-import {Badges} from './badges';
+import { REST, Routes } from 'discord.js';
+import { FS } from '../../lib';
+import { Badges } from './badges';
 
 const DISCORD_BOT_ID = "mrsablebot"; // TODO: Make this configurable
 const DISCORD_BADGE_ID = "discord";
@@ -58,15 +58,15 @@ const checkTourThreshold = async (userID: string, user: User) => {
 				await Badges.addBadgeToUser(userID, badgeId, user, true);
 			}
 		}));
-	} catch (e) {}
+	} catch (e) { }
 
 	if (userTourWins >= MINIMUM_TOURS_REQUIRED) {
 		try {
 			try {
 				await Badges.addBadgeToUser(userID, TOUR_BADGE_ID, user, true);
-			} catch (e) {}
+			} catch (e) { }
 
-			await Badges.updateBadgeData(userID, TOUR_BADGE_ID, {wins: userTourWins}, user, true);
+			await Badges.updateBadgeData(userID, TOUR_BADGE_ID, { wins: userTourWins }, user, true);
 		} catch (e) { return false; }
 
 		return true;
@@ -79,9 +79,9 @@ const addDiscordBadge = async (user: User, username: string) => {
 	try {
 		try {
 			await Badges.addBadgeToUser(user.id, DISCORD_BADGE_ID, user, true);
-		} catch (e) {}
+		} catch (e) { }
 
-		await Badges.updateBadgeData(user.id, DISCORD_BADGE_ID, {username}, user, true);
+		await Badges.updateBadgeData(user.id, DISCORD_BADGE_ID, { username }, user, true);
 	} catch (e) { return false; }
 
 	return true;
@@ -95,12 +95,33 @@ export const transferTourWins = async (oldUser: string, newUser: string, user: U
 	await checkTourThreshold(toID(oldUser), user);
 };
 
+const createLeaderboardHtml = (data: Data) => {
+	let leaderboardHtml = '<table>';
+	let entries = Object.entries(data.tours);
+	entries.sort((a, b) => b[1] - a[1]);
+	entries = entries.slice(0, 50);
+	entries.forEach(([userId, wins], index) => {
+		leaderboardHtml += '<tr>';
+		leaderboardHtml += `<td>#${index + 1} ${userId}: ${wins} wins</td>`;
+		leaderboardHtml += '</tr>';
+	});
+	leaderboardHtml += '</table>';
+
+	return leaderboardHtml;
+};
+
 export const commands: Chat.ChatCommands = {
 	dbadge: 'databadge',
 	databadge: {
 		tour: 'tournament',
 		tours: 'tournament',
 		tournament: {
+			leaderboard(target) {
+				this.runBroadcast();
+				checkBadgesEnabled();
+
+				return this.sendReplyBox('<b><u>Tour Win Leaderboard</b><br />' + createLeaderboardHtml(data));
+			},
 			get(target, room, user) {
 				checkBadgesEnabled();
 
