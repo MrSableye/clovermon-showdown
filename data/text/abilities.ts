@@ -3410,6 +3410,10 @@ malediction: {
 		name: "Rot",
 		shortDesc: "On-switch in, all active Pokemon's Leftovers are turned into Black Sludge.",
 	},
+	chineseramblings: {
+		name: "Chinese Ramblings",
+		shortDesc: "you cannot tame the fiend.",
+	},
 	"2mss": {
 		name: "2MSS",
 		shortDesc: "This Pokemon's third and fourth moves are disabled.",
