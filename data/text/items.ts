@@ -2689,6 +2689,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Fusjinium Z",
 		desc: "If held by Fusjahl with Tri-Punch, it can use Gigasubferno Strike.",
 	},
+	blubbastardiumz: {
+		name: "Blubbastardium Z",
+		desc: "If held by Blubbastard with Hydro Pump, it can use Blast Bleed.",
+	},
 	charger: {
 		name: "Charger",
 		desc: "If hit by an Electric-type or Energy move, this Pokemon gains the Charge effect.",

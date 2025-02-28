@@ -4437,6 +4437,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	blastbleed: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	backwardslongjump: {
 		inherit: true,
 		isNonstandard: null,
