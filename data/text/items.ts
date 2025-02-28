@@ -2526,6 +2526,11 @@ export const ItemsText: {[k: string]: ItemText} = {
 		desc: "Slicing-based moves have a 1.1x boost when this item is held. Prevents Attack from being reduced by foe or self-inflicted attack reduction.",
 		shortDesc: "Boosts slicing-based moves by 1.1x. Prevents Attack from being reduced by foe or self.",
 	},
+	efficientpick: {
+		name: "Efficient Pick",
+		desc: "If held by a Primiteve, its Rock-Type attacks are super-effective against Steel-Types.",
+		shortDesc: "If held by a Primiteve, its Rock-Type attacks are super-effective against Steel-Types.",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",
