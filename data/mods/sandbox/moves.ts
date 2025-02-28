@@ -4877,6 +4877,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	oceanhorn: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blazingwheel: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	prisonroots: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	mountaingale: {
 		num: 836,
 		accuracy: 100,
