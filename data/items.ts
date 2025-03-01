@@ -8575,7 +8575,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			basePower: 90,
 		},
 		onAnyEffectiveness(typemod, target, type, move) {
-			if (pokemon.species.name !== 'Primiteve' && move.type === 'Rock' && ['Steel'].includes(type)) {
+			if (okemon.baseSpecies.name === 'Primiteve' && move.type === 'Rock' && ['Steel'].includes(type)) {
 				return 1;
 			}
 		},
