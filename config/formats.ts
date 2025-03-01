@@ -1906,6 +1906,7 @@ export const Formats: FormatList = [
 			'Stink Bomb',
 			'Toothpaste',
 			'Whetstone',
+			'Efficient Pick',
 			'Baton Pass + Ingrain',
 			'Baton Pass + Aqua Ring',
 			'Baton Pass + Substitute'

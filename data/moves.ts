@@ -31727,6 +31727,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Dark",
 	},
+	blastbleed: {
+		num: 662,
+		accuracy: true,
+		basePower: 200,
+		category: "Special",
+		name: "Blast Bleed",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		isZ: "blubbastardiumz",
+		onHit(target, source, move) {
+			return target.addVolatile('trapped', source, move, 'trapper');
+		},
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Water",
+		isNonstandard: "Future",
+	},
 	eatrocks: {
 		accuracy: 100,
 		basePower: 0,

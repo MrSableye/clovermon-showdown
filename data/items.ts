@@ -8568,6 +8568,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Past",
 		rating: 1,
 	},
+	efficientpick: {
+		name: "Efficient Pick",
+		spritenum: 343,
+		fling: {
+			basePower: 90,
+		},
+		onAnyEffectiveness(typemod, target, type, move) {
+			if (pokemon.species.name !== 'Primiteve' && move.type === 'Rock' && ['Steel'].includes(type)) {
+				return 1;
+			}
+		},
+		itemUser: ["Primiteve"],
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	whetstone: {
         name: "Whetstone",
         spritenum: 187,
@@ -10082,6 +10097,18 @@ export const Items: {[itemid: string]: ItemData} = {
 				this.actions.useMove('watergun', source, target);
 			}
 		},
+		rating: 1,
+	},
+	blubbastardiumz: {
+		name: "Blubbastardium Z",
+		spritenum: 633,
+		onTakeItem: false,
+		zMove: "Blast Bleed",
+		zMoveFrom: "Hydro Pump",
+		itemUser: ["Blubbastard"],
+		num: 798,
+		gen: 7,
+		isNonstandard: "Future",
 		rating: 1,
 	},
 	grimseeds: {
