@@ -7767,10 +7767,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Pressure Fuzed",
 		onModifyMove(move, pokemon, target) {
 			if (move.selfdestruct) delete move.selfdestruct;
+			if (move.mindBlownRecoil) delete move.mindBlownRecoil;
 		},
 		onAfterMove(source, target, move) {
 			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct', 'finalgambit', 'memento', 'holyduty'].includes(move.id)) {
-				this.damage(source.baseMaxhp / 1, source, source);
+				source.sethp(1);
+				this.add('-sethp', source, source.getHealth, '[from] ability: Pressure Fuzed', '[silent]');
 			}
 		},
 		onDamagePriority: -30,
@@ -7780,8 +7782,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return target.hp - 1;
 			}
 		},
-		onBasePowerPriority: undefined,
-		onBasePower(basePower, attacker, defender, move) {},
 		rating: 4,
 		isNonstandard: "Future",
 		num: 215,
