@@ -8575,7 +8575,11 @@ export const Items: {[itemid: string]: ItemData} = {
 			basePower: 90,
 		},
 		onAnyEffectiveness(typemod, target, type, move) {
-			if (pokemon.species.name !== 'Primiteve' && move.type === 'Rock' && ['Steel'].includes(type)) {
+			const degradationUser = this.effectState.target;
+
+			if (degradationUser !== this.activePokemon) return; 
+
+			if (pokemon.baseSpecies.name === 'Primiteve' && move.type === 'Rock' && ['Steel'].includes(type)) {
 				return 1;
 			}
 		},
