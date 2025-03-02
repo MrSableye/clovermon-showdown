@@ -8575,9 +8575,9 @@ export const Items: {[itemid: string]: ItemData} = {
 			basePower: 90,
 		},
 		onAnyEffectiveness(typemod, target, type, move) {
-			const efficientpickUser = this.effectState.target;
+			const degradationUser = this.effectState.target;
 
-			if (efficientpickUser !== 'Primiteve') return; 
+			if (degradationUser !== 'Primiteve') return; 
 
 			if (move.type === 'Rock' && ['Steel'].includes(type)) {
 				return 1;
