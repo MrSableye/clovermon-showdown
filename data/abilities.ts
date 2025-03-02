@@ -7775,13 +7775,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add('-sethp', source, source.getHealth, '[from] ability: Pressure Fuzed', '[silent]');
 			}
 		},
-		onDamagePriority: -30,
-		onDamage(damage, target) {
-			if (damage >= target.hp) {
-				this.add('-ability', target, 'Pressure Fuzed');
-				return target.hp - 1;
-			}
-		},
 		rating: 4,
 		isNonstandard: "Future",
 		num: 215,
