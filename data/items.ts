@@ -8577,7 +8577,8 @@ export const Items: {[itemid: string]: ItemData} = {
 		onAnyEffectiveness(typemod, target, type, move) {
 			const degradationUser = this.effectState.target;
 
-			if (degradationUser !== 'Primiteve') return; 
+			if (degradationUser !== this.activePokemon) return;
+			if (!this.activePokemon || this.activePokemon.species.id !== 'Primiteve') return;
 
 			if (move.type === 'Rock' && ['Steel'].includes(type)) {
 				return 1;
