@@ -7763,6 +7763,29 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 		num: 215,
 	},
+	pressurefuzed: {
+		name: "Pressure Fuzed",
+		onModifyMove(move, pokemon, target) {
+			if (move.selfdestruct) delete move.selfdestruct;
+		},
+		onAfterMove(source, target, move) {
+			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct', 'finalgambit', 'memento', 'holyduty'].includes(move.id)) {
+				this.damage(source.baseMaxhp / 1, source, source);
+			}
+		},
+		onDamagePriority: -30,
+		onDamage(damage, target) {
+			if (damage >= target.hp) {
+				this.add('-ability', target, 'Pressure Fuzed');
+				return target.hp - 1;
+			}
+		},
+		onBasePowerPriority: undefined,
+		onBasePower(basePower, attacker, defender, move) {},
+		rating: 4,
+		isNonstandard: "Future",
+		num: 215,
+	},
 	transfusion: {
 		name: "Transfusion",
 		onDamagingHitOrder: 1,

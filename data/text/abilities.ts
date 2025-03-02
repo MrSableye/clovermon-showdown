@@ -2616,6 +2616,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Collapsing Ruin",
 		desc: "Halves the damage from Rock-type's weaknesses. Stealth Rocks are set on the opposing side upon fainting.",
 	},
+	pressurefuzed: {
+		name: "Pressure Fuzed",
+		desc: "After using a Self-Destructing move (Self-Destruct, Explosion, Final Gambit, Misty Explosion, Memento or Holy Duty), the user is left with 1 HP no matter what.",
+	},
 	transfusion: {
 		name: "Transfusion",
 		shortDesc: "Upon being hit, changes the opponent's type to the primary type of the ability-holder. When the ability-holder switches out, change their types back.",
