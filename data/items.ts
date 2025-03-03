@@ -8588,6 +8588,22 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	lampoffortunes: {
+		name: "Lamp of Fortunes",
+		spritenum: 155,
+		fling: {
+			basePower: 90,
+		},
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
+			if (pokemon.baseSpecies.name === 'Emojinn' && this.field.isWeather('sandstorm')) {
+			this.actions.useMove(Dex.moves.get('Mirage Veil'), pokemon);
+			}
+		},
+		itemUser: ["Emojinn"],
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	whetstone: {
         name: "Whetstone",
         spritenum: 187,

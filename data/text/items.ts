@@ -2531,6 +2531,11 @@ export const ItemsText: {[k: string]: ItemText} = {
 		desc: "If held by a Primiteve, its Rock-Type attacks are super-effective against Steel-Types.",
 		shortDesc: "If held by a Primiteve, its Rock-Type attacks are super-effective against Steel-Types.",
 	},
+	lampoffortunes: {
+		name: "Lamp of Fortunes",
+		desc: "If held by an Emojinn, under sandstorm Mirage Veil is set up.",
+		shortDesc: "If held by an Emojinn, under sandstorm Mirage Veil is set up.",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",
