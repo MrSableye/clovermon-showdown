@@ -37020,7 +37020,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Devante",
 		types: ["Fairy", "Fighting"],
 		genderRatio: {M: 0.75, F: 0.25},
-		baseStats: {hp: 80, atk: 97, def: 70, spa: 55, spd: 75, spe: 123},
+		baseStats: {hp: 80, atk: 97, def: 75, spa: 55, spd: 75, spe: 123},
 		abilities: {0: "Hyper Cutter", 1: "Prankster", H: "Blademaster", S: "Quick Draw"},
 		heightm: 1.9,
 		weightkg: 77.3,
