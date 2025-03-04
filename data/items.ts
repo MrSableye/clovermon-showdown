@@ -10356,6 +10356,11 @@ export const Items: {[itemid: string]: ItemData} = {
 				target.addVolatile('shatteredampoule');
 			}
 		},
+		onSwitchOut(pokemon) {
+			for (const foe of pokemon.foes()) {
+				foe.removeVolatile('sterilized');
+			}
+		},
 		onEnd(pokemon) {
 			for (const foe of pokemon.foes()) {
 				foe.removeVolatile('sterilized');
