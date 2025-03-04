@@ -2778,12 +2778,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	devante: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "Uber",
+		tier: "OU",
 	},
 	vergilion: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "Uber",
+		tier: "OU",
+	},
+	leopawn: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
 	},
 	winkhulu: {
 		inherit: true,
