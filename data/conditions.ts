@@ -1409,4 +1409,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 			}
 		},
 	},
+	sterilized: {
+		name: "Sterilized",
+	},
+	shatteredampoule: {
+		name: "Shattered Ampoule",
+		duration: 3,
+	},
 };

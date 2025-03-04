@@ -10340,6 +10340,26 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	sterilizingampoule: {
+		name: "Sterilizing Ampoule",
+		onStart(pokemon) {
+			for (const foe of pokemon.foes()) {
+				foe.addVolatile('sterilized', pokemon, this.effect);
+			}
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (move.id === 'knockoff') return;
+			if (target && target.useItem()) {
+				target.addVolatile('shatteredampoule');
+			}
+		},
+		onEnd(pokemon) {
+			for (const foe of pokemon.foes()) {
+				foe.removeVolatile('sterilized');
+			}
+		},
+		isNonstandard: "Future",
+	},
 	radishorb: {
 		name: "Radish Orb",
 		spritenum: 530,

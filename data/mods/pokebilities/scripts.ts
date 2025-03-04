@@ -29,7 +29,7 @@ export const Scripts: ModdedBattleScriptsData = {
 
 			return !!(
 				(this.battle.gen >= 5 && !this.isActive) ||
-				((this.volatiles['gastroacid'] ||
+				((this.volatiles['gastroacid'] || this.volatiles['sterilized'] || this.volatiles['shatteredampoule'] ||
 					(neutralizinggas && (this.ability !== ('neutralizinggas' as ID) ||
 						this.m.innates?.some((k: string) => k === 'neutralizinggas'))
 					)) && !this.getAbility().isPermanent

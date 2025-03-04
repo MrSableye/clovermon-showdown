@@ -818,6 +818,7 @@ export class Pokemon {
 		if (this.battle.gen >= 5 && !this.isActive) return true;
 		if (this.getAbility().isPermanent) return false;
 		if (this.volatiles['gastroacid']) return true;
+		if (this.volatiles['sterilized'] || this.volatiles['shatteredampoule']) return true;
 		if (this.hasItem('Supression Stone')) return true;
 
 		// Check if any active pokemon have the ability Neutralizing Gas
