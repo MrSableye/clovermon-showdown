@@ -10350,6 +10350,9 @@ export const Items: {[itemid: string]: ItemData} = {
 		onDamagingHit(damage, target, source, move) {
 			if (move.id === 'knockoff') return;
 			if (target && target.useItem()) {
+				for (const foe of target.foes()) {
+					foe.removeVolatile('sterilized');
+				}
 				target.addVolatile('shatteredampoule');
 			}
 		},

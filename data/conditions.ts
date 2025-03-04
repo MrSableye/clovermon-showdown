@@ -1414,12 +1414,18 @@ export const Conditions: {[k: string]: ConditionData} = {
 		onStart(pokemon) {
 			this.add('-start', pokemon, 'sterilized');
 		},
+		onEnd(target) {
+			this.add('-end', target, 'sterilized');
+		},
 	},
 	shatteredampoule: {
 		name: "Shattered Ampoule",
 		duration: 3,
 		onStart(pokemon) {
 			this.add('-start', pokemon, 'shatteredampoule');
+		},
+		onEnd(target) {
+			this.add('-end', target, 'shatteredampoule');
 		},
 	},
 };
