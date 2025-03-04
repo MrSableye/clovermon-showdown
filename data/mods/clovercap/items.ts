@@ -244,6 +244,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	sterilizingampoule: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		inherit: true,

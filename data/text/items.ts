@@ -2533,8 +2533,13 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	lampoffortunes: {
 		name: "Lamp of Fortunes",
-		desc: "If held by an Emojinn, under sandstorm Mirage Veil is set up.",
-		shortDesc: "If held by an Emojinn, under sandstorm Mirage Veil is set up.",
+		desc: "If held by an Emojinn, upon switch-in if sandstorm is active, Mirage Veil is set up for 5 turns.",
+		shortDesc: "If held by an Emojinn, upon switch-in if sandstorm is active, Mirage Veil is set up for 5 turns.",
+	},
+	sterilizingampoule: {
+		name: "Sterilizing Ampoule",
+		desc: "Upon switching in, nullifies the opposing Pokemon's ability. Upon being hit while holding the item, the item breaks and the holders ability is nullified for 2 turns. If knocked off, holders ability is not nullified.",
+		shortDesc: "pon switching in, nullifies the opposing Pokemon's ability. Upon being hit while holding the item, the item breaks and the holders ability is nullified for 2 turns. If knocked off, holders ability is not nullified.",
 	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
