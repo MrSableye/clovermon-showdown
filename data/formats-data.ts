@@ -8845,6 +8845,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	leopawn: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	dugwalker: {
 		tier: "Illegal",
 		isNonstandard: "Future",

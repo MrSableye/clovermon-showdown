@@ -10342,6 +10342,11 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	sterilizingampoule: {
 		name: "Sterilizing Ampoule",
+		spritenum: 312,
+		fling: {
+			basePower: 75,
+			volatileStatus: 'confusion',
+		},
 		onStart(pokemon) {
 			for (const foe of pokemon.foes()) {
 				foe.addVolatile('sterilized', pokemon, this.effect);
@@ -10367,6 +10372,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	radishorb: {
 		name: "Radish Orb",
