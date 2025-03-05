@@ -8913,6 +8913,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	snuradish: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	sphare: {
 		tier: "Illegal",
 		isNonstandard: "Future",

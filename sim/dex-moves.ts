@@ -63,6 +63,7 @@ interface MoveFlags {
 	kick?: 1; // Kick-based moves (for Striker)
 	bone?: 1; // Bone-based moves (for Bone Zone)
 	hammer?: 1; // Hammer-based moves (for Admin Abuse)
+	radish?: 1; // Radish moves
 	naturePower?: 1;
 	tail?: 1; // Tail-based moves
 	coral?: 1; // Coral-based moves

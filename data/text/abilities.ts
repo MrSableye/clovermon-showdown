@@ -3123,6 +3123,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "The snake hisses at you menacingly...",
 	},
+	lastradish: {
+		name: "Last Radish",
+		shortDesc: "Deals 1.5x damage against radished opponents. Boosts Sp. Atk by 1 stage when reduced below 1/3 of maximum HP. Takes heavily reduced damage from radish attacks.",
+
+		start: "The horrifying gleam of [POKEMON]'s radish flesh strikes fear in everyone!",
+	},
 	mindzap: {
 		name: "Mind Zap",
 		shortDesc: "Clears all disruptions from the field (screens, hazards, weather).",
