@@ -31727,25 +31727,39 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Dark",
 	},
+	gemblast: {
+		accuracy: 100,
+		basePower: 60,
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower + 30 * pokemon.positiveBoosts();
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		category: "Special",
+		name: "Gem Blast",
+		pp: 40,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+		zMove: {basePower: 400},
+		isNonstandard: "Future",
+	},
 	blastbleed: {
-		num: 662,
 		accuracy: true,
-		basePower: 200,
+		basePower: 999,
 		category: "Special",
 		name: "Blast Bleed",
 		pp: 1,
-		priority: 0,
 		flags: {},
 		isZ: "blubbastardiumz",
-		onHit(target, source, move) {
-			return target.addVolatile('trapped', source, move, 'trapper');
-		},
-		secondary: {
-			chance: 100,
-			status: 'par',
-		},
-		target: "normal",
-		type: "Water",
+		priority: 0,
+		selfdestruct: "always",
+		secondary: null,
+		target: "self",
+		type: "???",
+		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
 	eatrocks: {

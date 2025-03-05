@@ -12916,6 +12916,51 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	fleetie: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	wrongle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	einwanix: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	pinepig: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	gobline: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ikinne: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	cowefish: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	berylder: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	hambone: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	bitician: {
 		inherit: true,
 		isNonstandard: null,

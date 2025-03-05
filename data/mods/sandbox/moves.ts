@@ -4974,4 +4974,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	gemblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
