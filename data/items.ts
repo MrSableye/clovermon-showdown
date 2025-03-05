@@ -10125,7 +10125,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 633,
 		onTakeItem: false,
 		zMove: "Blast Bleed",
-		zMoveFrom: "Hydro Pump",
+		zMoveFrom: "String Shot",
 		itemUser: ["Blubbastard"],
 		num: 798,
 		gen: 7,

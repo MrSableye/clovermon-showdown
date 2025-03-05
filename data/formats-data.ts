@@ -11363,6 +11363,42 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",	
 	},
+	fleetie: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	wrongle: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	einwanix: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	pinepig: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	goblinne: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	ikinne: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	cowefish: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	berylder: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	hambone: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
 	amalgum: {
 		tier: "Illegal",
 		isNonstandard: "Future",
