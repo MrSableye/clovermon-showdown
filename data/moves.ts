@@ -31744,6 +31744,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Rock",
 		zMove: {basePower: 400},
+		isNonstandard: "Future",
 	},
 	blastbleed: {
 		accuracy: true,
