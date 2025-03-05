@@ -54326,7 +54326,7 @@ tamanaut: {
 		name: "Cowefish",
 		types: ["Water"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 100, atk: 111, def: 59, spa: 69, spd: 50, spe: 111},
+		baseStats: {hp: 100, atk: 50, def: 100, spa: 50, spd: 100, spe: 50},
 		abilities: {0: "Poison Point", 1: "Water Veil", H: "Drizzle"},
 		heightm: 0.4,
 		weightkg: 1.2,
