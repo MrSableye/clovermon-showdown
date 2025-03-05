@@ -10926,8 +10926,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		name: "Last Radish",
+		isNonstandard: "Future",
 		rating: 1.5,
-		num: 196,
 	},
 	bejeweled: {
 		onStart(source) {
