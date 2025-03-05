@@ -9937,7 +9937,19 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	radishpunch: {
 		name: "Radish Punch",
-		shortDesc: "100% chance to radish the opponent. Does not check accuracy.",
+		shortDesc: "100% chance to radish the opponent. Does not check accuracy. Special when used by Snuradish.",
+	},
+	radishblast: {
+		name: "Radish Blast",
+		shortDesc: "100% chance to lower Sp. Atk of a radished target. Does not check accuracy.",
+	},
+	doubleradishbash: {
+		name: "Double Radish Bash",
+		shortDesc: "Hits twice. 30% chance to make the target flinch. Does not check accuracy.",
+	},
+	radishofruin: {
+		name: "Radish of Ruin",
+		shortDesc: "50% chance to radish the opponent. Does not check accuracy.",
 	},
 	investment: {
 		name: "Investment",

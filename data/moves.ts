@@ -31887,7 +31887,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Sandblast",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1,},
 		secondary: {
 			chance: 30,
 			boosts: {
@@ -31906,13 +31906,72 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Radish Punch",
 		pp: 15,
 		priority: 0,
-		flags: {punch: 1, protect: 1, mirror: 1},
+		flags: {punch: 1, protect: 1, mirror: 1, radish: 1},
 		secondary: {
 			chance: 100,
 			status: 'radish',
 		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.species.name === 'Snuradish') move.category = 'Special';
+		},
 		target: "normal",
 		type: "Grass",
+		isNonstandard: "Future",
+	},
+	radishblast: {
+		accuracy: true,
+		basePower: 90,
+		category: "Special",
+		name: "Radish Blast",
+		pp: 15,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1, radish: 1},
+		onHit(target, source, move) {
+			if (target.status === 'radish') {
+				return !!this.boost({spa: -1}, target, source, move);
+			}
+			return false;
+		},
+		target: "normal",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
+	doubleradishbash: {
+		accuracy: true,
+		basePower: 45,
+		category: "Special",
+		name: "Double Radish Bash",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, radish: 1},
+		multihit: 2,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Steel",
+		zMove: {basePower: 180},
+		maxMove: {basePower: 140},
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	radishofruin: {
+		accuracy: true,
+		basePower: 120,
+		category: "Special",
+		name: "Radish of Ruin",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, radish: 1},
+		recoil: [1, 2],
+		secondary: {
+			chance: 50,
+			status: 'radish',
+		},
+		target: "normal",
+		type: "Fairy",
+		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
 	psychicd: {

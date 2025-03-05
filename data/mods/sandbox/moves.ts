@@ -4625,6 +4625,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	radishblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	radishofruin: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	doubleradishbash: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	psychicd: {
 		inherit: true,
 		isNonstandard: null,
