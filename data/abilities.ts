@@ -17040,7 +17040,7 @@ malediction: {
 			  this.add('-message', `${target.name} está sob influência da corrupção mental (${(target as any).mindCorruptionTurns}/5 turnos).`);
 	  
 			  // Se o contador chegar a 5, converte o Pokémon inimigo para o lado aliado
-			  if ((target as any).mindCorruptionTurns >= 5) {
+			  if ((target as any).mindCorruptionTurns >= 4) {
 				this.add('-message', `${target.name} foi completamente corrompido e agora luta pelo lado de ${pokemon.side.name}!`);
 	  
 				const foeSide = target.side;
@@ -17548,15 +17548,15 @@ malediction: {
 			// 20% de chance de desmaiar o adversário
 			for (const target of pokemon.side.foe.active) {
 				if (!target || target.fainted) continue;
-				if (this.randomChance(1, 10)) { // 10% de chance
+				if (this.randomChance(11, 100)) { // 11% de chance
 					this.add('-message', `${target.name} foi amaldiçoado pela Profecia Sombria!`);
 					target.faint();
 					return; // Se o adversário desmaiar, não calcula o do usuário
 				}
 			}
 	
-			// Se o adversário não desmaiou, 8% de chance do usuário desmaiar
-			if (this.randomChance(8, 100)) { // 8% de chance
+			// Se o adversário não desmaiou, 7% de chance do usuário desmaiar
+			if (this.randomChance(7, 100)) { // 7% de chance
 				this.add('-message', `${pokemon.name} foi consumido pela Profecia Sombria!`);
 				pokemon.faint();
 			}
@@ -17588,7 +17588,7 @@ malediction: {
 			pokemon.addVolatile('nopivotblock');
 		},
 		condition: {
-			duration: 3, // Dura 3 turnos, mas no terceiro o Pokémon já pode sair
+			duration: 3, // Dura 3 turnos, impedindo movimentos de pivô durante todo esse tempo
 			onStart(target) {
 				this.add('-start', target, 'No Pivot Block');
 			},
@@ -17598,6 +17598,13 @@ malediction: {
 					this.add('-end', pokemon, 'No Pivot Block');
 				}
 			},
+			onTryMove(pokemon, target, move) {
+				if (move.selfSwitch) {
+					this.add('-fail', pokemon, 'move: ' + move.name);
+					this.attrLastMove('[still]');
+					return false;
+				}
+			}
 		},
 		onTryMove(target, source, move) {
 			if (move.selfSwitch) {
@@ -17622,7 +17629,7 @@ malediction: {
 				pokemon.maybeTrapped = true; // Inclui Ghost-types no status "talvez preso"
 			}
 		},
-		shortDesc: "Impede trocas e movimentos de pivô por 2 turnos.",
+		shortDesc: "Impede trocas e movimentos de pivô por 3 turnos.",
 		name: "No Pivot Block",
 		rating: 4.5,
 		num: 1020, // Ajuste conforme necessário
@@ -17732,6 +17739,48 @@ malediction: {
 		num: 1020, // Ajuste conforme necessário
 		isNonstandard: "Future",
 	},
+
+	pouncemax: {
+		onModifyPriority(priority, source, target, move) {
+			if (source.activeMoveActions === 0) {
+				return priority + 4;
+			}
+		},
+		name: "Pounce MAX",
+		rating: 3,
+		num: 6667,
+		isNonstandard: "Future",
+	},
+
+	shadowcurse: {
+		shortDesc: "Invoca midnight ao entrar. Em Hail, +1 Def/SpD oculto, 30% de congelar oponente e -30% precisão dele.",
+		name: "Shadow Curse",
+		rating: 4.5,
+		num: 1020, // Número pode ser ajustado conforme necessário
+		isNonstandard: "Future",
+	
+		// Ao entrar em campo, invoca midnight/midnight
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Permafrost');
+			this.field.setWeather('midnight'); // "midnight" substituiu "hail" na mecânica moderna
+		  },
+	  
+		  // Reduz a precisão dos moves do oponente em 30% durante Snow
+		  onModifyAccuracy(accuracy, target, source, move) {
+			if (this.field.isWeather('hail') && typeof accuracy === 'number') {
+			  return this.chainModify(0.7); // Reduz precisão para 70%
+			}
+		  },
+	  
+		  // No final de cada turno, oponente tem 30% de chance de ser congelado
+		  onResidual(target) {
+			const foe = target.side.foe.active[0]; // Oponente ativo
+			if (this.field.isWeather('midnight') && foe && this.randomChance(22, 100)) {
+			  this.add('-message', `${foe.name} foi amaldiçoado pelas sombras!`);
+			  foe.addVolatile('curse', target);
+			}
+		  },
+		},
 		
 	  
 };
