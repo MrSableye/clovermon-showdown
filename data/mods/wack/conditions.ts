@@ -935,7 +935,25 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			} else if (move.type === 'Normal' && move.id !== 'weatherball') {
 				this.field.clearWeather();
 			}
+		},
+
+		onStart(pokemon) {
+			const sideConditions = [
+				'spikes',
+				'toxicspikes',
+				'stealthrock',
+				'stickyweb',
+				'gmaxsteelsurge',
+				'sleazyspores',
+				'shattershard',
+			];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
 		}
+
 	},
 
 	gengold:{
@@ -962,6 +980,19 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 		}
 	}, 
+	maledeto:{
+		onDamagingHit(damage, target, source, move) {
+			if (move.flags['contact']) {
+				source.addVolatile('confusion');
+			}
+		},
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.category === 'Status') {
+				move.pranksterBoosted = true;
+				return priority + 1;
+			}
+		}
+	},
 
 	mentum:{
 		onAnyModifyBoost(boosts, pokemon) {
