@@ -17775,87 +17775,12 @@ malediction: {
 		  // No final de cada turno, oponente tem 30% de chance de ser congelado
 		  onResidual(target) {
 			const foe = target.side.foe.active[0]; // Oponente ativo
-			if (this.field.isWeather('midnight') && foe && this.randomChance(25, 100)) {
+			if (this.field.isWeather('midnight') && foe && this.randomChance(22, 100)) {
 			  this.add('-message', `${foe.name} foi amaldiçoado pelas sombras!`);
 			  foe.addVolatile('curse', target);
 			}
 		  },
 		},
-
-		undyingvolt: {
-			onDamage(damage, target, source, effect) {
-				// Se a habilidade já foi ativada antes, permite o nocaute normalmente
-				if (target.volatiles['undyingvolt']) return;
-		
-				// Se o dano for fatal, impede o nocaute e ativa a habilidade
-				if (damage >= target.hp) {
-					this.add('-ability', target, 'Undying Volt');
-					this.add('-message', `${target.name} refuses to go down!`);
-					target.hp = 1;
-					target.addVolatile('undyingvolt');
-		
-					// Ativação forçada do Z-Move
-					const move = this.dex.getMove('10,000,000 Volt Thunderbolt');
-					if (move && move.isZ) {
-						this.add('-zpower', target);
-						this.useMove('10,000,000 Volt Thunderbolt', target);
-					} else {
-						this.add('-message', 'Error: Z-Move not found!');
-					}
-		
-					return 0; // Cancela o dano letal
-				}
-			},
-			condition: {
-				onStart(pokemon) {
-					this.add('-message', `${pokemon.name} is charged with undying electricity!`);
-				},
-				onEnd(pokemon) {
-					this.add('-message', `${pokemon.name} has exhausted its Undying Volt power.`);
-				},
-			},
-			shortDesc: "Sobrevive com 1 HP e ativa 10,000,000 Volt Thunderbolt como Z-Move.",
-			name: "Undying Volt",
-			rating: 5,
-			num: 1020,
-			isNonstandard: "Future",
-		},
-
-		anarchyaura: {
-			onStart(pokemon) {
-				this.add('-ability', pokemon, 'Anarchy Aura');
-				this.add('-message', `Anarchy spreads across the battlefield!`);
-				pokemon.addVolatile('anarchyaura');
-			},
-			condition: {
-				onBeforeMove(pokemon, target, move) {
-					// Verifica se o Pokémon tem mais de um movimento
-					if (pokemon.moveSlots.length > 1) {
-						const possibleMoves = pokemon.moveSlots
-							.map(slot => slot.id)
-							.filter(id => id !== move.id); // Remove o movimento escolhido
-		
-						if (possibleMoves.length) {
-							const newMove = this.sample(possibleMoves); // Escolhe um movimento aleatório diferente
-							const moveData = this.dex.moves.get(newMove); // Obtém os dados do novo golpe
-		
-							if (moveData) {
-								this.add('-activate', pokemon, 'ability: Anarchy Aura');
-								this.add('-message', `${pokemon.name} ignores orders and uses ${moveData.name} instead!`);
-								return moveData;
-							}
-						}
-					}
-				},
-			},
-			shortDesc: "Todos os Pokémon no campo ignoram comandos e escolhem um move aleatório, exceto o selecionado pelo treinador.",
-			name: "Anarchy Aura",
-			rating: 5,
-			num: 1027,
-			isNonstandard: "Future",
-		}
-		
-		
 		
 	  
 };
