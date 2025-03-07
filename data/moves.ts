@@ -15179,6 +15179,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onHit(pokemon) {
 			if (pokemon.item || !pokemon.lastItem) return false;
 			const item = pokemon.lastItem;
+			if (pokemon.lastItem === 'shatteredampoule') return false;
 			pokemon.lastItem = '';
 			this.add('-item', pokemon, this.dex.items.get(item), '[from] move: Recycle');
 			pokemon.setItem(item);
