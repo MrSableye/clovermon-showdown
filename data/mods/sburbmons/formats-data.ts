@@ -9792,13 +9792,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-<<<<<<< Updated upstream
 	ratinbum: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-=======
->>>>>>> Stashed changes
 	raiden: {
 		inherit: true,
 		isNonstandard: "Past",

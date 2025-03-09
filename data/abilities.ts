@@ -17672,21 +17672,13 @@ malediction: {
 	},
 
 	stormcaller: {
-<<<<<<< Updated upstream
 		shortDesc: "Sets Rain Dance on switch-in. End of first turn: Thunder strikes opponent. Later: 25% chance.",
-=======
-		shortDesc: "Sets Rain Dance on switch-in. First turn: Thunder hits the opponent. Later: 25% chance to strike the opponent.",
->>>>>>> Stashed changes
 		name: "Stormcaller",
 		rating: 4,
 		num: 1025,
 		isNonstandard: "Future",
 	
-<<<<<<< Updated upstream
 		// Ativa a chuva ao entrar no campo
-=======
-		// Ao entrar no campo, ativa chuva e marca o primeiro turno
->>>>>>> Stashed changes
 		onStart(source) {
 			for (const action of this.queue) {
 				if (action.choice === 'runPrimal' && action.pokemon === source && source.species.id === 'kyogre') return;
@@ -17694,33 +17686,19 @@ malediction: {
 			}
 			this.field.setWeather('raindance');
 	
-<<<<<<< Updated upstream
 			// Marca que o próximo residual é o primeiro turno
 			source.m.usingStormcaller = true;
 		},
 	
 		// Efeito no final de cada turno
-=======
-			// Flag para controlar o primeiro turno
-			source.m.stormcallerFirstTurn = true;
-		},
-	
-		// Efeito residual no final do turno
->>>>>>> Stashed changes
 		onResidual(pokemon) {
 			if (!this.field.isWeather('raindance')) return;
 	
 			const thunderMove = this.dex.getActiveMove('thunder');
 	
-<<<<<<< Updated upstream
 			// Primeiro turno: 100% de chance no oponente
 			if (pokemon.m.usingStormcaller) {
 				this.add("-message", "Lightning crackles through the storm! Thunder strikes the opposing side!");
-=======
-			// Primeiro turno: 100% de chance de acertar o lado do oponente
-			if (pokemon.m.stormcallerFirstTurn) {
-				this.add("-message", "A massive thunderbolt strikes from the storm!");
->>>>>>> Stashed changes
 	
 				const foeSide = pokemon.side.foe.active.filter(p => !p.fainted);
 				if (foeSide.length) {
@@ -17728,19 +17706,11 @@ malediction: {
 					this.actions.useMove(thunderMove, pokemon, foeTarget);
 				}
 	
-<<<<<<< Updated upstream
 				// Desativa o flag após o primeiro turno
 				pokemon.m.usingStormcaller = false;
 	
 			} else {
 				// Próximos turnos: 25% de chance de atingir o oponente
-=======
-				// Marca que o primeiro turno já passou
-				pokemon.m.stormcallerFirstTurn = false;
-	
-			} else {
-				// Próximos turnos: 25% de chance de acertar o oponente
->>>>>>> Stashed changes
 				if (this.randomChance(25, 100)) {
 					this.add("-message", "A stray lightning bolt strikes from the storm!");
 	
@@ -17750,15 +17720,9 @@ malediction: {
 						this.actions.useMove(thunderMove, pokemon, foeTarget);
 					}
 				}
-<<<<<<< Updated upstream
 			}
 		},
 	},
-=======
-				}
-			},
-		},
->>>>>>> Stashed changes
 
 	primordialguard: {
 		onStart(pokemon) {
@@ -17824,7 +17788,6 @@ malediction: {
 		  // No final de cada turno, oponente tem 30% de chance de ser congelado
 		  onResidual(target) {
 			const foe = target.side.foe.active[0]; // Oponente ativo
-<<<<<<< Updated upstream
 			
 			if (this.field.isWeather('midnight') && foe && this.randomChance(25, 100)) {
 			  this.add('-message', `${foe.name} foi amaldiçoado pelas sombras!`);
@@ -17837,11 +17800,6 @@ malediction: {
 			  this.damage(curseDamage, foe, target);
 			  
 			  this.add('-message', `${foe.name} sofreu dano da Maldição imediatamente!`);
-=======
-			if (this.field.isWeather('midnight') && foe && this.randomChance(25, 100)) {
-			  this.add('-message', `${foe.name} foi amaldiçoado pelas sombras!`);
-			  foe.addVolatile('curse', target);
->>>>>>> Stashed changes
 			}
 		  },
 		},
@@ -17859,7 +17817,6 @@ malediction: {
 					target.addVolatile('undyingvolt');
 		
 					// Ativação forçada do Z-Move
-<<<<<<< Updated upstream
 					const move = this.dex.moves.get('10,000,000 Volt Thunderbolt');
       
       			if (move && move.isZ) {
@@ -17872,17 +17829,6 @@ malediction: {
 
       			// Cancela o dano letal
       				return 0;
-=======
-					const move = this.dex.getMove('10,000,000 Volt Thunderbolt');
-					if (move && move.isZ) {
-						this.add('-zpower', target);
-						this.useMove('10,000,000 Volt Thunderbolt', target);
-					} else {
-						this.add('-message', 'Error: Z-Move not found!');
-					}
-		
-					return 0; // Cancela o dano letal
->>>>>>> Stashed changes
 				}
 			},
 			condition: {
@@ -17899,7 +17845,6 @@ malediction: {
 			num: 1020,
 			isNonstandard: "Future",
 		},
-<<<<<<< Updated upstream
 		'10kvolt': {
   		onDamage(damage, target, source, effect) {
     	// Se a habilidade já foi ativada antes, permite o nocaute normalmente
@@ -17940,8 +17885,6 @@ malediction: {
   	num: 1020,
   	isNonstandard: "Future",
 	},
-=======
->>>>>>> Stashed changes
 
 		anarchyaura: {
 			onStart(pokemon) {

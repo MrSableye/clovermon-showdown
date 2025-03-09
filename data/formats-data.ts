@@ -11527,13 +11527,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-<<<<<<< Updated upstream
 	ratinbum: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-=======
->>>>>>> Stashed changes
 	raiden: {
 		tier: "Illegal",
 		isNonstandard: "Future",

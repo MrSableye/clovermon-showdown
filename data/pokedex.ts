@@ -53925,11 +53925,7 @@ tamanaut: {
 	floraciel: { 
 		num: -50019,
 		name: "Floraciel",
-<<<<<<< Updated upstream
 		types: ["Davine", "Fairy"],
-=======
-		types: ["Divine", "Fairy"],
->>>>>>> Stashed changes
 		gender: "F", 
 		baseStats: {hp: 80, atk: 75, def: 60, spa: 150, spd: 80, spe: 145},
 		abilities: {0: "Dazzling", 1: "Pixilate", H: "Fairy Enchanter"},
@@ -54084,26 +54080,8 @@ tamanaut: {
 		gen: 0,
 		creator: "feneto_ OCB",
 	}, //feito//
-<<<<<<< Updated upstream
 	raiden: { 
 		num: -50030,
-=======
-	ratimbum: { 
-		num: -50030,
-		name: "Ratimbum",
-		types: ["Electric", "Light"],
-		baseStats: {hp: 85, atk: 145, def: 75, spa: 80, spd: 90, spe: 120},
-		abilities: {0: "10k Volt", 1: "Dazzling", H: "No Guard"},
-		heightm: 1.1,
-		weightkg: 30,
-		color: "Blue",
-		eggGroups: ["Field"],
-		gen: 0,
-		creator: "feneto_ OCB",
-	}, //feito//
-	raiden: { 
-		num: -50031,
->>>>>>> Stashed changes
 		name: "Raiden",
 		types: ["Electric", "Light"],
 		baseStats: {hp: 85, atk: 145, def: 75, spa: 80, spd: 90, spe: 120},
@@ -54115,7 +54093,6 @@ tamanaut: {
 		gen: 0,
 		creator: "feneto_ OCB",
 	}, //feito//
-<<<<<<< Updated upstream
 	ratinbum: { 
 		num: -50031,
 		name: "ratinbum",
@@ -54125,36 +54102,6 @@ tamanaut: {
 		heightm: 1.1,
 		weightkg: 30,
 		color: "Blue",
-		eggGroups: ["Field"],
-		gen: 0,
-		creator: "feneto_ OCB",
-	}, //feito//
-=======
->>>>>>> Stashed changes
-	omnirath: { 
-		num: -50028,
-		name: "Omnirath",
-		types: ["Normal", "Divine"],
-		gender: "M", 
-		baseStats: {hp: 180, atk: 150, def: 130, spa: 10, spd: 130, spe: 120},
-		abilities: {0: "Vessel of Ruin"},
-		heightm: 5.0,
-		weightkg: 500,
-		color: "Yellow",
-		eggGroups: ["Field"],
-		gen: 0,
-		creator: "feneto_ OCB",
-	}, //feito//
-	zephandor: { 
-		num: -50028,
-		name: "Zephandor",
-		types: ["Poison", "Crystal"],
-		gender: "M", 
-		baseStats: {hp: 170, atk: 170, def: 140, spa: 10, spd: 90, spe: 150},
-		abilities: {0: "No Guard"},
-		heightm: 5.0,
-		weightkg: 500,
-		color: "Yellow",
 		eggGroups: ["Field"],
 		gen: 0,
 		creator: "feneto_ OCB",

@@ -1070,11 +1070,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 				this.debug('Innate halves foe Attack');
 				return this.chainModify(0.5); // Reduz 50%
 			}
-<<<<<<< Updated upstream
 		},
-=======
-		},//te deixa fraquinho
->>>>>>> Stashed changes
 
 
 	},
@@ -1165,11 +1161,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 				this.debug('Innate halves foe Attack');
 				return this.chainModify(0.5); // Reduz 50%
 			}
-<<<<<<< Updated upstream
 		},
-=======
-		}
->>>>>>> Stashed changes
 	},
 	overheaven:{
 		onTrapPokemonPriority: -10,
