@@ -17314,7 +17314,7 @@ malediction: {
 		  },
 
 		  lovetrap: {
-			// No final do turno, o adversário fica Infatuated e Confused
+			// No final do turno, o adversário fica Infatuated e Confused,
 			onResidualOrder: 25,
 			onResidualSubOrder: 1,
 			onResidual(pokemon) {
@@ -17330,9 +17330,7 @@ malediction: {
 		
 			// Se o oponente acertar esse Pokémon com um golpe, ele é forçado a trocar
 			onDamagingHit(damage, target, source, move) {
-				if (source.hp > 0 && source.side.pokemon.length > 1) {
-					source.forceSwitchFlag = true; // Força a troca do oponente
-				} else if (source.hp > 0) {
+				if (source.hp > 0) {
 					// Se for o último Pokémon do time, reduz o Ataque e o Ataque Especial dele
 					this.add('-message', `${source.name} não pode fugir e está ficando mais fraco!`);
 					this.boost({ atk: -1, spa: -1 }, source, target, this.dex.abilities.get('lovetrap'));
@@ -17674,41 +17672,56 @@ malediction: {
 	},
 
 	stormcaller: {
-        shortDesc: "Invokes Rain Dance on switch-in. At end of each turn, Thunder strikes both sides.",
-        name: "Stormcaller",
-        rating: 4,
-        num: 1025,
-        isNonstandard: "Future",
-        onStart(source) {
+		shortDesc: "Sets Rain Dance on switch-in. End of first turn: Thunder strikes opponent. Later: 25% chance.",
+		name: "Stormcaller",
+		rating: 4,
+		num: 1025,
+		isNonstandard: "Future",
+	
+		// Ativa a chuva ao entrar no campo
+		onStart(source) {
 			for (const action of this.queue) {
 				if (action.choice === 'runPrimal' && action.pokemon === source && source.species.id === 'kyogre') return;
 				if (action.choice !== 'runSwitch' && action.choice !== 'runPrimal') break;
 			}
 			this.field.setWeather('raindance');
+	
+			// Marca que o próximo residual é o primeiro turno
+			source.m.usingStormcaller = true;
 		},
-
-        onResidual(pokemon) {
-            if (!this.field.isWeather('raindance')) return;
-            this.add("-message", "Lightning crackles through the storm!");
-            
-            const thunderMove = this.dex.getActiveMove('thunder');
-            
-            // Primeiro atinge o lado do usuário
-            const userSide = pokemon.side.active.filter(p => !p.fainted);
-            if (userSide.length) {
-                const userTarget = this.sample(userSide);
-                this.actions.useMove(thunderMove, userTarget);
-            }
-            
-            // Depois atinge o lado do oponente
-            const foeSide = pokemon.side.foe.active.filter(p => !p.fainted);
-            if (foeSide.length) {
-                const foeTarget = this.sample(foeSide);
-                this.actions.useMove(thunderMove, foeTarget);
-            }
-    }
-
-
+	
+		// Efeito no final de cada turno
+		onResidual(pokemon) {
+			if (!this.field.isWeather('raindance')) return;
+	
+			const thunderMove = this.dex.getActiveMove('thunder');
+	
+			// Primeiro turno: 100% de chance no oponente
+			if (pokemon.m.usingStormcaller) {
+				this.add("-message", "Lightning crackles through the storm! Thunder strikes the opposing side!");
+	
+				const foeSide = pokemon.side.foe.active.filter(p => !p.fainted);
+				if (foeSide.length) {
+					const foeTarget = this.sample(foeSide);
+					this.actions.useMove(thunderMove, pokemon, foeTarget);
+				}
+	
+				// Desativa o flag após o primeiro turno
+				pokemon.m.usingStormcaller = false;
+	
+			} else {
+				// Próximos turnos: 25% de chance de atingir o oponente
+				if (this.randomChance(25, 100)) {
+					this.add("-message", "A stray lightning bolt strikes from the storm!");
+	
+					const foeSide = pokemon.side.foe.active.filter(p => !p.fainted);
+					if (foeSide.length) {
+						const foeTarget = this.sample(foeSide);
+						this.actions.useMove(thunderMove, pokemon, foeTarget);
+					}
+				}
+			}
+		},
 	},
 
 	primordialguard: {
@@ -17775,9 +17788,18 @@ malediction: {
 		  // No final de cada turno, oponente tem 30% de chance de ser congelado
 		  onResidual(target) {
 			const foe = target.side.foe.active[0]; // Oponente ativo
+			
 			if (this.field.isWeather('midnight') && foe && this.randomChance(25, 100)) {
 			  this.add('-message', `${foe.name} foi amaldiçoado pelas sombras!`);
+		  
+			  // Aplica o Volatile de curse
 			  foe.addVolatile('curse', target);
+		  
+			  // Aplica o dano de curse no mesmo turno
+			  const curseDamage = this.clampIntRange(Math.floor(foe.maxhp / 4), 1);
+			  this.damage(curseDamage, foe, target);
+			  
+			  this.add('-message', `${foe.name} sofreu dano da Maldição imediatamente!`);
 			}
 		  },
 		},
@@ -17795,15 +17817,18 @@ malediction: {
 					target.addVolatile('undyingvolt');
 		
 					// Ativação forçada do Z-Move
-					const move = this.dex.getMove('10,000,000 Volt Thunderbolt');
-					if (move && move.isZ) {
-						this.add('-zpower', target);
-						this.useMove('10,000,000 Volt Thunderbolt', target);
-					} else {
-						this.add('-message', 'Error: Z-Move not found!');
-					}
-		
-					return 0; // Cancela o dano letal
+					const move = this.dex.moves.get('10,000,000 Volt Thunderbolt');
+      
+      			if (move && move.isZ) {
+       			 this.add('-zpower', target);
+      		 	 // Força o uso do movimento Z diretamente pelo Pokémon
+       			 this.actions.useMove(move, target);
+    	 		 } else {
+      			  this.add('-message', 'Error: Z-Move not found!');
+      			}
+
+      			// Cancela o dano letal
+      				return 0;
 				}
 			},
 			condition: {
@@ -17820,6 +17845,46 @@ malediction: {
 			num: 1020,
 			isNonstandard: "Future",
 		},
+		'10kvolt': {
+  		onDamage(damage, target, source, effect) {
+    	// Se a habilidade já foi ativada antes, permite o nocaute normalmente
+   		 if (target.volatiles['10kvolt']) return;
+
+   		 // Se o dano for fatal, impede o nocaute e ativa a habilidade
+   		 if (damage >= target.hp) {
+      this.add('-ability', target, '10k Volt');
+      this.add('-message', `${target.name} refuses to go down!`);
+      target.hp = 1;
+      target.addVolatile('10kvolt');
+
+      // Ativação forçada do Z-Move
+      const move = this.dex.moves.get('10,000,000 Volt Thunderbolt');
+      
+      if (move && move.isZ) {
+        this.add('-zpower', target);
+        this.actions.useMove(move, target);
+      } else {
+        this.add('-message', 'Error: Z-Move not found!');
+      }
+
+      // Cancela o dano letal
+      return 0;
+    }
+  	},
+  	condition: {
+    onStart(pokemon) {
+      this.add('-message', `${pokemon.name} is brimming with energy!`);
+    },
+    onEnd(pokemon) {
+      this.add('-message', `${pokemon.name}'s 10k Volt has faded!`);
+    },
+  	},
+  	shortDesc: "Prevents KO once; triggers 10,000,000 Volt Thunderbolt.",
+  	name: "10k Volt",
+  	rating: 4,
+  	num: 1020,
+  	isNonstandard: "Future",
+	},
 
 		anarchyaura: {
 			onStart(pokemon) {

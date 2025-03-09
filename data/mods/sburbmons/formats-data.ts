@@ -9792,6 +9792,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	ratinbum: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	raiden: {
 		inherit: true,
 		isNonstandard: "Past",
