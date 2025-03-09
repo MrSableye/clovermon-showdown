@@ -53925,7 +53925,11 @@ tamanaut: {
 	floraciel: { 
 		num: -50019,
 		name: "Floraciel",
-		types: ["Grass", "Fairy"],
+<<<<<<< Updated upstream
+		types: ["Davine", "Fairy"],
+=======
+		types: ["Divine", "Fairy"],
+>>>>>>> Stashed changes
 		gender: "F", 
 		baseStats: {hp: 80, atk: 75, def: 60, spa: 150, spd: 80, spe: 145},
 		abilities: {0: "Dazzling", 1: "Pixilate", H: "Fairy Enchanter"},
@@ -54080,19 +54084,53 @@ tamanaut: {
 		gen: 0,
 		creator: "feneto_ OCB",
 	}, //feito//
+<<<<<<< Updated upstream
 	raiden: { 
-		num: -50020,
-		name: "Raiden",
+		num: -50030,
+=======
+	ratimbum: { 
+		num: -50030,
+		name: "Ratimbum",
 		types: ["Electric", "Light"],
 		baseStats: {hp: 85, atk: 145, def: 75, spa: 80, spd: 90, spe: 120},
-		abilities: {0: "Undying Volt", 1: "Dazzling", H: "No Guard"},
+		abilities: {0: "10k Volt", 1: "Dazzling", H: "No Guard"},
 		heightm: 1.1,
-		weightkg: 300,
+		weightkg: 30,
 		color: "Blue",
 		eggGroups: ["Field"],
 		gen: 0,
 		creator: "feneto_ OCB",
 	}, //feito//
+	raiden: { 
+		num: -50031,
+>>>>>>> Stashed changes
+		name: "Raiden",
+		types: ["Electric", "Light"],
+		baseStats: {hp: 85, atk: 145, def: 75, spa: 80, spd: 90, spe: 120},
+		abilities: {0: "Undying Volt", 1: "Dazzling", H: "No Guard"},
+		heightm: 1.1,
+		weightkg: 30,
+		color: "Blue",
+		eggGroups: ["Field"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
+<<<<<<< Updated upstream
+	ratinbum: { 
+		num: -50031,
+		name: "ratinbum",
+		types: ["Electric", "Light"],
+		baseStats: {hp: 85, atk: 145, def: 75, spa: 80, spd: 90, spe: 120},
+		abilities: {0: "10k Volt", 1: "Dazzling", H: "No Guard"},
+		heightm: 1.1,
+		weightkg: 30,
+		color: "Blue",
+		eggGroups: ["Field"],
+		gen: 0,
+		creator: "feneto_ OCB",
+	}, //feito//
+=======
+>>>>>>> Stashed changes
 	omnirath: { 
 		num: -50028,
 		name: "Omnirath",

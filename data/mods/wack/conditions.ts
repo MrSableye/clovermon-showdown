@@ -1064,18 +1064,17 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 	},
 
 	lovedeath:{
-		onStart(pokemon) {
-			if (this.suppressingAbility(pokemon)) return;
-			this.add('-ability', pokemon, 'Tablets of Ruin');
+		onModifyAtk(atk, attacker, defender, move) {
+			// Se o atacante for oponente (lado inimigo)
+			if (attacker.side !== this.effectState.target.side) {
+				this.debug('Innate halves foe Attack');
+				return this.chainModify(0.5); // Reduz 50%
+			}
+<<<<<<< Updated upstream
 		},
-		onAnyModifyAtk(atk, source, target, move) {
-			const abilityHolder = this.effectState.target;
-			if (source.hasAbility('Tablets of Ruin')) return;
-			if (!move.ruinedAtk) move.ruinedAtk = abilityHolder;
-			if (move.ruinedAtk !== abilityHolder) return;
-			this.debug('Tablets of Ruin Atk drop');
-			return this.chainModify(0.5);
+=======
 		},//te deixa fraquinho
+>>>>>>> Stashed changes
 
 
 	},
@@ -1160,18 +1159,17 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		}
 	},
 	kirin:{
-		onTryHit(target, source, move) {
-            if (move.type === 'Electric') {
-                this.add('-immune', target, '[from] innate ability');
-                return null;
-            }
-        },
-        onHit(target, source, move) {
-            if (move.type === 'Electric') {
-                this.boost({evasion: 1, spa: 1}, target);
-                this.add("-message", `${target.name} absorbed the electricity and became stronger!`);
-            }
-        },
+		onModifyAtk(atk, attacker, defender, move) {
+			// Se o atacante for oponente (lado inimigo)
+			if (attacker.side !== this.effectState.target.side) {
+				this.debug('Innate halves foe Attack');
+				return this.chainModify(0.5); // Reduz 50%
+			}
+<<<<<<< Updated upstream
+		},
+=======
+		}
+>>>>>>> Stashed changes
 	},
 	overheaven:{
 		onTrapPokemonPriority: -10,
