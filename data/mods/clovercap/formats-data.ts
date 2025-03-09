@@ -1885,15 +1885,25 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	cheesetah: {
+	commutant: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	hybrotamus: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	cheepouf: {
+	catobiraffe: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
+	},
+	cameloductor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	glaciun: {
 		inherit: true,

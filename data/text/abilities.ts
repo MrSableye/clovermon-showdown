@@ -2618,7 +2618,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	pressurefuzed: {
 		name: "Pressure Fuzed",
-		desc: "After using a Self-Destructing move (Self-Destruct, Explosion, Final Gambit, Misty Explosion, Memento or Holy Duty), the user is left with 1 HP no matter what.",
+		desc: "After using a Self-Destructing move (Self-Destruct, Explosion, Misty Explosion, Memento or Holy Duty), the user is left with 1 HP no matter what.",
 	},
 	transfusion: {
 		name: "Transfusion",
