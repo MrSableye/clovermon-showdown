@@ -2954,12 +2954,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    devante: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "Uber",
+		tier: "OU",
 	},
 	    vergilion: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "Uber",
+		tier: "OU",
 	},
 	    pizzisdee: {
 		inherit: true,

@@ -2539,7 +2539,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	sterilizingampoule: {
 		name: "Sterilizing Ampoule",
 		desc: "Upon switching in, nullifies the opposing Pokemon's ability. Upon being hit while holding the item, the item breaks and the holders ability is nullified for 2 turns. If knocked off, holders ability is not nullified.",
-		shortDesc: "pon switching in, nullifies the opposing Pokemon's ability. Upon being hit while holding the item, the item breaks and the holders ability is nullified for 2 turns. If knocked off, holders ability is not nullified.",
+		shortDesc: "Upon switching in, nullifies the opposing Pokemon's ability. Upon being hit while holding the item, the item breaks and the holders ability is nullified for 2 turns. If knocked off, holders ability is not nullified.",
 	},
 	/* Clover CAP Mega Stones */
 	ooganite: {

@@ -2648,6 +2648,22 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	commutant: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	hybrotamus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	catobiraffe: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cameloductor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kaquapo:{
 		tier: "Illegal",
 		isNonstandard: "Future",

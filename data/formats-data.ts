@@ -8849,6 +8849,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	commutant: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	hybrotamus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	catobiraffe: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cameloductor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	dugwalker: {
 		tier: "Illegal",
 		isNonstandard: "Future",
