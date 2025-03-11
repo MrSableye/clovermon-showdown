@@ -3113,6 +3113,18 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Bereavement",
 		shortDesc: "Transforms into Dullahan state if active on the turn after an ally faints.",
 	},
+	polydipsia: {
+		name: "Polydipsia",
+		shortDesc: "End of turn: +1 Atk -1 Def or -1 Atk +1 Def.",
+	},
+	grandwelcome: {
+		name: "Grand Welcome",
+		shortDesc: "No effect yet.",
+	},
+	closingbanquet: {
+		name: "Closing Banquet",
+		shortDesc: "Damage halved and indirect damage negated when last Pokemon.",
+	},
 	kattapillarssecretpower: {
 		name: "Kattapillar's Secret Power",
 		shortDesc: "Has a variety of effects depending on certain circumstances.",

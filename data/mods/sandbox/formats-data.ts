@@ -12826,6 +12826,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	vestinue: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	mircarmilla: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	maysugeki: {
 		inherit: true,
 		isNonstandard: null,
@@ -12957,6 +12967,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	hambone: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	vermity: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	trailrode: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	daanbom: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	karinbom: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

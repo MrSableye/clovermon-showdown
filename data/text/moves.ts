@@ -9603,6 +9603,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Mourning Lament",
 		shortDesc: "+50 power for each time a party member fainted. Reverts the user's form back to default.",
 	},
+	yearningbrambles: {
+		name: "Yearning Brambles",
+		shortDesc: "Hurt -12.5% when used >50% hp, Heal 12.5% when used <=50% hp",
+	},
 	gemblast: {
 		name: "Gem Blast",
 		shortDesc: "+30 BP per Boost. The secret technique of gem mystics.",

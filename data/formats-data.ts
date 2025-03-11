@@ -11419,6 +11419,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",	
 	},
+	vermity: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	trailrode: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	daanbom: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
+	karinbom: {
+		tier: "Illegal",
+		isNonstandard: "Future",	
+	},
 	amalgum: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -12084,6 +12100,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	wyldhauntrequiem: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	vestinue: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mircarmilla: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
