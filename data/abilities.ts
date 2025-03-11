@@ -10885,7 +10885,30 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 	},
 	grandwelcome: {
+		onStart(pokemon) {
+			if (pokemon.swordBoost) return;
+			if (pokemon.side.pokemonLeft === 1) {
+				this.boost({atk: 1}, pokemon);
+			}
+		},
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				const stats: BoostID[] = [];
+				let stat: BoostID;
+				for (stat in source.boosts) {
+					if (stat !== 'accuracy' && stat !== 'evasion' && source.boosts[stat] < 6) {
+						stats.push(stat);
+				}
+				if (stats.length) {
+					const randomStat = this.sample(stats);
+					const boost: SparseBoostsTable = {};
+					boost[randomStat] = 1;
+					this.boost(boost, source);
+				}
+			}
+		},
 		name: "Grand Welcome",
+		isNonstandard: "Future",
 		rating: 3.5,
 		num: 235,
 	},

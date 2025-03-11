@@ -3119,7 +3119,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	grandwelcome: {
 		name: "Grand Welcome",
-		shortDesc: "No effect yet.",
+		shortDesc: "+1 Atk on switch in if 5+ allies alive. +1 random stat on kill.",
 	},
 	closingbanquet: {
 		name: "Closing Banquet",

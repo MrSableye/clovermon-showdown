@@ -2073,6 +2073,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	grandwelcome: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	closingbanquet: {
 		inherit: true,
 		isNonstandard: null,
