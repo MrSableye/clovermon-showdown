@@ -7716,7 +7716,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isPermanent: true,
 		name: "Frozen Bunker",
 		rating: 4,
-		},
+	},
 	boundary: {
 		onModifyDamage(damage, source, target, move) {
 			if (move && target.getMoveHitData(move).typeMod > 0) {
@@ -7865,7 +7865,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	niceface: {
 		onStart(pokemon) {
-			if (this.field.isTerrain('grassyterrain') && 
+			if (this.field.isTerrain('grassyterrain') &&
             pokemon.species.id === 'blobbosnoicce' && !pokemon.transformed) {
 				this.add('-activate', pokemon, 'ability: Nice Face');
 				this.effectState.busted = false;
@@ -10874,8 +10874,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (pokemon.activeTurns) {
 				if (this.randomChance(1, 2)) {
 					this.boost({def: -1, atk: 1});
-				}
-				else {
+				} else {
 					this.boost({def: 1, atk: -1});
 				}
 			}
@@ -10898,16 +10897,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				for (stat in source.boosts) {
 					if (stat !== 'accuracy' && stat !== 'evasion' && source.boosts[stat] < 6) {
 						stats.push(stat);
-				}
-				if (stats.length) {
-					const randomStat = this.sample(stats);
-					const boost: SparseBoostsTable = {};
-					boost[randomStat] = 1;
-					this.boost(boost, source);
+					}
+					if (stats.length) {
+						const randomStat = this.sample(stats);
+						const boost: SparseBoostsTable = {};
+						boost[randomStat] = 1;
+						this.boost(boost, source);
+					}
 				}
 			}
-		}
-	},
+		},
 		name: "Grand Welcome",
 		isNonstandard: "Future",
 		rating: 3.5,
@@ -10950,9 +10949,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-ability', pokemon, 'Last Radish');
 		},
 		onBasePower(basePower, attacker, defender, move) {
-			if (defender && ['radish'].includes(defender.status))
-					this.debug('Last Radish radished target damage boost');
-					return this.chainModify(1.5);
+			if (defender && ['radish'].includes(defender.status)) { this.debug('Last Radish radished target damage boost'); }
+			return this.chainModify(1.5);
 		},
 		onSourceModifyDamage(damage, source, target, move) {
 			let mod = 1;
@@ -12005,7 +12003,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 422,
 		isNonstandard: "Future",
 	},
-resurrection: {
+	resurrection: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('revivalblessing'), pokemon);
@@ -12015,7 +12013,7 @@ resurrection: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-hideandseek: {
+	hideandseek: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('substitute'), pokemon);
@@ -12025,7 +12023,7 @@ hideandseek: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-resilience: {
+	resilience: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('endure'), pokemon);
@@ -12035,7 +12033,7 @@ resilience: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-scavenger: {
+	scavenger: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('recycle'), pokemon);
@@ -12045,7 +12043,7 @@ scavenger: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-trolling: {
+	trolling: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('partingshot'), pokemon);
@@ -12055,7 +12053,7 @@ trolling: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-headwind: {
+	headwind: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('tailwind'), pokemon);
@@ -12065,7 +12063,7 @@ headwind: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-misleading: {
+	misleading: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('fakeout'), pokemon);
@@ -12075,7 +12073,7 @@ misleading: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-prestidigitation: {
+	prestidigitation: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('trick'), pokemon);
@@ -12085,7 +12083,7 @@ prestidigitation: {
 		num: 422,
 		isNonstandard: "Future",
 	},
-malediction: {
+	malediction: {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('curse'), pokemon);
@@ -12906,14 +12904,14 @@ malediction: {
 	},
 
 	serenetrace: {
-		
+
 		onStart(pokemon) {
 			// n.b. only affects Hackmons
 			// interaction with No Ability is complicated: https://www.smogon.com/forums/threads/pokemon-sun-moon-battle-mechanics-research.3586701/page-76#post-7790209
 			for (const side of pokemon.side.foeSidesWithConditions()) {
 				side.addSideCondition('rainbow');
 			}
-		
+
 			if (pokemon.adjacentFoes().some(foeActive => foeActive.ability === 'noability')) {
 				this.effectState.gaveUp = true;
 			}
@@ -16079,7 +16077,7 @@ malediction: {
 		num: 3,
 		isNonstandard: "Future",
 	},
-		you: {
+	you: {
 		onStart(pokemon) {
 			if (pokemon.syrupTriggered) return;
 			pokemon.syrupTriggered = true;
@@ -16105,7 +16103,7 @@ malediction: {
 	mothsmajesty: {
 		onStart(pokemon) {
 			const bestStat = pokemon.getBestStat(true, true);
-				this.boost({[bestStat]: length}, pokemon);
+			this.boost({[bestStat]: length}, pokemon);
 		},
 		name: "Moth's Majesty",
 		rating: 4,
@@ -16318,7 +16316,7 @@ malediction: {
 	},
 	izanamisrage: {
 		onSourceDamagingHit(damage, target, source, move) {
-		if (source.volatiles['torment']) return;
+			if (source.volatiles['torment']) return;
 			if (!move.isMax && !move.flags['futuremove'] && move.id !== 'struggle') {
 				if (this.randomChance(4, 10)) {
 					source.addVolatile('torment', this.effectState.target);
@@ -16611,7 +16609,7 @@ malediction: {
 				this.field.addPseudoWeather('inferno_guardian');
 			}
 		},
-	
+
 		// Aumento de poder e chance de queimadura se tiver Flame Orb
 		onModifyMove(move, source, target) {
 			if (source.hasAbility('infernoguardian') && source.getItem().id === 'flameorb' && move.type === 'Fire') {
@@ -16623,7 +16621,7 @@ malediction: {
 				});
 			}
 		},
-	
+
 		// Dobra o poder de movimentos Fire
 		onBasePower(basePower, attacker, defender, move) {
 			if (attacker.hasAbility('infernoguardian') && attacker.getItem().id === 'flameorb' && move.type === 'Fire') {
@@ -16631,7 +16629,7 @@ malediction: {
 				return this.chainModify(2);
 			}
 		},
-	
+
 		// Efeitos contínuos se Sunny Day estiver ativo
 		onResidualOrder: 5,
 		onResidualSubOrder: 1,
@@ -16642,7 +16640,7 @@ malediction: {
 				this.field.addPseudoWeather('inferno_guardian_sun'); // Anula habilidades inimigas
 			}
 		},
-	
+
 		// Neutraliza habilidades de oponentes que entrarem
 		onSwitchIn(pokemon) {
 			if (this.field.getPseudoWeather('inferno_guardian_sun')) {
@@ -16650,20 +16648,19 @@ malediction: {
 				pokemon.addVolatile('gastroacid'); // Neutraliza habilidades do oponente
 			}
 		},
-	
+
 		name: "Inferno Guardian",
 		rating: 5,
 		num: 1002,
 		isNonstandard: "Future",
 	},
-	
-	
+
 
 	phantomdoom: {
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Phantom Doom');
 		},
-		
+
 		onFoeMaybeTrapPokemon(pokemon, source) {
 			if (!source) source = this.effectState.target;
 			if (!source || !pokemon.isAdjacent(source)) return;
@@ -16671,7 +16668,7 @@ malediction: {
 				pokemon.maybeTrapped = true;
 			}
 		},
-		
+
 		// Garante que o oponente flinche no próximo turno
 		onResidualOrder: 29,
 		onResidual(pokemon) {
@@ -16681,7 +16678,7 @@ malediction: {
 				this.add('-message', `${target.name} está paralisado de medo e não pode se mover!`);
 			}
 		},
-	
+
 		// Se esse Pokémon desmaia por um golpe de contato, o atacante também desmaia
 		onDamagingHit(damage, target, source, move) {
 			if (target.hp <= 0 && move.flags['contact']) {
@@ -16689,7 +16686,7 @@ malediction: {
 				source.faint();
 			}
 		},
-		
+
 		name: "Phantom Doom",
 		rating: 5,
 		num: 125, // Defina um número único para a habilidade
@@ -16700,7 +16697,7 @@ malediction: {
 		onModifyAccuracyPriority: -1,
 		onModifyAccuracy(accuracy, source, target) {
 		  if (source.hasAbility('evasionboost') && source.volatiles['evasionboost']) {
-			return this.chainModify([2, 1]); // Aumenta a evasão do usuário (multiplica por 2)
+				return this.chainModify([2, 1]); // Aumenta a evasão do usuário (multiplica por 2)
 		  }
 		  return accuracy; // Se a habilidade não for ativa, a precisão é mantida
 		},
@@ -16714,14 +16711,14 @@ malediction: {
 		rating: 2,
 		isNonstandard: "Future",
 	},
-	
+
 	mindlock: {
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Mind Lock');
-	
+
 			const foe = pokemon.side.foe.active[0]; // Considerando batalhas individuais (1v1)
 			if (!foe || foe.fainted) return;
-	
+
 			// Bloqueia o último golpe do oponente
 			if (foe.lastMove) {
 				foe.addVolatile('encore');
@@ -16730,7 +16727,7 @@ malediction: {
 				this.add('-message', `${foe.name} foi forçado a repetir ${this.dex.moves.get(foe.lastMove.id).name}!`);
 			}
 		},
-	
+
 		// Impede que o oponente fuja, baseado no efeito de Arena Trap
 		onFoeTrapPokemon(pokemon) {
 			if (!pokemon.isAdjacent(this.effectState.target)) return;
@@ -16738,7 +16735,7 @@ malediction: {
 				pokemon.tryTrap(true);
 			}
 		},
-	
+
 		onFoeMaybeTrapPokemon(pokemon, source) {
 			if (!source) source = this.effectState.target;
 			if (!source || !pokemon.isAdjacent(source)) return;
@@ -16746,7 +16743,7 @@ malediction: {
 				pokemon.maybeTrapped = true;
 			}
 		},
-	
+
 		onEnd(source) {
 			for (const foe of source.side.foe.active) {
 				if (foe.volatiles['encore']) {
@@ -16755,15 +16752,14 @@ malediction: {
 				}
 			}
 		},
-	
+
 		name: "Mind Lock",
 		shortDesc: "Trava o oponente no último golpe usado e impede fuga se estiver no chão.",
 		rating: 5,
 		num: 1022,
 		isNonstandard: "Future",
 	},
-	
-	
+
 
 	frostbiteveil: {
 		onSwitchInPriority: 4,
@@ -16810,7 +16806,7 @@ malediction: {
 		// Ao entrar em campo, ativa os efeitos
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Blood Shackles');
-	
+
 			// Aplica Bleed no oponente
 			for (const target of pokemon.side.foe.active) {
 				if (target && target.isActive) {
@@ -16818,7 +16814,7 @@ malediction: {
 					target.addVolatile('bleed'); // Marca o alvo com o efeito Bleed
 				}
 			}
-	
+
 			// Anula os efeitos dos itens do oponente
 			for (const target of pokemon.side.foe.active) {
 				if (target && target.isActive && !target.hasAbility('unaware')) {
@@ -16827,7 +16823,7 @@ malediction: {
 				}
 			}
 		},
-	
+
 		// Impede o oponente de trocar
 		onFoeTrapPokemon(pokemon) {
 			if (!pokemon.hasAbility('bloodshackles') && pokemon.isAdjacent(this.effectState.target)) {
@@ -16835,7 +16831,7 @@ malediction: {
 				this.add('-message', `${pokemon.name} está preso pelo sangue amaldiçoado de ${this.effectState.target.name}!`);
 			}
 		},
-	
+
 		onFoeMaybeTrapPokemon(pokemon, source) {
 			if (!source) source = this.effectState.target;
 			if (!source || !pokemon.isAdjacent(source)) return;
@@ -16843,7 +16839,7 @@ malediction: {
 				pokemon.maybeTrapped = true;
 			}
 		},
-	
+
 		// Causa dano residual de sangramento
 		onResidualOrder: 13,
 		onResidual(pokemon) {
@@ -16854,7 +16850,7 @@ malediction: {
 				}
 			}
 		},
-	
+
 		// Remove os efeitos ao sair de campo
 		onEnd(pokemon) {
 			for (const target of pokemon.side.foe.active) {
@@ -16867,22 +16863,21 @@ malediction: {
 				}
 			}
 		},
-	
+
 		name: "Blood Shackles",
 		shortDesc: "Impede trocas, aplica Bleed e anula itens do oponente.",
 		rating: 5,
 		num: 1023,
 		isNonstandard: "Future",
 	},
-	
-	
+
 
 	reincarnation: {
 		// Flag para controlar se a Maldição já foi aplicada
 		onStart(pokemon) {
 			pokemon.m.reincarnationCurseApplied = false;
 		},
-	
+
 		// Aplica Curse no final do primeiro turno
 		onResidualOrder: 15,
 		onResidual(pokemon) {
@@ -16897,7 +16892,7 @@ malediction: {
 				pokemon.m.reincarnationCurseApplied = true; // Marca que o efeito foi aplicado
 			}
 		},
-	
+
 		// Impede o oponente de trocar, igual ao Shadow Tag
 		onFoeTrapPokemon(pokemon) {
 			if (!pokemon.hasAbility('phantomdoom') && pokemon.isAdjacent(this.effectState.target)) {
@@ -16905,51 +16900,51 @@ malediction: {
 				this.add('-message', `${pokemon.name} está preso por uma aura fantasmagórica!`);
 			}
 		},
-	
+
 		// Reencarnação ao desmaiar um oponente
 		onSourceFaint(target, source, effect) {
 			if (!source || !target) return;
-	
+
 			const sourceSide = source.side;
 			const targetSet = target.set;
-	
+
 			// Nome do Pokémon reencarnado
 			const reincarnatedName = `Reincarnation of ${target.name || target.species}`;
-	
+
 			// Criando o novo Pokémon na equipe
 			const reincarnatedPokemon = new Pokemon({
 				...targetSet,
 				name: reincarnatedName,
 			}, sourceSide);
-	
+
 			// Adiciona o Pokémon à equipe do usuário
 			reincarnatedPokemon.position = sourceSide.pokemon.length;
 			sourceSide.pokemon.push(reincarnatedPokemon);
 			sourceSide.pokemonLeft += 1;
-	
+
 			this.add('teamsize', sourceSide.id, sourceSide.pokemon.length);
 			this.add('-message', `${target.name} foi reencarnado na equipe de ${source.name}!`);
 		},
-	
+
 		name: "Reincarnation",
 		shortDesc: "Aplica Curse no final do 1º turno, impede trocas e reencarna inimigos derrotados.",
 		rating: 5,
 		num: 1007,
 		isNonstandard: "Future",
 	},
-	
+
 
 	ironwill: {
 		onModifyDamage(damage, source, target, move) {
 			const typeMod = this.dex.getEffectiveness(move.type, target);
-			
+
 			if (typeMod < 0) { // Move que o Pokémon resiste (1/2 de dano originalmente)
 				return this.chainModify(0.5); // Reduz mais uma vez, totalizando 1/4 de dano
 			} else if (typeMod === 0) { // Move neutro (1x de dano)
 				return this.chainModify(0.67); // Reduz para 1/3 de dano
 			}
 		},
-	
+
 		onHit(target, source, move) {
 			if (this.dex.getEffectiveness(move.type, target) > 0) { // Move super efetivo
 				this.add('-ability', target, 'Iron Will');
@@ -16960,11 +16955,11 @@ malediction: {
 					spd: -6,
 					spe: -6,
 					accuracy: -6,
-					evasion: -6
+					evasion: -6,
 				}, source, target, null, true);
 			}
 		},
-	
+
 		name: "Iron Will",
 		rating: 4.5,
 		num: 1008,
@@ -16989,34 +16984,34 @@ malediction: {
 		onStart(pokemon) {
 		  // Rouba todos os aumentos de status dos Pokémon adversários ao entrar em campo
 		  for (const target of pokemon.side.foe.active) {
-			if (target && target.isActive) {
+				if (target && target.isActive) {
 			  const boosts: SparseBoostsTable = {};
 			  let stolen = false;
 			  for (const stat in target.boosts) {
-				if (target.boosts[stat as keyof SparseBoostsTable] > 0) {
+						if (target.boosts[stat as keyof SparseBoostsTable] > 0) {
 				  boosts[stat as keyof SparseBoostsTable] = target.boosts[stat as keyof SparseBoostsTable];
 				  target.boosts[stat as keyof SparseBoostsTable] = 0;
 				  stolen = true;
-				}
+						}
 			  }
 			  if (stolen) {
-				this.add('-ability', pokemon, 'Status Thief');
-				this.add('-message', `${pokemon.name} roubou os aumentos de status de ${target.name}!`);
-				this.boost(boosts, pokemon, pokemon);
+						this.add('-ability', pokemon, 'Status Thief');
+						this.add('-message', `${pokemon.name} roubou os aumentos de status de ${target.name}!`);
+						this.boost(boosts, pokemon, pokemon);
 			  }
-			}
+				}
 		  }
 		},
-	  
+
 		onFoeSwitchIn(target) {
 		  // Remove o item do Pokémon adversário ao trocar
 		  if (target.item) {
-			this.add('-ability', this.effectState.target, 'Status Thief');
-			this.add('-message', `${target.name} perdeu seu ${target.item} devido à Status Thief!`);
-			target.clearItem();
+				this.add('-ability', this.effectState.target, 'Status Thief');
+				this.add('-message', `${target.name} perdeu seu ${target.item} devido à Status Thief!`);
+				target.clearItem();
 		  }
 		},
-	  
+
 		name: "Status Thief",
 		rating: 4.5,
 		num: 1006, // Substitua pelo número que você quiser atribuir à habilidade
@@ -17031,7 +17026,7 @@ malediction: {
 				return null;
 			}
 		},
-	
+
 		// Efeito ao entrar em campo
 		onStart(pokemon) {
 			// Transforma o tipo do Pokémon adversário em Fada
@@ -17042,29 +17037,26 @@ malediction: {
 				this.add('-ability', pokemon, 'Fairy Enchanter');
 				this.add('-message', `${target.name} foi transformado em tipo Fada!`);
 				this.add('-start', target, 'typechange', 'Fairy', '[from] ability: Fairy Enchanter');
-	
+
 				// Reduz os estágios de ataque e ataque especial do oponente
-				this.boost({ atk: -1, spa: -1 }, target, pokemon);
+				this.boost({atk: -1, spa: -1}, target, pokemon);
 				this.add('-message', `${target.name} perdeu 1 estágio de ataque e ataque especial!`);
-	
+
 				// O usuário ganha 1 estágio de ataque e ataque especial
-				this.boost({ atk: 1, spa: 1 }, pokemon);
+				this.boost({atk: 1, spa: 1}, pokemon);
 				this.add('-message', `${pokemon.name} ganhou 1 estágio de ataque e ataque especial!`);
 			}
 		},
-	
+
 		name: "Fairy Enchanter",
 		rating: 4.5,
 		num: 1010, // Substitua pelo número que você quiser atribuir à habilidade
 		isNonstandard: "Future",
-		},
-	
-	
-	  
-	  
+	},
+
+
 	  mindcorruption: {
 		onFoeTrapPokemon(pokemon) {
-			
 			if (!pokemon.isAdjacent(this.effectState.target)) return;
 			if (pokemon.isGrounded()) {
 				pokemon.tryTrap(true);
@@ -17080,67 +17072,64 @@ malediction: {
 		// Ao entrar em campo, inicia o contador de turnos para cada inimigo
 		onStart(pokemon) {
 		  for (const target of pokemon.side.foe.active) {
-			if (target && target.isActive) {
+				if (target && target.isActive) {
 			  this.add('-message', `${pokemon.name} começa a corromper a mente de ${target.name}!`);
-			  
+
 			  // Inicializa mindCorruptionTurns se não existir
 			  if (!(target as any).mindCorruptionTurns) {
-				(target as any).mindCorruptionTurns = 0; // Inicia o contador para cada alvo
+						(target as any).mindCorruptionTurns = 0; // Inicia o contador para cada alvo
 			  }
-			}
+				}
 		  }
 		},
-	  
+
 		// A cada turno, aumenta o contador de turnos do inimigo que ficou no campo
 		onResidual(pokemon) {
 		  for (const target of pokemon.side.foe.active) {
-			if (target && target.isActive) {
+				if (target && target.isActive) {
 			  // Verifica e inicializa mindCorruptionTurns se necessário
 			  if (typeof (target as any).mindCorruptionTurns !== 'number') {
-				(target as any).mindCorruptionTurns = 0; // Inicializa caso não exista
+						(target as any).mindCorruptionTurns = 0; // Inicializa caso não exista
 			  }
 			  (target as any).mindCorruptionTurns++;
-	  
+
 			  this.add('-message', `${target.name} está sob influência da corrupção mental (${(target as any).mindCorruptionTurns}/5 turnos).`);
-	  
+
 			  // Se o contador chegar a 5, converte o Pokémon inimigo para o lado aliado
 			  if ((target as any).mindCorruptionTurns >= 4) {
-				this.add('-message', `${target.name} foi completamente corrompido e agora luta pelo lado de ${pokemon.side.name}!`);
-	  
-				const foeSide = target.side;
-				const allySide = pokemon.side;
-	  
-				// Criação do novo Pokémon na equipe aliada
-				const clonedPokemon = new Pokemon({
+						this.add('-message', `${target.name} foi completamente corrompido e agora luta pelo lado de ${pokemon.side.name}!`);
+
+						const foeSide = target.side;
+						const allySide = pokemon.side;
+
+						// Criação do novo Pokémon na equipe aliada
+						const clonedPokemon = new Pokemon({
 				  ...target.set,
 				  name: target.name,
-				}, allySide);
-	  
-				// Adiciona o Pokémon clonado à equipe aliada
-				clonedPokemon.position = allySide.pokemon.length;
-				allySide.pokemon.push(clonedPokemon);
-				allySide.pokemonLeft += 1;
-	  
-				this.add('teamsize', allySide.id, allySide.pokemon.length);
-				this.add('-message', `${target.name} agora pertence à equipe de ${pokemon.side.name}!`);
-	  
-				// Remove o Pokémon original da equipe adversária
-				target.faint();
+						}, allySide);
+
+						// Adiciona o Pokémon clonado à equipe aliada
+						clonedPokemon.position = allySide.pokemon.length;
+						allySide.pokemon.push(clonedPokemon);
+						allySide.pokemonLeft += 1;
+
+						this.add('teamsize', allySide.id, allySide.pokemon.length);
+						this.add('-message', `${target.name} agora pertence à equipe de ${pokemon.side.name}!`);
+
+						// Remove o Pokémon original da equipe adversária
+						target.faint();
 			  }
-			}
+				}
 		  }
 		},
-	  
+
 		name: "Mind Corruption",
 		shortDesc: "Se o inimigo ficar 5 turnos consecutivos no campo, ele muda de equipe.",
 		rating: 5,
 		num: 1020,
 		isNonstandard: "Future",
 	  },
-	  
-	  
-	
-	
+
 
 	  	hellishvoid: {
 		// Habilidade que suprime todas as outras habilidades ao entrar em campo
@@ -17149,14 +17138,14 @@ malediction: {
 		rating: 4.5,
 		num: 1025, // Número pode ser ajustado conforme necessário
 		isNonstandard: "Future",
-	
+
 		// Suprime habilidades ao entrar em campo
 		onPreStart(pokemon) {
 			if (pokemon.transformed) return;
 			this.add('-ability', pokemon, 'Hellish Void');
 			pokemon.abilityState.ending = false;
 			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
-	
+
 			for (const target of this.getAllActive()) {
 				if (target.hasItem('Ability Shield')) {
 					this.add('-block', target, 'item: Ability Shield');
@@ -17175,33 +17164,33 @@ malediction: {
 					this.singleEvent('End', this.dex.abilities.get(target.getAbility().id), target.abilityState, target, pokemon, 'hellishvoid');
 				}
 			}
-			},
-	
-			// Quando o usuário sai, as habilidades voltam ao normal
-			onEnd(source) {
+		},
+
+		// Quando o usuário sai, as habilidades voltam ao normal
+		onEnd(source) {
 			if (source.transformed) return;
-	
+
 			for (const pokemon of this.getAllActive()) {
 				if (pokemon !== source && pokemon.hasAbility('Hellish Void')) {
 					return;
 				}
 			}
-	
+
 			this.add('-end', source, 'ability: Hellish Void');
-	
+
 			// Marca que a habilidade terminou para reativar os efeitos normais
 			if (source.abilityState.ending) return;
 			source.abilityState.ending = true;
-	
+
 			for (const pokemon of this.getAllActive()) {
 				if (!pokemon.getAbility().isPermanent) {
 					this.singleEvent('Start', pokemon.getAbility(), pokemon.abilityState, pokemon);
 				}
 			}
-			},
-	
-			// Buff para golpes do tipo Flying e Fire com Red Orb
-			onBasePower(basePower, attacker, defender, move) {
+		},
+
+		// Buff para golpes do tipo Flying e Fire com Red Orb
+		onBasePower(basePower, attacker, defender, move) {
 			if (move.type === 'Flying') {
 				this.debug('Hellish Void boost');
 				return this.chainModify(1.3);
@@ -17211,145 +17200,141 @@ malediction: {
 				this.debug('Hellish Void Red Orb Fire boost');
 				return this.chainModify(2);
 			}
-			},
-			},
-	
-	
+		},
+	},
 
 
-	
-		
 		  toxicreign: {
-			shortDesc: "Contato = Bad Poison; Poison causa dano dobrado; Cura 100% se envenenado desmaiar.",
-			name: "Toxic Reign",
-			rating: 4.5,
-			num: 1018, // Número pode ser ajustado conforme necessário
-			isNonstandard: "Future",
-		
-			// Quando atingido por um golpe de contato, envenena gravemente o oponente
-			onDamagingHit(damage, target, source, move) {
+		shortDesc: "Contato = Bad Poison; Poison causa dano dobrado; Cura 100% se envenenado desmaiar.",
+		name: "Toxic Reign",
+		rating: 4.5,
+		num: 1018, // Número pode ser ajustado conforme necessário
+		isNonstandard: "Future",
+
+		// Quando atingido por um golpe de contato, envenena gravemente o oponente
+		onDamagingHit(damage, target, source, move) {
 			  if (move.flags['contact']) { // Se for um golpe de contato
 				this.add('-ability', target, 'Toxic Reign');
 				source.trySetStatus('tox', target);
 				this.add('-message', `${source.name} foi intoxicado ao tocar ${target.name}!`);
 			  }
-			},
-		
-			// Enquanto esse Pokémon estiver em campo, poison dá dano dobrado
-			onResidualOrder: 9,
-			onResidual() {
+		},
+
+		// Enquanto esse Pokémon estiver em campo, poison dá dano dobrado
+		onResidualOrder: 9,
+		onResidual() {
 			  for (const pokemon of this.getAllActive()) {
 				if (pokemon.status === 'psn' || pokemon.status === 'tox') {
 				  this.damage(pokemon.maxhp / 8, pokemon); // Aplica dano extra de poison
 				  this.add('-message', `${pokemon.name} sofre dano dobrado do envenenamento!`);
 				}
 			  }
-			},
-		
-			// Se um oponente envenenado desmaiar, cura o HP do usuário para 100%
-			onFaint(target, source, effect) {
+		},
+
+		// Se um oponente envenenado desmaiar, cura o HP do usuário para 100%
+		onFaint(target, source, effect) {
 			  if (source && source !== target && target.status === 'psn' || target.status === 'tox') {
 				this.add('-ability', source, 'Toxic Reign');
 				source.heal(source.maxhp);
 				this.add('-message', `${source.name} absorveu a essência do veneno e se curou completamente!`);
 			  }
-			},
+		},
 		  },
 
 		  adaptivearmor: {
-			shortDesc: "Reduz dano de ataques neutros e resistidos. Moves Normais viram STAB e não erram.",
-			name: "Adaptive Armor",
-			rating: 4.5,
-			num: 1019, // Número pode ser ajustado conforme necessário
-			isNonstandard: "Future",
-		
-			// Modifica o dano recebido para fortalecer resistências
-			onEffectiveness(typeMod, target, type, move) {
+		shortDesc: "Reduz dano de ataques neutros e resistidos. Moves Normais viram STAB e não erram.",
+		name: "Adaptive Armor",
+		rating: 4.5,
+		num: 1019, // Número pode ser ajustado conforme necessário
+		isNonstandard: "Future",
+
+		// Modifica o dano recebido para fortalecer resistências
+		onEffectiveness(typeMod, target, type, move) {
 			  if (!target) return;
 			  const effectiveness = this.dex.getEffectiveness(move.type, target.types);
-			  
+
 			  if (effectiveness === -1) { // Move originalmente faria 1/2 do dano (resistido)
 				return typeMod - 1; // Reduz ainda mais, para 1/4 de dano
 			  }
 			  if (effectiveness === 0) { // Move originalmente faria 1x (neutro)
 				return typeMod - 1; // Passa a fazer 1/2 de dano
 			  }
-			},
-		
-			// Transforma moves Normais no tipo primário do Pokémon e faz com que nunca errem
-			onModifyType(move, pokemon) {
+		},
+
+		// Transforma moves Normais no tipo primário do Pokémon e faz com que nunca errem
+		onModifyType(move, pokemon) {
 			  if (move.type === 'Normal' && pokemon.types.length > 0) {
 				move.type = pokemon.types[0]; // Transforma no tipo primário do Pokémon
 			  }
-			},
-			onModifyMove(move) {
+		},
+		onModifyMove(move) {
 			  if (move.type !== 'Normal') return;
 			  move.accuracy = true; // Faz com que o golpe nunca erre
-			},
+		},
 		  },
-		
+
 		  permafrost: {
-			shortDesc: "Invoca Hail ao entrar. Em Hail, +1 Def/SpD oculto, 30% de congelar oponente e -30% precisão dele.",
-			name: "Permafrost",
-			rating: 4.5,
-			num: 1020, // Número pode ser ajustado conforme necessário
-			isNonstandard: "Future",
-		
-			// Ao entrar em campo, invoca Hail/Snow
-			onStart(pokemon) {
-				this.add('-ability', pokemon, 'Permafrost');
-				this.field.setWeather('hail'); // "snow" substituiu "hail" na mecânica moderna
+		shortDesc: "Invoca Hail ao entrar. Em Hail, +1 Def/SpD oculto, 30% de congelar oponente e -30% precisão dele.",
+		name: "Permafrost",
+		rating: 4.5,
+		num: 1020, // Número pode ser ajustado conforme necessário
+		isNonstandard: "Future",
+
+		// Ao entrar em campo, invoca Hail/Snow
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Permafrost');
+			this.field.setWeather('hail'); // "snow" substituiu "hail" na mecânica moderna
 			  },
-		  
+
 			  // Enquanto Hail/Snow estiver ativo
 			  onModifyDefPriority: 6,
 			  onModifyDef(def, pokemon) {
-				if (this.field.isWeather('hail')) {
+			if (this.field.isWeather('hail')) {
 				  return this.chainModify(1.5); // +1 estágio oculto equivale a 1.5x na fórmula do jogo
-				}
+			}
 			  },
 			  onModifySpDPriority: 6,
 			  onModifySpD(spd, pokemon) {
-				if (this.field.isWeather('hail')) {
+			if (this.field.isWeather('hail')) {
 				  return this.chainModify(1.5);
-				}
+			}
 			  },
-		  
+
 			  // Reduz a precisão dos moves do oponente em 30% durante Snow
 			  onModifyAccuracy(accuracy, target, source, move) {
-				if (this.field.isWeather('hail') && typeof accuracy === 'number') {
+			if (this.field.isWeather('hail') && typeof accuracy === 'number') {
 				  return this.chainModify(0.7); // Reduz precisão para 70%
-				}
+			}
 			  },
-		  
+
 			  // No final de cada turno, oponente tem 30% de chance de ser congelado
 			  onResidual(target) {
-				const foe = target.side.foe.active[0]; // Oponente ativo
-				if (this.field.isWeather('hail') && foe && this.randomChance(3, 10)) {
+			const foe = target.side.foe.active[0]; // Oponente ativo
+			if (this.field.isWeather('hail') && foe && this.randomChance(3, 10)) {
 				  this.add('-message', `${foe.name} foi congelado pelo frio intenso!`);
 				  foe.trySetStatus('frz', target);
-				}
+			}
 			  },
-			},
-	
+	},
+
 		  electricascension: {
-			shortDesc: "Absorve golpes elétricos, converte Normal em Elétrico (+50% poder), buffa evasão e usa Thunder triplo se HP < 1/4.",
-			name: "Electric Ascension",
-		
-			// Absorve golpes do tipo Elétrico, cura 50% e aumenta todos os status em 1
-			onTryHit(target, source, move) {
+		shortDesc: "Absorve golpes elétricos, converte Normal em Elétrico (+50% poder), buffa evasão e usa Thunder triplo se HP < 1/4.",
+		name: "Electric Ascension",
+
+		// Absorve golpes do tipo Elétrico, cura 50% e aumenta todos os status em 1
+		onTryHit(target, source, move) {
 			  if (move.type === 'Electric') {
 				this.add('-ability', target, 'Electric Ascension');
 				this.add('-message', `${target.name} absorveu a energia elétrica!`);
 				target.heal(target.maxhp / 2); // Cura 50% do HP
-				this.boost({ atk: 1, def: 1, spa: 1, spd: 1, spe: 1 }, target); // Aumenta todos os status em +1
+				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, target); // Aumenta todos os status em +1
 				return null; // Anula o golpe elétrico
 			  }
-			},
-		
-			// Converte moves Normais para Elétrico e dá +50% de poder
-			onModifyTypePriority: -1,
-			onModifyType(move, pokemon) {
+		},
+
+		// Converte moves Normais para Elétrico e dá +50% de poder
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
 			const noModifyType = [
 				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
 			];
@@ -17358,233 +17343,233 @@ malediction: {
 				move.type = 'Electric';
 				move.typeChangerBoosted = this.effect;
 			}
-			},
-			onBasePowerPriority: 23,
-			onBasePower(basePower, pokemon, target, move) {
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
 			if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
-			},
-		
-			// Se o HP estiver abaixo de 1/4, aumenta Evasão ao máximo e usa Thunder triplicado
-			onResidual(pokemon) {
+		},
+
+		// Se o HP estiver abaixo de 1/4, aumenta Evasão ao máximo e usa Thunder triplicado
+		onResidual(pokemon) {
 			  if (pokemon.hp <= pokemon.maxhp / 4) {
 				this.add('-message', `${pokemon.name} atingiu sua Ascensão Elétrica!`);
-				this.boost({ evasion: 6 }, pokemon); // Aumenta evasão ao máximo
+				this.boost({evasion: 6}, pokemon); // Aumenta evasão ao máximo
 				this.actions.useMove(Dex.moves.get('thunder'), pokemon); // Usa Thunder automaticamente
 				const thunderMove = this.dex.getActiveMove('thunder');
 				thunderMove.basePower *= 3; // Multiplica o poder de Thunder por 3
 			  }
-			},
+		},
 
 		  },
 
 		  lovetrap: {
-			// No final do turno, o adversário fica Infatuated e Confused,
-			onResidualOrder: 25,
-			onResidualSubOrder: 1,
-			onResidual(pokemon) {
-				for (const target of pokemon.foes()) {
-					if (!target.volatiles['attract']) {
-						target.addVolatile('attract', pokemon);
-					}
-					if (!target.volatiles['confusion']) {
-						target.addVolatile('confusion', pokemon);
-					}
+		// No final do turno, o adversário fica Infatuated e Confused,
+		onResidualOrder: 25,
+		onResidualSubOrder: 1,
+		onResidual(pokemon) {
+			for (const target of pokemon.foes()) {
+				if (!target.volatiles['attract']) {
+					target.addVolatile('attract', pokemon);
 				}
-			},
-		
-			// Se o oponente acertar esse Pokémon com um golpe, ele é forçado a trocar
-			onDamagingHit(damage, target, source, move) {
-				if (source.hp > 0) {
-					// Se for o último Pokémon do time, reduz o Ataque e o Ataque Especial dele
-					this.add('-message', `${source.name} não pode fugir e está ficando mais fraco!`);
-					this.boost({ atk: -1, spa: -1 }, source, target, this.dex.abilities.get('lovetrap'));
+				if (!target.volatiles['confusion']) {
+					target.addVolatile('confusion', pokemon);
 				}
-			},
-		
-			shortDesc: "Fim do turno: adversário fica Infatuated e Confused. Se atacar, é forçado a trocar. Último mon perde 1 estágio de Atk e SpA.",
-			name: "Love Trap",
-			rating: 5,
-			num: 1022, // Número pode ser ajustado conforme necessário
-			isNonstandard: "Future",
+			}
 		},
 
-		supremacy: {
-			// Todos os golpes usados por esse Pokémon são Critical Hits garantidos
-			onModifyCritRatio(critRatio) {
-				return 5; // 5 é o valor máximo de crit ratio, garantindo sempre um Critical Hit
-			},
-		
-			// Imune a efeitos secundários de golpes do oponente
-			onModifySecondaries(secondaries, target, source, move) {
-				if (target !== source) {
-					this.debug('Supremacy bloqueia efeitos secundários');
-					return secondaries.filter(effect => !effect.self && !effect.status && !effect.boosts);
-				}
-			},
-		
-			// Imune a golpes de status (Will-O-Wisp, Toxic, Thunder Wave, etc.)
-			onTryHit(target, source, move) {
-				if (move.category === 'Status') {
-					this.add('-immune', target, '[from] ability: Supremacy');
-					return null;
-				}
-			},
-		
-			// Moves de prioridade contra ele têm precisão reduzida para 30%
-			onModifyAccuracy(accuracy, target, source, move) {
-				if (move.priority > 0) {
-					this.debug('Supremacy reduz precisão de moves de prioridade');
-					return 30;
-				}
-			},
-		
-			// Imune a qualquer efeito que impeça a troca (trapping effects)
-			onTrapPokemon(pokemon) {
-				pokemon.trapped = false;
-				this.add('-message', `${pokemon.name} é imune a efeitos de aprisionamento devido à Supremacy!`);
-			},
-		
-			// Imune aos efeitos de Nevasca e Tempestade de Areia
-			onWeather(target, source, effect) {
-				if (effect.id === 'hail' || effect.id === 'sandstorm') {
-					this.add('-immune', target, '[from] ability: Supremacy');
-					return null;
-				}
-			},
-		
-			// Não sofre dano de Hazards como Stealth Rock, Spikes, Toxic Spikes, etc.
-			onDamage(damage, target, source, effect) {
-				if (effect && effect.id && ['stealthrock', 'spikes', 'toxicspikes', 'stickyweb'].includes(effect.id)) {
-					this.add('-immune', target, '[from] ability: Supremacy');
-					return 0; // Impede o dano
-				}
-				return damage;
-			},
-		
-			// Invoca Endure ao entrar no campo
-			onSwitchInPriority: 4,
-			onSwitchIn(pokemon) {
+		// Se o oponente acertar esse Pokémon com um golpe, ele é forçado a trocar
+		onDamagingHit(damage, target, source, move) {
+			if (source.hp > 0) {
+				// Se for o último Pokémon do time, reduz o Ataque e o Ataque Especial dele
+				this.add('-message', `${source.name} não pode fugir e está ficando mais fraco!`);
+				this.boost({atk: -1, spa: -1}, source, target, this.dex.abilities.get('lovetrap'));
+			}
+		},
+
+		shortDesc: "Fim do turno: adversário fica Infatuated e Confused. Se atacar, é forçado a trocar. Último mon perde 1 estágio de Atk e SpA.",
+		name: "Love Trap",
+		rating: 5,
+		num: 1022, // Número pode ser ajustado conforme necessário
+		isNonstandard: "Future",
+	},
+
+	supremacy: {
+		// Todos os golpes usados por esse Pokémon são Critical Hits garantidos
+		onModifyCritRatio(critRatio) {
+			return 5; // 5 é o valor máximo de crit ratio, garantindo sempre um Critical Hit
+		},
+
+		// Imune a efeitos secundários de golpes do oponente
+		onModifySecondaries(secondaries, target, source, move) {
+			if (target !== source) {
+				this.debug('Supremacy bloqueia efeitos secundários');
+				return secondaries.filter(effect => !effect.self && !effect.status && !effect.boosts);
+			}
+		},
+
+		// Imune a golpes de status (Will-O-Wisp, Toxic, Thunder Wave, etc.)
+		onTryHit(target, source, move) {
+			if (move.category === 'Status') {
+				this.add('-immune', target, '[from] ability: Supremacy');
+				return null;
+			}
+		},
+
+		// Moves de prioridade contra ele têm precisão reduzida para 30%
+		onModifyAccuracy(accuracy, target, source, move) {
+			if (move.priority > 0) {
+				this.debug('Supremacy reduz precisão de moves de prioridade');
+				return 30;
+			}
+		},
+
+		// Imune a qualquer efeito que impeça a troca (trapping effects)
+		onTrapPokemon(pokemon) {
+			pokemon.trapped = false;
+			this.add('-message', `${pokemon.name} é imune a efeitos de aprisionamento devido à Supremacy!`);
+		},
+
+		// Imune aos efeitos de Nevasca e Tempestade de Areia
+		onWeather(target, source, effect) {
+			if (effect.id === 'hail' || effect.id === 'sandstorm') {
+				this.add('-immune', target, '[from] ability: Supremacy');
+				return null;
+			}
+		},
+
+		// Não sofre dano de Hazards como Stealth Rock, Spikes, Toxic Spikes, etc.
+		onDamage(damage, target, source, effect) {
+			if (effect && effect.id && ['stealthrock', 'spikes', 'toxicspikes', 'stickyweb'].includes(effect.id)) {
+				this.add('-immune', target, '[from] ability: Supremacy');
+				return 0; // Impede o dano
+			}
+			return damage;
+		},
+
+		// Invoca Endure ao entrar no campo
+		onSwitchInPriority: 4,
+		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('Endure'), pokemon);
-			},
-		
-			// Invoca Bulk Up no final do primeiro turno
-			onResidual(pokemon) {
-				// Verifica se o Pokémon já ativou o efeito
-				if (pokemon.abilityState.bulkUpUsed) return;
-		
-				// Usa Bulk Up no final do primeiro turno
-				this.actions.useMove('bulkup', pokemon);
-				this.add('-message', `${pokemon.name} fortalece seu corpo com Bulk Up!`);
-		
-				// Marca que o efeito já foi ativado para não se repetir
-				pokemon.abilityState.bulkUpUsed = true;
-			},
-		
-			shortDesc: "Todos os golpes são críticos. Imune a efeitos secundários, golpes de status, trapping, weather, hazards, e moves prioritários têm precisão 30% contra ele. Invoca Endure ao entrar e Bulk Up no final do 1º turno.",
-			name: "Supremacy",
-			rating: 5,
-			num: 1024, // Número pode ser ajustado conforme necessário
-			isNonstandard: "Future",
 		},
 
-		abilitylock: {
-			// Quando o Pokémon com Ability Lock entra, muda a habilidade do oponente para Normalize
-			onStart(pokemon) {
-				let target = pokemon.side.foe.active[0]; // Seleciona o oponente ativo
-				if (!target || target.ability === 'truant') return; // Se já for Truant, não faz nada
-		
-				this.add('-ability', pokemon, 'Ability Lock');
-				this.add('-message', `${target.name} teve sua habilidade alterada para Normalize!`);
-				target.setAbility('normalize');
-		
-				// Define um marcador para ativar a mudança para Truant no turno seguinte
-				target.addVolatile('abilitylock');
-			},
-		
-			// No turno seguinte, a habilidade do oponente muda para Truant
-			onResidualOrder: 5,
-			onResidual(pokemon) {
-				let target = pokemon.side.foe.active[0];
-				if (!target || !target.volatiles['abilitylock']) return;
-		
-				this.add('-message', `${target.name} agora tem a habilidade Truant!`);
-				target.setAbility('truant');
-				target.removeVolatile('abilitylock'); // Remove o marcador após a mudança
-			},
-		
-			// Quando o oponente sai, sua habilidade original volta
-			onSwitchOut(pokemon) {
-				if (pokemon.ability === 'truant') {
-					this.add('-message', `${pokemon.name} recuperou sua habilidade original!`);
-					pokemon.ability = pokemon.baseAbility;
-				}
-			},
-		
-			shortDesc: "Ao entrar, muda a habilidade do oponente para Normalize e, no turno seguinte, para Truant até que ele saia.",
-			name: "Ability Lock",
-			rating: 5,
-			num: 1040, // Número ajustável
-			isNonstandard: "Future",
+		// Invoca Bulk Up no final do primeiro turno
+		onResidual(pokemon) {
+			// Verifica se o Pokémon já ativou o efeito
+			if (pokemon.abilityState.bulkUpUsed) return;
+
+			// Usa Bulk Up no final do primeiro turno
+			this.actions.useMove('bulkup', pokemon);
+			this.add('-message', `${pokemon.name} fortalece seu corpo com Bulk Up!`);
+
+			// Marca que o efeito já foi ativado para não se repetir
+			pokemon.abilityState.bulkUpUsed = true;
 		},
 
-		rainfirestorm: {
-			// Ao entrar em campo, invoca Rain Dance
-			onStart(source) {
-				for (const action of this.queue) {
-					if (action.choice === 'runPrimal' && action.pokemon === source && source.species.id === 'kyogre') return;
-					if (action.choice !== 'runSwitch' && action.choice !== 'runPrimal') break;
-				}
-				this.field.setWeather('raindance');
-			},
-		
-			// Quando o Pokémon usar um movimento do tipo Fire, se Rain Dance estiver ativo, invoca Thunder no final do turno
-			onAfterMoveSecondarySelf(pokemon, target, move) {
-				if (this.field.isWeather('rain') && move.type === 'Fire') {
-					// Invoca Thunder ao final do turno, após o movimento
-					this.add('-message', `${pokemon.name} usa a habilidade Rainfirestorm e invoca Thunder!`);
-					this.actions.useMove(Dex.moves.get('thunder'), pokemon); // Usa Thunder automaticamente
-					const thunderMove = this.dex.getActiveMove('thunder');
-				}
-			},
-		
-			name: "Rainfirestorm",
-			rating: 4.5,
-			num: 1021, // Número fictício, ajuste conforme necessário
-			isNonstandard: "Future",
+		shortDesc: "Todos os golpes são críticos. Imune a efeitos secundários, golpes de status, trapping, weather, hazards, e moves prioritários têm precisão 30% contra ele. Invoca Endure ao entrar e Bulk Up no final do 1º turno.",
+		name: "Supremacy",
+		rating: 5,
+		num: 1024, // Número pode ser ajustado conforme necessário
+		isNonstandard: "Future",
+	},
+
+	abilitylock: {
+		// Quando o Pokémon com Ability Lock entra, muda a habilidade do oponente para Normalize
+		onStart(pokemon) {
+			const target = pokemon.side.foe.active[0]; // Seleciona o oponente ativo
+			if (!target || target.ability === 'truant') return; // Se já for Truant, não faz nada
+
+			this.add('-ability', pokemon, 'Ability Lock');
+			this.add('-message', `${target.name} teve sua habilidade alterada para Normalize!`);
+			target.setAbility('normalize');
+
+			// Define um marcador para ativar a mudança para Truant no turno seguinte
+			target.addVolatile('abilitylock');
 		},
-		
-		divinecore: {
+
+		// No turno seguinte, a habilidade do oponente muda para Truant
+		onResidualOrder: 5,
+		onResidual(pokemon) {
+			const target = pokemon.side.foe.active[0];
+			if (!target || !target.volatiles['abilitylock']) return;
+
+			this.add('-message', `${target.name} agora tem a habilidade Truant!`);
+			target.setAbility('truant');
+			target.removeVolatile('abilitylock'); // Remove o marcador após a mudança
+		},
+
+		// Quando o oponente sai, sua habilidade original volta
+		onSwitchOut(pokemon) {
+			if (pokemon.ability === 'truant') {
+				this.add('-message', `${pokemon.name} recuperou sua habilidade original!`);
+				pokemon.ability = pokemon.baseAbility;
+			}
+		},
+
+		shortDesc: "Ao entrar, muda a habilidade do oponente para Normalize e, no turno seguinte, para Truant até que ele saia.",
+		name: "Ability Lock",
+		rating: 5,
+		num: 1040, // Número ajustável
+		isNonstandard: "Future",
+	},
+
+	rainfirestorm: {
+		// Ao entrar em campo, invoca Rain Dance
+		onStart(source) {
+			for (const action of this.queue) {
+				if (action.choice === 'runPrimal' && action.pokemon === source && source.species.id === 'kyogre') return;
+				if (action.choice !== 'runSwitch' && action.choice !== 'runPrimal') break;
+			}
+			this.field.setWeather('raindance');
+		},
+
+		// Quando o Pokémon usar um movimento do tipo Fire, se Rain Dance estiver ativo, invoca Thunder no final do turno
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (this.field.isWeather('rain') && move.type === 'Fire') {
+				// Invoca Thunder ao final do turno, após o movimento
+				this.add('-message', `${pokemon.name} usa a habilidade Rainfirestorm e invoca Thunder!`);
+				this.actions.useMove(Dex.moves.get('thunder'), pokemon); // Usa Thunder automaticamente
+				const thunderMove = this.dex.getActiveMove('thunder');
+			}
+		},
+
+		name: "Rainfirestorm",
+		rating: 4.5,
+		num: 1021, // Número fictício, ajuste conforme necessário
+		isNonstandard: "Future",
+	},
+
+	divinecore: {
 		// Muda o tipo do Pokémon baseado na Plate equipada
 		onStart(pokemon) {
-		const item = pokemon.getItem();
-		if (item.onPlate) {
-			this.add('-message', `${pokemon.name} sente o poder divino da ${item.name}!`);
-			pokemon.setType(item.onPlate); // Muda o tipo do Pokémon baseado na Plate equipada
-			this.add('-start', pokemon, 'typechange', item.onPlate, '[from] ability: Divine Core');
-		}
+			const item = pokemon.getItem();
+			if (item.onPlate) {
+				this.add('-message', `${pokemon.name} sente o poder divino da ${item.name}!`);
+				pokemon.setType(item.onPlate); // Muda o tipo do Pokémon baseado na Plate equipada
+				this.add('-start', pokemon, 'typechange', item.onPlate, '[from] ability: Divine Core');
+			}
 		},
 
 		// Todos os moves Normal se tornam do tipo da Plate
 		onModifyType(move, pokemon) {
-		const item = pokemon.getItem();
-		if (move.type === 'Normal' && item.onPlate) {
-			move.type = item.onPlate;
-			this.add('-message', `${pokemon.name} converteu ${move.name} para o tipo ${item.onPlate}!`);
-		}
+			const item = pokemon.getItem();
+			if (move.type === 'Normal' && item.onPlate) {
+				move.type = item.onPlate;
+				this.add('-message', `${pokemon.name} converteu ${move.name} para o tipo ${item.onPlate}!`);
+			}
 		},
 
 		// Impede que o item do Pokémon seja removido ou trocado
 		onTakeItem(item, pokemon, source) {
-		if (pokemon.ability === 'divinecore') {
-			this.add('-fail', pokemon, 'move: Trick');
-			return false; // Impede remoção/troca do item
-		}
+			if (pokemon.ability === 'divinecore') {
+				this.add('-fail', pokemon, 'move: Trick');
+				return false; // Impede remoção/troca do item
+			}
 		},
 
 		// Impede que Knock Off tenha efeito contra esse Pokémon
 		onDamage(damage, target, source, move) {
 			if (move.id === 'knockoff') {
-				this.add('-immune', target, '[from] ability: Divine Core'); 
+				this.add('-immune', target, '[from] ability: Divine Core');
 				return false; // Impede Knock Off de remover o item
 			}
 		},
@@ -17595,7 +17580,7 @@ malediction: {
 		num: 1028, // Número pode ser ajustado conforme necessário
 		isNonstandard: "Future",
 	},
-	
+
 	doomprophecy: {
 		// Habilidade que pode desmaiar o oponente ou o próprio usuário no final do turno
 		shortDesc: "No fim do turno: 10% de desmaiar o oponente; se falhar, 8% de desmaiar o usuário.",
@@ -17603,7 +17588,7 @@ malediction: {
 		rating: 5,
 		num: 1026, // Número pode ser ajustado conforme necessário
 		isNonstandard: "Future",
-	
+
 		// Ativação no final do turno
 		onResidualOrder: 1,
 		onResidual(pokemon) {
@@ -17616,7 +17601,7 @@ malediction: {
 					return; // Se o adversário desmaiar, não calcula o do usuário
 				}
 			}
-	
+
 			// Se o adversário não desmaiou, 7% de chance do usuário desmaiar
 			if (this.randomChance(7, 100)) { // 7% de chance
 				this.add('-message', `${pokemon.name} foi consumido pela Profecia Sombria!`);
@@ -17643,7 +17628,7 @@ malediction: {
 		num: 1021,
 		isNonstandard: "Future",
 	},
-	
+
 	nopivotblock: {
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'No Pivot Block');
@@ -17666,7 +17651,7 @@ malediction: {
 					this.attrLastMove('[still]');
 					return false;
 				}
-			}
+			},
 		},
 		onTryMove(target, source, move) {
 			if (move.selfSwitch) {
@@ -17697,7 +17682,7 @@ malediction: {
 		num: 1020, // Ajuste conforme necessário
 		isNonstandard: "Future",
 	},
-	
+
 	savagetosupreme: {
 		onResidual(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Savage' || pokemon.transformed) return;
@@ -17723,7 +17708,7 @@ malediction: {
 				this.add('-ability', source, 'Lockdown');
 				this.effectState.activated = true;
 				this.add('-message', `${source.name} ativou a Lockdown!`);
-	
+
 				// Aplica o efeito de bloqueio de ações por 3 turnos
 				this.field.addPseudoWeather('lockdown');
 			}
@@ -17741,7 +17726,7 @@ malediction: {
 		rating: 4,
 		num: 1025,
 		isNonstandard: "Future",
-	
+
 		// Ativa a chuva ao entrar no campo
 		onStart(source) {
 			for (const action of this.queue) {
@@ -17749,35 +17734,34 @@ malediction: {
 				if (action.choice !== 'runSwitch' && action.choice !== 'runPrimal') break;
 			}
 			this.field.setWeather('raindance');
-	
+
 			// Marca que o próximo residual é o primeiro turno
 			source.m.usingStormcaller = true;
 		},
-	
+
 		// Efeito no final de cada turno
 		onResidual(pokemon) {
 			if (!this.field.isWeather('raindance')) return;
-	
+
 			const thunderMove = this.dex.getActiveMove('thunder');
-	
+
 			// Primeiro turno: 100% de chance no oponente
 			if (pokemon.m.usingStormcaller) {
 				this.add("-message", "Lightning crackles through the storm! Thunder strikes the opposing side!");
-	
+
 				const foeSide = pokemon.side.foe.active.filter(p => !p.fainted);
 				if (foeSide.length) {
 					const foeTarget = this.sample(foeSide);
 					this.actions.useMove(thunderMove, pokemon, foeTarget);
 				}
-	
+
 				// Desativa o flag após o primeiro turno
 				pokemon.m.usingStormcaller = false;
-	
 			} else {
 				// Próximos turnos: 25% de chance de atingir o oponente
 				if (this.randomChance(25, 100)) {
 					this.add("-message", "A stray lightning bolt strikes from the storm!");
-	
+
 					const foeSide = pokemon.side.foe.active.filter(p => !p.fainted);
 					if (foeSide.length) {
 						const foeTarget = this.sample(foeSide);
@@ -17797,13 +17781,13 @@ malediction: {
 				const maxHP = target.maxhp;
 				const limitedDamage = Math.ceil(maxHP * 0.1);
 				const reflectedDamage = damage - limitedDamage;
-	
+
 				target.removeVolatile('primordialguard'); // Remove o efeito após o primeiro dano
-	
+
 				if (reflectedDamage > 0 && source) {
 					this.damage(reflectedDamage, source, target, effect); // Reflete o dano ao adversário
 				}
-	
+
 				return Math.min(damage, limitedDamage);
 			}
 		},
@@ -17835,54 +17819,54 @@ malediction: {
 		rating: 4.5,
 		num: 1020, // Número pode ser ajustado conforme necessário
 		isNonstandard: "Future",
-	
+
 		// Ao entrar em campo, invoca midnight/midnight
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Permafrost');
 			this.field.setWeather('midnight'); // "midnight" substituiu "hail" na mecânica moderna
 		  },
-	  
+
 		  // Reduz a precisão dos moves do oponente em 30% durante Snow
 		  onModifyAccuracy(accuracy, target, source, move) {
 			if (this.field.isWeather('hail') && typeof accuracy === 'number') {
 			  return this.chainModify(0.7); // Reduz precisão para 70%
 			}
 		  },
-	  
+
 		  // No final de cada turno, oponente tem 30% de chance de ser congelado
 		  onResidual(target) {
 			const foe = target.side.foe.active[0]; // Oponente ativo
-			
+
 			if (this.field.isWeather('midnight') && foe && this.randomChance(25, 100)) {
 			  this.add('-message', `${foe.name} foi amaldiçoado pelas sombras!`);
-		  
+
 			  // Aplica o Volatile de curse
 			  foe.addVolatile('curse', target);
-		  
+
 			  // Aplica o dano de curse no mesmo turno
 			  const curseDamage = this.clampIntRange(Math.floor(foe.maxhp / 4), 1);
 			  this.damage(curseDamage, foe, target);
-			  
+
 			  this.add('-message', `${foe.name} sofreu dano da Maldição imediatamente!`);
 			}
 		  },
-		},
+	},
 
-		undyingvolt: {
-			onDamage(damage, target, source, effect) {
-				// Se a habilidade já foi ativada antes, permite o nocaute normalmente
-				if (target.volatiles['undyingvolt']) return;
-		
-				// Se o dano for fatal, impede o nocaute e ativa a habilidade
-				if (damage >= target.hp) {
-					this.add('-ability', target, 'Undying Volt');
-					this.add('-message', `${target.name} refuses to go down!`);
-					target.hp = 1;
-					target.addVolatile('undyingvolt');
-		
-					// Ativação forçada do Z-Move
-					const move = this.dex.moves.get('10,000,000 Volt Thunderbolt');
-      
+	undyingvolt: {
+		onDamage(damage, target, source, effect) {
+			// Se a habilidade já foi ativada antes, permite o nocaute normalmente
+			if (target.volatiles['undyingvolt']) return;
+
+			// Se o dano for fatal, impede o nocaute e ativa a habilidade
+			if (damage >= target.hp) {
+				this.add('-ability', target, 'Undying Volt');
+				this.add('-message', `${target.name} refuses to go down!`);
+				target.hp = 1;
+				target.addVolatile('undyingvolt');
+
+				// Ativação forçada do Z-Move
+				const move = this.dex.moves.get('10,000,000 Volt Thunderbolt');
+
       			if (move && move.isZ) {
        			 this.add('-zpower', target);
       		 	 // Força o uso do movimento Z diretamente pelo Pokémon
@@ -17893,55 +17877,55 @@ malediction: {
 
       			// Cancela o dano letal
       				return 0;
-				}
-			},
-			condition: {
-				onStart(pokemon) {
-					this.add('-message', `${pokemon.name} is charged with undying electricity!`);
-				},
-				onEnd(pokemon) {
-					this.add('-message', `${pokemon.name} has exhausted its Undying Volt power.`);
-				},
-			},
-			shortDesc: "Sobrevive com 1 HP e ativa 10,000,000 Volt Thunderbolt como Z-Move.",
-			name: "Undying Volt",
-			rating: 5,
-			num: 1020,
-			isNonstandard: "Future",
+			}
 		},
-		'10kvolt': {
+		condition: {
+			onStart(pokemon) {
+				this.add('-message', `${pokemon.name} is charged with undying electricity!`);
+			},
+			onEnd(pokemon) {
+				this.add('-message', `${pokemon.name} has exhausted its Undying Volt power.`);
+			},
+		},
+		shortDesc: "Sobrevive com 1 HP e ativa 10,000,000 Volt Thunderbolt como Z-Move.",
+		name: "Undying Volt",
+		rating: 5,
+		num: 1020,
+		isNonstandard: "Future",
+	},
+	'10kvolt': {
   		onDamage(damage, target, source, effect) {
     	// Se a habilidade já foi ativada antes, permite o nocaute normalmente
    		 if (target.volatiles['10kvolt']) return;
 
    		 // Se o dano for fatal, impede o nocaute e ativa a habilidade
    		 if (damage >= target.hp) {
-      this.add('-ability', target, '10k Volt');
-      this.add('-message', `${target.name} refuses to go down!`);
-      target.hp = 1;
-      target.addVolatile('10kvolt');
+				this.add('-ability', target, '10k Volt');
+				this.add('-message', `${target.name} refuses to go down!`);
+				target.hp = 1;
+				target.addVolatile('10kvolt');
 
-      // Ativação forçada do Z-Move
-      const move = this.dex.moves.get('10,000,000 Volt Thunderbolt');
-      
-      if (move && move.isZ) {
-        this.add('-zpower', target);
-        this.actions.useMove(move, target);
-      } else {
-        this.add('-message', 'Error: Z-Move not found!');
-      }
+				// Ativação forçada do Z-Move
+				const move = this.dex.moves.get('10,000,000 Volt Thunderbolt');
 
-      // Cancela o dano letal
-      return 0;
-    }
+				if (move && move.isZ) {
+					this.add('-zpower', target);
+					this.actions.useMove(move, target);
+				} else {
+					this.add('-message', 'Error: Z-Move not found!');
+				}
+
+				// Cancela o dano letal
+				return 0;
+			}
   	},
   	condition: {
-    onStart(pokemon) {
-      this.add('-message', `${pokemon.name} is brimming with energy!`);
-    },
-    onEnd(pokemon) {
-      this.add('-message', `${pokemon.name}'s 10k Volt has faded!`);
-    },
+			onStart(pokemon) {
+				this.add('-message', `${pokemon.name} is brimming with energy!`);
+			},
+			onEnd(pokemon) {
+				this.add('-message', `${pokemon.name}'s 10k Volt has faded!`);
+			},
   	},
   	shortDesc: "Prevents KO once; triggers 10,000,000 Volt Thunderbolt.",
   	name: "10k Volt",
@@ -17950,41 +17934,39 @@ malediction: {
   	isNonstandard: "Future",
 	},
 
-		anarchyaura: {
-			onStart(pokemon) {
-				this.add('-ability', pokemon, 'Anarchy Aura');
-				this.add('-message', `Anarchy spreads across the battlefield!`);
-				pokemon.addVolatile('anarchyaura');
-			},
-			condition: {
-				onBeforeMove(pokemon, target, move) {
-					// Verifica se o Pokémon tem mais de um movimento
-					if (pokemon.moveSlots.length > 1) {
-						const possibleMoves = pokemon.moveSlots
-							.map(slot => slot.id)
-							.filter(id => id !== move.id); // Remove o movimento escolhido
-		
-						if (possibleMoves.length) {
-							const newMove = this.sample(possibleMoves); // Escolhe um movimento aleatório diferente
-							const moveData = this.dex.moves.get(newMove); // Obtém os dados do novo golpe
-		
-							if (moveData) {
-								this.add('-activate', pokemon, 'ability: Anarchy Aura');
-								this.add('-message', `${pokemon.name} ignores orders and uses ${moveData.name} instead!`);
-								return moveData;
-							}
+	anarchyaura: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Anarchy Aura');
+			this.add('-message', `Anarchy spreads across the battlefield!`);
+			pokemon.addVolatile('anarchyaura');
+		},
+		condition: {
+			onBeforeMove(pokemon, target, move) {
+				// Verifica se o Pokémon tem mais de um movimento
+				if (pokemon.moveSlots.length > 1) {
+					const possibleMoves = pokemon.moveSlots
+						.map(slot => slot.id)
+						.filter(id => id !== move.id); // Remove o movimento escolhido
+
+					if (possibleMoves.length) {
+						const newMove = this.sample(possibleMoves); // Escolhe um movimento aleatório diferente
+						const moveData = this.dex.moves.get(newMove); // Obtém os dados do novo golpe
+
+						if (moveData) {
+							this.add('-activate', pokemon, 'ability: Anarchy Aura');
+							this.add('-message', `${pokemon.name} ignores orders and uses ${moveData.name} instead!`);
+							return moveData;
 						}
 					}
-				},
+				}
 			},
-			shortDesc: "Todos os Pokémon no campo ignoram comandos e escolhem um move aleatório, exceto o selecionado pelo treinador.",
-			name: "Anarchy Aura",
-			rating: 5,
-			num: 1027,
-			isNonstandard: "Future",
-		}
-		
-		
-		
-	  
+		},
+		shortDesc: "Todos os Pokémon no campo ignoram comandos e escolhem um move aleatório, exceto o selecionado pelo treinador.",
+		name: "Anarchy Aura",
+		rating: 5,
+		num: 1027,
+		isNonstandard: "Future",
+	},
+
+
 };

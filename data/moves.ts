@@ -17907,7 +17907,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 		},
-		
+
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
@@ -25033,7 +25033,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mustpressure: 1},
 		onHit(target, source, move) {
-			source.addVolatile('imprison')
+			source.addVolatile('imprison');
 			return target.addVolatile('trapped', source, move, 'trapper');
 		},
 		secondary: null,
@@ -25310,7 +25310,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onTryHit(target, source, move) {
 			if (source.removeVolatile(move.id)) {
 				if (target !== source.volatiles['twoturnmove'].source) return false;
-
 			} else {
 				if (target.volatiles['substitute'] || target.isAlly(source)) {
 					return false;
@@ -25860,12 +25859,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 120,
 		basePowerCallback(pokemon, target, move) {
-            if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
-                pokemon.addVolatile('furycutter');
-            }
-            const bp = this.clampIntRange(move.basePower / pokemon.volatiles['furycutter'].multiplier, 30, 120);
-            return bp;
-        },
+			if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
+				pokemon.addVolatile('furycutter');
+			}
+			const bp = this.clampIntRange(move.basePower / pokemon.volatiles['furycutter'].multiplier, 30, 120);
+			return bp;
+		},
 		category: "Physical",
 		name: "Lunar Impact",
 		pp: 5,
@@ -30139,7 +30138,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 100,
 			boosts: {
-			spe: -1,
+				spe: -1,
 			},
 		},
 		target: "normal",
@@ -30696,7 +30695,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onMoveFail(target, source) {
 			source.trySetStatus('brn');
-			},
+		},
 		secondary: {
 			chance: 10,
 			status: 'par',
@@ -31685,10 +31684,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		noPPBoosts: true,
 		priority: 0,
-		flags: {failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1, protect:1},
+		flags: {failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1, protect: 1},
 		onTryHit(target, pokemon) {
 			if (pokemon.swordBoost != true) return;
-			let move = 'mourninglament';
+			const move = 'mourninglament';
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
 			this.actions.useMove(move, pokemon, target);
@@ -31740,9 +31739,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onHit(target, pokemon) {
 			if (pokemon.hp * 2 <= pokemon.maxhp) {
 				this.heal(target.maxhp / 8);
-			}
-			else {
-				this.damage(pokemon.baseMaxhp / 8, pokemon)
+			} else {
+				this.damage(pokemon.baseMaxhp / 8, pokemon);
 			}
 		},
 		target: "normal",
@@ -31922,7 +31920,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Sandblast",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1,},
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 30,
 			boosts: {
@@ -33546,13 +33544,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onModifySpe(spe, pokemon) {
 				if (pokemon.hasType('Ice')) {
 					return this.chainModify([1.5]);
-				}
-				else {
+				} else {
 					return this.chainModify([0.5]);
-
 				}
 			},
-			
+
 			onFieldStart(field, source, effect) {
 				if (effect?.effectType === 'Ability') {
 					this.add('-fieldstart', 'move: Frosty Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
@@ -34391,7 +34387,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Flying",
-		isNonstandard: "Future"
+		isNonstandard: "Future",
 	},
 	runeofluck: {
 		accuracy: true,
@@ -36287,7 +36283,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {
-			contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1, nosleeptalk: 1, noassist: 1, failinstruct: 1, above: 1
+			contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1, nosleeptalk: 1, noassist: 1, failinstruct: 1, above: 1,
 		},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -37931,7 +37927,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
-		
+
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -38465,7 +38461,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					});
 				} else {
 					this.boost({
-						
+
 					});
 				}
 			},
@@ -41414,9 +41410,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
 		self: {
-		onHit(pokemon) {
-			if (['', 'slp', 'frz'].includes(pokemon.status)) return false;
-			pokemon.cureStatus();
+			onHit(pokemon) {
+				if (['', 'slp', 'frz'].includes(pokemon.status)) return false;
+				pokemon.cureStatus();
 			},
 		},
 		secondary: null,
@@ -45325,7 +45321,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
-		drain: [1, 2], //needs the bleed bonus still
+		drain: [1, 2], // needs the bleed bonus still
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -47644,7 +47640,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 		},
-	
+
 		secondary: null,
 		target: "normal",
 		type: "Flying",
@@ -48094,7 +48090,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(target, pokemon) {
 			const i = this.random(4);
-						
+
 			let move = 'elementalattack';
 			if (i == 0) {
 				move = 'solarbeam';
@@ -48104,7 +48100,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'hydropump';
 			} else if (i == 3) {
 				move = 'fireblast';
-			} 
+			}
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
 			this.actions.useMove(move, pokemon, target);
@@ -49296,7 +49292,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		multihitCallback(pokemon, move) {
-			const Infinite = [2,2,2,3,3,4,5,5,5,5,6,6,6,7,7,8,8,9,9,10,10,10,11,12,12,14,15,16,17,18,18,19,20,20,21,22,23,24,25,26,27,28,29,30,32,34,37,40,44,45,50,60,100]; 
+			const Infinite = [2, 2, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 10, 11, 12, 12, 14, 15, 16, 17, 18, 18, 19, 20, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 34, 37, 40, 44, 45, 50, 60, 100];
 			const randomHit = this.sample(Infinite);
 			return randomHit;
 		},
@@ -49315,7 +49311,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		multihitCallback(pokemon, move) {
-			const Infinite = [2,2,2,3,3,4,5,5,5,5,6,6,6,7,7,8,8,9,9,10,10,10,11,12,12,14,15,16,17,18,18,19,20,20,21,22,23,24,25,26,27,28,29,30,32,34,37,40,44,45,50,60,100]; 
+			const Infinite = [2, 2, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 10, 11, 12, 12, 14, 15, 16, 17, 18, 18, 19, 20, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 34, 37, 40, 44, 45, 50, 60, 100];
 			const randomHit = this.sample(Infinite);
 			return randomHit;
 		},
@@ -50230,7 +50226,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, punch: 1, arrow: 1},
 		multihitCallback(pokemon, move) {
-			const Infinite = [2,2,2,3,3,4,5,5,5,5,6,6,6,7,7,8,8,9,9,10,10,10,11,12,12,14,15,16,17,18,18,19,20,20,21,22,23,24,25,26,27,28,29,30,32,34,37,40,44,45,50,60,100]; 
+			const Infinite = [2, 2, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 10, 11, 12, 12, 14, 15, 16, 17, 18, 18, 19, 20, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 34, 37, 40, 44, 45, 50, 60, 100];
 			const randomHit = this.sample(Infinite);
 			return randomHit;
 		},
@@ -51975,7 +51971,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					return this.chainModify([0.5]);
 				}
 			},
-			
+
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 4,
 			onFieldEnd() {
@@ -54377,12 +54373,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		damageCallback(pokemon, target) {
-			if (this.field.getPseudoWeather('factory')){
+			if (this.field.getPseudoWeather('factory')) {
 				return this.clampIntRange(target.getUndynamaxedHP() / 3, 4);
+			} else {
+				return this.clampIntRange(target.getUndynamaxedHP() / 1, 2);
 			}
-				else {			
-					return this.clampIntRange(target.getUndynamaxedHP() / 1, 2);
-				}
 		},
 
 		secondary: null,
@@ -54403,7 +54398,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 90,
 			onHit(target, source) {
 				if (this.field.getPseudoWeather('factory')) {
-					this.boost({spa: 1, spd: 1,}, source, source);
+					this.boost({spa: 1, spd: 1}, source, source);
 				} else {
 					this.boost({
 						spa: 1,
@@ -54472,7 +54467,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(target, pokemon) {
 			const i = this.random(4);
-						
+
 			let move = 'calculator';
 			if (i == 0) {
 				move = 'subtract';
@@ -54480,9 +54475,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'multiply';
 			} else if (i == 2) {
 				move = 'divide';
-			}  else if (i == 2) {
+			} else if (i == 2) {
 				move = 'addition';
-			} 
+			}
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
 			this.actions.useMove(move, pokemon, target);
@@ -58396,7 +58391,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {pulse: 1},
 		onHitField(target, source) {
 			const targets: Pokemon[] = [];
-			let anyAirborne = false;
+			const anyAirborne = false;
 			for (const pokemon of this.getAllActive()) {
 				if (pokemon.hasType('Water')) {
 					// This move affects every grounded Grass-type Pokemon in play.
@@ -58618,7 +58613,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onAfterHit(target, source) {
 			this.field.clearWeather();
 		},
-		
+
 		secondaries: [
 			{
 				chance: 100,
@@ -58923,7 +58918,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(target, pokemon) {
 			const i = this.random(7);
-						
+
 			let move = 'seventrumpets';
 			if (i == 0) {
 				move = 'firsttrumpet';
@@ -58939,7 +58934,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'sixthtrumpet';
 			} else if (i == 6) {
 				move = 'seventhtrumpet';
-			} 
+			}
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
 			this.actions.useMove(move, pokemon, target);
@@ -59062,7 +59057,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
 		multihitCallback(pokemon, move) {
-			const Infinite = [2,2,2,3,3,4,5,5,5,5,6,6,6,7,7,8,8,9,9,10,10,10,11,12,12,14,15,16,17,18,18,19,20,20,21,22,23,24,25,26,27,28,29,30,32,34,37,40,44,45,50,60,100]; 
+			const Infinite = [2, 2, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 10, 11, 12, 12, 14, 15, 16, 17, 18, 18, 19, 20, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 34, 37, 40, 44, 45, 50, 60, 100];
 			const randomHit = this.sample(Infinite);
 			return randomHit;
 		},
@@ -59097,7 +59092,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		onHit(target, pokemon) {
 			const i = this.random(10);
-						
+
 			let move = 'tenplagues';
 			if (i == 0) {
 				move = 'firstplague';
@@ -59119,7 +59114,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'ninthplague';
 			} else if (i == 9) {
 				move = 'tenthplague';
-			} 
+			}
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
 			this.actions.useMove(move, pokemon, target);
@@ -59146,12 +59141,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (type === 'Water') return 1;
 		},
 		onBasePower(basePower, target) {
-			if (target.hasType('Water'))  {
+			if (target.hasType('Water')) {
 				this.debug('too much power');
 				return this.chainModify(4);
 			}
 		},
-		
+
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -59199,7 +59194,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1, sound: 1},
 		secondary: null,
 		multihitCallback(pokemon, move) {
-			const Infinite = [2,2,2,3,3,4,5,5,5,5,6,6,6,7,7,8,8,9,9,10,10,10,11,12,12,14,15,16,17,18,18,19,20,20,21,22,23,24,25,26,27,28,29,30,32,34,37,40,44,45,50,60,100]; 
+			const Infinite = [2, 2, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 10, 11, 12, 12, 14, 15, 16, 17, 18, 18, 19, 20, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 34, 37, 40, 44, 45, 50, 60, 100];
 			const randomHit = this.sample(Infinite);
 			return randomHit;
 		},
@@ -59329,7 +59324,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
-		
+
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -61335,9 +61330,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {pulse: 1},
 		onHitField(target, source) {
 			const targets: Pokemon[] = [];
-			let anyAirborne = false;
+			const anyAirborne = false;
 			for (const pokemon of this.getAllActive()) {
-				
 				if (pokemon.hasType('Grass')) {
 					// This move affects every grounded Grass-type Pokemon in play.
 					targets.push(pokemon);
@@ -62462,7 +62456,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 
-	
+
 	icyterrain: {
 		num: 668150,
 		accuracy: true,
@@ -62476,7 +62470,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasItem('terrainextender')|| source?.hasItem('icyrock')) {
+				if (source?.hasItem('terrainextender') || source?.hasItem('icyrock')) {
 					return 8;
 				}
 				return 5;
@@ -62492,13 +62486,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onModifySpe(spe, pokemon) {
 				if (pokemon.hasType('Ice')) {
 					return this.chainModify([1.5]);
-				}
-				else {
+				} else {
 					return this.chainModify([0.5]);
-
 				}
 			},
-			
+
 			onFieldStart(field, source, effect) {
 				if (effect?.effectType === 'Ability') {
 					this.add('-fieldstart', 'move: Icy Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
@@ -63417,7 +63409,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		
+
 		secondary: {
 			chance: 100,
 			onHit(target) {
@@ -66178,7 +66170,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, punch: 1},
 		multihitCallback(pokemon, move) {
-			const Infinite = [2,2,2,3,3,4,5,5,5,5,6,6,6,7,7,8,8,9,9,10,10,10,11,12,12,14,15,16,17,18,18,19,20,20,21,22,23,24,25,26,27,28,29,30,32,34,37,40,44,45,50,60,100]; 
+			const Infinite = [2, 2, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 10, 11, 12, 12, 14, 15, 16, 17, 18, 18, 19, 20, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 34, 37, 40, 44, 45, 50, 60, 100];
 			const randomHit = this.sample(Infinite);
 			return randomHit;
 		},
@@ -68913,7 +68905,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		pseudoWeather: 'mirrordimension',
-		
+
 		secondary: null,
 		target: "allySide",
 		type: "Glass",
@@ -69181,7 +69173,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					});
 				} else {
 					this.boost({
-						
+
 					});
 				}
 			},
@@ -70358,14 +70350,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		volatileStatus: 'barkskin',
 		condition: {
 			onStart(pokemon, source, effect) {
-				
-					this.add('-start', pokemon, 'Barkskin');
-				
+				this.add('-start', pokemon, 'Barkskin');
 			},
 			onRestart(pokemon, source, effect) {
-				
-					this.add('-start', pokemon, 'Barkskin');
-				
+				this.add('-start', pokemon, 'Barkskin');
 			},
 			onBasePowerPriority: 9,
 			onBasePower(basePower, attacker, defender, move) {
@@ -70543,9 +70531,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(target, pokemon) {
 			const i = this.random(12);
-			
-			
-			
+
+
 			let move = 'summon';
 			if (i == 0) {
 				move = 'summonminions';
@@ -70563,17 +70550,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'summonundead';
 			} else if (i == 7) {
 				move = 'summoninsects';
-			} 
-			else if (i == 8) {
+			} else if (i == 8) {
 				move = 'summonspirits';
-			}
-			else if (i == 9) {
+			} else if (i == 9) {
 				move = 'summonfey';
-			}
-			else if (i == 10) {
+			} else if (i == 10) {
 				move = 'summonelementals';
-			}
-			else if (i == 11) {
+			} else if (i == 11) {
 				move = 'summondragons';
 			}
 			const fullMove = this.dex.getActiveMove(move);
@@ -71012,7 +70995,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Zombie",
 		isNonstandard: "Future",
 	},
-	
+
 	"5impossiblerequests": {
 		num: 668654,
 		accuracy: true,
@@ -71024,9 +71007,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(target, pokemon) {
 			const i = this.random(19);
-			
-			
-			
+
+
 			let move = '5ImpossibleRequests';
 			if (i < 3) {
 				move = 'dragonjewels';
@@ -71042,11 +71024,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'kinkakujiceiling';
 			} else if (i < 17) {
 				move = 'lunarilmenite';
-			} 
-			else if (i < 18) {
+			} else if (i < 18) {
 				move = 'redstoneaja';
-			}
-			else if (i < 19) {
+			} else if (i < 19) {
 				move = 'mysterium';
 			}
 			const fullMove = this.dex.getActiveMove(move);
@@ -71055,7 +71035,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return null;
 		},
 
-		
+
 		secondary: null,
 		target: "scripted",
 		type: "Divine",
@@ -72010,7 +71990,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			self: {
 				volatileStatus: 'ingrain',
-			},			
+			},
 		},
 		onHit(target, source) {
 			if (target.hasType('Grass')) return null;
@@ -74814,7 +74794,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 100,
 			self: {
-			volatileStatus: 'confusion',
+				volatileStatus: 'confusion',
 			},
 		},
 		target: "normal",
@@ -76071,15 +76051,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, reflectable: 1},
 		secondary: {
-		chance: 100,
-		onHit(target, source) {
-			if (source.hasAbility('strongjaw')) {
-				this.boost({def: -2}, target, source);
-				this.boost({atk: 2}, source, source);
-			} else {
-				this.boost({def: -1}, target, source);
-				this.boost({atk: 1}, source, source);
-			}
+			chance: 100,
+			onHit(target, source) {
+				if (source.hasAbility('strongjaw')) {
+					this.boost({def: -2}, target, source);
+					this.boost({atk: 2}, source, source);
+				} else {
+					this.boost({def: -1}, target, source);
+					this.boost({atk: 1}, source, source);
+				}
 			},
 		},
 		target: "normal",
@@ -76851,7 +76831,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Indestructible",
 		pp: 5,
 		priority: 0,
-		flags: {snatch: 1,},
+		flags: {snatch: 1},
 		volatileStatus: 'indestructible',
 		condition: {
 			duration: 4,
@@ -76859,11 +76839,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-start', target, 'Indestructible');
 				this.add('-message', 'became immune to super effective moves!');
 			},
-			onFoeTryMove(target, source, move){
+			onFoeTryMove(target, source, move) {
 				if (source.getMoveHitData(move).typeMod > 0) {
-				this.debug('Indestructible neutralize');
-				this.add('-immune', source, '[from] : Indestructible');
-				return null;
+					this.debug('Indestructible neutralize');
+					this.add('-immune', source, '[from] : Indestructible');
+					return null;
 				}
 			},
 			onResidualOrder: 18,
@@ -76892,11 +76872,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-start', target, 'Rubber Shield');
 				this.add('-message', 'became immune to super effective moves and critical hits!');
 			},
-			onFoeTryMove(target, source, move){
+			onFoeTryMove(target, source, move) {
 				if (source.getMoveHitData(move).typeMod > 0) {
-				this.debug('Indestructible neutralize');
-				this.add('-immune', source, '[from] : Indestructible');
-				return null;
+					this.debug('Indestructible neutralize');
+					this.add('-immune', source, '[from] : Indestructible');
+					return null;
 				}
 			},
 			onCriticalHit: false,
@@ -79800,7 +79780,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (this.field.getPseudoWeather('library')) {
 				this.boost({
 					def: 2,
-					spd: 2
+					spd: 2,
 				});
 			} else {
 				this.boost({
@@ -80044,7 +80024,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-fieldend', 'move: Cyberspace');
 			},
 		},
-		
+
 		secondary: null,
 		target: "allySide",
 		type: "Cyber",
@@ -80223,7 +80203,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		onHit(target) {
-
 			this.boost({atk: 12, def: 12, spa: 12, spd: 12, spe: 12}, target);
 		},
 		onAfterHit(target, source, move) {
@@ -81055,16 +81034,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onSwitchOut(pokemon) {
 				const result = this.random(3);
-				if (!pokemon.hasType('Virus')){
-				
-				if (result === 0) {
-					pokemon.trySetStatus('psn');
-				} else if (result === 1) {
-					pokemon.trySetStatus('brn');
-				} else {
-					pokemon.trySetStatus('par');
-				}}
-				
+				if (!pokemon.hasType('Virus')) {
+					if (result === 0) {
+						pokemon.trySetStatus('psn');
+					} else if (result === 1) {
+						pokemon.trySetStatus('brn');
+					} else {
+						pokemon.trySetStatus('par');
+					}
+				}
 			},
 			onBasePowerPriority: 6,
 			onBasePower(basePower, attacker, defender, move) {
@@ -81127,12 +81105,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		onHit(target, source) {
-			if (this.field.isWeather('hail')|| this.field.isTerrain('icyterrain')) {
-					this.boost({atk: 1, spa: 1, spd: 1}, source);
+			if (this.field.isWeather('hail') || this.field.isTerrain('icyterrain')) {
+				this.boost({atk: 1, spa: 1, spd: 1}, source);
 			} else {
-				
-					this.boost({spd: 1}, source);
-				};
+				this.boost({spd: 1}, source);
+			}
 		},
 		target: "all",
 		type: "Ice",
@@ -81193,7 +81170,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (move.type === 'Water') return this.chainModify([1352, 4096]);
 			},
 		},
-		
+
 		secondary: {
 			chance: 100,
 			self: {
@@ -81387,7 +81364,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					return this.chainModify([0.5]);
 				}
 			},
-			
+
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 4,
 			onFieldEnd() {
@@ -81666,7 +81643,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.boost({atk: 5, spa: 5}, target);
 			} else if (i < 11) {
 				this.boost({atk: 6, spa: 6}, target);
-			} 
+			}
 		},
 		secondary: null,
 		volatileStatus: 'confusion',
@@ -81824,7 +81801,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			target.side.addSideCondition('reflect');
 			target.side.addSideCondition('lightscreen');
 		},
-	
+
 		selfdestruct: "ifHit",
 		secondary: null,
 		target: "normal",
@@ -82015,23 +81992,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onBasePowerPriority: 24,
 			onBasePower(basePower, attacker, defender, move) {
-			if (attacker.gender && defender.gender) {
-				if (attacker.gender === defender.gender) {
-					this.debug('Rivalry boost');
-					return this.chainModify(0.75);
-				} else {
-					this.debug('Rivalry weaken');
-					return this.chainModify(1.75);
+				if (attacker.gender && defender.gender) {
+					if (attacker.gender === defender.gender) {
+						this.debug('Rivalry boost');
+						return this.chainModify(0.75);
+					} else {
+						this.debug('Rivalry weaken');
+						return this.chainModify(1.75);
+					}
 				}
-			}
-		},
-		onDamagingHit(damage, target, source, move) {
+			},
+			onDamagingHit(damage, target, source, move) {
 			 {
-				if (this.randomChance(3, 10)) {
-					source.addVolatile('attract', this.effectState.target);
+					if (this.randomChance(3, 10)) {
+						source.addVolatile('attract', this.effectState.target);
+					}
 				}
-			}
-		},
+			},
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 4,
 			onFieldEnd() {
@@ -82075,7 +82052,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onResidualOrder: 6,
 			onResidual(pokemon) {
-				if (pokemon.hasType('Tech')|| pokemon.hasType('Steel')) this.heal(pokemon.baseMaxhp / 14);
+				if (pokemon.hasType('Tech') || pokemon.hasType('Steel')) this.heal(pokemon.baseMaxhp / 14);
 			},
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 4,
@@ -82112,7 +82089,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				} else {
 					this.add('-fieldstart', 'move: Lucky Room', '[of] ' + source);
 				}
-				
 			},
 			onModifyCritRatio(critRatio) {
 				return critRatio + 1;
@@ -82243,7 +82219,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					return this.chainModify([1.5]);
 				}
 			},
-			
+
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 4,
 			onFieldEnd() {
@@ -82620,7 +82596,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		
+
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -82885,7 +82861,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "KnightOfOwner",
 		pp: 10,
 		priority: -1,
-			flags: {
+		flags: {
 			protect: 1, bypasssub: 1, allyanim: 1,
 			failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1,
 		},
@@ -82928,7 +82904,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onAfterHit (source, target) {
+		onAfterHit(source, target) {
 			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
 			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
 				duration: 3,
@@ -83079,7 +83055,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
-		
+
 		onHit(target) {
 			if (this.field.getPseudoWeather('library')) {
 				target.addVolatile('torment');
@@ -83087,8 +83063,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				target.addVolatile('imprison');
 			} else {
 				target.addVolatile('embargo');
-					target.addVolatile('imprison');
-				
+				target.addVolatile('imprison');
 			}
 		},
 		secondary: null,
@@ -83140,11 +83115,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		onHit(target, source) {
 			if (this.field.isWeather('midnight')) {
-					this.boost({atk: 1, spa: 1, spd: 1}, source);
+				this.boost({atk: 1, spa: 1, spd: 1}, source);
 			} else {
-				
-					this.boost({spd: 1}, source);
-				};
+				this.boost({spd: 1}, source);
+			}
 		},
 		secondary: null,
 		target: "all",
@@ -84512,7 +84486,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {pulse: 1},
 		onHitField(target, source) {
 			const targets: Pokemon[] = [];
-			let anyAirborne = false;
+			const anyAirborne = false;
 			for (const pokemon of this.getAllActive()) {
 				if (pokemon.hasType('Flying')) {
 					// This move affects every grounded Grass-type Pokemon in play.
@@ -84550,18 +84524,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onFieldStart(field, source) {
 				this.add('-fieldstart', 'move: Coral Reef', '[of] ' + source);
 			},
-			
+
 			onResidualOrder: 5,
 			onResidualSubOrder: 2,
 			onResidual(pokemon) {
 				if (pokemon.hasType('Water')) {
 					this.heal(pokemon.baseMaxhp / 16);
-				}  
-					else if (!pokemon.hasType('Rock')|| pokemon.hasType('Water')) { 
+				} else if (!pokemon.hasType('Rock') || pokemon.hasType('Water')) {
 					this.damage(pokemon.baseMaxhp / 16);
 				}
 			},
-			
+
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 4,
 			onFieldEnd() {
@@ -84668,7 +84641,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onAccuracyPriority: 6,
 			onModifyAccuracy(accuracy, defender, attacker, move) {
 				if (move.category === 'Physical') {
-					
 					return this.chainModify(0.75);
 				}
 			},
@@ -85728,7 +85700,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-			secondary: {
+		secondary: {
 			chance: 25,
 			self: {
 				boosts: {
@@ -85860,7 +85832,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		secondary: null,
 		onHit(target, pokemon) {
-			const i = this.random(4);			
+			const i = this.random(4);
 			let move = 'dreidelspin';
 			if (i === 0) {
 				move = 'hey';
@@ -86521,7 +86493,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		onHit(target, pokemon) {
 			const i = this.random(4);
-						
+
 			let move = 'summonelementals';
 			if (i == 0) {
 				move = 'firelementals';
@@ -86531,7 +86503,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'earthelementals';
 			} else if (i == 3) {
 				move = 'windelementals';
-			} 
+			}
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
 			this.actions.useMove(move, pokemon, target);
@@ -87086,8 +87058,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 					anyAirborne = true;
 					continue;
 				}
-				
-					targets.push(pokemon);
+
+				targets.push(pokemon);
 			}
 			if (!targets.length && !anyAirborne) return false; // Fails when there are no grounded Grass types or airborne Pokemon
 			for (const pokemon of targets) {
@@ -89298,7 +89270,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		onHit(target, pokemon) {
 			const i = this.random(20);
-						
+
 			let move = 'magicmenu';
 			if (i == 0) {
 				move = 'sizzle';
@@ -89336,9 +89308,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'zoom';
 			} else if (i == 17) {
 				move = 'oomph';
-			}  else if (i == 18) {
+			} else if (i == 18) {
 				move = 'sizz';
-			} 
+			}
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
 			this.actions.useMove(move, pokemon, target);
@@ -89768,7 +89740,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			this.add('-prepare', attacker, move.name);
 			this.directDamage(attacker.maxhp / 8);
 			attacker.addVolatile('bleed');
-			
+
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
 				return;
 			}
@@ -92939,7 +92911,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Absorption",
 		pp: 10,
 		priority: -4,
-		flags: {contact: 1, protect: 1, mirror: 1, heal:1},
+		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
 		drain: [1, 2],
 		secondary: null,
 		target: "normal",
@@ -92993,7 +92965,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: "Future",
-	}, 
+	},
 	real: {
 		num: 6,
 		accuracy: 100,
@@ -93041,8 +93013,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		isNonstandard: "Future",
 	},
- 
-// WIPMON EXCLUSIVE MOVES (and solar hunger lol)
+
+	// WIPMON EXCLUSIVE MOVES (and solar hunger lol)
 
 	icastfireball: {
 		num: 53,
@@ -93513,7 +93485,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Sunken Sanity",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1,},
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			volatileStatus: 'confusion',
@@ -93831,7 +93803,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 
-    // HORRORS //
+	// HORRORS //
 
 
 	biteof87: {
@@ -93857,25 +93829,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 			{
 				chance: 87,
 				status: 'brn',
-			},{
+			}, {
 				chance: 87,
 				status: 'par',
-			},{
+			}, {
 				chance: 87,
 				status: 'frz',
-			},{
+			}, {
 				chance: 87,
 				status: 'psn',
-			},{
+			}, {
 				chance: 87,
 				volatileStatus: 'flinch',
-			},{
+			}, {
 				chance: 87,
 				volatileStatus: 'curse',
-			},{
+			}, {
 				chance: 87,
 				volatileStatus: 'partiallytrapped',
-			},  
+			},
 		],
 		target: "normal",
 		type: "Ghost",
@@ -93925,14 +93897,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 				target.addVolatile('gastroacid');
 				target.addVolatile('disable');
 				let success = false;
-			let i: BoostID;
-			for (i in target.boosts) {
-				if (target.boosts[i] === 0) continue;
-				target.boosts[i] = -target.boosts[i];
-				success = true;
-			}
-			if (!success) return false;
-			this.add('-invertboost', target, '[from] move: Topsy-Turvy');
+				let i: BoostID;
+				for (i in target.boosts) {
+					if (target.boosts[i] === 0) continue;
+					target.boosts[i] = -target.boosts[i];
+					success = true;
+				}
+				if (!success) return false;
+				this.add('-invertboost', target, '[from] move: Topsy-Turvy');
 			}
 		},
 		secondary: null,

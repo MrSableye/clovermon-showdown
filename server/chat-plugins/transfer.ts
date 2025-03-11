@@ -22,14 +22,12 @@ const saveTransfers = () => {
 	FS('config/chat-plugins/transfer.json').writeUpdate(() => JSON.stringify(transfers));
 };
 
-const checkCooldown = (userId: string) => {
-	return Object.values(transfers).filter((transfer) => {
-		if ((transfer.sourceId !== userId) && (transfer.targetId !== userId)) return false;
-		if (!transfer.isComplete) return false;
-		if (transfer.completed && ((transfer.completed + TRANSFER_COOLDOWN) < Date.now())) return false;
-		return true;
-	});
-};
+const checkCooldown = (userId: string) => Object.values(transfers).filter((transfer) => {
+	if ((transfer.sourceId !== userId) && (transfer.targetId !== userId)) return false;
+	if (!transfer.isComplete) return false;
+	if (transfer.completed && ((transfer.completed + TRANSFER_COOLDOWN) < Date.now())) return false;
+	return true;
+});
 
 const userInBattle = (user: User) => {
 	const curBattles: [User, string][] = [...user.inRooms]

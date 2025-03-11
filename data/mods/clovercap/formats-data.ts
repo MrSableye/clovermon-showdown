@@ -1,5 +1,5 @@
 export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
-		/* Disabled Mons */
+	/* Disabled Mons */
 	grasshole: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -1669,7 +1669,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	    },
 
-		/* CAPMons */
+	/* CAPMons */
 
 	bearedaze: {
 		inherit: true,

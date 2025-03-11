@@ -837,7 +837,7 @@ export const Aliases: {[alias: string]: string} = {
 	nix: "Daemonix",
 	nyano: "Nyanonite",
 	obama: "Abomasnow",
-	
+
 	ohmagod: "Plasmanta",
 	ohmoderators: "Banageddon",
 	p2: "Porygon2",
@@ -2230,8 +2230,8 @@ export const Aliases: {[alias: string]: string} = {
 	bcircus: "Blobbos-Circus",
 	bpterois: "Blobbos-Pterois",
 	blionfish: "Blobbos-Pterois",
-	
-	
+
+
 	// Board Power Aliases
 	bpa: "Board Power (/a/)",
 	bp5: "Board Power (/5/)",

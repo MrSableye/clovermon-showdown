@@ -430,8 +430,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			const item = pokemon.getItem();
 			if (item.id && item.onPlate && !item.onMemory) {
 				move.type = item.onPlate;
-			}
-			else move.type = this.runEvent('Memory', pokemon, null, move, 'Normal');
+			} else { move.type = this.runEvent('Memory', pokemon, null, move, 'Normal'); }
 		},
 		secondary: null,
 		target: "normal",
@@ -783,7 +782,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	assimilate: {
 		inherit: true,
-		isNonstandard: null,	
+		isNonstandard: null,
 	},
 	suffocate: {
 		inherit: true,
@@ -1520,12 +1519,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		accuracy: 100,
 		basePower: 120,
 		basePowerCallback(pokemon, target, move) {
-            if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
-                pokemon.addVolatile('furycutter');
-            }
-            const bp = this.clampIntRange(move.basePower / pokemon.volatiles['furycutter'].multiplier, 30, 120);
-            return bp;
-        },
+			if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
+				pokemon.addVolatile('furycutter');
+			}
+			const bp = this.clampIntRange(move.basePower / pokemon.volatiles['furycutter'].multiplier, 30, 120);
+			return bp;
+		},
 		category: "Physical",
 		name: "Superpower",
 		pp: 5,

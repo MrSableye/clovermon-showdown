@@ -1,4 +1,4 @@
-import { Pokemon } from "../../../sim";
+import {Pokemon} from "../../../sim";
 
 /*
 

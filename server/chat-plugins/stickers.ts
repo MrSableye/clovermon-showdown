@@ -3,7 +3,7 @@
 import {FS} from '../../lib';
 import {Punishments} from '../punishments';
 import {downloadImageWithVerification} from '../../lib/image';
-import { checkEmojiLevel } from './emojis';
+import {checkEmojiLevel} from './emojis';
 
 const MAX_STICKER_SIZE = 160;
 const STICKER_SIZE = 64;
@@ -56,13 +56,13 @@ const toAlphaNumeric = (text: string) => ('' + text).replace(/[^A-Za-z0-9]+/g, '
 export const createStickerHtml = (
 	name: string,
 	sticker: Sticker,
-	path: string = ''
+	path = ''
 ) => `<img src="https://clover.weedl.es:8443/stickers/${path}${sticker.filename}" title="/gif ${name}" height="${sticker.height}" width="${sticker.width}">`;
 
-export const downloadSticker = async (stickerName: string, imageUrl: string, path: string = './config/stickers'): Promise<Sticker> => {
+export const downloadSticker = async (stickerName: string, imageUrl: string, path = './config/stickers'): Promise<Sticker> => {
 	const result = await downloadImageWithVerification(imageUrl, {
 		validTypes: ['png', 'gif'],
-		enforceRatio: { min: { width: 1, height: 2 }, max: { width: 2, height: 1 } },
+		enforceRatio: {min: {width: 1, height: 2}, max: {width: 2, height: 1}},
 		minDimensions: {width: STICKER_SIZE, height: STICKER_SIZE},
 		maxDimensions: {width: MAX_STICKER_SIZE, height: MAX_STICKER_SIZE},
 		fileSize: 1000000,
@@ -75,7 +75,7 @@ export const downloadSticker = async (stickerName: string, imageUrl: string, pat
 	const fileName = `${stickerName}.${result.type}`;
 	await FS(`${path}/${fileName}`).write(result.image);
 
-	return { filename: fileName, width: result.width, height: result.height };
+	return {filename: fileName, width: result.width, height: result.height};
 };
 
 export const commands: Chat.ChatCommands = {

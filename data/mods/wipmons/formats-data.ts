@@ -1672,8 +1672,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	/* Enabled Mons */
 
 	dunebug: {
-		inherit: true, 
-      isNonstandard: null,
+		inherit: true,
+		isNonstandard: null,
 		tier: "LC",
 	},
 	vakoon: {

@@ -1736,7 +1736,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		desc: "Has a 10% chance to lower the target's Speed by 1 stage.",
 		shortDesc: "10% chance to lower the target's Speed by 1.",
 	},
-		focusblast: {
+	focusblast: {
 		inherit: true,
 		accuracy: 85,
 		basePower: 110,

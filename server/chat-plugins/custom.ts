@@ -636,7 +636,7 @@ export const commands: Chat.ChatCommands = {
 					const imageUrl = target.trim();
 					const imageResult = await Image.downloadImageWithVerification(imageUrl, {
 						validTypes: ['png', 'gif'],
-						enforceRatio: { min: { width: 1, height: 1}, max: { width: 1, height: 1} },
+						enforceRatio: {min: {width: 1, height: 1}, max: {width: 1, height: 1}},
 						maxDimensions: {width: 64, height: 64},
 						minDimensions: {width: 32, height: 32},
 						fileSize: 200000,

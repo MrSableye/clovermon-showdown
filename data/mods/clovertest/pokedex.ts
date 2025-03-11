@@ -100,8 +100,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 	},
 	walruskie: {
-	inherit: true,
-	types: [
+		inherit: true,
+		types: [
 			"Water",
 			"Steel",
 		],
@@ -130,6 +130,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spd: 85,
 			spe: 75,
 		},
-		
+
 	},
 };

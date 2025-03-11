@@ -314,9 +314,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					showMsg = true;
 					if (!(effect as ActiveMove).secondaries) {
 						this.add("-fail", target, "unboost", "accuracy", "[from] ability: Keen Eye", "[of] " + target);
+					}
 				}
-			}
-			
+
 				if (!(effect as ActiveMove).secondaries) {
 					this.add("-fail", target, "unboost", "accuracy", "[from] ability: Keen Eye", "[of] " + target);
 				}
@@ -340,9 +340,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					showMsg = true;
 					if (!(effect as ActiveMove).secondaries) {
 						this.add("-fail", target, "unboost", "Attack", "[from] ability: Hyper Cutter", "[of] " + target);
+					}
 				}
-			}
-			
+
 				if (!(effect as ActiveMove).secondaries) {
 					this.add("-fail", target, "unboost", "Attack", "[from] ability: Hyper Cutter", "[of] " + target);
 				}

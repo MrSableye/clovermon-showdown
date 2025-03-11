@@ -184,9 +184,9 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		},
 		onEnd() {
 			this.add('-message', 'A Zona de Estase desapareceu! Os Pokémon adversários podem agir novamente.');
-		}
-    },
-	
+		},
+	},
+
 	// Pokemon innate ability
 	// Destiny Bond and Perish Song immunities are handled in data/mod/wack/moves.ts
 	tapukoko: {
@@ -884,7 +884,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 		},
 	},
-	//Novos//
+	// Novos//
 	megax: {
 		onModifyAccuracyPriority: -2,
 		onModifyAccuracy(accuracy) {
@@ -893,17 +893,17 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			return this.chainModify(0.3);
 		},
 	},
-	
+
 	dialzan: {
 		onModifyMovePriority: -1,
 		onModifyMove(move, source) {
 		  if (move.basePower) {
-			this.debug('Dialzan - aumentando poder do golpe em 50%');
-			move.basePower = this.modify(move.basePower, 1.5);
+				this.debug('Dialzan - aumentando poder do golpe em 50%');
+				move.basePower = this.modify(move.basePower, 1.5);
 		  }
 		  if (typeof move.accuracy === 'number') {
-			this.debug('Dialzan - aumentando precisão do golpe em 50%');
-			move.accuracy = Math.min(move.accuracy * 1.5, 100);
+				this.debug('Dialzan - aumentando precisão do golpe em 50%');
+				move.accuracy = Math.min(move.accuracy * 1.5, 100);
 		  }
 		},
 	  },
@@ -911,13 +911,13 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 	veltran: {
 		onSourceModifyDamage(damage, source, target, move) {
 		  if (move.category === 'Special') {
-			this.debug('Veltran - reduzindo dano de golpes especiais para 20%');
-			return this.chainModify(0.2);
+				this.debug('Veltran - reduzindo dano de golpes especiais para 20%');
+				return this.chainModify(0.2);
 		  }
 		},
 	  },
 
-	blazer:{
+	blazer: {
 		onBeforeMove(source, target, move) {
 			if (move.category === 'Status') return;
 			const sunMoves = ['solarbeam', 'solarblade'];
@@ -952,20 +952,20 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
 				}
 			}
-		}
+		},
 
 	},
 
-	gengold:{
+	gengold: {
 		onSourceModifyDamage(damage, source, target, move) {
 			if (target.hp >= target.maxhp) {
 				this.debug('Multiscale weaken');
 				return this.chainModify(0.1);
 			}
-		}
+		},
 	},
 
-	maltina:{
+	maltina: {
 		onFoeTryMove(target, source, move) {
 			const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
 			if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) {
@@ -978,9 +978,9 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 				this.add('cant', dazzlingHolder, 'ability: Dazzling', move, '[of] ' + target);
 				return false;
 			}
-		}
-	}, 
-	maledeto:{
+		},
+	},
+	maledeto: {
 		onDamagingHit(damage, target, source, move) {
 			if (move.flags['contact']) {
 				source.addVolatile('confusion');
@@ -991,10 +991,10 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 				move.pranksterBoosted = true;
 				return priority + 1;
 			}
-		}
+		},
 	},
 
-	mentum:{
+	mentum: {
 		onAnyModifyBoost(boosts, pokemon) {
 			const unawareUser = this.effectState.target;
 			if (unawareUser === pokemon) return;
@@ -1009,26 +1009,26 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 				boosts['spa'] = 0;
 				boosts['accuracy'] = 0;
 			}
-		}
+		},
 
-	}, //unaware
+	}, // unaware
 
-	maldade:{
+	maldade: {
 		onModifyMove(move) {
 			if (move.flags['mirror']) delete move.flags['protect'];
 		},
 	},
 
-	galequake:{
+	galequake: {
 		onBasePowerPriority: 21,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['contact']) {
 				return this.chainModify([5325, 4096]);
 			}
-		} //toughclaws
+		}, // toughclaws
 	},
 
-	floraciel:{
+	floraciel: {
 		onTryHitPriority: 1,
 		onTryHit(target, source, move) {
 			if (target === source || move.hasBounced || !move.flags['reflectable']) {
@@ -1053,17 +1053,17 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 
 	},
 
-	arcano:{
+	arcano: {
 		onBasePowerPriority: 23,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['punch']) {
 				this.debug('Iron Fist boost');
 				return this.chainModify([4915, 4096]);
 			}
-		}
+		},
 	},
 
-	lovedeath:{
+	lovedeath: {
 		onModifyAtk(atk, attacker, defender, move) {
 			// Se o atacante for oponente (lado inimigo)
 			if (attacker.side !== this.effectState.target.side) {
@@ -1075,7 +1075,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 
 	},
 
-	savage:{
+	savage: {
 		onResidual(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Savage' || pokemon.transformed) return;
 			if (pokemon.hp <= pokemon.maxhp / 2 && pokemon.species.forme !== 'Supreme') {
@@ -1084,9 +1084,9 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 				pokemon.cureStatus();
 				this.add('-activate', pokemon, 'ability: Savage to Supreme');
 			}
-		}
+		},
 	},
-	savagesupreme:{
+	savagesupreme: {
 		onBasePowerPriority: 23,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['sound']) {
@@ -1100,10 +1100,10 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 				this.debug('Mozart weaken');
 				return this.chainModify(0.4);
 			}
-		}
+		},
 	},
 
-	berserker:{
+	berserker: {
 		onTryHitPriority: 1,
 		onTryHit(target, source, move) {
 			if (target === source || move.hasBounced || !move.flags['reflectable']) {
@@ -1127,7 +1127,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		},
 	},
 
-	galactus:{
+	galactus: {
 		onTryAddVolatile(status, pokemon) {
 			if (status.id === 'flinch') return null;
 		},
@@ -1136,10 +1136,10 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 				delete boost.atk;
 				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Inner Focus', '[of] ' + target);
 			}
-		}
+		},
 	},
 
-	ilusionist:{
+	ilusionist: {
 		onFoeTrapPokemon(pokemon) {
 			if (!pokemon.isAdjacent(this.effectState.target)) return;
 			if (pokemon.isGrounded()) {
@@ -1152,9 +1152,9 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			if (pokemon.isGrounded(!pokemon.knownType)) { // Negate immunity if the type is unknown
 				pokemon.maybeTrapped = true;
 			}
-		}
+		},
 	},
-	kirin:{
+	kirin: {
 		onModifyAtk(atk, attacker, defender, move) {
 			// Se o atacante for oponente (lado inimigo)
 			if (attacker.side !== this.effectState.target.side) {
@@ -1163,13 +1163,13 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 		},
 	},
-	overheaven:{
+	overheaven: {
 		onTrapPokemonPriority: -10,
 		onTrapPokemon(pokemon) {
 			pokemon.trapped = pokemon.maybeTrapped = false;
 		},
 	},
-	aethernox:{
+	aethernox: {
 		onTrapPokemon(pokemon) {
 			pokemon.trapped = false;
 		  },
@@ -1186,9 +1186,9 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			if (move.priority > 0) {
 			  move.accuracy = 50;
 			}
-		  }
+		  },
 	},
-	drakorion:{
+	drakorion: {
 		onTrapPokemon(pokemon) {
 			pokemon.trapped = false;
 		  },
@@ -1205,9 +1205,9 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			if (move.priority > 0) {
 			  move.accuracy = 50;
 			}
-		  }
+		  },
 	},
-	omnirath:{
+	omnirath: {
 		onTrapPokemon(pokemon) {
 			pokemon.trapped = false;
 		  },
@@ -1224,9 +1224,9 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			if (move.priority > 0) {
 			  move.accuracy = 50;
 			}
-		  }
+		  },
 	},
-	ragnarith:{
+	ragnarith: {
 		onTrapPokemon(pokemon) {
 			pokemon.trapped = false;
 		  },
@@ -1243,9 +1243,9 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			if (move.priority > 0) {
 			  move.accuracy = 50;
 			}
-		  }
+		  },
 	},
-	zephandor:{
+	zephandor: {
 		onTrapPokemon(pokemon) {
 			pokemon.trapped = false;
 		  },
@@ -1262,13 +1262,10 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			if (move.priority > 0) {
 			  move.accuracy = 50;
 			}
-		  }
+		  },
 	},
 
 
-
-
-	
 };
 /**
 	 * TODO:

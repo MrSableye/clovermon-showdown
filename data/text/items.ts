@@ -2820,7 +2820,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	usbdrive: {
 		name: "USB Drive",
-		desc: "If held by a Blobbos-Idiot, its SpAtk is doubled.", 
+		desc: "If held by a Blobbos-Idiot, its SpAtk is doubled.",
 	},
 	royalcrown: {
 		name: "Royal Crown",

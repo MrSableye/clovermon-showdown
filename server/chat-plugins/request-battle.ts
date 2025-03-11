@@ -1,6 +1,4 @@
-const getFormatButton = (format: Format) => {
-	return `<button name="send" value="/requestbattle ${format.id}" class="button">Request ${format.name} battle</button>`;
-};
+const getFormatButton = (format: Format) => `<button name="send" value="/requestbattle ${format.id}" class="button">Request ${format.name} battle</button>`;
 
 export const commands: Chat.ChatCommands = {
 	requestbattle(target, room, user) {

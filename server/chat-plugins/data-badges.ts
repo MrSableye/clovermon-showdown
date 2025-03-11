@@ -1,6 +1,6 @@
-import { REST, Routes } from 'discord.js';
-import { FS } from '../../lib';
-import { Badges } from './badges';
+import {REST, Routes} from 'discord.js';
+import {FS} from '../../lib';
+import {Badges} from './badges';
 
 const DISCORD_BOT_ID = "mrsablebot"; // TODO: Make this configurable
 const DISCORD_BADGE_ID = "discord";
@@ -66,7 +66,7 @@ const checkTourThreshold = async (userID: string, user: User) => {
 				await Badges.addBadgeToUser(userID, TOUR_BADGE_ID, user, true);
 			} catch (e) { }
 
-			await Badges.updateBadgeData(userID, TOUR_BADGE_ID, { wins: userTourWins }, user, true);
+			await Badges.updateBadgeData(userID, TOUR_BADGE_ID, {wins: userTourWins}, user, true);
 		} catch (e) { return false; }
 
 		return true;
@@ -81,7 +81,7 @@ const addDiscordBadge = async (user: User, username: string) => {
 			await Badges.addBadgeToUser(user.id, DISCORD_BADGE_ID, user, true);
 		} catch (e) { }
 
-		await Badges.updateBadgeData(user.id, DISCORD_BADGE_ID, { username }, user, true);
+		await Badges.updateBadgeData(user.id, DISCORD_BADGE_ID, {username}, user, true);
 	} catch (e) { return false; }
 
 	return true;

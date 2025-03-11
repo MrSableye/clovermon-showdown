@@ -665,7 +665,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	aquaring: {
 		inherit: true,
-		
+
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -953,7 +953,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.add('-start', target, 'typechange', type);
 		},
 		isNonstandard: null,
-		
+
 		onAfterHit(target) {
 			if (this.field.getPseudoWeather('cyberspace')) {
 				this.boost({
@@ -963,7 +963,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 					spd: 1,
 					spe: 1,
 				});
-			} 
+			}
 		},
 	},
 	conversion2: {
@@ -990,10 +990,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (!source.setType(randomType, false, source, this.effect)) return false;
 			this.add('-start', source, 'typechange', randomType);
 		},
-		onAfterHit(pokemon) {if (this.field.getPseudoWeather('cyberspace')) {
-			const success = !!this.heal(this.modify(pokemon.maxhp, 1.0));
-			return pokemon.cureStatus() || success;
-		}
+		onAfterHit(pokemon) {
+			if (this.field.getPseudoWeather('cyberspace')) {
+				const success = !!this.heal(this.modify(pokemon.maxhp, 1.0));
+				return pokemon.cureStatus() || success;
+			}
 		},
 		isNonstandard: null,
 	},
@@ -10658,7 +10659,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				}
 			},
 		},
-		
+
 		condition: {
 			duration: 4,
 			durationCallback(target, source, effect) {

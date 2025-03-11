@@ -50,7 +50,7 @@ export const Formats: FormatList = [
 			'HP Percentage Mod',
 			'Cancel Mod',
 			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves'
+			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: ['Uber', 'Wonder Guard'],
 		unbanlist: ['Fontaba-Z', 'Funnedong', 'Kuuroba'],
@@ -327,7 +327,7 @@ export const Formats: FormatList = [
 		ruleset: ['Terastal Clause', '-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'Forme Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
 		banlist: [
 			'Arena Trap', 'Contrary', 'Gorilla Tactics', 'Huge Power', 'Illusion', 'Innards Out', 'Libero', 'Magnet Pull', 'Moody',
-			'Neutralizing Gas', 'Parental Bond', 'Protean', 'Pure Power', 'Shadow Tag', 'Stakeout', 'Water Bubble', 'Stink Bomb',  'Wonder Guard',
+			'Neutralizing Gas', 'Parental Bond', 'Protean', 'Pure Power', 'Shadow Tag', 'Stakeout', 'Water Bubble', 'Stink Bomb', 'Wonder Guard',
 			'Comatose + Sleep Talk', 'Double Iron Bash', 'Octolock', 'Shell Smash', 'Toke', 'Adesign', 'Any Ability',
 		],
 	},
@@ -563,7 +563,7 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		searchShow: false,
 		rated: false,
-		ruleset: ['Terastal Clause', 'Standard', 'Flipped Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves', '! Nickname Clause',],
+		ruleset: ['Terastal Clause', 'Standard', 'Flipped Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves', '! Nickname Clause'],
 		banlist: ['Draconius', 'Manatank', 'Pasdawg', 'Arena Trap', 'Moody', 'Power Construct', 'Psychic Surge', 'Shadow Tag', 'Baton Pass', 'Psychic Terrain', 'Shell Smash', 'Toke', 'Uber'],
 		unbanlist: ['Chromox', 'Condoom', 'Funnedong', 'Foryu'],
 	},
@@ -699,7 +699,7 @@ export const Formats: FormatList = [
 		mod: 'clovermixandmega',
 		searchShow: false,
 		rated: false,
-		ruleset: ['Terastal Clause', 'Standard','! Nickname Clause', 'Overflow Stat Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves'],
+		ruleset: ['Terastal Clause', 'Standard', '! Nickname Clause', 'Overflow Stat Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves'],
 		banlist: [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Blobbosite', 'Kalosite', 'Sexite Y', 'Reversite', 'Upbeddite'],
@@ -764,7 +764,7 @@ export const Formats: FormatList = [
 		mod: 'clovermixandmega',
 		searchShow: false,
 		rated: false,
-		ruleset: ['Terastal Clause', 'Standard','! Nickname Clause', 'Overflow Stat Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves'],
+		ruleset: ['Terastal Clause', 'Standard', '! Nickname Clause', 'Overflow Stat Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves'],
 		banlist: [
 			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify'],
 		unbanlist: [
@@ -937,7 +937,7 @@ export const Formats: FormatList = [
 			'! Nickname Clause',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
-	
+
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
@@ -946,30 +946,30 @@ export const Formats: FormatList = [
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie',
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet', 'Discombubbles',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove','Wire Trap', 'Sketch', 'Soul Barrier',
+			'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
 		],
 	},
 	{
-        name: '[Gen 8 Wack Only] UU',
-        mod: 'wack',
-        ruleset: [
-            'Terastal Clause',
-            'Standard',
-            '! Nickname Clause',
-            'Dynamax Clause',
-            'Overflow Stat Mod',
-    
-        ],
-        banlist: [
-            'OU', 'UUBL', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-            'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost', 'Pillow Pile', 'Adaptive Body', 'Divine Protection', 'Hot Coals',
-            'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm', 'Freezing Kiss',
-            'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie',
-            'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet', 'Discombubbles',
-            'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-            'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove','Wire Trap', 'Sketch', 'Soul Barrier',
-        ],
-    },
+		name: '[Gen 8 Wack Only] UU',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'! Nickname Clause',
+			'Dynamax Clause',
+			'Overflow Stat Mod',
+
+		],
+		banlist: [
+			'OU', 'UUBL', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost', 'Pillow Pile', 'Adaptive Body', 'Divine Protection', 'Hot Coals',
+			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm', 'Freezing Kiss',
+			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie',
+			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet', 'Discombubbles',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
+			'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
+		],
+	},
 	{
 		name: '[Gen 8 Wack Only] Ubers',
 		mod: 'wack',
@@ -1367,7 +1367,7 @@ export const Formats: FormatList = [
 			'HP Percentage Mod',
 			'Cancel Mod',
 			'Sketch Post-Gen 7 Moves',
-			],
+		],
 	},
 	{
 		name: '[Gen 8 Cope Only] Ubers',
@@ -1418,23 +1418,23 @@ export const Formats: FormatList = [
 			'Species Clause',
 		],
 		banlist: [
-				'AG',
-				'Uber', 
-				'Baton Pass',
-				'Moody',
-				'Arena Trap',
-				'Shadow Tag',
-				'Doomsday',
-				'Doomsday-Revenant',
-				'Worldle',
-				'Eternal Walk',
-				'Fuck You',
-				'Drizzle',
-				'Drought',
-				'Krackocean',
-				'Aurora Veil',
-				'Maximize',
-				"Cope + King's Rock"],
+			'AG',
+			'Uber',
+			'Baton Pass',
+			'Moody',
+			'Arena Trap',
+			'Shadow Tag',
+			'Doomsday',
+			'Doomsday-Revenant',
+			'Worldle',
+			'Eternal Walk',
+			'Fuck You',
+			'Drizzle',
+			'Drought',
+			'Krackocean',
+			'Aurora Veil',
+			'Maximize',
+			"Cope + King's Rock"],
 		unbanlist: ['THROBAK + Wonder Guard'],
 	},
 
@@ -1542,7 +1542,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Baton Pass', 'Uber', 'Blobbos-Attack','Moody','Soul Crusher', 'Rage Fist', 'Revival Blessing', 'Shed Tail', 'Loaded Disk', 'Banana', 'Glomp :3', 'Nimble Metal Body', 'Arena Trap', 'Shadow Tag', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct', 'Power Herb + Geomancy', 'Last Respects + Blobbos-Paldea', 'Sketch + Blobbos-Doodle', 'Huge Power + Blobbos-Chad', 'Pure Power + Blobbos-Chad', 'Power Herb + Awaken', 'Zeroite', 'Star Rod + Victory Dance', 'A Blobbos', 'Blobbos-Adventurer', 'Blobbos-Extradimensional', 'Immortality', 'Blobbos-Gay', 'Infection', 'Blobbos-Arceus', 'Blobbos-Clover', 'Blobbos-Dark Matter', 'Blobbos-Zero', 'Blobbos-Forbidden', 'Blobbos-Horse', 'Blobbos-Lich', 'Blobbos-Primal', "Partner's Pendant + Super Snore"],
+		banlist: ['Baton Pass', 'Uber', 'Blobbos-Attack', 'Moody', 'Soul Crusher', 'Rage Fist', 'Revival Blessing', 'Shed Tail', 'Loaded Disk', 'Banana', 'Glomp :3', 'Nimble Metal Body', 'Arena Trap', 'Shadow Tag', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct', 'Power Herb + Geomancy', 'Last Respects + Blobbos-Paldea', 'Sketch + Blobbos-Doodle', 'Huge Power + Blobbos-Chad', 'Pure Power + Blobbos-Chad', 'Power Herb + Awaken', 'Zeroite', 'Star Rod + Victory Dance', 'A Blobbos', 'Blobbos-Adventurer', 'Blobbos-Extradimensional', 'Immortality', 'Blobbos-Gay', 'Infection', 'Blobbos-Arceus', 'Blobbos-Clover', 'Blobbos-Dark Matter', 'Blobbos-Zero', 'Blobbos-Forbidden', 'Blobbos-Horse', 'Blobbos-Lich', 'Blobbos-Primal', "Partner's Pendant + Super Snore"],
 		unbanlist: ['Blobbos-King'],
 	},
 	{
@@ -1563,7 +1563,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Obtainable',
 			'HP Percentage Mod',
-			'Cancel Mod'
+			'Cancel Mod',
 		],
 	},
 	{
@@ -1575,7 +1575,7 @@ export const Formats: FormatList = [
 		rated: false,
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
-   {
+	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Pokebilities',
 		mod: 'cloverblobboscap',
 		rated: false,
@@ -1598,8 +1598,8 @@ export const Formats: FormatList = [
 			'Shadow Tag', 'Arena Trap', 'Moody',
 			'Blobbos-Chad', 'Cell Construct', 'Stink Bomb',
 			'Blobbos-Bunny', 'Neutralizing Gas', 'Blobbos-Nega',
-			'Ascension', 'Mitosis Mash', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs', 
-         'Power Herb + Geomancy', 'Power Herb + Awaken', 'Baitite + Destiny Bond', 'Star Rod + Victory Dance', 
+			'Ascension', 'Mitosis Mash', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs',
+			'Power Herb + Geomancy', 'Power Herb + Awaken', 'Baitite + Destiny Bond', 'Star Rod + Victory Dance',
 		],
 		onBegin() {
 			for (const pokemon of this.getAllPokemon()) {
@@ -1626,7 +1626,7 @@ export const Formats: FormatList = [
 			pokemon.m.innates = undefined;
 		},
 	},
-	
+
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Pokebilities FFA Random Battle',
 		mod: 'cloverblobboscap',
@@ -1765,7 +1765,7 @@ export const Formats: FormatList = [
 		],
 
 	},
-	
+
 	{
 		name: '[Gen 8 Sandbox Only] Multi-Battle',
 		mod: 'sandbox',
@@ -1855,7 +1855,7 @@ export const Formats: FormatList = [
 			'! Nickname Clause',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
-			'Baton Pass Mod'
+			'Baton Pass Mod',
 		],
 		banlist: [
 			'AG',
@@ -1872,7 +1872,7 @@ export const Formats: FormatList = [
 			'Pixilate + Extreme Speed',
 			'Raidenetti + Speed Boost',
 			'Stingulor + Toke',
-         'Rendalopod + Fishious Rend',
+			'Rendalopod + Fishious Rend',
 			'Rendalopod + Bolt Beak',
 			'Dall-eedle + Dire Claw',
 			'Alberfect Cell + Dragon Dance',
@@ -1886,9 +1886,9 @@ export const Formats: FormatList = [
 			'Trick Stab + Illusion',
 			'Sly Squall + Illusion',
 			'Star Rod + Victory Dance',
-         'Banana',
+			'Banana',
 			'Glomp :3',
-			'Nimble Metal Body', 
+			'Nimble Metal Body',
 			'Mitosis Mash',
 			'Cell Construct',
 			'Power Herb + Geomancy',
@@ -1911,24 +1911,24 @@ export const Formats: FormatList = [
 			'Sterilizing Ampoule',
 			'Baton Pass + Ingrain',
 			'Baton Pass + Aqua Ring',
-			'Baton Pass + Substitute'
+			'Baton Pass + Substitute',
 		],
 		unbanlist: [
 			'THROBAK + Wonder Guard', 'Blobbos-King', 'Alberfect Cell', 'Manatank', 'Chromox', 'Walkie Talkie'],
-},
+	},
 	{
 		name: "[Gen 1] Ubers",
 		mod: 'gen1',
 		searchShow: false,
 		rated: false,
-		ruleset: ['Terastal Clause', 'Standard','! Nickname Clause',],
+		ruleset: ['Terastal Clause', 'Standard', '! Nickname Clause'],
 	},
 	{
 		name: "[Gen 1] OU",
 		mod: 'gen1',
 		searchShow: false,
 		rated: false,
-		ruleset: ['Terastal Clause', 'Standard','! Nickname Clause',],
+		ruleset: ['Terastal Clause', 'Standard', '! Nickname Clause'],
 		banlist: ['Uber'],
 	},
 	{
@@ -1942,7 +1942,7 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 1] 10u",
 		mod: "gen1",
-		ruleset: ['Standard','! Nickname Clause',],
+		ruleset: ['Standard', '! Nickname Clause'],
 		banlist: ["AG", "Uber", "OU", "UUBL", "UU", "RUBL", "RU", "NUBL", "NU", "PUBL", "PU", "NFE", "DUber", "DOU", "DBL", "DUU", "LC"],
 		unbanlist: ['Weedle', 'Kakuna', 'Caterpie', 'Metapod', 'Ditto', 'Magikarp', 'Magikarp + Dragon Rage'],
 	},

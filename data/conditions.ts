@@ -915,7 +915,8 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'BladeRain', '[upkeep]');
 			if (this.field.isWeather('bladerain')) this.eachEvent('Weather');
 		},
-		onWeather(target) {1
+		onWeather(target) {
+			1;
 			this.damage(target.baseMaxhp / 16);
 		},
 		onFieldEnd() {
@@ -943,26 +944,26 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-start', pokemon, 'Flammable');
 		},
 		duration: 3,
-			durationCallback(target, source, effect) {
-				if (effect?.name === "Oil Drench") {
-					return 2;
-				}
-				if (effect?.name === "Tar Shot") {
-					return 4;
-				}
-				return 3;
-			},
+		durationCallback(target, source, effect) {
+			if (effect?.name === "Oil Drench") {
+				return 2;
+			}
+			if (effect?.name === "Tar Shot") {
+				return 4;
+			}
+			return 3;
+		},
 		onSourceModifyDamage(damage, source, target, move) {
 			let mod = 1;
 			if (move.type === 'Fire') mod *= 1.5;
-			
+
 			return this.chainModify(mod);
 		},
 		onEnd(pokemon) {
 			this.add('-end', pokemon, 'Flammable');
 		},
 	},
-	
+
 	dynamax: {
 		name: 'Dynamax',
 		noCopy: true,

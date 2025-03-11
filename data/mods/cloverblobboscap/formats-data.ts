@@ -2664,7 +2664,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	kaquapo:{
+	kaquapo: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -2816,8 +2816,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	retwina: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-	}, 
-   arctiglobe: {
+	},
+	arctiglobe: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -2828,8 +2828,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	catation: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-	}, 
-   blubbastard: {
+	},
+	blubbastard: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -2952,12 +2952,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	sphare: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-	}, 
+	},
 	colombolt: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-    coilspill: {
+	coilspill: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -3512,7 +3512,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
-	}, 
+	},
 	blobboseyemouth: {
 		inherit: true,
 		isNonstandard: null,

@@ -452,32 +452,32 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	loituma: {
 		inherit: true,
 		abilities: {0: "Beast Boost", H: "Aerilate", S: "Dazzling"},
-        
+
 	},
 	spenjbab: {
 		inherit: true,
 		abilities: {0: "Beast Boost", H: "Dry Skin", S: "Harvest"},
-        
+
 	},
 	spycrab: {
 		inherit: true,
 		abilities: {0: "Illusion", 1: "Imposter", S: "Inner Focus", H: "Infiltrator"},
-        
+
 	},
 	impostree: {
 		inherit: true,
 		abilities: {0: "Skill Link", 1: "Rattled", H: "Infiltrator", S: "Imposter"},
-        
+
 	},
 	spinda: {
 		inherit: true,
 		abilities: {0: "Own Tempo", 1: "Tangled Feet", H: "Contrary", S: "Spin Cleaner"},
-        
+
 	},
 	ignifatu: {
 		inherit: true,
 		abilities: {0: "Beast Boost", H: "Sheer Force", S: "Toxic Boost"},
-        baseStats: {
+		baseStats: {
 			hp: 101,
 			atk: 149,
 			def: 89,
@@ -489,7 +489,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	empidae: {
 		inherit: true,
 		abilities: {0: "Beast Boost", H: "Queenly Majesty", S: "Striker"},
-        baseStats: {
+		baseStats: {
 			hp: 89,
 			atk: 127,
 			def: 83,
@@ -754,7 +754,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		baseStats: {hp: 73, atk: 73, def: 73, spa: 127, spd: 73, spe: 121},
 		abilities: {0: "Beast Boost", H: "Merciless", S: "Levitate"},
 	},
-    celesteela: {
+	celesteela: {
 		inherit: true,
 		types: ["Steel", "Flying"],
 		baseStats: {hp: 97, atk: 101, def: 103, spa: 107, spd: 101, spe: 61},

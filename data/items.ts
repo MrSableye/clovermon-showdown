@@ -8462,9 +8462,8 @@ export const Items: {[itemid: string]: ItemData} = {
 					pokemon.cureStatus();
 					pokemon.removeVolatile('confusion');
 				} else {
-					if (!pokemon.volatiles['confusion'])
-						this.add('-message', 'The holder is unable to comprehend the Moluganion!');
-						pokemon.addVolatile('confusion');
+					if (!pokemon.volatiles['confusion']) { this.add('-message', 'The holder is unable to comprehend the Moluganion!'); }
+					pokemon.addVolatile('confusion');
 				}
 			}
 		},
@@ -8597,7 +8596,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onSwitchInPriority: 4,
 		onSwitchIn(pokemon) {
 			if (pokemon.baseSpecies.name === 'Emojinn' && this.field.isWeather('sandstorm')) {
-			this.actions.useMove(Dex.moves.get('Mirage Veil'), pokemon);
+				this.actions.useMove(Dex.moves.get('Mirage Veil'), pokemon);
 			}
 		},
 		itemUser: ["Emojinn"],
@@ -8605,38 +8604,38 @@ export const Items: {[itemid: string]: ItemData} = {
 		rating: 1,
 	},
 	whetstone: {
-        name: "Whetstone",
-        spritenum: 187,
-        fling: {
-            basePower: 90,
-        },
-        onTryBoost(boost, target, source, effect) {
-            let showMsg = false;
-            let i: BoostID;
-            for (i in boost) {
-                if (boost.atk && boost.atk < 0) {
-                    delete boost[i];
-                    showMsg = true;
-                    if (!(effect as ActiveMove).secondaries) {
-                        this.add("-fail", target, "unboost", "Attack", "[from] item: Whetstone", "[of] " + target);
-                    }
-                }
-            }
-            if (!(effect as ActiveMove).secondaries) {
-                this.add("-fail", target, "unboost", "Attack", "[from] item: Whetstone", "[of] " + target);
-            }
-        },
-        onBasePowerPriority: 19,
-        onBasePower(basePower, attacker, defender, move) {
-            if (move.flags['slicing']) {
-                this.debug('Whetstone blade boost');
-                return this.chainModify(1.1);
-            }
-        },
-        gen: 8,
+		name: "Whetstone",
+		spritenum: 187,
+		fling: {
+			basePower: 90,
+		},
+		onTryBoost(boost, target, source, effect) {
+			let showMsg = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost.atk && boost.atk < 0) {
+					delete boost[i];
+					showMsg = true;
+					if (!(effect as ActiveMove).secondaries) {
+						this.add("-fail", target, "unboost", "Attack", "[from] item: Whetstone", "[of] " + target);
+					}
+				}
+			}
+			if (!(effect as ActiveMove).secondaries) {
+				this.add("-fail", target, "unboost", "Attack", "[from] item: Whetstone", "[of] " + target);
+			}
+		},
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['slicing']) {
+				this.debug('Whetstone blade boost');
+				return this.chainModify(1.1);
+			}
+		},
+		gen: 8,
 		  isNonstandard: "Future",
-        rating: 1,
-    },
+		rating: 1,
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",
@@ -9981,7 +9980,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				return this.chainModify(1.5);
 			}
 		},
-		itemUser: ["Blobbos-Partner"], 
+		itemUser: ["Blobbos-Partner"],
 		num: 2512,
 		isNonstandard: "Future",
 		rating: 1,
@@ -10517,7 +10516,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onResidualOrder: 28,
 		onResidualSubOrder: 3,
 		onResidual(pokemon) {
-			if (pokemon.species.id !== 'Begleamer' || pokemon.species.id!== 'Sneevil') return;
+			if (pokemon.species.id !== 'Begleamer' || pokemon.species.id !== 'Sneevil') return;
 			pokemon.addVolatile('torment');
 		},
 		fling: {
@@ -10646,7 +10645,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Skeleton"],
 		isNonstandard: "Future",
 		rating: 1,
-	}, 
+	},
 	sacredbong: {
 		name: "Sacred Bong",
 		spritenum: 140,
@@ -10683,7 +10682,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				return this.chainModify(2);
 			}
 		},
-		itemUser: ["Blobbos-Idiot"], 
+		itemUser: ["Blobbos-Idiot"],
 		num: 2512,
 		isNonstandard: "Future",
 		rating: 1,
@@ -19620,14 +19619,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	paintedrock: { 
+	paintedrock: {
 		name: "Painted Rock",
 		spritenum: 0,
 		num: 67482,
 		isNonstandard: "Future",
 		rating: 1,
 	},
-		bloodyrock: { 
+	bloodyrock: {
 		name: "Bloody Rock",
 		spritenum: 0,
 		num: 67483,

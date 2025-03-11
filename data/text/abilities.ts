@@ -2547,7 +2547,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	dispenser: {
 		name: "Dispenser",
-		
+
 		shortDesc: "At the end of every turn, heals user and allies for 1/16 of their max HP and recycles the user's item, unless it's a berry.",
 		addItem: "  [POKEMON] dispensed one [ITEM]!",
 	},
@@ -3198,35 +3198,35 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Resurrection",
 		shortDesc: "On switch-in, ability holder uses Revival Blessing.",
 	},
-hideandseek: {
+	hideandseek: {
 		name: "Hide and Seek",
 		shortDesc: "On switch-in, ability holder uses Substitute.",
 	},
-resilience: {
+	resilience: {
 		name: "Resilience",
 		shortDesc: "On switch-in, ability holder uses Endure.",
 	},
-scavenger: {
+	scavenger: {
 		name: "Scavenger",
 		shortDesc: "On switch-in, ability holder uses Recycle.",
 	},
-trolling: {
+	trolling: {
 		name: "Trolling",
 		shortDesc: "we do a little bit of trolling",
 	},
-headwind: {
+	headwind: {
 		name: "Headwind",
 		shortDesc: "On switch-in, ability holder uses Tailwind.",
 	},
-misleading: {
+	misleading: {
 		name: "Misleading",
 		shortDesc: "On switch-in, ability holder uses Fake Out.",
 	},
-prestidigitation: {
+	prestidigitation: {
 		name: "Prestidigitation",
 		shortDesc: "On switch-in, ability holder uses Trick.",
 	},
-malediction: {
+	malediction: {
 		name: "Malediction",
 		shortDesc: "On switch-in, ability holder uses Curse.",
 	},
@@ -4237,5 +4237,5 @@ malediction: {
 		name: "Quick Sacrifice",
 		shortDesc: "Summons Destiny Bond",
 	},
-	
+
 };

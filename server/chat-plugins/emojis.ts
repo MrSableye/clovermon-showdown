@@ -188,7 +188,7 @@ export const chatfilter: Chat.ChatFilter = (message, user, room) => {
 			const mon = Dex.species.get(monName);
 			if (mon.exists) {
 				anyEmoji = true;
-				return `<psicon pokemon="${mon.id}" />`
+				return `<psicon pokemon="${mon.id}" />`;
 			}
 			return match;
 		});
@@ -197,7 +197,7 @@ export const chatfilter: Chat.ChatFilter = (message, user, room) => {
 			const item = Dex.items.get(itemName);
 			if (item.exists) {
 				anyEmoji = true;
-				return `<psicon item="${item.id}" />`
+				return `<psicon item="${item.id}" />`;
 			}
 			return match;
 		});
@@ -206,7 +206,7 @@ export const chatfilter: Chat.ChatFilter = (message, user, room) => {
 			const type = Dex.types.get(typeName);
 			if (type.exists) {
 				anyEmoji = true;
-				return `<psicon type="${type.id}" />`
+				return `<psicon type="${type.id}" />`;
 			}
 			return match;
 		});

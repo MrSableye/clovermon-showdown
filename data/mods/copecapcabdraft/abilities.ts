@@ -1518,7 +1518,7 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 	fogofwar: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	boundary: {
 		inherit: true,
 		isNonstandard: null,

@@ -2791,142 +2791,142 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-		ponderselo: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-		},
-		grandon: {
+	ponderselo: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		raidenetti: {
+	grandon: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		firered: {
+	raidenetti: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		bolsopeixe: {
+	firered: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		gyonin: {
+	bolsopeixe: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		smologre: {
+	gyonin: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		shroomalice: {
+	smologre: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		seadle: {
+	shroomalice: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		heatdle: {
+	seadle: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		treedle: {
+	heatdle: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		schizeel: {
+	treedle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	schizeel: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
 	},
-		schizuo: {
+	schizuo: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "NFE",
 	},
-		schizorgon: {
+	schizorgon: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		jumblegore: {
+	jumblegore: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		jumblinart: {
+	jumblinart: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		ganglython: {
+	ganglython: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		mootant: {
+	mootant: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		geomortus: {
+	geomortus: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		beayquaza: {
+	beayquaza: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		andelusion: {
+	andelusion: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		horstuba: {
+	horstuba: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "Uber",
 	},
-		horsiwa: {
+	horsiwa: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		hor: {
+	hor: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
 	},
-		coilspill: {
+	coilspill: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-		klasicope: {
+	klasicope: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
 	},
-		essention: {
+	essention: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "NFE",
 	},
-		termagnius: {
+	termagnius: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -2976,7 +2976,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-		ointmitemega: {
+	ointmitemega: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
