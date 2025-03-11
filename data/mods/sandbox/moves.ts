@@ -4978,4 +4978,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	yearningbrambles: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
