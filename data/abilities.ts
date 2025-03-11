@@ -10867,6 +10867,46 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Bereavement",
 		rating: 5,
 	},
+	polydipsia: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				if (this.randomChance(1, 2)) {
+					this.boost({def: -1, atk: 1});
+				}
+				else {
+					this.boost({def: 1, atk: -1});
+				}
+			}
+		},
+		isNonstandard: "Future",
+		name: "Polydipsia",
+		rating: 4.5,
+	},
+	grandwelcome: {
+		name: "Grand Welcome",
+		rating: 3.5,
+		num: 235,
+	},
+	closingbanquet: {
+		onDamage(damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				if (target.side.pokemonLeft === 1) {
+					if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+					return false;
+				}
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.side.pokemonLeft === 1) {
+				return this.chainModify(0.5);
+			}
+		},
+		isNonstandard: "Future",
+		name: "Closing Banquet",
+		rating: 4,
+	},
 	kattapillarssecretpower: {
 		name: "Kattapillar's Secret Power",
 		rating: 0, // LMAO YOU ACTUALLY THOUGHT THIS SHIT HAD REAL EFFECTS LMAOOOOOOOO

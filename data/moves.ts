@@ -31682,7 +31682,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Requiem Rend",
-		pp: 7,
+		pp: 10,
 		noPPBoosts: true,
 		priority: 0,
 		flags: {failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1, protect:1},
@@ -31727,6 +31727,26 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Dark",
+	},
+	yearningbrambles: {
+		accuracy: true,
+		basePower: 120,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Yearning Brambles",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1},
+		onHit(target, pokemon) {
+			if (pokemon.hp * 2 <= pokemon.maxhp) {
+				this.heal(target.maxhp / 8);
+			}
+			else {
+				this.damage(pokemon.baseMaxhp / 8, pokemon)
+			}
+		},
+		target: "normal",
+		type: "Grass",
 	},
 	gemblast: {
 		accuracy: 100,

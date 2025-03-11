@@ -2069,6 +2069,14 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	polydipsia: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	closingbanquet: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	thermalexchange: {
 		inherit: true,
 		isNonstandard: null,
