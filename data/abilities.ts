@@ -10906,7 +10906,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					this.boost(boost, source);
 				}
 			}
-		},
+		}
+	},
 		name: "Grand Welcome",
 		isNonstandard: "Future",
 		rating: 3.5,
