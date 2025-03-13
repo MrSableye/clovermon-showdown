@@ -7770,7 +7770,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.mindBlownRecoil) delete move.mindBlownRecoil;
 		},
 		onAfterMove(source, target, move) {
-			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct', 'finalgambit', 'memento', 'holyduty'].includes(move.id)) {
+			if (['explosion', 'mistyexplosion', 'selfdestruct', 'finalgambit', 'memento', 'holyduty'].includes(move.id)) {
 				source.sethp(1);
 				this.add('-sethp', source, source.getHealth, '[from] ability: Pressure Fuzed', '[silent]');
 			}

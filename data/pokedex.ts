@@ -54519,6 +54519,20 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 9,
 		creator: "Yan",
 	},
+	chibomonx: {
+		num: -21012,
+		name: "Chibomon X",
+		types: ["Dragon", "Steel"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 116, atk: 101, def: 83, spa: 127, spd: 83, spe: 90},
+		abilities: {0: "Good as Gold"},
+		heightm: 0.4,
+		weightkg: 253.7,
+		color: "Blue",
+		eggGroups: ["Undiscovered"],
+		gen: 8,
+		creator: "Hilbert",
+	},
 	/* Clover CAP Megas */
 	oogabugamega: {
 		num: 69268,
