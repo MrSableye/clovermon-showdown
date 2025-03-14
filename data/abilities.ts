@@ -17766,7 +17766,7 @@ malediction: {
 	},
 
 	shadowcurse: {
-		shortDesc: "Invoca midnight ao entrar. Em Hail, +1 Def/SpD oculto, 30% de congelar oponente e -30% precisão dele.",
+		shortDesc: "Invoca midnight ao entrar. 30% de Curse o oponente e -30% precisão dele.",
 		name: "Shadow Curse",
 		rating: 4.5,
 		num: 1020, // Número pode ser ajustado conforme necessário
@@ -17774,18 +17774,18 @@ malediction: {
 	
 		// Ao entrar em campo, invoca midnight/midnight
 		onStart(pokemon) {
-			this.add('-ability', pokemon, 'Permafrost');
-			this.field.setWeather('midnight'); // "midnight" substituiu "hail" na mecânica moderna
+			this.add('-ability', pokemon, 'Shadow Curse');
+			this.field.setWeather('midnight'); // "midnight" substituiu "curse" na mecânica moderna
 		  },
 	  
 		  // Reduz a precisão dos moves do oponente em 30% durante Snow
 		  onModifyAccuracy(accuracy, target, source, move) {
-			if (this.field.isWeather('hail') && typeof accuracy === 'number') {
+			if (this.field.isWeather('midnight') && typeof accuracy === 'number') {
 			  return this.chainModify(0.7); // Reduz precisão para 70%
 			}
 		  },
 	  
-		  // No final de cada turno, oponente tem 30% de chance de ser congelado
+		  // No final de cada turno, oponente tem 30% de chance de ser amaldicoado
 		  onResidual(target) {
 			const foe = target.side.foe.active[0]; // Oponente ativo
 			
@@ -17805,120 +17805,223 @@ malediction: {
 		},
 
 		undyingvolt: {
+			onStart(pokemon) {
+			  // Inicializa a flag no momento em que o Pokémon entra em campo (ou quando a habilidade é lida)
+			  if (!pokemon.m.undyingvoltActivated) {
+				pokemon.m.undyingvoltActivated = false;
+			  }
+			},
+		  
 			onDamage(damage, target, source, effect) {
-				// Se a habilidade já foi ativada antes, permite o nocaute normalmente
-				if (target.volatiles['undyingvolt']) return;
-		
-				// Se o dano for fatal, impede o nocaute e ativa a habilidade
-				if (damage >= target.hp) {
-					this.add('-ability', target, 'Undying Volt');
-					this.add('-message', `${target.name} refuses to go down!`);
-					target.hp = 1;
-					target.addVolatile('undyingvolt');
-		
-					// Ativação forçada do Z-Move
-					const move = this.dex.moves.get('10,000,000 Volt Thunderbolt');
-      
-      			if (move && move.isZ) {
-       			 this.add('-zpower', target);
-      		 	 // Força o uso do movimento Z diretamente pelo Pokémon
-       			 this.actions.useMove(move, target);
-    	 		 } else {
-      			  this.add('-message', 'Error: Z-Move not found!');
-      			}
-
-      			// Cancela o dano letal
-      				return 0;
+			  // Se a habilidade já foi ativada antes, permite o nocaute normalmente
+			  if (target.m.undyingvoltActivated) return;
+		  
+			  // Se o dano for fatal, impede o nocaute e ativa a habilidade
+			  if (damage >= target.hp) {
+				this.add('-ability', target, 'Undying Volt');
+				this.add('-message', `${target.name} refuses to go down!`);
+		  
+				target.hp = 1;
+				target.m.undyingvoltActivated = true; // Marca que já usou uma vez, permanente até o final da batalha
+				target.addVolatile('undyingvolt'); // Se quiser manter algum efeito visual ou adicional
+		  
+				// Ativação forçada do Z-Move
+				const move = this.dex.moves.get('10,000,000 Volt Thunderbolt');
+		  
+				if (move && move.isZ) {
+				  this.add('-zpower', target);
+				  // Força o uso do movimento Z diretamente pelo Pokémon
+				  this.actions.useMove(move, target);
+				} else {
+				  this.add('-message', 'Error: Z-Move not found!');
 				}
+		  
+				// Cancela o dano letal
+				return 0;
+			  }
 			},
+		  
 			condition: {
-				onStart(pokemon) {
-					this.add('-message', `${pokemon.name} is charged with undying electricity!`);
-				},
-				onEnd(pokemon) {
-					this.add('-message', `${pokemon.name} has exhausted its Undying Volt power.`);
-				},
+			  onStart(pokemon) {
+				this.add('-message', `${pokemon.name} is charged with undying electricity!`);
+			  },
+			  onEnd(pokemon) {
+				this.add('-message', `${pokemon.name} has exhausted its Undying Volt power.`);
+			  },
 			},
-			shortDesc: "Sobrevive com 1 HP e ativa 10,000,000 Volt Thunderbolt como Z-Move.",
+		  
+			shortDesc: "Sobrevive com 1 HP e ativa 10,000,000 Volt Thunderbolt uma única vez por batalha.",
 			name: "Undying Volt",
 			rating: 5,
 			num: 1020,
 			isNonstandard: "Future",
 		},
-		'10kvolt': {
-  		onDamage(damage, target, source, effect) {
-    	// Se a habilidade já foi ativada antes, permite o nocaute normalmente
-   		 if (target.volatiles['10kvolt']) return;
+		  
 
-   		 // Se o dano for fatal, impede o nocaute e ativa a habilidade
-   		 if (damage >= target.hp) {
-      this.add('-ability', target, '10k Volt');
-      this.add('-message', `${target.name} refuses to go down!`);
-      target.hp = 1;
-      target.addVolatile('10kvolt');
-
-      // Ativação forçada do Z-Move
-      const move = this.dex.moves.get('10,000,000 Volt Thunderbolt');
-      
-      if (move && move.isZ) {
-        this.add('-zpower', target);
-        this.actions.useMove(move, target);
-      } else {
-        this.add('-message', 'Error: Z-Move not found!');
-      }
-
-      // Cancela o dano letal
-      return 0;
-    }
-  	},
-  	condition: {
-    onStart(pokemon) {
-      this.add('-message', `${pokemon.name} is brimming with energy!`);
-    },
-    onEnd(pokemon) {
-      this.add('-message', `${pokemon.name}'s 10k Volt has faded!`);
-    },
-  	},
-  	shortDesc: "Prevents KO once; triggers 10,000,000 Volt Thunderbolt.",
-  	name: "10k Volt",
-  	rating: 4,
-  	num: 1020,
-  	isNonstandard: "Future",
-	},
 
 		anarchyaura: {
 			onStart(pokemon) {
-				this.add('-ability', pokemon, 'Anarchy Aura');
-				this.add('-message', `Anarchy spreads across the battlefield!`);
-				pokemon.addVolatile('anarchyaura');
+			  this.add('-ability', pokemon, 'Anarchy Aura');
+			  this.add('-message', `Anarchy spreads across the battlefield!`);
+		  
+			  for (const target of pokemon.side.foe.active) {
+				if (target && !target.fainted) {
+				  target.addVolatile('anarchyaura');
+				}
+			  }
 			},
+		  
+			onEnd(pokemon) {
+			  for (const target of pokemon.side.foe.active) {
+				if (target && !target.fainted) {
+				  target.removeVolatile('anarchyaura');
+				}
+			  }
+			},
+		  
 			condition: {
-				onBeforeMove(pokemon, target, move) {
-					// Verifica se o Pokémon tem mais de um movimento
-					if (pokemon.moveSlots.length > 1) {
-						const possibleMoves = pokemon.moveSlots
-							.map(slot => slot.id)
-							.filter(id => id !== move.id); // Remove o movimento escolhido
-		
-						if (possibleMoves.length) {
-							const newMove = this.sample(possibleMoves); // Escolhe um movimento aleatório diferente
-							const moveData = this.dex.moves.get(newMove); // Obtém os dados do novo golpe
-		
-							if (moveData) {
-								this.add('-activate', pokemon, 'ability: Anarchy Aura');
-								this.add('-message', `${pokemon.name} ignores orders and uses ${moveData.name} instead!`);
-								return moveData;
-							}
-						}
+			  onBeforeMove(pokemon, target, move) {
+				if (!pokemon.isActive) return;
+		  
+				if (pokemon.moveSlots.length > 1) {
+				  const possibleMoves = pokemon.moveSlots
+					.map(slot => slot.id)
+					.filter(id => id !== move.id);
+		  
+				  if (possibleMoves.length) {
+					const newMove = this.sample(possibleMoves);
+					const moveData = this.dex.moves.get(newMove);
+		  
+					if (moveData) {
+					  this.add('-activate', pokemon, 'ability: Anarchy Aura');
+					  this.add('-message', `${pokemon.name} ignores orders and uses ${moveData.name} instead!`);
+		  
+					  pokemon.deductPP(move.id, 1);
+		  
+					  this.actions.runMove(newMove, pokemon, 0, null);
+					  return null; // Cancela o movimento original
 					}
-				},
+				  }
+				}
+			  },
 			},
-			shortDesc: "Todos os Pokémon no campo ignoram comandos e escolhem um move aleatório, exceto o selecionado pelo treinador.",
+		  
+			shortDesc: "Todos os Pokémon oponentes escolhem um move aleatório diferente do que o treinador mandou.",
 			name: "Anarchy Aura",
 			rating: 5,
 			num: 1027,
 			isNonstandard: "Future",
-		}
+		},
+		  
+
+		goodbad: {
+			onBeforeSwitchOut(pokemon) {
+				const target = pokemon.side.foe.active[0]; // Oponente atual em campo
+		
+				if (!target || target.fainted || target.status === 'fnt') return;
+		
+				// Se o alvo já estiver sob Taunt, não faz nada
+				if (target.volatiles['taunt'] || target.volatiles['pacify']) return;
+		
+				// Lógica para escolher entre Taunt ou Pacify com 50% de chance para cada
+				const moveToUse = Math.random() < 0.5 ? 'taunt' : 'pacify'; // 50% de chance para cada
+		
+				// Ativa o movimento escolhido
+				this.add('-activate', pokemon, 'ability: Provocador Sombrio');
+		
+				// Aplica o efeito correspondente
+				if (moveToUse === 'taunt') {
+					target.addVolatile('taunt', pokemon); // Aplica Taunt
+				} else {
+					target.addVolatile('pacify', pokemon); // Aplica Pacify
+				}
+			},
+		  
+			shortDesc: "Ao ser trocado, aplica 50% de chance de Taunt ou Pacify no oponente.",
+			name: "Good-Bad",
+			rating: 4,
+			num: 1021, // número novo para evitar conflitos
+			isNonstandard: "Future",
+		},
+		
+
+		trocadepapel: {
+			onModifyMove(move, pokemon) {
+			  // Ignora moves que não sejam de categoria ofensiva
+			  if (move.category === 'Status') return;
+		  
+			  // Inverte a categoria do move
+			  if (move.category === 'Physical') {
+				move.category = 'Special';
+			  } else if (move.category === 'Special') {
+				move.category = 'Physical';
+			  }
+			},
+			shortDesc: "Moves físicos viram especiais e especiais viram físicos.",
+			name: "Troca de Papel",
+			rating: 4,
+			num: 1019, // Altere se necessário para evitar conflitos
+			isNonstandard: "Future",
+		},
+		
+		selodeconfinamento: {
+			onStart(pokemon) {
+			  const target = pokemon.side.foe.active[0]; // Oponente atual em campo
+			  if (!target || target.fainted) return;
+		  
+			  // Aplica Disable no oponente
+			  if (!target.volatiles['disable']) {
+				this.add('-activate', pokemon, 'ability: Selo de Confinamento (Disable)');
+				target.addVolatile('disable', pokemon);
+			  }
+		  
+			  // Aplica Imprison no oponente
+			  if (!pokemon.volatiles['imprison']) {
+				this.add('-activate', pokemon, 'ability: Selo de Confinamento (Imprison)');
+				pokemon.addVolatile('imprison');
+			  }
+			},
+		  
+			onResidual(pokemon) {
+			  const target = pokemon.side.foe.active[0]; // Oponente atual em campo
+			  if (!target || target.fainted) return;
+		  
+			  if (this.randomChance(1, 4)) { // 25% chance
+				this.add('-ability', pokemon, 'Selo de Confinamento');
+				this.boost({ accuracy: -1 }, target, pokemon);
+			  }
+			},
+		  
+			shortDesc: "Ao entrar, aplica Disable e Imprison. No fim de cada turno, 25% de reduzir a Accuracy do oponente.",
+			name: "Selo de Confinamento",
+			rating: 5,
+			num: 1023, // Novo número de habilidade
+			isNonstandard: "Future",
+		},
+
+		defensivemight: {
+			onModifyAtk(atk, attacker, defender, move) {
+				if (move.category === 'Physical') {
+					const bestDef = Math.max(attacker.storedStats.def, attacker.storedStats.spd);
+					this.debug(`Defensive Might (Physical): replacing Atk (${atk}) with highest Defense stat (${bestDef})`);
+					return bestDef;
+				}
+			},
+			onModifySpA(spa, attacker, defender, move) {
+				if (move.category === 'Special') {
+					const bestDef = Math.max(attacker.storedStats.def, attacker.storedStats.spd);
+					this.debug(`Defensive Might (Special): replacing SpA (${spa}) with highest Defense stat (${bestDef})`);
+					return bestDef;
+				}
+			},
+			shortDesc: "Usa a maior defesa do Pokémon para calcular dano em todos os moves.",
+			name: "Defensive Might",
+			rating: 4,
+			num: 1030, // Ajusta o número como quiser
+			isNonstandard: "Future",
+		},
+
+		  
 		
 		
 		

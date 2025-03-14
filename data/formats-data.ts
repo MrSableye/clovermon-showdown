@@ -11527,7 +11527,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	ratinbum: {
+	yingyangdragon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tubat: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	flashlightdragon: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
