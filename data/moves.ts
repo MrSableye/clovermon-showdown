@@ -25917,6 +25917,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 0;
+		},
 		self: {
 			boosts: {
 				atk: -1,
