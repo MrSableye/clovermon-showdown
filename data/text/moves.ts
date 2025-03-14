@@ -7851,8 +7851,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	swordbreaker: {
 		name: "Swordbreaker",
-		desc: "Lowers the user's Attack by 1 stage.",
-		shortDesc: "Lowers the user's Attack by 1.",
+		desc: "Lowers the user's Attack by 1 stage. Neutral on Steel-Types.",
+		shortDesc: "Lowers the user's Attack by 1. Neutral on Steel-Types.",
 	},
 	awaken: {
 		name: "Awaken",
