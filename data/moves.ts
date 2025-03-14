@@ -25880,7 +25880,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 200,
 		category: "Special",
-		name: "Holy Duty",
+		name: "Critical Mass",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
