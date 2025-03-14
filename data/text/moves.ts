@@ -7839,6 +7839,21 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power halves with each hit, down to 30.",
 		shortDesc: "Power halves with each hit, down to 30.",
 	},
+	extremeedge: {
+		name: "Extreme Edge",
+		desc: "Has 33% recoil.",
+		shortDesc: "Has 33% recoil.",
+	},
+	criticalmass: {
+		name: "Critical Mass",
+		desc: "Hits adjacent Pokemon. The user faints. +2 Crit Ratio.",
+		shortDesc: "Hits adjacent Pokemon. The user faints. High critical hit ratio.",
+	},
+	swordbreaker: {
+		name: "Swordbreaker",
+		desc: "Lowers the user's Attack by 1 stage. Neutral on Steel-Types.",
+		shortDesc: "Lowers the user's Attack by 1. Neutral on Steel-Types.",
+	},
 	awaken: {
 		name: "Awaken",
 		desc: "Raises the user's Attack, Defense, and Speed by 2 stages. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",

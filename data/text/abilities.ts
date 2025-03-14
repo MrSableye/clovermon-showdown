@@ -2618,7 +2618,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	pressurefuzed: {
 		name: "Pressure Fuzed",
-		desc: "After using a Self-Destructing move (Self-Destruct, Explosion, Misty Explosion, Memento or Holy Duty), the user is left with 1 HP no matter what.",
+		shortDesc: "This Pokemon's self-destructing moves leave it with 1 HP instead; not Healing Wish.",
+		desc: "After using a Self-Destructing move (Self-Destruct, Explosion, Misty Explosion, Critical Mass or Memento), the user is left with 1 HP no matter what.",
 	},
 	transfusion: {
 		name: "Transfusion",

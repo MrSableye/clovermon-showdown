@@ -13051,4 +13051,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	chibomonx: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

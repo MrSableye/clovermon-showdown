@@ -781,6 +781,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	pressurefuzed: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	opportunist: {
 		inherit: true,
 		isNonstandard: null,
