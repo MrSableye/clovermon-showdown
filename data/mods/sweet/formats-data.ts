@@ -9876,7 +9876,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	ratinbum: {
+	yingyangdragon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	flashlightdragon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	tubat: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
