@@ -17854,51 +17854,51 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 		undyingvolt: {
 			onStart(pokemon) {
-			  // Inicializa a flag no momento em que o Pokémon entra em campo (ou quando a habilidade é lida)
-			  if (!pokemon.m.undyingvoltActivated) {
-				pokemon.m.undyingvoltActivated = false;
-			  }
+				// Inicializa a flag no momento em que o Pokémon entra em campo (ou quando a habilidade é lida)
+				if (!pokemon.m.undyingvoltActivated) {
+					pokemon.m.undyingvoltActivated = false;
+				}
 			},
 		  
 			onDamage(damage, target, source, effect) {
-			  // Se a habilidade já foi ativada antes, permite o nocaute normalmente
-			  if (target.m.undyingvoltActivated) return;
-		  
-			  // Se o dano for fatal, impede o nocaute e ativa a habilidade
-			  if (damage >= target.hp) {
-				this.add('-ability', target, 'Undying Volt');
-				this.add('-message', `${target.name} refuses to go down!`);
-		  
-				target.hp = 1;
-				target.m.undyingvoltActivated = true; // Marca que já usou uma vez, permanente até o final da batalha
-				target.addVolatile('undyingvolt'); // Se quiser manter algum efeito visual ou adicional
-		  
-				// Ativação forçada do Z-Move
-				const move = this.dex.moves.get('10,000,000 Volt Thunderbolt');
-		  
-				if (move && move.isZ) {
-				  this.add('-zpower', target);
-				  // Força o uso do movimento Z diretamente pelo Pokémon
-				  this.actions.useMove(move, target);
-				} else {
-				  this.add('-message', 'Error: Z-Move not found!');
+				// Se a habilidade já foi ativada antes, permite o nocaute normalmente
+				if (target.m.undyingvoltActivated) return;
+			
+				// Se o dano for fatal, impede o nocaute e ativa a habilidade
+				if (damage >= target.hp) {
+					this.add('-ability', target, 'Undying Volt');
+					this.add('-message', `${target.name} refuses to go down!`);
+			
+					target.hp = 1;
+					target.m.undyingvoltActivated = true; // Marca que já usou uma vez, permanente até o final da batalha
+					target.addVolatile('undyingvolt'); // Se quiser manter algum efeito visual ou adicional
+			
+					// Ativação forçada do Catastropika
+					const move = this.dex.moves.get('catastropika'); // Catastropika (Z-Move)
+			
+					if (move && move.isZ) {
+						this.add('-zpower', target);
+						// Força o uso do movimento Z diretamente pelo Pokémon
+						this.actions.useMove(move, target);
+					} else {
+						this.add('-message', 'Error: Z-Move not found!');
+					}
+			
+					// Cancela o dano letal
+					return 0;
 				}
-		  
-				// Cancela o dano letal
-				return 0;
-			  }
 			},
 		  
 			condition: {
-			  onStart(pokemon) {
-				this.add('-message', `${pokemon.name} is charged with undying electricity!`);
-			  },
-			  onEnd(pokemon) {
-				this.add('-message', `${pokemon.name} has exhausted its Undying Volt power.`);
-			  },
+				onStart(pokemon) {
+					this.add('-message', `${pokemon.name} is charged with undying electricity!`);
+				},
+				onEnd(pokemon) {
+					this.add('-message', `${pokemon.name} has exhausted its Undying Volt power.`);
+				},
 			},
 		  
-			shortDesc: "Sobrevive com 1 HP e ativa 10,000,000 Volt Thunderbolt uma única vez por batalha.",
+			shortDesc: "Sobrevive com 1 HP e ativa Catastropika uma única vez por batalha.",
 			name: "Undying Volt",
 			rating: 5,
 			num: 1020,
