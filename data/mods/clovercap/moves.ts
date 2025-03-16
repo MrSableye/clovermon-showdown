@@ -451,6 +451,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	swordbreaker: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	criticalmass: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	extremeedge: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	obstruct: {
 		inherit: true,
 		isNonstandard: null,
