@@ -53986,7 +53986,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	floraciel: {
 		num: -50019,
 		name: "Floraciel",
-		types: ["Davine", "Fairy"],
+		types: ["Divine", "Fairy"],
 		gender: "F",
 		baseStats: {hp: 80, atk: 75, def: 60, spa: 150, spd: 80, spe: 145},
 		abilities: {0: "Dazzling", 1: "Pixilate", H: "Fairy Enchanter"},
