@@ -2634,6 +2634,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Delusion",
 		shortDesc: "End of every turn -2 stat +1 stat, Ability spreads when the holder is hit.",
 	},
+	greedle: {
+		name: "Greedle",
+		shortDesc: "Sets all mons abilities to Lightning Rod. Makes all attacks Electric-type for 1 turn.",
+	},
 	rusepower: {
 		name: "Ruse Power",
 		desc: "This Pokemon's attacking stat is multiplied by 1.2 while using Poison- or Dark-type attacks.",
