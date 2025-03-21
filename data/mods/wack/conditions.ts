@@ -1169,6 +1169,25 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			pokemon.trapped = pokemon.maybeTrapped = false;
 		},
 	},
+	raiden:{
+		onDamage(damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+				return false;
+			}
+		}
+	},
+	flashlightdragon:{
+		onModifyMove(move) {
+			move.stab = 2;
+		}
+	},
+	yingyangdragon:{
+		onSwitchOut(pokemon) {
+			pokemon.heal(pokemon.baseMaxhp / 3);
+		},
+	},
+	
 	aethernox: {
 		onTrapPokemon(pokemon) {
 			pokemon.trapped = false;
