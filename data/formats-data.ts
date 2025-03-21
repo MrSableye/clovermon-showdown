@@ -11107,6 +11107,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	chompicule: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bewilderbeast: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	smellsumo: {
 		tier: "Illegal",
 		isNonstandard: "Future",

@@ -11298,6 +11298,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	chompicule: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	bewilderbeast: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	shroomageddon: {
 		inherit: true,
 		tier: "OU",
