@@ -11115,6 +11115,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	hornititaneetle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	smellsumo: {
 		tier: "Illegal",
 		isNonstandard: "Future",
