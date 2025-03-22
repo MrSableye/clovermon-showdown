@@ -7863,6 +7863,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		isNonstandard: "Future",
 	},
+	greedle: {
+		name: "Greedle",
+		onStart(source) {
+			for (const pokemon of this.getAllActive()) {
+				this.add('-ability', pokemon, 'Lightning Rod', '[from] ability: Greedle', '[of] ' + source);
+				pokemon.setAbility('lightningrod', source);
+				pokemon.addVolatile('greedle');
+			}
+		},
+		isNonstandard: "Future",
+	},
 	niceface: {
 		onStart(pokemon) {
 			if (this.field.isTerrain('grassyterrain') &&
