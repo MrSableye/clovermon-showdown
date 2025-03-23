@@ -50994,7 +50994,7 @@ bewilderbeast: {
 	},
 	hornititaneetle: {
 		num: -420346,
-		name: "Titaneetle",
+		name: "Hornititaneetle",
 		types: ["Ice", "Bug"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 90, atk: 165, def: 130, spa: 45, spd: 100, spe: 95},
