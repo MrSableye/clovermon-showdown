@@ -81674,17 +81674,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onHit(move, target) {
 			const i = this.random(11);
 			if (i < 3) {
-				this.boost({atk: -1, spa: -1}, target);
+				this.boost({atk: -1, spa: -1});
 			} else if (i < 6) {
-				this.boost({atk: -2, spa: -2}, target);
+				this.boost({atk: -2, spa: -2});
 			} else if (i < 8) {
-				this.boost({atk: -3, spa: -3}, target);
+				this.boost({atk: -3, spa: -3});
 			} else if (i < 9) {
-				this.boost({atk: -4, spa: -4}, target);
+				this.boost({atk: -4, spa: -4});
 			} else if (i < 10) {
-				this.boost({atk: -5, spa: -5}, target);
+				this.boost({atk: -5, spa: -5});
 			} else if (i < 11) {
-				this.boost({atk: -6, spa: -6}, target);
+				this.boost({atk: -6, spa: -6});
 			} 
 		},
 		secondary: null,
