@@ -50954,7 +50954,7 @@ bewilderbeast: {
 	name: "Bewilderbeast",
 	types: ["Fairy", "???"],
 	genderRatio: {M: 0.5, F: 0.5},
-	baseStats: {hp: 130, atk: 105, def: 80, spa: 75, spd: 80, spe: 35},
+	baseStats: {hp: 130, atk: 105, def: 80, spa: 85, spd: 80, spe: 35},
 	abilities: {0: "Wonder Skin", 1: "Inner Focus", H: "Strong Jaw", S: "Pixilate"},
 	heightm: 1.82,
 	weightkg: 253.7,
@@ -50974,7 +50974,7 @@ bewilderbeast: {
 		weightkg: 0.5,
 		color: "Green",
 		eggGroups: ["Grass", "Dragon"],
-		creator: "DoomWillBefallAll",
+		creator: "DG",
 	},
 	smellsumo: {
 		num: -42118,
@@ -50990,7 +50990,7 @@ bewilderbeast: {
 		weightkg: 90.5,
 		color: "Red",
 		eggGroups: ["Human-Like"],
-		creator: "DoomWillBefallAll",
+		creator: "DG",
 	},
 	hornititaneetle: {
 		num: -420346,
