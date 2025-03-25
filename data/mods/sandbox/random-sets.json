@@ -413,7 +413,7 @@
         ],
         "items": [
           "heavydutyboots",
-          "rockeyhelmet"
+          "rockyhelmet"
         ],
         "moves":[
           "turnabout",
@@ -479,7 +479,7 @@
         "items": [
           "heavydutyboots", 
           "leftovers",
-          "rockeyhelmet"
+          "rockyhelmet"
         ],
         "moves":[
           "knockoff",
@@ -558,7 +558,7 @@
         "items": [
           "heavydutyboots", 
           "leftovers",
-          "rockeyhelmet"
+          "rockyhelmet"
         ],
         "moves":[
           "mortalspin",
@@ -855,7 +855,7 @@
         "items": [
           "heavydutyboots", 
           "leftovers",
-          "rockeyhelmet",
+          "rockyhelmet",
           "lifeorb"
         ],
         "moves":[
@@ -1161,7 +1161,7 @@
         ],
         "items": [
           "heavydutyboots",
-          "rockeyhelmet"
+          "rockyhelmet"
         ],
         "moves":[
           "defog",
@@ -1383,7 +1383,7 @@
         "items": [
           "heavydutyboots", 
           "leftovers",
-          "rockeyhelmet"
+          "rockyhelmet"
         ],
         "moves":[
           "futuresight",
@@ -1457,7 +1457,7 @@
         "items": [
           "heavydutyboots", 
           "leftovers",
-          "rockeyhelmet",
+          "rockyhelmet",
           "lifeorb"
         ],
         "moves":[
@@ -1469,7 +1469,7 @@
           "spiritshackle",
           "sacredsword"
         ],
-        "level": 84       
+        "level": 78       
       }
     ]
   },
@@ -1564,7 +1564,7 @@
         "items": [
           "heavydutyboots", 
           "leftovers",
-          "rockeyhelmet",
+          "rockyhelmet",
           "lifeorb"
         ],
         "moves":[
@@ -1589,7 +1589,7 @@
         "items": [
           "heavydutyboots", 
           "leftovers",
-          "rockeyhelmet",
+          "rockyhelmet",
           "lifeorb"
         ],
         "moves":[
