@@ -51170,6 +51170,18 @@ bewilderbeast: {
 		color: "Orange",
 		eggGroups: ["Bug", "Monster"],
 	},
+	drizzard: {
+		num: -6486,
+		name: "Drizzard",
+		types: ["Water", "Dragon"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 100, atk: 115, def: 80, spa: 100, spd: 95, spe: 90},
+		abilities: {0: "Shower Power", 1: "Intimidate", H: "Mold Breaker", S: "Drizzle"},
+		heightm: 1.92,
+		weightkg: 201.6,
+		color: "Blue",
+		eggGroups: ["Dragon", "Water 1"],
+		},
 	jewipedeo: {
 		num: 6969248,
 		name: "Jewipede-O",
