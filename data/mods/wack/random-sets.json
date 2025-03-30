@@ -1215,6 +1215,32 @@
       }
     ]
   },
+  "regiwood": {
+    "nicknames": [
+      "Regiwood"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "chlorophyll"
+        ],
+        "items": [
+          "arboreumcapsule"
+        ],
+        "moves": [
+          "barkskin",
+          "treesmash",
+          "superpower",
+          "explosion",
+          "curse"
+        ],
+        "lockedMoves": [
+          "rootcrush"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "Kickkecleon": {
     "nicknames": [
       "Kickkecleon"
@@ -4826,6 +4852,87 @@
       }
     ]
   },
+  "sdubwool": {
+    "nicknames": [
+      "Steel Dubs"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "bulletproof"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "lumber",
+          "barkskin",
+          "leechseed",
+          "synthesis",
+          "fossilize"
+        ],
+        "lockedMoves": [
+          "woodstalk",
+          "woodhammer"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "sequoisola": {
+    "nicknames": [
+      "Sequoisola"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "naturalcure"
+        ],
+        "items": [
+          "arboreumcapsule"
+        ],
+        "moves": [
+          "lumber",
+          "barkskin",
+          "leechseed",
+          "synthesis",
+          "fossilize"
+        ],
+        "lockedMoves": [
+          "woodstalk",
+          "woodhammer"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  
+  "woodman": {
+    "nicknames": [
+      "Woodman"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sheerforce"
+        ],
+        "items": [
+          "chaosdust"
+        ],
+        "moves": [
+          "cbt",
+          "celebrate",
+          "sawdust",
+          "explosion",
+          "insanity"
+        ],
+        "lockedMoves": [
+          "rootcrush"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "coraut": {
     "nicknames": [
       "Coraut"
@@ -5302,10 +5409,7 @@
           "flashfire"
         ],
         "items": [
-          "angelpowder",
-          "heavydutyboots",
-          "focussash",
-          "lifeorb"
+          "chaosdust"
         ],
         "moves": [     
           "invocation",    
@@ -6523,6 +6627,31 @@
       }
     ]
   },
+  "frigo": {
+    "nicknames": [
+      "Frigo"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "snowcloak"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "cooldown"
+        ],
+        "lockedMoves": [
+          "frigofear",
+          "icebeam",
+          "psychic"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "adragonite": {
     "nicknames": [
       "Sigma Beta"
@@ -6764,6 +6893,111 @@
           "galeofdarkness"
         ],
         "level": 78
+      }
+    ]
+  },
+  "sucklaxis": {
+    "nicknames": [
+      "Sucklaxis"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "infected"
+        ],
+        "items": [
+          "leftovers",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "honeydoom",
+          "protect",
+          "dragontail",
+          "sludgebomb"
+        ],
+        "lockedMoves": [
+          "nutrientdrain"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "rpmochi": {
+    "nicknames": [
+      "Mochi"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "gluttony"
+        ],
+        "items": [
+          "leftovers",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "poundcake",
+          "woodhammer",
+          "barkskin",
+          "seasoning"
+        ],
+        "lockedMoves": [
+          "mochihammer"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "shrowser": {
+    "nicknames": [
+      "Shrowser"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "moldbreaker"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "earthpower",
+          "nastyplot",
+          "energyball",
+          "knockoff",
+          "painsplit"
+        ],
+        "lockedMoves": [
+          "flamethrower",
+          "ectoblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "rbsnorlax": {
+    "nicknames": [
+      "Wokelax"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "regenerator"
+        ],
+        "items": [
+          "supressionstone"
+        ],
+        "moves": [
+          "highhorsepower",
+          "heatcrash",
+          "delivery"
+        ],
+        "lockedMoves": [
+          "pulverizingpancake",
+          "bodyslam"
+        ],
+        "level": 84
       }
     ]
   },
@@ -7857,8 +8091,9 @@
           "cbt",
           "heartbreak"
         ],
+        
         "lockedMoves": [
-          "matingseason", 
+          "pursuit", 
           "loveburst"
         ],
         "level": 88       
@@ -7880,14 +8115,14 @@
           "playrough"
         ],
         "lockedMoves": [
-          "matingseason", 
+          "encore", 
           "cbt"
         ],
         "level": 88       
       }
     ]
   },
-  "Phallusaur": {   
+  "phallusaur": {   
     "sets": [
       {
         "abilities": [   
@@ -8661,7 +8896,7 @@
       }
     ]
   },
-  "calcusus": {
+  "calculusus": {
     "nicknames": [
       "Calcusus"
     ],
@@ -8681,10 +8916,11 @@
         "lockedMoves": [
           "calculator"
         ],
-        "level": 84
+        "level": 88
       }
     ]
   },
+  
   "nmuk": {
     "nicknames": [
       "Nuked Muk"
@@ -9993,6 +10229,35 @@
       }
     ]
   },
+  "sdoomsday": {
+    "nicknames": [
+      "Supa Doomsday"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sturdy"
+        ],
+        "items": [
+          "murkycapsule",
+          "heavydutyboots",
+          "ghostgem"
+
+        ],
+        "moves": [
+          "doom",
+          "murmur",
+          "painsplit",
+          "curse"
+        ],
+        "lockedMoves": [
+          "ectoblast",
+          "periltomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "standoearthwindandfire": {
     "nicknames": [
       "Stando-EarthWindandFire"
@@ -10962,6 +11227,36 @@
       }
     ]
   },
+  "shubniggurother": {
+    "nicknames": [
+      "Shubniggurother"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "skilllink"
+        ],
+        "items": [
+          "leftovers",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "barkskin",
+          "felltree",
+          "bulletseed",
+          "thousandyoung",
+          "painsplit",
+          "milkdrain",
+          "woodpike"
+        ],
+        "lockedMoves": [
+          "rootdrain",
+          "purefear"
+        ],
+        "level": 80
+      }
+    ]
+  },
   "vileplume": {   
     "sets": [
       {
@@ -11155,6 +11450,58 @@
         ],
         "lockedMoves": [
           "flareblitz"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "zenature": {
+    "nicknames": [
+      "Zen&theArtofGardening"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "naturalcure"
+        ],
+        "items": [
+          "leftovers",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "guidinglight",
+          "brightidea",
+          "greenthumb"
+        ],
+        "lockedMoves": [
+          "dazzlingpetals",
+          "brilliantray"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "zenchamp": {
+    "nicknames": [
+      "The Zen Master"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "guts"
+        ],
+        "items": [
+          "flameorb"
+        ],
+        "moves": [
+          "knockoff",
+          "bulletpunch",
+          "powerrarena",
+          "bodyboost"
+        ],
+        "lockedMoves": [
+          "closecombat",
+          "zenheadbutt"
         ],
         "level": 84
       }

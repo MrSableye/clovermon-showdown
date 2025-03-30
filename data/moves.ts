@@ -52742,6 +52742,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Fairy') return 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -57003,7 +57006,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -61086,7 +61092,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Grass",
 		isNonstandard: "Future",
@@ -61179,6 +61188,46 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1},
+		volatileStatus: 'greenthumb',
+		condition: {
+			onStart(pokemon, source, effect) {
+				if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
+					this.add('-start', pokemon, 'Green Thumb', this.activeMove!.name, '[from] ability: ' + effect.name);
+				} else {
+					this.add('-start', pokemon, 'Green Thumb');
+				}
+			},
+			onRestart(pokemon, source, effect) {
+				if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
+					this.add('-start', pokemon, 'Green Thumb', this.activeMove!.name, '[from] ability: ' + effect.name);
+				} else {
+					this.add('-start', pokemon, 'Green Thumb');
+				}
+			},
+			onBasePowerPriority: 9,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Grass') {
+					this.debug('charge boost');
+					return this.chainModify(2);
+				}
+			},
+			onMoveAborted(pokemon, target, move) {
+				if (move.type === 'Grass' && move.id !== 'greenthumb') {
+					pokemon.removeVolatile('greenthumb');
+				}
+			},
+			onAfterMove(pokemon, target, move) {
+				if (move.type === 'Grass' && move.id !== 'greenthumb') {
+					pokemon.removeVolatile('greenthumb');
+				}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Green Thumb', '[silent]');
+			},
+		},
+		boosts: {
+			accuracy: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Grass",
@@ -75539,7 +75588,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
-			if (type === 'Wood') return 1;
+			if (type === 'Food') return 1;
 		},
 		secondary: {
 			chance: 10,
@@ -79322,6 +79371,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Snowman",
 		pp: 5,
 		priority: -1,
+		volatileStatus: 'substitute',
+		onTry() {
+			return this.field.isWeather(['hail', 'snow']);
+		},
+		onTryHit(source) {
+			if (!this.canSwitch(source.side) || source.volatiles['commanded']) {
+				this.add('-fail', source);
+				return this.NOT_FAIL;
+			}
+			if (source.volatiles['substitute']) {
+				this.add('-fail', source, 'move: Snowman');
+				return this.NOT_FAIL;
+			}
+			
+		},		
 		flags: {snatch: 1},
 		secondary: null,
 		target: "self",
@@ -80444,7 +80508,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bullet: 1},
 		onModifyMove(move, attacker) {
-			if (this.field.isTerrain('icyterrain')) {
+			if (this.field.isWeather('hail') || this.field.isTerrain('icyterrain')) {
 				move.multihit = 5;
 			}
 		},
@@ -80587,7 +80651,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		volatileStatus: 'substitute',
 		onTryHit(source) {
-			if (!this.canSwitch(source.side)) {
+			if (!this.canSwitch(source.side) || source.volatiles['commanded']) {
 				this.add('-fail', source);
 				return this.NOT_FAIL;
 			}
@@ -80608,7 +80672,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				source.skipBeforeSwitchOutEventFlag = true;
 			},
 		},
-		selfSwitch: 'copyvolatile',
+		selfSwitch: 'shedtail',
 		target: "self",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -82129,7 +82193,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 4,
 			onFieldEnd() {
-				this.add('-fieldend', 'move: Arboreum');
+				this.add('-fieldend', 'move: Factory');
 			},
 		},
 		target: "scripted",
@@ -83248,6 +83312,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {mirror: 1},
+		pseudoWeather: 'spiritstorm',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('etherealrock')) {
+					return 10;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Spiritstorm', '[of] ' + source);
+			},
+
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (!pokemon.hasType('Ghost')) {
+					this.damage(pokemon.baseMaxhp / 64);
+				}
+			},
+
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Spiritstorm');
+			},
+		},
 		secondary: null,
 		target: "all",
 		type: "Ghost",
