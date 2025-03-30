@@ -15938,6 +15938,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
+		onResidualOrder: 27,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (this.field.getPseudoWeather('spiritstorm')) {
+				this.heal(pokemon.baseMaxhp / 13);
+			} 
+		},
 		isBreakable: true,
 		name: "Soul Eater",
 		rating: 3,

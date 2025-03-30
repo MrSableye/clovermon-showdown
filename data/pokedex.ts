@@ -51158,6 +51158,18 @@ bewilderbeast: {
 		color: "Pink",
 		eggGroups: ["Fairy", "Dragon"],
 	},
+	arachnite: {
+		num: -6487,
+		name: "Arachnite",
+		types: ["Fire", "Bug"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 100, atk: 100, def: 95, spa: 115, spd: 80, spe: 90},
+		abilities: {0: "Solar Power", 1: "Swarm", H: "Turboblaze", S: "Drought"},
+		heightm: 1.92,
+		weightkg: 201.6,
+		color: "Orange",
+		eggGroups: ["Bug", "Monster"],
+	},
 	jewipedeo: {
 		num: 6969248,
 		name: "Jewipede-O",

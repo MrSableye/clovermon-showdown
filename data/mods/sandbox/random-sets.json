@@ -25,6 +25,47 @@
       }
     ]
   },
+  "achaethena": {   
+    "sets": [
+      {
+        "abilities": [   
+          "opportunist"
+        ],
+        "items": [
+          "leftovers",
+          "heavydutyboots"
+        ],
+        "moves":[
+          "pixiepummel",
+          "spikes"
+        ],
+        "lockedMoves": [   
+          "closecombat",
+          "falsesurrender"
+        ],
+        "level": 80      
+      },
+      {
+        "abilities": [   
+          "opportunist"
+        ],
+        "items": [
+          "leftovers",
+          "heavydutyboots"
+        ],
+        "moves":[
+          "calmmind",
+          "spikes",
+          "mysticalfire"
+        ],
+        "lockedMoves": [   
+          "aurasphere",
+          "nightdaze"
+        ],
+        "level": 80      
+      }
+    ]
+  },
   "alcremite": {   
     "sets": [
       {
@@ -169,6 +210,31 @@
       }
     ]
   },
+  "blobboskracko": {   
+    "sets": [
+      {
+        "abilities": [   
+          "hydrophile"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "pixieplate",
+          "leftovers"
+        ],
+        "moves":[
+          "bleakwindstorm",
+          "voltaiccyclone",
+          "voltswitch",
+          "spikes",
+          "recover"
+        ],
+        "lockedMoves": [   
+          "downpour"
+        ],
+        "level": 84       
+      }
+    ]
+  },
   "chaneddit": {   
     "sets": [
       {
@@ -192,6 +258,52 @@
           "zenheadbutt"
         ],
         "level": 84       
+      }
+    ]
+  },
+ "cocken": {
+    "nicknames": [
+      "Cocken",
+      "Cocken",
+      "Cocken",
+      "Nice Cock!"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "galewings"
+        ],
+        "items": [
+          "choiceband"
+        ],
+        "moves": [
+          "knockoff",
+          "bravebird",
+          "uturn",
+          "headsmash"
+        ],
+        "lockedMoves": [
+          "ancientpower",
+          "headcharge",
+          "earthquake"
+        ],
+        "level": 84
+        },
+        {
+        "abilities": [
+          "emergencyexit",
+          "bigpecks"
+        ],
+        "items": [
+          "focussash"
+        ],
+        "lockedMoves": [
+          "stealthrock",
+          "tailwind",
+          "uturn",
+          "finalgambit"
+        ],
+        "level": 82
       }
     ]
   },
@@ -268,7 +380,35 @@
           "thousandwaves",
           "overbite"
         ],
-        "level": 80       
+        "level": 76       
+      }
+    ]
+  },
+  "dussrade": {   
+    "sets": [
+      {
+        "abilities": [   
+          "blademaster"
+        ],
+        "items": [
+          "katana"
+        ],
+        "moves":[
+          "beahemothblade",
+          "baddybad",
+          "faeblade",
+          "moonlight",
+          "owtheedge",
+          "secretsword",
+          "psychocut",
+          "stratoblade",
+          "swordsdance",
+          "trigger"
+        ],
+        "lockedMoves": [   
+          "beamblade"
+        ],
+        "level": 84       
       }
     ]
   },
@@ -387,7 +527,7 @@
           "items": [
             "heavydutyboots", 
             "leftovers",
-            "sitrustberry",
+            "sitrusberry",
             "icegem"
           ],
           "moves":[
@@ -701,7 +841,7 @@
           "stringshot",
           "poisonsting"
         ],
-        "level": 80       
+        "level": 78       
       }
     ]
   },
@@ -712,7 +852,7 @@
           "levitate"
         ],
         "items": [
-          "blacksludge",
+          "leftovers",
           "heavydutyboots"
         ],
         "moves":[
@@ -752,6 +892,30 @@
       }
     ]
   },
+ "krackodemon": {   
+    "sets": [
+      {
+        "abilities": [   
+          "levitate"
+        ],
+        "items": [
+          "leftovers", 
+          "rockyhelmet"
+        ],
+        "moves":[
+          "blackbomb",
+          "painsplit",
+          "toxic",
+          "roar",
+          "aurasphere"
+        ],
+        "lockedMoves": [   
+          "voltaiccyclone"
+        ],
+        "level": 84       
+      }
+    ]
+  },
   "krackowalker": {   
     "sets": [
       {
@@ -772,7 +936,7 @@
           "darkpulse",
           "thunderbolt"
         ],
-        "level": 84       
+        "level": 80       
       },
       {
         "abilities": [   
@@ -792,7 +956,7 @@
           "voltackle",
           "crunch"
         ],
-        "level": 84       
+        "level": 80       
       },
       {
         "abilities": [   
@@ -813,7 +977,57 @@
         "lockedMoves": [   
           "voltaiccyclone"
         ],
-        "level": 84       
+        "level": 80       
+      }
+    ]
+  },
+  "krockizon": {   
+    "sets": [
+      {
+        "abilities": [   
+          "thickfat"
+        ],
+        "items": [
+          "krokizonite"
+        ],
+        "moves":[
+          "blizzardd",
+          "slackoff",
+          "stealthrock",
+          "heatcrash",
+          "stoneedge"
+        ],
+        "lockedMoves": [   
+          "drillrun",
+          "woodhammer"
+        ],
+        "level": 82       
+      }
+    ]
+  },
+  "liquignave": {   
+    "sets": [
+      {
+        "abilities": [   
+          "drizzle"
+        ],
+        "items": [
+          "lifeorb", 
+          "heavydutyboots",
+          "leftovers"
+        ],
+        "moves":[
+          "flipturn",
+          "anchorshot",
+          "earthquake",
+          "dragontail",
+          "icefang",
+          "toxic"
+        ],
+        "lockedMoves": [   
+          "wavecrash"
+        ],
+        "level": 82       
       }
     ]
   },
@@ -885,7 +1099,7 @@
           "items": [
             "heavydutyboots", 
             "leftovers",
-            "sitrustberry",
+            "sitrusberry",
             "lifeorb"
           ],
           "moves":[
@@ -936,7 +1150,7 @@
           "filter"
         ],
         "items": [
-          "sitrustberry", 
+          "sitrusberry", 
           "leftovers",
           "chopleberry",
           "occaberry",
@@ -978,7 +1192,7 @@
           "filter"
         ],
         "items": [
-          "sitrustberry", 
+          "sitrusberry", 
           "leftovers",
           "chopleberry",
           "occaberry",
@@ -1095,7 +1309,7 @@
         ],
         "lockedMoves": [   
           "ironhead",
-          "rocklside"
+          "rockslide"
         ],
         "level": 84       
       }
@@ -1183,7 +1397,7 @@
           "drought"
         ],
         "items": [
-          "sitrustberry", 
+          "sitrusberry", 
           "leftovers",
           "shucaberry",
           "lifeorb"
@@ -1255,7 +1469,7 @@
           "moldbreaker"
         ],
         "items": [
-          "sitrustberry", 
+          "sitrusberry", 
           "leftovers",
           "cobaberry",
           "lifeorb",
@@ -1349,6 +1563,33 @@
       }
     ]
   },
+  "realwalker": {
+    "nicknames": [
+      "Real"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "aintnothingonnabreakmystride"
+        ],
+        "items": [
+          "leftovers",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "bodyslam",
+          "boil",
+          "stealthrock",
+          "flintfang",
+          "bodypress"
+        ],
+        "lockedMoves": [
+          "voltaiccyclone"
+        ],
+        "level": 70
+      }
+    ]
+  },
   "sableedle": {   
     "sets": [
       {
@@ -1370,6 +1611,33 @@
           "hex"
         ],
         "level": 80       
+      }
+    ]
+  },
+  "shroomko": {
+    "nicknames": [
+      "Shroomko"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "Corrosion"
+        ],
+        "items": [
+          "leftovers",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "voltaiccyclone",
+          "painsplit",
+          "toxic",
+          "voltswitch",
+          "penetrate"
+        ],
+        "lockedMoves": [
+          "blackbomb"
+        ],
+        "level": 84
       }
     ]
   },
@@ -1466,7 +1734,7 @@
           "spiritshackle",
           "sacredsword"
         ],
-        "level": 78       
+        "level": 76       
       }
     ]
   },
@@ -1504,6 +1772,28 @@
           "itsover"
         ],
         "level": 84       
+      }
+    ]
+  },
+  "stunfisk": {   
+    "sets": [
+      {
+        "abilities": [   
+          "waterabsorb"
+        ],
+        "items": [
+          "stunfiskite"
+        ],
+        "moves":[
+          "scald",
+          "shoreup",
+          "stealthrock"
+        ],
+        "lockedMoves": [   
+          "earthshatter",
+          "thunderbolt"
+        ],
+        "level": 82       
       }
     ]
   },
