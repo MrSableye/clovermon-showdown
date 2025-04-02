@@ -1094,14 +1094,17 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	boneclub: {
 		inherit: true,
 		isNonstandard: null,
+		type: "Bone",
 		flags: {protect: 1, mirror: 1, bone: 1},
 	},
 	bonemerang: {
 		inherit: true,
+		type: "Bone",
 		flags: {protect: 1, mirror: 1, bone: 1},
 	},
 	bonerush: {
 		inherit: true,
+		type: "Bone",
 		flags: {protect: 1, mirror: 1, bone: 1},
 	},
 	bugbite: {
@@ -3480,6 +3483,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		goudagun: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		guerillapoop: {
 		inherit: true,
 		isNonstandard: null,
@@ -4353,6 +4360,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		sanityleech: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		sappingspell: {
 		inherit: true,
 		isNonstandard: null,

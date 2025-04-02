@@ -2445,6 +2445,8 @@ inkshit: ["8L1"],
 	},
 	vandash: {
 		learnset: {
+			goudagun: ["8L1"],
+			fruitpunch: ["8L1"],
 			seasoning: ["8L1"],
 shout: ["8L1"],
 glassbreaker: ["8L1"],
@@ -7044,6 +7046,10 @@ icegatling: ["8L1"],
 	praestish: {
 		learnset: {
 			thalassowave: ["8L1"],
+			thalasssurge: ["8L1"],
+			sanityleech: ["8L1"],
+			shadowbreak: ["8L1"],
+			jumpscare: ["8L1"],
 shadowwave: ["8L1"],
 invokedread: ["8L1"],
 			agility: ["8L39"],
