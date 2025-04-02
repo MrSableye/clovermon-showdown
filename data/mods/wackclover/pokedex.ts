@@ -39,7 +39,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	corooster: {
 		inherit: true,
-		types: ["Sound", "Normal"],
+		types: ["Food", "Normal"],
 		abilities: {
 			0: "Gale Wings",
 			1: "Rough Skin",
@@ -339,7 +339,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	spaghefant: {
 		inherit: true,
-		types: ["Heart", "Rubber"],
+		types: ["Food", "Ground"],
 	},
 	crystaking: {
 		inherit: true,
