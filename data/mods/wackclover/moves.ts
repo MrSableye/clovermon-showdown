@@ -5024,7 +5024,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		viruspropagate: {
+		viruspropogate: {
 		inherit: true,
 		isNonstandard: null,
 		},
