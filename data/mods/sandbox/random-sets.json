@@ -574,12 +574,12 @@
           "madeofglass"
         ],
         "items": [
-          "steelgem"
+          "nullgem"
         ],
         "lockedMoves": [   
           "despiteallmyrage"
         ],
-        "level": 84       
+        "level": 100       
       }
     ]
   },
@@ -1696,7 +1696,7 @@
     "sets": [
       {
         "abilities": [   
-          "protosynethesis"
+          "protosynthesis"
         ],
         "items": [
           "boosterenergy"

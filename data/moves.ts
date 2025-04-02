@@ -32917,6 +32917,99 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		contestType: "Cute",
 	},
+	layerup: {
+		num: 420667579,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Layer Up",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, bite: 1, heal: 1},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('furcoat');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Fur Coat', '[from] move: Layer Up');
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		heal: [1, 2],
+		secondary: null,
+		target: "self",
+		type: "Fabric",
+		isNonstandard: "Future",
+	},
+	onionpeel: {
+		num: 573,
+		accuracy: 42069100,
+		basePower: 70,
+		category: "Physical",
+		name: "Onion Peel",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Food') return 1;
+		},
+		target: "normal",
+		type: "Ogre",
+		contestType: "Beautiful",
+	},
+	smashmouth: {
+		num: 42069675,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Smash Mouth",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				target.addVolatile('throatchop');
+			},
+		},
+		target: "normal",
+		type: "Ogre",
+		contestType: "Clever",
+	},
+	ogredrive: {
+		num: 4206938,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Double-Edge",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [33, 100],
+		secondary: null,
+		target: "normal",
+		type: "Ogre",
+		contestType: "Tough",
+	},
+	ogreload: {
+		num: 42069370,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Close Combat",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ogre",
+		contestType: "Tough",
+	},
 	combatorders: {
 		isNonstandard: "Future",
 		accuracy: true,
@@ -36269,6 +36362,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, attacker) {
+			if (this.field.getPseudoWeather('graveyard')) {
+				move.multihit = 5;
+			}
+		},
 		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
@@ -36494,10 +36592,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
-		boosts: {
-			atk: 2,
-			def: 1,
-			spe: -1,
+		onHit(target) {
+			if (this.field.getPseudoWeather('graveyard')) {
+				this.boost({
+					atk: 2,
+					def: 2,
+					spe: -2,
+				});
+			} else {
+				this.boost({
+					atk: 2,
+					def: 1,
+					spe: -1,
+				});
+			}
 		},
 		secondary: null,
 		target: "self",
@@ -43607,7 +43715,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Time",
 		isNonstandard: "Future",
@@ -52878,7 +52991,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -58479,7 +58599,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		onHit(target, source) {
+			const oldAbility = target.setAbility('mummy');
+			if (oldAbility) {
+				this.add('-ability', source, 'Mummy', '[from] move: Embalm');
+				return;
+			}
+			return false;
+		},
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				if (this.field.getPseudoWeather('graveyard')) {
+				if (target.getTypes().join() === 'Zombie' || !target.setType('Zombie')) {
+					// Soak should animate even when it fails.
+					// Returning false would suppress the animation.
+					this.add('-fail', target);
+					return null;
+				}
+				this.add('-start', target, 'typechange', 'Embalm');}
+				else{
+
+				}
+			},
+		},
 		target: "normal",
 		type: "Zombie",
 		isNonstandard: "Future",
@@ -59137,6 +59280,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		onHit(target) {
+			this.add('-message', 'IT IS A ONE HIT KO!.....just kidding!');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -61962,7 +62108,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 45,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -63406,8 +63557,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {snatch: 1},
+		pseudoWeather: 'greehouse',
+		condition: {
+			duration: 6,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Greenhouse Gas', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Fire' || move.type === 'Poison') {
+					this.debug('greenhouse weaken');
+					this.add('-message', 'Greenhouse Gases boosted the power!');
+					return this.chainModify([1.5]);
+				}
+				if (move.type === 'Water' || move.type === 'Ice') {
+					this.debug('greenhouse weaken');
+					this.add('-message', 'Greenhouse Gases weakened the power!');
+					return this.chainModify([0.5]);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Greenhouse Gas');
+			},
+		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Poison",
 		isNonstandard: "Future",
 	},
@@ -70403,8 +70579,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Avasculate",
 		pp: 5,
 		priority: 0,
+		
 		damageCallback(pokemon, target) {
-			return this.clampIntRange(Math.floor(target.getUndynamaxedHP() / 3), 1);
+			if (this.field.getPseudoWeather('graveyard')) {
+				return this.clampIntRange(target.getUndynamaxedHP() / 1, 2);
+			} else {
+				return this.clampIntRange(target.getUndynamaxedHP() / 1, 3);
+			}
 		},
 		status: 'par',
 		flags: {protect: 1, mirror: 1},
@@ -82061,6 +82242,32 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {mirror: 1},
+		pseudoWeather: 'graveyard',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('rottedrock')) {
+					return 10;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Graveyard', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.flags.bone || (move.type === 'Zombie')) {
+					this.debug('graveyard increase');
+					return this.chainModify([1.5]);
+				}
+			},
+			
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Graveyard');
+			},
+		},
 		secondary: null,
 		target: "all",
 		type: "Zombie",
