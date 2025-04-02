@@ -4492,10 +4492,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		shortciruit: {
-		inherit: true,
-		isNonstandard: null,
-		},
 		shout: {
 		inherit: true,
 		isNonstandard: null,
