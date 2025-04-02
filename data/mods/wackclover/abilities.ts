@@ -848,6 +848,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	presage: {
 		inherit: true,
+		isNonstandard: "Future",
 		onBeforeMove(source, target, move) {
 			if (move.category === 'Status') return;
 			const sunMoves = ['solarbeam', 'solarblade'];
