@@ -24464,6 +24464,7 @@ generalwinter: ["8L1"],
 	},
 	warudio: {
 		learnset: {
+			zawarudo: ["8L1"],
 			batbite: ["8L1"],
 vampirebite: ["8L1"],
 undeadagony: ["8L1"],
