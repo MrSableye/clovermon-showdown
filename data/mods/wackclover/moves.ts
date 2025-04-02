@@ -2899,7 +2899,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		cyberstorm: {
+		datastorm: {
 		inherit: true,
 		isNonstandard: null,
 		},
