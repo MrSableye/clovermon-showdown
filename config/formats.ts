@@ -1139,6 +1139,23 @@ export const Formats: FormatList = [
 		rated: false,
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
+
+		{
+			name: '[Gen 8 Wack Clover Only] OU',
+			mod: 'wackclover',
+			ruleset: [
+				'Terastal Clause',
+				'Standard',
+				'! Nickname Clause',
+				'Dynamax Clause',
+				'Sketch Post-Gen 7 Moves',
+			],
+			banlist: [
+				'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+				'Condoom + Unaware',
+			],
+		
+	},
 	///////////////////////////////////////////////////////////////////
 	// Wack OMs
 	///////////////////////////////////////////////////////////////////
