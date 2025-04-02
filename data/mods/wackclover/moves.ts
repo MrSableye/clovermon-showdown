@@ -4804,6 +4804,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		caldera: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		technorush: {
 		inherit: true,
 		isNonstandard: null,
