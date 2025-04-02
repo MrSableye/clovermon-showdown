@@ -2030,6 +2030,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	fruitpunch: {
 		inherit: true,
+		type: "Food",
 		isNonstandard: null,
 	},
 	dragonfist: {
@@ -2230,7 +2231,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	stratoblade: {
 		inherit: true,
-		type: "Time",
+		type: "Wind",
 	},
 	supersnore: {
 		inherit: true,
