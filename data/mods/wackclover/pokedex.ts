@@ -39,7 +39,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	corooster: {
 		inherit: true,
-		types: ["Sound", "Normal"],
+		types: ["Food", "Normal"],
 		abilities: {
 			0: "Gale Wings",
 			1: "Rough Skin",
@@ -109,6 +109,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Electric", "Sound"],
 	},
+	mozzamazel: {
+		inherit: true,
+		types: ["Food", "Fire"],
+	},
 	wastenaut: {
 		inherit: true,
 		abilities: {
@@ -163,7 +167,13 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	dowster: {
 		inherit: true,
-		types: ["Shadow", "Psychic"],
+		types: ["Shadow", "Ghost"],
+		abilities: {
+			0: "Shadow Tag",
+			1: "Cursed Body",
+			H: "Bad Dreams",
+			S: "Dreamcatcher",
+		},
 	},
 	cheerific: {
 		inherit: true,
@@ -339,7 +349,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	spaghefant: {
 		inherit: true,
-		types: ["Heart", "Rubber"],
+		types: ["Food", "Ground"],
 	},
 	crystaking: {
 		inherit: true,
