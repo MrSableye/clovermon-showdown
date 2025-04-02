@@ -2919,10 +2919,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		datastorm: {
-		inherit: true,
-		isNonstandard: null,
-		},
 		dawnchorus: {
 		inherit: true,
 		isNonstandard: null,
@@ -3647,7 +3643,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		invokediety: {
+		invokedeity: {
 		inherit: true,
 		isNonstandard: null,
 		},
