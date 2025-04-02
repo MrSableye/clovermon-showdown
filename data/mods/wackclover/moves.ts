@@ -5124,7 +5124,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		zombiehoard: {
+		zombiehorde: {
 		inherit: true,
 		isNonstandard: null,
 		},
