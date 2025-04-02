@@ -2867,10 +2867,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		crystallize: {
-		inherit: true,
-		isNonstandard: null,
-		},
 		crystalpower: {
 		inherit: true,
 		isNonstandard: null,
