@@ -278,7 +278,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	huntabre: {
 		inherit: true,
-		types: ["Dark", "Wind"],
+
 		abilities: {
 			0: "Super Luck",
 			1: "Strong Jaw",

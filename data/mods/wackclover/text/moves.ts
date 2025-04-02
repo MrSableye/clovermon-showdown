@@ -4,6 +4,10 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		desc: "Has a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio.",
 	},
+	zawarudo: {
+		inherit: true,
+		desc: "10% chance to freeze.",
+	},
 	dragonclaw: {
 		inherit: true,
 		desc: "Has a higher chance for a critical hit.",

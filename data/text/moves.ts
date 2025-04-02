@@ -10002,6 +10002,26 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Meowsa",
 		desc: "Uses Assist after the move hits.",
 	},
+	onionpeel: {
+		name: "Onion Peel",
+		desc: "Super effective against Food.",
+	},
+	ogredrive: {
+		name: "Ogredrive",
+		desc: "Has 33% recoil.",
+	},
+	ogreload: {
+		name: "Ogredrive",
+		desc: "Lowers the user's Defense and Sp. Def by 1.",
+	},
+	smashmouth: {
+		name: "Smash Mouth",
+		desc: "For 2 turns, the target cannot use sound-based moves.",
+	},
+	layerup: {
+		name: "Layer Up",
+		desc: "User makes its ability Furcoat and then recovers half HP.",
+	},
 	seedburst: {
 		name: "Seed Burst",
 		shortDesc: "25% chance to inflict Leech Seed on hit.",
