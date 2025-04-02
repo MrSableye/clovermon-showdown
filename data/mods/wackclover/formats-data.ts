@@ -7296,6 +7296,18 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	acufrontp: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	acufrontm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	acufrontz: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	militant: {
 		inherit: true,
 		tier: "OU",
