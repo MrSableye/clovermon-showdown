@@ -10461,7 +10461,7 @@ midnight: ["8L1"],
 		learnset: {
 			unihorn: ["8L1"],
 hiv: ["8L1"],
-summonfae: ["8L1"],
+summonfey: ["8L1"],
 dildohorn: ["8L1"],
 			aerialace: ["8M"],
 			aeroblast: ["8L64"],

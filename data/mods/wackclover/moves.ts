@@ -4732,7 +4732,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		summonfae: {
+		summonfey: {
 		inherit: true,
 		isNonstandard: null,
 		},
