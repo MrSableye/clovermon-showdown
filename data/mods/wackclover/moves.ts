@@ -3307,6 +3307,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		foodpoison: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		fossilcrash: {
 		inherit: true,
 		isNonstandard: null,

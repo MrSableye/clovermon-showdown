@@ -51646,7 +51646,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",

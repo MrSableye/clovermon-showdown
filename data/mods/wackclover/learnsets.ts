@@ -16865,6 +16865,8 @@ charisma: ["8L1"],
 	spaghefant: {
 		learnset: {
 			spagettiwrap: ["8L1"],
+			matzoball: ["8L1"],
+			searingsauce: ["8l1"],
 lasagnaattack: ["8L1"],
 pastarush: ["8L1"],
 pastalavista: ["8L1"],
@@ -27117,6 +27119,7 @@ heavenshole: ["8L1"],
 	dedwheat: {
 		learnset: {
 			sandwichstack: ["8L1"],
+			foodpoison: ["8L1"],
 wildmushroom: ["8L1"],
 acidrain: ["8L1"],
 			block: ["8T"],

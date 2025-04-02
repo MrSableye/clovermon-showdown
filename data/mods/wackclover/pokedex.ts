@@ -109,6 +109,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Electric", "Sound"],
 	},
+	mozzamazel: {
+		inherit: true,
+		types: ["Food", "Fire"],
+	},
 	wastenaut: {
 		inherit: true,
 		abilities: {
@@ -163,7 +167,13 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	dowster: {
 		inherit: true,
-		types: ["Shadow", "Psychic"],
+		types: ["Shadow", "Ghost"],
+		abilities: {
+			0: "Shadow Tag",
+			1: "Cursed Body",
+			H: "Bad Dreams",
+			S: "Dreamcatcher",
+		},
 	},
 	cheerific: {
 		inherit: true,
