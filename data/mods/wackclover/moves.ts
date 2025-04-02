@@ -4092,7 +4092,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		papermissles: {
+		papermissiles: {
 		inherit: true,
 		isNonstandard: null,
 		},
