@@ -547,7 +547,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	degenerate: {
 		inherit: true,
-		isNonstandard: "Future",
+		isNonstandard: null,
 		shortDesc: "This Pokemon's Normal and Heart-type moves become Dark type and have 1.2x power.",
 		onModifyMovePriority: -1,
 		onModifyMove(move) {
@@ -579,7 +579,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	gradient: {
 		inherit: true,
-		isNonstandard: "Future",
+		isNonstandard: null,
 		onStart(pokemon) {
 			const possibleTargets = pokemon.side.foe.active.filter(foeActive => foeActive && pokemon.isAdjacent(foeActive));
 			let rand = 0;
@@ -651,7 +651,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	puppeteer: {
 		inherit: true,
-		isNonstandard: "Future",
+		isNonstandard: null,
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Bug or Zombie-type attack.",
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
@@ -717,7 +717,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				if (type === 'trapped') return false;
 			},
 			// TODO: Make Curse Ghost-type
-			isNonstandard: "Future",
+			isNonstandard: null,
 		
 	},
 
@@ -851,7 +851,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	presage: {
 		inherit: true,
-		isNonstandard: "Future",
+		isNonstandard: null,
 		onBeforeMove(source, target, move) {
 			if (move.category === 'Status') return;
 			const sunMoves = ['solarbeam', 'solarblade'];

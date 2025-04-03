@@ -5158,7 +5158,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		zawarudo: {
 			inherit: true,
-			isNonstandard: "Future",
+			isNonstandard: null,
 			secondary: {
 				chance: 10,
 				status: 'frz',
