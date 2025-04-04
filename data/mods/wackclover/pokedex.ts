@@ -342,6 +342,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Rock", "Rubber"],
 	},
+	barbarkley: {
+		inherit: true,
+		types: ["Rock", "Rubber"],
+	},
 	
 	ricosuave: {
 		inherit: true,
