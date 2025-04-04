@@ -7046,6 +7046,7 @@ icegatling: ["8L1"],
 	},
 	praestish: {
 		learnset: {
+			coralreef: ["8L1"],
 			thalassowave: ["8L1"],
 			thalasssurge: ["8L1"],
 			sanityleech: ["8L1"],

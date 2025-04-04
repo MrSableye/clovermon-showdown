@@ -568,6 +568,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Fire", "Cyber"],
 	},
+	spookscare: {
+		inherit: true,
+		types: ["Bone", "Ground"],
+	},
 	goryannus: {
 		inherit: true,
 		types: ["Blood", "Bone"],
