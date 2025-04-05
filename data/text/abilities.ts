@@ -2621,6 +2621,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon's self-destructing moves leave it with 1 HP instead; not Healing Wish.",
 		desc: "After using a Self-Destructing move (Self-Destruct, Explosion, Misty Explosion, Critical Mass or Memento), the user is left with 1 HP no matter what.",
 	},
+	phantasmagoric: {
+		name: "Phantasmagoric",
+		shortDesc: "1.5x boost to Ghost-type moves. Immune to Normal and Fighting type moves.",
+		desc: "1.5x boost to Ghost-type moves. Immune to Normal and Fighting type moves.",
+	},
 	transfusion: {
 		name: "Transfusion",
 		shortDesc: "Upon being hit, changes the opponent's type to the primary type of the ability-holder. When the ability-holder switches out, change their types back.",

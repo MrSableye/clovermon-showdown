@@ -7886,8 +7886,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	fruitjuice: {
 		name: "Fruit Juice",
-		desc: "Power is equal to 120 times the user's Stockpile count. Whether or not this move is successful, the user's Defense and Special Defense decrease by as many stages as Stockpile had increased them, and the user's Stockpile count resets to 0. Lowers the target's Sp.Def by two stages.",
-		shortDesc: "Gets stronger with Stockpile, -2 Sp. Def to the target.",
+		desc: "Has a 100% chance to lower the target's Special Defense by 2 stages.",
+		shortDesc: "100% chance to lower the target's Sp. Def by 2.",
 	},
 	phantomfang: {
 		name: "Phantom Fang",

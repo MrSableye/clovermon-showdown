@@ -2541,6 +2541,21 @@ export const ItemsText: {[k: string]: ItemText} = {
 		desc: "Upon switching in, nullifies the opposing Pokemon's ability. Upon being hit while holding the item, the item breaks and the holders ability is nullified for 2 turns. If knocked off, holders ability is not nullified.",
 		shortDesc: "Upon switching in, nullifies the opposing Pokemon's ability. Upon being hit while holding the item, the item breaks and the holders ability is nullified for 2 turns. If knocked off, holders ability is not nullified.",
 	},
+	joyfulmask: {
+		name: "Joyful Mask",
+		desc: "An item to be held by Emojinn. Changes forme to Joyful.",
+		shortDesc: "An item to be held by Emojinn. Changes forme to Joyful.",
+	},
+	ragingmask: {
+		name: "Raging Mask",
+		desc: "An item to be held by Emojinn. Changes forme to Raging.",
+		shortDesc: "An item to be held by Emojinn. Changes forme to Raging.",
+	},
+	sobbingmask: {
+		name: "Sobbing Mask",
+		desc: "An item to be held by Emojinn. Changes forme to Sobbing.",
+		shortDesc: "An item to be held by Emojinn. Changes forme to Sobbing.",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",

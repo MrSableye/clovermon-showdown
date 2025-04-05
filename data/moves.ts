@@ -23464,21 +23464,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	fruitjuice: {
 		num: 42016,
+		basePower: 40,
 		accuracy: 100,
-		basePower: 0,
-		basePowerCallback(pokemon) {
-			if (!pokemon.volatiles['stockpile'] || !pokemon.volatiles['stockpile'].layers) return false;
-			return pokemon.volatiles['stockpile'].layers * 120;
-		},
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Fruit Juice",
-		pp: 10,
+		pp: 20,
 		priority: 0,
-		flags: {protect: 1},
-		onAfterMove(pokemon) {
-			pokemon.removeVolatile('stockpile');
-		},
+		flags: {bullet: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -25387,7 +25380,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	faeblade: {
 		accuracy: 100,
-		basePower: 80,
+		basePower: 85,
 		name: "Faeblade",
 		category: "Physical",
 		overrideDefensiveStat: 'spd',
@@ -25542,7 +25535,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	cherrybomb: {
 		accuracy: 100,
-		basePower: 35,
+		basePower: 40,
 		category: "Physical",
 		name: "Cherry Bomb",
 		pp: 15,
@@ -25796,7 +25789,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	borebite: {
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Physical",
 		name: "Bore Bite",
 		pp: 10,

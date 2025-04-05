@@ -1218,7 +1218,7 @@ export const Formats: FormatList = [
 	// CAP & Cope
 	///////////////////////////////////////////////////////////////////
 	{
-		section: 'CAP & Cope',
+		section: 'Capriccio',
 		column: 2,
 	},
 	{
@@ -1243,7 +1243,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Condoom + Unaware'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Inversion'],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] NFE',
@@ -1256,7 +1256,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard', 'Goblazer'],
+		banlist: ['Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard', 'Goblazer', 'Inversion'],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] LC',

@@ -170,6 +170,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		priority: 3,
 	},
+	inverseroom: {
+		inherit: true,
+		priority: -6,
+	},
 	fishiousrend: {
 		inherit: true,
 		isNonstandard: null,
@@ -263,6 +267,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Fairy",
 		contestType: "Cute",
+	},
+	hammerarm: {
+		inherit: true,
+		accuracy: 100,
+	},
+	icehammer: {
+		inherit: true,
+		accuracy: 100,
 	},
 	icefang: {
 		inherit: true,
@@ -395,7 +407,24 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	mistyexplosion: {
 		inherit: true,
-		isNonstandard: null,
+		basePower: 125,
+		pp: 5,
+		onBasePower(basePower, source) {
+					if (this.field.isTerrain('mistyterrain') && source.isGrounded()) {
+						this.debug('misty terrain boost');
+						return this.chainModify(2);
+					}
+				},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.setTerrain('mistyterrain');
+				},
+			},
+		},
+		desc: "User faints. User on Misty Terrain: 2x power. Sets Misty Terrain after hitting.",
+		shortDesc: "User faints. User on Misty Terrain: 2x power. Sets Misty Terrain.",
 	},
 	mistball: {
 		accuracy: 100,
@@ -608,9 +637,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	steelroller: {
-		inherit: true,
-		isNonstandard: null,
-	},
+			inherit: true,
+			basePower: 75,
+			pp: 5,
+			onModifyMove(move, pokemon) {
+				if (this.field.terrain && pokemon.isGrounded()) {
+					move.basePower *= 2;
+					this.debug('BP doubled in Terrain');
+				}
+			},
+			desc: "Power doubles if the user is grounded and a terrain is active.",
+			shortDesc: "User on terrain: power doubles and removes terrain.",
+		},
 	strangesteam: {
 		inherit: true,
 		isNonstandard: null,
