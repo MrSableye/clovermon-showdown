@@ -5078,6 +5078,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		volcanicterrain: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		volcanopunch: {
 		inherit: true,
 		isNonstandard: null,

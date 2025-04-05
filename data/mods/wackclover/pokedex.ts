@@ -193,7 +193,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	armowite: {
 		inherit: true,
-		types: ["Dark", "Fabric"],
+		types: ["Cosmic", "Fabric"],
 		abilities: {
 			0: "Oblivious",
 			1: "Skeptic",
@@ -493,7 +493,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Poison", "Food"],
 	},
-	marypyro: {
+	maripyro: {
 		inherit: true,
 		types: ["Bug", "Magma"],
 	},
