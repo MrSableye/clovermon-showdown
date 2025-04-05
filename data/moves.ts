@@ -32910,6 +32910,99 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		contestType: "Cute",
 	},
+	layerup: {
+		num: 420667579,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Layer Up",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, bite: 1, heal: 1},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('furcoat');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Fur Coat', '[from] move: Layer Up');
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		heal: [1, 2],
+		secondary: null,
+		target: "self",
+		type: "Fabric",
+		isNonstandard: "Future",
+	},
+	onionpeel: {
+		num: 573,
+		accuracy: 42069100,
+		basePower: 70,
+		category: "Physical",
+		name: "Onion Peel",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Food') return 1;
+		},
+		target: "normal",
+		type: "Ogre",
+		contestType: "Beautiful",
+	},
+	smashmouth: {
+		num: 42069675,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Smash Mouth",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				target.addVolatile('throatchop');
+			},
+		},
+		target: "normal",
+		type: "Ogre",
+		contestType: "Clever",
+	},
+	ogredrive: {
+		num: 4206938,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Ogredrive",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [33, 100],
+		secondary: null,
+		target: "normal",
+		type: "Ogre",
+		contestType: "Tough",
+	},
+	ogreload: {
+		num: 42069370,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Ogreload",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ogre",
+		contestType: "Tough",
+	},
 	combatorders: {
 		isNonstandard: "Future",
 		accuracy: true,
@@ -36262,6 +36355,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, attacker) {
+			if (this.field.getPseudoWeather('graveyard')) {
+				move.multihit = 5;
+			}
+		},
 		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
@@ -36487,10 +36585,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
-		boosts: {
-			atk: 2,
-			def: 1,
-			spe: -1,
+		onHit(target) {
+			if (this.field.getPseudoWeather('graveyard')) {
+				this.boost({
+					atk: 2,
+					def: 2,
+					spe: -2,
+				});
+			} else {
+				this.boost({
+					atk: 2,
+					def: 1,
+					spe: -1,
+				});
+			}
 		},
 		secondary: null,
 		target: "self",
@@ -43600,7 +43708,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Time",
 		isNonstandard: "Future",
@@ -45615,6 +45728,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -51525,7 +51639,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -52735,6 +52852,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Fairy') return 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -52868,7 +52988,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -56996,7 +57123,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -58466,7 +58596,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		onHit(target, source) {
+			const oldAbility = target.setAbility('mummy');
+			if (oldAbility) {
+				this.add('-ability', source, 'Mummy', '[from] move: Embalm');
+				return;
+			}
+			return false;
+		},
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				if (this.field.getPseudoWeather('graveyard')) {
+				if (target.getTypes().join() === 'Zombie' || !target.setType('Zombie')) {
+					// Soak should animate even when it fails.
+					// Returning false would suppress the animation.
+					this.add('-fail', target);
+					return null;
+				}
+				this.add('-start', target, 'typechange', 'Embalm');}
+				else{
+
+				}
+			},
+		},
 		target: "normal",
 		type: "Zombie",
 		isNonstandard: "Future",
@@ -59124,6 +59277,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		onHit(target) {
+			this.add('-message', 'IT IS A ONE HIT KO!.....just kidding!');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -61079,7 +61235,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Grass",
 		isNonstandard: "Future",
@@ -61172,6 +61331,46 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1},
+		volatileStatus: 'greenthumb',
+		condition: {
+			onStart(pokemon, source, effect) {
+				if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
+					this.add('-start', pokemon, 'Green Thumb', this.activeMove!.name, '[from] ability: ' + effect.name);
+				} else {
+					this.add('-start', pokemon, 'Green Thumb');
+				}
+			},
+			onRestart(pokemon, source, effect) {
+				if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
+					this.add('-start', pokemon, 'Green Thumb', this.activeMove!.name, '[from] ability: ' + effect.name);
+				} else {
+					this.add('-start', pokemon, 'Green Thumb');
+				}
+			},
+			onBasePowerPriority: 9,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Grass') {
+					this.debug('charge boost');
+					return this.chainModify(2);
+				}
+			},
+			onMoveAborted(pokemon, target, move) {
+				if (move.type === 'Grass' && move.id !== 'greenthumb') {
+					pokemon.removeVolatile('greenthumb');
+				}
+			},
+			onAfterMove(pokemon, target, move) {
+				if (move.type === 'Grass' && move.id !== 'greenthumb') {
+					pokemon.removeVolatile('greenthumb');
+				}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Green Thumb', '[silent]');
+			},
+		},
+		boosts: {
+			accuracy: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Grass",
@@ -61906,7 +62105,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 45,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -63350,8 +63554,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {snatch: 1},
+		pseudoWeather: 'greehouse',
+		condition: {
+			duration: 6,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Greenhouse Gas', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Fire' || move.type === 'Poison') {
+					this.debug('greenhouse weaken');
+					this.add('-message', 'Greenhouse Gases boosted the power!');
+					return this.chainModify([1.5]);
+				}
+				if (move.type === 'Water' || move.type === 'Ice') {
+					this.debug('greenhouse weaken');
+					this.add('-message', 'Greenhouse Gases weakened the power!');
+					return this.chainModify([0.5]);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Greenhouse Gas');
+			},
+		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Poison",
 		isNonstandard: "Future",
 	},
@@ -70347,8 +70576,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Avasculate",
 		pp: 5,
 		priority: 0,
+		
 		damageCallback(pokemon, target) {
-			return this.clampIntRange(Math.floor(target.getUndynamaxedHP() / 3), 1);
+			if (this.field.getPseudoWeather('graveyard')) {
+				return this.clampIntRange(target.getUndynamaxedHP() / 1, 2);
+			} else {
+				return this.clampIntRange(target.getUndynamaxedHP() / 1, 3);
+			}
 		},
 		status: 'par',
 		flags: {protect: 1, mirror: 1},
@@ -75532,7 +75766,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
-			if (type === 'Wood') return 1;
+			if (type === 'Food') return 1;
 		},
 		secondary: {
 			chance: 10,
@@ -79315,6 +79549,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Snowman",
 		pp: 5,
 		priority: -1,
+		volatileStatus: 'substitute',
+		onTry() {
+			return this.field.isWeather(['hail', 'snow']);
+		},
+		onTryHit(source) {
+			if (!this.canSwitch(source.side) || source.volatiles['commanded']) {
+				this.add('-fail', source);
+				return this.NOT_FAIL;
+			}
+			if (source.volatiles['substitute']) {
+				this.add('-fail', source, 'move: Snowman');
+				return this.NOT_FAIL;
+			}
+			
+		},		
 		flags: {snatch: 1},
 		secondary: null,
 		target: "self",
@@ -79760,6 +80009,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('rubberboost');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Rubber Boost', '[from] move: Layer Up');
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		boosts: {
+			atk: -1,
+			def: -1,
+			spa: -1,
+			spd: -1,
+			spe: -1,
+			accuracy: -1,
+			evasion: -1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Rubber",
@@ -80437,7 +80703,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bullet: 1},
 		onModifyMove(move, attacker) {
-			if (this.field.isTerrain('icyterrain')) {
+			if (this.field.isWeather('hail') || this.field.isTerrain('icyterrain')) {
 				move.multihit = 5;
 			}
 		},
@@ -80580,7 +80846,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		volatileStatus: 'substitute',
 		onTryHit(source) {
-			if (!this.canSwitch(source.side)) {
+			if (!this.canSwitch(source.side) || source.volatiles['commanded']) {
 				this.add('-fail', source);
 				return this.NOT_FAIL;
 			}
@@ -80601,7 +80867,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				source.skipBeforeSwitchOutEventFlag = true;
 			},
 		},
-		selfSwitch: 'copyvolatile',
+		selfSwitch: 'shedtail',
 		target: "self",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -81667,17 +81933,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onHit(move, target) {
 			const i = this.random(11);
 			if (i < 3) {
-				this.boost({atk: -1, spa: -1}, target);
+				this.boost({atk: -1, spa: -1});
 			} else if (i < 6) {
-				this.boost({atk: -2, spa: -2}, target);
+				this.boost({atk: -2, spa: -2});
 			} else if (i < 8) {
-				this.boost({atk: -3, spa: -3}, target);
+				this.boost({atk: -3, spa: -3});
 			} else if (i < 9) {
-				this.boost({atk: -4, spa: -4}, target);
+				this.boost({atk: -4, spa: -4});
 			} else if (i < 10) {
-				this.boost({atk: -5, spa: -5}, target);
+				this.boost({atk: -5, spa: -5});
 			} else if (i < 11) {
-				this.boost({atk: -6, spa: -6}, target);
+				this.boost({atk: -6, spa: -6});
 			} 
 		},
 		secondary: null,
@@ -81990,6 +82256,32 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {mirror: 1},
+		pseudoWeather: 'graveyard',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('rottedrock')) {
+					return 10;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Graveyard', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.flags.bone || (move.type === 'Zombie')) {
+					this.debug('graveyard increase');
+					return this.chainModify([1.5]);
+				}
+			},
+			
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Graveyard');
+			},
+		},
 		secondary: null,
 		target: "all",
 		type: "Zombie",
@@ -82122,7 +82414,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 4,
 			onFieldEnd() {
-				this.add('-fieldend', 'move: Arboreum');
+				this.add('-fieldend', 'move: Factory');
 			},
 		},
 		target: "scripted",
@@ -83241,6 +83533,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {mirror: 1},
+		pseudoWeather: 'spiritstorm',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('etherealrock')) {
+					return 10;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Spiritstorm', '[of] ' + source);
+			},
+
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (!pokemon.hasType('Ghost')) {
+					this.damage(pokemon.baseMaxhp / 64);
+				}
+			},
+
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Spiritstorm');
+			},
+		},
 		secondary: null,
 		target: "all",
 		type: "Ghost",

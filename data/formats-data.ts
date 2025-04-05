@@ -11123,6 +11123,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	drizzard: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	arachnite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	hornititaneetle: {
 		tier: "Illegal",
 		isNonstandard: "Future",

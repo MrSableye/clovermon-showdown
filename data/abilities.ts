@@ -14675,7 +14675,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 208,
 		isNonstandard: "Future",
 	},
-
+	/** Wack Clover Abilities */
 	fastfood: {
 		onModifyPriority(priority, pokemon, target, move) {
 			if (move?.type === 'Food') return priority + 1;
@@ -15962,6 +15962,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
+		onResidualOrder: 27,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (this.field.getPseudoWeather('spiritstorm')) {
+				this.heal(pokemon.baseMaxhp / 13);
+			} 
+		},
 		isBreakable: true,
 		name: "Soul Eater",
 		rating: 3,
@@ -16635,7 +16642,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 422,
 		isNonstandard: "Future",
 	},
-
+	
 	infernoguardian: {
 		onStart(pokemon) {
 			if (pokemon.hasType('Fire') && pokemon.getItem().id === 'flameorb') {
