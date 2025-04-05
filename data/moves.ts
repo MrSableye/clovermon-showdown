@@ -32934,8 +32934,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	onionpeel: {
-		num: 573,
-		accuracy: 42069100,
+		num: 42069573,
+		accuracy: 100,
 		basePower: 70,
 		category: "Physical",
 		name: "Onion Peel",
