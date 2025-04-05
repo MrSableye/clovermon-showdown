@@ -3656,7 +3656,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 					falsesurrender: ["8L1"],
 					snipeshot: ["8L1"],
 					blackbomb: ["8L1"],
-					swordbreaker["8T"]
+					swordbreaker: ["8T"],
 				},
 			},
 			mimikrab: {
