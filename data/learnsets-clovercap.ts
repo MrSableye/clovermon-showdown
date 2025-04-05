@@ -18798,7 +18798,7 @@ spikecannon: ["8E"],
 crosschop: ["8E"],
 crushclaw: ["8E"],
 drillrun: ["8E"],
-extremeeedge: ["8E"],
+extremeedge: ["8E"],
 				},
 			},
 			polybrawn: {
