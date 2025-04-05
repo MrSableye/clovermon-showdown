@@ -7779,6 +7779,30 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 		num: 215,
 	},
+	phantasmagoric: {
+		name: "Phantasmagoric",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ghost') {
+				this.debug('Phantasmagoric boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Ghost') {
+				this.debug('Phantasmagoric boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Normal' || move.type === 'Fighting') {
+				this.add('-immune', target, '[from] ability: Phantasmagoric');
+				return null;
+			}
+		},
+		isNonstandard: "Future",
+	},
 	transfusion: {
 		name: "Transfusion",
 		onDamagingHitOrder: 1,

@@ -3030,6 +3030,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	fabrinnial: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	canvellia: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
 	guertenity: {
 		inherit: true,
 		isNonstandard: null,
@@ -3241,6 +3251,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	cofferule: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	emojinnraging: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	emojinnsobbing: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	emojinnjoyful: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
