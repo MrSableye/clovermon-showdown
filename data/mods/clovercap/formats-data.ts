@@ -1504,6 +1504,18 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	acufrontm: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	acufrontp: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	acufrontz: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	militant: {
 		inherit: true,
 		isNonstandard: "Past",
