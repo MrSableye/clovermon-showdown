@@ -3160,6 +3160,7 @@ dreamfist: ["8L1"],
 	finasoven: {
 		learnset: {
 			lavablitz: ["8L1"],
+			volcanicterrain: ["8L1"],
 ashspray: ["8L1"],
 ashrain: ["8L1"],
 caldera: ["8L1"],
@@ -4925,6 +4926,7 @@ enviousheart: ["8L1"],
 		learnset: {
 			cheesymelt: ["8L1"],
 pizzaspin: ["8L1"],
+fireplay: ["8L1"],
 			acidarmor: ["8L40"],
 			aquaring: ["8T"],
 			attract: ["8M"],
@@ -8955,7 +8957,9 @@ reptize: ["8L1"],
 	},
 	pyralink: {
 		learnset: {
+			takeflight: ["8L1"],
 			volcaniceruption: ["8L1"],
+			volcanicterrain: ["8L1"],
 lavablitz: ["8L1"],
 abruption: ["8L1"],
 caldera: ["8L1"],
@@ -27883,6 +27887,7 @@ couragerush: ["8L1"],
 	maripyro: {
 		learnset: {
 			lavablitz: ["8L1"],
+			volcanicterrain: ["8L1"],
 mothmunch: ["8L1"],
 			aerialace: ["8M"],
 			attract: ["8M"],
