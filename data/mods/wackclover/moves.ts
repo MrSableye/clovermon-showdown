@@ -3275,6 +3275,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		fireplay: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		firewallpress: {
 		inherit: true,
 		isNonstandard: null,
@@ -4374,6 +4378,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		samuraipapercut: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		sandslash: {
 		inherit: true,
 		isNonstandard: null,

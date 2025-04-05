@@ -4926,6 +4926,7 @@ enviousheart: ["8L1"],
 		learnset: {
 			cheesymelt: ["8L1"],
 pizzaspin: ["8L1"],
+fireplay: ["8L1"],
 			acidarmor: ["8L40"],
 			aquaring: ["8T"],
 			attract: ["8M"],

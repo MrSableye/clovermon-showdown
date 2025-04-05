@@ -47739,7 +47739,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Paper",
@@ -89355,7 +89362,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['attract']) {
+				return this.chainModify(1.5);
+			}
+		},
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",

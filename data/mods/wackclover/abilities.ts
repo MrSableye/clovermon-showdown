@@ -590,7 +590,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				const colorType: Record<string, string> = {
 					red: 'Magma',
 					blue: 'Cosmic',
-					yellow: 'Light',
+					yellow: 'Paper',
 					green: 'Zombie',
 					black: 'Shadow',
 					brown: 'Greasy',
