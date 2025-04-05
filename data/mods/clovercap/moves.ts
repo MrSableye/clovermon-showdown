@@ -407,6 +407,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	mistyexplosion: {
 		inherit: true,
+		isNonstandard: null,
 		basePower: 125,
 		pp: 5,
 		onBasePower(basePower, source) {
@@ -638,6 +639,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	steelroller: {
 			inherit: true,
+			isNonstandard: null,
 			basePower: 75,
 			pp: 5,
 			onModifyMove(move, pokemon) {
