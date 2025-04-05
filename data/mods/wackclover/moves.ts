@@ -2392,6 +2392,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		arcanebolt: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		arclight: {
 		inherit: true,
 		isNonstandard: null,
@@ -3327,6 +3331,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			inherit: true,
 			isNonstandard: null,
 			},
+			fossilize: {
+				inherit: true,
+				isNonstandard: null,
+				},
 		fossilcrash: {
 		inherit: true,
 		isNonstandard: null,
@@ -3335,7 +3343,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		fossilize: {
+		fortissimo: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -3551,6 +3559,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		hexclaw: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		hexvirus: {
 		inherit: true,
 		isNonstandard: null,
@@ -3839,6 +3851,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		magicflames: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		magicwand: {
 		inherit: true,
 		isNonstandard: null,
@@ -4293,6 +4309,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		retaliatespell: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		retribution: {
 		inherit: true,
 		isNonstandard: null,
@@ -4658,6 +4678,15 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		spellbind: {
+			inherit: true,
+			isNonstandard: null,
+			},
+			spellslash: {
+				inherit: true,
+				flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+				isNonstandard: null,
+				},
 		spicyleaves: {
 		inherit: true,
 		isNonstandard: null,
