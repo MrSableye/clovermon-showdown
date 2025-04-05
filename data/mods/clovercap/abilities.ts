@@ -258,10 +258,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	detonator: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	paletteswap: {
 		inherit: true,
 		isNonstandard: null,
@@ -270,11 +266,19 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	phantasmagoric: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	mimicry: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	powerspot: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pressurefuzed: {
 		inherit: true,
 		isNonstandard: null,
 	},

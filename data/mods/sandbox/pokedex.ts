@@ -554,6 +554,17 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 52,
 		},
 	},
+	yuukiino: {
+		inherit: true,
+		baseStats: {
+			hp: 80,
+			atk: 60,
+			def: 65,
+			spa: 90,
+			spd: 195,
+			spe: 50,
+		},
+	},
 	doubtlaw: {
 		inherit: true,
 		abilities: {0: "Dark Aura", 1: "Quick Draw", H: "Flare Boost", S: "Neuroforce"},

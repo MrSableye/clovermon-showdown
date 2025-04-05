@@ -8865,6 +8865,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	fabrinnial: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	canvellia: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	dugwalker: {
 		tier: "Illegal",
 		isNonstandard: "Future",

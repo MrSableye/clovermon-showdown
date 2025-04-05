@@ -8585,6 +8585,51 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	joyfulmask: {
+		name: "Joyful Mask",
+		spritenum: 760,
+		fling: {
+			basePower: 60,
+		},
+		onTakeItem(item, source) {
+			if (source.baseSpecies.baseSpecies === 'Emojinn') return false;
+			return true;
+		},
+		forcedForme: "Emojinn-Joyful",
+		itemUser: ["Emojinn-Joyful"],
+		isNonstandard: "Future",
+		num: 2408,
+	},
+	ragingmask: {
+		name: "Raging Mask",
+		spritenum: 760,
+		fling: {
+			basePower: 60,
+		},
+		onTakeItem(item, source) {
+			if (source.baseSpecies.baseSpecies === 'Emojinn') return false;
+			return true;
+		},
+		forcedForme: "Emojinn-Raging",
+		itemUser: ["Emojinn-Raging"],
+		isNonstandard: "Future",
+		num: 2408,
+	},
+	sobbingmask: {
+		name: "Sobbing Mask",
+		spritenum: 760,
+		fling: {
+			basePower: 60,
+		},
+		onTakeItem(item, source) {
+			if (source.baseSpecies.baseSpecies === 'Emojinn') return false;
+			return true;
+		},
+		forcedForme: "Emojinn-Sobbing",
+		itemUser: ["Emojinn-Sobbing"],
+		isNonstandard: "Future",
+		num: 2408,
+	},
 	lampoffortunes: {
 		name: "Lamp of Fortunes",
 		spritenum: 155,

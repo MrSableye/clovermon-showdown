@@ -244,6 +244,18 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	joyfulmask: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sobbingmask: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ragingmask: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	sterilizingampoule: {
 		inherit: true,
 		isNonstandard: null,
