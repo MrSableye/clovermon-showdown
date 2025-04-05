@@ -16397,7 +16397,7 @@ incinerate: ["8E"],
 			},
 			tarantagon: {
 				learnset: {
-			kingshield: ["8L1"],
+			kingsshield: ["8L1"],
 stringshot: ["8L1"],
 spiderweb: ["8L1"],
 poisonfang: ["8L1", "8T"],
