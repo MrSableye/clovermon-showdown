@@ -2362,6 +2362,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		anglestab: {
 		inherit: true,
 		isNonstandard: null,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		},
 		antivenom: {
 		inherit: true,
@@ -2639,6 +2640,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		bounceback: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		brace: {
 		inherit: true,
 		isNonstandard: null,
@@ -2846,6 +2851,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		couragerush: {
 		inherit: true,
 		isNonstandard: null,
+		},
+		cosmicblade: {
+			inherit: true,
+			isNonstandard: null,
+			flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		},
 		crashlanding: {
 		inherit: true,
@@ -3202,6 +3212,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		fabricstab: {
 		inherit: true,
 		isNonstandard: null,
+			flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+
 		},
 		fabricworld: {
 		inherit: true,
@@ -3922,6 +3934,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		midnightblade: {
 		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		isNonstandard: null,
 		},
 		mindboost: {
@@ -4308,10 +4321,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		rubberbeams: {
+		rubberbeam: {
 		inherit: true,
 		isNonstandard: null,
 		},
+		rubberbeams: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		rubberbullets: {
 		inherit: true,
 		isNonstandard: null,
@@ -4350,6 +4367,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		rustyblade: {
 		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		isNonstandard: null,
 		},
 		sakedrink: {
@@ -4396,6 +4414,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		invocation: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		seasonalflowers: {
 		inherit: true,
 		isNonstandard: null,
@@ -4664,6 +4686,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		starfield: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		stargaze: {
 		inherit: true,
 		isNonstandard: null,
@@ -5082,6 +5108,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		weatherblade: {
 		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		isNonstandard: null,
 		},
 		webball: {
@@ -5106,6 +5133,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		windblade: {
 		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		isNonstandard: null,
 		},
 		woodcannon: {

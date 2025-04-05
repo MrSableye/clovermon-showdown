@@ -80016,6 +80016,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('rubberboost');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Rubber Boost', '[from] move: Layer Up');
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		boosts: {
+			atk: -1,
+			def: -1,
+			spa: -1,
+			spd: -1,
+			spe: -1,
+			accuracy: -1,
+			evasion: -1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Rubber",

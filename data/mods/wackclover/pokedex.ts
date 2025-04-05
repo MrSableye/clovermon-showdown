@@ -342,6 +342,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Rock", "Rubber"],
 	},
+	barbarkley: {
+		inherit: true,
+		types: ["Rock", "Rubber"],
+	},
 	
 	ricosuave: {
 		inherit: true,
@@ -563,6 +567,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	chromox: {
 		inherit: true,
 		types: ["Fire", "Cyber"],
+	},
+	spookscare: {
+		inherit: true,
+		types: ["Bone", "Ground"],
 	},
 	goryannus: {
 		inherit: true,
