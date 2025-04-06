@@ -27341,7 +27341,6 @@ acidrain: ["8L1"],
 		learnset: {
 			lunacy: ["8L1"],
 invokedeity: ["8L1"],
-tenplagues: ["8L1"],
 retribution: ["8L1"],
 "5impossiblerequests": ["8L1"],
 madness: ["8L1"],
