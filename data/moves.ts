@@ -44659,7 +44659,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -45053,7 +45056,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -48385,7 +48391,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -48978,7 +48987,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, arrow: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -50893,6 +50905,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sun: 1},
 		secondary: null,
+		weather: 'sunnyday',
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -52786,7 +52799,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'slp',
+		},
 		target: "allAdjacentFoes",
 		type: "Light",
 		isNonstandard: "Future",
@@ -52876,7 +52892,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, snatch: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 66,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -52890,7 +52913,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -53653,6 +53679,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		volatileStatus: 'confusion',
+		onModifyMove(move) {
+			if (this.field.getPseudoWeather('auroraglow')) move.accuracy = 80;
+		},
 		boosts: {
 			accuracy: -1,
 		},
@@ -53670,6 +53699,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
+		onHit(target) {
+			if (this.field.getPseudoWeather('auroraglow')) {
+				this.boost({
+					def: -2,
+					spd: -2,
+				});
+			} else {
+				this.boost({
+					def: -1,
+					spd: -1,
+				});
+			}
+		},
 		target: "allAdjacentFoes",
 		type: "Light",
 		isNonstandard: "Future",
@@ -53716,6 +53758,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, sun: 1},
+		weather: 'sunnyday',
 		secondary: null,
 		target: "normal",
 		type: "Light",
@@ -56425,7 +56468,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 75,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -57265,6 +57311,42 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('rainbow');
+				}
+			},
+		},
+		condition: {
+			duration: 4,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-activate', source, 'ability: Persistent', effect);
+					return 7;
+				}
+				return 5;
+			},
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'rainbow');
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 9,
+			onModifyMove(move, pokemon) {
+				if (move.secondaries && move.id !== 'secretpower') {
+					this.debug('doubling secondary chance');
+					for (const secondary of move.secondaries) {
+						if (pokemon.hasAbility('serenegrace') && secondary.volatileStatus === 'flinch') continue;
+						if (secondary.chance) secondary.chance *= 2;
+					}
+					if (move.self?.chance) move.self.chance *= 2;
+				}
+			},
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'rainbow');
+			},
+
+		},
 		secondary: null,
 		target: "normal",
 		type: "Light",
@@ -60676,6 +60758,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		multihit: [2, 5],
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -60689,6 +60772,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			this.boost({spa: 1}, attacker, attacker, move);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -62036,6 +62131,36 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {snatch: 1},
+		pseudoWeather: 'auroraglow',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (effect?.name === "Skylight") {
+					return 6;
+				}
+				if (effect?.name === "Skylight" && source?.hasItem('brightrock')|| source?.hasItem('starryrock')) {
+					return 12;
+				}
+				if (source?.hasItem('brightrock')|| source?.hasItem('starryrock')) {
+					return 15;
+				}
+				
+				return 10;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Aurora Glow', '[of] ' + source);
+			},
+			
+			onResidualOrder: 6,
+			onResidual(pokemon) {
+				if (pokemon.hasType('Light') || pokemon.hasType('Cosmic')) this.heal(pokemon.baseMaxhp / 12);
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Aurora Glow');
+			},
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Light",
@@ -62050,7 +62175,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			volatileStatus: 'auroraglow',
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -64975,8 +65103,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Sunrise",
 		pp: 1,
 		priority: 0,
+		onTry() {
+			return this.field.isWeather(['midnight']);
+		},
+		onAfterHit(target, source) {
+			this.field.clearWeather();
+		},
+		secondaries: [
+			{
+				chance: 100,
+				status: 'brn',
+			}, {
+				chance: 100,
+				volatileStatus: 'confusion',
+			},
+		],
 		flags: {protect: 1, mirror: 1, sun: 1},
-		secondary: null,
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -67487,7 +67629,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -67631,7 +67776,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -75311,7 +75463,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			status: 'brn',
+		},
 		target: "allAdjacentFoes",
 		type: "Light",
 		isNonstandard: "Future",
@@ -76237,7 +76392,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -85536,7 +85694,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			boosts: {
+				atk: -1,
+				spa: -1,
+			},
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -88323,6 +88487,29 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: -3,
 		flags: {protect: 1},
+		priorityChargeCallback(pokemon) {
+			pokemon.addVolatile('focuslaser');
+		},
+		beforeMoveCallback(pokemon) {
+			if (pokemon.volatiles['focuslase']?.lostFocus) {
+				this.add('cant', pokemon, 'Focus Laser', 'Focus Laser');
+				return true;
+			}
+		},
+		condition: {
+			duration: 1,
+			onStart(pokemon) {
+				this.add('-singleturn', pokemon, 'move: Focus Laser');
+			},
+			onHit(pokemon, source, move) {
+				if (move.category !== 'Status') {
+					this.effectState.lostFocus = true;
+				}
+			},
+			onTryAddVolatile(status, pokemon) {
+				if (status.id === 'flinch') return null;
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Light",

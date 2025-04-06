@@ -1364,7 +1364,25 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	flash: {
 		inherit: true,
+		accuracy: 100,
+		basePower: 20,
+		category: "Special",
+		pp: 10,
+		flags: {protect: 1, mirror: 1},
+		boosts: null,
+		onHit(target) {
+			if (this.field.getPseudoWeather('auroraglow')) {
+				this.boost({
+					accuracy: -3,
+				});
+			} else {
+				this.boost({
+					accuracy: -1,
+				});
+			}
+		},
 		type: "Light",
+		contestType: "Cute",
 		isNonstandard: null,
 	},
 	flashcannon: {
@@ -2720,10 +2738,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "Traps and damages the target for 4-5 turns.",
 		secondary: null,
 	},
-	spotlight: { // TODO: Add Aura Glow interaction
+	spotlight: { 
 		inherit: true,
-		onHit(target, source, move) {
-			this.boost({spd: 1}, target, source, move);
+		onHit(target) {
+			if (this.field.getPseudoWeather('auroraglow')) {
+				this.boost({
+					spa: 2,
+				});
+			} else {
+				this.boost({
+					spd: 1,
+				});
+			}
 		},
 		desc: "Until the end of the turn, all single-target attacks from opponents of the target are redirected to the target. Such attacks are redirected to the target before they can be reflected by Magic Coat or the Magic Bounce Ability, or drawn in by the Lightning Rod or Storm Drain Abilities. Fails if it is not a Double Battle or Battle Royal. This move boosts the Special Defense of the target by 1 stage.",
 		shortDesc: "Target's foes' Sp. Def is boosted by 1 and moves are redirected to it this turn.",
