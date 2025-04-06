@@ -42642,6 +42642,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
 		secondary: null,
 		target: "normal",
 		type: "Steam",
@@ -44131,7 +44134,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Wood",
 		isNonstandard: "Future",
@@ -44279,7 +44287,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			status: 'brn',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Steam",
@@ -45011,7 +45022,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -45025,7 +45039,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -45474,6 +45491,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'brn') {
+				this.debug('BP doubled on burned target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Wood",
@@ -46549,7 +46573,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'tox',
+		},
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -53339,6 +53366,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'brn') {
+				this.debug('BP doubled on burned target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Steam",
@@ -53353,6 +53387,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'brn') {
+				this.debug('BP doubled on burned target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Steam",
@@ -62368,7 +62409,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -64220,7 +64264,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -70132,7 +70179,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Wood",
 		isNonstandard: "Future",
@@ -70722,6 +70772,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Steam",
@@ -72173,7 +72224,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Wood",
 		isNonstandard: "Future",
@@ -73672,7 +73726,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 90,
+			onHit(target, source) {
+				if (this.field.getPseudoWeather('thickfog')) {
+					this.boost({spa: -2, accuracy: 2}, source, source);
+				} else {
+					this.boost({
+						spa: -2,
+					}, source, source);
+				}
+			},
+		},
+		
+
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -77825,6 +77892,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {},
+		pseudoWeather: 'vaporwall',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('steamyrock')) {
+					return 8;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Vapor Wall', '[of] ' + source);
+			},
+			onTryHit(target, source, move) {
+				if (target !== source && move.type === 'Fire') {
+					this.add('-immune', target, '[from] Vapor Wall');
+					return null;
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Vapor Wall');
+			},
+		
+		},
 		secondary: null,
 		target: "all",
 		type: "Steam",
@@ -78542,7 +78634,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					accuracy: 2,
+				},
+			},
+		},
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -79701,6 +79800,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(2.0);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Wood",
@@ -82695,6 +82799,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {pulse: 1},
+		pseudoWeather: 'thickfog',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('steamyrock')) {
+					return 8;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Thick Fog', '[of] ' + source);
+			},
+			onAccuracyPriority: 6,
+			onModifyAccuracy(accuracy, defender, attacker, move) {
+					return this.chainModify(0.5);
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Thick Fog');
+			},
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Steam",
@@ -89059,7 +89185,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('spiritstorm');
+					this.field.addPseudoWeather('arboreum');
+				},
+			},
+		},
 		target: "all",
 		type: "Wood",
 		isNonstandard: "Future",

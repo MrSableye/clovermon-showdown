@@ -5344,6 +5344,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	steamroller: {
 		inherit: true,
+		type: "Steam",
 		isNonstandard: null,
 	},
 	steelroller: {
