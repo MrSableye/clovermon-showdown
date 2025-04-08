@@ -963,6 +963,62 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-end', pokemon, 'Flammable');
 		},
 	},
+	statusguard: {
+		name: 'statusguard',
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'Status Guard');
+		},
+		duration: 3,
+		durationCallback(target, source, effect) {
+			if (effect?.name === "Nurse of Steel") {
+				return 4;
+			}
+			if (effect?.name === "Radiotherapy") {
+				return 4;
+			}
+			return 3;
+		},
+		onSetStatus(status, target, source, effect) {
+			if (!effect || !source) return;
+			if (effect.id === 'yawn') return;
+			if (effect.effectType === 'Move' && effect.infiltrates && !target.isAlly(source)) return;
+			if (target !== source) {
+				this.debug('interrupting setStatus');
+				if (effect.name === 'Synchronize' || (effect.effectType === 'Move' && !effect.secondaries)) {
+					this.add('-activate', target, 'move: Safeguard');
+				}
+				return null;
+			}
+		},
+		onTryAddVolatile(status, target, source, effect) {
+			if (!effect || !source) return;
+			if (effect.effectType === 'Move' && effect.infiltrates && !target.isAlly(source)) return;
+			if ((status.id === 'confusion' || status.id === 'yawn') && target !== source) {
+				if (effect.effectType === 'Move' && !effect.secondaries) this.add('-activate', target, 'move: Safeguard');
+				return null;
+			}
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, 'Flammable');
+		},
+	},
+	zombiebile: {
+		name: 'zombiebile',
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'Zombie Bile');
+		},
+		duration: 4,
+		
+		onSourceModifyDamage(damage, source, target, move) {
+			let mod = 1;
+			if (move.type === 'Zombie') mod *= 1.5;
+
+			return this.chainModify(mod);
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, 'Zombie Bile');
+		},
+	},
 
 	dynamax: {
 		name: 'Dynamax',
