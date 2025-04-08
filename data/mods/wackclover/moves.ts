@@ -3861,6 +3861,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		magmahammer: {
 		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
 		isNonstandard: null,
 		},
 		magnetdraw: {

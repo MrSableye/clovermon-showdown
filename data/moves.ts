@@ -42660,6 +42660,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
 		secondary: null,
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -52103,6 +52106,37 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		pseudoWeather: 'heatup',
+		condition: {
+			duration: 8,
+			durationCallback(source, effect) {
+				if (source?.hasItem('heatrock')) {
+					return 15;
+				}
+				return 8;
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Heat Up', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Heat Up');
+				}
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (pokemon.hasType('Fire') || pokemon.hasType('Magma') || pokemon.hasAbility('coldblooded')) {
+					this.heal(pokemon.baseMaxhp / 14, pokemon, pokemon);
+				} else if (pokemon.hasType('Ice')) {
+					this.damage(pokemon.baseMaxhp / 8, pokemon);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Heat Up');
+			},
+		},
 		target: "allySide",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -53423,7 +53457,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -61410,7 +61447,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1, tail: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -72668,7 +72708,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -73607,7 +73650,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -75833,7 +75879,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: -1,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			onHit(target, source, move) {
+				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+			},
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -77242,6 +77293,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1, defrost: 1},
 		secondary: null,
+		boosts: {
+			def: 3,
+		},
 		target: "self",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -77255,6 +77309,40 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {pulse: 1, defrost: 1},
+		pseudoWeather: 'floorislava',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('heatrock')) {
+					return 8;
+				}
+				return 5;
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Floor is Lava', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Floor is Lava');
+				}
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable() && pokemon.hasType('Magma')) {
+					this.heal(pokemon.baseMaxhp / 18, pokemon, pokemon);
+					pokemon.trySetStatus('brn');
+				} else if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable() && !pokemon.hasType('Magma')) {
+					this.damage(pokemon.baseMaxhp / 10, pokemon);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Floor is Lava');
+			},
+		},
+
+		
 		secondary: null,
 		target: "scripted",
 		type: "Magma",
@@ -82032,7 +82120,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Magma",
@@ -83616,6 +83707,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			def: 2,
+		},
 		secondary: null,
 		target: "self",
 		type: "Magic",
@@ -83689,6 +83783,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		volatileStatus: 'imprison',
 		secondary: null,
 		target: "self",
 		type: "Magic",
@@ -89371,6 +89466,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target.getTypes().join() === 'Steel') {
+				this.debug("BP doubled against Steel types");
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
