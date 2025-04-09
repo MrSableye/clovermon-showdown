@@ -638,17 +638,29 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	steelroller: {
-			inherit: true,
-			isNonstandard: null,
-			basePower: 75,
-			pp: 5,
+		num: 798,
+		inherit: true,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Steel Roller",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		isNonstandard: null,
 			onModifyMove(move, pokemon) {
 				if (this.field.terrain && pokemon.isGrounded()) {
 					move.basePower *= 2;
 					this.debug('BP doubled in Terrain');
 				}
 			},
-			desc: "Power doubles if the user is grounded and a terrain is active.",
+			onHit() {
+				this.field.clearTerrain();
+			},
+			onAfterSubDamage() {
+				this.field.clearTerrain();
+			},
+			desc: "Power doubles if the user is grounded and a terrain is active. Removes Terrain.",
 			shortDesc: "User on terrain: power doubles and removes terrain.",
 		},
 	strangesteam: {

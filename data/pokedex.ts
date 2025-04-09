@@ -52207,7 +52207,7 @@ bewilderbeast: {
 		name: "Shaikle",
 		types: ["Fire", "Dark"],
 		genderRatio: {M: 0.75, F: 0.25},
-		baseStats: {hp: 141, atk: 113, def: 128, spa: 56, spd: 86, spe: 26},
+		baseStats: {hp: 141, atk: 113, def: 128, spa: 56, spd: 66, spe: 26},
 		abilities: {0: "Soundproof", 1: "Heatproof", S: "Overcoat", H: "Analytic"},
 		heightm: 1.68,
 		weightkg: 500,
