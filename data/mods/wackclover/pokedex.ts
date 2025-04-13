@@ -31,15 +31,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	kengeon: {
 		inherit: true,
-		types: ["Sound", "Normal"],
+		types: ["Normal", "Flying"],
 	},
 	frieden: {
 		inherit: true,
-		types: ["Sound", "Normal"],
+		types: ["Food", "Flying"],
 	},
 	corooster: {
 		inherit: true,
-		types: ["Food", "Normal"],
+		types: ["Food", "Flying"],
 		abilities: {
 			0: "Gale Wings",
 			1: "Rough Skin",
@@ -122,6 +122,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			S: "Heavy Metal",
 		},
 	},
+	wantnaut: {
+		inherit: true,
+		abilities: {
+			0: "Battle Armor",
+			1: "Iron Barbs",
+			H: "Trash Pile",
+			S: "Heavy Metal",
+		},
+	},
 	seamapan: {
 		inherit: true,
 		types: ["Water", "Fabric"],
@@ -167,7 +176,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	dowster: {
 		inherit: true,
-		types: ["Shadow", "Ghost"],
+		types: ["Shadow", "Magic"],
 		abilities: {
 			0: "Shadow Tag",
 			1: "Cursed Body",
@@ -516,6 +525,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	cthullord: {
 		inherit: true,
 		types: ["Cosmic", "Rock"],
+	},
+	yeerex: {
+		inherit: true,
+		types: ["Rock", "Sound"],
 	},
 	gynuke: {
 		inherit: true,
