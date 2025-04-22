@@ -3445,7 +3445,7 @@
         "lockedMoves": [   
           "crystaledge"
         ],
-        "level": 84        
+        "level": 90        
       },
       {
         "abilities": [
@@ -3547,7 +3547,7 @@
         "lockedMoves": [
           "irontail"
         ],
-        "level": 84       
+        "level": 90       
       }
     ]
   }, 
@@ -3625,7 +3625,7 @@
         "lockedMoves": [
           "earthquake"
         ],
-        "level": 84       
+        "level": 90       
       }
     ]
   },
@@ -3798,7 +3798,7 @@
           "whet",
           "precipiceblades"
         ],
-        "level": 84       
+        "level": 90       
       }
     ]
   },
@@ -8137,8 +8137,31 @@
           "studynotes"
         ],
         "lockedMoves": [
-          "matingseason", 
+
           "eromangasaurus"
+        ],
+        "level": 88       
+      }
+    ]
+  },
+  "dreadark": {   
+    "sets": [
+      {
+        "abilities": [   
+          "intimidate"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [     
+          "terrify",
+          "boo",
+          "feardrain"
+        ],
+        "lockedMoves": [
+
+          "villainpower"
         ],
         "level": 88       
       }

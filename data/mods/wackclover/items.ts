@@ -95,7 +95,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	blunderpolicy: {
 		inherit: true,
-		isNonstandard: "Past",
+		isNonstandard: null,
 	},
 	cellbattery: {
 		inherit: true,
@@ -1319,11 +1319,141 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	
+	gallerycapsule: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	arboreumcapsule: {
 		inherit: true,
 		isNonstandard: null,
 	},
+	starryrock: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	saunacapsule: {
+		inherit: true,
+		isNonstandard: null,
+	},
+
+	woodgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	magmagem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	steamgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	windgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	papergem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	techgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	magicgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rubbergem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	feargem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lightgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cosmicgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	soundgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	foodgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	zombiegem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	nucleargem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	virusgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cybergem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fabricgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	chaosgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	divinegem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	qmarksgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	timegem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	paintgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	crystalgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	memegem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bloodgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	greasygem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	heartgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ogregem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shadowgem: {
 		inherit: true,
 		isNonstandard: null,
 	},

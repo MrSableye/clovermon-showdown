@@ -19676,4 +19676,11 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	starryrock: {
+		name: "Starry Rock",
+		spritenum: 0,
+		num: 67484,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 };

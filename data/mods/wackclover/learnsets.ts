@@ -1723,6 +1723,9 @@ rubbershield: ["8L1"],
 	},
 	ebolable: {
 		learnset: {
+			purefear: ["8L1"],
+			fearpulse: ["8L1"],
+			invokedread: ["8L1"],
 			virusdrain: ["8L1"],
 hexvirus: ["8L1"],
 thecure: ["8L1"],
@@ -1918,6 +1921,7 @@ pikapapow: ["8L1"],
 	birdhouse: {
 		learnset: {
 			barkpress: ["8L1"],
+			hauntedhouse: ["8L1"],
 arboreum: ["8L1"],
 woodendefense: ["8L1"],
 woodcannon: ["8L1"],
@@ -3161,6 +3165,7 @@ dreamfist: ["8L1"],
 		learnset: {
 			lavablitz: ["8L1"],
 			volcanicterrain: ["8L1"],
+			amberwave: ["8L1"],
 ashspray: ["8L1"],
 ashrain: ["8L1"],
 caldera: ["8L1"],
@@ -3586,6 +3591,7 @@ acidrain: ["8L1"],
 	fairileon: {
 		learnset: {
 			faerieorb: ["8L1"],
+			essencedrain: ["8L1"],
 nectartap: ["8L1"],
 guidinglight: ["8L1"],
 			aromatherapy: ["8L30"],
@@ -3835,6 +3841,8 @@ tunnelaway: ["8L1"],
 		learnset: {
 			glassbreaker: ["8L1"],
 prerecord: ["8L1"],
+shout: ["8L1"],
+doublenote: ["8L1"],
 			agility: ["8E", "8L44"],
 			aquaring: ["8T"],
 			attract: ["8M"],
@@ -3914,6 +3922,9 @@ prerecord: ["8L1"],
 	elephas: {
 		learnset: {
 			mindboost: ["8L1"],
+			prediction: ["8L1"],
+			mudcover: ["8L1"],
+			psychictemple: ["8L1"],
 minddrain: ["8L1"],
 enlighten: ["8L1"],
 concentrate: ["8L1"],
@@ -4116,7 +4127,6 @@ hipcheck: ["8L1"],
 	caroline: {
 		learnset: {
 			divinefacade: ["8L1"],
-preach: ["8L1"],
 finalheaven: ["8L1"],
 invokedeity: ["8L1"],
 goldtruth: ["8L1"],
@@ -4563,6 +4573,8 @@ bloodhound: ["8L1"],
 		learnset: {
 			serpentwhip: ["8L1"],
 bask: ["8L1"],
+powerarena: ["8L1"],
+achillesheel: ["8L1"],
 			amnesia: ["8L54"],
 			attract: ["8M"],
 			beatup: ["8T"],
@@ -14721,6 +14733,7 @@ midnight: ["8L1"],
 	sprucifix: {
 		learnset: {
 			felltree: ["8L1"],
+			hauntedhouse: ["8L1"],
 arboreum: ["8L1"],
 barkpress: ["8L1"],
 treeoflife: ["8L1"],
@@ -27744,6 +27757,7 @@ couragerush: ["8L1"],
 	},
 	apartmant: {
 		learnset: {
+			hauntedhouse: ["8L1"],
 			antstrength: ["8L1"],
 			luckyroom: ["8L1"],
 			attackorder: ["8L60"],
