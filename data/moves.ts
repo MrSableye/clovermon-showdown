@@ -23416,6 +23416,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 				const randomStat = this.sample(stats);
 				const boost: SparseBoostsTable = {};
+
 				boost[randomStat] = 2;
 				this.boost(boost, source);
 			}
@@ -36235,6 +36236,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		onHit(target) {
+			if (this.field.getPseudoWeather('feast')) {
+				this.boost({
+					spa: -2,
+					spd: -2,
+				});
+			} else {
+				this.boost({
+					spa: -1,
+					spd: -1,
+				});
+			}
+		},
 		target: "allAdjacentFoes",
 		type: "Food",
 		isNonstandard: "Future",
@@ -36294,7 +36308,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (stats.length) {
 				const randomStat = this.sample(stats);
 				const boost: SparseBoostsTable = {};
-				boost[randomStat] = 2;
+				if (this.field.getPseudoWeather('feast')) {
+					boost[randomStat] = 3;
+					
+				} else {
+					boost[randomStat] = 2;
+				}
+				
 				this.boost(boost);
 			} else {
 				return false;
@@ -37130,7 +37150,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		
+		onModifyMove(move) {
+			if (move.secondaries && this.field.getPseudoWeather('feast')) {
+				this.debug('doubling secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance = 100;
+				}
+			}
+		},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -37888,10 +37920,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: {
 			chance: 25,
-			self: {
-				boosts: {
-					atk: 1,
-				},
+			onHit(target, source) {
+				if (this.field.getPseudoWeather('feast')) {
+					this.boost({atk: 2}, source, source);
+				} else {
+					this.boost({
+						atk: 1,
+					}, source, source);
+				}
 			},
 		},
 		target: "normal",
@@ -52208,6 +52244,40 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		pseudoWeather: 'feast',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('sweetrock')|| source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
+					return 10;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Feast', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Food') {
+					this.debug('feast increase');
+					return this.chainModify([1.5]);
+				}
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (pokemon.hasType('Food') && !pokemon.isSemiInvulnerable()) {
+					this.heal(pokemon.baseMaxhp / 12, pokemon, pokemon);
+				} else {
+					this.heal(pokemon.baseMaxhp / 18, pokemon, pokemon);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Feast');
+			},
+		},
 		target: "allySide",
 		type: "Food",
 		isNonstandard: "Future",
@@ -52597,8 +52667,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			return oldAbility as false | null;
 		},
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				if (this.field.getPseudoWeather('feast')) {
+					this.boost({
+						spe: 1,
+					});
+				} else {
+					this.boost({
+						
+					});
+				}
+			},
+		},
 		heal: [1, 2],
-		secondary: null,
 		target: "self",
 		type: "Food",
 		isNonstandard: "Future",
@@ -66692,7 +66775,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (!result) return result;
 			source.statusState.time = 3;
 			source.statusState.startTime = 3;
-			this.heal(source.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+			this.heal(source.maxhp, source, target); // Aesthetic only as the healing happens after you fall asleep in-game
 		},
 		secondary: null,
 		target: "allAdjacentFoes",
@@ -77084,6 +77167,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(source, target, move) {
+			if (this.field.getPseudoWeather('feast')) {
+				return move.basePower * 1.5;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -78756,6 +78845,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'birdflu',
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Bird Flu');
+			},
+			onResidualOrder: 13,
+			onResidual(pokemon) {
+				if (pokemon.hasType('Flying')) this.damage(pokemon.baseMaxhp / 12, pokemon);
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Bird Flu');
+			},
+		},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Flying') return 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Virus",
@@ -81842,7 +81948,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -82835,6 +82944,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			this.add('-prepare', attacker, move.name);
 			this.boost({spd: 1}, attacker, attacker, move);
+			if (this.field.getPseudoWeather('feast')) {
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
 				return;
 			}
@@ -86660,13 +86774,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-			chance: 25,
-			self: {
-				boosts: {
-					spe: 1,
-				},
+			chance: 90,
+			onHit(target, source) {
+				if (this.field.getPseudoWeather('feast')) {
+					this.boost({spd: 2}, source, source);
+				} else {
+					this.boost({
+						spd: 1,
+					}, source, source);
+				}
 			},
 		},
+
+		
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -86694,7 +86814,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 45,
+			onHit(target) {
+				if (this.field.getPseudoWeather('feast')) {
+					this.boost({
+						spd: -2,
+					});
+				}
+				else {
+					this.boost({
+						spd: -1,
+					});
+				}
+			},
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",

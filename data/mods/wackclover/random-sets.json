@@ -1846,10 +1846,10 @@
 							"leftovers"
 					 ],
 					 "moves":[
-							"drainingkiss",
+							"cheesymelt",
 							"calmmind",
-							"moonblast",
-							"surf",
+							"pizzaspin",
+							"fireplay",
 							"flamethrower"
 					 ],
 					 "level":76
@@ -1864,7 +1864,7 @@
 					 "moves":[
 							"softboiled",
 							"lovelykiss",
-							"moonblast",
+							"pizzaspin",
 							"toxic",
 							"flamethrower"
 					 ],
@@ -1876,7 +1876,7 @@
 		 "nicknames":[
 				"BAZINGA",
 				"Carbuncle",
-				"Haremit",
+				"Comfey",
 				"Haremit",
 				"Haremit",
 				"Haremit",
@@ -1894,7 +1894,7 @@
 					 "moves":[
 							"earthquake",
 							"stoneedge",
-							"return"
+							"stuffedtackle"
 					 ],
 					 "lockedMoves":[
 							"shellsmash",
@@ -1904,7 +1904,7 @@
 				},
 				{
 					 "abilities":[
-							"watercompaction"
+							"hydrophile"
 					 ],
 					 "items":[
 							"leftovers"
@@ -1928,9 +1928,24 @@
 					 "moves":[
 							"rapidspin",
 							"rockslide",
-							"bodyslam",
+							"pillowfight",
 							"razorshell",
 							"scald"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"hydrophile"
+					 ],
+					 "items":[
+							"chestoberry"
+					 ],
+					 "moves":[
+							"comfycoil",
+							"sleeptalk",
+							"fabricsoftener",
+							"razorshell"
 					 ],
 					 "level":84
 				}
@@ -1961,7 +1976,8 @@
 							"icebeam",
 							"focusblast",
 							"freezedry",
-							"psychic"
+							"arcticwind",
+							"freezingwave"
 					 ],
 					 "level":84
 				},

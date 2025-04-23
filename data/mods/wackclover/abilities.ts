@@ -849,6 +849,29 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	justified: {
+		inherit: true,
+		onDamagingHit(damage, target, source, move) {
+			if (['Dark', 'Chaos'].includes(move.type)) {
+				this.boost({atk: 1});
+			}
+		},
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Chaos') {
+				this.debug('Justified weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Chaos') {
+				this.debug('Justified weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		shortDesc: "Halves Chaos damage. +1 Atk stage after it is damaged by a Dark- or Chaos-type move.",
+	},
 	presage: {
 		inherit: true,
 		isNonstandard: null,
