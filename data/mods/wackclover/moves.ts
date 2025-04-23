@@ -464,6 +464,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	
 	eternabeam: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -486,7 +487,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	flipturn: {
 		inherit: true,
-		isNonstandard: "Past",
+		isNonstandard: null,
 	},
 	freezingglare: {
 		inherit: true,
@@ -1300,8 +1301,9 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	eggbomb: {
 		inherit: true,
-		accuracy: 85,
+		accuracy: 100,
 		basePower: 100,
+		type: "Food",
 		isNonstandard: null,
 	},
 	electricterrain: {
@@ -2319,6 +2321,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		achillesheel: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		acidbath: {
 		inherit: true,
 		isNonstandard: null,
@@ -3181,6 +3187,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		essencedrain: {
+			inherit: true,
+			isNonstandard: null,
+		},
 		evilhurricane: {
 		inherit: true,
 		isNonstandard: null,
@@ -3531,6 +3541,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		hatspin: {
+			inherit: true,
+			isNonstandard: null,
+			},
+			hauntedhouse: {
+				inherit: true,
+				isNonstandard: null,
+				},
 		headrush: {
 		inherit: true,
 		isNonstandard: null,
@@ -4259,9 +4277,17 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		prerecord: {
+			inherit: true,
+			isNonstandard: null,
+			},
+			prediction: {
 		inherit: true,
 		isNonstandard: null,
 		},
+		psychictemple: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		psypowder: {
 		inherit: true,
 		isNonstandard: null,
@@ -4323,8 +4349,20 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		riptide: {
-		inherit: true,
-		isNonstandard: null,
+			inherit: true,
+			accuracy: 85,
+			basePower: 75,
+			category: "Physical",
+			desc: "User traps target for four to five turns.",
+			shortDesc: "User traps target for four to five turns.",
+			pp: 10,
+			priority: 0,
+			flags: {contact: 1, protect: 1, mirror: 1},
+			volatileStatus: 'partiallytrapped',
+			secondary: null,
+			target: "normal",
+			type: "Water",
+			isNonstandard: null,
 		},
 		risingflame: {
 		inherit: true,
@@ -4573,6 +4611,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		skullbash: {
 		inherit: true,
+		type: "Bone",
 		isNonstandard: null,
 		},
 		sledgehammer: {

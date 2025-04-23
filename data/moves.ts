@@ -47516,7 +47516,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				},
 			}, {
 				chance: 100,
-				volatileStatus: 'confusion',
+				status: 'par',
 			},
 		],
 		flags: {protect: 1, mirror: 1},
@@ -79148,6 +79148,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pseudoWeather: 'starfield',
 		condition: {
 			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('starryrock')|| source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
+					return 10;
+				}
+				return 5;
+			},
 			onFieldStart(field, source) {
 				this.add('-fieldstart', 'move: Starfield', '[of] ' + source);
 			},
@@ -79881,7 +79887,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(target, source, effect) {
-				if (source?.hasItem('woodenrock')) {
+				if (source?.hasItem('woodenrock')|| source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
 					return 10;
 				}
 				return 5;
@@ -84091,7 +84097,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(target, source, effect) {
-				if (source?.hasItem('etherealrock')) {
+				if (source?.hasItem('etherealrock') || source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
 					return 10;
 				}
 				return 5;
