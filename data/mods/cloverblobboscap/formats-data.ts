@@ -2664,6 +2664,18 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	leopawn: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	canvellia: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fabrinnial: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kaquapo: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -4659,6 +4671,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbosnyan: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosvoodoo: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

@@ -16007,6 +16007,33 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 232,
 	},
+	curselord: {
+		name: "Curselord",
+		onDamagingHit(damage, target, source, move) {
+			if (move.type === 'Dark' || move.type === 'Fire' || move.type === 'Ghost') {
+				if (this.randomChance(1, 1)) {
+					source.addVolatile('disable', this.effectState.target);
+					source.addVolatile('curse', this.effectState.target);
+				}
+			}
+		},
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Dark' || move.type === 'Fire' || move.type === 'Ghost') {
+				this.debug('Curselord weaken');
+				return this.chainModify(0.75);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Dark' || move.type === 'Fire' || move.type === 'Ghost') {
+				this.debug('Curselord weaken');
+				return this.chainModify(0.75);
+			}
+		},
+		rating: 2,
+		isNonstandard: "Future",
+	},
 	infected: {
 		onDamagingHit(damage, target, source, move) {
 			const sourceAbility = source.getAbility();

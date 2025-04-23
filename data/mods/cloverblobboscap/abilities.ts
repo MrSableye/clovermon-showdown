@@ -380,6 +380,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	curselord: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	chiralnetwork: {
 		inherit: true,
 		isNonstandard: null,
