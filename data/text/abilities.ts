@@ -4073,6 +4073,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Reduces Super Effective moves by 50%.",
 		desc: "Super effective damage taken is halved.",
 	},
+	curselord: {
+		name: "Curselord",
+		shortDesc: "Reduces the damage taken from Fire-, Ghost- or Dark-type moves by 25% and Disables and Inflicts Curse on the foe if hit by these types.",
+		desc: "Reduces the damage taken from Fire-, Ghost- or Dark-type moves by 25% and Disables and Inflicts Curse on the foe if hit by these types.",
+	},
 	nuclearization: {
 		name: "Nuclearization",
 		shortDesc: "Normal type moves are Super Effective on Poison and Normal types.",
