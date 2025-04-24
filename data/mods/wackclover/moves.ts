@@ -2743,7 +2743,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		cheadercrash: {
+		cheddercrash: {
 			inherit: true,
 			isNonstandard: null,
 			},
