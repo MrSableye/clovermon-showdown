@@ -1142,7 +1142,7 @@
 				"Burnem",
 				"Every 90 Secs",
 				"24 HR Shifts",
-				"Finasoven"
+				"hi :D"
 		 ],
 		 "sets":[
 				{
@@ -1218,7 +1218,7 @@
 				"Magikrap",
 				"nigger",
 				"gotem",
-				"Monstrap"
+				"fly fish"
 		 ],
 		 "sets":[
 				{
@@ -1233,7 +1233,7 @@
 							"knockoff",
 							"toxic",
 							"liquidation",
-							"uturn"
+							"flipturn"
 					 ],
 					 "level":80
 				},
@@ -1250,7 +1250,7 @@
 							"waterfall",
 							"knockoff",
 							"earthquake",
-							"psychicfangs"
+							"thalassosurge"
 					 ],
 					 "level":80
 				},
@@ -1508,7 +1508,8 @@
 				"Pajeet",
 				"Sanjeet",
 				"PooInLoo",
-				"Superpower 2020"
+				"Superpower 2020",
+				"Saar"
 		 ],
 		 "sets":[
 				{
@@ -2020,7 +2021,7 @@
 							"regenerator"
 					 ],
 					 "items":[
-							"blacksludge"
+							"leftovers"
 					 ],
 					 "moves":[
 							"spore",
@@ -2047,6 +2048,40 @@
 					 "lockedMoves":[
 							"shellsmash",
 							"acrobatics"
+					 ],
+					 "level":76
+				},
+				{
+					 "abilities":[
+							"whitesmoke"
+					 ],
+					 "items":[
+							"whiteherb"
+					 ],
+					 "moves":[
+							"roost",
+							"fowlplay"
+					 ],
+					 "lockedMoves":[
+							"parasitevirus",
+							"birdflu"
+					 ],
+					 "level":76
+				},
+				{
+					 "abilities":[
+							"regenerator"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"hexvirus",
+							"fowlplay"
+					 ],
+					 "lockedMoves":[
+							"virus",
+							"thecure"
 					 ],
 					 "level":76
 				}
@@ -2080,9 +2115,12 @@
 							"elbowdrop",
 							"drainpunch",
 							"suckerpunch",
-							"machpunch"
+							"machpunch",
+							"finishingmove",
+							"necromancy",
+							"bodyboost"
 					 ],
-					 "level":84
+					 "level":82
 				}
 		 ]
 	},
@@ -2108,9 +2146,9 @@
 					 "moves":[
 							"softboiled",
 							"aromatherapy",
-							"firelash",
+							"baconrush",
 							"earthquake",
-							"bodyslam"
+							"greasygrasp"
 					 ],
 					 "level":84
 				},
@@ -2124,10 +2162,10 @@
 					 "moves":[
 							"softboiled",
 							"healbell",
-							"firelash",
-							"bodyslam"
+							"baconrush",
+							"breakfastbreaker"
 					 ],
-					 "level":84
+					 "level":82
 				}
 		 ]
 	},
@@ -2141,7 +2179,7 @@
 		 "sets":[
 				{
 					 "abilities":[
-							"sapsipper"
+							"graze"
 					 ],
 					 "items":[
 							"leftovers"
@@ -2157,7 +2195,7 @@
 				},
 				{
 					 "abilities":[
-							"sapsipper"
+							"graze"
 					 ],
 					 "items":[
 							"leftovers"
@@ -2165,7 +2203,9 @@
 					 "moves":[
 							"voltswitch",
 							"flamethrower",
-							"grassknot"
+							"grassknot",
+							"shortcircuit",
+							"magnetforce"
 					 ],
 					 "lockedMoves":[
 							"milkdrink",
@@ -2178,26 +2218,38 @@
 	"dowster":{
 		 "nicknames":[
 				"Voldemort",
-				"Dowster",
-				"Dowster",
+				"Saint Ember",
+				"Tealster",
 				"Dowster"
 		 ],
 		 "sets":[
 				{
 					 "abilities":[
-							"shadowtag"
+							"dreamcatcher"
 					 ],
 					 "items":[
 							"lifeorb"
 					 ],
 					 "moves":[
 							"spookout",
-							"shadowball",
+							"arcanebolt",
+							"ember",
+							"retailiatespell",
+							"hexclaw",
+							"spellbind",
+							"blackmagic",
+							"magicflames",
+							"spellslash",
+							"moonblast",
 							"psychic",
-							"sludgebomb",
-							"focusblast"
+							"icebeam",
+							"darkpulse",
+							"energyball"
 					 ],
-					 "level":80
+					 "lockedMoves":[
+							"shadownova"
+					 ],
+					 "level":84
 				},
 				{
 					 "abilities":[
@@ -2247,8 +2299,8 @@
 							"mop",
 							"wish",
 							"protect",
-							"earthquake",
-							"pixiepummel"
+							"earthenfeast",
+							"greasyslap"
 					 ],
 					 "level":84
 				},
@@ -2262,8 +2314,8 @@
 					 "moves":[
 							"substitute",
 							"swordsdance",
-							"earthquake",
-							"pixiepummel",
+							"greasyslap",
+							"cbt",
 							"wish"
 					 ],
 					 "level":84
@@ -2277,8 +2329,8 @@
 					 ],
 					 "moves":[
 							"swordsdance",
-							"earthquake",
-							"pixiepummel",
+							"earthenfeast",
+							"cbt",
 							"stoneedge",
 							"closecombat"
 					 ],
@@ -2310,7 +2362,8 @@
 							"voltswitch",
 							"icebeam",
 							"thunderbolt",
-							"grassknot"
+							"grassknot",
+							"voltexplosion"
 					 ],
 					 "level":84
 				},
@@ -2400,8 +2453,9 @@
 					 ],
 					 "moves":[
 							"nastyplot",
-							"freezedry",
+							"howlingblaster",
 							"fireblast",
+							"freezedry",
 							"earthpower",
 							"boomburst"
 					 ],
@@ -2421,7 +2475,23 @@
 							"lavaplume",
 							"scald"
 					 ],
-					 "level":76
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"magicguard"
+					 ],
+					 "items":[
+							"loadeddice"
+					 ],
+					 "moves":[
+							"defog",
+							"roost",
+							"icegattling",
+							"lavaplume"
+						
+					 ],
+					 "level":80
 				}
 		 ]
 	},
@@ -2439,33 +2509,83 @@
 		 "sets":[
 				{
 					 "abilities":[
-							"intimidate",
-							"cursedbody"
-					 ],
-					 "items":[
-							"leftovers"
-					 ],
-					 "moves":[
-							"teleport",
-							"scald",
-							"painsplit",
-							"toxic",
-							"superfang"
-					 ],
-					 "level":84
-				},
-				{
-					 "abilities":[
 							"intimidate"
 					 ],
 					 "items":[
 							"leftovers"
 					 ],
 					 "moves":[
-							"curse",
-							"liquidation",
-							"icefang",
-							"aquajet"
+							"flipturn",
+							"coralreef",
+							"recover",
+							"invokedread"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"phantasma"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"shadowbreak",
+							"spookout",
+							"thalassosurge",
+							"flipturn"
+					 ],
+					 "level":84
+				}
+		 ]
+	},
+	"flowre":{
+		 "nicknames":[
+				">:^D",
+				"Rusemaster",
+				"just a prank bro",
+				"trickd",
+				"Florious",
+				"Florious",
+				"Florious",
+				"Florious"
+		 ],
+		 "sets":[
+				{
+					 "abilities":[
+							"levitate"
+					 ],
+					 "items":[
+							"blacksludge"
+					 ],
+					 "moves":[
+							"sleeppowder",
+							"leechseed",
+							"knockoff",
+							"baddybad",
+							"moonlight"
+					 ],
+					 "lockedMoves":[
+						"toxicinfo"
+							
+					 ],
+					 "level":88
+				},
+				{
+					 "abilities":[
+							"levitate"
+					 ],
+					 "items":[
+							"eviolite"
+					 ],
+					 "moves":[
+							"leechseed",
+							"moonlight",
+							"substitute"
+					 ],
+					 "lockedMoves":[
+						"toxicinfo"
+							
 					 ],
 					 "level":84
 				}
@@ -2475,7 +2595,7 @@
 		 "nicknames":[
 				"Flowey",
 				"Rusemaster",
-				"Florious",
+				"No More Games",
 				"Florious",
 				"Florious",
 				"Florious",
@@ -2495,14 +2615,14 @@
 							"sleeppowder",
 							"nastyplot",
 							"sludgewave",
-							"darkpulse",
+							"darkerpulse",
 							"aurasphere"
 					 ],
 					 "level":84
 				},
 				{
 					 "abilities":[
-							"insomnia"
+							"berserk"
 					 ],
 					 "items":[
 							"lifeorb"
@@ -2511,7 +2631,7 @@
 							"psychic",
 							"nastyplot",
 							"aurasphere",
-							"darkpulse",
+							"darkerpulse",
 							"sludgebomb"
 					 ],
 					 "level":84
@@ -2523,7 +2643,7 @@
 				"Deportee",
 				"DEPORTED",
 				"El Ogros",
-				"Somboludo",
+				"Taco Bender",
 				"Somboludo",
 				"Somboludo",
 				"Somboludo",
@@ -2543,7 +2663,7 @@
 							"stealthrock",
 							"earthquake",
 							"ironhead",
-							"slackoff"
+							"lazybreak"
 					 ],
 					 "level":76
 				},
@@ -2565,6 +2685,23 @@
 							"earthquake"
 					 ],
 					 "level":76
+				},
+				{
+					 "abilities":[
+							"sandstream",
+							"comatose"
+					 ],
+					 "items":[
+							"loadeddice"
+					 ],
+					 "moves":[
+							"swordsdance",
+							"barrage",
+							"goudagun",
+							"earthquake",
+							"rapidspin"
+					 ],
+					 "level":76
 				}
 		 ]
 	},
@@ -2572,10 +2709,10 @@
 		 "nicknames":[
 				"sminem",
 				"Buge",
-				"Marionettl",
-				"Marionettl",
-				"Marionettl",
-				"Marionettl",
+				"PuppetMaster",
+				"Overlord",
+				"Bige",
+				"Snapper",
 				"Marionettl",
 				"Marionettl"
 		 ],
@@ -2594,13 +2731,13 @@
 							"earthquake"
 					 ],
 					 "lockedMoves":[
-							"leechlife"
+							"bonecrusher"
 					 ],
 					 "level":84
 				},
 				{
 					 "abilities":[
-							"roughskin"
+							"intimidate"
 					 ],
 					 "items":[
 							"leftovers"
@@ -2611,6 +2748,22 @@
 							"powerwhip",
 							"leechseed",
 							"spikyshield",
+							"liquidation",
+							"zombiebite"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"puppeteer"
+					 ],
+					 "items":[
+							"whiteherb"
+					 ],
+					 "moves":[
+							"shamble",
+							"zombiespread",
+							"bonecrusher",
 							"liquidation"
 					 ],
 					 "level":84
@@ -2622,7 +2775,7 @@
 				"sqride",
 				"Onarhune",
 				"Hitomi",
-				"Octai",
+				"scrid",
 				"Octai",
 				"Octai",
 				"Octai",
@@ -2660,8 +2813,26 @@
 					 "moves":[
 							"milkdrink",
 							"flamethrower",
-							"scald",
+							"squirtcannon",
 							"icebeam"
+					 ],
+					 "lockedMoves":[
+							"lactoseshot"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"mistysurge"
+					 ],
+					 "items":[
+							"piratesjug"
+					 ],
+					 "moves":[
+							"milkdrink",
+							"tropicalwave",
+							"coralreef",
+							"squirtcannon"
 					 ],
 					 "lockedMoves":[
 							"lactoseshot"
@@ -2674,7 +2845,7 @@
 		 "nicknames":[
 				"Thomas",
 				"Ja-Mes",
-				"Hyletrack",
+				"No Brakes",
 				"Hyletrack",
 				"Hyletrack",
 				"Hyletrack",
@@ -2691,7 +2862,7 @@
 					 ],
 					 "moves":[
 							"heavyslam",
-							"heatcrash",
+							"fullsteamahead",
 							"earthquake",
 							"superpower",
 							"extremespeed"
@@ -2712,7 +2883,7 @@
 							"ironhead",
 							"heatcrash",
 							"earthquake",
-							"zenheadbutt"
+							"steamcharge"
 					 ],
 					 "lockedMoves":[
 							"protect"
@@ -2727,17 +2898,17 @@
 				"Blade",
 				"Caffrey",
 				"U4IC",
-				"Armowite",
-				"Armowite",
-				"Armowite",
-				"Armowite",
+				"Mlady",
+				"God is Dead",
+				"Hat in Hand",
+				"We",
 				"Armowite",
 				"Armowite"
 		 ],
 		 "sets":[
 				{
 					 "abilities":[
-							"overcoat"
+							"skeptic"
 					 ],
 					 "items":[
 							"leftovers"
@@ -2747,8 +2918,12 @@
 							"knockoff",
 							"uturn",
 							"1000folds",
-							"defog",
+							"tipfedora",
 							"pursuit"
+					 ],
+					 "lockedMoves":[
+						"selfishdrain",
+						"hatspin"
 					 ],
 					 "level":84
 				},
@@ -2761,10 +2936,56 @@
 					 ],
 					 "moves":[
 							"strengthsap",
-							"hammerarm",
+							"cosmicblade",
 							"owtheedge",
 							"1000folds",
-							"swordsdance"
+							"swordsdance",
+							"fabricstab"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"skeptic"
+					 ],
+					 "items":[
+							"lumberry"
+					 ],
+					 "moves":[
+							"sakedrink",
+							"coffeedrink",
+							"selfishdrain",
+							"1000folds"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"skeptic"
+					 ],
+					 "items":[
+							"lumberry"
+					 ],
+					 "moves":[
+							"tipfedora",
+							"coffeedrink",
+							"virgoheart",
+							"patchworkdeluge"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"skeptic"
+					 ],
+					 "items":[
+							"starfieldcapsule"
+					 ],
+					 "moves":[
+							"selfishdrain",
+							"stargaze",
+							"warpaway",
+							"godslayer"
 					 ],
 					 "level":84
 				}

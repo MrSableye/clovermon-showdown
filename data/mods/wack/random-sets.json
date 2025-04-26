@@ -8549,6 +8549,31 @@
       }
     ]
   },
+  "bcelebi": {
+    "sets": [
+      {
+        "abilities": [
+          "naturalcure",
+          "shedskin"
+        ],
+        "items": [
+          "angelpowder",
+          "lifeorb",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "zawarudo",
+          "psychic",
+          "energyball"
+        ],
+        "lockedMoves": [
+          "pollenseason",
+          "timefreeze"
+        ],
+        "level": 80
+      }
+    ]
+  },
   "bdriftblim": {
     
     "sets": [
@@ -9040,6 +9065,76 @@
         "lockedMoves": [
           "dogfight",
           "megamissile"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "galacticake": {
+    "nicknames": [
+      "nebby"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sugarrush"
+        ],
+        "items": [
+          "assaultvest",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "uturn",
+          "voltswitch",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "cosmicboost",
+          "nutrientdrain"
+        ],
+        "level": 84
+      },
+      {
+        "abilities": [
+          "sheerforce"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "uturn",
+          "voltswitch",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "cosmicboost",
+          "chocolatecrunch"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "nebrownie": {
+    "nicknames": [
+      "nebby"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sugarrush"
+        ],
+        "items": [
+          "eviolate"
+        ],
+        "moves": [
+          "uturn",
+          "voltswitch",
+          "knockoff"
+        ],
+        "lockedMoves": [
+          "cosmicboost",
+          "nutrientdrain"
         ],
         "level": 84
       }

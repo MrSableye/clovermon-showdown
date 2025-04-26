@@ -69034,6 +69034,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		onTry(source) {
+			if (source.status === 'frz' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')) return false;
+
+			if (source.hp === source.maxhp) {
+				this.add('-fail', source, 'heal');
+				return null;
+			}
+			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+				return null;
+			}
+		},
+		onHit(target, source, move) {
+			const result = target.setStatus('frz', source, move);
+			if (!result) return result;
+			target.statusState.time = 3;
+			target.statusState.startTime = 3;
+			this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+		},
 		secondary: null,
 		target: "self",
 		type: "Ice",
@@ -78243,7 +78262,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			volatileStatus: 'attract',
+		},
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",

@@ -1336,7 +1336,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-
+	starfieldcapsule: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	woodgem: {
 		inherit: true,
 		isNonstandard: null,
