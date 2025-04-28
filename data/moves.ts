@@ -32920,9 +32920,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, bite: 1, heal: 1},
+		onTry(source) {
+			if (source.hasAbility('furcoat') ) {
+				this.hint("You already have a coat on!");
+				return false;
+			}
+		},
 		onHit(pokemon) {
 			const oldAbility = pokemon.setAbility('furcoat');
 			if (oldAbility) {
+				
 				this.add('-ability', pokemon, 'Fur Coat', '[from] move: Layer Up');
 				return;
 			}
@@ -61211,11 +61218,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
 		secondary: {
-			chance: 50,
-			self: {
-				boosts: {
-					spa: 1,
-				},
+			chance: 60,
+			boosts: {
+				def: -1,
 			},
 		},
 		target: "normal",
