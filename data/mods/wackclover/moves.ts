@@ -5073,6 +5073,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		sewing: {
+			inherit: true,
+			isNonstandard: null,
+		},
 		throatheal: {
 			inherit: true,
 			isNonstandard: null,

@@ -57,7 +57,73 @@
         "level": 84
       }
     ]
-  }, 
+  },
+  "abomasnow": {   
+    "nicknames": [   
+      "Frosty"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "snowwarning"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "angelpowder",
+          "lifeorb",
+          "icycapsule"
+        ],
+        "moves": [     
+          "auroraveil",
+          "gigadrain",
+          "earthquake",
+          "freezingwave",
+          "leechseed",
+          "winterburst",
+          "woodhammer",
+          "cooldown",
+          "permafrost"
+        ],
+        "lockedMoves": [   
+          "blizzard"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+ 
+"ablaziken": {
+    "sets": [
+      {
+        "abilities": [    
+          "poisontouch",
+          "speedboost"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "angelpowder",
+          "lifeorb",
+          "acidcapsule"
+        ],
+        "moves": [     
+          "stealthrock",
+          "stoneedge",
+          "firepunch",
+          "acidrain",
+          "sludgehammer",
+          "thunderpunch",
+          "rockgather",
+          "bravebird"
+        ],
+        "lockedMoves": [   
+          "poisonjab"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+ 
+ 
 "acacturne": {   
     "sets": [
       {
@@ -87,7 +153,353 @@
       }
     ]
   }, 
-
+"absorsponge": {   
+    "nicknames": [   
+      "Bob",
+      "peak"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "waterabsorb",
+          "stormdrain",
+          "analytic"
+        ],
+        "items": [
+          "rockyhelmet", 
+          "angelpowder",
+          "expertbelt"
+        ],
+        "moves": [     
+          "avalanche",
+          "bodypress",
+          "counter",
+          "foulplay",
+          "gunkshot",
+          "gigadrain",
+          "icebeam",
+          "liquidation",
+          "knockoff",
+          "taunt",
+          "stompingtantrum",
+          "toxic",
+          "recover"
+        ],
+        "lockedMoves": [   
+          "osmosis"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "abyssparce": {   
+    "nicknames": [   
+      "Gyarados",
+      "madeinabyss",
+      "glowy"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "intimidate",
+          "illuminate", 
+          "hustle"
+        ],
+        "items": [
+          "rockyhelmet", 
+          "angelpowder",
+          "lifeorb",
+          "murkycapsule"
+        ],
+        "moves": [     
+          "bodyslam",
+          "crunch",
+          "shadowball",
+          "extremespeed",
+          "outrage",
+          "scald",
+          "nightslash",
+          "poisonfang"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+ 
+"acidoud": {   
+    "sets": [
+      {
+        "abilities": [    
+          "acidcloudburst",
+          "levitate"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "blacksludge"
+        ],
+        "moves": [     
+          "venoshock",
+          "memento",
+          "shadowball",
+          "sludgebomb",
+          "toxicspikes",
+          "tailwind",
+          "nastyplot",
+          "acidspray",
+          "smokestack",
+          "aciddrip"
+        ],
+        "lockedMoves": [   
+          "cloudgust",
+          "acidtrap"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "abutterfree": {   
+    "nicknames": [   
+      "Monarch"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "compoundeyes"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "insectplate"
+        ],
+        "moves": [     
+          "hurricane",
+          "aurasphere",
+          "heatwave",
+          "psyshock",
+          "nectartap",
+          "quiverdance"
+        ],
+        "lockedMoves": [   
+          "sleeppowder",
+          "bugbuzz"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "tintedlens"
+        ],
+        "items": [
+          "choicespecs"    
+        ],
+        "lockedMoves": [
+          "hurricane",
+          "bugbuzz",
+          "aurasphere",
+          "heatwave"
+        ],
+        "level": 84      
+      }
+    ]
+  },
+ 
+"accelgor": {   
+    "nicknames": [   
+      "Ninja",
+      "Godspeed",
+      "lightning"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "unburden"
+        ],
+        "items": [
+          "buggem", 
+          "darkgem",
+          "chaosdust",
+          "divinedust"
+        ],
+        "moves": [     
+          "knockoff",
+          "gigadrain",
+          "focusblast",
+          "recover",
+          "psychic",
+          "spikes",
+          "toxicspikes",
+          "sludgebomb",
+          "uturn"
+        ],
+        "lockedMoves": [   
+          "bugbuzz",
+          "darkpulse"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "unburden"
+        ],
+        "items": [
+          "petayaberry"    
+        ],
+        "lockedMoves": [
+          "bugbuzz",
+          "darkpulse",
+          "gigadrain",
+          "endure"
+        ],
+        "level": 84      
+      }
+    ]
+  },
+ 
+"achillesder": {   
+    "sets": [
+      {
+        "abilities": [    
+          "speedboost"
+        ],
+        "items": [
+          "holycross", 
+          "expertbelt",
+          "leftovers"
+        ],
+        "moves": [     
+          "bulletpunch",
+          "extremespeed",
+          "machpunch",
+          "closecombat",
+          "uturn",
+          "flamecharge",
+          "joust",
+          "dromeuskometes"
+        ],
+        "lockedMoves": [   
+          "troiastragoidia"
+        ],
+        "level": 80       
+      }
+    ]
+  },
+  "acisabelle": {   
+    "sets": [
+      {
+        "abilities": [    
+          "pickup"
+        ],
+        "items": [
+          "angelpowder", 
+          "chaosdust",
+          "heartgem"
+        ],
+        "moves": [     
+          "encore",
+          "normalray",
+          "bugnet",
+          "assist",
+          "fishingrod",
+          "charm"
+        ],
+        "lockedMoves": [   
+          "stickyweb",
+          "cbt"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "axelasp": {   
+    "sets": [
+      {
+        "abilities": [    
+          "compoundeyes"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [     
+          "uturn",
+          "firstimpression",
+          "hivemind",
+          "windride",
+          "extremespeed",
+          "windspin",
+          "tailwind"
+        ],
+        "lockedMoves": [   
+          "defog",
+          "recklessdive"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+ 
+"acthulist": {   
+    "nicknames": [   
+      "Radman",
+     "Rlyehian"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "unnerve",
+          "hydration",
+          "swiftswim"
+        ],
+        "items": [
+          "raincoat", 
+          "rainbarrel",
+          "swimsuit"
+        ],
+        "moves": [     
+          "insanitybolt",
+          "claustrowall",
+          "invocation",
+          "hiddenpowerice",
+          "taunt",
+          "toxic",
+          "shadowball"
+        ],
+        "lockedMoves": [   
+          "raindance",
+          "surf"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "hydration"
+        ],
+        "items": [
+          "swimsuit"    
+        ],
+        "lockedMoves": [
+          "surf",
+          "raindance",
+          "rest",
+          "corrupt"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "swiftswim"
+        ],
+        "items": [
+          "raincoat"    
+        ],
+        "lockedMoves": [
+          "surf",
+          "raindance",
+          "insanitybolt",
+          "corrupt"
+        ],
+        "level": 84      
+      }
+    ]
+  },
   "acasmoc": {   
     "sets": [
       {
@@ -3790,7 +4202,7 @@
         "moves": [     
           "slingshot",    
           "flintstrike",
-          "iron head",
+          "ironhead",
           "crystalize",
           "stealthrock"
         ],
@@ -4272,6 +4684,44 @@
           "toxicinfo"
         ],
         "level": 84
+      }
+    ]
+  },
+  "mscizor": {   
+    "sets": [
+      {
+        "abilities": [    
+          "technician"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [     
+          "pursuit",
+          "nightslash",
+          "swordsedge",
+          "firstimpression",
+          "divebomb",
+          "aerialace",
+          "swordsdance",
+          "agility",
+          "batonpass",
+          "armorburst",
+          "bulletpunch",
+          "crosscutter",
+          "knockoff",
+          "ironhead",
+          "boomerang",
+          "toxic",
+          "uturn",
+          "roost",
+          "bugbite"
+
+        ],
+        "lockedMoves": [   
+          "defog"
+        ],
+        "level": 80       
       }
     ]
   },
@@ -5966,7 +6416,7 @@
           "ritual"
         ],
         "lockedMoves": [
-          "rottenclaw",
+          "rottedclaw",
           "shadowclaw"
         ],
         "level": 84
@@ -6568,6 +7018,44 @@
           "pinmissile"
         ],
         "level": 84
+      }
+    ]
+  },
+  "icepick": {   
+    "sets": [
+      {
+        "abilities": [    
+          "technician"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [     
+          "pursuit",
+          "nightslash",
+          "swordsedge",
+          "firstimpression",
+          "divebomb",
+          "wingattack",
+          "swordsdance",
+          "agility",
+          "batonpass",
+          "iciclecrash",
+          "iceshard",
+          "crosscutter",
+          "knockoff",
+          "freezingslash",
+          "boomerang",
+          "toxic",
+          "uturn",
+          "roost",
+          "bugbite"
+
+        ],
+        "lockedMoves": [   
+          "defog"
+        ],
+        "level": 84       
       }
     ]
   },
@@ -9115,6 +9603,33 @@
       }
     ]
   },
+  "manomoth": {
+    "nicknames": [
+      "MAN"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "darklife"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "envelope",
+          "bugbuzz",
+          "schizoboost",
+          "antennatracker",
+          "sleeppowder"
+        ],
+        "lockedMoves": [
+          "morningsun",
+          "nightdaze"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "nebrownie": {
     "nicknames": [
       "nebby"
@@ -9552,6 +10067,32 @@
           "torturedspike"
         ],
         "level": 88
+      }
+    ]
+  },
+  "helift": {   
+    "sets": [
+      {
+        "abilities": [    
+          "levitate"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [     
+          "cloudgust",
+          "cyclone",
+          "rubberbeam",
+          "thermal",
+          "airpressure",
+          "rubbershield",
+          "haze"
+        ],
+        "lockedMoves": [   
+          "defog",
+          "balloonpop"
+        ],
+        "level": 84       
       }
     ]
   },
@@ -10218,6 +10759,34 @@
           "defog"
         ],
         "level": 84
+      }
+    ]
+  },
+  "snkgrimreaper": {   
+    "sets": [
+      {
+        "abilities": [    
+          "technician"
+        ],
+        "items": [
+          "eviolite"
+        ],
+        "moves": [     
+          "pursuit",
+          "nightslash",
+          "swordsedge",
+          "firstimpression",
+          "divebomb",
+          "wingattack",
+          "swordsdance",
+          "agility",
+          "batonpass"
+        ],
+        "lockedMoves": [   
+          "defog",
+          "rottedclaw"
+        ],
+        "level": 84       
       }
     ]
   },
@@ -11130,6 +11699,42 @@
         "lockedMoves": [
           "defog",
           "aeroblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "splissplash": {
+    "nicknames": [
+      "Splissplash"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magicbounce"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "rubbershield",
+          "rubbercoat",
+          "roost",
+          "tailwind",
+          "airslash",
+          "downpour",
+          "waterspout",
+          "scald",
+          "bluster",
+          "icebeam",
+          "healbell",
+          "hyperrubber",
+          "speedsap"
+        ],
+        "lockedMoves": [
+          "defog",
+          "rubberray"
         ],
         "level": 84
       }

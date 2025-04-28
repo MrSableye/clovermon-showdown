@@ -26128,6 +26128,7 @@ dustkick: ["8L1"],
 	},
 	senketula: {
 		learnset: {
+			sewing: ["8L1"],
 			anglestab: ["8L1"],
 blackweb: ["8L1"],
 stringout: ["8L1"],

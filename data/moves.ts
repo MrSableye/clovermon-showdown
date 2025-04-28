@@ -61900,14 +61900,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 			const targets: Pokemon[] = [];
 			const anyAirborne = false;
 			for (const pokemon of this.getAllActive()) {
-				if (pokemon.hasType('Grass')) {
+				if (pokemon.hasType('Bug')) {
 					// This move affects every grounded Grass-type Pokemon in play.
 					targets.push(pokemon);
 				}
 			}
 			if (!targets.length) return false; // Fails when there are no grounded Grass types or airborne Pokemon
 			for (const pokemon of targets) {
-				this.boost({atk: 1, spa: 1}, pokemon, source);
+				this.boost({accuracy: 2}, pokemon, source);
 			}
 		},
 		secondary: null,
