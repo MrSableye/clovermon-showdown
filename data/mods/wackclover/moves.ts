@@ -595,7 +595,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	strangesteam: {
 		inherit: true,
-		isNonstandard: "Past",
+		isNonstandard: null,
 	},
 	stuffcheeks: {
 		inherit: true,
@@ -3511,6 +3511,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		greenthumb: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		godforce: {
 		inherit: true,
 		isNonstandard: null,

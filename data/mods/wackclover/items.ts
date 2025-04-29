@@ -111,7 +111,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	cloversweet: {
 		inherit: true,
-		isNonstandard: "Past",
+		isNonstandard: null,
 	},
 	crackedpot: {
 		inherit: true,
@@ -1234,7 +1234,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-
+	vampirefangs: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	gravitycapsule: {
 		inherit: true,
 		isNonstandard: null,
@@ -1337,6 +1340,22 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	starfieldcapsule: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sandycapsule: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rainycapsule: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	snowycapsule: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sunnycapsule: {
 		inherit: true,
 		isNonstandard: null,
 	},

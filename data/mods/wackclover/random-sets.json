@@ -3035,7 +3035,7 @@
 							"bulletpunch"
 					 ],
 					 "lockedMoves":[
-							"poweruppunch"
+							"bodyboost"
 					 ],
 					 "level":76
 				}
@@ -3051,20 +3051,52 @@
 		 "sets":[
 				{
 					 "abilities":[
-							"toughclaws"
+							"sandrush"
 					 ],
 					 "items":[
-							"lifeorb"
+							"sandycapsule"
 					 ],
 					 "moves":[
 							"fakeout",
 							"retaliate",
 							"knockoff",
-							"rockclimb",
+							"fossilcrash",
 							"earthquake"
 					 ],
 					 "level":80
 				},
+				{
+					"abilities":[
+						   "sunbathe"
+					],
+					"items":[
+						   "sunnycapsule"
+					],
+					"moves":[
+						   "protect",
+						   "overbite",
+						   "stealthrock",
+						   "fossilcrash",
+						   "earthquake"
+					],
+					"level":80
+			   },
+			   {
+				"abilities":[
+					   "strongjaw"
+				],
+				"items":[
+					   "vampirefangs"
+				],
+				"moves":[
+					   "stalagbite",
+					   "overbite",
+					   "hyperfang",
+					   "firefang",
+					   "icefang"
+				],
+				"level":80
+		   },
 				{
 					 "abilities":[
 							"superluck"
@@ -3104,7 +3136,7 @@
 	"pyralink":{
 		 "nicknames":[
 				"Cryolink",
-				"Pyralink",
+				"Linkling",
 				"Pyralink",
 				"Pyralink"
 		 ],
@@ -3119,9 +3151,8 @@
 					 "moves":[
 							"defog",
 							"roost",
-							"lavaplume",
-							"magmastorm",
-							"glare"
+							"dragonfire",
+							"lavadrip"
 					 ],
 					 "level":80
 				},
@@ -3133,10 +3164,46 @@
 							"whiteherb"
 					 ],
 					 "moves":[
-							"flareblitz",
+							"lavablitz",
 							"clangingscales",
-							"stoneedge",
-							"earthquake"
+							"toke",
+							"ironhead"
+					 ],
+					 "lockedMoves":[
+							"toke"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"magmaarmor"
+					 ],
+					 "items":[
+							"magmagem"
+					 ],
+					 "moves":[
+							"abruption",
+							"lavaplume",
+							"roost",
+							"dragonfire"
+					 ],
+					 "lockedMoves":[
+							"toke"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"magmaarmor"
+					 ],
+					 "items":[
+							"assaultvest"
+					 ],
+					 "moves":[
+							"abruption",
+							"lavaplume",
+							"magicflames",
+							"dragonfire"
 					 ],
 					 "lockedMoves":[
 							"toke"
@@ -3148,7 +3215,7 @@
 	"tripsius":{
 		 "nicknames":[
 				"Checked",
-				"Tripsius",
+				"Pat",
 				"Tripsius",
 				"Tripsius"
 		 ],
@@ -3161,11 +3228,15 @@
 							"choiceband"
 					 ],
 					 "moves":[
-							"checkem",
+							"bonerush",
 							"volttackle",
 							"iciclespear",
 							"bulletseed",
 							"rockblast"
+							
+					 ],
+					 "lockedMoves":[
+						"checkem"
 					 ],
 					 "level":84
 				},
@@ -3190,15 +3261,18 @@
 							"skilllink"
 					 ],
 					 "items":[
-							"choicespecs",
+							
 							"kingsrock"
 					 ],
 					 "moves":[
-							"checkem",
-							"voltswitch",
-							"watershuriken",
-							"icebeam",
-							"thunderbolt"
+							"creammissiles",
+							"lightninggun",
+							"bonerush",
+							"woodcannon",
+							"micromissiles"
+					 ],
+					 "lockedMoves":[
+						"checkem"
 					 ],
 					 "level":84
 				}
@@ -3214,8 +3288,7 @@
 		 "sets":[
 				{
 					 "abilities":[
-							"poisontouch",
-							"stench"
+							"shitstorm"
 					 ],
 					 "items":[
 							"blacksludge"
@@ -3245,6 +3318,22 @@
 							"strength"
 					 ],
 					 "level":84
+				},
+				{
+					 "abilities":[
+							"poisontouch",
+							"stench"
+					 ],
+					 "items":[
+							"blacksludge"
+					 ],
+					 "moves":[
+							"inkshit",
+							"poopdunk",
+							"earthquake",
+							"slackoff"
+					 ],
+					 "level":84
 				}
 		 ]
 	},
@@ -3254,7 +3343,7 @@
 				"CurrentMood",
 				"Doki Doki",
 				"L O V E",
-				"Unjoy",
+				"Fun Time",
 				"Unjoy",
 				"Unjoy",
 				"Unjoy",
@@ -3287,10 +3376,10 @@
 					 ],
 					 "moves":[
 							"softboiled",
-							"toxic",
+							"terrify",
 							"shadowball",
 							"fireblast",
-							"focusblast"
+							"purefear"
 					 ],
 					 "level":84
 				}
@@ -3299,8 +3388,8 @@
 	"whizzard":{
 		 "nicknames":[
 				"Frigo",
-				"Whizzard",
-				"Whizzard",
+				"We Fly High",
+				"Da Wiz",
 				"Whizzard"
 		 ],
 		 "sets":[
@@ -3333,7 +3422,7 @@
 						   "slipturn",
 						   "rapidspin",
 						   "mysticalfire",
-						   "energyball"
+						   "coldspell"
 					],
 					"level":84
 			   },
@@ -3347,7 +3436,7 @@
 					 "moves":[
 							"nastyplot",
 							"blizzard",
-							"airslash",
+							"coldspell",
 							"surf"
 					 ],
 					 "level":84
@@ -3372,7 +3461,7 @@
 					 ],
 					 "moves":[
 							"dragondance",
-							"leechlife",
+							"mandiblecrush",
 							"earthquake",
 							"outrage",
 							"psychicfangs"
@@ -3410,15 +3499,31 @@
 							"earthquake"
 					 ],
 					 "level":80
+				},
+				{
+					 "abilities":[
+							"tintedlens"
+					 ],
+					 "items":[
+							"buggem"
+					 ],
+					 "moves":[
+							"megahorn",
+							"takeflight",
+							"outrage",
+							"ironhead"
+					 ],
+					 "level":80
 				}
 		 ]
 	},
 	"ogrelord":{
 		 "nicknames":[
 				"Fiona",
-				"Ogrelord",
-				"Ogrelord",
-				"Ogrelord"
+				"Puss n Boots",
+				"Onionlord",
+				"Allstar",
+				"Smashmouth"
 		 ],
 		 "sets":[
 				{
@@ -3427,17 +3532,15 @@
 					 ],
 					 "items":[
 							"leftovers",
-							"lifeorb"
+							"ogregem"
 					 ],
 					 "moves":[
 							"dragondance",
-							"woodhammer",
-							"earthquake",
-							"gunkshot"
+							"onionpeal",
+							"smashmouth",
+							"ogredrive"
 					 ],
-					 "lockedMoves":[
-							"beatup"
-					 ],
+					 
 					 "level":84
 				},
 				{
@@ -3445,15 +3548,13 @@
 							"moldbreaker"
 					 ],
 					 "items":[
-							"leftovers",
-							"lifeorb"
+							"leftovers"
 					 ],
 					 "moves":[
-							"suckerpunch",
+							"ogredrive",
 							"swordsdance",
-							"earthquake",
-							"superpower",
-							"gunkshot"
+							"suckerpunch",
+							"layerup"
 					 ],
 					 "level":84
 				}
@@ -3464,13 +3565,13 @@
 				"(((berg)))",
 				"PKMN Prism",
 				"Jewpiter",
-				"Chantruth",
-				"Chantruth",
-				"Chantruth",
-				"Chantruth",
-				"Chantruth",
-				"Chantruth",
-				"Chantruth",
+				"JewISH",
+				"JeWISH",
+				"AshkeNAZI",
+				"Fren to All :D",
+				"Echo",
+				"Gemmy Guy",
+				"Jews Rock!",
 				"Chantruth",
 				"Chantruth"
 		 ],
@@ -3483,8 +3584,8 @@
 							"darkgem"
 					 ],
 					 "moves":[
-							"earthpower",
-							"sludgebomb",
+							"consumerism",
+							"jewrock",
 							"calmmind",
 							"icebeam"
 					 ],
@@ -3552,8 +3653,8 @@
 		 "nicknames":[
 				"Astolfo",
 				"Str8",
-				"Geigh",
-				"Geigh",
+				"Honse",
+				"Bicorn",
 				"Geigh",
 				"Geigh",
 				"Geigh",
@@ -3607,15 +3708,89 @@
 							"trick"
 					 ],
 					 "level":84
+				},
+				{
+					 "abilities":[
+							"pride"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"rainbowwave",
+							"moonblast",
+							"airslash",
+							"hiv"
+					 ],
+					 "level":84
 				}
+		 ]
+	},
+	"jarape":{
+		 "nicknames":[
+				"Everywhere I Go",
+				"Stoned XD",
+				"locked away,,,",
+				"jarape",
+				"jarape"
+		 ],
+		 "sets":[
+				{
+					 "abilities":[
+							"solidrock"
+					 ],
+					 "items":[
+							"eviolite"
+					 ],
+					 "moves":[
+							"solidify",
+							"moonlight",
+							"nightshade",
+							"willowisp"
+					 ],
+					 
+					 "level":90
+				},
+				{
+					"abilities":[
+						   "solidrock"
+					],
+					"items":[
+						   "eviolite"
+					],
+					"moves":[
+						   "rockgather",
+						   "stealthrock",
+						   "voltswitch",
+						   "willowisp"
+					],
+					
+					"level":90
+			   },
+			   {
+				   "abilities":[
+						  "solidrock"
+				   ],
+				   "items":[
+						  "eviolite"
+				   ],
+				   "moves":[
+						  "rockgather",
+						  "trickroom",
+						  "teleport",
+						  "destinybond"
+				   ],
+				   
+				   "level":90
+			  }
 		 ]
 	},
 	"spilefree":{
 		 "nicknames":[
 				"SopaMacaco",
 				"Monke?",
-				"Spilefree",
-				"Spilefree",
+				"SSJ3",
+				"SupaSaiyajin",
 				"Spilefree",
 				"Spilefree",
 				"Spilefree",
@@ -3672,6 +3847,36 @@
 							"shadowball"
 					 ],
 					 "level":76
+				},
+				{
+					 "abilities":[
+							"levitate"
+					 ],
+					 "items":[
+							"ghostgem"
+					 ],
+					 "moves":[
+							"exorcism",
+							"aurasphere",
+							"voltswitch",
+							"shadowball"
+					 ],
+					 "level":76
+				},
+				{
+					 "abilities":[
+							"levitate"
+					 ],
+					 "items":[
+							"loadeddice"
+					 ],
+					 "moves":[
+							"summonspirits",
+							"aurasphere",
+							"voltswitch",
+							"shadowball"
+					 ],
+					 "level":76
 				}
 		 ]
 	},
@@ -3679,7 +3884,7 @@
 		 "nicknames":[
 				"Munchies",
 				"Cannabis",
-				"Marleyzard",
+				"Toke and Cope",
 				"Marleyzard",
 				"Marleyzard",
 				"Marleyzard",
@@ -3734,6 +3939,26 @@
 							"willowisp",
 							"toxic",
 							"gigadrain"
+					 ],
+					 "level":76
+				},
+				{
+					 "abilities":[
+							"turboblaze"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"greehousegas",
+							"pollenseason",
+							"greenthumb",
+							"trailblaze"
+					 ],
+					 "lockedMoves":[
+						"compost",
+						"spicyleaves",
+						"lavaplume"
 					 ],
 					 "level":76
 				}
@@ -3813,15 +4038,53 @@
 							"uturn",
 							"rapidspin"
 					 ],
-					 "level":84
-				}
+					 "level":80
+				},
+				{
+					"abilities":[
+						   "fuku"
+					],
+					"items":[
+						   "leftovers"
+					],
+					"moves":[
+						   "oilskin",
+						   "selffatten"
+					],
+					"lockedMoves":[
+						"greasyslap",
+						"slackoff"
+
+					],
+					"level":80
+			   }
+			   ,
+				{
+					"abilities":[
+						   "defiant"
+					],
+					"items":[
+						   "leftovers"
+					],
+					"moves":[
+						   "bodyboost",
+						   "dragondance"
+					],
+					"lockedMoves":[
+						"greasygrasp",
+						"stormthrow",
+						"slackoff"
+
+					],
+					"level":84
+			   }
 		 ]
 	},
 	"isissin":{
 		 "nicknames":[
 				"Invitation",
 				"RofPeace",
-				"Isussin",
+				"Expert Pilot",
 				"Isissin",
 				"Isissin",
 				"Isissin",

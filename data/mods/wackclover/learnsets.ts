@@ -8951,6 +8951,7 @@ reptize: ["8L1"],
 	huntabre: {
 		learnset: {
 			fossilcrash: ["8L1"],
+			stalagbite: ["8L1"],
 			agility: ["8L40"],
 			ancientpower: ["8L30"],
 			attract: ["8M"],
@@ -10358,6 +10359,7 @@ smashmouth: ["8L1"],
 	chantruth: {
 		learnset: {
 			jewrocks: ["8L1"],
+			rockgather: ["8L1"],
 CONSUMERISM: ["8L1"],
 matzoball: ["8L1"],
 communism: ["8L1"],
@@ -10648,6 +10650,7 @@ dildohorn: ["8L1"],
 	jarape: {
 		learnset: {
 			solidify: ["8L1"],
+			rockgather: ["8L1"],
 			ancientpower: ["8L18"],
 			astonish: ["8L5"],
 			aurasphere: ["8L51"],
@@ -10989,6 +10992,13 @@ exorcism: ["8L1"],
 	marleyzard: {
 		learnset: {
 			stonersunshine: ["8L1"],
+			greenthumb: ["8L1"],
+			compost: ["8L1"],
+			greenhousegas: ["8L1"],
+			pollenseason: ["8L1"],
+			spicyleaves: ["8L1"],
+			chlorobeam: ["8L1"],
+			strangesteam: ["8L1"],
 stoke: ["8L1"],
 trailblaze: ["8L1"],
 			absorb: ["8L1"],

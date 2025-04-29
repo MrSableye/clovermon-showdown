@@ -641,6 +641,54 @@
       }
     ]
   },
+  "acolthep": {   
+    "sets": [
+      {
+        "abilities": [    
+          "unnerve",
+          "synchronize"
+        ],
+        "items": [
+          "murkycapsule", 
+          "brittlebones",
+          "c4"
+        ],
+        "moves": [     
+          "claustrowall",
+          "invocation",
+          "nitpick",
+          "riftstrike",
+          "hiddenpowerice",
+          "insultandinjury",
+          "corrupt",
+          "foulplay",
+          "toxic",
+          "teeterdance",
+          "odynocharge"
+        ],
+        "lockedMoves": [   
+          "insanitybolt",
+          "darkpulse"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "tangledfeet"
+        ],
+        "items": [
+          "confoundorb"    
+        ],
+        "lockedMoves": [
+          "teeterdance",
+          "insanitybolt",
+          "insultandinjury",
+          "invocation"
+        ],
+        "level": 84      
+      }
+    ]
+  },
   "beeabee": {
     "nicknames": [
       "Beeabee"
@@ -1267,6 +1315,32 @@
       }
     ]
   },
+  "explobat": {
+    "nicknames": [
+      "Explobat"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "flashfire"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "numbinginjection",
+          "crosschop",
+          "stoke"
+        ],
+        "lockedMoves": [
+          "defog",
+          "flareblitz",
+          "bravebird"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "fissiom": {
     "nicknames": [
       "Fissiom"
@@ -1340,6 +1414,32 @@
         "lockedMoves": [
           "rest",
           "mania"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "hillipod": {
+    "nicknames": [
+      "Hillipod"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "compoundeyes"
+        ],
+        "items": [
+          "heavydutyboots",
+          "eviolate"
+        ],
+        "moves": [
+          "leechlife",
+          "extremespeed",
+          "tailwind"
+        ],
+        "lockedMoves": [
+          "defog",
+          "divebomb"
         ],
         "level": 84
       }

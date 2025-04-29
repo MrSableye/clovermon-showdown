@@ -493,12 +493,29 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 	},
 	magmaarmor: {
-		inherit: true,
-		onSourceModifyDamage(damage, source, target, move) {
-			if (['Water', 'Ice'].includes(move.type)) {
-				return this.chainModify(1, 2);
-			}
-		},
+
+			inherit: true,
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, attacker, defender, move) {
+				if (move.type === 'Fire' || move.type === 'Magma') {
+					this.debug('Magma Armor boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onModifySpAPriority: 5,
+			onModifySpA(atk, attacker, defender, move) {
+				if (move.type === 'Fire' || move.type === 'Magma') {
+					this.debug('Magma Armor boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onSourceModifyDamage(damage, source, target, move) {
+				if (['Water', 'Ice'].includes(move.type)) {
+					return this.chainModify(1, 2);
+				}
+			},
+			shortDesc: "Immune to frz. Boosts Fire- and Magma-type moves. Ice and Fire-Type moves against this Pokemon deal damage with a halved offensive stat.",
+
 	},
 	/* Clover Exclusive Abilities */
 	adminabuse: {
