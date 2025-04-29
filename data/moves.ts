@@ -54820,9 +54820,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		damageCallback(pokemon, target) {
 			if (this.field.getPseudoWeather('factory')) {
-				return this.clampIntRange(target.getUndynamaxedHP() / 3, 4);
+				return this.clampIntRange(target.getUndynamaxedHP() / 4, 3);
 			} else {
-				return this.clampIntRange(target.getUndynamaxedHP() / 1, 2);
+				return this.clampIntRange(target.getUndynamaxedHP() / 2, 1);
 			}
 		},
 
@@ -71042,9 +71042,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		
 		damageCallback(pokemon, target) {
 			if (this.field.getPseudoWeather('graveyard')) {
-				return this.clampIntRange(target.getUndynamaxedHP() / 1, 2);
+				return this.clampIntRange(target.getUndynamaxedHP() / 2, 1);
 			} else {
-				return this.clampIntRange(target.getUndynamaxedHP() / 1, 3);
+				return this.clampIntRange(target.getUndynamaxedHP() / 3, 1);
 			}
 		},
 		status: 'par',
