@@ -493,12 +493,29 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 	},
 	magmaarmor: {
-		inherit: true,
-		onSourceModifyDamage(damage, source, target, move) {
-			if (['Water', 'Ice'].includes(move.type)) {
-				return this.chainModify(1, 2);
-			}
-		},
+
+			inherit: true,
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, attacker, defender, move) {
+				if (move.type === 'Fire' || move.type === 'Magma') {
+					this.debug('Magma Armor boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onModifySpAPriority: 5,
+			onModifySpA(atk, attacker, defender, move) {
+				if (move.type === 'Fire' || move.type === 'Magma') {
+					this.debug('Magma Armor boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onSourceModifyDamage(damage, source, target, move) {
+				if (['Water', 'Ice'].includes(move.type)) {
+					return this.chainModify(1, 2);
+				}
+			},
+			shortDesc: "Immune to frz. Boosts Fire- and Magma-type moves. Ice and Fire-Type moves against this Pokemon deal damage with a halved offensive stat.",
+
 	},
 	/* Clover Exclusive Abilities */
 	adminabuse: {
@@ -848,6 +865,29 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	boardpowerz: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	justified: {
+		inherit: true,
+		onDamagingHit(damage, target, source, move) {
+			if (['Dark', 'Chaos'].includes(move.type)) {
+				this.boost({atk: 1});
+			}
+		},
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Chaos') {
+				this.debug('Justified weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Chaos') {
+				this.debug('Justified weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		shortDesc: "Halves Chaos damage. +1 Atk stage after it is damaged by a Dark- or Chaos-type move.",
 	},
 	presage: {
 		inherit: true,

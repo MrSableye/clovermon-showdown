@@ -572,6 +572,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 	},
 	electric: {
 		damageTaken: {
+			par: 3,
 			Blood: 0,
 			Bone: 1,
 			Bug: 0,

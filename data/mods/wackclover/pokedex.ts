@@ -242,7 +242,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	ogrelord: {
 		inherit: true,
-		types: ["Ogre", "Dark"],
+		types: ["Ogre"],
 	},
 	ayylamo: {
 		inherit: true,

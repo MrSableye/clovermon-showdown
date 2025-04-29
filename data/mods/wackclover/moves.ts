@@ -422,7 +422,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	burningjealousy: {
 		inherit: true,
-		isNonstandard: "Past",
+		isNonstandard: null,
 	},
 	clangoroussoul: {
 		inherit: true,
@@ -595,7 +595,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	strangesteam: {
 		inherit: true,
-		isNonstandard: "Past",
+		isNonstandard: null,
 	},
 	stuffcheeks: {
 		inherit: true,
@@ -2152,6 +2152,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	dailydose: {
 		inherit: true,
+		type: "Wind",
 		isNonstandard: null,
 	},
 	decaydrain: {
@@ -2353,6 +2354,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		anaphylacticshock: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		ancientwind: {
 		inherit: true,
 		isNonstandard: null,
@@ -2434,6 +2439,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		pray: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		astronomy: {
 		inherit: true,
 		isNonstandard: null,
@@ -2542,6 +2551,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		birdflu: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		bitesthedust: {
 		inherit: true,
 		isNonstandard: null,
@@ -2566,6 +2579,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		blinding: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		bloodbath: {
 		inherit: true,
 		isNonstandard: null,
@@ -2638,6 +2655,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		boo: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		boombox: {
 		inherit: true,
 		isNonstandard: null,
@@ -2662,6 +2683,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		brandingkiss: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		breakfastbreaker: {
 		inherit: true,
 		isNonstandard: null,
@@ -2702,6 +2727,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		cannibalize: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		carcrash: {
 		inherit: true,
 		isNonstandard: null,
@@ -2726,6 +2755,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		cheddarcrash: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		chemicalburn: {
 		inherit: true,
 		isNonstandard: null,
@@ -2770,6 +2803,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		coffeedrink: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		coinburst: {
 		inherit: true,
 		isNonstandard: null,
@@ -2798,6 +2835,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		commoncold: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		compost: {
 		inherit: true,
 		isNonstandard: null,
@@ -2814,7 +2855,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		CONSUMERISM: {
+		consumerism: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -3199,6 +3240,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		
 		expulsion: {
 		inherit: true,
 		isNonstandard: null,
@@ -3211,6 +3253,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		extrachromosome: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		fabricblast: {
 		inherit: true,
 		isNonstandard: null,
@@ -3273,6 +3319,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		feast: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		felltree: {
 		inherit: true,
 		isNonstandard: null,
@@ -3429,6 +3479,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		glacialrend: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		glassbreaker: {
 		inherit: true,
 		isNonstandard: null,
@@ -3457,6 +3511,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		greenthumb: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		godforce: {
 		inherit: true,
 		isNonstandard: null,
@@ -3685,6 +3743,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		numbinginjection: {
+			inherit: true,
+			isNonstandard: null,
+			},
+			injector: {
+				inherit: true,
+				isNonstandard: null,
+				},
 		inkshit: {
 		inherit: true,
 		isNonstandard: null,
@@ -3793,6 +3859,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		lazybreak: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		leylines: {
 		inherit: true,
 		isNonstandard: null,
@@ -3877,6 +3947,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		magmaquake: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		magmahammer: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
@@ -4096,6 +4170,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		odynocharge: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		ogreload: {
 		inherit: true,
 		isNonstandard: null,
@@ -4160,6 +4238,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		pandemic: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		parasitevirus: {
 		inherit: true,
 		isNonstandard: null,
@@ -4172,6 +4254,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		patchworkdeluge: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		performance: {
 		inherit: true,
 		isNonstandard: null,
@@ -4312,6 +4398,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		rainbowwave: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		ram: {
 		inherit: true,
 		isNonstandard: null,
@@ -4839,6 +4929,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		subzerowail: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		sugarbeam: {
 		inherit: true,
 		isNonstandard: null,
@@ -4875,6 +4969,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		sunrise: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		superhorn: {
 		inherit: true,
 		isNonstandard: null,
@@ -4979,6 +5077,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		sewing: {
+			inherit: true,
+			isNonstandard: null,
+		},
+		throatheal: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		thunderdrill: {
 		inherit: true,
 		isNonstandard: null,
@@ -5067,6 +5173,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		tropicalwave: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		tuning: {
 		inherit: true,
 		isNonstandard: null,
@@ -5091,6 +5201,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		undeadspit: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		unfetteredsoul: {
 		inherit: true,
 		isNonstandard: null,
@@ -5135,6 +5249,15 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		viralflames: {
+			inherit: true,
+			isNonstandard: null,
+			},
+			virgoheart: {
+				inherit: true,
+				isNonstandard: null,
+				},
+				
 		virus: {
 		inherit: true,
 		isNonstandard: null,
@@ -5159,6 +5282,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			inherit: true,
 			isNonstandard: null,
 			},
+			volcanoburst: {
+				inherit: true,
+				isNonstandard: null,
+				},
 		volcanopunch: {
 		inherit: true,
 		isNonstandard: null,
@@ -5177,6 +5304,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		vulcanhammer: {
 		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
 		isNonstandard: null,
 		},
 		warpaway: {
@@ -5261,6 +5389,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		zombievirus: {
+			inherit: true,
+			isNonstandard: null,
+			},
+			zombiespit: {
+				inherit: true,
+				isNonstandard: null,
+				},
 		zombind: {
 		inherit: true,
 		isNonstandard: null,
