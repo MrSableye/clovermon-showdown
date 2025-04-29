@@ -2191,7 +2191,7 @@
         "moves": [
           "slipaway",
           "sledrush",
-          "iceburg"
+          "iceberg"
         ],
         "lockedMoves": [
           "aquatail",
@@ -6291,6 +6291,81 @@
       }
     ]
   },
+  "terraol": {
+    "nicknames": [
+      "Terraol"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "clearbody"
+        ],
+        "items": [
+          "angelpowder",
+          "whiteherb"
+        ],
+        "moves": [
+          "leafstorm",
+          "whirlglass",
+          "shatterbody"
+        ],
+        "lockedMoves": [
+          "glasssparkle"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "borygon2": {
+    "nicknames": [
+      "Borygon 2 :DD"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "trace"
+        ],
+        "items": [
+          "angelpowder",
+          "whiteherb"
+        ],
+        "moves": [
+          "constructcrash",
+          "triassault",
+          "defragment",
+          "optimization"
+        ],
+        "lockedMoves": [
+          "gigabyte"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "leliaw": {
+    "nicknames": [
+      "Leliaw"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "constrictor"
+        ],
+        "items": [
+          "bindingband"
+        ],
+        "moves": [
+          "voidsmaw",
+          "firespin",
+          "protect"
+        ],
+        "lockedMoves": [
+          "godsmaw"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "astrolotl": {  
     "nicknames": [
       "Asstrolotlel"
@@ -6302,6 +6377,33 @@
         ],
         "items": [
           "heavydutyboots" 
+        ],
+        "moves": [     
+          "firelash",    
+          "knockoff",
+          "dragontail",
+          "magiccoat",
+          "defog",
+          "toxic"
+        ],
+        "lockedMoves": [   
+          "explosion"
+        ],
+        "level": 100       
+      }
+    ]
+  },
+  "solotl": {  
+    "nicknames": [
+      "betterolotlel"
+    ], 
+    "sets": [
+      {
+        "abilities": [   
+          "regenerator"
+        ],
+        "items": [
+          "eviolite" 
         ],
         "moves": [     
           "firelash",    
