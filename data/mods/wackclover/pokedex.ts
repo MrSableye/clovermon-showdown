@@ -420,6 +420,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Normal", "Heart"],
 	},
+	isissin: {
+		inherit: true,
+		types: ["Fear", "Greasy"],
+	},
 	fazeagle: {
 		inherit: true,
 		types: ["Magma", "flying"],

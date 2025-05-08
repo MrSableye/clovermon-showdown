@@ -53028,6 +53028,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, pulse: 1},
+		basePowerCallback(pokemon) {
+			return Math.floor((pokemon.happiness * 10) / 25) || 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -63920,6 +63923,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				this.field.setWeather('midnight');
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -70996,6 +71004,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				this.field.setWeather('midnight');
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fear",

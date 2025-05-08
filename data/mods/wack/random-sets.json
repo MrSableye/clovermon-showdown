@@ -9202,13 +9202,38 @@
         "moves": [
           "batbite",
           "anaphylacticshock",
-          "soopsplash"
+          "soupsplash"
         ],
         "lockedMoves": [
           "defog",
           "coronavirus"
         ],
         "level": 84
+      }
+    ]
+  },
+  "pluffle": {
+    "nicknames": [
+      "Z-Z"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "naturalcure"
+        ],
+        "items": [
+          "eviolite"
+        ],
+        "moves": [
+          "rest",
+          "wish"
+        ],
+        "lockedMoves": [
+          "moonblast",
+          "yawn",
+          "partingshot"
+        ],
+        "level": 90
       }
     ]
   },

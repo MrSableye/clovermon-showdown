@@ -4097,13 +4097,13 @@
 							"merciless"
 					 ],
 					 "items":[
-							"blacksludge"
+							"leftovers"
 					 ],
 					 "moves":[
-							"suckerpunch",
+							"necksnap",
 							"softboiled",
 							"owtheedge",
-							"gunkshot"
+							"oildrill"
 					 ],
 					 "lockedMoves":[
 							"banefulbunker"
@@ -4119,9 +4119,9 @@
 					 ],
 					 "moves":[
 							"fireblast",
-							"sludgewave",
+							"pyrophobia",
 							"softboiled",
-							"nightdaze"
+							"oildrench"
 					 ],
 					 "lockedMoves":[
 							"scorchedearth"
@@ -4139,8 +4139,8 @@
 							"softboiled",
 							"nightdaze",
 							"nastyplot",
-							"sludgewave",
-							"secretsword"
+							"pyrophobia",
+							"greasepump"
 					 ],
 					 "level":84
 				},
@@ -4149,14 +4149,14 @@
 							"blademaster"
 					 ],
 					 "items":[
-							"blacksludge"
+							"leftovers"
 					 ],
 					 "moves":[
 							"owtheedge",
 							"sacredsword",
-							"suckerpunch",
+							"oildrill",
 							"swordsdance",
-							"slimegulp"
+							"necksnap"
 					 ],
 					 "level":84
 				}
@@ -4166,7 +4166,7 @@
 		 "nicknames":[
 				"BAVI",
 				"Fat Turkey",
-				"Upchucken",
+				"Duck In",
 				"Upchucken",
 				"Upchucken",
 				"Upchucken",
@@ -4198,11 +4198,11 @@
 							"lifeorb"
 					 ],
 					 "moves":[
-							"fireblast",
+							"sunset",
 							"aeroblast",
 							"roost",
 							"superpower",
-							"hypervoice"
+							"searingsauce"
 					 ],
 					 "level":76
 				},
@@ -4216,7 +4216,7 @@
 					 "moves":[
 							"aeroblast",
 							"fireblast",
-							"hypervoice",
+							"searingsauce",
 							"roost",
 							"uturn"
 					 ],
@@ -4231,10 +4231,26 @@
 					 ],
 					 "moves":[
 							"superpower",
-							"bravebird",
+							"nosedive",
 							"uturn",
 							"flareblitz",
-							"doubleedge"
+							"eggbomb"
+					 ],
+					 "level":76
+				},
+				{
+					 "abilities":[
+							"innardsout"
+					 ],
+					 "items":[
+							"choicescarf"
+					 ],
+					 "moves":[
+							"superpower",
+							"dogfight",
+							"uturn",
+							"flareblitz",
+							"eggbomb"
 					 ],
 					 "level":76
 				}
@@ -4243,7 +4259,7 @@
 	"cannonance":{
 		 "nicknames":[
 				"Columbine",
-				"Cannonance",
+				"BFG",
 				"Cannonance",
 				"Cannonance"
 		 ],
@@ -4259,9 +4275,9 @@
 					 ],
 					 "moves":[
 							"dragonpulse",
-							"flashcannon",
-							"aurasphere",
-							"darkpulse"
+							"technoray",
+							"lightpulse",
+							"fearpulse"
 					 ],
 					 "level":76
 				},
@@ -4274,7 +4290,7 @@
 							"lifeorb"
 					 ],
 					 "moves":[
-							"dracometeor",
+							"technoray",
 							"fireblast",
 							"hydropump"
 					 ],
@@ -4313,6 +4329,21 @@
 							"flashcannon"
 					 ],
 					 "level":76
+				},
+				{
+					 "abilities":[
+							"noguard"
+					 ],
+					 "items":[
+							"razorclaw"
+					 ],
+					 "moves":[
+							"focusenergy",
+							"bfg",
+							"dracometeor",
+							"fearpulse"
+					 ],
+					 "level":76
 				}
 		 ]
 	},
@@ -4326,29 +4357,29 @@
 		 "sets":[
 				{
 					 "abilities":[
-							"unburden"
+							"strongjaw"
 					 ],
 					 "items":[
 							"weaknesspolicy"
 					 ],
 					 "moves":[
-							"heavyslam",
-							"storedpower",
-							"substitute",
-							"heatwave"
+							"gnashteeth",
+							"ironchomp",
+							"psychicfangs",
+							"firefang"
 					 ],
 					 "level":80
 				},
 				{
 					 "abilities":[
-							"unburden"
+							"flamebody"
 					 ],
 					 "items":[
 							"flyinggem"
 					 ],
 					 "moves":[
-							"ironhead",
-							"zenheadbutt"
+							"godslayer",
+							"deliverance"
 					 ],
 					 "lockedMoves":[
 							"acrobatics",
@@ -4392,13 +4423,43 @@
 							"defog"
 					 ],
 					 "level":80
+				},
+				{
+					 "abilities":[
+							"flamebody"
+					 ],
+					 "items":[
+							"whiteherb"
+					 ],
+					 "moves":[
+							"doomdesire",
+							"angelburst",
+							"deliverance",
+							"psychoboost"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"flamebody"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"energyshield",
+							"adaptray",
+							"moonlight",
+							"willowisp"
+					 ],
+					 "level":78
 				}
 		 ]
 	},
 	"foryu":{
 		 "nicknames":[
 				"Bane?",
-				"Foryu",
+				"The Big Guy",
 				"Foryu",
 				"Foryu"
 		 ],
@@ -4448,6 +4509,22 @@
 							"doubleironbash",
 							"earthquake",
 							"taunt"
+					 ],
+					 "level":72
+				},
+				{
+					 "abilities":[
+							"bigguy"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"spiritbreak",
+							"foryou",
+							"doubleironbash",
+							"cripple",
+							"bodyboost"
 					 ],
 					 "level":72
 				}
@@ -4511,6 +4588,21 @@
 							"willowisp"
 					 ],
 					 "level":72
+				},
+				{
+					 "abilities":[
+							"levitate"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"evilhurricane",
+							"tempest",
+							"ancientwind",
+							"roost"
+					 ],
+					 "level":78
 				}
 		 ]
 	},
@@ -4532,8 +4624,7 @@
 					 "moves":[
 							"dildocannon",
 							"coil",
-							"gunkshot",
-							"earthquake",
+							"rubberbullets",
 							"recover"
 					 ],
 					 "level":72
@@ -4566,8 +4657,38 @@
 							"nastyplot",
 							"clangingscales",
 							"fireblast",
-							"sludgewave",
+							"rubberray",
 							"recover"
+					 ],
+					 "level":72
+				},
+				{
+					 "abilities":[
+							"infiltrator"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"rubbershield",
+							"fireblast",
+							"rubberray",
+							"recover"
+					 ],
+					 "level":72
+				},
+				{
+					 "abilities":[
+							"infiltrator"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"hyperrubber",
+							"protect",
+							"rubberray",
+							"rubbercoat"
 					 ],
 					 "level":72
 				}

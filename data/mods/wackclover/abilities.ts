@@ -660,6 +660,16 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	pollution: {
 		inherit: true,
+		onAnyEffectiveness(typemod, target, type, move) {
+			const pollutionUser = this.effectState.target;
+
+			if (pollutionUser !== this.activePokemon) return;
+
+			if (move.type === 'Poison' && ['Water', 'Flying', 'Ground', 'Wind','Sound'].includes(type)) {
+				return 1;
+			}
+		},
+		shortDesc: "This Pokemon's Poison-type attacks are super-effective against Water-, Flying-, Wind-, Sound-, and Ground-types.",
 		isNonstandard: null,
 	},
 	pozzed: {
