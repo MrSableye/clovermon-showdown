@@ -4724,18 +4724,39 @@
 					 "level":84
 				},
 				{
+					"abilities":[
+						   "regenerator"
+					],
+					"items":[
+						   "assaultvest",
+						   "lifeorb"
+					],
+					"moves":[
+						   "punchout",
+						   "ironhead",
+						   "earthquake",
+						   "dragonclaw",
+						   "throatchop"
+					],
+					"level":84
+			   },
+				{
 					 "abilities":[
-							"ironfist"
+							"regenerator"
 					 ],
 					 "items":[
 							"lifeorb"
 					 ],
 					 "moves":[
-							"dragondance",
-							"meteormash",
+							"dragonruins",
+							"powerarena",
+							"reptize"
+					 ],
+					 
+					 "lockedMoves":[
 							"dragonfist",
 							"drainpunch",
-							"firepunch"
+							"meteormash"
 					 ],
 					 "level":84
 				}
@@ -4759,7 +4780,7 @@
 					 "moves":[
 							"stealthrock",
 							"defog",
-							"moonblast",
+							"arcanebolt",
 							"recover",
 							"glare",
 							"erosionwave"
@@ -4776,7 +4797,7 @@
 					 "moves":[
 							"calmmind",
 							"drainingkiss",
-							"moonblast",
+							"arcanebolt",
 							"earthpower",
 							"erosionwave"
 					 ],
@@ -4793,33 +4814,47 @@
 							"psychoshift",
 							"recover",
 							"erosionwave",
-							"moonblast"
+							"arcanebolt"
 					 ],
 					 "level":84
-				}
+				},
+				{
+					 "abilities":[
+							"magicguard"
+					 ],
+					 "items":[
+							"lifeorb"
+					 ],
+					 "moves":[
+							"manaverse",
+							"rockgather",
+							"arcanebolt",
+							"amberwave"
+					 ],
+					 "level":84
+					}
 		 ]
 	},
 	"deathorus":{
 		 "nicknames":[
 				"scy cade",
-				"Deathorus",
+				"Blade",
 				"Deathorus",
 				"Deathorus"
 		 ],
 		 "sets":[
 				{
 					 "abilities":[
-							"toughclaws"
+							"vespertine"
 					 ],
 					 "items":[
 							"lifeorb"
 					 ],
 					 "moves":[
-							"swordsdance",
-							"stratoblade",
-							"suckerpunch",
-							"owtheedge",
-							"sacredsword"
+							"midnight",
+							"cloudcrash",
+							"darkwind",
+							"owtheedge"
 					 ],
 					 "level":76
 				},
@@ -4834,8 +4869,22 @@
 							"hurricane",
 							"thunder",
 							"darkpulse",
-							"nastyplot",
-							"focusblast"
+							"raindance"
+					 ],
+					 "level":76
+				},
+				{
+					 "abilities":[
+							"turbine"
+					 ],
+					 "items":[
+							"lifeorb"
+					 ],
+					 "moves":[
+							"nightwind",
+							"catlazer",
+							"tempest",
+							"owtheedge"
 					 ],
 					 "level":76
 				}
@@ -4862,16 +4911,15 @@
 					 ],
 					 "moves":[
 							"headcharge",
-							"highjumpkick",
-							"flareblitz",
+							"lavablitz",
 							"milkdrink",
-							"earthquake"
+							"infohazardrush"
 					 ],
 					 "level":80
 				},
 				{
 					 "abilities":[
-							"moldbreaker"
+							"graze"
 					 ],
 					 "items":[
 							"leftovers"
@@ -4880,13 +4928,13 @@
 							"healbell",
 							"milkdrink",
 							"earthquake",
-							"bodyslam"
+							"infohazardrush"
 					 ],
 					 "level":80
 				},
 				{
 					 "abilities":[
-							"owntempo"
+							"graze"
 					 ],
 					 "items":[
 							"leftovers"
@@ -4938,10 +4986,28 @@
 							"thunderbolt",
 							"ironhead",
 							"earthquake",
-							"flashcannon"
+							"glassing"
 					 ],
 					 "level":76
-				}
+				},
+				{
+					"abilities":[
+						   "speedboost",
+						   "motordrive",
+						   "bulletproof"
+					],
+					"items":[
+						   "loadeddice"
+					],
+					"moves":[
+						   "iciclespear",
+						   "barrage",
+						   "rockblast",
+						   "bulletseed",
+						   "glassing"
+					],
+					"level":76
+			   }
 		 ]
 	},
 	"yedoom":{
@@ -4969,7 +5035,8 @@
 							"knockoff",
 							"closecombat",
 							"iciclecrash",
-							"suckerpunch"
+							"suckerpunch",
+							"aichmoclaws"
 					 ],
 					 "level":76
 				},
@@ -4985,9 +5052,9 @@
 							"moonlight",
 							"toxic",
 							"knockoff",
-							"iciclecrash"
+							"slushcrush"
 					 ],
-					 "level":76
+					 "level":80
 				}
 		 ]
 	},

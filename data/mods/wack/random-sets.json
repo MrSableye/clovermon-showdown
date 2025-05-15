@@ -1183,6 +1183,49 @@
       }
     ]
   },
+  "duvetious": {
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "chestoberry"
+        ],
+        "moves": [
+          "rest",
+          "sleeptalk",
+          "screech"
+        ],
+        "lockedMoves": [
+          "doubleedge"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "edgucate": {
+    "sets": [
+      {
+        "abilities": [
+          "keeneye"
+        ],
+        "items": [
+          "chestoberry"
+        ],
+        "moves": [
+          "psychicterrain",
+          "shadowball",
+          "calmmind",
+          "agility"
+        ],
+        "lockedMoves": [
+          "psychic"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "eeeee": {
     "nicknames": [
       "EEeEE"
@@ -1853,6 +1896,30 @@
         "lockedMoves": [   
           "powderveil",
           "befuddlepowder"
+        ],
+        "level": 88       
+      }
+    ]
+  },
+  "panslash": {  
+    "nicknames": [
+      "panslash"
+    ], 
+    "sets": [
+      {
+        "abilities": [   
+          "defiant"
+        ],
+        "items": [
+          "flyinggem"
+        ],
+        "moves": [     
+          "howl",    
+          "taunt"
+        ],
+        "lockedMoves": [   
+          "acrobatics",
+          "nightslash"
         ],
         "level": 88       
       }
@@ -3407,6 +3474,7 @@
         "moves": [
           "dragondance",
           "dragonruins",
+          "paintroller",
           "outrage",
           "dragonclaw"
         ],
@@ -3414,6 +3482,30 @@
           "bucketbomb"
         ],
         "level": 84
+      }
+    ]
+  },
+  "paintgon": {
+    "nicknames": [
+      "Paintgon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "colorchange"
+        ],
+        "items": [
+          "eviolite"          
+        ],
+        "moves": [
+          "paint",
+          "colordrain",
+          "dragondance"
+        ],
+        "lockedMoves": [
+          "paintroller"
+        ],
+        "level": 86
       }
     ]
   },
@@ -3668,6 +3760,33 @@
       }
     ]
   },
+  "sspaghetti": {
+    "nicknames": [
+      "Sspaghetti"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "waterabsorb"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "gasoline",
+          "coil",
+          "flamecharge",
+          "firespin"
+        ],
+        "lockedMoves": [
+          "searingshot",
+          "noodlewhip"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "slugeongoo": {   
     "sets": [
       {
@@ -3734,6 +3853,32 @@
           "zombievirus"
         ],
         "level": 78
+      }
+    ]
+  },
+  "timbark": {
+    "nicknames": [
+      "Timbark"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "chlorophyll"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "leechseed",
+          "superfang",
+          "workup"
+        ],
+        "lockedMoves": [
+          "woodhammer",
+          "crunch"
+        ],
+        "level": 84
       }
     ]
   },
@@ -5847,7 +5992,7 @@
       }
     ]
   },
-  "Plasmission": {   
+  "plasmission": {   
     "sets": [
       {
         "abilities": [   
@@ -5994,6 +6139,30 @@
         ],
         "lockedMoves": [   
           "dragonhorn"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "kingsdale": {   
+    "sets": [
+      {
+        "abilities": [   
+          "speedboost"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "assaultvest",
+          "riotshield"
+        ],
+        "moves": [     
+          "flamewheel",    
+          "wildcharge",
+          "highhorsepower"
+        ],
+        "lockedMoves": [   
+          "extremespeed"
         ],
         "level": 84       
       }
@@ -6438,6 +6607,46 @@
           "lastresort"
         ],
         "level": 88
+      }
+    ]
+  },
+  "raticlaw": {
+   
+    "sets": [
+      {
+        "abilities": [
+          "toughclaws"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "achillesheel",
+          "superfang",
+          "aimedshot",
+          "poisontail"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "furror": {
+   
+    "sets": [
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "angelpowder"
+        ],
+        "moves": [
+          "sewing",
+          "pillowfight",
+          "dragonclaw",
+          "stringwrap"
+        ],
+        "level": 84
       }
     ]
   },
@@ -8775,7 +8984,7 @@
           "intimidate"
         ],
         "items": [
-          "loverock"
+          "angelpowder"
         ],
         "moves": [     
           "cbt",
@@ -8798,7 +9007,7 @@
           "sadist"
         ],
         "items": [
-          "loverock"
+          "angelpowder"
         ],
         "moves": [     
           "rubberwhip",
@@ -8819,7 +9028,7 @@
           "thickfat"
         ],
         "items": [
-          "loverock"
+          "angelpowder" 
         ],
         "moves": [     
           "quartzbeam",
@@ -8854,6 +9063,28 @@
           "villainpower"
         ],
         "level": 88       
+      }
+    ]
+  },
+  "stareha": {   
+    "sets": [
+      {
+        "abilities": [   
+          "waterabsorb"
+        ],
+        "items": [
+          "stickybarb"
+        ],
+        "moves": [     
+          "scald",
+          "voidsmaw",
+          "fortuneray"
+        ],
+        "lockedMoves": [
+
+          "endvoiddream"
+        ],
+        "level": 72       
       }
     ]
   },
@@ -9307,7 +9538,7 @@
           "energyball"
         ],
         "lockedMoves": [
-          "arcrobatics",
+          "acrobatics",
           "scald"
         ],
         "level": 84
@@ -9433,7 +9664,7 @@
       }
     ]
   },
-  "Aukomala": {
+  "aukomala": {
     
     "sets": [
       {
@@ -9455,6 +9686,28 @@
         "lockedMoves": [
           "wish",
           "flamethrower"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "roticate": {
+    
+    "sets": [
+      {
+        "abilities": [
+          "strongjaw"
+        ],
+        "items": [
+          "vampirefangs"
+        ],
+        "moves": [
+          "crunch",
+          "focusenergy"
+        ],
+        "lockedMoves": [
+          "zombiebite",
+          "plaguefrenzy"
         ],
         "level": 84
       }

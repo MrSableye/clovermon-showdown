@@ -2343,6 +2343,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		aichmoclaws: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		aimforthehorn: {
 		inherit: true,
 		isNonstandard: null,
