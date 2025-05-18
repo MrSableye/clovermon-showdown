@@ -3312,6 +3312,54 @@
       }
     ]
   },
+  "aswampert": {
+    "nicknames": [
+      "A Swampert"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "swiftswim"
+        ],
+        "items": [
+          "dragongem"
+        ],
+        "moves": [
+          "raindance",
+          "raid",
+          "torpedo"
+        ],
+        "lockedMoves": [
+          "rawpower"
+        ],
+        "level": 84
+      }
+    ]
+  },
+    "cabilisk": {
+    "nicknames": [
+      "Cabilisk"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "swiftswim"
+        ],
+        "items": [
+          "dragongem"
+        ],
+        "moves": [
+          "voltswitch",
+          "outrate",
+          "irontail"
+        ],
+        "lockedMoves": [
+          "rapidspin"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "nukrylic": {
     "nicknames": [
       "Nukrylic"
