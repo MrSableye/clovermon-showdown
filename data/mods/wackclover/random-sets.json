@@ -5076,7 +5076,7 @@
 					 "moves":[
 							"spookout",
 							"skillswap",
-							"flashcannon",
+							"fadereflection",
 							"shadowball"
 					 ],
 					 "level":84
@@ -5093,6 +5093,36 @@
 							"hex",
 							"calmmind",
 							"recover"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"lightningrod"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"toxic",
+							"mirrorworld",
+							"calmmind",
+							"recover"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"lightningrod"
+					 ],
+					 "items":[
+							"whiteherb"
+					 ],
+					 "moves":[
+							"shatterbody",
+							"mirrorworld",
+							"shadowball",
+							"thunderbolt"
 					 ],
 					 "level":84
 				}
@@ -5138,6 +5168,21 @@
 							"uturn"
 					 ],
 					 "level":84
+				},
+				{
+					 "abilities":[
+							"sandstream"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"soniccharge",
+							"poopdunk",
+							"rockgather",
+							"mudcover"
+					 ],
+					 "level":84
 				}
 		 ]
 	},
@@ -5145,9 +5190,9 @@
 		 "nicknames":[
 				"BU",
 				"LOL",
-				"Lossolith",
-				"Lossolith",
-				"Lossolith",
+				"Obelisk",
+				"Space Odyssey",
+				"Star Child",
 				"Lossolith",
 				"Lossolith",
 				"Lossolith"
@@ -5182,6 +5227,21 @@
 							"teleport",
 							"stealthrock",
 							"heavyslam"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"levitate"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"astronomy",
+							"wormhole",
+							"stargaze",
+							"polylith"
 					 ],
 					 "level":84
 				}
@@ -5243,6 +5303,36 @@
 							"icebeam"
 					 ],
 					 "level":84
+				},
+				{
+					 "abilities":[
+							"degenerate"
+					 ],
+					 "items":[
+							"lifeorb"
+					 ],
+					 "moves":[
+							"wringout",
+							"cutebetrayal",
+							"attract",
+							"recover"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"degenerate"
+					 ],
+					 "items":[
+							"lifeorb"
+					 ],
+					 "moves":[
+							"enviousheart",
+							"oceanhearts",
+							"icebeam",
+							"recover"
+					 ],
+					 "level":84
 				}
 		 ]
 	},
@@ -5250,7 +5340,7 @@
 		 "nicknames":[
 				"thirsty",
 				"jeuse",
-				"Sprucifix",
+				"Treesus",
 				"Sprucifix"
 		 ],
 		 "sets":[
@@ -5282,6 +5372,51 @@
 							"recover",
 							"metronome",
 							"refresh"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"regenerator"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"barkpress",
+							"halo",
+							"ingrain",
+							"spikyshield"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"regenerator"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"seventrumpets",
+							"pray",
+							"recover",
+							"hauntedhouse"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"regenerator"
+					 ],
+					 "items":[
+							"arboreumcapsule"
+					 ],
+					 "moves":[
+							"barkpress",
+							"felltree",
+							"recover",
+							"hauntedhouse"
 					 ],
 					 "level":80
 				}
@@ -5316,6 +5451,21 @@
 							"earthquake",
 							"darkestlariat",
 							"facade"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"guts"
+					 ],
+					 "items":[
+							"flameorb"
+					 ],
+					 "moves":[
+							"hulkup",
+							"drainpunch",
+							"atomicrush",
+							"powerarena"
 					 ],
 					 "level":80
 				},
@@ -5375,14 +5525,14 @@
 							"boomburst",
 							"uturn",
 							"trick",
-							"hurricane",
+							"superhorn",
 							"earthquake"
 					 ],
 					 "level":80
 				},
 				{
 					 "abilities":[
-							"soundproof"
+							"cacophony"
 					 ],
 					 "items":[
 							"leftovers"
@@ -5391,10 +5541,40 @@
 							"protect",
 							"substitute",
 							"wish",
-							"moonblast"
+							"superhorn"
 					 ],
 					 "lockedMoves":[
 							"perishsong"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"queenlymajesty"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"echolocation",
+							"pixiepummel",
+							"thunder",
+							"soniccharge"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"boombox"
+					 ],
+					 "items":[
+							"throatspray"
+					 ],
+					 "moves":[
+							"tunning",
+							"superhorn",
+							"swansong",
+							"highnote"
 					 ],
 					 "level":80
 				}
@@ -5442,19 +5622,35 @@
 				},
 				{
 					 "abilities":[
+							"soundproof"
+					 ],
+					 "items":[
+							"blacksludge"
+					 ],
+					 "moves":[
+							"fowlplay",
+							"toxiccopy",
+							"defog",
+							"roost"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
 							"unburden"
 					 ],
 					 "items":[
-							"sitrusberry"
+							"divinedust",
+							"normalgem",
+							"throatspray"
 					 ],
 					 "moves":[
 							"nastyplot",
 							"oblivionwing",
-							"fireblast",
-							"belch",
-							"surf"
+							"foulnote",
+							"boomburst"
 					 ],
-					 "level":84
+					 "level":78
 				}
 		 ]
 	},
@@ -5462,7 +5658,7 @@
 		 "nicknames":[
 				"Rope Day",
 				"Trump",
-				"Kuklan",
+				"Litler",
 				"Kuklan",
 				"Kuklan",
 				"Kuklan",
@@ -5501,14 +5697,44 @@
 							"substitute"
 					 ],
 					 "level":82
+				},
+				{
+					 "abilities":[
+							"levitate"
+					 ],
+					 "items":[
+							"choicescarf"
+					 ],
+					 "moves":[
+							"darkfire",
+							"trailblaze",
+							"torchpass",
+							"earthpower"
+					 ],
+					 "level":82
+				},
+				{
+					 "abilities":[
+							"levitate"
+					 ],
+					 "items":[
+							"throatspray"
+					 ],
+					 "moves":[
+							"torchsong",
+							"moonlight",
+							"destinybond",
+							"defog"
+					 ],
+					 "level":82
 				}
 		 ]
 	},
 	"flameboyan":{
 		 "nicknames":[
 				"ur gay",
-				"Flameboyan",
-				"Flameboyan",
+				"stickboi",
+				"Flame on",
 				"Flameboyan"
 		 ],
 		 "sets":[
@@ -5543,13 +5769,28 @@
 							"earthpower"
 					 ],
 					 "level":84
+				},
+				{
+					 "abilities":[
+							"flamebody"
+					 ],
+					 "items":[
+							"bigfaggot"
+					 ],
+					 "moves":[
+							"moonlight",
+							"kindle",
+							"stoke",
+							"dazzlingflames"
+					 ],
+					 "level":84
 				}
 		 ]
 	},
 	"piicee":{
 		 "nicknames":[
 				"Thanks Doc",
-				"Piicee",
+				"Piccolo M.D.",
 				"Piicee",
 				"Piicee"
 		 ],
@@ -5588,6 +5829,36 @@
 							"fireblast"
 					 ],
 					 "level":84
+				},
+				{
+					 "abilities":[
+							"regenerator"
+					 ],
+					 "items":[
+							"blacksludge"
+					 ],
+					 "moves":[
+							"thecure",
+							"parasitevirus",
+							"psychoboost",
+							"fireblast"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"regenerator"
+					 ],
+					 "items":[
+							"blacksludge"
+					 ],
+					 "moves":[
+							"willowisp",
+							"hexvirus",
+							"psychoboost",
+							"kleenexray"
+					 ],
+					 "level":84
 				}
 		 ]
 	},
@@ -5619,15 +5890,29 @@
 							"ironfist"
 					 ],
 					 "items":[
+							"choicescarf"
+					 ],
+					 "moves":[
+							"voltswitch",
+							"firepunch",
+							"technorush",
+							"thunderpunch",
+							"icepunch"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"sheerforce"
+					 ],
+					 "items":[
 							"lifeorb"
 					 ],
 					 "moves":[
-							"machpunch",
-							"doubleironbash",
-							"firepunch",
-							"swordsdance",
-							"thunderpunch",
-							"icepunch"
+							"nanobotbarrier",
+							"technorush",
+							"doubleedge",
+							"thunderpunch"
 					 ],
 					 "level":84
 				},
@@ -5636,14 +5921,28 @@
 							"ironfist"
 					 ],
 					 "items":[
-							"choicescarf"
+							"loadeddice"
 					 ],
 					 "moves":[
+							"machgunblow",
+							"machpunch",
 							"doubleironbash",
-							"firepunch",
-							"superpower",
-							"thunderpunch",
-							"icepunch"
+							"thunderpunch"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"stamina"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"recover",
+							"machpunch",
+							"knockoff",
+							"toxic"
 					 ],
 					 "level":84
 				}
@@ -5673,9 +5972,9 @@
 							"assaultvest"
 					 ],
 					 "moves":[
-							"moongeistbeam",
+							"spiritdrain",
 							"aurasphere",
-							"lavaplume",
+							"combust",
 							"gigadrain"
 					 ],
 					 "level":84
@@ -5691,7 +5990,7 @@
 							"spore",
 							"willowisp",
 							"recover",
-							"moongeistbeam"
+							"soulburner"
 					 ],
 					 "level":84
 				},
@@ -5704,10 +6003,25 @@
 							"leftovers"
 					 ],
 					 "moves":[
-							"aromatherapy",
-							"recover",
+							"shedleaves",
+							"morningsun",
 							"moongeistbeam",
-							"aurasphere"
+							"nastyplot"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"cursedbody"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"shedleaves",
+							"recover",
+							"soulburner",
+							"defog"
 					 ],
 					 "level":84
 				}
@@ -5741,19 +6055,31 @@
 				},
 				{
 					 "abilities":[
-							"unburden"
+							"prankster"
 					 ],
 					 "items":[
-							"whiteherb"
+							"leftovers"
 					 ],
 					 "moves":[
-							"earthquake",
-							"woodhammer",
-							"closecombat",
-							"throatchop"
+							"stealthrock",
+							"naturepower",
+							"synthesis",
+							"encore"
 					 ],
-					 "lockedMoves":[
-							"weirdflex"
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"prankster"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"bananarang",
+							"weirdflex",
+							"synthesis",
+							"machpunch"
 					 ],
 					 "level":84
 				}
@@ -5792,15 +6118,28 @@
 							"ironfist"
 					 ],
 					 "items":[
-							"lifeorb",
+							"loadeddice"
+					 ],
+					 "moves":[
+							"headrush",
+							"drainpunch",
+							"fivestarstrike",
+							"skitter"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"ironfist"
+					 ],
+					 "items":[
 							"leftovers"
 					 ],
 					 "moves":[
 							"bulkup",
 							"drainpunch",
-							"suckerpunch",
-							"leechlife",
-							"darkestlariat"
+							"roost",
+							"knockoff"
 					 ],
 					 "level":84
 				}
@@ -5866,8 +6205,8 @@
 		 "nicknames":[
 				"Coconuts",
 				"MUH PALMS",
-				"Roynapalm",
-				"Roynapalm",
+				"Kona",
+				"Breezy",
 				"Roynapalm",
 				"Roynapalm",
 				"Roynapalm",
@@ -5883,7 +6222,7 @@
 					 ],
 					 "moves":[
 							"energyball",
-							"fireblast",
+							"sunset",
 							"earthpower",
 							"psychic"
 					 ],
@@ -5900,9 +6239,9 @@
 							"leftovers"
 					 ],
 					 "moves":[
-							"softboiled",
+							"bask",
 							"lavaplume",
-							"gigadrain",
+							"shedleaves",
 							"earthpower",
 							"leechseed"
 					 ],
@@ -5944,7 +6283,7 @@
 	"manatank":{
 		 "nicknames":[
 				"BulletSeed",
-				"Manatank",
+				"Managod",
 				"Manatank",
 				"Manatank"
 		 ],
@@ -5975,7 +6314,7 @@
 					 ],
 					 "moves":[
 							"bulkup",
-							"milkdrink",
+							"cooldown",
 							"liquidation",
 							"iciclecrash",
 							"earthquake"
@@ -6002,11 +6341,68 @@
 				}
 		 ]
 	},
+	"ricosuave":{
+		 "nicknames":[
+				"Bouncing Beebles",
+				"Rizzosauve",
+				"Ricosuave",
+				"Ricosuave"
+		 ],
+		 "sets":[
+				{
+					 "abilities":[
+							"bulletproof"
+					 ],
+					 "items":[
+							"lifeorb"
+					 ],
+					 "moves":[
+							"speedway",
+							"couragerush",
+							"swordsdance",
+							"bandshot"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"aerilate"
+					 ],
+					 "items":[
+							"lifeorb"
+					 ],
+					 "moves":[
+							"rapidspin",
+							"wish",
+							"uturn",
+							"seismictoss"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"magicbounce"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"uturn",
+							"couragerush",
+							"rapidspin",
+							"thunderwave",
+							"healingwish",
+							"taunt"
+					 ],
+					 "level":84
+				}
+		 ]
+	},
 	"anonymouse":{
 		 "nicknames":[
 				"Vendetta",
-				"Anonymouse",
-				"Anonymouse",
+				"NeverForgive",
+				"NeverForget",
 				"Anonymouse"
 		 ],
 		 "sets":[

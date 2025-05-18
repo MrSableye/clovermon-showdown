@@ -5828,6 +5828,7 @@ chokehold: ["8L1"],
 bodyboost: ["8L1"],
 hexpunch: ["8L1"],
 necromancy: ["8L1"],
+bonebreaker: ["8L1"],
 			acrobatics: ["8T"],
 			aerialace: ["8M"],
 			beatup: ["8T"],
@@ -14942,6 +14943,8 @@ marvelousexploits: ["8L1"],
 	hulkan: {
 		learnset: {
 			powerarena: ["8L1"],
+			atomicrush: ["8L1"],
+			apexmutation: ["8L1"],
 dropguard: ["8L1"],
 pumpup: ["8L1"],
 bodyboost: ["8L1"],
@@ -15174,6 +15177,7 @@ bodyboost: ["8L1"],
 	nomaestro: {
 		learnset: {
 			highnote: ["8L1"],
+			soniccharge: ["8L1"],
 swansong: ["8L1"],
 echolocation: ["8L1"],
 tuning: ["8L1"],
@@ -16753,6 +16757,7 @@ balljuggle: ["8L1"],
 	rekroach: {
 		learnset: {
 			skitter: ["8L1"],
+			fivestarstrike: ["8L1"],
 headrush: ["8L1"],
 terrify: ["8L1"],
 midnight: ["8L1"],
@@ -20113,6 +20118,7 @@ dildohorn: ["8L1"],
 	kuuroba: {
 		learnset: {
 			powerarena: ["8L1"],
+			oilup: ["8L1"],
 bodyboost: ["8L1"],
 			ancientpower: ["8L23"],
 			aromatherapy: ["8L41"],

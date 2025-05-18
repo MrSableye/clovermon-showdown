@@ -46182,7 +46182,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Ghost",
 		isNonstandard: "Future",
@@ -48426,7 +48429,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -53370,7 +53376,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -61884,7 +61893,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Rock",
 		isNonstandard: "Future",
@@ -64818,7 +64830,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, snatch: 1, mirror: 1, bite: 1},
-		secondary: null,
+		secondary: {
+			chance: 70,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Normal",
 		isNonstandard: "Future",
@@ -64909,7 +64928,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 28,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Rock",
 		isNonstandard: "Future",
@@ -67140,6 +67162,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		status: 'tox',
 		target: "allAdjacentFoes",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -68407,7 +68430,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -2,
+			},
+		},
 		target: "normal",
 		type: "Time",
 		isNonstandard: "Future",
@@ -70529,6 +70557,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
 		secondary: null,
+		onHit(pokemon, target) {
+			let factor = 0.5;
+			if (pokemon?.volatiles['bleed'])  {
+				factor = 0.65;
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+		
+
 		target: "self",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -76403,7 +76445,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Food",
 		isNonstandard: "Future",
@@ -84685,8 +84732,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Midnight Blade",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, charge: 1},
 		secondary: null,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (['midnight'].includes(attacker.effectiveWeather())) {
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Dark",
@@ -87542,6 +87605,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
 		secondary: null,
 		target: "normal",
 		type: "Fear",
@@ -87599,6 +87663,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
 		secondary: null,
+		volatileStatus: 'confusion',
 		target: "allAdjacentFoes",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -87612,6 +87677,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			spe: 1,
+			accuracy: 1,
+			evasion: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Psychic",

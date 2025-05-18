@@ -416,6 +416,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			if (this.species.baseSpecies === 'Whizzard') return false;
 			if (this.species.baseSpecies === 'Caroline') return false;
 			if (this.species.baseSpecies === 'Deathorus') return false;
+			if (this.species.baseSpecies === 'Nomaestro') return false;
 			return item !== 'airballoon';
 		},
 	},

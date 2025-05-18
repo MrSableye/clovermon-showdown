@@ -3392,6 +3392,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		fivestarstrike: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		flavorburst: {
 		inherit: true,
 		isNonstandard: null,
