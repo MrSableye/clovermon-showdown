@@ -4349,7 +4349,7 @@
         "moves": [     
           "slingshot",    
           "flintstrike",
-          "iron tail",
+          "irontail",
           "cbt",
           "stoneedge",
           "coil"
@@ -11030,7 +11030,7 @@
         "moves": [
           "firebrush",
           "bellydrum",
-          "flaeblitz"
+          "flareblitz"
         ],
         "lockedMoves": [
           "firespiral"
@@ -11420,6 +11420,84 @@
       }
     ]
   },
+    "ghostmaid": {
+    "nicknames": [
+      "Ghost Maid"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "willowisp",
+          "painsplit",
+          "possesion",
+          "hex",
+          "nightshade"
+        ],
+        "lockedMoves": [
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+    "ghasticate": {
+    "nicknames": [
+      "Ghasticate"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "strongjaw"
+        ],
+        "items": [
+          "vampirefangs"
+        ],
+        "moves": [
+          "crunch",
+          "uturn",
+          "swordsdance",
+          "superfang",
+          "shadowsneak"
+        ],
+        "lockedMoves": [
+          "hyperfang"
+        ],
+        "level": 84
+      }
+    ]
+  },
+    "raicoal": {
+    "nicknames": [
+      "Raicoal"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "hypercutter"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [
+          "ashspray",
+          "firepunch",
+          "irontail",
+          "yawn"
+        ],
+        "lockedMoves": [
+          "magmatail",
+          "drillrun"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "rosemalum": {
     "nicknames": [
       "Rosemalum"
@@ -11598,6 +11676,34 @@
           "seduction"
         ],
         "level": 84
+      }
+    ]
+  },
+  "skyrimzard": {
+    "nicknames": [
+      "Tod Howard"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "cacophony"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "lifeorb"
+        ],
+        "moves": [
+          "flareblitz",
+          "fusrodah",
+          "flamethrower",
+          "dragondance",
+          "memeticfang"
+        ],
+        "lockedMoves": [
+          "swordsedge"
+        ],
+        "level": 88
       }
     ]
   },
@@ -13340,7 +13446,7 @@
     "sets": [
       {
         "abilities": [
-          "Unburden"
+          "unburden"
         ],
         "items": [
           "murkycapsule"
@@ -13353,6 +13459,33 @@
         ],
         "lockedMoves": [
           "infernalblade",
+          "defog"
+        ],
+        "level": 84
+      }
+    ]
+  },
+   "sickler": {
+    "nicknames": [
+      "Sickler"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "limber"
+        ],
+        "items": [
+           "eviolite",
+          "eviolate",
+          "eviocicle"
+        ],
+        "moves": [
+          "leafblade",
+          "uturn",
+          "firstimpression"
+        ],
+        "lockedMoves": [
+          "knockoff",
           "defog"
         ],
         "level": 84
