@@ -26,6 +26,7 @@ export interface PollOptions {
 	isQuiz?: boolean;
 	answers: string[] | PollAnswer[];
 	ratingRequirement?: { format: string, minimumRating: number };
+	requiresEstablishedUser?: boolean;
 }
 
 export interface PollData extends PollOptions {
@@ -47,6 +48,7 @@ export class Poll extends Rooms.MinorActivity {
 	maxVotes: number;
 	answers: Map<number, PollAnswer>;
 	ratingRequirement?: { format: string, minimumRating: number };
+	requiresEstablishedUser?: boolean;
 	constructor(room: Room, options: PollOptions) {
 		super(room);
 		this.activityNumber = options.activityNumber || room.nextGameNumber();
@@ -59,6 +61,7 @@ export class Poll extends Rooms.MinorActivity {
 		this.totalVotes = options.totalVotes || 0;
 		this.maxVotes = options.maxVotes || 0;
 		this.ratingRequirement = options.ratingRequirement;
+		this.requiresEstablishedUser = options.requiresEstablishedUser;
 
 		// backwards compatibility
 		if (!options.answers) options.answers = (options as any).questions;
@@ -113,6 +116,43 @@ export class Poll extends Rooms.MinorActivity {
 				return user.sendTo(
 					this.room,
 					this.room.tr`You must have a rating of ${minimumRating} in ${format} to vote in this poll (Your rating: ${userRating})`,
+				);
+			}
+		}
+
+		if (this.requiresEstablishedUser) {
+			const isRegistered = user.registered;
+			if (!isRegistered) {
+				return user.sendTo(
+					this.room,
+					this.room.tr`You must be a registered user to vote in this poll`,
+				);
+			}
+
+			try {
+				const [result, error] = await LoginServer.request('getuser', {username: user.id});
+				if (error || !result) {
+					return user.sendTo(
+						this.room,
+						this.room.tr`Error retrieving user details. Your vote has not been submitted`,
+					);
+				}
+
+				const loginServerUser = result.user;
+				const date = new Date(loginServerUser.registertime * 1000);
+				const now = new Date();
+				now.setMonth(now.getMonth() - 3);
+
+				if (date > now) {
+					return user.sendTo(
+						this.room,
+						this.room.tr`You must be registered for at least 3 months to vote in this poll`,
+					);
+				}
+			} catch(e) {
+				return user.sendTo(
+					this.room,
+					this.room.tr`Error retrieving user details. Your vote has not been submitted`,
 				);
 			}
 		}
@@ -362,6 +402,7 @@ export class Poll extends Rooms.MinorActivity {
 			isQuiz: this.isQuiz,
 			answers: [...this.answers.values()],
 			ratingRequirement: this.ratingRequirement,
+			requiresEstablishedUser: this.requiresEstablishedUser,
 		};
 	}
 
@@ -407,6 +448,10 @@ export const commands: Chat.ChatCommands = {
 		ratingqueuehtml: 'new',
 		ratingqueuemulti: 'new',
 		ratinghtmlqueuemulti: 'new',
+		regcreate: 'new',
+		reghtmlcreate: 'new',
+		regcreatemulti: 'new',
+		reghtmlcreatemulti: 'new',
 		new(target, room, user, connection, cmd, message) {
 			room = this.requireRoom();
 			if (!target) return this.parse('/help poll new');
@@ -420,6 +465,7 @@ export const commands: Chat.ChatCommands = {
 			const supportHTML = cmd.includes('html');
 			const multiPoll = cmd.includes('multi');
 			const queue = cmd.includes('queue');
+			const requiresEstablishedUser = cmd.includes('reg');
 
 			let params = [];
 			const requiresRating = cmd.includes('rating');
@@ -514,7 +560,7 @@ export const commands: Chat.ChatCommands = {
 				return this.privateModAction(room.tr`${user.name} queued a poll.`);
 			}
 			room.setMinorActivity(new Poll(room, {
-				question: params[0], supportHTML, answers: questions, multiPoll, ratingRequirement,
+				question: params[0], supportHTML, answers: questions, multiPoll, ratingRequirement, requiresEstablishedUser,
 			}));
 
 			this.roomlog(`${user.name} used ${message}`);
