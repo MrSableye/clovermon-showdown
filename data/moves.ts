@@ -32956,6 +32956,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Ogre",
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
 	smashmouth: {
 		num: 42069675,
@@ -32975,6 +32976,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Ogre",
 		contestType: "Clever",
+		isNonstandard: "Future",
 	},
 	ogredrive: {
 		num: 4206938,
@@ -32990,6 +32992,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Ogre",
 		contestType: "Tough",
+		isNonstandard: "Future",
 	},
 	ogreload: {
 		num: 42069370,
@@ -33010,6 +33013,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Ogre",
 		contestType: "Tough",
+		isNonstandard: "Future",
 	},
 	combatorders: {
 		isNonstandard: "Future",
