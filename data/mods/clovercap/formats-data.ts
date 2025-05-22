@@ -1733,16 +1733,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	tartis: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "LC",
-	},
-	terratarus: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	stowlet: {
 		inherit: true,
 		isNonstandard: null,
@@ -2431,11 +2421,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
-	},
-	tarquail: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
 	},
 	maplage: {
 		inherit: true,
@@ -3278,6 +3263,56 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	emojinnjoyful: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	wipgorgon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	wipflail: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	wipexterminator: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	wipcyclone: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	wipinitiate: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	wipacolyte: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	wipmudbath: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	wippermafrost: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	wiptriachnid: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	wipmarkedrock: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

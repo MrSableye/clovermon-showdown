@@ -11415,6 +11415,46 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	wipgorgon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wipinitiate: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wipacolyte: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wipcyclone: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wiptriachnid: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wipmarkedrock: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wipflail: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wipexterminator: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wipmudbath: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wippermafrost: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	shelbert: {
 		tier: "Illegal",
 		isNonstandard: "Future",
