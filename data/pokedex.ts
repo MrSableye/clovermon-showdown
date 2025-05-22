@@ -53012,7 +53012,7 @@ bewilderbeast: {
 		name: "WIP: Marked Rock",
 		types: ["Rock", "Bug"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 68, atk: 98, def: 93, spa: 67, spd: 46, spe: 117},
+		baseStats: {hp: 68, atk: 98, def: 93, spa: 67, spd: 46, spe: 121},
 		abilities: {0: "Weak Armor", 1: "Sturdy", H: "Wimp Out", S: "Tinted Lens"},
 		heightm: 7.3,
 		weightkg: 700.3,
