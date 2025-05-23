@@ -583,17 +583,17 @@ export const commands: Chat.ChatCommands = {
 			const answers = Poll.getAnswers(poll.toJSON().answers);
 			const undecidedVoters: string[] = [];
 			for (const [id, choices] of Object.entries(poll.voters)) {
-				output += `<strong>${id}</strong><br><ul>`;
 				if (choices.length) {
+					output += `<strong>${id}</strong><br><ul>`;
 					choices.forEach((choice) => {
 						const answer = answers.get(choice);
 						if (!answer) return;
 						output += `<li>${answer?.name}</li>`
 					});
+					output += '</ul>';
 				} else {
 					undecidedVoters.push(id);
 				}
-				output += '</ul>';
 			}
 			if (undecidedVoters.length) {
 				output += '<strong>Undecided voters</strong><br>';
