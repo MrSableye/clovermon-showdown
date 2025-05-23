@@ -581,6 +581,7 @@ export const commands: Chat.ChatCommands = {
 	
 			let output = '<div>';
 			const answers = Poll.getAnswers(poll.toJSON().answers);
+			const undecidedVoters: string[] = [];
 			for (const [id, choices] of Object.entries(poll.voters)) {
 				output += `<strong>${id}</strong><br><ul>`;
 				if (choices.length) {
@@ -590,9 +591,13 @@ export const commands: Chat.ChatCommands = {
 						output += `<li>${answer?.name}</li>`
 					});
 				} else {
-					output += '<div>Selected no options</div>';
+					undecidedVoters.push(id);
 				}
 				output += '</ul>';
+			}
+			if (undecidedVoters.length) {
+				output += '<strong>Undecided voters</strong><br>';
+				output += `<div>${undecidedVoters.join(', ')}</div>`;
 			}
 			output += '</div>'
 			return this.sendReplyBox(output);
