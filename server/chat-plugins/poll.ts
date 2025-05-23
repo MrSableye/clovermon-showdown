@@ -578,18 +578,20 @@ export const commands: Chat.ChatCommands = {
 			this.canUseConsole();
 			room = this.requireRoom();
 			const poll = this.requireMinorActivity(Poll);
-			if (!target) return this.parse('/help poll vote');
 	
 			let output = '<div>';
 			const answers = Poll.getAnswers(poll.toJSON().answers);
 			for (const [id, choices] of Object.entries(poll.voters)) {
-				if (!choices.length) return;
 				output += `<strong>${id}</strong><br><ul>`;
-				choices.forEach((choice) => {
-					const answer = answers.get(choice);
-					if (!answer) return;
-					output += `<li>${answer?.name}</li>`
-				});
+				if (choices.length) {
+					choices.forEach((choice) => {
+						const answer = answers.get(choice);
+						if (!answer) return;
+						output += `<li>${answer?.name}</li>`
+					});
+				} else {
+					output += '<div>Selected no options</div>';
+				}
 				output += '</ul>';
 			}
 			output += '</div>'
