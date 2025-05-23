@@ -574,6 +574,27 @@ export const commands: Chat.ChatCommands = {
 			`Polls can be used as quiz questions. To do this, prepend all correct answers with a +.`,
 		],
 
+		snitch(target, room) {
+			this.canUseConsole();
+			room = this.requireRoom();
+			const poll = this.requireMinorActivity(Poll);
+			if (!target) return this.parse('/help poll vote');
+	
+			let output = '<div>';
+			const answers = Poll.getAnswers(poll.toJSON().answers);
+			for (const [id, choices] of Object.entries(poll.voters)) {
+				output += `<strong>${id}</strong><br><ul>`;
+				choices.forEach((choice) => {
+					const answer = answers.get(choice);
+					if (!answer) return;
+					output += `<li>${answer?.name}</li>`
+				});
+				output += '</ul>';
+			}
+			output += '</div>'
+			return this.sendReplyBox(output);
+		},
+
 		viewqueue(target, room, user) {
 			room = this.requireRoom();
 			this.checkCan('mute', null, room);
