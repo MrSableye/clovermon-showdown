@@ -583,6 +583,7 @@ export const commands: Chat.ChatCommands = {
 			let output = '<div>';
 			const answers = Poll.getAnswers(poll.toJSON().answers);
 			for (const [id, choices] of Object.entries(poll.voters)) {
+				if (!choices.length) return;
 				output += `<strong>${id}</strong><br><ul>`;
 				choices.forEach((choice) => {
 					const answer = answers.get(choice);
