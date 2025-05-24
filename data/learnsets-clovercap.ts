@@ -30278,7 +30278,7 @@ nightdaze: ["8E"],
 				venomdrench: ["8L1"],
 			}
 		},
-		wiptriachnid: {
+		wiptriachinid: {
 			learnset: {
 								accelerock: ["8L1"],
 acupressure: ["8L1"],
