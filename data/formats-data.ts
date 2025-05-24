@@ -11431,7 +11431,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	wiptriachnid: {
+	wiptriachinid: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
