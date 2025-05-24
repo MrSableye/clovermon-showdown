@@ -3307,7 +3307,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	wiptriachnid: {
+	wiptriachinid: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
