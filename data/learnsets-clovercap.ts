@@ -29435,7 +29435,7 @@ nightdaze: ["8E"],
 				earthshatter: ['8L1'],
 		  },
 		},
-		wipgorgon: {
+		medusith: {
 			learnset: {
 		absorb: ["8L1"],
 		acid: ["8L1"],
@@ -29541,7 +29541,7 @@ nightdaze: ["8E"],
 		wringout: ["8L1"],
 				},
 		},
-		wipmudbath: {
+		substrale: {
 			learnset: {
 				attract: ["8L1"],
 				aurorabeam: ["8L1"],
@@ -29635,7 +29635,7 @@ nightdaze: ["8E"],
 				zenheadbutt: ["8L1"],
 			},
 		},
-		wippermafrost: {
+		permaceros: {
 			learnset: {
 				attract: ["8L1"],
 				aurorabeam: ["8L1"],
@@ -29729,7 +29729,7 @@ nightdaze: ["8E"],
 				zenheadbutt: ["8L1"],
 			},
 		},
-		wipcyclone : {
+		occlone : {
 			learnset: {
 				acid: ["8L1"],
 				aerialace: ["8L1"],
@@ -29830,7 +29830,7 @@ nightdaze: ["8E"],
 				wideguard: ["8L1"],
 			}
 		},
-		wipinitiate: {
+		sycosect: {
 			learnset: {
 				absorb: ["8L1"],
 				acid: ["8L1"],
@@ -29928,7 +29928,7 @@ nightdaze: ["8E"],
 				workup: ["8L1"],
 			}
 		},
-		wipacolyte: {
+		scolifex: {
 			learnset: {
 				absorb: ["8L1"],
 				acid: ["8L1"],
@@ -30026,7 +30026,7 @@ nightdaze: ["8E"],
 				workup: ["8L1"],
 			}
 		},
-		wipflail: {
+		swinggle: {
 			learnset: {
 				guillotine: ["8L1"],
 				counter: ["8L1"],
@@ -30152,7 +30152,7 @@ nightdaze: ["8E"],
 				venomdrench: ["8L1"],
 			}
 		},
-		wipexterminator: {
+		maleentis: {
 			learnset: {
 				guillotine: ["8L1"],
 				counter: ["8L1"],
@@ -30278,7 +30278,7 @@ nightdaze: ["8E"],
 				venomdrench: ["8L1"],
 			}
 		},
-		wiptriachinid: {
+		triactite: {
 			learnset: {
 								accelerock: ["8L1"],
 acupressure: ["8L1"],
@@ -30391,7 +30391,7 @@ xscissor: ["8L1"],
 zenheadbutt: ["8L1"],
 			}
 		},
-		wipmarkedrock: {
+		tritanic: {
 			learnset: {
 				accelerock: ["8L1"],
 acupressure: ["8L1"],
