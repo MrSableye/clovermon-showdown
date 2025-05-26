@@ -3267,52 +3267,52 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	wipgorgon: {
+	medusith: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	wipflail: {
+	swinggle: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
 	},
-	wipexterminator: {
+	maleentis: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	wipcyclone: {
+	occlone: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	wipinitiate: {
+	sycosect: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
 	},
-	wipacolyte: {
+	scolifex: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	wipmudbath: {
+	substrale: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
 	},
-	wippermafrost: {
+	permaceros: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	wiptriachinid: {
+	triactite: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
 	},
-	wipmarkedrock: {
+	tritanic: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
