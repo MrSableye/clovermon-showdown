@@ -42306,7 +42306,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Ditto",
 		],
 		gen: 8,
-	otherFormes: ["Blobbos-M and M-Mega"],
+	    otherFormes: ["Blobbos-M and M-Mega"],
 		formeOrder: ["Blobbos-M and M", "Blobbos-M and M-Mega"],
 	},
 	blobbosmandmmega: {

@@ -9436,7 +9436,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	mandmite: {
 		name: "MandMite",
 		spritenum: 625,
-		megaStone: "Blobbos-MandMite-Mega",
+		megaStone: "Blobbos-M and M-Mega",
 		megaEvolves: "Blobbos-M and M",
 		itemUser: ["Blobbos-M and M"],
 		onTakeItem(item, source) {
