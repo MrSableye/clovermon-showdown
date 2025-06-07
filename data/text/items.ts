@@ -2773,6 +2773,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Candycornite",
 		desc: "If held by a Blobbos-Candycorn, this item allows it to Mega Evolve in battle.",
 	},
+	mandmite: {
+		name: "MandMite",
+		desc: "If held by a Blobbos-M and M, this item allows it to Mega Evolve in battle.",
+	},
 	fishite: {
 		name: "Fishite",
 		desc: "If held by a Blobbos-Fish, this item allows it to Mega Evolve in battle.",
