@@ -50414,6 +50414,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	emojinnjoyful: {
 		num: 42166,
 		name: "Emojinn-Joyful",
+		baseSpecies: "Emojinn",
 		forme: "Joyful",
 		types: ["Psychic", "Electric"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -50430,7 +50431,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	emojinnraging: {
 		num: 42166,
 		name: "Emojinn-Raging",
-		forme: "Raging",
+		baseSpecies: "Emojinn",
+		forme: "Raging", 
 		types: ["Psychic", "Fire"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 70, atk: 69, def: 69, spa: 126, spd: 80, spe: 111},
@@ -50446,6 +50448,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	emojinnsobbing: {
 		num: 42166,
 		name: "Emojinn-Sobbing",
+		baseSpecies: "Emojinn",
 		forme: "Sobbing",
 		types: ["Psychic", "Water"],
 		genderRatio: {M: 0.5, F: 0.5},
