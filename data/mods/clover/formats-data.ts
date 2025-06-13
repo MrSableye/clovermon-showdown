@@ -5170,7 +5170,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	foryu: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"foryou",
