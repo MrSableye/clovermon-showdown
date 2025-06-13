@@ -1,5 +1,5 @@
 export const Learnsets: {[k: string]: ModdedLearnsetData} = {
-	gobone: {
+gobone: {
 		learnset: {
 			junglesong: ['9E', '8E'],
 			powerwhip: ['9L1', '8L1'],
@@ -354,7 +354,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			yearblast: ['9L1', '8L1'],
 		},
 	},
-		flarboon: {
+	flarboon: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -390,7 +390,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			yearblast: ['9L1', '8L1'],
 		},
 	},
-		wukongu: {
+	wukongu: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -424,9 +424,10 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			slowingfist: ['9L1', '8L1'],
 			ironhead: ['9L1', '8L1'],
 			yearblast: ['9L1', '8L1'],
+			monkeyplay: ['9L1', '8L1'],
 		},
 	},
-		aquake: {
+	aquake: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -577,6 +578,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			mahoganyslam: ['9L1', '8L1'],
 			woodenfang: ['9L1', '8L1'],
 			lumber: ['9L1', '8L1'],
+			rapidspin: ['9L1', '8L1'],
 		},
 	},
 	chuckerwood: {
@@ -615,6 +617,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			mahoganyslam: ['9L1', '8L1'],
 			woodenfang: ['9L1', '8L1'],
 			lumber: ['9L1', '8L1'],
+			rapidspin: ['9L1', '8L1'],
 		},
 	},
 	poulturk: {
@@ -649,9 +652,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			hypervoice: ['9L1', '8L1'],
 			boomburst: ['9L1', '8L1'],
 			recycle: ['9L1', '8L1'],
-},
-},
-pilgrimace: {
+		},
+	},
+	pilgrimace: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -683,9 +686,9 @@ pilgrimace: {
 			hypervoice: ['9L1', '8L1'],
 			boomburst: ['9L1', '8L1'],
 			recycle: ['9L1', '8L1'],
-},
-},
-cornucopeon: {
+		},
+	},
+	cornucopeon: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -717,9 +720,9 @@ cornucopeon: {
 			hypervoice: ['9L1', '8L1'],
 			boomburst: ['9L1', '8L1'],
 			recycle: ['9L1', '8L1'],
-},
-},
-wormist: {
+		},
+	},
+	wormist: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -739,9 +742,9 @@ wormist: {
 			bugbuzz: ['9L1', '8L1'],
 			steamyspray: ['9L1', '8L1'],
 			stringshot: ['9L1', '8L1'],
-},
-},
-smokoon: {
+		},
+	},
+	smokoon: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -764,9 +767,9 @@ smokoon: {
 			steameruption: ['9L1', '8L1'],
 			roost: ['9L1', '8L1'],
 			quiverdance: ['9L1', '8L1'],
-},
-},
-bombeetle: {
+		},
+	},
+	bombeetle: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -792,9 +795,10 @@ bombeetle: {
 			steamspout: ['9L1', '8L1'],
 			earthpower: ['9L1', '8L1'],
 			uturn: ['9L1', '8L1'],
-},
-},
-knuckid: {
+			scald: ['9L1', '8L1'],
+		},
+	},
+	knuckid: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -821,10 +825,10 @@ knuckid: {
 			collisioncourse: ['9L1', '8L1'],
 			memeticfang: ['9L1', '8L1'],
 			earthquake: ['9L1', '8L1'],
-			vibecheck: ['9L1', '8L1'],
-},
-},
-uganuckles: {
+			occamsrazor: ['9L1', '8L1'],
+		},
+	},
+	uganuckles: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -851,10 +855,10 @@ uganuckles: {
 			collisioncourse: ['9L1', '8L1'],
 			memeticfang: ['9L1', '8L1'],
 			earthquake: ['9L1', '8L1'],
-			vibecheck: ['9L1', '8L1'],
-},
-},
-hons: {
+			occamsrazor: ['9L1', '8L1'],
+		},
+	},
+	hons: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -883,9 +887,10 @@ hons: {
 			stoneedge: ['9L1', '8L1'],
 			extremespeed: ['9L1', '8L1'],
 			hijumpkick: ['9L1', '8L1'],
-},
-},
-honse: {
+			slackoff: ['9L1', '8L1'],
+		},
+	},
+	honse: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -914,9 +919,10 @@ honse: {
 			stoneedge: ['9L1', '8L1'],
 			extremespeed: ['9L1', '8L1'],
 			hijumpkick: ['9L1', '8L1'],
-},
-},
-larlava: {
+			slackoff: ['9L1', '8L1'],
+		},
+	},
+	larlava: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -933,7 +939,6 @@ larlava: {
 			swagger: ['9L1', '8L1'],
 			chargebeam: ['9L1', '8L1'],
 			fierydance: ['9L1', '8L1'],
-			quiverdance: ['9L1', '8L1'],
 			discharge: ['9L1', '8L1'],
 			thunder: ['9L1', '8L1'],
 			thunderbolt: ['9L1', '8L1'],
@@ -945,9 +950,9 @@ larlava: {
 			heatwave: ['9L1', '8L1'],
 			fusionflare: ['9L1', '8L1'],
 			eruption: ['9L1', '8L1'],
-},
-},
-lavalcoon: {
+		},
+	},
+	lavalcoon: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -964,7 +969,6 @@ lavalcoon: {
 			swagger: ['9L1', '8L1'],
 			chargebeam: ['9L1', '8L1'],
 			fierydance: ['9L1', '8L1'],
-			quiverdance: ['9L1', '8L1'],
 			discharge: ['9L1', '8L1'],
 			thunder: ['9L1', '8L1'],
 			thunderbolt: ['9L1', '8L1'],
@@ -976,9 +980,9 @@ lavalcoon: {
 			heatwave: ['9L1', '8L1'],
 			fusionflare: ['9L1', '8L1'],
 			eruption: ['9L1', '8L1'],
-},
-},
-volcanoposa: {
+		},
+	},
+	volcanoposa: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -995,7 +999,6 @@ volcanoposa: {
 			swagger: ['9L1', '8L1'],
 			chargebeam: ['9L1', '8L1'],
 			fierydance: ['9L1', '8L1'],
-			quiverdance: ['9L1', '8L1'],
 			roost: ['9L1', '8L1'],
 			discharge: ['9L1', '8L1'],
 			thunder: ['9L1', '8L1'],
@@ -1008,9 +1011,10 @@ volcanoposa: {
 			heatwave: ['9L1', '8L1'],
 			fusionflare: ['9L1', '8L1'],
 			eruption: ['9L1', '8L1'],
-},
-},
-teknekal: {
+			glowsignal: ['9L1', '8L1'],
+		},
+	},
+	teknekal: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -1037,11 +1041,11 @@ teknekal: {
 			kawaiilook: ['9L1', '8L1'],
 			voltswitch: ['9L1', '8L1'],
 			lick: ['9L1', '8L1'],
-			calmmind: ['9L1', '8L1'],
+			workup: ['9L1', '8L1'],
 			dazzlinggleam: ['9L1', '8L1'],
-},
-},
-velfet: {
+		},
+	},
+	velfet: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -1068,9 +1072,9 @@ velfet: {
 			blackmagic: ['9L1', '8L1'],
 			darkpulse: ['9L1', '8L1'],
 			magicflames: ['9L1', '8L1'],
-},
-},
-wizaval: {
+		},
+	},
+	wizaval: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -1097,9 +1101,9 @@ wizaval: {
 			blackmagic: ['9L1', '8L1'],
 			darkpulse: ['9L1', '8L1'],
 			magicflames: ['9L1', '8L1'],
-},
-},
-winterminus: {
+		},
+	},
+	winterminus: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -1126,9 +1130,9 @@ winterminus: {
 			blackmagic: ['9L1', '8L1'],
 			darkpulse: ['9L1', '8L1'],
 			magicflames: ['9L1', '8L1'],
-},
-},
-obbsy: {
+		},
+	},
+	obbsy: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -1156,9 +1160,9 @@ obbsy: {
 			earthquake: ['9L1', '8L1'],
 			glassblade: ['9L1', '8L1'],
 			glowsignal: ['9L1', '8L1'],
-},
-},
-obsidium: {
+		},
+	},
+	obsidium: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -1186,9 +1190,9 @@ obsidium: {
 			earthquake: ['9L1', '8L1'],
 			glassblade: ['9L1', '8L1'],
 			glowsignal: ['9L1', '8L1'],
-},
-},
-obsidiaman: {
+		},
+	},
+	obsidiaman: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -1216,9 +1220,9 @@ obsidiaman: {
 			earthquake: ['9L1', '8L1'],
 			glassblade: ['9L1', '8L1'],
 			glowsignal: ['9L1', '8L1'],
-},
-},
-carpunny: {
+		},
+	},
+	carpunny: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -1250,9 +1254,9 @@ carpunny: {
 			playrough: ['9L1', '8L1'],
 			wildcharge: ['9L1', '8L1'],
 			spark: ['9L1', '8L1'],
-},
-},
-jackarpelope: {
+		},
+	},
+	jackarpelope: {
 		learnset: {
 			rest: ['9L1', '8L1'],
 			sleeptalk: ['9L1', '8L1'],
@@ -1284,6 +1288,6 @@ jackarpelope: {
 			playrough: ['9L1', '8L1'],
 			wildcharge: ['9L1', '8L1'],
 			spark: ['9L1', '8L1'],
-},
-},
+		},
+	},
 }
