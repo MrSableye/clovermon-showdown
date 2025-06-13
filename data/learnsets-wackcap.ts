@@ -424,6 +424,7 @@ export const Learnsets: { [k: string]: LearnsetData; } = {
 			slowingfist: ['9L1', '8L1'],
 			ironhead: ['9L1', '8L1'],
 			yearblast: ['9L1', '8L1'],
+			monkeyplay: ['9L1', '8L1'],
 		},
 	},
 	aquake: {
@@ -577,6 +578,7 @@ export const Learnsets: { [k: string]: LearnsetData; } = {
 			mahoganyslam: ['9L1', '8L1'],
 			woodenfang: ['9L1', '8L1'],
 			lumber: ['9L1', '8L1'],
+			rapidspin: ['9L1', '8L1'],
 		},
 	},
 	chuckerwood: {
@@ -615,6 +617,7 @@ export const Learnsets: { [k: string]: LearnsetData; } = {
 			mahoganyslam: ['9L1', '8L1'],
 			woodenfang: ['9L1', '8L1'],
 			lumber: ['9L1', '8L1'],
+			rapidspin: ['9L1', '8L1'],
 		},
 	},
 	poulturk: {
@@ -792,6 +795,7 @@ export const Learnsets: { [k: string]: LearnsetData; } = {
 			steamspout: ['9L1', '8L1'],
 			earthpower: ['9L1', '8L1'],
 			uturn: ['9L1', '8L1'],
+			scald: ['9L1', '8L1'],
 		},
 	},
 	knuckid: {
@@ -821,7 +825,7 @@ export const Learnsets: { [k: string]: LearnsetData; } = {
 			collisioncourse: ['9L1', '8L1'],
 			memeticfang: ['9L1', '8L1'],
 			earthquake: ['9L1', '8L1'],
-			vibecheck: ['9L1', '8L1'],
+			occamsrazor: ['9L1', '8L1'],
 		},
 	},
 	uganuckles: {
@@ -851,7 +855,7 @@ export const Learnsets: { [k: string]: LearnsetData; } = {
 			collisioncourse: ['9L1', '8L1'],
 			memeticfang: ['9L1', '8L1'],
 			earthquake: ['9L1', '8L1'],
-			vibecheck: ['9L1', '8L1'],
+			occamsrazor: ['9L1', '8L1'],
 		},
 	},
 	hons: {
@@ -883,6 +887,7 @@ export const Learnsets: { [k: string]: LearnsetData; } = {
 			stoneedge: ['9L1', '8L1'],
 			extremespeed: ['9L1', '8L1'],
 			hijumpkick: ['9L1', '8L1'],
+			slackoff: ['9L1', '8L1'],
 		},
 	},
 	honse: {
@@ -914,6 +919,7 @@ export const Learnsets: { [k: string]: LearnsetData; } = {
 			stoneedge: ['9L1', '8L1'],
 			extremespeed: ['9L1', '8L1'],
 			hijumpkick: ['9L1', '8L1'],
+			slackoff: ['9L1', '8L1'],
 		},
 	},
 	larlava: {
@@ -933,7 +939,6 @@ export const Learnsets: { [k: string]: LearnsetData; } = {
 			swagger: ['9L1', '8L1'],
 			chargebeam: ['9L1', '8L1'],
 			fierydance: ['9L1', '8L1'],
-			quiverdance: ['9L1', '8L1'],
 			discharge: ['9L1', '8L1'],
 			thunder: ['9L1', '8L1'],
 			thunderbolt: ['9L1', '8L1'],
@@ -964,7 +969,6 @@ export const Learnsets: { [k: string]: LearnsetData; } = {
 			swagger: ['9L1', '8L1'],
 			chargebeam: ['9L1', '8L1'],
 			fierydance: ['9L1', '8L1'],
-			quiverdance: ['9L1', '8L1'],
 			discharge: ['9L1', '8L1'],
 			thunder: ['9L1', '8L1'],
 			thunderbolt: ['9L1', '8L1'],
@@ -995,7 +999,6 @@ export const Learnsets: { [k: string]: LearnsetData; } = {
 			swagger: ['9L1', '8L1'],
 			chargebeam: ['9L1', '8L1'],
 			fierydance: ['9L1', '8L1'],
-			quiverdance: ['9L1', '8L1'],
 			roost: ['9L1', '8L1'],
 			discharge: ['9L1', '8L1'],
 			thunder: ['9L1', '8L1'],
@@ -1008,6 +1011,7 @@ export const Learnsets: { [k: string]: LearnsetData; } = {
 			heatwave: ['9L1', '8L1'],
 			fusionflare: ['9L1', '8L1'],
 			eruption: ['9L1', '8L1'],
+			glowsignal: ['9L1', '8L1'],
 		},
 	},
 	teknekal: {
@@ -1037,7 +1041,7 @@ export const Learnsets: { [k: string]: LearnsetData; } = {
 			kawaiilook: ['9L1', '8L1'],
 			voltswitch: ['9L1', '8L1'],
 			lick: ['9L1', '8L1'],
-			calmmind: ['9L1', '8L1'],
+			workup: ['9L1', '8L1'],
 			dazzlinggleam: ['9L1', '8L1'],
 		},
 	},
