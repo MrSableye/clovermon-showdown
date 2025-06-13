@@ -24137,6 +24137,134 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	ninetalesalola: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	landorustherian: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pastabcurry: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pastiot: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	rotomheat: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	rotomwash: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sinistchamasterpiece: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	thundurustherian: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tornadustherian: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	yamperpasta: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	slowbrogalar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	marowakalola: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	taurospaldeaaqua: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	weezinggalar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sandshrewalola: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sandslashalola: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	rotommow: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	taurospaldeablaze: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	linoonegalar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mrmimegalar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pastamcurry: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	spastle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	vulpixalola: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	darumakagalar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	diglettalola: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	farfetchdgalar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	meowthalola: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	meowthgalar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ponytagalar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	slowpokegalar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	yamaskgalar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	zigzagoongalar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	gobone: {
 		inherit: true,
 		tier: "LC",
