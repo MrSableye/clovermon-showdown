@@ -1157,7 +1157,7 @@ export const Formats: FormatList = [
 		
 	},
 	{
-		name: '[Gen 8 Wack Only] CAP OU',
+		name: '[Gen 8 Wack CAP Only] CAP OU',
 		mod: 'wackcap',
 		ruleset: [
 			'Terastal Clause',
