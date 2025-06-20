@@ -2669,7 +2669,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		bloodspatter: {
+		bloodsplatter: {
 		inherit: true,
 		isNonstandard: null,
 		},
