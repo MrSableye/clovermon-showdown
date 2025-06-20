@@ -1479,4 +1479,12 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	eviolate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	eviocicle: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

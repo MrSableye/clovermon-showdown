@@ -610,7 +610,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					yellow: 'Paper',
 					green: 'Zombie',
 					black: 'Shadow',
-					brown: 'Greasy',
+					brown: 'Ogre',
 					purple: 'Virus',
 					gray: 'Chaos',
 					white: 'Divine',

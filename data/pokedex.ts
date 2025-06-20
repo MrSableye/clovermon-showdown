@@ -98877,7 +98877,7 @@ bewilderbeast: {
 		name: "Ballough",
 		types: ["Food", "Virus"],
 		baseStats: {hp: 100, atk: 30, def: 100, spa: 100, spd: 60, spe: 40},
-		abilities: {0: "Cute Charm", 1: " GOOEY", H: "Thick Fat"},
+		abilities: {0: "Cute Charm", 1: "Gooey", H: "Thick Fat"},
 		heightm: 3.6,
 		weightkg: 125.7,
 		color: "White",

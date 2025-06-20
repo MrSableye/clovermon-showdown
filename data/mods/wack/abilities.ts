@@ -61,6 +61,17 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "Rain Dance: heals 1/16, Acid Rain: takes 1/16.",
 		isNonstandard: null,
 	},
+	roughskin: {
+		inherit: true,
+		onModifyMovePriority: 1,
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.baseSpecies !== 'Maidcoresh' || attacker.transformed) return;
+			if (move.category === 'Status' && move.id !== 'protect') return;
+			const targetForme = (move.id === 'protect' ? 'Maidcoresh' : 'Maidcoresh-Blade');
+			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+		},
+		isNonstandard: null,
+	},
 	poisonheal: {
 		inherit: true,
 		onWeather(target, source, effect) {
