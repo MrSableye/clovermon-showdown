@@ -2581,6 +2581,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		barkskin: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		barkpress: {
 		inherit: true,
 		isNonstandard: null,
@@ -2679,6 +2683,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		bloodblade: {
 		inherit: true,
+		flags: {contact: 1, protect: 1, slicing: 1, mirror: 1},
 		isNonstandard: null,
 		},
 		bloodhound: {
@@ -4051,6 +4056,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		lumber: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		lunacy: {
 		inherit: true,
 		isNonstandard: null,
@@ -4536,6 +4545,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		pulpstream: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		sawdust: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		pumpup: {
 		inherit: true,
 		isNonstandard: null,
@@ -4738,6 +4755,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			inherit: true,
 			isNonstandard: null,
 			},
+		sanguinefang: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		seasonalflowers: {
 		inherit: true,
 		isNonstandard: null,

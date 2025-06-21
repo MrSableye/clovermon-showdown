@@ -248,6 +248,14 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Cosmic"],
 	},
+	senketula: {
+		inherit: true,
+		types: ["Fabric", "Blood"],
+	},
+	reagain: {
+		inherit: true,
+		types: ["Wood", "Ground"],
+	},
 	chasumo: {
 		inherit: true,
 		types: ["Fighting", "Greasy"],
