@@ -77953,9 +77953,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onResidual(pokemon) {
 				if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable() && !pokemon.hasType('Magma')) {
 					this.heal(pokemon.baseMaxhp / 18, pokemon, pokemon);
-					pokemon.trySetStatus('brn');
+					
 				} else if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable() && !pokemon.hasType('Magma')) {
 					this.damage(pokemon.baseMaxhp / 10, pokemon);
+					pokemon.trySetStatus('brn');
 				}
 			},
 			onFieldResidualOrder: 27,
