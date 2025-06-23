@@ -2043,7 +2043,7 @@
 					 "moves":[
 							"earthquake",
 							"closecombat",
-							"gunkshot"
+							"injector"
 					 ],
 					 "lockedMoves":[
 							"shellsmash",
@@ -6207,7 +6207,7 @@
 				"MUH PALMS",
 				"Kona",
 				"Breezy",
-				"Roynapalm",
+				"Sunsetter",
 				"Roynapalm",
 				"Roynapalm",
 				"Roynapalm"
@@ -6417,6 +6417,7 @@
 							"swordsdance",
 							"suckerpunch",
 							"volttackle",
+							"voltfang",
 							"owtheedge",
 							"psychicfangs"
 					 ],
@@ -6433,9 +6434,9 @@
 					 "moves":[
 							"fakeout",
 							"voltswitch",
-							"nuzzle",
+							"lightningflash",
 							"superfang",
-							"mop",
+							"screwattack",
 							"owtheedge"
 					 ],
 					 "level":84
@@ -6460,7 +6461,8 @@
 							"spore",
 							"substitute",
 							"earthquake",
-							"acrobatics"
+							"acrobatics",
+							"evilhurricane"
 					 ],
 					 "level":80
 				},
@@ -6475,7 +6477,8 @@
 							"spore",
 							"stealthrock",
 							"uturn",
-							"earthquake"
+							"earthquake",
+							"dogfight"
 					 ],
 					 "lockedMoves":[
 							"explosion"
@@ -6508,7 +6511,7 @@
 							"return",
 							"outrage",
 							"earthquake",
-							"superpower"
+							"gorillapower"
 					 ],
 					 "level":76
 				},
@@ -6524,7 +6527,7 @@
 							"fakeout",
 							"dragontail",
 							"bodyslam",
-							"earthquake"
+							"gorillapower"
 					 ],
 					 "level":76
 				},
@@ -6583,7 +6586,7 @@
 		 "nicknames":[
 				"Stingulor",
 				"Scuttlebug",
-				"Scythear",
+				"Yeerk",
 				"Scythear",
 				"Scythear",
 				"Scythear",
@@ -6622,6 +6625,21 @@
 							"earthquake"
 					 ],
 					 "level":80
+					},
+				{
+					 "abilities":[
+							"hypercutter"
+					 ],
+					 "items":[
+							"lifeorb"
+					 ],
+					 "moves":[
+							"needlesquall",
+							"stingerlance",
+							"bloodletting",
+							"swordsdance"
+					 ],
+					 "level":80
 				}
 		 ]
 	},
@@ -6639,18 +6657,16 @@
 		 "sets":[
 				{
 					 "abilities":[
-							"thickfat",
-							"overcoat"
+							"firewall"
 					 ],
 					 "items":[
-							"leftovers"
+							"chestoberry"
 					 ],
 					 "moves":[
-							"uturn",
-							"recover",
-							"plasmafists",
-							"nuzzle",
-							"seedbomb"
+							"comfycoil",
+							"firewallpress",
+							"sleeptalk",
+							"nuzzle"
 					 ],
 					 "level":84
 				},
@@ -6660,14 +6676,13 @@
 							"overcoat"
 					 ],
 					 "items":[
-							"leftovers"
+							"cybergem"
 					 ],
 					 "moves":[
-							"poweruppunch",
+							"ransomwareslam",
 							"recover",
 							"lunge",
-							"plasmafists",
-							"seedbomb"
+							"poweruppunch"
 					 ],
 					 "level":84
 				}
@@ -6694,10 +6709,9 @@
 					 ],
 					 "moves":[
 							"voltswitch",
-							"uturn",
 							"bugbuzz",
-							"energyball",
-							"focusblast"
+							"datastorm",
+							"plasmacannon"
 					 ],
 					 "level":80
 				},
@@ -6710,10 +6724,10 @@
 					 ],
 					 "moves":[
 							"nastyplot",
-							"thunderbolt",
+							"datastorm",
 							"bugbuzz",
-							"energyball",
-							"focusblast"
+							"plasmacannon",
+							"viraloverdrive"
 					 ],
 					 "level":80
 				}
@@ -6735,11 +6749,16 @@
 							"lifeorb"
 					 ],
 					 "moves":[
-							"swordsdance",
-							"pixiepummel",
-							"sacredsword",
+							"magmasword",
+							"spellslash",
 							"owtheedge",
-							"leafblade"
+							"leafblade",
+							"swordofdawn"
+					 ],
+					  "lockedMoves":[
+						"swordsdance",
+							"mysticsword",
+							"sacredsword"
 					 ],
 					 "level":80
 				},
@@ -6758,6 +6777,7 @@
 							"stoneedge",
 							"earthquake"
 					 ],
+					
 					 "level":80
 				}
 		 ]
@@ -6784,10 +6804,25 @@
 					 ],
 					 "moves":[
 							"willowisp",
-							"foulplay",
-							"darkpulse",
+							"anxiety",
 							"softboiled",
 							"hex"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"pressure",
+							"insomnia"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"enfeebleray",
+							"calmmind",
+							"darkerpulse",
+							"spiritdrain"
 					 ],
 					 "level":80
 				}
@@ -6798,7 +6833,7 @@
 				"T-100",
 				"T-200",
 				"T-1000",
-				"Galavire",
+				"T-2000",
 				"Galavire",
 				"Galavire",
 				"Galavire",
@@ -6818,10 +6853,10 @@
 					 ],
 					 "moves":[
 							"voltswitch",
-							"flashcannon",
-							"overheat",
+							"magnetforce",
+							"plasmacannon",
 							"thunderbolt",
-							"psychic"
+							"voltexplosion"
 					 ],
 					 "level":76
 				},
@@ -6835,9 +6870,9 @@
 					 "moves":[
 							"nastyplot",
 							"thunderbolt",
-							"flashcannon",
-							"energyball",
-							"overheat"
+							"magnetforce",
+							"technoray",
+							"shortcircuit"
 					 ],
 					 "level":76
 				}
@@ -6871,7 +6906,7 @@
 							"punchout",
 							"doubleironbash",
 							"plasmafists",
-							"zenheadbutt",
+							"pistonpunch",
 							"earthquake"
 					 ],
 					 "level":76
@@ -6912,11 +6947,10 @@
 							"leftovers"
 					 ],
 					 "moves":[
-							"sleazyspores",
+							"coralreef",
 							"scald",
-							"spore",
 							"leechseed",
-							"icebeam"
+							"coralgraze"
 					 ],
 					 "level":80
 				},
@@ -6931,8 +6965,8 @@
 					 "moves":[
 							"calmmind",
 							"seedflare",
-							"cottonguard",
-							"scald"
+							"pollenseason",
+							"hydropump"
 					 ],
 					 "level":80
 				},
@@ -6945,10 +6979,9 @@
 					 ],
 					 "moves":[
 							"seedflare",
-							"earthpower",
-							"hydropump",
-							"icebeam",
-							"calmmind"
+							"mop",
+							"powderveil",
+							"scald"
 					 ],
 					 "level":80
 				}
@@ -6981,7 +7014,7 @@
 							"mop",
 							"softboiled",
 							"teleport",
-							"psychic",
+							"squirtcannon",
 							"toxic"
 					 ],
 					 "level":84
@@ -6994,11 +7027,10 @@
 							"leftovers"
 					 ],
 					 "moves":[
-							"icebeam",
-							"psyshock",
-							"aurasphere",
-							"shadowball",
-							"softboiled"
+							"cleavage",
+							"bullslam",
+							"recover",
+							"feverishsmooch"
 					 ],
 					 "level":84
 				}
@@ -7045,10 +7077,8 @@
 					 ],
 					 "moves":[
 							"nastyplot",
-							"focusblast",
-							"fireblast",
 							"flashcannon",
-							"psychic",
+							"spaceacid",
 							"thunder",
 							"blizzard"
 					 ],
@@ -7064,10 +7094,10 @@
 					 ],
 					 "moves":[
 							"taunt",
-							"psychicfangs",
+							"galacticforce",
 							"encore",
-							"icebeam",
-							"uturn"
+							"warpaway",
+							"ironhead"
 					 ],
 					 "level":80
 				},
@@ -7079,10 +7109,25 @@
 							"weaknesspolicy"
 					 ],
 					 "moves":[
-							"spacialrend",
+							"spaceacid",
 							"calmmind",
 							"storedpower",
 							"moonblast"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"intimidate"
+					 ],
+					 "items":[
+							"powerherb"
+					 ],
+					 "moves":[
+							"satelliteray",
+							"spaceacid",
+							"starfield",
+							"stargaze"
 					 ],
 					 "level":80
 				}
@@ -7097,7 +7142,7 @@
 				"Squito",
 				"Vicper",
 				"Venowatt",
-				"Venowatt",
+				"Skeeter",
 				"Venowatt",
 				"Venowatt",
 				"Venowatt",
@@ -7121,7 +7166,7 @@
 					 "moves":[
 							"roost",
 							"voltswitch",
-							"sludgebomb",
+							"bloodsiphon",
 							"acidspray",
 							"gigadrain"
 					 ],
@@ -7137,9 +7182,8 @@
 					 "moves":[
 							"tailglow",
 							"paraboliccharge",
-							"sludgebomb",
-							"gigadrain",
-							"voltswitch"
+							"bloodsiphon",
+							"gigadrain"
 					 ],
 					 "level":76
 				}

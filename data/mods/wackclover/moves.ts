@@ -11,6 +11,71 @@ hammer: Hammer-based moves (for Admin Abuse)
 */
 export const Moves: { [k: string]: ModdedMoveData } = {
 	/* Enabled moves */
+	conversion: {
+		inherit: true,
+		pp: 5,
+		onHit(target) {
+			const possibleTypes = target.moveSlots.map(moveSlot => {
+				const move = this.dex.moves.get(moveSlot.id);
+				if (move.id !== 'conversion' && !target.hasType(move.type)) {
+					return move.type;
+				}
+				return '';
+			}).filter(type => type);
+			if (!possibleTypes.length) {
+				return false;
+			}
+			const type = this.sample(possibleTypes);
+
+			if (!target.setType(type)) return false;
+			this.add('-start', target, 'typechange', type);
+		},
+		isNonstandard: null,
+
+		onAfterHit(target) {
+			if (this.field.getPseudoWeather('cyberspace')) {
+				this.boost({
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				});
+			}
+		},
+	},
+	conversion2: {
+		inherit: true,
+		pp: 5,
+		onHit(target, source) {
+			if (!target.lastMoveUsed) {
+				return false;
+			}
+			const possibleTypes = [];
+			const attackType = target.lastMoveUsed.type;
+			for (const type of this.dex.types.names()) {
+				if (source.hasType(type)) continue;
+				const typeCheck = this.dex.types.get(type).damageTaken[attackType];
+				if (typeCheck === 2 || typeCheck === 3) {
+					possibleTypes.push(type);
+				}
+			}
+			if (!possibleTypes.length) {
+				return false;
+			}
+			const randomType = this.sample(possibleTypes);
+
+			if (!source.setType(randomType, false, source, this.effect)) return false;
+			this.add('-start', source, 'typechange', randomType);
+		},
+		onAfterHit(pokemon) {
+			if (this.field.getPseudoWeather('cyberspace')) {
+				const success = !!this.heal(this.modify(pokemon.maxhp, 1.0));
+				return pokemon.cureStatus() || success;
+			}
+		},
+		isNonstandard: null,
+	},
 	barrier: {
 		inherit: true,
 		isNonstandard: null,
@@ -2516,6 +2581,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		barkskin: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		barkpress: {
 		inherit: true,
 		isNonstandard: null,
@@ -2592,11 +2661,19 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		bleedingburst: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		blinding: {
 			inherit: true,
 			isNonstandard: null,
 			},
 		bloodbath: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		bloodsplatter: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -2606,6 +2683,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		bloodblade: {
 		inherit: true,
+		flags: {contact: 1, protect: 1, slicing: 1, mirror: 1},
 		isNonstandard: null,
 		},
 		bloodhound: {
@@ -2654,6 +2732,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		boltslash: {
 		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		isNonstandard: null,
 		},
 		bondage: {
@@ -2981,6 +3060,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		cyberpunch: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		cyberspacerise: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		cyberspace: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		datastorm: {
 		inherit: true,
 		isNonstandard: null,
@@ -3114,6 +3205,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		dragonwings: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		draineedle: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -3628,6 +3723,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		hack: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		halo: {
 		inherit: true,
 		isNonstandard: null,
@@ -3957,6 +4056,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		lumber: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		lunacy: {
 		inherit: true,
 		isNonstandard: null,
@@ -3994,6 +4097,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		magmaquake: {
+			inherit: true,
+			isNonstandard: null,
+			},
+			magmaslash: {
+				flags: {contact: 1, protect: 1, slicing: 1},
 			inherit: true,
 			isNonstandard: null,
 			},
@@ -4082,6 +4190,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		miasmaslash: {
 		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		isNonstandard: null,
 		},
 		micromissiles: {
@@ -4156,6 +4265,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		mysticsword: {
 		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		isNonstandard: null,
 		},
 		nanobotbarrier: {
@@ -4171,6 +4281,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		nectartap: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		needlesquall: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -4431,6 +4545,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		pulpstream: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		sawdust: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		pumpup: {
 		inherit: true,
 		isNonstandard: null,
@@ -4456,6 +4578,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		randomgenerate: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		ransomwareslam: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -4586,6 +4712,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			},
 		sandslash: {
 		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		isNonstandard: null,
 		},
 		sandwichstack: {
@@ -4628,6 +4755,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			inherit: true,
 			isNonstandard: null,
 			},
+		sanguinefang: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		seasonalflowers: {
 		inherit: true,
 		isNonstandard: null,
@@ -4725,6 +4856,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		shellblast: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		shieldpress: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -5029,6 +5164,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			inherit: true,
 			isNonstandard: null,
 			},
+			superfly: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		superhorn: {
 		inherit: true,
 		isNonstandard: null,
@@ -5045,6 +5184,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		swordofdawn: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		isNonstandard: null,
+		},
 		takeflight: {
 		inherit: true,
 		isNonstandard: null,
@@ -5058,6 +5202,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		technoray: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		technologyscoil: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -5198,6 +5346,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		traincrash: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		toxify: {
 		inherit: true,
 		isNonstandard: null,
@@ -5298,6 +5450,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		venipuncture: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		vformation: {
 		inherit: true,
 		isNonstandard: null,
@@ -5307,6 +5463,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		viralflames: {
+			inherit: true,
+			isNonstandard: null,
+			},
+			viraloverdrive: {
 			inherit: true,
 			isNonstandard: null,
 			},

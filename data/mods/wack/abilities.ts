@@ -61,6 +61,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "Rain Dance: heals 1/16, Acid Rain: takes 1/16.",
 		isNonstandard: null,
 	},
+
 	poisonheal: {
 		inherit: true,
 		onWeather(target, source, effect) {
