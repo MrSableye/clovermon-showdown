@@ -91483,6 +91483,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['bleed']) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Blood",

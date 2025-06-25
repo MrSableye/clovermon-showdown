@@ -2698,6 +2698,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		bloodpump: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		bloodrain: {
 		inherit: true,
 		isNonstandard: null,
@@ -4164,6 +4168,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		meltedplastic: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		meltdown: {
 		inherit: true,
 		isNonstandard: null,
 		},

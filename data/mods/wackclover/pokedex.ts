@@ -372,6 +372,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Food", "Ground"],
 	},
+	crystaquil: {
+		inherit: true,
+		types: ["Crystal", "Poison"],
+	},
 	crystaking: {
 		inherit: true,
 		types: ["Crystal", "Poison"],
