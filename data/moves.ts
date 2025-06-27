@@ -1848,6 +1848,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		secondary: null,
 		target: "normal",
@@ -3034,7 +3036,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {mirror: 1},
 		onHitField(target, source) {
 			const sideConditions = [
-				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'mirageveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'luckyroll',
+				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'mirageveil', 'darkscreen', 'claustrowall', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'luckyroll',
 			];
 			let success = false;
 			if (this.gameType === "freeforall") {
@@ -3471,7 +3473,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			let success = false;
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
 			const removeTarget = [
-				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'darkscreen', 'claustrowall', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
 				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
 			];
 			const removeAll = [
@@ -6218,6 +6220,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 10,
 			status: 'frz',
 		},
+
+		
 		target: "normal",
 		type: "Ice",
 		contestType: "Beautiful",
@@ -7621,7 +7625,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onHit(source) {
 				let success = false;
 				const removeTarget = [
-					'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'luckyroll',
+					'reflect', 'lightscreen', 'auroraveil',  'darkscreen', 'claustrowall', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'luckyroll',
 					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
 				];
 				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
@@ -14418,6 +14422,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		secondary: null,
 		target: "normal",
@@ -14963,6 +14969,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		onModifyType(move, pokemon) {
 			switch (pokemon.species.name) {
@@ -22006,6 +22014,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				pokemon.side.removeSideCondition('lightscreen');
 				pokemon.side.removeSideCondition('auroraveil');
 				pokemon.side.removeSideCondition('mirageveil');
+				pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 			}
 		},
 		isNonstandard: "Future",
@@ -23239,6 +23249,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		secondary: {
 			chance: 30,
@@ -23578,7 +23590,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onHit(target, source, move) {
 			let success = false;
 			const removeAll = [
-				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'luckyroll',
+				'reflect', 'lightscreen', 'auroraveil', 'mirageveil',  'darkscreen', 'claustrowall', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'luckyroll',
 				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
 			for (const sideCondition of removeAll) {
 				if (target.side.removeSideCondition(sideCondition)) {
@@ -38845,6 +38857,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		secondary: null,
 		target: "normal",
@@ -40724,6 +40738,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		secondary: null,
 		target: "normal",
@@ -43074,6 +43090,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		secondary: null,
 		target: "normal",
@@ -46466,6 +46484,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 40,
 		priority: 3,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		forceSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
@@ -46481,6 +46500,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 1,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		multihit: [2, 5],
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -52700,7 +52720,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Physical",
 		name: "Coal Throw",
 		pp: 20,
-		priority: 0,
+		priority: 1,
 		flags: {protect: 1, mirror: 1},
 		multihit: [2, 5],
 		secondary: null,
@@ -54758,6 +54778,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		secondary: null,
 		target: "normal",
@@ -56610,6 +56632,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 1,
 		priority: 0,
 		flags: {protect: 1},
+		pseudoWeather: 'shadowsky',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
+					return 8;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Shadow Sky', '[of] ' + source);
+			},
+
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (!pokemon.hasType('Shadow')) {
+					this.damage(pokemon.baseMaxhp / 16);
+				}
+			},
+
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Shadow Sky');
+			},
+		},
 		secondary: null,
 		target: "all",
 		type: "Shadow",
@@ -56624,7 +56673,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			self: {
+				volatileStatus: 'mustrecharge',
+			},
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Shadow",
@@ -57309,6 +57363,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		target: "normal",
 		type: "Cosmic",
@@ -57329,6 +57385,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		secondary: null,
 		volatileStatus: 'partiallytrapped',
@@ -57518,6 +57576,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		secondary: null,
 		target: "normal",
@@ -63856,7 +63916,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			let success = false;
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({});
 			const removeTarget = [
-				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'darkscreen', 'claustrowall', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
 				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
 			];
 			const removeAll = [
@@ -64406,6 +64466,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		secondary: null,
 		target: "normal",
@@ -64690,7 +64752,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		onHit(target) {
 			if (!target.volatiles['dynamax']) {
-				target.addVolatile('taunt');
+				target.addVolatile('encore');
 			}
 		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
@@ -65936,7 +65998,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondaries: [
+			{
+				chance: 100,
+				status: 'brn',
+			}, {
+				chance: 100,
+				volatileStatus: 'curse',
+			},
+		],
 		target: "normal",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -67448,6 +67518,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 2,
 		flags: {mirror: 1, bypasssub: 1},
+		onModifyType(move, pokemon) {
+			if (pokemon.species.name === 'Lancartorialter') {
+				move.type = 'Shadow';
+			} else {
+				move.type = 'Divine';
+			}
+		},
 		breaksProtect: true,
 		secondary: null,
 		target: "normal",
@@ -67816,6 +67893,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(source, target, move) {
+			if ((target.gender === 'M' && source.gender === 'F') || (target.gender === 'F' && source.gender === 'M')) {
+				this.debug('BP doubled on opposite gender target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Heart",
@@ -68033,7 +68117,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Shadow",
 		isNonstandard: "Future",
@@ -68112,6 +68199,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		ignoreDefensive: true,
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -68140,6 +68228,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
 		secondary: null,
 		target: "randomNormal",
 		type: "Fighting",
@@ -68194,7 +68290,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+			secondary: {
+			chance: 35,
+			status: 'brn',
+		},
 		target: "allAdjacent",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -69504,7 +69603,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			let success = false;
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
 			const removeTarget = [
-				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+				'reflect', 'lightscreen', 'auroraveil', 'darkscreen', 'claustrowall', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
 				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
 			];
 			const removeAll = [
@@ -80019,6 +80118,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		secondary: null,
 		target: "normal",
@@ -82003,6 +82104,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 15,
 			status: 'brn',
 		},
+		ignoreImmunity: true,
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -82368,6 +82470,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 15,
 			status: 'psn',
 		},
+		ignoreImmunity: true,
 		target: "normal",
 		type: "Dragon",
 		isNonstandard: "Future",
@@ -84598,6 +84701,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 30,
 		priority: 0,
 		flags: {snatch: 1},
+		sideCondition: 'darkscreen',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('darkclay') || source?.hasAbility('builder')) {
+					return 8;
+				}
+				return 5;
+			},
+			onAnyModifyDamage(damage, source, target, move) {
+				if (target !== source && this.effectState.target.hasAlly(target) && this.getCategory(move) === 'Special') {
+					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
+						this.debug('Dark Screen weaken');
+						if (this.activePerHalf > 1) return this.chainModify([2732, 4096]);
+						return this.chainModify(0.5);
+					}
+				}
+			},
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Dark Screen');
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 2,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Dark Screen');
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Dark",
@@ -84612,6 +84742,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 30,
 		priority: 0,
 		flags: {snatch: 1},
+		sideCondition: 'claustrowall',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('darkclay') || source?.hasAbility('builder')) {
+					return 8;
+				}
+				return 5;
+			},
+			onAnyModifyDamage(damage, source, target, move) {
+				if (target !== source && this.effectState.target.hasAlly(target) && this.getCategory(move) === 'Physical') {
+					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
+						this.debug('ClaustroWall weaken');
+						if (this.activePerHalf > 1) return this.chainModify([2732, 4096]);
+						return this.chainModify(0.5);
+					}
+				}
+			},
+			onSideStart(side) {
+				this.add('-sidestart', side, 'ClaustroWall');
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 1,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'ClaustroWall');
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Fear",
@@ -84882,6 +85039,36 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {mirror: 1, moon: 1},
+		pseudoWeather: 'fullmoon',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('mysticrock')|| source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
+					return 8;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Full Moon', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.flags['moon']) {
+					this.debug('fullmoon increase');
+					return this.chainModify([1.4]);
+				}
+				if (move.type === 'Fairy') {
+					this.debug('fullmoon increase');
+					return this.chainModify([1.5]);
+				}
+			},
+			
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Full Moon');
+			},
+		},
 		secondary: null,
 		target: "all",
 		type: "Fairy",
@@ -95050,6 +95237,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		onTry(source) {
 			if (source.species.baseSpecies === 'Regidivine') {
@@ -95530,6 +95719,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		secondaries: [
 			{
@@ -95703,6 +95894,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
 			pokemon.side.removeSideCondition('mirageveil');
+			pokemon.side.removeSideCondition('darkscreen');
+			pokemon.side.removeSideCondition('claustrowall');
 		},
 		willCrit: true,
 		breaksProtect: true,

@@ -11060,6 +11060,33 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 227,
 	},
+	heterochromia: {
+		onPrepareHit(source, target, move) {
+			if (move.category === 'Status' || move.multihit || move.flags['noparentalbond'] || move.flags['charge'] ||
+			move.flags['futuremove'] || move.spreadHit || move.isZ || move.isMax ||move.stab) return;
+			
+			move.multihit = 2;
+			
+			
+		},
+		onModifyMove(move) {
+			move.stab = 0.5;
+		},
+		onHit(target, source, move) {
+			if (move.hit === 2 && move.type === source.getTypes()[0]) { move.type = source.getTypes()[1]; } 
+			else if (move.hit === 2 && move.type === source.getTypes()[1]) { move.type = source.getTypes()[0]; }
+		},
+		// Damage modifier implemented in BattleActions#modifyDamage()
+		onSourceModifySecondaries(secondaries, target, source, move) {
+			if (move.multihitType && move.id === 'secretpower' && move.hit < 2) {
+				// hack to prevent accidentally suppressing King's Rock/Razor Fang
+				return secondaries.filter(effect => effect.volatileStatus === 'flinch');
+			}
+		},
+		name: "Heterochromia",
+		rating: 4.5,
+		num: 69185,
+	},
 	pooperpower: {
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {

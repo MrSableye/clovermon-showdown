@@ -3763,6 +3763,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		heatup: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		heavenshole: {
 		inherit: true,
 		isNonstandard: null,
@@ -3812,6 +3816,22 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		holykick: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		holysacrifice: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		carpetbomb: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		sacrifice: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		fieryexplosion: {
 		inherit: true,
 		isNonstandard: null,
 		},
