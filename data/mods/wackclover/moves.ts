@@ -3072,6 +3072,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		"3dattack": {
+		inherit: true,
+		isNonstandard: null,
+		},
 		cyberspace: {
 		inherit: true,
 		isNonstandard: null,
@@ -4240,8 +4244,27 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		mindbreak: {
 		inherit: true,
-		isNonstandard: null,
+		accuracy: 60,
+		basePower: 0,
+		category: "Status",
+		desc: "Confuses, Sleeps, Infatuates the target if they are the opposite gender.",
+		shortDesc: "Confuses, Sleeps, Infatuates the target if they are the opposite gender.",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(pokemon) {
+			pokemon.addVolatile('confusion');
+			pokemon.trySetStatus('slp');
+			pokemon.addVolatile('attract');
 		},
+		onTryImmunity(target, source) {
+			return (target.gender === 'M' && source.gender === 'F') || (target.gender === 'F' && source.gender === 'M');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Heart",
+		isNonstandard: null,
+	},
 		minddrain: {
 		inherit: true,
 		isNonstandard: null,
@@ -4606,6 +4629,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		randomgenerate: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		ransomware: {
 		inherit: true,
 		isNonstandard: null,
 		},

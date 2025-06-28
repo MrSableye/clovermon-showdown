@@ -48137,6 +48137,39 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {},
+		pseudoWeather: 'holywater',
+		condition: {
+			duration: 5,
+			
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Holy Water', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Divine') {
+					this.debug('holywater increase');
+					return this.chainModify([1.5]);
+				}
+				if (move.type === 'Ghost'|| move.type === 'Zombie') {
+					this.debug('holywater decrease');
+					return this.chainModify([0.33]);
+				}
+				if (move.type === 'Chaos') {
+					this.debug('holywater decrease');
+					return this.chainModify([0.1]);
+				}
+			},
+			
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onResidualOrder: 13,
+			onResidual(pokemon) {
+				if (pokemon.hasType('Chaos')) this.damage(pokemon.baseMaxhp / 8, pokemon);
+			},
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Holy Water');
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Divine",
@@ -48441,6 +48474,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target) {
+			const ratio = Math.max(Math.floor(pokemon.hp * 48 / pokemon.maxhp), 1);
+			let bp;
+			if (ratio < 2) {
+				bp = 200;
+			} else if (ratio < 5) {
+				bp = 150;
+			} else if (ratio < 10) {
+				bp = 100;
+			} else if (ratio < 17) {
+				bp = 80;
+			} else if (ratio < 33) {
+				bp = 40;
+			} else {
+				bp = 20;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
@@ -48863,6 +48915,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target) {
+			const ratio = Math.max(Math.floor(pokemon.hp * 48 / pokemon.maxhp), 1);
+			let bp;
+			if (ratio < 2) {
+				bp = 200;
+			} else if (ratio < 5) {
+				bp = 150;
+			} else if (ratio < 10) {
+				bp = 100;
+			} else if (ratio < 17) {
+				bp = 80;
+			} else if (ratio < 33) {
+				bp = 40;
+			} else {
+				bp = 20;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -57662,6 +57733,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target) {
+			const ratio = Math.max(Math.floor(pokemon.hp * 48 / pokemon.maxhp), 1);
+			let bp;
+			if (ratio < 2) {
+				bp = 200;
+			} else if (ratio < 5) {
+				bp = 150;
+			} else if (ratio < 10) {
+				bp = 100;
+			} else if (ratio < 17) {
+				bp = 80;
+			} else if (ratio < 33) {
+				bp = 40;
+			} else {
+				bp = 20;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -58765,6 +58855,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
 		secondary: null,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'slp' || target.hasAbility('comatose')) {
+				this.debug('BP doubled on sleeping target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		onHit(target) {
+			if (target.status === 'slp') target.cureStatus();
+		},
 		target: "normal",
 		type: "Time",
 		isNonstandard: "Future",
@@ -58778,6 +58878,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'slp' || target.hasAbility('comatose')) {
+				this.debug('BP doubled on sleeping target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		onHit(target) {
+			if (target.status === 'slp') target.cureStatus();
+		},
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
@@ -58792,6 +58902,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'slp' || target.hasAbility('comatose')) {
+				this.debug('BP doubled on sleeping target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		onHit(target) {
+			if (target.status === 'slp') target.cureStatus();
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fear",
@@ -58823,7 +58943,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -2,
+			},
+		},
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -58855,7 +58980,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -63370,6 +63498,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon) {
+			return Math.floor((pokemon.happiness * 10) / 25) || 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Heart",
@@ -66894,6 +67025,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, bite: 1},
+		heal: [1, 3],
 		secondary: null,
 		target: "allySide",
 		type: "Fairy",
@@ -68344,6 +68476,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
 		target: "randomNormal",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -68376,6 +68516,39 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['attract']) {
+				return this.chainModify(2);
+			}
+		},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('critup');
+				}
+			},
+		},
+		condition: {
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('destinyknot')|| source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
+					return 6;
+				}
+				return 3;
+			},
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'Crit Up');
+			},
+			onModifyCritRatio(critRatio) {
+				return critRatio + 1;
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'Crit Up');
+			},
+		},
+		
+		
 		secondary: null,
 		target: "normal",
 		type: "Heart",
@@ -68390,7 +68563,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Rock",
 		isNonstandard: "Future",
@@ -69074,6 +69250,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				for (const ally of source.side.pokemon) {
+					const success = !!this.heal(this.modify(source.maxhp, 0.33));
+					ally.cureStatus();
+				}
+			},
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Glass",
@@ -72663,7 +72847,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -72861,7 +73048,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 55,
+			self: {
+				onHit() {
+					this.field.setTerrain('mistyterrain');
+				},
+			},
+		},
 		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
@@ -73802,6 +73996,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target) {
+			const ratio = Math.max(Math.floor(pokemon.hp * 48 / pokemon.maxhp), 1);
+			let bp;
+			if (ratio < 2) {
+				bp = 200;
+			} else if (ratio < 5) {
+				bp = 150;
+			} else if (ratio < 10) {
+				bp = 100;
+			} else if (ratio < 17) {
+				bp = 80;
+			} else if (ratio < 33) {
+				bp = 40;
+			} else {
+				bp = 20;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -77205,6 +77418,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target) {
+			const ratio = Math.max(Math.floor(pokemon.hp * 48 / pokemon.maxhp), 1);
+			let bp;
+			if (ratio < 2) {
+				bp = 200;
+			} else if (ratio < 5) {
+				bp = 150;
+			} else if (ratio < 10) {
+				bp = 100;
+			} else if (ratio < 17) {
+				bp = 80;
+			} else if (ratio < 33) {
+				bp = 40;
+			} else {
+				bp = 20;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ground",
@@ -77236,6 +77468,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -77250,6 +77483,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'slp' || target.hasAbility('comatose')) {
+				this.debug('BP doubled on sleeping target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		onHit(target) {
+			if (target.status === 'slp') target.cureStatus();
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -77626,6 +77869,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target) {
+			const ratio = Math.max(Math.floor(pokemon.hp * 48 / pokemon.maxhp), 1);
+			let bp;
+			if (ratio < 2) {
+				bp = 200;
+			} else if (ratio < 5) {
+				bp = 150;
+			} else if (ratio < 10) {
+				bp = 100;
+			} else if (ratio < 17) {
+				bp = 80;
+			} else if (ratio < 33) {
+				bp = 40;
+			} else {
+				bp = 20;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -84383,6 +84645,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				for (const ally of source.side.pokemon) {
+					const success = !!this.heal(this.modify(source.maxhp, 0.33));
+					ally.cureStatus();
+				}
+			},
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Shadow",
@@ -85667,6 +85937,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, moon: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('taunt');
+				target.addVolatile('confusion');
+			}
+		},
+		boosts: {
+			atk: 2,
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Cosmic",
@@ -88401,6 +88680,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 1,
 		flags: {snatch: 1},
+		sideCondition: 'tarasqueshield',
+		condition: {
+			duration: 1,
+			onSideStart(target, source) {
+				this.add('-singleturn', source, 'Tarasque Shield');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+			if (target === source || move.category === 'Status' || move.category === 'Special' || move.id === 'struggle') return;
+			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
+			this.debug('Tarasque Shield immunity: ' + move.id);
+			
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-immune', target, '[from] move: Tarasque Shield');
+				}
+				return null;
+			
+		},
+		},
 		secondary: null,
 		target: "self",
 		type: "Dragon",
@@ -88415,7 +88715,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+					this.boost({def: -1}, target, source);
+					this.boost({atk: 1}, source, source);
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Dragon",
 		isNonstandard: "Future",
@@ -88429,6 +88735,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		ignoreEvasion: true,
+		ignoreDefensive: true,
 		secondary: null,
 		target: "allAdjacent",
 		type: "Fear",
@@ -92571,7 +92879,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 45,
+			volatileStatus: 'disable',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Flying",
@@ -93295,6 +93606,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		multihit: [2, 5],
 		target: "normal",
 		type: "Flying",
 		isNonstandard: "Future",
