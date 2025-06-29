@@ -73629,6 +73629,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Wind', type);
+		},
+		ignoreEvasion: true,
+		ignoreDefensive: true,
 		secondary: null,
 		target: "normal",
 		type: "Tech",
