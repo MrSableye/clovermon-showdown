@@ -7134,6 +7134,27 @@
       }
     ]
   },
+   "susully": {   
+    "sets": [
+      {
+        "abilities": [   
+          "defiant"
+        ],
+        "items": [
+          "sitrusberry"
+        ],
+        "moves": [     
+          "innerpower",    
+          "redbuster",
+          "skyuppercut"
+        ],
+        "lockedMoves": [   
+          "luminousflux"
+        ],
+        "level": 80       
+      }
+    ]
+  },
   "eldreye": {   
     "sets": [
       {
@@ -12228,7 +12249,8 @@
           "earthpower",
           "agingcurse",
           "spikes",
-          "painsplit"
+          "painsplit",
+          "broomcharge"
         ],
         "lockedMoves": [
           "blackmagic"

@@ -293,6 +293,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Magic", "Rock"],
 	},
+	felimbus: {
+		inherit: true,
+		types: ["Dark", "Wind"],
+		
+	},
 	deathorus: {
 		inherit: true,
 		types: ["Dark", "Wind"],

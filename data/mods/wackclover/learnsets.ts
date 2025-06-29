@@ -13629,6 +13629,12 @@ manaverse: ["8L1"],
 	},
 	felimbus: {
 		learnset: {
+			nightwind: ["8L1"],
+			tempest: ["8L1"],
+evilhurricane: ["8L1"],
+cloudcrash: ["8L1"],
+midnight: ["8L1"],
+catlaser: ["8L1"],
 			acrobatics: ["8T"],
 			aerialace: ["8L36", "8M"],
 			aircutter: ["8L16"],
