@@ -2257,6 +2257,26 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	boostermode:{
+		inherit: true,
+		isNonstandard: null,
+	},
+	randommode:{
+		inherit: true,
+		isNonstandard: null,
+	},
+	scannermode:{
+		inherit: true,
+		isNonstandard: null,
+	},
+	hypermode:{
+		inherit: true,
+		isNonstandard: null,
+	},
+	shieldmode:{
+		inherit: true,
+		isNonstandard: null,
+	},
 	holyduty: {
 		inherit: true,
 		isNonstandard: null,
@@ -2739,6 +2759,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		isNonstandard: null,
 		},
+		bombard: {
+		inherit: true,
+		isNonstandard: null,
+		}, 
 		bondage: {
 		inherit: true,
 		isNonstandard: null,
@@ -3824,6 +3848,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		holysacrifice: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		homingbeam: {
 		inherit: true,
 		isNonstandard: null,
 		},

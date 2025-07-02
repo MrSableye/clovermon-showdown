@@ -295,7 +295,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	felimbus: {
 		inherit: true,
-		types: ["Dark", "Wind"],
+	
 		
 	},
 	deathorus: {
@@ -307,6 +307,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			H: "Cloud Nine",
 			S: "Shower Power",
 		},
+	},
+	hohohoming: {
+		inherit: true,
+		types: ["Ice", "tech"],
+		
 	},
 	huntabre: {
 		inherit: true,
