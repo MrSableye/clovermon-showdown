@@ -2277,6 +2277,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	lanceoflonginus:{
+		inherit: true,
+		isNonstandard: null,
+	},
 	holyduty: {
 		inherit: true,
 		isNonstandard: null,
