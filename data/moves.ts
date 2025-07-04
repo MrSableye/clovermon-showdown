@@ -36801,7 +36801,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		onHit(pokemon) {
-			let factor = 0.5;
+			let factor = 0.25;
 			if (this.field.getPseudoWeather('starfield')) {
 				factor = 0.667;
 				this.boost({
