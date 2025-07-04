@@ -2257,6 +2257,30 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	boostermode:{
+		inherit: true,
+		isNonstandard: null,
+	},
+	randommode:{
+		inherit: true,
+		isNonstandard: null,
+	},
+	scannermode:{
+		inherit: true,
+		isNonstandard: null,
+	},
+	hypermode:{
+		inherit: true,
+		isNonstandard: null,
+	},
+	shieldmode:{
+		inherit: true,
+		isNonstandard: null,
+	},
+	lanceoflonginus:{
+		inherit: true,
+		isNonstandard: null,
+	},
 	holyduty: {
 		inherit: true,
 		isNonstandard: null,
@@ -2698,6 +2722,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		bloodpump: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		bloodrain: {
 		inherit: true,
 		isNonstandard: null,
@@ -2735,6 +2763,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		isNonstandard: null,
 		},
+		bombard: {
+		inherit: true,
+		isNonstandard: null,
+		}, 
 		bondage: {
 		inherit: true,
 		isNonstandard: null,
@@ -3065,6 +3097,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		cyberspacerise: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		"3dattack": {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -3759,6 +3795,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		heatup: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		heavenshole: {
 		inherit: true,
 		isNonstandard: null,
@@ -3808,6 +3848,26 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		holykick: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		holysacrifice: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		homingbeam: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		carpetbomb: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		sacrifice: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		fieryexplosion: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -4167,6 +4227,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		meltdown: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		memeticfang: {
 		inherit: true,
 		isNonstandard: null,
@@ -4212,8 +4276,27 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		mindbreak: {
 		inherit: true,
-		isNonstandard: null,
+		accuracy: 60,
+		basePower: 0,
+		category: "Status",
+		desc: "Confuses, Sleeps, Infatuates the target if they are the opposite gender.",
+		shortDesc: "Confuses, Sleeps, Infatuates the target if they are the opposite gender.",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(pokemon) {
+			pokemon.addVolatile('confusion');
+			pokemon.trySetStatus('slp');
+			pokemon.addVolatile('attract');
 		},
+		onTryImmunity(target, source) {
+			return (target.gender === 'M' && source.gender === 'F') || (target.gender === 'F' && source.gender === 'M');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Heart",
+		isNonstandard: null,
+	},
 		minddrain: {
 		inherit: true,
 		isNonstandard: null,
@@ -4578,6 +4661,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		randomgenerate: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		ransomware: {
 		inherit: true,
 		isNonstandard: null,
 		},
