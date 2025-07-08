@@ -3093,6 +3093,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Bejeweled",
 		shortDesc: "Sets Psychic Surge; recovers gems at the end of turns.",
 	},
+	heterochromia: {
+		name: "Heterochomia",
+		shortDesc: "STAB moves are 50% power but hit twice, with the 2nd hit becoming the type of the other STAB type.",
+	},
 	boardpoweryou: {
 		name: "Board Power (/you/)",
 		shortDesc: "Every Board Power combined except /z/ and Gorilla Tactics.",

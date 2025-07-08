@@ -1769,6 +1769,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	heterochromia: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	acupower: {
 		inherit: true,
 		isNonstandard: null,

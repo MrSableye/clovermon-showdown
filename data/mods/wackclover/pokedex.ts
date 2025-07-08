@@ -293,6 +293,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Magic", "Rock"],
 	},
+	felimbus: {
+		inherit: true,
+	
+		
+	},
 	deathorus: {
 		inherit: true,
 		types: ["Dark", "Wind"],
@@ -302,6 +307,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			H: "Cloud Nine",
 			S: "Shower Power",
 		},
+	},
+	hohohoming: {
+		inherit: true,
+		types: ["Ice", "tech"],
+		
 	},
 	huntabre: {
 		inherit: true,
@@ -371,6 +381,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	spaghefant: {
 		inherit: true,
 		types: ["Food", "Ground"],
+	},
+	crystaquil: {
+		inherit: true,
+		types: ["Crystal", "Poison"],
 	},
 	crystaking: {
 		inherit: true,

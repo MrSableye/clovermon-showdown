@@ -690,6 +690,28 @@
       }
     ]
   },
+  "atlasbell": {   
+    "sets": [
+      {
+        "abilities": [    
+          "guts"
+        ],
+        "items": [
+          "grassdust"
+        ],
+        "moves": [     
+          "swordsdance",
+          "synthesis"
+        ],
+        "lockedMoves": [   
+          "lovelykiss",
+          "knockoff",
+          "powerwhip"
+        ],
+        "level": 84       
+      }
+    ]
+  },
   "axelasp": {   
     "sets": [
       {
@@ -1897,6 +1919,55 @@
           "rootcrush"
         ],
         "level": 84
+      }
+    ]
+  },
+  "rhantegice": {
+    "nicknames": [
+      "Rhantegice"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "siphon"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "insanity",
+          "fellstinger",
+          "uturn"
+        ],
+        "lockedMoves": [
+          "arcticcrash"
+        ],
+        "level": 80
+      }
+    ]
+  },
+   "tulzsflame": {
+    "nicknames": [
+      "Tulzsflame"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "siphon"
+        ],
+        "items": [
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [
+          "painsplit",
+          "mysticalfire",
+          "nervegas"
+        ],
+        "lockedMoves": [
+          "galacticforce"
+        ],
+        "level": 82
       }
     ]
   },
@@ -4859,7 +4930,7 @@
           "mirrormove",
           "dragonclaw"
         ],
-        "level": 80
+        "level": 78
       }
     ]
   },
@@ -5206,6 +5277,78 @@
         ],
         "lockedMoves": [
           "summonundead"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "deaderant": {
+    "nicknames": [
+      "Deaderant"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "guts"
+        ],
+        "items": [
+          "infernoorb"    
+        ],
+        "moves": [
+          "swordsdance",
+          "closecombat",
+          "extremespeed"
+        ],
+        "lockedMoves": [
+          "sneakyskitter"
+        ],
+        "level": 84
+      }
+    ]
+  },
+   "skullgreymon": {
+    "nicknames": [
+      "Skullgreymon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "flashfire"
+        ],
+        "items": [
+          "powerherb"    
+        ],
+        "moves": [
+          "megamissile",
+          "groundzero",
+          "doubleedge"
+        ],
+        "lockedMoves": [
+          "undeadagony"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "wraticate": {
+    "nicknames": [
+      "Wack Raticate"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "technician"
+        ],
+        "items": [
+          "silkscarf"    
+        ],
+        "moves": [
+          "swordsdance",
+          "poisontail",
+          "flamewheel"
+        ],
+        "lockedMoves": [
+          "sneakyskitter"
         ],
         "level": 84
       }
@@ -6991,6 +7134,27 @@
       }
     ]
   },
+   "susully": {   
+    "sets": [
+      {
+        "abilities": [   
+          "defiant"
+        ],
+        "items": [
+          "sitrusberry"
+        ],
+        "moves": [     
+          "innerpower",    
+          "redbuster",
+          "skyuppercut"
+        ],
+        "lockedMoves": [   
+          "luminousflux"
+        ],
+        "level": 80       
+      }
+    ]
+  },
   "eldreye": {   
     "sets": [
       {
@@ -8485,7 +8649,7 @@
           "overload",
           "technoray",
           "discharge",
-          "beamboost"
+          "boostbeam"
         ],
         "level": 84
       }
@@ -9257,7 +9421,7 @@
           "celebrate",
           "weatherball",
           "daydream",
-          "misticdance"
+          "mysticdance"
         ],
         "level": 84
       }
@@ -9727,6 +9891,30 @@
       }
     ]
   },
+  "Dragon": {
+    "nicknames": [
+      "Dragon"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "dragongem"
+        ],
+        "moves": [
+          "dracometeor"
+        ],
+        "lockedMoves": [
+          "outrage",
+          "dragonpulse",
+          "dragondance"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "fmagicstones": {
     "nicknames": [
       "Fmagicstones"
@@ -9897,6 +10085,30 @@
         ],
         "lockedMoves": [
           "frigofear"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "fridgeot": {
+    "nicknames": [
+      "Fridgeot"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "cloudnine"
+        ],
+        "items": [
+          "heavydutyboots"
+        ],
+        "moves": [
+          "whirlwind"
+        ],
+        "lockedMoves": [
+          "icebeam",
+          "airslash",
+          "defog"
         ],
         "level": 84
       }
@@ -10652,7 +10864,7 @@
         "lockedMoves": [
           "woodrush"
         ],
-        "level": 84
+        "level": 80
       }
     ]
   },
@@ -12037,7 +12249,8 @@
           "earthpower",
           "agingcurse",
           "spikes",
-          "painsplit"
+          "painsplit",
+          "broomcharge"
         ],
         "lockedMoves": [
           "blackmagic"
@@ -12554,7 +12767,7 @@
         "lockedMoves": [
           "shadownova"
         ],
-        "level": 84
+        "level": 76
       }
     ]
   },
@@ -13290,7 +13503,7 @@
   },
   "yanenvy": {
     "nicknames": [
-      "Necrolilith"
+      "Yanenvy"
     ],
     "sets": [
       {
@@ -15894,6 +16107,30 @@
       }
     ]
   },
+   "yuck": {
+    "nicknames": [
+      "Yuck"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "poisontouch"
+        ],
+        "items": [
+          "blacksludge"
+        ],
+        "moves": [
+          "acidbath",
+          "hallucinogen"
+        ],
+        "lockedMoves": [
+          "sludgehammer",
+          "shaowsneak"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "zenature": {
     "nicknames": [
       "Zen&theArtofGardening"
@@ -15941,6 +16178,30 @@
         "lockedMoves": [
           "closecombat",
           "zenheadbutt"
+        ],
+        "level": 84
+      }
+    ]
+  },
+   "snkzombified": {
+    "nicknames": [
+      "Zombiefied"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "drizzle"
+        ],
+        "items": [
+          "powerherb"    
+        ],
+        "moves": [
+          "encore",
+          "bellydrum",
+          "bloodytongue"
+        ],
+        "lockedMoves": [
+          "downpour"
         ],
         "level": 84
       }
