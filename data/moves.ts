@@ -23669,7 +23669,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	gazerbeam: {
 		accuracy: 100,
-		basePower: 60,
+		basePower: 70,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Gazer Beam",
@@ -23988,8 +23988,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		multihit: 3,
 		multiaccuracy: true,
 		secondary: {
-			chance: 10,
-			status: 'psn',
+			chance: 20,
+			status: 'tox',
 		},
 		target: "normal",
 		type: "Dark",

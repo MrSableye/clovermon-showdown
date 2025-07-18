@@ -47530,6 +47530,34 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+	blobbosjester: {
+		num: 69132,
+		name: "Blobbos-Jester",
+		baseSpecies: "Blobbos",
+		forme: "Jester",
+		types: ["Dark", "Psychic"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 85,
+			atk: 119,
+			def: 73,
+			spa: 62,
+			spd: 80,
+			spe: 107,
+		},
+		abilities: {
+			0: "Moxie",
+                        1: "Opportunist",
+                        H: "Prankster",
+		},
+		heightm: 0.9,
+		weightkg: 12.3,
+		color: "Blue",
+		eggGroups: [
+			"Human-Like"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",

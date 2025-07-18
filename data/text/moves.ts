@@ -8065,8 +8065,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	badeggs: {
 		name: "Bad Eggs",
-		desc: "Hits three times. Power increases to 40 for the second hit and 60 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times. Each hit has a 10% chance to poison the target.",
-		shortDesc: "Hits 3 times. Gets stronger. 10% poison chance.",
+		desc: "Hits three times. Power increases to 40 for the second hit and 60 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times. Each hit has a 20% chance to inflict toxic on the target.",
+		shortDesc: "Hits 3 times. Gets stronger. 20% chance to inflict toxic.",
 	},
 	backdraft: {
 		name: "Backdraft",
