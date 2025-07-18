@@ -11063,8 +11063,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	heterochromia: {
 		onPrepareHit(source, target, move) {
 			if (move.category === 'Status' || move.multihit || move.flags['noparentalbond'] || move.flags['charge'] ||
-			move.flags['futuremove'] || move.spreadHit || move.isZ || move.isMax ||move.stab) return;
-			
+			move.flags['futuremove'] || move.spreadHit || move.isZ || move.isMax ) return;
+			else if (move.stab)
 			move.multihit = 2;
 			
 			
@@ -14117,6 +14117,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.field.clearWeather();
 		},
 		name: "Mind Zap",
+		isNonstandard: "Future",
 		rating: 5,
 	},
 	atlonglast: {
@@ -17416,6 +17417,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		  electricascension: {
 		shortDesc: "Absorve golpes elétricos, converte Normal em Elétrico (+50% poder), buffa evasão e usa Thunder triplo se HP < 1/4.",
 		name: "Electric Ascension",
+		isNonstandard: "Future",
 
 		// Absorve golpes do tipo Elétrico, cura 50% e aumenta todos os status em 1
 		onTryHit(target, source, move) {

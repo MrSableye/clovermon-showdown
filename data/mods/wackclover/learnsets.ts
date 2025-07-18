@@ -12181,6 +12181,11 @@ bfg: ["8L1"],
 	},
 	evacycle: {
 		learnset: {
+			shieldmode: ["8L1"],
+			randommode: ["8L1"],
+			hypermode: ["8L1"],
+			boostermode: ["8L1"],
+			scannermode: ["8L1"],
 			technoray: ["8L1"],
 			bladerain: ["8L1"],
 			gnashteeth: ["8L1"],
