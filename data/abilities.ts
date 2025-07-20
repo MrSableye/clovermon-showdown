@@ -11069,10 +11069,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			
 			
 		},
-		onModifyMove(move) {
-			move.stab = 0.5;
+		onModifyDamage(damage, source, target, move) {
+			if (move.type === source.getTypes()[0] || move.type === source.getTypes()[1]) {
+				return this.chainModify(0.5);
+			}
 		},
-		onHit(target, source, move) {
+		onModifyMove(move, source) {
 			if (move.hit === 2 && move.type === source.getTypes()[0]) 
 				 move.type = source.getTypes()[1]; 
 			else if (move.hit === 2 && move.type === source.getTypes()[1]) 
