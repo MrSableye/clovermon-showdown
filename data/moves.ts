@@ -44934,6 +44934,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onTryImmunity(target, source) {
 			return target.hasType(source.getTypes());
 		},
+		
 		secondary: null,
 		target: "allAdjacent",
 		type: "Zombie",
@@ -68930,18 +68931,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		
 		secondary: {
 			chance: 50,
-			onHit(target) {
+			onHit(target, source) {
 				if (this.field.getPseudoWeather('artgallery')) {
-					this.boost({
-						atk: 1,
-						spe: 1,
-					});
+					this.boost({atk: 1, spe: 1}, source, source);
 				} else {
 					this.boost({
 						atk: 1,
-					});
+					}, source, source);
 				}
 			},
 		},
