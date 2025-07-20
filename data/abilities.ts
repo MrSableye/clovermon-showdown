@@ -12966,6 +12966,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Rollan",
 		rating: 3.5,
 		num: 88,
+		isNonstandard: "Future",
 	},
 
 	serenetrace: {
