@@ -11064,7 +11064,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onPrepareHit(source, target, move) {
 			if (move.category === 'Status' || move.multihit || move.flags['noparentalbond'] || move.flags['charge'] ||
 			move.flags['futuremove'] || move.spreadHit || move.isZ || move.isMax ) return;
-			else if (move.stab)
+			else if (move.type === source.getTypes()[0] || move.type === source.getTypes()[1])
 			move.multihit = 2;
 			
 			
@@ -11073,8 +11073,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			move.stab = 0.5;
 		},
 		onHit(target, source, move) {
-			if (move.hit === 2 && move.type === source.getTypes()[0]) { move.type = source.getTypes()[1]; } 
-			else if (move.hit === 2 && move.type === source.getTypes()[1]) { move.type = source.getTypes()[0]; }
+			if (move.hit === 2 && move.type === source.getTypes()[0]) 
+				 move.type = source.getTypes()[1]; 
+			else if (move.hit === 2 && move.type === source.getTypes()[1]) 
+				move.type = source.getTypes()[0]; 
 		},
 		// Damage modifier implemented in BattleActions#modifyDamage()
 		onSourceModifySecondaries(secondaries, target, source, move) {
@@ -11084,6 +11086,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		name: "Heterochromia",
+		isNonstandard: "Future",
 		rating: 4.5,
 		num: 69185,
 	},
@@ -12963,6 +12966,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Rollan",
 		rating: 3.5,
 		num: 88,
+		isNonstandard: "Future",
 	},
 
 	serenetrace: {
