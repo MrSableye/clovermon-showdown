@@ -31,4 +31,9 @@ export const AbilitiesText: {[k: string]: ModdedAbilityText} = {
 		desc: "This Pokemon's punch-based attacks have 1.2x power.",
 		shortDesc: "This Pokemon's punch-based attacks have 1.2x power.",
 	},
+	heatproof: {
+		inherit: true,
+		desc: "The power of Fire-type attacks against this Pokemon is halved. This Pokemon is also immune to Burn.",
+		shortDesc: "The power of Fire-type attacks against this Pokemon is halved; Immune to Burn.",
+	},
 };
