@@ -6,8 +6,8 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	},
 	needlearm: {
 		inherit: true,
-		desc: "Has a 50% chance to set Spikes.",
-		shortDesc: "50% chance to set Spikes.",
+		desc: "Has a 100% chance to set Spikes.",
+		shortDesc: "100% chance to set Spikes.",
 	},
 	seedbomb: {
 		inherit: true,
@@ -100,5 +100,14 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		inherit: true,
 		desc: "The type of this move will correspond to the held Memory or Plate of the user.",
 		shortDesc: "Type varies based on the held Memory or Plate.",
+	},
+	smartstrike: {
+		inherit: true,
+		shortDesc: "This move does not check accuracy. Raises Accuracy by 1.",
+	},
+	risingvoltage: {
+		inherit: true,
+		desc: "If the current terrain is Electric Terrain and the target is grounded, this move's power is raised by 1.5x.",
+		shortDesc: "1.5x power if target is grounded in Electric Terrain.",
 	},
 };

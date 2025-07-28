@@ -174,6 +174,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		priority: -6,
 	},
+	octazooka: {
+		inherit: true,
+		basePower: 70,
+		accuracy: 100,
+	},
 	fishiousrend: {
 		inherit: true,
 		isNonstandard: null,
@@ -471,7 +476,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		basePower: 65,
 		onHit(target) {
-			if (this.randomChance(1, 2)) {
+			if (this.randomChance(1, 1)) {
 				target.side.addSideCondition('spikes');
 			}
 		},
@@ -512,6 +517,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	poltergeist: {
 		inherit: true,
+		accuracy: 100,
 		isNonstandard: null,
 	},
 	pyroball: {
@@ -520,6 +526,13 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	risingvoltage: {
 		inherit: true,
+		basePowerCallback(source, target, move) {
+					if (this.field.isTerrain('electricterrain') && target.isGrounded()) {
+						if (!source.isAlly(target)) this.hint(`${move.name}'s BP increased on grounded target.`);
+						return move.basePower * 1.5;
+					}
+					return move.basePower;
+				},
 		isNonstandard: null,
 	},
 	scaleshot: {
@@ -549,6 +562,13 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			atk: 1,
 		},
 		volatileStatus: 'focusenergy',
+	},
+	smartstrike: {
+		inherit: true,
+		isNonstandard: null,
+		boosts: {
+			accuracy: 1,
+		},
 	},
 	shellsidearm: {
 		inherit: true,

@@ -369,6 +369,22 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	heatproof: {
+		inherit: true,
+		onUpdate(pokemon) {
+						if (pokemon.status === 'brn') {
+							this.add('-activate', pokemon, 'ability: Heatproof');
+							pokemon.cureStatus();
+						}
+					},
+					onSetStatus(status, target, source, effect) {
+						if (status.id !== 'brn') return;
+						if ((effect as Move)?.status) {
+							this.add('-immune', target, '[from] ability: Heatproof');
+						}
+						return false;
+		    	},
+		},
 	horror: {
 		inherit: true,
 		isNonstandard: null,

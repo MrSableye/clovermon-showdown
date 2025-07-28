@@ -801,4 +801,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		baseStats: {hp: 40, atk: 35, def: 30, spa: 20, spd: 20, spe: 50},
 		abilities: {0: "Shield Dust", H: "Run Away", S: "Mind Zap"},
 	},
+	alcremie: {
+		inherit: true,
+		types: ["Fairy"],
+		baseStats: {hp: 65, atk: 60, def: 75, spa: 110, spd: 121, spe: 64},
+		abilities: {0: "Sweet Veil", 1: "Aroma Veil", H: "Thick Fat"},
+	},
 };
