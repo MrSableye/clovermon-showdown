@@ -2712,8 +2712,8 @@
 				"PuppetMaster",
 				"Overlord",
 				"Bige",
-				"Snapper",
-				"Marionettl",
+				"Yung Snapper",
+				"The Mind Taker",
 				"Marionettl"
 		 ],
 		 "sets":[
@@ -3572,7 +3572,7 @@
 				"Echo",
 				"Gemmy Guy",
 				"Jews Rock!",
-				"Chantruth",
+				"Gemmy Guy",
 				"Chantruth"
 		 ],
 		 "sets":[
@@ -3968,7 +3968,7 @@
 		 "nicknames":[
 				"Foot pics",
 				"Stinkbag",
-				"Smellox",
+				"Smell ya l8r",
 				"Smellox",
 				"Smellox",
 				"Smellox",
@@ -4034,7 +4034,7 @@
 							"slackoff",
 							"substitute",
 							"earthquake",
-							"knockoff",
+							"greasyslap",
 							"uturn",
 							"rapidspin"
 					 ],
@@ -4350,7 +4350,7 @@
 	"evacycle":{
 		 "nicknames":[
 				"Feliz Jueves",
-				"Evacycle",
+				"Get In",
 				"Evacycle",
 				"Evacycle"
 		 ],
@@ -4451,6 +4451,21 @@
 							"adaptray",
 							"moonlight",
 							"willowisp"
+					 ],
+					 "level":78
+				},
+				{
+					 "abilities":[
+							"flamebody"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"randommode",
+							"lanceoflonginus",
+							"moonlight",
+							"technoray"
 					 ],
 					 "level":78
 				}
@@ -4609,7 +4624,7 @@
 	"baddon":{
 		 "nicknames":[
 				"oenis",
-				"Baddon",
+				"toying with em",
 				"Baddon",
 				"Baddon"
 		 ],
@@ -4698,7 +4713,7 @@
 		 "nicknames":[
 				"Casual",
 				"zigzagger",
-				"Batterex",
+				"Carry Dragon",
 				"Batterex",
 				"Batterex",
 				"Batterex",
@@ -5014,7 +5029,7 @@
 		 "nicknames":[
 				"shenti",
 				"sub-tan",
-				"Yedoom",
+				"DWBA",
 				"Yedoom",
 				"Yedoom",
 				"Yedoom",
@@ -5250,7 +5265,7 @@
 	"mimimie":{
 		 "nicknames":[
 				"Inkling",
-				"Mimimie",
+				"Dripping and Soaking",
 				"Mimimie",
 				"Mimimie"
 		 ],
@@ -5427,7 +5442,7 @@
 				"OBSOLETE",
 				"BE A MAN",
 				"Hollywood",
-				"Hulkan",
+				"HH",
 				"Hulkan",
 				"Hulkan",
 				"Hulkan",
@@ -5479,7 +5494,7 @@
 					 "moves":[
 							"hulkup",
 							"closecombat",
-							"earthquake",
+							"atomicrush",
 							"darkestlariat"
 					 ],
 					 "lockedMoves":[
@@ -5878,7 +5893,7 @@
 							"leftovers"
 					 ],
 					 "moves":[
-							"doubleironbash",
+							"machgunblow",
 							"machpunch",
 							"substitute",
 							"focuspunch"
@@ -5887,17 +5902,16 @@
 				},
 				{
 					 "abilities":[
-							"ironfist"
+							"sheerforce"
 					 ],
 					 "items":[
 							"choicescarf"
 					 ],
 					 "moves":[
 							"voltswitch",
-							"firepunch",
+							"knockoff",
 							"technorush",
-							"thunderpunch",
-							"icepunch"
+							"doubleironbash"
 					 ],
 					 "level":84
 				},
@@ -6299,7 +6313,7 @@
 							"iceshard",
 							"liquidation",
 							"earthquake",
-							"milkdrink",
+							"cooldown",
 							"aquajet",
 							"iciclecrash"
 					 ],
@@ -7209,7 +7223,8 @@
 							"suckerpunch",
 							"crunch",
 							"swordsdance",
-							"ironhead"
+							"ironchomp",
+							"treasurechest"
 					 ],
 					 "level":80
 				},
@@ -7224,7 +7239,7 @@
 							"crunch",
 							"suckerpunch",
 							"superpower",
-							"ironhead",
+							"ironchomp",
 							"psychicfangs"
 					 ],
 					 "level":80
@@ -7260,7 +7275,7 @@
 							"softboiled",
 							"hydropump",
 							"earthpower",
-							"sludgewave"
+							"stickyhands"
 					 ],
 					 "level":72
 				}
@@ -7286,11 +7301,19 @@
 							"lifeorb"
 					 ],
 					 "moves":[
-							"swordsdance",
+							"dildohorn",
 							"pixiepummel",
 							"earthquake",
 							"highjumpkick",
-							"bravebird"
+							"swordsdance",
+							"bravebird",
+							"takeflight"
+					 ],
+					 "lockedMoves":[
+
+							"pixiepummel",
+							"hiv"
+							
 					 ],
 					 "level":80
 				},
@@ -7302,11 +7325,15 @@
 							"leftovers"
 					 ],
 					 "moves":[
-							"defog",
-							"pixiepummel",
 							"moonlight",
 							"uturn",
 							"earthquake"
+					 ],
+					 "lockedMoves":[
+							"defog",
+							"pixiepummel",
+							"hiv"
+							
 					 ],
 					 "level":80
 				},
@@ -7320,11 +7347,32 @@
 					 ],
 					 "moves":[
 							"uturn",
-							"pixiepummel",
+							"dildohorn",
 							"highjumpkick",
 							"bravebird",
 							"earthquake",
 							"blazekick"
+					 ],
+					 "lockedMoves":[
+							"pixiepummel",
+							"hiv"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"pozzed"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"roost",
+							"pixiedust"
+					 ],
+					 "lockedMoves":[
+							"virus",
+							"viruscrush"
 					 ],
 					 "level":80
 				}
@@ -7370,7 +7418,23 @@
 					 ],
 					 "moves":[
 							"substitute",
-							"focuspunch"
+							"focuspunch",
+							"powerarena",
+							"oilup"
+					 ],
+					 "level":72
+				},
+				{
+					 "abilities":[
+							"hugepower"
+					 ],
+					 "items":[
+							"powerarena",
+							"oilup",
+							"bodyboost"
+					 ],
+					 "moves":[
+							"brickbreak"
 					 ],
 					 "level":72
 				}
@@ -7408,7 +7472,7 @@
 							"lifeorb"
 					 ],
 					 "moves":[
-							"moonblast",
+							"boostbeam",
 							"icebeam",
 							"hydropump",
 							"focusblast"
@@ -7429,8 +7493,23 @@
 							"stealthrock",
 							"uturn",
 							"scald",
-							"moonblast",
+							"meltedplastic",
 							"taunt"
+					 ],
+					 "level":76
+				},
+				{
+					 "abilities":[
+							"regenerator"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"defog",
+							"uturn",
+							"scald",
+							"meltedplastic"
 					 ],
 					 "level":76
 				}
@@ -7455,7 +7534,7 @@
 							"softboiled",
 							"earthquake",
 							"stealthrock",
-							"toxic",
+							"extrachromosome",
 							"knockoff"
 					 ],
 					 "level":76
@@ -7471,8 +7550,7 @@
 					 "moves":[
 							"headsmash",
 							"earthquake",
-							"powerwhip",
-							"doubleedge",
+							"bonebreaker",
 							"softboiled"
 					 ],
 					 "level":76
@@ -7504,8 +7582,8 @@
 					 ],
 					 "moves":[
 							"greatrage",
-							"earthquake",
-							"stoneedge"
+							"bellyflop",
+							"detonationburst"
 					 ],
 					 "lockedMoves":[
 							"bellydrum",
@@ -7525,7 +7603,7 @@
 							"greatrage",
 							"slackoff",
 							"toxic",
-							"stoneedge"
+							"boulderbash"
 					 ],
 					 "level":80
 				},
@@ -7540,8 +7618,8 @@
 							"bulkup",
 							"greatrage",
 							"slackoff",
-							"earthquake",
-							"stoneedge"
+							"soniccharge",
+							"boulderbash"
 					 ],
 					 "level":80
 				}
@@ -7569,9 +7647,9 @@
 					 ],
 					 "moves":[
 							"aeroblast",
-							"dracometeor",
+							"searingsauce",
 							"uturn",
-							"earthpower"
+							"infernowind"
 					 ],
 					 "lockedMoves":[
 							"wowwiener"
@@ -7588,8 +7666,8 @@
 					 ],
 					 "moves":[
 							"nastyplot",
-							"aeroblast",
-							"earthpower",
+							"creammissiles",
+							"infernowind",
 							"glare"
 					 ],
 					 "lockedMoves":[
@@ -7657,6 +7735,59 @@
 							"plunder"
 					 ],
 					 "level":80
+				},
+				{
+					 "abilities":[
+							"download",
+							"moldbreaker"
+					 ],
+					 "items":[
+							"watergem"
+					 ],
+					 "moves":[
+							"closecombat",
+							"swordsdance",
+							"suckerpunch",
+							"boatbash"
+					 ],
+					 "lockedMoves":[
+							"plunder"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"download"
+					 ],
+					 "items":[
+							"watergem"
+					 ],
+					 "moves":[
+							"hookdown",
+							"earthquake",
+							"boatbash"
+					 ],
+					 "lockedMoves":[
+							"plunder"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"moldbreaker"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"coralblade",
+							"closecombat",
+							"boatbash"
+					 ],
+					 "lockedMoves":[
+							"coralreef"
+					 ],
+					 "level":80
 				}
 		 ]
 	},
@@ -7680,8 +7811,8 @@
 							"earthquake",
 							"flamecharge",
 							"return",
-							"highjumpkick",
-							"knockoff"
+							"couragerush",
+							"cbt"
 					 ],
 					 "level":80
 				},
@@ -7698,6 +7829,36 @@
 							"superfang",
 							"toxic",
 							"knockoff"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"hugepower"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"beatup",
+							"gangbang",
+							"bodyslam",
+							"attract"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"furcoat"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"softboiled",
+							"agility",
+							"batonpass",
+							"bulkup"
 					 ],
 					 "level":80
 				}
@@ -7723,10 +7884,10 @@
 							"focussash"
 					 ],
 					 "moves":[
-							"searingshot",
+							"ashrain",
 							"aeroblast",
-							"energyball",
-							"boomburst"
+							"superheatray",
+							"steamsale"
 					 ],
 					 "lockedMoves":[
 							"toke"
@@ -7742,12 +7903,46 @@
 					 ],
 					 "moves":[
 							"aeroblast",
+							"magmaslash",
 							"overheat",
-							"gunkshot",
-							"energyball"
+							"snipershot"
 					 ],
 					 "lockedMoves":[
 							"focusenergy"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"pro"
+					 ],
+					 "items":[
+							"focussash"
+					 ],
+					 "moves":[
+							"dogfight",
+							"lavablitz",
+							"technorush"
+					 ],
+					 "lockedMoves":[
+							"vformation"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"toxicboost"
+					 ],
+					 "items":[
+							"toxicorb"
+					 ],
+					 "moves":[
+							"dogfight",
+							"lavablitz",
+							"hotpocketcrash"
+					 ],
+					 "lockedMoves":[
+							"protect"
 					 ],
 					 "level":80
 				}
@@ -7756,7 +7951,7 @@
 	"oogabuga":{
 		 "nicknames":[
 				"eyy",
-				"Oogabuga",
+				"clickclick",
 				"Oogabuga",
 				"Oogabuga"
 		 ],
@@ -7771,9 +7966,9 @@
 					 ],
 					 "moves":[
 							"seedflare",
-							"bugbuzz",
+							"befuddlepowder",
 							"earthpower",
-							"focusblast"
+							"baddybad"
 					 ],
 					 "lockedMoves":[
 							"quiverdance"
@@ -7790,10 +7985,12 @@
 					 "moves":[
 							"roost",
 							"seedflare",
-							"defog",
-							"bugbuzz",
-							"earthpower"
+							"befuddlepowder",
+							"baddybad"
 					 ],
+					 "lockedMoves":[
+						"defog"
+					],
 					 "level":84
 				}
 		 ]
@@ -7816,7 +8013,7 @@
 					 ],
 					 "moves":[
 							"knockoff",
-							"thousandarrows",
+							"memeticfang",
 							"copycat"
 					 ],
 					 "lockedMoves":[
@@ -7837,7 +8034,7 @@
 							"copycat",
 							"knockoff",
 							"uturn",
-							"playrough",
+							"infooverload",
 							"thunderwave"
 					 ],
 					 "level":84
@@ -7859,6 +8056,24 @@
 				},
 				{
 					 "abilities":[
+							"degredation"
+					 ],
+					 "items":[
+							"blackglasses",
+							"lifeorb"
+					 ],
+					 "moves":[
+							"knockoff",
+							"memeticfang"
+					 ],
+					 "lockedMoves":[
+							"infooverload",
+							"randomgenerate"
+					 ],
+					 "level":79
+				},
+				{
+					 "abilities":[
 							"prankster"
 					 ],
 					 "items":[
@@ -7868,7 +8083,7 @@
 							"substitute",
 							"encore",
 							"knockoff",
-							"thousandarrows"
+							"memeticfang"
 					 ],
 					 "lockedMoves":[
 							"disable"
@@ -7880,14 +8095,14 @@
 	"upbeddit":{
 		 "nicknames":[
 				"Epic Post",
-				"Upbeddit",
-				"Upbeddit",
+				"All for One",
+				"Uptooters",
 				"Upbeddit"
 		 ],
 		 "sets":[
 				{
 					 "abilities":[
-							"trace"
+							"simple"
 					 ],
 					 "items":[
 							"leftovers"
@@ -7895,12 +8110,13 @@
 					 "moves":[
 							"calmmind",
 							"morningsun",
-							"focusblast",
-							"shadowball",
+							"zombievirus",
+							"nastyplot",
 							"fireblast"
 					 ],
 					 "lockedMoves":[
-							"psystrike"
+							"psystrike",
+							"lifesap"
 					 ],
 					 "level":84
 				},
@@ -7912,10 +8128,12 @@
 							"leftovers"
 					 ],
 					 "moves":[
-							"psychoboost",
+							"brainrot",
 							"toxic",
 							"recover",
-							"teleport",
+							"teleport"
+					 ],
+					 "lockedMoves":[
 							"mop"
 					 ],
 					 "level":84
@@ -7931,8 +8149,53 @@
 							"psystrike",
 							"voltswitch",
 							"fireblast",
-							"icebeam",
-							"focusblast"
+							"brainrot",
+							"overload"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"trace"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"psystrike",
+							"zombiespread",
+							"fireblast",
+							"brainrot"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"trace"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"copycat",
+							"replicate",
+							"brainrot",
+							"zombiespread"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"trace"
+					 ],
+					 "items":[
+							"lifeorb"
+					 ],
+					 "moves":[
+							"midnight",
+							"shadowball",
+							"brainrot",
+							"zombievirus"
 					 ],
 					 "level":84
 				}
@@ -8008,13 +8271,30 @@
 							"choiceband"
 					 ],
 					 "moves":[
-							"bravebird",
-							"superpower",
-							"machpunch",
+							"dogfight",
+							"cyclonepunch",
+							"fishingdive",
 							"uturn"
 					 ],
 					 "lockedMoves":[
 							"anchorshot"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"noguard"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"dogfight",
+							"roost",
+							"dynamicpunch"
+					 ],
+					 "lockedMoves":[
+							"defog"
 					 ],
 					 "level":80
 				}

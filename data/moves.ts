@@ -57365,7 +57365,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -62524,6 +62529,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		volatileStatus: 'spikedarmor',
+		condition: {
+			onStart(pokemon, source, effect) {
+				
+					this.add('-start', pokemon, 'Spiked Armor');
+			},
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target, true)) {
+				this.damage(source.baseMaxhp / 8, source, target);
+			}
+		},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Spiked Armor', '[silent]');
+			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Steel",
@@ -76919,6 +76940,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onHit(target) {
+			if (target.status || !target.runStatusImmunity('slp')) return;
+			if (this.random(2) === 0) return;
+			target.addVolatile('yawn');
+		},
+		onAfterSubDamage(damage, target) {
+			if (target.status || !target.runStatusImmunity('slp')) return;
+			if (this.random(2) === 0) return;
+			target.addVolatile('yawn');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -77664,7 +77695,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 45,
+			boosts: {
+				atk: -1,
+				spa: -1,
+			},
+		},
 		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
@@ -85616,7 +85653,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onAfterHit(source, target) {
+		onAfterHit(target, source) {
 			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
 			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
 				duration: 3,
@@ -85638,6 +85675,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			this.add('-start', source, 'move: Trojan Rush');
 			return this.NOT_FAIL;
 		},
+		
 		secondary: null,
 		target: "normal",
 		type: "Virus",
@@ -86650,6 +86688,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			spa: 2,
+			spd: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Water",
@@ -87025,7 +87067,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, bounce: 1},
-		secondary: null,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability(target, source, move) {
+				if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
+					return;
+				}
+				return false;
+			},
+			onSourceBasePower(basePower, target, source, move) {
+				if (move.id === 'gust' || move.id === 'twister') {
+					return this.chainModify(2);
+				}
+			},
+		},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",

@@ -1764,6 +1764,32 @@
       }
     ]
   },
+   "nymbiosego": {
+    "nicknames": [
+      "Nymbiosego"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "beastboost"
+        ],
+        "items": [
+          "airballoon"
+        ],
+        "moves": [
+          "stealthrock",
+          "trickroom",
+          "insanitybolt",
+          "thunderbolt"
+        ],
+        "lockedMoves": [
+          "amberwave",
+          "sludgebomb"
+        ],
+        "level": 84
+      }
+    ]
+  },
   "pollugong": {
     "nicknames": [
       "Pollugong"

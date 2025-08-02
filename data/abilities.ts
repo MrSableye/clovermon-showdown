@@ -11074,12 +11074,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(0.5);
 			}
 		},
-		onModifyMove(move, source) {
+		onModifyType(move, source) {
 			if (move.hit === 2 && move.type === source.getTypes()[0]) 
 				 move.type = source.getTypes()[1]; 
 			else if (move.hit === 2 && move.type === source.getTypes()[1]) 
 				move.type = source.getTypes()[0]; 
 		},
+
 		// Damage modifier implemented in BattleActions#modifyDamage()
 		onSourceModifySecondaries(secondaries, target, source, move) {
 			if (move.multihitType && move.id === 'secretpower' && move.hit < 2) {
