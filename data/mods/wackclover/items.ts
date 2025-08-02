@@ -1487,7 +1487,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ge: {
+	page: {
 		inherit: true,
 		isNonstandard: null,
 	},
