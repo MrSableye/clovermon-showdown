@@ -1700,7 +1700,7 @@
 		 "sets":[
 				{
 					 "abilities":[
-							"sapsipper"
+							"reckless"
 					 ],
 					 "items":[
 							"leftovers"
@@ -5429,6 +5429,7 @@
 							"boardpowerx"
 					 ],
 					 "items":[
+						"leftovers"
 							
 					 ],
 					 "moves":[
@@ -5436,6 +5437,30 @@
 							"knockoff",
 							"teleport",
 							"moonblast"
+					 ],
+					 "level":84
+				}
+		 ]
+	},
+	"fontabaz":{
+		 "nicknames":[
+				"/z/idiot",
+				"Idiot King",
+				"Zee"
+		 ],
+		 "sets":[
+				{
+					 "abilities":[
+							"boardpowerz"
+					 ],
+					 "items":[
+							"leppaberry"
+					 ],
+					 "moves":[
+							"metronome",
+							"calmmind",
+							"meme",
+							"recover"
 					 ],
 					 "level":84
 				}

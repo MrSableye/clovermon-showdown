@@ -556,9 +556,17 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Rock", "Sound"],
 	},
+	hulkan: {
+		inherit: true,
+		types: ["Fighting", "Nuclear"],
+	},
+	dragking: {
+		inherit: true,
+		types: ["Fairy", "Virus"],
+	},
 	gynuke: {
 		inherit: true,
-		types: ["Steam", "Fire"],
+		types: ["Steam", "Nuclear"],
 		abilities: {
 			0: "Aftermath",
 			1: "Explosive",

@@ -3052,6 +3052,30 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		cyclonepunch: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		sonicpunch: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		antiectpunch: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		heartpunch: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		manapunch: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		steampunch: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		crystaledge: {
 		inherit: true,
 		isNonstandard: null,
@@ -3294,6 +3318,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		earthchomp: {
 		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
 		isNonstandard: null,
 		},
 		earthenfeast: {
@@ -3512,6 +3537,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		fishbite: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		fishingdive: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -4156,6 +4185,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		magmaburst: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		
 		magmaquake: {
 			inherit: true,
 			isNonstandard: null,
@@ -4404,6 +4438,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		nuclearpulse: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		streamline: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -4971,6 +5009,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		skitter: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		boneify: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		bonewand: {
 		inherit: true,
 		isNonstandard: null,
 		},

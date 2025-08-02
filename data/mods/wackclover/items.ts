@@ -1487,4 +1487,64 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rubberglove: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	spookymask: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	telescope: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	speaker: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sauce: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	brains: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	uranium: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	motherboard: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	optimizerpro: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glasspiece: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	plasticpiece: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	carpet: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	holycross: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stopwatch: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
