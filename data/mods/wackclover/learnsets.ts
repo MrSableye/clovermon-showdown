@@ -6641,6 +6641,7 @@ blackmagic: ["8L1"],
 	cheerific: {
 		learnset: {
 			hiphiphooray: ["8L1"],
+			kawaiilook: ["8L1"],
 			cutebetrayal: ["8L1"],
 			acrobatics: ["8L32", "8T"],
 			attract: ["8M"],

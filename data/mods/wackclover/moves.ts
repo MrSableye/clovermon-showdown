@@ -3812,6 +3812,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		kawaiilook: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		heartbreak: {
 		inherit: true,
 		isNonstandard: null,
