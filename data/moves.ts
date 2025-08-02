@@ -51786,8 +51786,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			if (!target || target.fainted || target.hp <= 0) this.boost({atk: 2}, pokemon, pokemon, move);
-			if (!target || target.fainted || target.hp <= 0 && pokemon?.volatiles['bleed']) this.boost({atk: 2, spe: 1}, pokemon, pokemon, move);
+			if (!target || target.fainted || target.hp <= 0 && target.hp <= 0 && pokemon?.volatiles['bleed']) this.boost({atk: 2, spe: 1}, pokemon, pokemon, move);
+			else if (!target || target.fainted || target.hp <= 0) this.boost({atk: 2}, pokemon, pokemon, move);
+			
 		},
 		secondary: null,
 		target: "normal",
@@ -86071,6 +86072,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
+		onHit(target, source) {
+			const worstStat = source.getWorstStat(true, true);
+			this.boost({[worstStat]: 2}, source);
+		},
 		secondary: null,
 		target: "self",
 		type: "Nuclear",

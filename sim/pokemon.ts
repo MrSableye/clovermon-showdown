@@ -627,6 +627,20 @@ export class Pokemon {
 		return statName;
 	}
 
+	getWorstStat(unboosted?: boolean, unmodified?: boolean): StatIDExceptHP {
+		let statName: StatIDExceptHP = 'atk';
+		let worstStat = 0;
+		const stats: StatIDExceptHP[] = ['atk', 'def', 'spa', 'spd', 'spe'];
+		for (const i of stats) {
+			if (this.getStat(i, unboosted, unmodified) < worstStat) {
+				statName = i;
+				worstStat = this.getStat(i, unboosted, unmodified);
+			}
+		}
+
+		return statName;
+	}
+
 	/* Commented out for now until a use for Combat Power is found in Let's Go
 	getCombatPower() {
 		let statSum = 0;
