@@ -16206,7 +16206,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	mothsmajesty: {
 		onStart(pokemon) {
 			const bestStat = pokemon.getBestStat(true, true);
-			this.boost({[bestStat]: length}, pokemon);
+			this.boost({[bestStat]: 1}, pokemon);
 		},
 		name: "Moth's Majesty",
 		rating: 4,
@@ -18173,5 +18173,293 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			isNonstandard: "Future",
 		},
 
+		concussion: {// test
+		name: "Concussion",
+		shortDesc: "While this Pokemon is active, the opponents' held items have no effect.",
+		rating: 4,
+			num: 1032, // Ajusta o número como quiser
+			isNonstandard: "Future",
+		onStart(source) {
+			let activated = false;
+			for (const pokemon of source.side.foe.active) {
+				if (!activated) {
+					this.add('-ability', source, 'Concussion');
+				}
+				activated = true;
+				if (!pokemon.volatiles['embargo']) {
+					pokemon.addVolatile('embargo');
+				}
+			}
+		},
+		onAnySwitchIn(pokemon) {
+			const source = this.effectState.target;
+			if (pokemon === source) return;
+			for (const target of source.side.foe.active) {
+				if (!target.volatiles['embargo']) {
+					target.addVolatile('embargo');
+				}
+			}
+		},
+		onEnd(pokemon) {
+			const source = this.effectState.target;
+			for (const target of source.side.foe.active) {
+				target.removeVolatile('embargo');
+			}
+		},
+	},
+
+	pillage: {
+		name: "Pillage",
+		shortDesc: "On switch-in, swaps ability with the opponent.",
+		rating: 4,
+			num: 1033, // Ajusta o número como quiser
+			isNonstandard: "Future",
+		onSwitchIn(pokemon) {
+			this.effectState.switchingIn = true;
+		},
+		onStart(pokemon) {
+			if ((pokemon.side.foe.active.some(
+				foeActive => foeActive && pokemon.isAdjacent(foeActive) && foeActive.ability === 'noability'
+			)) ||
+			pokemon.species.id !== 'yaciancrowned' && pokemon.species.id !== 'porygrigus' && pokemon.species.id !== 'porymask' && pokemon.species.id !== 'hatterune' && pokemon.species.id !== 'hatamaskgalar') {
+				this.effectState.gaveUp = true;
+			}
+		},
+		onUpdate(pokemon) {
+			if (!pokemon.isStarted || this.effectState.gaveUp || !this.effectState.switchingIn) return;
+			const possibleTargets = pokemon.foes().filter(foeActive => foeActive && !foeActive.getAbility().isNonstandard
+				&& !foeActive.getAbility().isNonstandard && foeActive.isAdjacent(pokemon));
+			if (!possibleTargets.length) return;
+			const rand = (possibleTargets.length > 1) ? this.random(possibleTargets.length) : 0;
+			const target = possibleTargets[rand];
+			const pillageAbil = pokemon.getAbility();
+			const ability = target.getAbility();
+			if (!this.runEvent('SetAbility', target, pokemon, this.effect, pillageAbil)
+			   || !this.runEvent('SetAbility', pokemon, pokemon, this.effect, ability)) return;
+			this.add('-ability', pokemon, 'Pillage');
+			this.add('-activate', pokemon, 'move: Skill Swap', ability, pillageAbil, '[of] ' + target);
+			this.singleEvent('End', pillageAbil, pokemon.abilityState, pokemon);
+			this.singleEvent('End', ability, target.abilityState, target);
+			pokemon.ability = ability.id
+			pokemon.abilityState = {id: this.toID(pokemon.ability), target: pokemon};
+			target.ability = pillageAbil.id;
+			target.abilityState = {id: this.toID(pillageAbil.id), target: target};
+			this.singleEvent('Start', ability, pokemon.abilityState, pokemon);
+			this.singleEvent('Start', pillageAbil, target.abilityState, target);
+		},
+	},
+
+	anatidaephobia: {
+		onSourceDamagingHit(damage, target, source, move) {
+			// Despite not being a secondary, Shield Dust / Covert Cloak block Poison Touch's effect
+			if (target.hasAbility('shielddust') || target.hasItem('covertcloak')) return;
+			if (['Normal', 'Fighting'].includes(move.type)) {
+				this.add('-ability', source, 'Anatidaephobia');
+				target.addVolatile('perishsong', source);
+			}
+		},
+		onTryBoost(boost, target, source, effect) {
+			switch (effect.name) {
+				case 'Scarily Adorable':
+					if (boost.spe) {
+						delete boost.spe;
+						this.add('-fail', target, 'unboost', 'Speed', '[from] ability: Anatidaephobia', '[of] ' + target);
+					}
+				case 'Intimidate':
+				case 'Metalhead':
+				case 'Creepy':
+				case 'Catastrophic':
+					if (boost.atk) {
+						delete boost.atk;
+						this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Anatidaephobia', '[of] ' + target);
+					}
+					break;
+				case 'Pecking Order':
+					if (boost.def) {
+						delete boost.def;
+						this.add('-fail', target, 'unboost', 'Defense', '[from] ability: Anatidaephobia', '[of] ' + target);
+					}
+					break;
+				case 'Debilitate':
+					if (boost.spa) {
+						delete boost.spa;
+						this.add('-fail', target, 'unboost', 'Special Attack', '[from] ability: Anatidaephobia', '[of] ' + target);
+					}
+					break;
+				case 'Sink or Swim':
+					if (boost.spe) {
+						delete boost.spe;
+						this.add('-fail', target, 'unboost', 'Speed', '[from] ability: Anatidaephobia', '[of] ' + target);
+					}
+					break;
+			}
+		},
+		name: "Anatidaephobia",
+		shortDesc: "Normal, Fighting hit Ghost and inflict Perish Song.",
+		rating: 4,
+			num: 1034, // Ajusta o número como quiser
+			isNonstandard: "Future",
+	},
+
+	notfunny: {
+		name: "Not Funny",
+		shortDesc: "No Guard + Prankster.",
+		rating: 4,
+			num: 1035, // Ajusta o número como quiser
+			isNonstandard: "Future",
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.category === 'Status') {
+				move.pranksterBoosted = true;
+				return priority + 1;
+			}
+		},
+		onAnyInvulnerabilityPriority: 1,
+		onAnyInvulnerability(target, source, move) {
+			if (move && (source === this.effectState.target || target === this.effectState.target)) return 0;
+		},
+		onAnyAccuracy(accuracy, target, source, move) {
+			if (move && (source === this.effectState.target || target === this.effectState.target)) {
+				return true;
+			}
+			return accuracy;
+		},
+	},
+
+	quickstart: {
+		shortDesc: "On switch-in, this Pokemon's Attack and Speed are doubled for 5 turns.",
+		rating: 4,
+			num: 1036, // Ajusta o número como quiser
+			isNonstandard: "Future",
+		onStart(pokemon) {
+			pokemon.addVolatile('quickstart');
+		},
+		onEnd(pokemon) {
+			delete pokemon.volatiles['quickstart'];
+			this.add('-end', pokemon, 'Quickstart', '[silent]');
+		},
+		condition: {
+			duration: 5,
+			onStart(target) {
+				this.add('-start', target, 'ability: Quickstart');
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, pokemon) {
+				return this.chainModify(2);
+			},
+			onModifySpe(spe, pokemon) {
+				return this.chainModify(2);
+			},
+			onEnd(target) {
+				this.add('-end', target, 'Quickstart');
+			},
+		},
+		name: "Quickstart",
+    },
+
+	poweroffriendship: {
+		onBeforeSwitchIn(pokemon) {
+			pokemon.abilityState.friend = null;
+			// yes, you can Illusion an active pokemon but only if it's to your right
+			for (let i = pokemon.side.pokemon.length - 1; i > pokemon.position; i--) {
+				const possibleTarget = pokemon.side.pokemon[i];
+				if (!possibleTarget.fainted) {
+					// If Ogerpon is in the last slot while the Illusion Pokemon is Terastallized
+					// Illusion will not disguise as anything
+					if (!pokemon.terastallized || possibleTarget.species.baseSpecies !== 'Ogerpon') {
+						pokemon.abilityState.friend = possibleTarget.species;
+					}
+					break;
+				}
+			}
+		},
+		onBeforeMovePriority: 9,
+		onBeforeMove(pokemon, target, move) {
+			move.pp --;
+			const illusionmove = this.dex.getActiveMove(move.id);
+			// Create a custom move name based on the friend species
+			const friendName = pokemon.abilityState.friend ? pokemon.abilityState.friend.name : move.name;
+			this.add('-message', `${pokemon.name} used ${friendName}!`);
+			this.actions.useMove(illusionmove, pokemon, target);
+			return null;
+		},
+		name: "Power of Friendship",
+		rating: 4,
+			num: 1037, // Ajusta o número como quiser
+			isNonstandard: "Future",
+		//shortDesc: "This Pokemon's moves are disguised as the last Pokemon in its party.",
+	},
+
+	boundaryblurrer: {
+		name: "Boundary Blurrer",
+		shortDesc: "During weather effects, FoAtk, FoDef, SpAtk, and SpDef are doubled.",
+		rating: 4,
+			num: 1038, // Ajusta o número como quiser
+			isNonstandard: "Future",
+		onModifyAtk(relayVar, source, target, move) {
+			if (this.field.weather)
+				this.chainModify(2);
+		},
+		onModifyDef(relayVar, source, target, move) {
+			if (this.field.weather)
+				this.chainModify(2);
+		},
+		onModifySpA(relayVar, source, target, move) {
+			if (this.field.weather)
+				this.chainModify(2);
+		},
+		onModifySpD(relayVar, source, target, move) {
+			if (this.field.weather)
+				this.chainModify(2);
+		},
+	},
+
+	powerabuse: {
+		shortDesc: "Drought + 60% damage reduction + 20% burn after physical move.",
+		rating: 4,
+			num: 1039, // Ajusta o número como quiser
+			isNonstandard: "Future",
+		name: "Power Abuse",
+		onStart() {
+			this.field.setWeather('sunnyday');
+		},
+		onSourceModifyDamage() {
+			return this.chainModify(0.4);
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (move.category === "Physical" && this.randomChance(1, 5)) {
+				source.trySetStatus('brn', target);
+			}
+		},
+	},
+
+	painfulexit: {
+		shortDesc: "When this Pokemon switches out, foes lose 25% HP.",
+		rating: 4,
+			num: 1040, // Ajusta o número como quiser
+			isNonstandard: "Future",
+		name: "Painful Exit",
+		onBeforeSwitchOutPriority: -1,
+		onBeforeSwitchOut(pokemon) {
+			for (const foe of pokemon.foes()) {
+				if (!foe || foe.fainted || !foe.hp) continue;
+				this.add(`-anim`, pokemon, "Tackle", foe);
+				this.damage(foe.hp / 4, foe, pokemon);
+			}
+		},
+	},
+
+	coinflipmechanics: {
+		rating: 4,
+			num: 1041, // Ajusta o número como quiser
+			isNonstandard: "Future",
+		onStart(pokemon) {
+			this.add(`c:|${Math.floor(Date.now() / 1000)}|${pokemon.name}|Let's go gambling!`);
+		},
+		onAnyAccuracy(accuracy, target, source, move) {
+			return 50;
+		},
+		name: "Coinflip Mechanics",
+		//shortDesc: "All moves used by or against this Pokemon have 50% accuracy.",
+	},
 
 };
