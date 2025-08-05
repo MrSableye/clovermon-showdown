@@ -13834,7 +13834,7 @@
       }
     ]
   },
-  "Beachreimu": {
+  "beachreimu": {
     "nicknames": [
       "Beach Reimu"
     ],
@@ -13842,6 +13842,34 @@
       {
         "abilities": [
           "waterabsorb"
+        ],
+        "items": [
+          "mercuryorb",
+          "jupiterorb",
+          "shatteringhammer"
+        ],
+        "moves": [
+          "exorcise",
+          "earthquake",
+          "recover",
+          "revolvingillusion",
+          "doubleedge"
+        ],
+        "lockedMoves": [
+          "fantasyseal"
+        ],
+        "level": 84
+      }
+    ]
+  },
+   "reimaiden": {
+    "nicknames": [
+      "Reimu"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "scrappy"
         ],
         "items": [
           "mercuryorb",
