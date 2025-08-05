@@ -3474,11 +3474,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
 			const removeTarget = [
 				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'darkscreen', 'claustrowall', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
-				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles','bonfire','healingcircle',
 			];
 			const removeAll = [
 				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
-				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles', 'bonfire','healingcircle',
 			];
 			for (const targetCondition of removeTarget) {
 				if (target.side.removeSideCondition(targetCondition)) {
@@ -7626,10 +7626,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 				let success = false;
 				const removeTarget = [
 					'reflect', 'lightscreen', 'auroraveil',  'darkscreen', 'claustrowall', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'luckyroll',
-					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles', 'bonfire','healingcircle',
 				];
 				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
-					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles'];
+					'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles', 'bonfire','healingcircle'];
 				for (const targetCondition of removeTarget) {
 					if (source.side.foe.removeSideCondition(targetCondition)) {
 						if (!removeAll.includes(targetCondition)) continue;
@@ -47221,7 +47221,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 60,
 			self: {
 				boosts: {
-					spa: 1,
+					def: 1,
 				},
 			},
 		},
@@ -48225,8 +48225,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-end', pokemon, 'Ceremony', '[silent]');
 			},
 		},
-		boosts: {
-			spd: 1,
+		onHit(target) {
+			if (this.field.getPseudoWeather('arboreum')) {
+				this.boost({
+					spa: 1,
+					spd: 1,
+				});
+			} else {
+				this.boost({
+					spd: 1,
+				});
+			}
 		},
 		secondary: null,
 		target: "self",
@@ -63786,20 +63795,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Healing Circle",
 		pp: 5,
 		priority: 0,
-		slotCondition: 'Healing Circle',
+		sideCondition: 'healingcircle',
 		condition: {
-			duration: 2,
-			onStart(pokemon, source) {
-				this.effectState.hp = source.maxhp / 2;
+			// this is a side condition
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Healing Circle');
 			},
-			onResidualOrder: 4,
-			onEnd(target) {
-				if (target && !target.fainted) {
-					const damage = this.heal(this.effectState.hp, target, target);
-					if (damage) {
-						this.add('-heal', target, target.getHealth, '[from] move: Healing Circle', '[wisher] ' + this.effectState.source.name);
-					}
-				}
+			onEntryHazard(pokemon) {
+				if (pokemon.hasItem('heavydutyboots')) return;
+				else if (this.field.getPseudoWeather('manaverse')) {
+
+				this.heal(pokemon.baseMaxhp / 7);
+			}
+				else this.heal(pokemon.baseMaxhp / 8);
 			},
 		},
 		flags: {reflectable: 1},
@@ -65090,6 +65098,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {reflectable: 1},
+		sideCondition: 'bonfire',
+		condition: {
+			// this is a side condition
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Bonfire');
+			},
+			onEntryHazard(pokemon) {
+				if (pokemon.hasItem('heavydutyboots')) return;
+				else if (pokemon.hasType('Fire')) {
+
+				this.heal(pokemon.baseMaxhp / 8);
+			}
+				else this.heal(pokemon.baseMaxhp / 19);
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Fire",
@@ -70561,11 +70584,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
 			const removeTarget = [
 				'reflect', 'lightscreen', 'auroraveil', 'darkscreen', 'claustrowall', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
-				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles', 'bonfire','healingcircle',
 			];
 			const removeAll = [
 				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
-				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles',
+				'magictrap', 'pillowpile', 'wiretrap', 'mines', 'brambles', 'icicles', 'scrapmetal', 'legotrap', 'hotcoals', 'acidtrap', 'discombubbles', 'bonfire','healingcircle',
 			];
 			for (const targetCondition of removeTarget) {
 				if (target.side.removeSideCondition(targetCondition)) {
@@ -72355,6 +72378,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		boosts: {
 			accuracy: 2,
+		},
+		onHit(target) {
+			if (this.field.getPseudoWeather('manaverse')) {
+				this.boost({
+					accuracy: 2,
+					spa: 1,
+				});
+			} else {
+				this.boost({
+					accuracy: 2,
+				});
+			}
 		},
 		target: "normal",
 		type: "Magic",
@@ -85705,6 +85740,37 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {mirror: 1},
+		pseudoWeather: 'manaverse',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('manarock')|| source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
+					return 10;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Arboreum', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Magic') {
+					this.debug('manaverse increase');
+					return this.chainModify([1.5]);
+				}
+			},
+			onModifySpDPriority: 10,
+			onModifySpD(def, pokemon) {
+				if (pokemon.hasType('Magic')) {
+					return this.chainModify([1.5]);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Manaverse');
+			},
+		},
 		secondary: null,
 		target: "all",
 		type: "Magic",
@@ -85721,6 +85787,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {snatch: 1},
 		boosts: {
 			def: 2,
+		},
+		onHit(target, source) {
+			if (this.field.getPseudoWeather('manaverse')) {
+			source.side.addSideCondition('reflect');
+			}
 		},
 		secondary: null,
 		target: "self",
@@ -85781,6 +85852,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target, source, move) {
+			return target.addVolatile('trapped', source, move, 'trapper');
+		},
+		onAfterHit(target) {
+			if (this.field.getPseudoWeather('manaverse')) {
+				this.boost({
+					spd: -1,
+				});
+			} 
+		},
+		volatileStatus: 'embargo',
 		secondary: null,
 		target: "normal",
 		type: "Magic",
@@ -85796,6 +85878,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		volatileStatus: 'imprison',
+		onHit(pokemon, source) {
+				if (this.field.getPseudoWeather('manaverse')) {
+					pokemon.addVolatile('disable')
+				}
+			},
 		secondary: null,
 		target: "self",
 		type: "Magic",

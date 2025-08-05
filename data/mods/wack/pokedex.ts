@@ -3133,7 +3133,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		baseStats: {hp: 64, atk: 120, def: 100, spa: 85, spd: 120, spe: 81},
 		abilities: {0: "Anticipation"},
 	},
-	pajantome: {
+	pajantom: {
 		inherit: true,
 		abilities: {0: "Marvel Scale", H: "Early Bird"},
 	},

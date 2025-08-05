@@ -1547,4 +1547,12 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	infernoorb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	plagueorb: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

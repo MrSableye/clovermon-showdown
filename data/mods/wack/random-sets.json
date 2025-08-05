@@ -3095,7 +3095,8 @@
         ],
         "items": [
           "spikedboots",
-          "heavydutyboots"
+          "heavydutyboots",
+          "shoepolish"
         ],
         "moves": [
           "crushgrip",
@@ -3133,6 +3134,37 @@
         ],
         "lockedMoves": [
           "rockblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "rikatank": {
+    "nicknames": [
+      "Rikatank"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "megalauncher"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "assaultvest",
+          "riotshield",
+          "choicespecs"
+        ],
+        "moves": [
+          
+          "icebeam",
+          "aurasphere",
+          "magnetpulse",
+          "flamethrower"
+        ],
+        "lockedMoves": [
+          "darkpulse",
+          "flashcannon"
         ],
         "level": 84
       }
