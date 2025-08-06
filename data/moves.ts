@@ -59884,7 +59884,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 20,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		onEffectiveness(typeMod, target, type, move) {
@@ -64427,7 +64427,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 100,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -65115,7 +65115,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 
 				this.heal(pokemon.baseMaxhp / 8);
 			}
-				else this.heal(pokemon.baseMaxhp / 19);
+				else this.heal(pokemon.baseMaxhp / 9);
 			},
 		},
 		secondary: null,
@@ -65270,7 +65270,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 100,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -66230,7 +66230,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 100,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -66714,7 +66714,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 50,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -67243,10 +67243,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: undefined,
 		secondary: {
 			chance: 100,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -67560,10 +67561,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: undefined,
 		secondary: {
 			chance: 40,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -71176,10 +71178,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 1,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: undefined,
 		secondary: {
 			chance: 100,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -74093,10 +74096,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: undefined,
 		secondary: {
 			chance: 50,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
