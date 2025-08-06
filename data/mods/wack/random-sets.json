@@ -3095,7 +3095,8 @@
         ],
         "items": [
           "spikedboots",
-          "heavydutyboots"
+          "heavydutyboots",
+          "shoepolish"
         ],
         "moves": [
           "crushgrip",
@@ -3133,6 +3134,37 @@
         ],
         "lockedMoves": [
           "rockblast"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "rikatank": {
+    "nicknames": [
+      "Rikatank"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "megalauncher"
+        ],
+        "items": [
+          "angelpowder",
+          "heavydutyboots",
+          "assaultvest",
+          "riotshield",
+          "choicespecs"
+        ],
+        "moves": [
+          
+          "icebeam",
+          "aurasphere",
+          "magnetpulse",
+          "flamethrower"
+        ],
+        "lockedMoves": [
+          "darkpulse",
+          "flashcannon"
         ],
         "level": 84
       }
@@ -13802,7 +13834,7 @@
       }
     ]
   },
-  "Beachreimu": {
+  "beachreimu": {
     "nicknames": [
       "Beach Reimu"
     ],
@@ -13810,6 +13842,34 @@
       {
         "abilities": [
           "waterabsorb"
+        ],
+        "items": [
+          "mercuryorb",
+          "jupiterorb",
+          "shatteringhammer"
+        ],
+        "moves": [
+          "exorcise",
+          "earthquake",
+          "recover",
+          "revolvingillusion",
+          "doubleedge"
+        ],
+        "lockedMoves": [
+          "fantasyseal"
+        ],
+        "level": 84
+      }
+    ]
+  },
+   "reimaiden": {
+    "nicknames": [
+      "Reimu"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "scrappy"
         ],
         "items": [
           "mercuryorb",

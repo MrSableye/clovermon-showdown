@@ -11074,6 +11074,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(0.5);
 			}
 		},
+		onModifyTypePriority: -1,
 		onModifyType(move, source) {
 			if (move.hit === 2 && move.type === source.getTypes()[0]) 
 				 move.type = source.getTypes()[1]; 
@@ -18221,8 +18222,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(pokemon) {
 			if ((pokemon.side.foe.active.some(
 				foeActive => foeActive && pokemon.isAdjacent(foeActive) && foeActive.ability === 'noability'
-			)) ||
-			pokemon.species.id !== 'yaciancrowned' && pokemon.species.id !== 'porygrigus' && pokemon.species.id !== 'porymask' && pokemon.species.id !== 'hatterune' && pokemon.species.id !== 'hatamaskgalar') {
+			)) ) {
 				this.effectState.gaveUp = true;
 			}
 		},

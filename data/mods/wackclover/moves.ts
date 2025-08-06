@@ -5144,11 +5144,19 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 				flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 				isNonstandard: null,
 				},
+				bindingcircle: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		spicyleaves: {
 		inherit: true,
 		isNonstandard: null,
 		},
 		spicypowder: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		spikedarmor: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -5512,6 +5520,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		tripleshot: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		trojanrush: {
 		inherit: true,
 		isNonstandard: null,
 		},
