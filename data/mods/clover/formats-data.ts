@@ -5411,7 +5411,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	lossolith: {
 		inherit: true,
-		tier: "RU",
+		tier: "RUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"wish",
@@ -6754,7 +6754,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	wheygle: {
 		inherit: true,
-		tier: "RU",
+		tier: "RUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"uturn",
@@ -6895,7 +6895,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	socckat: {
 		inherit: true,
-		tier: "NUBL",
+		tier: "RUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"highjumpkick",
