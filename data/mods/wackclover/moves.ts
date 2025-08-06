@@ -5523,6 +5523,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		trojanrush: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		trolling: {
 		inherit: true,
 		isNonstandard: null,

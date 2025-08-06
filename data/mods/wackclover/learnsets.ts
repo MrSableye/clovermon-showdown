@@ -705,6 +705,7 @@ arboreum: ["8L1"],
 	},
 	condoom: {
 		learnset: {
+			trojanrush: ["8L1"],
 			rubberrub: ["8L1"],
 rubberbullets: ["8L1"],
 rubberbeams: ["8L1"],
@@ -20148,6 +20149,7 @@ envelop: ["8L1"],
 	},
 	dragking: {
 		learnset: {
+			trojanrush: ["8L1"],
 			pixiedust: ["8L1"],
 glitzblitz: ["8L1"],
 takeflight: ["8L1"],
