@@ -18461,5 +18461,640 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Coinflip Mechanics",
 		//shortDesc: "All moves used by or against this Pokemon have 50% accuracy.",
 	},
+		// novas habildidades
+	coldsleep: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			for (const target of pokemon.foes()) {
+				if (target.status === 'slp') {
+					this.add('-activate', pokemon, 'ability: Coldsleep');
+					this.add('-message', `${target.name} is frozen in fear!`);
+					target.setStatus('frz');
+				}
+			}
+		},
+		onUpdate(pokemon) {
+			if (pokemon.status === 'frz') {
+				this.add('-activate', pokemon, 'ability: Coldsleep');
+				pokemon.cureStatus();
+			}
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'frz') return false;
+		},
+		name: "Coldsleep",
+		shortDesc: "Causes sleeping foes to be frozen at the end of each turn. The user cannot be frozen or put to sleep.",
+		rating: 3,
+		num: 1042,
+		isNonstandard: "Future",
+	},
+
+	hugescaling: {
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: Huge Scaling');
+			pokemon.maxhp = Math.floor(pokemon.maxhp * 2);
+			pokemon.hp = Math.floor(pokemon.hp * 2);
+			this.add('-heal', pokemon, pokemon.getHealth, '[silent]');
+		},
+		onEnd(pokemon) {
+			pokemon.maxhp = Math.floor(pokemon.maxhp / 2);
+			pokemon.hp = Math.floor(pokemon.hp / 2);
+		},
+		name: "Huge Scaling",
+		shortDesc: "This Pokemon's HP is doubled.",
+		rating: 4,
+		num: 1043,
+		isNonstandard: "Future",
+	},
+
+	lastcall: {
+		onFaint(pokemon) {
+			this.actions.useMove(pokemon.moveSlots[pokemon.moveSlots.length - 1].id, pokemon);
+		},
+		name: "LAST CALL",
+		shortDesc: "When this Pokemon faints, it uses the last move in its moveset.",
+		rating: 3,
+		num: 1044,
+		isNonstandard: "Future",
+	},
+
+	frigidtouch: {
+			shortDesc: "Contact with this Pokémon may freeze the target. Also grants contact moves freezing power.",
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				if (this.randomChance(3, 10)) {
+					source.trySetStatus('frz', target);
+				}
+			}
+		},
+		onSourceDamagingHit(damage, target, source, move) {
+			// Despite not being a secondary, Shield Dust / Covert Cloak block Poison Touch's effect
+			if (target.hasAbility('shielddust') || target.hasItem('covertcloak')) return;
+			if (this.checkMoveMakesContact(move, target, source)) {
+				if (this.randomChance(3, 10)) {
+					target.trySetStatus('frz', source);
+				}
+			}
+		},
+		name: "Frigid Touch",
+		rating: 2,
+		num: 1045,
+		isNonstandard: "Future",
+	},
+
+	evolutionburst: {
+		onModifyAtkPriority: 2,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.nfe) {
+				return this.chainModify(1.3);
+			}
+		},
+		onModifySpAPriority: 2,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.nfe) {
+				return this.chainModify(1.3);
+			}
+		},
+		onModifyDefPriority: 2,
+		onModifyDef(def, pokemon) {
+			if (pokemon.baseSpecies.nfe) {
+				return this.chainModify(1.3);
+			}
+		},
+		onModifySpDPriority: 2,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.baseSpecies.nfe) {
+				return this.chainModify(1.3);
+			}
+		},
+		name: "Evolution Burst",
+		shortDesc: "If pokemon's species can evolve, its Atk, Def, Sp. Atk and Sp. Def are 1.5x.",
+		rating: 4,
+		num: 1046,
+		isNonstandard: "Future",
+	},
+
+	shadowpounce: {
+		onDamagingHitOrder: 3,
+		onDamagingHit(damage, target, source, move) {
+			if (target.hp && source.hp) {
+				const reaction = this.dex.getActiveMove('shadowsneak');
+				this.actions.useMove(reaction, target, source);
+			}
+		},
+		name: "Shadow Pounce",
+		shortDesc: "This Pokemon retaliates with Shadow Sneak whenever it is damaged by an attack.",
+		rating: 3.5,
+		num: 1047,
+		isNonstandard: "Future",
+	},
+
+	grindset: {
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Grindset');
+			this.add('-message', `The grind never stops for ${pokemon.name}, lowering the foe's Attack and raising its own!`);
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk) {
+			return this.chainModify(1.5);
+		},
+		onAnyModifyAtk(atk, source, target, move) {
+			if (source.hasAbility('Grindset')) return;
+			const abilityHolder = this.effectState.target;
+			if (!move.ruinedAtk) move.ruinedAtk = abilityHolder;
+			else if (move.ruinedAtk !== abilityHolder) return;
+			this.debug('Grindset Atk drop');
+			return this.chainModify(0.5);
+		},
+		name: "Grindset",
+		shortDesc: "While active, own Attack is 1.5x, other Pokemon's Attack is 0.5.",
+		rating: 3,
+		num: 1048,
+		isNonstandard: "Future",
+	},
+
+	myceliumwaste: {
+		name: "Mycelium Waste",
+		shortDesc: "Physical and Status moves go last in their priority bracket.",
+		onFractionalPriorityPriority: -1,
+		onFractionalPriority(priority, pokemon, target, move) {
+			if (move.category !== 'Special') {
+				return -0.1;
+			}
+		},
+	},
+	almsgiver: {
+		shortDesc: "On switching out, shares a copy of its item with its replacement.",
+		rating: 3,
+		num: 1049,
+		isNonstandard: "Future",
+		onSwitchOut(pokemon) {
+			if (pokemon.item && pokemon.side.addSlotCondition(pokemon, 'almsgiver')) {
+				Object.assign(pokemon.side.slotConditions[pokemon.position]['almsgiver'], {
+					item: pokemon.item,
+				});
+			}
+		},
+		condition: {
+			onSwap(target) {
+				target.side.removeSlotCondition(target, 'almsgiver'); // always remove immediately even if it doesn't activate (you can remove this if you want it to be stored like Healing Wish)
+				if (!target.fainted) {
+					if (!target.item && this.effectState.item && target.setItem(this.effectState.item)) {
+						this.add('-ability', this.effectState.source, 'Almsgiver');
+						this.add('-item', target, this.dex.items.get(this.effectState.item), '[from] Ability: Almsgiver', '[of] ' + this.effectState.source);
+					}
+				}
+			},
+		},
+		name: "Almsgiver",
+	},
+
+	wandrush: {
+		onStart(source) {
+			this.field.setWeather('sandstorm');
+		},
+		onModifySpe(spe, pokemon) {
+			if (this.field.isWeather('sandstorm')) {
+				return this.chainModify(2);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(spa, pokemon) {
+			if (this.field.isWeather('sandstorm')) {
+				return this.chainModify(1.5);
+			}
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'sandstorm') return false;
+		},
+		name: "Wand Rush",
+		shortDesc: "On switchin, sets Sandstorm. Sandstorm: Speed 2x, Sp. Atk 1.5x; immunity to sand.",
+		rating: 4,
+		num: 1050,
+		isNonstandard: "Future",
+	},
+
+	powerofalchemyst: {
+		name: "Power of Alchemyst",
+		shortDesc: "On switch-in, swaps ability with the opponent.",
+		onSwitchIn(pokemon) {
+			this.effectState.switchingIn = true;
+		},
+		onStart(pokemon) {
+			if (!pokemon.isStarted || !this.effectState.switchingIn) return;
+			const additionalBannedAbilities = [
+				// Zen Mode included here for compatability with Gen 5-6
+				'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'wanderingspirit',
+				'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode'
+			];
+			const possibleTargets = pokemon.foes().filter(foeActive => foeActive && !foeActive.getAbility().isPermanent
+				&& !additionalBannedAbilities.includes(foeActive.ability) && foeActive.isAdjacent(pokemon));
+			if (possibleTargets.length) {
+				let rand = 0;
+				if (possibleTargets.length > 1) rand = this.random(possibleTargets.length);
+				const target = possibleTargets[rand];
+				const ability = target.getAbility();
+				if (pokemon.setAbility(ability) && target.setAbility('powerofalchemy')) {
+					this.add('-ability', target, 'Power of Alchemy');
+					this.add('-ability', pokemon, ability.name);
+				} else {
+					pokemon.setAbility('powerofalchemy');
+				}
+			}
+		},
+		rating: 3,
+		num: 1051,
+		isNonstandard: "Future",
+	},
+
+	jumpscare: {
+		onStart(pokemon) {
+			if (pokemon.abilityState.scare) return;
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Jumpscare');
+					activated = true;
+					pokemon.abilityState.scare = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					target.addVolatile('jumpscare');
+				}
+			}
+		},
+		name: "Jumpscare",
+		shortDesc: "On switchin, opposing Pokemon flinch. Once per battle.",
+		rating: 3,
+		num: 1052,
+		isNonstandard: "Future",
+	},
+
+	rickroll: {
+		desc: "This Pokémon does not suffer the drawbacks of recoil moves and sacrificial moves.",
+		shortDesc: "Ignores recoil and self-KO effects of that move.",
+		onModifyMove(move) {
+			if (move.recoil || move.mindBlownRecoil || (move.selfdestruct && move.selfdestruct === 'always')) {
+				if (move.selfdestruct && move.selfdestruct === 'always') {
+					delete move.selfdestruct;
+				}
+				if (move.recoil) {
+					delete move.recoil;
+				}
+				if (move.mindBlownRecoil) {
+					move.mindBlownRecoil = false;
+				}
+			}
+		},
+		name: "Rick Roll",
+		rating: 4,
+		num: 1053,
+		isNonstandard: "Future",
+	},
+
+	fullbloom: {
+		name: "Full Bloom",
+		shortDesc: "This Pokémon's priority moves have double power.",
+		rating: 3,
+		num: 1054,
+		isNonstandard: "Future",
+		onBasePowerPriority: 30,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.priority > 0) {
+				return this.chainModify(2);
+			}
+		},
+	},
+
+	queensgambit: {
+		desc: "If this Pokémon switched in on the same turn, priority moves from opposing Pokémon targeted at itself or at allies are prevented from having an effect. If this Ability is activated, its own first move then has +3 priority.",
+		onFoeTryMove(target, source, move) {
+			if (this.effectState.target.activeTurns) return;
+			const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+			if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) {
+				return;
+			}
+
+			const dazzlingHolder = this.effectState.target;
+			if ((source.side === dazzlingHolder.side || move.target === 'all') && move.priority > 0.1) {
+				this.attrLastMove('[still]');
+				this.add('cant', target, "ability: Queen's Gambit", move, '[of] ' + dazzlingHolder);
+				this.effectState.target.addVolatile('queensgambit');
+				return false;
+			}
+		},
+		condition: {
+			duration: 2,
+			onStart(pokemon) {
+				this.add('-message', `${pokemon.name} is ready to strike back!`);
+			},
+			onModifyPriority(priority, pokemon, target, move) {
+				return priority + 3;
+			},
+		},
+		name: "Queen's Gambit",
+		shortDesc: "Only while switching in, protects the team from priority; gains +3 priority on its next move if it does.",
+		rating: 2,
+		num: 1055,
+		isNonstandard: "Future",
+	},
+
+	sappyjest: {
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.category === 'Status') {
+				move.pranksterBoosted = true; // add dark immunity in scripts
+				return priority + 1;
+			}
+		},
+		onTryHit(pokemon, target, move) {
+			if (move.priority > 0.1 && target !== pokemon) {
+				this.add('-immune', pokemon, '[from] ability: Sappy Jest');
+				return null;
+			}
+		},
+		name: "Sappy Jest",
+		shortDesc: "User's status moves have +1 priority. User is immune to priority moves.",
+		rating: 3,
+		num: 1056,
+		isNonstandard: "Future",
+	},
+
+	berrynice: {
+		onModifySpe(spe, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(2);
+			}
+		},
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onResidual(pokemon) {
+			if (this.field.isWeather(['sunnyday', 'desolateland']) || this.randomChance(1, 2)) {
+				if (pokemon.hp && !pokemon.item && this.dex.items.get(pokemon.lastItem).isBerry) {
+					pokemon.setItem(pokemon.lastItem);
+					pokemon.lastItem = '';
+					this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Berry Nice');
+				}
+			}
+		},
+		onTryHeal(damage, target, source, effect) {
+			if (!effect) return;
+			if (effect.name === 'Berry Juice' || effect.name === 'Leftovers') {
+				this.add('-activate', target, 'ability: Berry Nice');
+			}
+			if ((effect as Item).isBerry) return this.chainModify(2);
+		},
+		onTryEatItemPriority: -1,
+		onTryEatItem(item, pokemon) {
+			this.add('-activate', pokemon, 'ability: Berry Nice');
+		},
+		onSourceModifyDamagePriority: -1,
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.abilityState.berryWeaken) {
+				return this.chainModify(0.5);
+			}
+		},
+		onEatItem(item, pokemon) {
+			const weakenBerries = [
+				'Babiri Berry', 'Charti Berry', 'Chilan Berry', 'Chople Berry', 'Coba Berry', 'Colbur Berry', 'Haban Berry', 'Kasib Berry', 'Kebia Berry', 'Occa Berry', 'Passho Berry', 'Payapa Berry', 'Rindo Berry', 'Roseli Berry', 'Shuca Berry', 'Tanga Berry', 'Wacan Berry', 'Yache Berry',
+			];
+			// Record if the pokemon ate a berry to resist the attack
+			pokemon.abilityState.berryWeaken = weakenBerries.includes(item.name);
+		},
+		name: "Berry Nice",
+		shortDesc: "Chlorophyll + Harvest + Berries eaten by this Pokemon have their effect doubled.",
+		rating: 4,
+		num: 1057,
+		isNonstandard: "Future",
+	},
+
+	workability: {
+		onModifyMove(move) {
+			move.stab = 2;
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Steel') {
+				this.debug('Workability boost');
+				return this.chainModify(2);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Steel') {
+				this.debug('Workability boost');
+				return this.chainModify(2);
+			}
+		},
+		name: "Workability",
+		shortDesc: "This Pokemon's STAB boost is 2x instead of 1.5x. Steel-type moves are considered STAB for this Pokemon",
+		rating: 4,
+		num: 1058,
+		isNonstandard: "Future",
+	},
+
+	lemegeton: {
+		// Ability suppression implemented in sim/pokemon.ts:Pokemon#ignoringAbility
+		// TODO Will abilities that already started start again? (Intimidate seems like a good test case)
+		onPreStart(pokemon) {
+			this.add('-ability', pokemon, 'Lemegeton');
+			pokemon.abilityState.ending = false;
+			for (const target of this.getAllActive()) {
+				if (target.illusion) {
+					this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, pokemon, 'lemegeton');
+				}
+				if (target.volatiles['slowstart']) {
+					delete target.volatiles['slowstart'];
+					this.add('-end', target, 'Slow Start', '[silent]');
+				}
+			}
+		},
+		onEnd(source) {
+			// FIXME this happens before the pokemon switches out, should be the opposite order.
+			// Not an easy fix since we cant use a supported event. Would need some kind of special event that
+			// gathers events to run after the switch and then runs them when the ability is no longer accessible.
+			// (If your tackling this, do note extreme weathers have the same issue)
+
+			// Mark this pokemon's ability as ending so Pokemon#ignoringAbility skips it
+			source.abilityState.ending = true;
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon !== source) {
+					// Will be suppressed by Pokemon#ignoringAbility if needed
+					this.singleEvent('Start', pokemon.getAbility(), pokemon.abilityState, pokemon);
+				}
+			}
+		},
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				let statName = 'atk';
+				let bestStat = 0;
+				let s: StatIDExceptHP;
+				for (s in source.storedStats) {
+					if (source.storedStats[s] > bestStat) {
+						statName = s;
+						bestStat = source.storedStats[s];
+					}
+				}
+				this.boost({[statName]: length}, source);
+			}
+		},
+		name: "Lemegeton",
+		shortDesc: "Beast Boost + Neutralizing Gas",
+		rating: 5,
+		num: 1059,
+		isNonstandard: "Future",
+	},
+
+	unfiltered: {
+		shortDesc: "Filter + Contrary + This Pokemon's NvE Moves deal 4/3x damage.",
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Unfiltered neutralize');
+				return this.chainModify(0.75);
+			}
+		},
+		onChangeBoost(boost, target, source, effect) {
+			if (effect?.id === 'zpower') return;
+			let i: BoostID;
+			for (i in boost) {
+				boost[i]! *= -1;
+			}
+		},
+		onModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod < 0) {
+				this.debug('Unfiltered boost');
+				return this.chainModify([5461, 4096]);
+			}
+		},
+		name: "Unfiltered",
+		rating: 4,
+		num: 1060,
+		isNonstandard: "Future",
+	},
+
+		// RSB
+		hotpursuit: {
+		name: "Hot Pursuit",
+		shortDesc: "This Pokemon's damaging moves have the Pursuit effect.",
+		rating: 3,
+		num: 1061,
+		isNonstandard: "Future",
+		onBeforeTurn(pokemon) {
+			for (const side of this.sides) {
+				if (side.hasAlly(pokemon)) continue;
+				side.addSideCondition('hotpursuit', pokemon);
+				const data = side.getSideConditionData('hotpursuit');
+				if (!data.sources) {
+					data.sources = [];
+				}
+				data.sources.push(pokemon);
+			}
+		},
+		onBasePower(relayVar, source, target, move) {
+			// You can't get here unless the pursuit succeeds
+			if (target.beingCalledBack || target.switchFlag) {
+				this.debug('Pursuit damage boost');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		onModifyMove(move, source, target) {
+			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
+		},
+		onTryHit(source, target) {
+			target.side.removeSideCondition('hotpursuit');
+		},
+		condition: {
+			duration: 1,
+			onBeforeSwitchOut(pokemon) {
+				const move = this.queue.willMove(pokemon.foes()[0]);
+				const moveName = move && move.moveid ? move.moveid.toString() : "";
+				this.debug('Pursuit start');
+				let alreadyAdded = false;
+				pokemon.removeVolatile('destinybond');
+				for (const source of this.effectState.sources) {
+					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
+					if (!alreadyAdded) {
+						this.add('-activate', pokemon.foes()[0], 'ability: Hot Pursuit');
+						alreadyAdded = true;
+					}
+					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// If it is, then Mega Evolve before moving.
+					if (source.canMegaEvo || source.canUltraBurst) {
+						for (const [actionIndex, action] of this.queue.entries()) {
+							if (action.pokemon === source && action.choice === 'megaEvo') {
+								this.actions.runMegaEvo(source);
+								this.queue.list.splice(actionIndex, 1);
+								break;
+							}
+						}
+					}
+					this.actions.runMove(moveName, source, source.getLocOf(pokemon));
+				}
+			},
+		},
+	},
+
+	selfrepair: {
+		onAfterMove(target, source, move) {
+			if (move.category === 'Status') {
+				this.heal(target.baseMaxhp / 4);
+			}
+		},
+		name: "Self-Repair",
+		shortDesc: "This Pokemon heals 25% its max HP after using a Status move.",
+		rating: 3,
+		num: 1062,
+		isNonstandard: "Future",
+	},
+
+	endlessdream: {
+		desc: "While this Pokemon is active, every other Pokemon is treated as if it has the Comatose ability. Pokemon that are either affected by Sweet Veil, or have Insomnia or Vital Spirit as their abilities are immune this effect.",
+		shortDesc: "All Pokemon are under Comatose effect.",
+		onStart(source) {
+			this.add('-ability', source, 'Endless Dream');
+			this.field.addPseudoWeather('endlessdream');
+			this.hint("All Pokemon are under Comatose effect!");
+		},
+		onResidualOrder: 21,
+		onResidualSubOrder: 2,
+		onEnd(pokemon) {
+			this.field.removePseudoWeather('endlessdream');
+		},
+		name: "Endless Dream",
+		rating: 3,
+		num: 1063,
+		isNonstandard: "Future",
+	},
+
+	dodge: {
+		name: "Dodge",
+		shortDesc: "When taking damages, this Pokemon adds 50% of its Speed to its corresponding defense.",
+		rating: 3,
+		num: 1064,
+		isNonstandard: "Future",
+		onModifyDefPriority: 1,
+		onModifyDef(def, pokemon) {
+			const spe = pokemon.getStat('spe', false, true);
+			const newDef = def + (spe / 2);
+			return newDef;
+		},
+		onModifySpDPriority: 1,
+		onModifySpD(spd, pokemon) {
+			const spe = pokemon.getStat('spe', false, true);
+			const newSpD = spd + (spe / 2);
+			return newSpD;
+		},
+	},
+
+
+
+
+
+
+
 
 };
