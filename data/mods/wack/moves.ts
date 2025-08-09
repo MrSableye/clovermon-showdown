@@ -19056,7 +19056,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		target: "normal",
 		type: "Blood",
-		isNonstandard: "Future",	/** TODO: Code "Bleeding" */
+		isNonstandard: null,	/** TODO: Code "Bleeding" */
 	},
 	fuckyou: {
 		inherit: true,

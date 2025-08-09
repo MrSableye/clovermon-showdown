@@ -2715,9 +2715,27 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		bloodletting: {
-		inherit: true,
-		isNonstandard: null,
-		},
+				inherit: true,
+				accuracy: 100,
+				basePower: 0,
+				category: "Status",
+				desc: "The user and the target both start Bleeding.",
+				shortDesc: "The user and the target both start Bleeding.",
+				pp: 10,
+				priority: 0,
+				flags: {protect: 1, reflectable: 1, mirror: 1},
+				secondary: {
+					chance: 100,
+					volatileStatus: 'bleed',
+					status: 'psn',
+				},
+				self: {
+					volatileStatus: 'bleed',
+				},
+				target: "normal",
+				type: "Blood",
+				isNonstandard: null,	/** TODO: Code "Bleeding" */
+			},
 		bloodport: {
 		inherit: true,
 		isNonstandard: null,
