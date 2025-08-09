@@ -2736,6 +2736,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 				type: "Blood",
 				isNonstandard: null,	/** TODO: Code "Bleeding" */
 			},
+			bonefire:{
+		inherit: true,
+		isNonstandard: null,
+		},
 		bloodport: {
 		inherit: true,
 		isNonstandard: null,

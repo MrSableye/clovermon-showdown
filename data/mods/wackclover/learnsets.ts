@@ -15773,6 +15773,7 @@ torchsong: ["8L1"],
 	flameboyan: {
 		learnset: {
 			hiv: ["8L1"],
+			bonfire: ["8L1"], 
 stoke: ["8L1"],
 kindle: ["8L1"],
 dazzlingflames: ["8L1"],
