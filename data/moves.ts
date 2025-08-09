@@ -59708,7 +59708,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Water",
 		isNonstandard: "Future",
 	},
@@ -62845,7 +62845,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Bug",
 		isNonstandard: "Future",
 	},
@@ -87614,7 +87614,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Flying",
 		isNonstandard: "Future",
 	},
@@ -90280,7 +90280,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Magic",
 		isNonstandard: "Future",
 	},
