@@ -3512,6 +3512,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		filthbomb: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		finalheaven: {
 		inherit: true,
 		isNonstandard: null,
@@ -5678,6 +5682,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		warpdrive: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		wastecloud: {
 		inherit: true,
 		isNonstandard: null,
 		},

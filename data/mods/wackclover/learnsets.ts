@@ -16404,7 +16404,9 @@ shedleaves: ["8L1"],
 	},
 	polossus: {
 		learnset: {
+			filthbomb: ["8L1"],
 			cloudcrash: ["8L1"],
+			wastecloud: ["8L1"],
 toxicwind: ["8L1"],
 sporeexplosion: ["8L1"],
 acidrain: ["8L1"],

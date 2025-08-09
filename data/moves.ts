@@ -62937,6 +62937,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		volatileStatus: 'poisoncoat',
+		condition: {
+			onStart(pokemon, source, effect) {
+				
+					this.add('-start', pokemon, 'Poison Coat');
+			},
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target, true)){
+				 if (this.randomChance(7, 10)) {
+					source.trySetStatus('psn', target);
+				}
+			}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Spiked Armor', '[silent]');
+			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Poison",
@@ -62951,6 +62969,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		volatileStatus: 'poisoncoat',
+		condition: {
+			onStart(pokemon, source, effect) {
+				
+					this.add('-start', pokemon, 'Lead Coat');
+			},
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target, true)) {
+				if (this.randomChance(7, 10)) {
+					source.trySetStatus('psn', target);
+				}
+		}
+		},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Lead Coat', '[silent]');
+			},
+		},
+		
 		secondary: null,
 		target: "self",
 		type: "Steel",
