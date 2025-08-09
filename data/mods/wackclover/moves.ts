@@ -2727,7 +2727,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 				secondary: {
 					chance: 100,
 					volatileStatus: 'bleed',
-					status: 'psn',
 				},
 				self: {
 					volatileStatus: 'bleed',
