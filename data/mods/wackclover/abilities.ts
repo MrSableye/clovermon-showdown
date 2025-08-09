@@ -1063,7 +1063,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move.selfdestruct) delete move.selfdestruct;
 		},
 		onAfterMove(source, target, move) {
-			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct'].includes(move.id)) {
+			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct', 'holyduty', 'nuclearexplosion', 'doom', 'chillyboom', 'holysacrifice', 
+				'carpetbomb', 'sacrifice','pastalavista', 'supernova', 'rottingburst', 'finalsting', 'fakeitembox', 'stella', 'poisonexplosion', 
+			'computercrash', 'stinkymove', 'swansong', 'mutualdestruction', 'fieryexplosion', 'steambomb', 'testament', 'shatter',
+		'restinpeace', 'sporeexplosion', 'voltexplosion'].includes(move.id)) {
 				this.damage(source.baseMaxhp / 5, source, source);
 			}
 		},

@@ -2715,6 +2715,28 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		bloodletting: {
+				inherit: true,
+				accuracy: 100,
+				basePower: 0,
+				category: "Status",
+				desc: "The user and the target both start Bleeding.",
+				shortDesc: "The user and the target both start Bleeding.",
+				pp: 10,
+				priority: 0,
+				flags: {protect: 1, reflectable: 1, mirror: 1},
+				secondary: {
+					chance: 100,
+					volatileStatus: 'bleed',
+					status: 'psn',
+				},
+				self: {
+					volatileStatus: 'bleed',
+				},
+				target: "normal",
+				type: "Blood",
+				isNonstandard: null,	/** TODO: Code "Bleeding" */
+			},
+			bonfire:{
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -3509,6 +3531,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		feverishsmooch: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		filthbomb: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -5678,6 +5704,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		warpdrive: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		wastecloud: {
 		inherit: true,
 		isNonstandard: null,
 		},

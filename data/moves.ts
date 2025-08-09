@@ -41336,10 +41336,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
-		boosts: {
-			accuracy: 1,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					accuracy: 1,
+				},
+			},
 		},
-		secondary: null,
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -59704,7 +59708,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Water",
 		isNonstandard: "Future",
 	},
@@ -59884,7 +59888,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 20,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		onEffectiveness(typeMod, target, type, move) {
@@ -62841,7 +62845,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Bug",
 		isNonstandard: "Future",
 	},
@@ -62933,6 +62937,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		volatileStatus: 'poisoncoat',
+		condition: {
+			onStart(pokemon, source, effect) {
+				
+					this.add('-start', pokemon, 'Poison Coat');
+			},
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target, true)){
+				 if (this.randomChance(7, 10)) {
+					source.trySetStatus('psn', target);
+				}
+			}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Spiked Armor', '[silent]');
+			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Poison",
@@ -62947,6 +62969,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		volatileStatus: 'poisoncoat',
+		condition: {
+			onStart(pokemon, source, effect) {
+				
+					this.add('-start', pokemon, 'Lead Coat');
+			},
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target, true)) {
+				if (this.randomChance(7, 10)) {
+					source.trySetStatus('psn', target);
+				}
+		}
+		},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Lead Coat', '[silent]');
+			},
+		},
+		
 		secondary: null,
 		target: "self",
 		type: "Steel",
@@ -64427,7 +64468,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 100,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -65115,7 +65156,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 
 				this.heal(pokemon.baseMaxhp / 8);
 			}
-				else this.heal(pokemon.baseMaxhp / 19);
+				else this.heal(pokemon.baseMaxhp / 9);
 			},
 		},
 		secondary: null,
@@ -65270,7 +65311,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 100,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -66230,7 +66271,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 100,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -66714,7 +66755,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 50,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -67243,10 +67284,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: undefined,
 		secondary: {
 			chance: 100,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -67560,10 +67602,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: undefined,
 		secondary: {
 			chance: 40,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -71176,10 +71219,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 1,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: undefined,
 		secondary: {
 			chance: 100,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -74093,10 +74137,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: undefined,
 		secondary: {
 			chance: 50,
 			self: {
-				volatileStatus: 'protect',
+				volatileStatus: 'stall',
 			},
 		},
 		target: "normal",
@@ -87569,7 +87614,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Flying",
 		isNonstandard: "Future",
 	},
@@ -88011,7 +88056,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 1,
 		priority: 0,
 		flags: {contact: 1, protect: 1, snatch: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 1,
+					spa: 1,
+				},
+			},
+		},
+		
 		target: "normal",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -88025,7 +88079,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 1,
 		priority: 0,
 		flags: {contact: 1, protect: 1, snatch: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					def: 1,
+					spd: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -90218,7 +90280,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Magic",
 		isNonstandard: "Future",
 	},

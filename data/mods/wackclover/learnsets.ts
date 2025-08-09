@@ -15773,6 +15773,7 @@ torchsong: ["8L1"],
 	flameboyan: {
 		learnset: {
 			hiv: ["8L1"],
+			bonfire: ["8L1"], 
 stoke: ["8L1"],
 kindle: ["8L1"],
 dazzlingflames: ["8L1"],
@@ -16404,7 +16405,9 @@ shedleaves: ["8L1"],
 	},
 	polossus: {
 		learnset: {
+			filthbomb: ["8L1"],
 			cloudcrash: ["8L1"],
+			wastecloud: ["8L1"],
 toxicwind: ["8L1"],
 sporeexplosion: ["8L1"],
 acidrain: ["8L1"],

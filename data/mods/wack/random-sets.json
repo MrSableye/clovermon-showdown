@@ -3650,7 +3650,7 @@
         ],
         "moves": [
           "voltswitch",
-          "outrate",
+          "outrage",
           "irontail"
         ],
         "lockedMoves": [
@@ -4128,34 +4128,7 @@
       }
     ]
   },
-   "ufolien": {
-    "nicknames": [
-      "Ufolien"
-    ],
-    "sets": [
-      {
-        "abilities": [
-          "levitate"
-        ],
-        "items": [
-          "sitrusberry",
-          "heavydutyboots",
-          "leftovers",
-          "lifeorb",
-          "mercuryorb"
-        ],
-        "moves": [
-          "nastyplot",
-          "randommode"
-        ],
-        "lockedMoves": [
-          "gigadrain",
-          "technoray"
-        ],
-        "level": 84
-      }
-    ]
-  },
+  
   "glassbol": {
     "nicknames": [
       "Glassbol"
@@ -4183,6 +4156,412 @@
       }
     ]
   },
+  "dgallade": {   
+    "nicknames": [   
+      "HM01",
+      "LordGenome"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "vespertine",
+          "steadfast"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "murkycapsule",
+          "dreadplate",
+          "angelpowder"
+        ],
+        "moves": [     
+          "cbt",
+          "closecombat",
+          "mysticsword",
+          "icepunch",
+          "drainpunch",
+          "poisonjab",
+          "thunderwave",
+          "shadowsneak",
+          "stoneedge",
+          "throatchop",
+          "thunderpunch",
+          "xscissor",
+          "lightscreen",
+          "reflect",
+          "bulkup",
+          "swordsdance",
+          "midnightblade",
+          "macabredance",
+          "darkscreen",
+          "bladerain",
+          "knockoff"    
+
+        ],
+        "lockedMoves": [   
+          "brickbreak",
+          "taunt"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "vespertine"
+        ],
+        "items": [
+          "ironball"    
+        ],
+        "lockedMoves": [
+          "fling",
+          "recycle",
+          "closecombat",
+          "zenheadbutt"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "steadfast"
+        ],
+        "items": [
+          "lightclay"    
+        ],
+        "lockedMoves": [
+          "soulbarrier",
+          "darkscreen",
+          "brickbreak",
+          "suckerpunch"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "vespertine"
+        ],
+        "items": [
+          "murkycapsule"    
+        ],
+        "lockedMoves": [
+          "annoyance",
+          "darkpulse",
+          "nastyplot",
+          "focusblast"
+           ],
+        "level": 84
+      }   
+    ]
+  },
+  "ferrothorn": {   
+    "nicknames": [   
+      "NoFunAllowed",
+      "GoldenTheory",
+      "Anti-Spiral"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "roughskin",
+          "stench"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "saladmix",
+          "grassycapsule",
+          "stickybarb",
+          "angelpowder"
+        ],
+        "moves": [     
+          "leechseed",
+          "rockpolish",
+          "spikes",
+          "stealthrock",
+          "scrapmetal",
+          "thunderwave",
+          "explosion",
+          "return",
+          "powerwhip",
+          "knockoff",
+          "pinpoint",
+          "thornwhip",
+          "rockclimb",
+          "cbt",
+          "payback",
+          "ironhead"    
+
+        ],
+        "lockedMoves": [   
+          "seedbomb",
+          "brambles"
+        ],
+        "level": 82       
+      },   
+      {
+        "abilities": [
+          "roughskin"
+        ],
+        "items": [
+          "fertilizer"    
+        ],
+        "lockedMoves": [
+          "guardianleaf",
+          "bodypress",
+          "ironhead",
+          "spikes"
+        ],
+        "level": 82      
+      },   
+      {
+        "abilities": [
+          "stench"
+        ],
+        "items": [
+          "grassycapsule"    
+        ],
+        "lockedMoves": [
+          "pinpoint",
+          "gyroball",
+          "secretpower",
+          "leechseed"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "stench"
+        ],
+        "items": [
+          "laggingtail"    
+        ],
+        "lockedMoves": [
+          "explosion",
+          "brambles",
+          "stealthrock",
+          "scrapmetal"
+           ],
+        "level": 78
+      }   
+    ]
+
+
+  },
+
+
+"hachishaku": {   
+    "nicknames": [   
+      "PoPoPo...",
+      "Sadako",
+      "FreeCandy"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "intimidate",
+          "unnerve"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "sheriffbadge",
+          "spookyplate",
+          "shatteringhammer",
+          "enfeeblescepter",
+          "murkycapsule",
+          "angelpowder"
+        ],
+        "moves": [     
+          "domesticabuse",
+          "kidnap",
+          "cryptid",
+          "suckerpunch",
+          "jumpscare",
+          "bind",
+          "meanlook",
+          "murmur",
+          "growth",
+          "meanlook",
+          "disable",
+          "confuseray",
+          "scaryface",
+          "batonpass"    
+
+        ],
+        "lockedMoves": [   
+          "paranoia",
+          "phantomtendril"
+        ],
+        "level": 88       
+      },   
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "blunderpolicy"    
+        ],
+        "lockedMoves": [
+          "giantshadow",
+          "kidnap",
+          "suckerpunch",
+          "phantomforce"
+        ],
+        "level": 88      
+      },   
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "bindingband"    
+        ],
+        "lockedMoves": [
+          "bind",
+          "phantomtendril",
+          "protect",
+          "jumpscare"
+        ],
+        "level": 88      
+      },   
+      {
+        "abilities": [
+          "intimidate"
+        ],
+        "items": [
+          "dominatrixoutfit"    
+        ],
+        "lockedMoves": [
+          "attract",
+          "domesticabuse",
+          "kidnap",
+          "phantomforce"
+           ],
+        "level": 88
+      }   
+    ]
+  },
+
+
+
+"zangoose": {   
+    "nicknames": [   
+      "Kamina",
+      "Ziggy",
+      "OnlyInOhio",
+      "Simon"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "immunity"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "sheriffbadge",
+          "angelpowder"
+        ],
+        "moves": [     
+          "knockoff",
+          "revenge",
+          "retaliate",
+          "reaction",
+          "geigerstrike",
+          "lastresort",
+          "throatchop",
+          "firepunch",
+          "icepunch",
+          "thunderpunch",
+          "poisonjab",
+          "rockslide",
+          "shadowclaw",
+          "feint",
+          "nightslash",
+          "doublehit",
+          "honeclaws",
+          "rest",
+          "quickattack",
+          "taunt",
+          "toxic",
+          "swordsdance",
+          "endeavor",
+          "counter",
+          "bellydrum",
+          "detect",
+          "achillesheel"    
+
+        ],
+        "lockedMoves": [   
+          "dynamicrush",
+          "numbinginjection"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "immunity"
+        ],
+        "items": [
+          "shoepolish"    
+        ],
+        "lockedMoves": [
+          "doublekick",
+          "numbinginjection",
+          "knockoff",
+          "frustration"
+        ],
+        "level": 84      
+      }, 
+
+ 
+
+      {
+        "abilities": [
+          "toxicboost"
+        ],
+        "items": [
+          "toxicorb"    
+        ],
+        "lockedMoves": [
+          "facade",
+          "nightslash",
+          "geigerstrike",
+          "quickattack"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "immunity"
+        ],
+        "items": [
+          "trainingglove"    
+        ],
+        "lockedMoves": [
+          "icepunch",
+          "thunderpunch",
+          "firepunch",
+          "dynamicrush"
+           ],
+        "level": 83
+      },
+      {
+        "abilities": [
+          "immunity"
+        ],
+        "items": [
+          "trainingglove"    
+        ],
+        "lockedMoves": [
+          "icepunch",
+          "thunderpunch",
+          "firepunch",
+          "dynamicrush"
+           ],
+        "level": 83
+      }        
+    ]
+  },
+
+
+
+
+
   "maglamp": {
     "nicknames": [
       "Maglamp"
@@ -15291,9 +15670,458 @@
       }
     ]
   },
+  "cuberus": {   
+    "nicknames": [   
+      "FreezingTon",
+      "TFWSnowDay"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "icebody",
+          "thickfat",
+          "levitate"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "icegem",
+          "airballoon",
+          "icicleplate",
+          "snowycapsule",
+          "angelpowder"
+        ],
+        "moves": [     
+          "icebeam",
+          "superfever",
+          "cancervirus",
+          "iceage",
+          "virus",
+          "commoncold",
+          "cancervirus",
+          "memento",
+          "freezedry",
+          "agility",
+          "shadowsneak",
+          "mist",
+          "cooldown",
+          "plague",
+          "epidemic",
+          "nastyplot",
+          "ominouswind",
+          "coldsnap",
+          "healblock",
+          "bunkercrash",
+          "soulchill",
+          "quarantinevirus",
+          "icethaw",
+          "haze",
+          "icywind"    
+
+        ],
+        "lockedMoves": [   
+          "hypothermia",
+          "severecold"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "icebody"
+        ],
+        "items": [
+          "snowycapsule"    
+        ],
+        "lockedMoves": [
+          "nastyplot",
+          "severecold",
+          "icethaw",
+          "cooldown"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "thickfat"
+        ],
+        "items": [
+          "prankkit"    
+        ],
+        "lockedMoves": [
+          "coldsnap",
+          "icethaw",
+          "spite",
+          "hexvirus"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "icebody"
+        ],
+        "items": [
+          "icyrock"    
+        ],
+        "lockedMoves": [
+          "hail",
+          "blizzard",
+          "agility",
+          "plague"
+           ],
+        "level": 84
+      }   
+    ]
+  },
+  "feaverus": {   
+    "nicknames": [   
+      "FeverTon",
+      "JustAFeverMom"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "flamebody",
+          "flashfire",
+          "levitate"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "firegem",
+          "airballoon",
+          "flameplate",
+          "sunnycapsule",
+          "angelpowder"
+        ],
+        "moves": [     
+          "flamethrower",
+          "superfever",
+          "cancervirus",
+          "extinguishflame",
+          "virus",
+          "searingshot",
+          "cancervirus",
+          "memento",
+          "combust",
+          "agility",
+          "shadowsneak",
+          "suckerpunch",
+          "plague",
+          "epidemic",
+          "nastyplot",
+          "ominouswind",
+          "heatup",
+          "healblock",
+          "bunkercrash",
+          "willowisp",
+          "quarantinevirus",
+          "sunburn",
+          "kindle"    
+
+        ],
+        "lockedMoves": [   
+          "firebrush",
+          "hexvirus"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "flashfire"
+        ],
+        "items": [
+          "airballoon"    
+        ],
+        "lockedMoves": [
+          "kindle",
+          "hexvirus",
+          "extinguishflame",
+          "firebrush"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "activecurrent"
+        ],
+        "items": [
+          "firedust"    
+        ],
+        "lockedMoves": [
+          "superfever",
+          "nastyplot",
+          "ominouswind",
+          "willowisp"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "heatrock"    
+        ],
+        "lockedMoves": [
+          "sunburn",
+          "sunnyday",
+          "searingshot",
+          "plague"
+           ],
+ 
+
+       "level": 84
+      }   
+    ]
+  },
+
+
+
+"ufolien": {   
+    "nicknames": [   
+      "BogosBinted?",
+      "Leyfert"
+    ],
+    
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "sitrusberry",
+          "heavydutyboots",
+          "leftovers",
+          "lifeorb",
+          "mercuryorb"
+        ],
+        "moves": [
+          "nastyplot",
+          "randommode"
+        ],
+        "lockedMoves": [
+          "gigadrain",
+          "technoray"
+        ],
+        "level": 84
+      },
+      {
+        "abilities": [    
+          "arenatrap",
+          "levitate"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "factorycapsule",
+          "roseincense",
+          "gear",
+          "angelpowder"
+        ],
+        "moves": [     
+          "quiverdance",
+          "heatseekmissile",
+          "astronomy",
+          "spore",
+          "technoray",
+          "gadget",
+          "randommode",
+          "swift",
+          "tractorbeam",
+          "nastyplot",
+          "harden",
+          "beacon",
+          "abduct",
+          "grassyterrain",
+          "lockon",
+          "energyshield"    
+
+        ],
+        "lockedMoves": [   
+          "gigadrain",
+          "boostbeam"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "pressuredgem"    
+        ],
+        "lockedMoves": [
+          "zapcannon",
+          "brightmoss",
+          "technoray",
+          "gigadrain"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "arenatrap"
+        ],
+        "items": [
+          "mossyrock"    
+        ],
+        "lockedMoves": [
+          "grassyterrain",
+          "gigadrain",
+          "energyshield",
+          "abduct"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "arenatrap"
+        ],
+        "items": [
+          "factorycapsule"    
+        ],
+        "lockedMoves": [
+          "randommode",
+          "gigadrain",
+          "quiverdance",
+          "technoray"
+           ],
+        "level": 84
+      }   
+    ]
+  },
+
+"shockerus": {   
+    "nicknames": [   
+      "ShockingTon"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "static",
+          "activecurrent",
+          "levitate"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "electricgem",
+          "airballoon",
+          "zapplate",
+          "electriccapsule",
+          "angelpowder"
+        ],
+        "moves": [     
+          "powersurge",
+          "thunderwave",
+          "acceleprosy",
+          "zapcannon",
+          "virus",
+          "quarantinevirus",
+          "cancervirus",
+          "memento",
+          "thunder",
+          "agility",
+          "shadowsneak",
+          "suckerpunch",
+          "plague",
+          "discharge",
+          "nastyplot",
+          "ominouswind",
+          "magnetrise",
+          "healblock",
+          "epidemic",
+          "hexvirus",
+          "electricterrain",
+          "charge"    
+
+        ],
+        "lockedMoves": [   
+          "paraboliccharge",
+          "leprosy"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "activecurrent"
+        ],
+        "items": [
+          "blunderpolicy"    
+        ],
+        "lockedMoves": [
+          "zapcannon",
+          "nastyplot",
+          "plague",
+          "paraboliccharge"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "activecurrent"
+        ],
+        "items": [
+          "virusdust"    
+        ],
+        "lockedMoves": [
+          "powersurge",
+          "magnetrise",
+          "thunder",
+          "virus"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "terrainextender"    
+        ],
+        "lockedMoves": [
+          "toxic",
+          "hexvirus",
+          "paraboliccharge",
+          "electricterrain"
+           ],
+        "level": 84
+      }   
+    ]
+  },
+
+  "blizzlam": {   
+    "nicknames": [   
+      "PRESS FROST-BREATH TO WIN"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "sniper"
+        ],
+        "items": [
+          "choicespecs", 
+          "choicescarf",
+          "icycapsule"
+        ],
+        "moves": [     
+          "scorchingsand",
+          "fossilfuel",
+          "driveby",
+          "darkpulse",
+          "surf",
+          "flamethrower",
+          "focusblast",
+          "energyball",
+          "flashcannon"  
+
+        ],
+        "lockedMoves": [   
+          "frostbreath"
+        ],
+        "level": 84           
+      }   
+    ]
+  },
   "trickish": {
     "nicknames": [
-      "Trickish"
+      "Pottery"
     ],
     "sets": [
       {
