@@ -25057,6 +25057,9 @@ firstkiss: ["8L1"],
 			shadownova: ["8L1"],
 			spikedarmor: ["8L1"],
 			bladerain: ["8L1"],
+			brokenguillotine: ["8L1"],
+			tauroskiathermokrasia: ["8L1"],
+			sgaebuidhe: ["8L1"],
 rhongomyniad: ["8L1"],
 godspeed: ["8L1"],
 kaziklibey: ["8L1"],
@@ -28439,6 +28442,7 @@ fastforward: ["8L1"],
 	bulbapedo: {
 		learnset: {
 			speedsap: ["8L1"],
+			
 timeswap: ["8L1"],
 timeleech: ["8L1"],
 chronophage: ["8L1"],

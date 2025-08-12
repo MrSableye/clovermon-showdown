@@ -3826,6 +3826,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		shortDesc: "30% chance to psn target. Can't miss in Acid Rain",
 		isNonstandard: null,
 	},
+	brokenguillotine: {
+		inherit: true,
+		isNonstandard: null,
+		},
+				tauroskiathermokrasia: {
+		inherit: true,
+		isNonstandard: null,
+		},
+				sgaebuidhe: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		hack: {
 		inherit: true,
 		isNonstandard: null,
