@@ -83807,6 +83807,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		boosts: {
+			spe: 1,
+		},
+		pseudoWeather: 'flyingsport',
+		condition: {
+			duration: 5,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Magma Sport', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Ground' ) {
+					this.debug('flying sport weaken');
+					return this.chainModify([1352, 4096]);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 3,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Flying Sport');
+			},
+		},
 		target: "all",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -86029,6 +86051,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		pseudoWeather: 'darksport',
+		boosts: {
+			spd: 1,
+		},
 		condition: {
 			duration: 5,
 			onFieldStart(field, source) {
@@ -86738,6 +86763,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		boosts: {
+			spd: 1,
+		},
+		pseudoWeather: 'acidsport',
+		condition: {
+			duration: 5,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Magma Sport', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Steel' ) {
+					this.debug('acid sport weaken');
+					return this.chainModify([1352, 4096]);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 3,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Acid Sport');
+			},
+		},
 		target: "all",
 		type: "Poison",
 		isNonstandard: "Future",

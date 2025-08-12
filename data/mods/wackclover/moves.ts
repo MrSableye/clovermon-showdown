@@ -3601,6 +3601,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		focustime: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		foodpoison: {
 			inherit: true,
 			isNonstandard: null,
@@ -3813,6 +3817,15 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		gunkshot: {
+		inherit: true,
+		onModifyMove(move) {
+			if (this.field.isWeather(['acidrain'])) move.accuracy = true;
+		},
+		desc: "Has a 30% chance to poison the target. If the weather is Acid Rain, this move does not check accuracy.",
+		shortDesc: "30% chance to psn target. Can't miss in Acid Rain",
+		isNonstandard: null,
+	},
 		hack: {
 		inherit: true,
 		isNonstandard: null,
