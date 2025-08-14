@@ -173,6 +173,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	inverseroom: {
 		inherit: true,
 		priority: -6,
+		type: "???",
 	},
 	octazooka: {
 		inherit: true,
