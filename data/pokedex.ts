@@ -52255,7 +52255,7 @@ bewilderbeast: {
 		name: "EMEFFYUME",
 		types: ["Fire", "Steel"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 93, atk: 69, def: 110, spa: 130, spd: 60, spe: 65},
+		baseStats: {hp: 93, atk: 69, def: 110, spa: 130, spd: 72, spe: 71},
 		abilities: {0: "Full Metal Body", 1: "Iron Fist", H: "Boombox", S: "Turboblaze"},
 		heightm: 1.87,
 		weightkg: 95.0,
