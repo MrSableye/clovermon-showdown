@@ -21851,10 +21851,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Inverse Room",
-		pp: 15,
+		pp: 5,
 		priority: 0,
 		target: "all",
-		type: "???",
+		type: "Psychic",
 		flags: {mirror: 1},
 		pseudoWeather: 'inverseroom',
 		condition: {
