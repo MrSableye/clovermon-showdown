@@ -36,4 +36,13 @@ export const AbilitiesText: {[k: string]: ModdedAbilityText} = {
 		desc: "The power of Fire-type attacks against this Pokemon is halved. This Pokemon is also immune to Burn.",
 		shortDesc: "The power of Fire-type attacks against this Pokemon is halved; Immune to Burn.",
 	},
+	boombox: {
+		inherit: true,
+		desc: "The power of sound-based moves is boosted by 1.3x. Takes halved damage from sound-based moves.",
+		shortDesc: "This Pokemon's sound-based attacks have their power multiplied by 1.3 and takes 1/2 damage from sound attacks.",
+	},
+	grasspelt: {
+		inherit: true,
+		shortDesc: "If Grassy Terrain is active, this Pokemon's Defense is multiplied by 2.",
+	},
 };

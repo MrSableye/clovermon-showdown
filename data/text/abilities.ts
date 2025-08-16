@@ -2566,7 +2566,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	hydrothermal: {
 		name: "Hydrothermal",
-		desc: "Fire- and Water-type moves have a 10% higher chance to burn.",
+		desc: "Fire- and Water-type moves have a 20% higher chance to burn.",
 	},
 	leech: {
 		name: "Leech",

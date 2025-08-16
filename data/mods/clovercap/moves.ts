@@ -173,6 +173,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	inverseroom: {
 		inherit: true,
 		priority: -6,
+		type: "???",
 	},
 	octazooka: {
 		inherit: true,
@@ -566,9 +567,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	smartstrike: {
 		inherit: true,
 		isNonstandard: null,
-		boosts: {
-			accuracy: 1,
-		},
+		secondary: {
+					chance: 100,
+					self: {
+						boosts: {
+							accuracy: 1,
+						},
+					},
+				},
 	},
 	shellsidearm: {
 		inherit: true,
