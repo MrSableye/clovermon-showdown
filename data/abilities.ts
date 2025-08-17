@@ -7553,13 +7553,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const burnIndexes = [];
 			move.secondaries.forEach((secondary, secondaryIndex) => {
 				if (secondary.status === 'brn') {
-					secondary.chance = (secondary.chance || 0) + 10;
+					secondary.chance = (secondary.chance || 0) + 20;
 					burnIndexes.push(secondaryIndex);
 				}
 			});
 			if (!burnIndexes.length) {
 				move.secondaries.push({
-					chance: 10,
+					chance: 20,
 					status: 'brn',
 					ability: this.dex.abilities.get('hydrothermal'),
 				});
