@@ -39435,7 +39435,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -40240,7 +40240,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -41866,7 +41866,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -41881,6 +41881,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			this.add('-enditem', target, yourItem, '[silent]', '[from] move: Avarice', '[of] ' + source);
 			this.add('-item', source, yourItem, '[from] move: Avarice', '[of] ' + target);
 		},
+
+		
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -43120,7 +43122,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -44906,7 +44908,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -45583,7 +45585,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -49573,7 +49575,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -50798,7 +50800,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -58404,7 +58406,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -61740,7 +61742,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -63056,7 +63058,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -67954,7 +67956,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -69837,7 +69839,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -77011,7 +77013,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
