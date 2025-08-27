@@ -2771,6 +2771,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		bloom: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		boatbash: {
 		inherit: true,
 		isNonstandard: null,
@@ -4385,6 +4389,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Heart",
 		isNonstandard: null,
 	},
+	mandragora: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		minddrain: {
 		inherit: true,
 		isNonstandard: null,
@@ -4697,6 +4705,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		preach: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		predationplant: {
 		inherit: true,
 		isNonstandard: null,
 		},
