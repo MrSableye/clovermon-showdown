@@ -750,6 +750,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 
 	shitstorm: {
 		inherit: true,
+
+		onStart() {
+			this.field.addPseudoWeather('mudsport');
+			this.field.addPseudoWeather('watersport');
+			this.field.addPseudoWeather('magmasport');
+			this.field.addPseudoWeather('steamsport');
+		},
+		
 		isNonstandard: null,
 	},
 	fuku: {

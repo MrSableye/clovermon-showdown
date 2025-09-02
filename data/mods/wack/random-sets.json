@@ -842,7 +842,7 @@
         "lockedMoves": [
           "burststream"
         ],
-        "level": 84
+        "level": 80
       }
     ]
   },
@@ -4063,7 +4063,7 @@
           "mindboost"
         ],
         "lockedMoves": [
-          "crystallwave",
+          "crystalwave",
           "deliverance"
         ],
         "level": 84
@@ -5896,6 +5896,32 @@
           "earthquake"
         ],
         "level": 90       
+      }
+    ]
+  },
+    "crucibelle": {   
+     "nicknames": [   
+      "mawile"
+    ],
+    "sets": [
+      {
+        "abilities": [   
+          "moldbreaker"
+        ],
+        "items": [
+          "occaberry",
+          "mawilite"
+        ],
+        "moves": [     
+          "woodhammer",    
+          "uturn",
+          "coil",
+          "gunkshot"
+        ],
+        "lockedMoves": [
+          "headmsmash"
+        ],
+        "level": 84       
       }
     ]
   },

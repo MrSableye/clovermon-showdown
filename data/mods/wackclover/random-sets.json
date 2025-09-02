@@ -5369,9 +5369,9 @@
 					 "moves":[
 							"spikes",
 							"spikyshield",
-							"woodhammer",
+							"barkpress",
 							"aromatherapy",
-							"hammerarm"
+							"nightshade"
 					 ],
 					 "level":80
 				},
@@ -5465,7 +5465,7 @@
 							"closecombat",
 							"earthquake",
 							"darkestlariat",
-							"facade"
+							"atomicrush"
 					 ],
 					 "level":80
 				},
@@ -5514,8 +5514,30 @@
 							"hulkup",
 							"substitute",
 							"closecombat",
-							"earthquake",
+							"atomicrush",
 							"darkestlariat"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"guts"
+					 ],
+					 "items":[
+							"sitrusberry"
+					 ],
+					 "moves":[
+							"hulkup",
+							"weirdflex",
+							"apexmutation",
+							"bellydrum",
+							"powerarena"
+					 ],
+					 "lockedMoves":[
+						"atomicrush",
+						"drainpunch",
+						"darkestlariat"
+
 					 ],
 					 "level":80
 				}
@@ -5796,6 +5818,21 @@
 							"moonlight",
 							"kindle",
 							"stoke",
+							"dazzlingflames"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"flamebody"
+					 ],
+					 "items":[
+							"bigfaggot"
+					 ],
+					 "moves":[
+							"moonlight",
+							"bonfire",
+							"moonblast",
 							"dazzlingflames"
 					 ],
 					 "level":84
@@ -6345,7 +6382,7 @@
 					 "moves":[
 							"whirlpool",
 							"toxic",
-							"haze",
+							"spikeyrarmor",
 							"spikes"
 					 ],
 					 "lockedMoves":[
@@ -8364,7 +8401,41 @@
 							"ironhead",
 							"thunderbolt",
 							"zenheadbutt",
-							"focusblast"
+							"focusblast",
+							"warhead",
+							"uraniumheatbeam",
+							"atomicpunch",
+							"gunkshot"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"intimidate"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"baddybad",
+							"apexmutation",
+							"atomicpunch",
+							"meteormash"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"intimidate"
+					 ],
+					 "items":[
+							"choicescarf"
+					 ],
+					 "moves":[
+							"holyduty",
+							"meltdown",
+							"nucleanexplosion",
+							"atombomb"
 					 ],
 					 "level":84
 				},
@@ -8381,7 +8452,7 @@
 							"substitute",
 							"thunderbolt",
 							"baddybad",
-							"meteormash"
+							"chemicalburn"
 					 ],
 					 "level":84
 				},
@@ -8394,11 +8465,18 @@
 					 ],
 					 "moves":[
 							"trick",
-							"ironhead",
+							"meltdown",
 							"thunderbolt",
 							"superpower",
 							"baddybad"
 					 ],
+					 "lockedMoves": [
+						"uraniumheatbeam",
+						"warhead"
+					]
+					 
+					 
+					 ,
 					 "level":84
 				}
 		 ]
@@ -8423,14 +8501,12 @@
 							"leftovers"
 					 ],
 					 "moves":[
-							"stealthrock",
+							"circlethrow",
 							"shoreup",
-							"knockoff",
-							"smackdown"
+							"pumpup",
+							"pillowfight"
 					 ],
-					 "lockedMoves":[
-							"thousandwaves"
-					 ],
+					 
 					 "level":84
 				},
 				{
@@ -8441,7 +8517,7 @@
 							"lifeorb"
 					 ],
 					 "moves":[
-							"earthquake",
+							"stuffedtackle",
 							"closecombat",
 							"stoneedge",
 							"blazekick"
@@ -8459,10 +8535,9 @@
 							"leftovers"
 					 ],
 					 "moves":[
-							"bulkup",
 							"shoreup",
-							"thousandwaves",
-							"closecombat",
+							"bodypress",
+							"tiedup",
 							"stealthrock"
 					 ],
 					 "level":84
@@ -8479,7 +8554,6 @@
 		 "sets":[
 				{
 					 "abilities":[
-							"defiant",
 							"steelworker"
 					 ],
 					 "items":[
@@ -8488,10 +8562,46 @@
 					 "moves":[
 							"bulletpunch",
 							"liquidation",
-							"bulkup",
+							"irontusks",
 							"iciclecrash",
 							"closecombat"
 					 ],
+					 
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"steelworker"
+					 ],
+					 "items":[
+							"manifesto"
+					 ],
+					 "moves":[
+							"bulletpunch",
+							"ironhead",
+							"irontusks",
+							"ironchomp",
+							"irongrip",
+							"tripleshot",
+							"spikedarmor"
+					 ],
+					 
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"steelworker"
+					 ],
+					 "items":[
+							"defiant"
+					 ],
+					 "moves":[
+							"bulkup",
+							"slushcrush",
+							"ironchomp",
+							"waterfall"
+					 ],
+					 
 					 "level":84
 				}
 		 ]
@@ -8500,8 +8610,8 @@
 		 "nicknames":[
 				"DICKBALL",
 				"Menacing",
-				"Warudio",
-				"Warudio",
+				"Time to Dio",
+				"mwah! :3",
 				"Warudio",
 				"Warudio",
 				"Warudio",
@@ -8527,19 +8637,18 @@
 				},
 				{
 					 "abilities":[
-							"regenerator"
+							"forewarm"
 					 ],
 					 "items":[
 							"lifeorb"
 					 ],
 					 "moves":[
-							"aurasphere",
-							"darkpulse",
-							"icebeam",
-							"sludgebomb"
+							"undeadagony",
+							"uturn",
+							"knockoff"
 					 ],
 					 "lockedMoves":[
-							"nastyplot"
+							"zawarudo"
 					 ],
 					 "level":76
 				},
@@ -8563,16 +8672,16 @@
 			   },
 				{
 					 "abilities":[
-							"regenerator"
+							"forewarm"
 					 ],
 					 "items":[
-							"lifeorb"
+							"leftovers"
 					 ],
 					 "moves":[
-							"uturn",
+							"timeleech",
 							"lovelykiss",
-							"closecombat",
-							"suckerpunch",
+							"substitute",
+							"vampirebite",
 							"knockoff"
 					 ],
 					 "level":76
@@ -8583,7 +8692,7 @@
 		 "nicknames":[
 				"Hedgehog",
 				"EdgeGod TM",
-				"Donutsteel",
+				"I am the night,,,",
 				"Donutsteel",
 				"Donutsteel",
 				"Donutsteel",
@@ -8602,8 +8711,7 @@
 					 "moves":[
 							"baddybad",
 							"flashcannon",
-							"focusblast",
-							"thunderbolt"
+							"shadownova"
 					 ],
 					 "lockedMoves":[
 							"geomancy"
@@ -8619,10 +8727,9 @@
 							"lifeorb"
 					 ],
 					 "moves":[
-							"precipiceblades",
+							"kaziklibey",
 							"sunsteelstrike",
-							"falconpunch",
-							"owtheedge"
+							"tauroskiathermokrasia"
 					 ],
 					 "lockedMoves":[
 							"shiftgear"
@@ -8640,11 +8747,12 @@
 					 "moves":[
 							"sunsteelstrike",
 							"precipiceblades",
-							"extremespeed",
+							"rhongomyniad",
 							"owtheedge"
 					 ],
 					 "lockedMoves":[
-							"swordsdance"
+							"swordsdance",
+							"brokenguillotine"
 					 ],
 					 "level":80
 				}
@@ -8654,7 +8762,7 @@
 		 "nicknames":[
 				"Sweetie",
 				"/me cakes",
-				"Fondupple",
+				"Caked Up",
 				"Fondupple"
 		 ],
 		 "sets":[
@@ -8669,7 +8777,7 @@
 					 "moves":[
 							"milkdrink",
 							"leechseed",
-							"playrough",
+							"cakeslice",
 							"aromatherapy",
 							"powerwhip"
 					 ],
@@ -8685,8 +8793,8 @@
 					 ],
 					 "moves":[
 							"milkdrink",
-							"bulkup",
-							"pixiepummel",
+							"cakewalk",
+							"poundcake",
 							"powerwhip",
 							"owtheedge"
 					 ],
@@ -8716,8 +8824,7 @@
 					 "moves":[
 							"roost",
 							"willowisp",
-							"dazzlinggleam",
-							"hex"
+							"baloonpop"
 					 ],
 					 "lockedMoves":[
 							"spectralthief"
@@ -8732,13 +8839,13 @@
 							"leftovers"
 					 ],
 					 "moves":[
-							"earthpower",
-							"roost",
-							"shadowball",
-							"dazzlinggleam"
+							"nastyplot",
+							"rubbershield"
 					 ],
 					 "lockedMoves":[
-							"nastyplot"
+							"roost",
+							"shadowball",
+							"baloonpop"
 					 ],
 					 "level":80
 				}
@@ -8782,11 +8889,14 @@
 							"lifeorb"
 					 ],
 					 "moves":[
-							"fakeout",
 							"highjumpkick",
 							"megakick",
-							"uturn",
-							"blazekick"
+							"blazekick",
+							"dragonkick",
+							"elestickick",
+							"frostkick",
+							"tropkick",
+							"voltkick"
 					 ],
 					 "level":80
 				},
@@ -8803,6 +8913,21 @@
 							"return",
 							"swordsdance",
 							"substitute"
+					 ],
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"scrappy"
+					 ],
+					 "items":[
+							"lifeorb"
+					 ],
+					 "moves":[
+							"fakeout",
+							"ninelives",
+							"return",
+							"beatup"
 					 ],
 					 "level":80
 				}
@@ -8825,10 +8950,13 @@
 					],
 					"moves":[
 						   "dracometeor",
-						   "weatherball",
 						   "hurricane",
-						   "thunder"
+						   "thunder",
+						   "liquidflare"
 						   
+					],
+					"lockedMoves":[
+						"weatherball"
 					],
 					"level":72
 			   },
@@ -8881,9 +9009,8 @@
 					 ],
 					 "moves":[
 							"voltswitch",
-							"fireblast",
-							"psychic",
-							"thunderbolt",
+							"overheat",
+							"arclight",
 							"trick"
 					 ],
 					 "level":84
@@ -8897,9 +9024,9 @@
 					 ],
 					 "moves":[
 							"thunder",
-							"focusblast",
 							"fireblast",
-							"psychic",
+							"blinding",
+							"dancinglight",
 							"nastyplot"
 					 ],
 					 "level":84
@@ -8915,8 +9042,23 @@
 							"voltswitch",
 							"fireblast",
 							"recover",
-							"willowisp",
-							"psychic"
+							"guidinglight",
+							"beacon"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"flashfire"
+					 ],
+					 "items":[
+							"powerherb"
+					 ],
+					 "moves":[
+							"thunderbolt",
+							"fireblast",
+							"energyball",
+							"masterspark"
 					 ],
 					 "level":84
 				}
@@ -8941,9 +9083,10 @@
 					 "moves":[
 							"trick",
 							"fierydance",
-							"psyshock",
+							"glassbreaker",
 							"earthpower",
-							"boomburst"
+							"boomburst",
+							"swansong"
 					 ],
 					 "level":84
 				},
@@ -8957,9 +9100,24 @@
 					 "moves":[
 							"taunt",
 							"fierydance",
-							"psyshock",
+							"glassbreaker",
 							"earthpower",
 							"uturn"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"levitate"
+					 ],
+					 "items":[
+							"throatspray"
+					 ],
+					 "moves":[
+							"doublenote",
+							"fierydance",
+							"defog",
+							"earthpower"
 					 ],
 					 "level":84
 				}
@@ -8984,11 +9142,12 @@
 					 "moves":[
 							"waterpulse",
 							"vacuumwave",
-							"aircutter",
-							"earthpower"
+							"aircutter"
+							
 					 ],
 					 "lockedMoves":[
-							"frostbreath"
+							"frostbreath",
+							"bombard"
 					 ],
 					 "level":80
 				},
@@ -9003,7 +9162,7 @@
 							"freezedry",
 							"aeroblast",
 							"earthpower",
-							"focusblast"
+							"bombard"
 					 ],
 					 "lockedMoves":[
 							"focusenergy"
@@ -9021,25 +9180,24 @@
 						   "blizzard",
 						   "hail",
 						   "earthpower",
-						   "focusblast"
+						   "plasmacannon"
 					
 					],
 					"level":80
 			   },
 				{
 					 "abilities":[
-							"technician"
+							"levitate"
 					 ],
 					 "items":[
 							"leftovers",
 							"lifeorb"
 					 ],
 					 "moves":[
-							"roost",
-							"taunt",
-							"frostbreath",
-							"uturn",
-							"waterpulse"
+							"hypermode",
+							"earthpower",
+							"freezedry",
+							"plasmacannon"
 					 ],
 					 "level":80
 				}

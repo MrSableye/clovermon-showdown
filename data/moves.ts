@@ -39435,7 +39435,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -40240,7 +40240,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -41866,7 +41866,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -41881,6 +41881,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			this.add('-enditem', target, yourItem, '[silent]', '[from] move: Avarice', '[of] ' + source);
 			this.add('-item', source, yourItem, '[from] move: Avarice', '[of] ' + target);
 		},
+
+		
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -43120,7 +43122,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -44906,7 +44908,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -45583,7 +45585,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -49573,7 +49575,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -50798,7 +50800,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -58404,7 +58406,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -61740,7 +61742,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -62147,7 +62149,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Grass",
 		isNonstandard: "Future",
@@ -63056,7 +63065,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -67954,7 +67963,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -69837,7 +69846,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -77011,7 +77020,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -79941,6 +79950,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		recoil: [1, 2],
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -83807,6 +83817,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		boosts: {
+			spe: 1,
+		},
+		pseudoWeather: 'flyingsport',
+		condition: {
+			duration: 5,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Magma Sport', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Ground' ) {
+					this.debug('flying sport weaken');
+					return this.chainModify([1352, 4096]);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 3,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Flying Sport');
+			},
+		},
 		target: "all",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -86029,6 +86061,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		pseudoWeather: 'darksport',
+		boosts: {
+			spd: 1,
+		},
 		condition: {
 			duration: 5,
 			onFieldStart(field, source) {
@@ -86738,6 +86773,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		boosts: {
+			spd: 1,
+		},
+		pseudoWeather: 'acidsport',
+		condition: {
+			duration: 5,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Magma Sport', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Steel' ) {
+					this.debug('acid sport weaken');
+					return this.chainModify([1352, 4096]);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 3,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Acid Sport');
+			},
+		},
 		target: "all",
 		type: "Poison",
 		isNonstandard: "Future",

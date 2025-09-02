@@ -4693,62 +4693,7 @@
 				}
 		 ]
 	},
-	"fontaba":{
-		 "nicknames":[
-				"HWNDU",
-				"Fontaba",
-				"Fontaba",
-				"Fontaba"
-		 ],
-		 "sets":[
-				{
-					 "abilities":[
-							"prankster"
-					 ],
-					 "items":[
-							"leftovers"
-					 ],
-					 "moves":[
-							"topsyturvy",
-							"teleport",
-							"psychoboost",
-							"inverseroom",
-							"taunt"
-					 ],
-					 "level":84
-				},
-				{
-					 "abilities":[
-							"prankster"
-					 ],
-					 "items":[
-							"lightclay"
-					 ],
-					 "moves":[
-							"reflect",
-							"lightscreen",
-							"teleport",
-							"psychoboost"
-					 ],
-					 "level":84
-				},
-				{
-					 "abilities":[
-							"prankster"
-					 ],
-					 "items":[
-							"lifeorb"
-					 ],
-					 "moves":[
-							"nastyplot",
-							"ancientpower",
-							"thinkfast",
-							"substitute"
-					 ],
-					 "level":84
-				}
-		 ]
-	},
+
 		"fontabab":{
 		 "nicknames":[
 				"btard",
