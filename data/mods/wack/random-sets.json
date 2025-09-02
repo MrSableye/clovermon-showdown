@@ -5899,6 +5899,32 @@
       }
     ]
   },
+    "crucibelle": {   
+     "nicknames": [   
+      "mawile"
+    ],
+    "sets": [
+      {
+        "abilities": [   
+          "moldbreaker"
+        ],
+        "items": [
+          "occaberry",
+          "mawilite"
+        ],
+        "moves": [     
+          "woodhammer",    
+          "uturn",
+          "coil",
+          "gunkshot"
+        ],
+        "lockedMoves": [
+          "headmsmash"
+        ],
+        "level": 84       
+      }
+    ]
+  },
   "jcursola": {
     "nicknames": [
       "Jcursola"
