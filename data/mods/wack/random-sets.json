@@ -7196,18 +7196,18 @@
           "bulletproof"
         ],
         "items": [
-          "angelpowder"
+          "chestoberry"
         ],
         "moves": [
-          "lumber",
-          "barkskin",
-          "leechseed",
-          "synthesis",
-          "fossilize"
+          
+          "sleeptalk",
+          "thunderwave",
+          "ironhead"
         ],
         "lockedMoves": [
-          "woodstalk",
-          "woodhammer"
+          "rest",
+          "cottonguard",
+          "bodypress"
         ],
         "level": 84
       }
