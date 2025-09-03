@@ -237,7 +237,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			S: "Receiver",
 		},
 	},
-	miasmortar: {
+	miasmortor: {
 		inherit: true,
 		abilities: {
 			0: "Speed Boost",
