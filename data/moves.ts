@@ -52156,7 +52156,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Water",
 		isNonstandard: "Future",
@@ -65562,7 +65567,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'psn',
+		},
+		recoil: [33, 100],
 		target: "normal",
 		type: "Grass",
 		isNonstandard: "Future",
@@ -67691,6 +67700,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower + 20 * pokemon.positiveBoosts();
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -68513,7 +68527,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 2,
 		flags: {mirror: 1, bypasssub: 1},
 		onModifyType(move, pokemon) {
-			if (pokemon.species.name === 'Lancartorialter') {
+			if (pokemon.species.name === 'Lancartorialter'|| pokemon.species.name === 'Donutsteel') {
 				move.type = 'Shadow';
 			} else {
 				move.type = 'Divine';
@@ -79490,6 +79504,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onEnd(target) {
 				this.add('-end', target, 'Indestructible');
 			},
+
+			
 		},
 		secondary: null,
 		target: "self",
@@ -79588,6 +79604,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, beak: 1},
 		secondary: null,
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Wood') return 1;
+		},
 		target: "normal",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -92442,7 +92461,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, reflectable: 1, mirror: 1, kiss: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			volatileStatus: 'attract',
+		},
 		target: "normal",
 		type: "Flying",
 		isNonstandard: "Future",
