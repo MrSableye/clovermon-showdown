@@ -830,10 +830,9 @@
           "cancer"
         ],
         "items": [
-          "lifeorb", 
-          "leftovers",
-          "heavydutyboots",
-          "ghostgem"
+          
+          "leftovers"
+          
         ],
         "moves":[
           "protect",
@@ -1043,7 +1042,7 @@
         ],
         "moves":[
           "psychofists",
-          "quiverdace",
+          "quiverdance",
           "victorydance",
           "willowisp",
           "recover",
@@ -1174,7 +1173,8 @@
         "items": [
           "assaultvest", 
           "choicespecs",
-          "ironplate"
+          "ironplate",
+          "balloon"
         ],
         "moves":[
           "rapidspin",
