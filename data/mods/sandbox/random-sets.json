@@ -425,7 +425,7 @@
           "recover",
           "doomdesire",
           "earthpower",
-          "electromagnitism",
+          "electromagnetism",
           "firstimpression",
           "uturn",
           "flipturn",
@@ -952,7 +952,7 @@
           "rocketpunch"
         ],
         "lockedMoves": [   
-          "voltackle",
+          "volttackle",
           "crunch"
         ],
         "level": 80       
