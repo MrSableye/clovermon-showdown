@@ -534,10 +534,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	acidrain: {
-		inherit: true,
-		isNonstandard: null,
-	},
+	
 	blademaster: {
 		inherit: true,
 		isNonstandard: null,

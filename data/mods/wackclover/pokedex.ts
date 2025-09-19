@@ -243,7 +243,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			0: "Speed Boost",
 			1: "Prankster",
 			H: "Poison Point",
-			S: "Acid Rain",
+			S: "Acid Cloudburst",
 		},
 	},
 	pyralink: {
