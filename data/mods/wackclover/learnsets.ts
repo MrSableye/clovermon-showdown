@@ -29312,6 +29312,12 @@ acidrain: ["8L1"],
 	},
 	thundacock: {
 		learnset: {
+			woodrush: ["8L1"],
+			solidwood: ["8L1"],
+			peckkiss: ["8L1"],
+			woodpecker: ["8L1"],
+			featherstorm: ["8L1"],
+			dogfight: ["8L1"],
 			cbt: ["8L1"],
 matingcall: ["8L1"],
 			acrobatics: ["8T"],

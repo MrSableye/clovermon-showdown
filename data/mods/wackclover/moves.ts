@@ -3529,6 +3529,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			inherit: true,
 			isNonstandard: null,
 			},
+			featherstorm: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		felltree: {
 		inherit: true,
 		isNonstandard: null,
@@ -5581,6 +5585,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		peckkiss: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		tripleshot: {
 		inherit: true,
 		isNonstandard: null,
@@ -5782,6 +5790,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		woodendefense: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		woodpecker: {
 		inherit: true,
 		isNonstandard: null,
 		},

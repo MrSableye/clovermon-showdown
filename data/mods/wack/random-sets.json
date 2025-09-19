@@ -4652,7 +4652,7 @@
     "sets": [
       {
         "abilities": [
-          "shielddust"
+          "serenegrace"
         ],
         "items": [
           "heavydutyboots",
@@ -7186,6 +7186,102 @@
       }
     ]
   },
+    "revenankh ": {
+    "nicknames": [
+      "Triage Time"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "ironfist"
+        ],
+        "items": [
+          "lifeorb",
+          "boxinggloves"
+        ],
+        "moves": [
+          
+          "poweruppunch",
+          "icepunch",
+          "shadowpunch"
+        ],
+        "lockedMoves": [
+          "drainpunch"
+        ],
+        "level": 84
+      }
+    ]
+  },
+   "charzar ": {
+    "nicknames": [
+      "Triage Time"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "drought"
+        ],
+        "items": [
+          "charcoal"
+        ],
+        "moves": [
+          
+          "dragonpulse",
+          "fireball",
+          "dragonclaw"
+        ],
+        "lockedMoves": [
+          "flareblitz"
+        ],
+        "level": 80
+      }
+    ]
+  },
+   "stitcher ": {
+    "nicknames": [
+      "Stitcher"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "levitate"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "thunderbolt",
+          
+          "icepunch",
+          "memento"
+        ],
+        "lockedMoves": [
+          "dragonpulse"
+        ],
+        "level": 78
+      },
+       {
+        "abilities": [
+          "parentalbond"
+        ],
+        "items": [
+          "lifeorb",
+          "heavydutyboots"
+        ],
+        "moves": [
+          
+          "psywave",
+          "helpinghand",
+          "mistball"
+        ],
+        "lockedMoves": [
+          "dragonbreath"
+        ],
+        "level": 76
+      }
+    ]
+  },
   "sdubwool": {
     "nicknames": [
       "Steel Dubs"
@@ -7196,18 +7292,18 @@
           "bulletproof"
         ],
         "items": [
-          "angelpowder"
+          "chestoberry"
         ],
         "moves": [
-          "lumber",
-          "barkskin",
-          "leechseed",
-          "synthesis",
-          "fossilize"
+          
+          "sleeptalk",
+          "thunderwave",
+          "ironhead"
         ],
         "lockedMoves": [
-          "woodstalk",
-          "woodhammer"
+          "rest",
+          "cottonguard",
+          "bodypress"
         ],
         "level": 84
       }
@@ -7929,6 +8025,92 @@
         ],
         "lockedMoves": [   
           "roost"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "miasmar": {   
+    "sets": [
+      {
+        "abilities": [   
+          "flamebody",
+          "insomnia"
+        ],
+        "items": [
+          "heatrock"
+        ],
+        "moves": [     
+          "dawnofthedead",    
+          "flamecharge",
+          "magmastorm"
+        ],
+        "lockedMoves": [   
+          "blueflare"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "sevicious": {   
+    "sets": [
+      {
+        "abilities": [   
+          "adaptability"
+        ],
+        "items": [
+          "lifeorb"
+        ],
+        "moves": [     
+          "sacredfire",    
+          "throatchop",
+          "aquaspear"
+        ],
+        "lockedMoves": [   
+          "corrosivespray"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+    "zangol": {   
+    "sets": [
+      {
+        "abilities": [   
+          "toxicboost"
+        ],
+        "items": [
+          "toxicorb"
+        ],
+        "moves": [     
+          "geigerstrike",    
+          "dynamicrush",
+          "throatchop"
+        ],
+        "lockedMoves": [   
+          "closecombat"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+  "ramshaker": {   
+    "sets": [
+      {
+        "abilities": [   
+          "hugepower"
+        ],
+        "items": [
+          "angelpowder",
+          "silkscarf"
+        ],
+        "moves": [     
+          "bugkick",    
+          "milkdrink",
+          "roar"
+        ],
+        "lockedMoves": [   
+          "doubleedge"
         ],
         "level": 84       
       }
@@ -9128,9 +9310,8 @@
           "magnetpull"
         ],
         "items": [
-          "eviolate",
-          "eviocicle",
-          "eviolite"
+         
+          "airballoon"
         ],
         "moves": [
           "overload",
@@ -10026,6 +10207,52 @@
         ],
         "level": 80
       }
+    ]
+  },
+  "thereisonlyhell": {   
+    "nicknames": [   
+      "All is well",
+      "There is only hell",
+      "Please just help me"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "trace"
+        ],
+        "items": [
+          "eviolite", 
+          "gravitycapsule",
+          "sheriffbadge",
+          "angelpowder"
+        ],
+        "moves": [     
+          "shadowball",
+          "thunderbolt",
+          "scald",
+          "icebeam",
+          "energyball",
+          "gravity",
+          "setsshadows",
+          "stealthrock",
+          "willowisp",
+          "knockoff",
+          "psyshock",
+          "sludgewave",
+          "roost",
+          "virus",
+          "riftstrike",
+          "maniachowl",
+          "uturn"
+
+        ],
+        "lockedMoves": [   
+          "trickroom",
+          "ransomware",
+          "chaosrift"
+        ],
+        "level": 84       
+      }  
     ]
   },
    "teabarqan": {
