@@ -4732,6 +4732,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		
+		
+		prowl: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		pullwool: {
 		inherit: true,
 		isNonstandard: null,
@@ -5553,6 +5559,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		toxicsteamtackle: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		toxicwind: {
 		inherit: true,
 		isNonstandard: null,
@@ -5662,6 +5672,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		urbanburst: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		vaporform: {
+		inherit: true,
+		isNonstandard: null,
+		},
+			vaporguard: {
+		inherit: true,
+		isNonstandard: null,
+		},
+			vaporwall: {
 		inherit: true,
 		isNonstandard: null,
 		},
