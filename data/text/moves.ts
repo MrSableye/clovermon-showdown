@@ -25613,4 +25613,9 @@ export const MovesText: {[k: string]: MoveText} = {
 	hiddenforcezombie: {
 		name: "Hidden Force Zombie",
 	},
+	ivcreate: {
+		name: "V-create",
+		desc: "Lowers the user's Speed, Defense, and Special Defense by 1 stage.",
+		shortDesc: "Lowers the user's Defense, Sp. Def, Speed by 1.",
+	},
 };

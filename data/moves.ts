@@ -62431,7 +62431,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -66376,6 +66383,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		overrideOffensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Rock",
@@ -66595,11 +66603,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target?.volatiles['bleed']) {
 				this.boost({
 					atk: 2,
+					def: -2,
 					spe: 3,
 				});
 			} else {
 				this.boost({
 					atk: 2,
+					def: -2,
 					spe: 2,
 				});
 			}
@@ -68551,7 +68561,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 80,
+			volatileStatus: 'confusion',
+		},
 		target: "allAdjacentFoes",
 		type: "Grass",
 		isNonstandard: "Future",
@@ -75629,7 +75642,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
 		secondary: {
-			chance: 90,
+			chance: 100,
 			onHit(target, source) {
 				if (this.field.getPseudoWeather('thickfog')) {
 					this.boost({spa: -2, accuracy: 2}, source, source);
@@ -79681,12 +79694,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 			duration: 4,
 			onStart(target) {
 				this.add('-start', target, 'Rubber Shield');
-				this.add('-message', 'became immune to super effective moves and critical hits!');
+				this.add('-message', 'became immune to super effective moves');
 			},
 			onFoeTryMove(target, source, move) {
 				if (source.getMoveHitData(move).typeMod > 0) {
-					this.debug('Indestructible neutralize');
-					this.add('-immune', source, '[from] : Indestructible');
+					this.debug('Rubber Shield neutralize');
+					this.add('-immune', source, '[from] : Rubber Shield');
 					return null;
 				}
 			},
@@ -80290,7 +80303,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 12,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
+		multihit: 2,
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -85902,11 +85923,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		self: {
 			onHit(source) {
 				for (const ally of source.side.pokemon) {
-					const success = !!this.heal(this.modify(source.maxhp, 0.33));
 					ally.cureStatus();
 				}
 			},
+			
 		},
+		onAfterHit(target, source) {
+				
+				this.heal(Math.floor(source.baseMaxhp * 0.33))
+			},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Shadow",
@@ -97725,5 +97750,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "allAdjacentFoes",
 		type: "Fire",
+	},
+	ivcreate: {
+		num: 557,
+		accuracy: 95,
+		basePower: 180,
+		category: "Physical",
+		name: "V-create",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spe: -1,
+				def: -1,
+				spd: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+		zMove: {basePower: 220},
+		contestType: "Cool",
 	},
 };

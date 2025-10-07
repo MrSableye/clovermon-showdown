@@ -18352,6 +18352,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ivcreate: {
+		inherit: true,
+		isNonstandard: null,
+	},
 
 	/** Wack moves that have their name taken by Clover */
 	cherrybomb: {

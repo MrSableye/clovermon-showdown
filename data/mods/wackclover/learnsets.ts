@@ -2476,6 +2476,7 @@ catlaser: ["8L1"],
 	},
 	vandash: {
 		learnset: {
+			prowl: ["8L1"],
 			goudagun: ["8L1"],
 			fruitpunch: ["8L1"],
 			seasoning: ["8L1"],
@@ -7316,6 +7317,7 @@ acidrain: ["8L1"],
 	},
 	florious: {
 		learnset: {
+			prowl: ["8L1"],
 			darkerpulse: ["8L1"],
 midnight: ["8L1"],
 			absorb: ["8L11"],
@@ -14277,6 +14279,7 @@ glassdefense: ["8L1"],
 	},
 	yedoom: {
 		learnset: {
+			prowl: ["8L1"],
 			aichmoclaws: ["8L1"],
 			slushcrush: ["8L1"],
 snowfort: ["8L1"],
@@ -23310,6 +23313,7 @@ cbt: ["8L1"],
 	},
 	fazeagle: {
 		learnset: {
+			toxicsteamtackle: ["8L1"],
 			hotpocketcrash: ["8L1"],
 steamsale: ["8L1"],
 ashrain: ["8L1"],
@@ -32756,6 +32760,9 @@ weatherblade: ["8L1"],
 	},
 	biteki: {
 		learnset: {
+			vaporform: ["8L1"],
+			vaporguard: ["8L1"],
+			vaporwall: ["8L1"],
 			lunarwave: ["8L1"],
 crystalwave: ["8L1"],
 corpsewave: ["8L1"],
