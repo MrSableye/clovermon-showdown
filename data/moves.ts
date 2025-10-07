@@ -66603,11 +66603,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target?.volatiles['bleed']) {
 				this.boost({
 					atk: 2,
+					def: -2,
 					spe: 3,
 				});
 			} else {
 				this.boost({
 					atk: 2,
+					def: -2,
 					spe: 2,
 				});
 			}
