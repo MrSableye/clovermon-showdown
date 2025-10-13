@@ -970,6 +970,7 @@ export const Formats: FormatList = [
 			'Hell Drag', 'Pacify', 'Rift Strike', 'After Image','Perfect Freeze', 'Electrify + Lightning Rod', 'Electrify + Motor Drive', 'Electrify + Volt Absorb', 'Lunatic Time', 'Green Card', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
 		],
 	},
+	
 	{
 		name: '[Gen 8 Wack Only] Ubers',
 		mod: 'wack',
@@ -1176,6 +1177,18 @@ export const Formats: FormatList = [
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
 			'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
 		],
+	},
+
+	{
+	name: '[Gen 8 Clover Only] Custom Game Free-For-All',
+		mod: 'clover',
+		gameType: 'freeforall',
+		searchShow: false,
+		rated: false,
+		debug: true,
+		battle: {trunc: Math.trunc},
+		// no restrictions, for serious (other than team preview)
+		ruleset: ['Terastal Clause', 'Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Wack OMs

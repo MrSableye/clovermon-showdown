@@ -65312,6 +65312,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target, source) {
+			if (target.getTypes().join() === 'Steel' || !target.setType('Steel', false, source, this.effect)) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Steel');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -66368,7 +66377,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		recoil: [33, 100],
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Fire",
@@ -84882,6 +84895,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
@@ -95112,7 +95126,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -97751,12 +97768,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "allAdjacentFoes",
 		type: "Fire",
 	},
-	ivcreate: {
+	icreate: {
 		num: 557,
 		accuracy: 95,
 		basePower: 180,
 		category: "Physical",
-		name: "V-create",
+		name: "I-create",
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},

@@ -8310,16 +8310,17 @@
           "protean"
         ],
         "items": [
-          "angelpowder",
-          "heavydutyboots" 
+          "kingsrock" 
         ],
         "moves": [     
-          "trickroom",    
-          "equalize",
-          "acupressure"
+              
+          "trickroom",
+          "equalize"
         ],
-        "lockedMoves": [   
-          "ageofbabylon"
+        "lockedMoves": [  
+          "rest", 
+          "ageofbabylon",
+          "acupressure"
         ],
         "level": 78       
       }
@@ -12849,7 +12850,7 @@
         "lockedMoves": [
           "headsmash"
         ],
-        "level": 84
+        "level": 88
       }
     ]
   },

@@ -9526,6 +9526,7 @@ creammissiles: ["8L1"],
 		learnset: {
 			dusttornado: ["8L1"],
 			comfycoil: ["8L1"],
+			acidbath: ["8L1"],
 			technologyscoil: ["8L1"],
 			bladerain: ["8L1"],
 miasmaslash: ["8L1"],
