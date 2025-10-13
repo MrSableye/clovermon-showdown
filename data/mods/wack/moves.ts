@@ -18352,7 +18352,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ivcreate: {
+	icreate: {
 		inherit: true,
 		isNonstandard: null,
 	},
