@@ -425,7 +425,7 @@
           "recover",
           "doomdesire",
           "earthpower",
-          "electromagnitism",
+          "electromagnetism",
           "firstimpression",
           "uturn",
           "flipturn",
@@ -830,10 +830,9 @@
           "cancer"
         ],
         "items": [
-          "lifeorb", 
-          "leftovers",
-          "heavydutyboots",
-          "ghostgem"
+          
+          "leftovers"
+          
         ],
         "moves":[
           "protect",
@@ -953,7 +952,7 @@
           "rocketpunch"
         ],
         "lockedMoves": [   
-          "voltackle",
+          "volttackle",
           "crunch"
         ],
         "level": 80       
@@ -1043,7 +1042,7 @@
         ],
         "moves":[
           "psychofists",
-          "quiverdace",
+          "quiverdance",
           "victorydance",
           "willowisp",
           "recover",
@@ -1174,7 +1173,8 @@
         "items": [
           "assaultvest", 
           "choicespecs",
-          "steelgem"
+          "ironplate",
+          "balloon"
         ],
         "moves":[
           "rapidspin",
@@ -1428,7 +1428,7 @@
           "gunkshot",
           "icespinner",
           "seedbomb",
-          "trailblast"
+          "trailblaze"
         ],
         "lockedMoves": [   
           "earthquake",

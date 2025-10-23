@@ -196,6 +196,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Poison", "Meme"],
 	},
+	florious: {
+		inherit: true,
+		abilities: {
+			0: "Vital Spirit",
+			1: "Insomnia",
+			H: "Acid Rush",
+			S: "Berserk",
+		},
+	},
 	hyletrack: {
 		inherit: true,
 		types: ["Steel", "Steam"],
@@ -226,6 +235,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			1: "Serene Grace",
 			H: "Magic Bounce",
 			S: "Receiver",
+		},
+	},
+	miasmortor: {
+		inherit: true,
+		abilities: {
+			0: "Speed Boost",
+			1: "Prankster",
+			H: "Poison Point",
+			S: "Acid Cloudburst",
 		},
 	},
 	pyralink: {

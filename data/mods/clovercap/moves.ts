@@ -872,7 +872,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	assimilate: {
+	allaprima: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1196,8 +1196,17 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		contestType: "Beautiful",
 	},
 	skyuppercut: {
-		inherit: true,
-		isNonstandard: null,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: "Past",
+		name: "Sky Uppercut",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
 		onEffectiveness(typeMod, target, type) {
 			if (type === 'Flying') return 0;
 		},

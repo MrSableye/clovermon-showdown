@@ -7821,8 +7821,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	brackishgash: {
 		name: "Brackish Gash",
-		desc: "For 1 turn, the target is prevented from restoring any HP as long as it remains active. During the effect, healing and draining moves are unusable, and Abilities and items that grant healing will not heal the user. If an affected Pokemon uses Baton Pass, the replacement will remain unable to restore its HP. Pain Split and the Regenerator Ability are unaffected.",
-		shortDesc: "For 1 turn, the foe(s) is prevented from healing.",
+		desc: "For 2 turns, the target is prevented from restoring any HP as long as it remains active. During the effect, healing and draining moves are unusable, and Abilities and items that grant healing will not heal the user. If an affected Pokemon uses Baton Pass, the replacement will remain unable to restore its HP. Pain Split and the Regenerator Ability are unaffected.",
+		shortDesc: "For 2 turns, the foe is prevented from healing.",
 	},
 	mirrorcannon: {
 		name: "Mirror Cannon",
@@ -7943,10 +7943,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power doubles if the user was hit by the target this turn. User recovers 50% of the damage dealt.",
 		shortDesc: "Power doubles if user is damaged by the target. User recovers 50% of the damage dealt.",
 	},
-	assimilate: {
-		name: "Assimilate",
-		desc: "Power doubles if the user was hit by the target this turn. User recovers 50% of the damage dealt.",
-		shortDesc: "Power doubles when hit. Drains 50% of damage dealt.",
+	allaprima: {
+		name: "Alla Prima",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
+		shortDesc: "User drains 50% of damage dealt. S.E. on Water.",
 	},
 	grandbat: {
 		name: "Grand Bat",
@@ -8261,7 +8261,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	destructionstinger: {
 		name: "Destruction Stinger",
-		shortDesc: "Always badly poisons the foe.",
+		shortDesc: "Always badly poisons the foe. Always crits.",
 	},
 	extinctionwave: {
 		name: "Extinction Wave",
@@ -25612,5 +25612,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hiddenforcezombie: {
 		name: "Hidden Force Zombie",
+	},
+	icreate: {
+		name: "I-create",
+		desc: "Lowers the user's Speed, Defense, and Special Defense by 1 stage.",
+		shortDesc: "Lowers the user's Defense, Sp. Def, Speed by 1.",
 	},
 };

@@ -2771,6 +2771,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		bloom: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		boatbash: {
 		inherit: true,
 		isNonstandard: null,
@@ -3525,6 +3529,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			inherit: true,
 			isNonstandard: null,
 			},
+			featherstorm: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		felltree: {
 		inherit: true,
 		isNonstandard: null,
@@ -3598,6 +3606,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		flutter: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		focustime: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -3810,6 +3822,27 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		guidinglight: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		gunkshot: {
+		inherit: true,
+		onModifyMove(move) {
+			if (this.field.isWeather(['acidrain'])) move.accuracy = true;
+		},
+		desc: "Has a 30% chance to poison the target. If the weather is Acid Rain, this move does not check accuracy.",
+		shortDesc: "30% chance to psn target. Can't miss in Acid Rain",
+		isNonstandard: null,
+	},
+	brokenguillotine: {
+		inherit: true,
+		isNonstandard: null,
+		},
+				tauroskiathermokrasia: {
+		inherit: true,
+		isNonstandard: null,
+		},
+				sgaebuidhe: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -4360,6 +4393,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Heart",
 		isNonstandard: null,
 	},
+	mandragora: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		minddrain: {
 		inherit: true,
 		isNonstandard: null,
@@ -4675,6 +4712,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		predationplant: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		prerecord: {
 			inherit: true,
 			isNonstandard: null,
@@ -4688,6 +4729,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			isNonstandard: null,
 			},
 		psypowder: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		
+		
+		prowl: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -5512,6 +5559,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		toxicsteamtackle: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		toxicwind: {
 		inherit: true,
 		isNonstandard: null,
@@ -5541,6 +5592,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		triplepeck: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		peckkiss: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -5617,6 +5672,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		urbanburst: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		vaporform: {
+		inherit: true,
+		isNonstandard: null,
+		},
+			vaporguard: {
+		inherit: true,
+		isNonstandard: null,
+		},
+			vaporwall: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -5745,6 +5812,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		woodendefense: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		woodpecker: {
 		inherit: true,
 		isNonstandard: null,
 		},

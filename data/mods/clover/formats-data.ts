@@ -4541,7 +4541,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	pretzely: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"boomburst",
@@ -4549,7 +4549,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"nastyplot",
 			"powergem",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 72,
 	},
 	deemdow: {
 		inherit: true,
@@ -5144,7 +5144,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	cannonance: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"dragonpulse",
@@ -5153,7 +5153,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"fireblast",
 			"darkpulse",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 72,
 	},
 	evacycle: {
 		inherit: true,

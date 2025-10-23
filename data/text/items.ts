@@ -2501,9 +2501,9 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	nullgem: {
 		name: "Null Gem",
-		desc: "Holder's first successful ???-type attack will have 1.5x power. Single use.",
+		desc: "Holder's first successful ???-type attack will have 1.33x power. Single use.",
 		gen5: {
-			desc: "Holder's first successful ???-type attack will have 1.5x power. Single use.",
+			desc: "Holder's first successful ???-type attack will have 1.33x power. Single use.",
 		},
 	},
 	crimsonlens: {
@@ -2524,7 +2524,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	whetstone: {
 		name: "Whetstone",
 		desc: "Slicing-based moves have a 1.1x boost when this item is held. Prevents Attack from being reduced by foe or self-inflicted attack reduction.",
-		shortDesc: "Boosts slicing-based moves by 1.1x. Prevents Attack from being reduced by foe or self.",
+		shortDesc: "Boosts slicing moves by 1.1x. Prevents Attack from being reduced.",
 	},
 	efficientpick: {
 		name: "Efficient Pick",

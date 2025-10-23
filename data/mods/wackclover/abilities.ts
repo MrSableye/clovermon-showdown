@@ -421,6 +421,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	poisonheal: {
+		inherit: true,
+		onWeather(target, source, effect) {
+			if (effect.id === 'acidrain') this.heal(target.baseMaxhp / 14);
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'acidrain') return false;
+		},
+		desc: "This Pokemon heals 1/14 of its maximum HP in Acid Rain and 1/8 if it is poisoned or badly poisoned.",
+		shortDesc: "Heals 1/14 in Acid Rain and 1/8 if psn/tox.",
+		isNonstandard: null,
+	},
 	protean: {
 		inherit: true,
 		onPrepareHit(source, target, move) {
@@ -453,6 +465,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onDamage(damage, target, source, effect) {
 			if (effect.id === 'psn' || effect.id === 'tox') {
 				return false;
+			}
+		},
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (this.field.isWeather(['acidrain'])) {
+				return this.chainModify(1.5);
+			} else if (((attacker.status === 'psn' || attacker.status === 'tox') && move.category === 'Physical')) {
+				return this.chainModify(1.5);
 			}
 		},
 	},
@@ -534,6 +554,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	
 	blademaster: {
 		inherit: true,
 		isNonstandard: null,
@@ -750,6 +771,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 
 	shitstorm: {
 		inherit: true,
+
+		onStart() {
+			this.field.addPseudoWeather('mudsport');
+			this.field.addPseudoWeather('watersport');
+			this.field.addPseudoWeather('magmasport');
+			this.field.addPseudoWeather('steamsport');
+		},
+		
 		isNonstandard: null,
 	},
 	fuku: {
@@ -898,6 +927,21 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 		shortDesc: "Halves Chaos damage. +1 Atk stage after it is damaged by a Dark- or Chaos-type move.",
+	},
+	raindish: {
+		inherit: true,
+		onWeather(target, source, effect) {
+			if (effect.id === 'acidrain' && !target.hasType('Poison')) {
+				this.damage(target.baseMaxhp / 16, target, target);
+			}
+			if (target.hasItem('utilityumbrella')) return;
+			if (effect.id === 'raindance' || effect.id === 'primordialsea') {
+				this.heal(target.baseMaxhp / 16);
+			}
+		},
+		desc: "If Rain Dance is active, this Pokemon restores 1/16 of its maximum HP, rounded down. If Acid Rain is active and the Pokemon doesn't have the Poison type, it takes 1/16 of its maximum HP, rounded down, at the end of each turn. The Rain Dance effect is prevented if this Pokemon is holding a Utility Umbrella.",
+		shortDesc: "Rain Dance: heals 1/16, Acid Rain: takes 1/16.",
+		isNonstandard: null,
 	},
 	presage: {
 		inherit: true,
