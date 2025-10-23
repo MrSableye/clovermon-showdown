@@ -11,8 +11,8 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	},
 	seedbomb: {
 		inherit: true,
-		desc: "If the user is a Grass-type, has a 30% chance to apply Leech Seeds.",
-		shortDesc: "Grass-type users have a 30% chance to Leech Seed.",
+		desc: "Has a 30% chance to apply Leech Seed when this move successfully lands.",
+		shortDesc: "30% chance to Leech Seed if the user is Grass-type.",
 	},
 	xscissor: {
 		inherit: true,
@@ -22,7 +22,7 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	smellingsalts: {
 		inherit: true,
 		desc: "Power doubles if the target is paralyzed. If the user has not fainted, the target is cured of paralysis. Has a 10% chance of paralyzing the opponent on hit.",
-		shortDesc: "Power doubles if target is paralyzed, and cures it. 10% chance to paralyze.",
+		shortDesc: "2x power vs. paralyzed and cures. 10% para chance.",
 	},
 	razorwind: {
 		inherit: true,
@@ -37,7 +37,7 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	skyuppercut: {
 		inherit: true,
 		desc: "This move is neutrally effective on Flying-type Pokemon. This move can hit Pokemon that are using Bounce, Fly, or Sky Drop.",
-		shortDesc: "Neutral on Flying. Can hit Pokemon using Bounce, Fly, or Sky Drop.",
+		shortDesc: "Neutrally effective on Flying.",
 	},
 	sonicboom: {
 		name: "Sonic Boom",
@@ -54,7 +54,7 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	sharpen: {
 		inherit: true,
 		desc: "Raises the user's Attack by 1 stage. Uses Focus Energy at the same time.",
-		shortDesc: "Raises the user's Attack by 1. Applies Focus Energy to the user.",
+		shortDesc: "Raises the user's Attack by 1 and sets Focus Energy.",
 	},
 	mistball: {
 		name: "Mist Ball",
@@ -89,7 +89,7 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	kinesis: {
 		inherit: true,
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage. This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
-		shortDesc: "10% chance to lower Sp. Def. Super effective on Steel.",
+		shortDesc: "10% chance to lower Sp. Def. S.E. on Steel.",
 	},
 	superpower: {
 		inherit: true,
@@ -103,7 +103,7 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	},
 	smartstrike: {
 		inherit: true,
-		shortDesc: "This move does not check accuracy. Raises Accuracy by 1.",
+		shortDesc: "Ignores accuracy checks. Raises Accuracy by 1.",
 	},
 	risingvoltage: {
 		inherit: true,

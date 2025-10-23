@@ -24308,6 +24308,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		willCrit: true,
 		secondary: {
 			chance: 100,
 			status: 'tox',
@@ -96612,30 +96613,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
-	assimilate: {
-		num: 42018,
+	allaprima: {
+		num: 42021,
 		accuracy: 100,
-		basePower: 50,
-		basePowerCallback(pokemon, target, move) {
-			const lastDamagedBy = pokemon.attackedBy.some(
-				p => p.source === target && p.damage > 0 && p.thisTurn
-			);
-			if (lastDamagedBy) {
-				this.debug('BP doubled for getting hit by ' + target);
-				return move.basePower * 2;
-			}
-			return move.basePower;
-		},
+		basePower: 70,
 		category: "Special",
-		name: "Assimilate",
-		pp: 10,
-		priority: -4,
-		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
+		name: "Alla Prima",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, heal: 1},
 		drain: [1, 2],
-		secondary: null,
-		target: "normal",
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Water') return 1;
+		},
+		target: "allAdjacent",
 		type: "Water",
-		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
 	scarletchant: {
