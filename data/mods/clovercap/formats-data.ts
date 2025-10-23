@@ -3090,7 +3090,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	termagnius: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	jumblegore: {
 		inherit: true,
