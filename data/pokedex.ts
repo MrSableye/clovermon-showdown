@@ -47558,6 +47558,35 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+	blobboswitch: {
+		num: 69132,
+		name: "Blobbos-Witch",
+		baseSpecies: "Blobbos",
+		forme: "Witch",
+		types: ["Dark", "Poison"],
+		gender: "F",
+		baseStats: {
+			hp: 86,
+			atk: 68,
+			def: 75,
+			spa: 118,
+			spd: 65,
+			spe: 110,
+		},
+		abilities: {
+			0: "Power of Alchemy",
+                        1: "Magic Guard",
+                        H: "Degenerate",
+                        S: "Levitate",
+		},
+		heightm: 1.5,
+		weightkg: 45.8,
+		color: "Blue",
+		eggGroups: [
+			"Human-Like"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
