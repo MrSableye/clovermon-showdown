@@ -1663,6 +1663,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "self",
 		type: "Normal",
 	},
+	oblivionwing: {
+		inherit: true,
+		basePower: 75,
+	},
 	meteorhammer: {
 		inherit: true,
 		isNonstandard: null,
