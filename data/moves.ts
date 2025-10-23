@@ -96627,6 +96627,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (type === 'Water') return 1;
 		},
 		target: "allAdjacent",
+		type: "Water",
 		isNonstandard: "Future",
 	},
 	scarletchant: {
