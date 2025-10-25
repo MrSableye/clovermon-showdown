@@ -4180,7 +4180,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	tripecs: {
 		inherit: true,
-		tier: "NU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"superpower",
@@ -4726,7 +4726,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hyletrack: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"shiftgear",
@@ -5061,7 +5061,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	smellox: {
 		inherit: true,
-		tier: "OU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"gunkshot",
@@ -5157,7 +5157,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	evacycle: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"shiftgear",
@@ -5411,7 +5411,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	lossolith: {
 		inherit: true,
-		tier: "RUBL",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"wish",
@@ -6614,7 +6614,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	saudoge: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"wowwiener",
@@ -6869,7 +6869,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fondupple: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"milkdrink",
@@ -6931,7 +6931,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	tunakking: {
 		inherit: true,
-		tier: "RUBL",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"fierydance",
@@ -6999,7 +6999,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	falcaptain: {
 		inherit: true,
-		tier: "RUBL",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"falconpunch",
@@ -7301,7 +7301,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	avianjoin: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"heavyslam",
@@ -7700,7 +7700,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fireshitre: {
 		inherit: true,
-		tier: "UUBL",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"calmmind",
