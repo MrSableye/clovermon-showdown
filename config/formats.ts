@@ -73,7 +73,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
-			'Inversion', 'Bug Gem', 'Ban Hammer', 'More Room', 'Inverse Room', 'Stink Bomb',
+			'Inversion', 'Bug Gem', 'move:banhammer', 'More Room', 'Inverse Room', 'Stink Bomb',
 			'Dark Gem', 'Dragon Gem', 'Electric Gem', 'Fairy Gem', 'Fighting Gem', 'Fire Gem', 'Flying Gem', 'Ghost Gem', 'Grass Gem', 'Ground Gem', 'Ice Gem', ' Normal Gem', 'Poison Gem', 'Psychic Gem', 'Rock Gem', 'Steel Gem', 'Water Gem',
 		],
 	},
