@@ -10415,6 +10415,7 @@ smashmouth: ["8L1"],
 	},
 	chantruth: {
 		learnset: {
+			greedincarnate: ["8L1"],
 			jewrocks: ["8L1"],
 			rockgather: ["8L1"],
 			holocaust: ["8L1"],
@@ -26395,6 +26396,7 @@ midnight: ["8L1"],
 	senketula: {
 		learnset: {
 			sewing: ["8L1"],
+			gash: ["8L1"],
 			anglestab: ["8L1"],
 			bladerain: ["8L1"],
 			sanguinefang: ["8L1"],
@@ -27073,6 +27075,11 @@ rockgather: ["8L1"],
 	},
 	feferun: {
 		learnset: {
+			heatmirage: ["8M"],
+			gaiapulse: ["8M"],
+			gigaleech: ["8M"],
+			shiftingsands: ["8M"],
+			emojibeam: ["8M"],
 			acidspray: ["8L27"],
 			aerialace: ["8M"],
 			attract: ["8M"],

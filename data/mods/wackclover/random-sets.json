@@ -9213,13 +9213,43 @@
 		 "sets":[
 				{
 					 "abilities":[
+							"hypercutter"
+					 ],
+					 "items":[
+							"bloodyrock"
+					 ],
+					 "moves":[
+							"fellblood",
+							"bloodbath",
+							"bloodrain",
+							"knockoff"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
 							"intimidate"
 					 ],
 					 "items":[
 							"leftovers"
 					 ],
 					 "moves":[
-							"pursuit",
+							"sewing",
+							"stickyweb",
+							"bloodbath",
+							"fabricstab"
+					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"intimidate"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"fabricstab",
 							"stickyweb",
 							"uturn",
 							"spikes",
@@ -9237,9 +9267,11 @@
 					 "moves":[
 							"uturn",
 							"knockoff",
-							"gunkshot",
-							"superpower",
-							"earthquake"
+							"firstblood"							
+					 ],
+					 "lockedMoves":[
+							"bloodbite",
+							"fabricstab"
 					 ],
 					 "level":84
 				},
@@ -9251,7 +9283,7 @@
 							"sitrusberry"
 					 ],
 					 "moves":[
-							"leechlife",
+							"fabricstab",
 							"owtheedge",
 							"gunkshot",
 							"earthquake"
