@@ -3705,6 +3705,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		gigaleech: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		gaiapulse: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		glacialrend: {
 			inherit: true,
 			isNonstandard: null,
@@ -3737,6 +3745,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		greedincarnate: {
+			inherit: true,
+			isNonstandard: null,
+			},
 		greenthumb: {
 			inherit: true,
 			isNonstandard: null,
@@ -5061,6 +5073,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		shieldpress: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		shiftingsands: {
 		inherit: true,
 		isNonstandard: null,
 		},

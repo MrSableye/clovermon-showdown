@@ -71703,7 +71703,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, kiss: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
 		status: 'brn',
 		target: "normal",
 		type: "Fire",
@@ -78007,7 +78010,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				});
 			} else {
 				this.boost({
-					def: 1,
+					def: 2,
 					spd: 1,
 					spe: -1,
 				});
@@ -92669,6 +92672,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
 		secondary: null,
+		heal: [1, 2],
 		target: "self",
 		type: "Normal",
 		isNonstandard: "Future",
@@ -95109,7 +95113,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onHit(pokemon) {
 			if (pokemon.hasType('Divine')) {
 				pokemon.setType(pokemon.getTypes(true).map(type => type === "Divine" ? "???" : type));
-				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Exocise');
+				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Harpe');
 			}
 		},
 		secondary: null,

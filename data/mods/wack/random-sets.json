@@ -7102,6 +7102,31 @@
         "lockedMoves": [
           "bloodboil"
         ],
+        "level": 84
+      }
+    ]
+  },
+  "intestinela ": {
+    "nicknames": [
+      "Intestinela"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "sadist"
+        ],
+        "items": [
+          "eviolate"
+        ],
+        "moves": [
+          "gorgoneye",
+          "lifesap",
+          "purefear"
+
+        ],
+        "lockedMoves": [
+          "bloodpump"
+        ],
         "level": 86
       }
     ]
