@@ -470,7 +470,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	fazeagle: {
 		inherit: true,
-		types: ["Magma", "flying"],
+		types: ["Magma", "Flying"],
 		abilities: {
 			0: "Sniper",
 			1: "Pro",
