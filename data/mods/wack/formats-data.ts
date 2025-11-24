@@ -1441,7 +1441,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	slaking: {
 		inherit: true,
-		tier: "UU",
+		tier: "UUBL",
 		isNonstandard: null,
 	},
 	nincada: {
@@ -1906,12 +1906,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	kyogre: {
 		inherit: true,
-		tier: "UU",
+		tier: "UUBL",
 		isNonstandard: null,
 	},
 	groudon: {
 		inherit: true,
-		tier: "UU",
+		tier: "UUBL",
 		isNonstandard: null,
 	},
 	rayquaza: {
@@ -27222,7 +27222,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bgroudon: {
 		inherit: true,
-		tier: "UU",
+		tier: "UUBL",
 		isNonstandard: null,
 	},
 	btreecko: {
@@ -27327,12 +27327,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fgroudon: {
 		inherit: true,
-		tier: "UU",
+		tier: "UUBL",
 		isNonstandard: null,
 	},
 	fkyogre: {
 		inherit: true,
-		tier: "UU",
+		tier: "UUBL",
 		isNonstandard: null,
 	},
 	cmsnivy: {

@@ -6846,7 +6846,7 @@
         ],
         "moves": [
           "claustrocrush",
-          "stealrock",
+          "stealthrock",
           "rockgather"
         ],
         "lockedMoves": [
@@ -16576,7 +16576,7 @@
         ],
         "lockedMoves": [
           "flareblitz",
-          "avarice"
+          "aichmoclaws"
         ],
         "level": 84
       }

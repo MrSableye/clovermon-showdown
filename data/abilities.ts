@@ -15264,6 +15264,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
+		onModifySpe(spe, pokemon) {
+			if (this.field.getPseudoWeather('feast')) {
+				return this.chainModify(2);
+			}
+		},
 		name: "Sugar Rush",
 		rating: 3,
 		num: 6693,

@@ -307,6 +307,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		desc: "The power of Fire and Magma-type attacks against this Pokemon is halved. This Pokemon takes half of the usual burn damage, rounded down.",
 		shortDesc: "The power of Fire and Magma-type attacks against this Pokemon is halved; burn damage halved.",
 	},
+	infiltrator: {
+		inherit: true,
+		onModifyMove(move) {
+			move.infiltrates = true;
+		},
+		name: "Infiltrator",
+		isNonstandard: null,
+	},
 	scrappy: {
 		inherit: true,
 		onModifyMove(move) {
