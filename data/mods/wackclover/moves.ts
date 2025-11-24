@@ -2432,6 +2432,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		agingburst: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		aichmoclaws: {
 			inherit: true,
 			isNonstandard: null,
@@ -2780,6 +2784,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		bodyboost: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		bodybreak: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -4263,7 +4271,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		
+		magmacannon: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		magmaquake: {
 			inherit: true,
 			isNonstandard: null,
@@ -4432,6 +4443,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		mochihammer: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
+		isNonstandard: null,
+		},
+		moldburst: {
+		inherit: true,
 		isNonstandard: null,
 		},
 		mosaicray: {
@@ -4855,6 +4870,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		rockgather: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		rocketjumpkick: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		rottingburst: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -5350,6 +5373,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		stuffedtackle: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		sauna: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -5856,6 +5883,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		zombiebite: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		zombiebile: {
 		inherit: true,
 		isNonstandard: null,
 		},

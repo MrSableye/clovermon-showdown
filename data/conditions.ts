@@ -963,6 +963,31 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-end', pokemon, 'Flammable');
 		},
 	},
+	icing: {
+		name: 'icing',
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'Icing');
+		},
+		duration: 3,
+		durationCallback(target, source, effect) {
+			if (effect?.name === "Icing Cannon" ||effect?.name === "Icing CannoSpraynh" ) {
+				return 2;
+			}
+			if (effect?.name === "Archbtyrophbia") {
+				return 4;
+			}
+			return 3;
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			let mod = 1;
+			if (move.type === 'Food') mod *= 1.5;
+
+			return this.chainModify(mod);
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, 'Icing');
+		},
+	},
 	statusguard: {
 		name: 'statusguard',
 		onStart(pokemon) {
