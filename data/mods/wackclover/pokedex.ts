@@ -332,7 +332,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	hohohoming: {
 		inherit: true,
-		types: ["Ice", "tech"],
+		types: ["Ice", "Tech"],
 		
 	},
 	huntabre: {
@@ -470,7 +470,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	fazeagle: {
 		inherit: true,
-		types: ["Magma", "flying"],
+		types: ["Magma", "Flying"],
 		abilities: {
 			0: "Sniper",
 			1: "Pro",
@@ -548,7 +548,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	dedwheat: {
 		inherit: true,
-		types: ["Poison", "Food"],
+		types: ["Zombie", "Food"],
 	},
 	maripyro: {
 		inherit: true,

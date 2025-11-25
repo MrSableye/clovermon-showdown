@@ -245,6 +245,97 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 		},
 	},
+	himwood: {
+		onSwitchIn(pokemon) {
+			if (!this.field.getPseudoWeather('arboreum')) {
+				this.field.addPseudoWeather('arboreum');
+			}
+		},
+	},
+	himsteam: {
+		onSwitchIn(pokemon) {
+			if (!this.field.getPseudoWeather('sauna')) {
+				this.field.addPseudoWeather('sauna');
+			}
+		},
+	},
+	himwind: {
+		onSwitchIn(pokemon) {
+			if (!this.field.getPseudoWeather('tempest')) {
+				this.field.addPseudoWeather('tempest');
+			}
+		},
+	},
+	himtech: {
+		onSwitchIn(pokemon) {
+			if (!this.field.getPseudoWeather('factory')) {
+				this.field.addPseudoWeather('factory');
+			}
+		},
+	},
+	himdragon: {
+		onSwitchIn(pokemon) {
+			if (!this.field.getPseudoWeather('dragonruins')) {
+				this.field.addPseudoWeather('dragonruins');
+			}
+		},
+	},
+	himvirus: {
+		onSwitchIn(pokemon) {
+			if (!this.field.getPseudoWeather('pandemic')) {
+				this.field.addPseudoWeather('pandemic');
+			}
+		},
+	},
+	himfood: {
+		onSwitchIn(pokemon) {
+			if (!this.field.getPseudoWeather('feast')) {
+				this.field.addPseudoWeather('feast');
+			}
+		},
+	},
+	himzombie: {
+		onSwitchIn(pokemon) {
+			if (!this.field.getPseudoWeather('graveyard')) {
+				this.field.addPseudoWeather('graveyard');
+			}
+		},
+	},
+	himmagic: {
+		onSwitchIn(pokemon) {
+			if (!this.field.getPseudoWeather('manaverse')) {
+				this.field.addPseudoWeather('manaverse');
+			}
+		},
+	},
+	himghost: {
+		onSwitchIn(pokemon) {
+			if (!this.field.getPseudoWeather('spiritstorm')) {
+				this.field.addPseudoWeather('spiritstorm');
+			}
+		},
+	},
+	himcosmic: {
+		onSwitchIn(pokemon) {
+			if (!this.field.getPseudoWeather('starfield')) {
+				this.field.addPseudoWeather('starfield');
+			}
+		},
+	},
+	himcyber: {
+		onSwitchIn(pokemon) {
+			if (!this.field.getPseudoWeather('cyberspace')) {
+				this.field.addPseudoWeather('cyberspace');
+			}
+		},
+	},
+	himnuclear: {
+		onSwitchIn(pokemon) {
+			if (!this.field.getPseudoWeather('fallout')) {
+				this.field.addPseudoWeather('fallout');
+			}
+		},
+	},
 	tapubulu: {
 		onSwitchIn(pokemon) {
 			if (!this.field.isTerrain('grassyterrain')) {

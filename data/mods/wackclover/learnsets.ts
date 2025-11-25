@@ -4610,6 +4610,7 @@ bloodhound: ["8L1"],
 	},
 	anaconduke: {
 		learnset: {
+			greenthumb: ["8L1"],
 			serpentwhip: ["8L1"],
 bask: ["8L1"],
 powerarena: ["8L1"],
@@ -4787,6 +4788,7 @@ achillesheel: ["8L1"],
 	},
 	sjwhale: {
 		learnset: {
+			sauna: ["8L1"],
 			steamspout: ["8L1"],
 			subzerowail: ["8L1"],
 geyser: ["8L1"],
@@ -6030,6 +6032,7 @@ bonebreaker: ["8L1"],
 	},
 	urswine: {
 		learnset: {
+			feast: ["8L1"],
 			baconrush: ["8L1"],
 			greasygrasp: ["8L1"],
 			greasyslap: ["8L1"],
@@ -6482,7 +6485,7 @@ triplenote: ["8L1"],
 			retaliatespell: ["8L1"],
 			spellslash: ["8L1"],
 			hexclaw: ["8L1"],
-			
+			manaverse: ["8L1"],
 shadowchill: ["8L1"],
 shadowbolt: ["8L1"],
 shadowbreak: ["8L1"],
@@ -7909,6 +7912,7 @@ zombiehorde: ["8L1"],
 	},
 	octai: {
 		learnset: {
+			sauna: ["8L1"],
 			squirtcannon: ["8L1"],
 			lifedew: ["8L1"],
 			coralreef: ["8L1"],
@@ -10019,6 +10023,7 @@ summonhorrors: ["8L1"],
 	},
 	whizzard: {
 		learnset: {
+			manaverse: ["8L1"],
 			coneofcold: ["8L1"],
 			bindingcircle: ["8L1"],
 sappingspell: ["8L1"],
@@ -10415,6 +10420,7 @@ smashmouth: ["8L1"],
 	},
 	chantruth: {
 		learnset: {
+			greedincarnate: ["8L1"],
 			jewrocks: ["8L1"],
 			rockgather: ["8L1"],
 			holocaust: ["8L1"],
@@ -12116,6 +12122,7 @@ flavortown: ["8L1"],
 	},
 	cannonance: {
 		learnset: {
+			factory: ["8L1"],
 			technoray: ["8L1"],
 			fearpulse: ["8L1"],
 			lightpulse: ["8L1"],
@@ -12348,6 +12355,7 @@ lanceoflonginus: ["8L1"],
 	},
 	foryu: {
 		learnset: {
+			bodybreak: ["8L1"],
 			necksnap: ["8L1"],
 			bladerain: ["8L1"],
 magnetforce: ["8L1"],
@@ -15256,6 +15264,7 @@ bodyboost: ["8L1"],
 	},
 	nomaestro: {
 		learnset: {
+			detonationburst: ["8L1"],
 			highnote: ["8L1"],
 			soniccharge: ["8L1"],
 swansong: ["8L1"],
@@ -16012,6 +16021,7 @@ injector: ["8L1"],
 	},
 	sonnanos: {
 		learnset: {
+			factory: ["8L1"],
 			nanobotbarrier: ["8L1"],
 			shieldmode: ["8L1"],
 			randommode: ["8L1"],
@@ -16496,10 +16506,12 @@ acidrain: ["8L1"],
 	},
 	hitmonana: {
 		learnset: {
+			feast: ["8L1"],
 			fruityburst: ["8L1"],
 fruitpunch: ["8L1"],
 bananapeel: ["8L1"],
 bananarang: ["8L1"],
+greenthumb: ["8L1"],
 			armthrust: ["8L7"],
 			attract: ["8M"],
 			aurasphere: ["8L39"],
@@ -20625,6 +20637,7 @@ meltedplastic: ["8L1"],
 	},
 	spookzilla: {
 		learnset: {
+			graveyard: ["8L1"],
 			skullbash: ["8L1"],
 			aerialace: ["8M"],
 			astonish: ["8L1"],
@@ -21253,6 +21266,10 @@ sugarrush: ["8L1"],
 	},
 	farfigtron: {
 		learnset: {
+			powerarena: ["8L1"],
+			bodyboost: ["8L1"],
+			magmacannon: ["8L1"],
+			dropguard: ["8L1"],
 			aerialace: ["8M"],
 			agility: ["8L23"],
 			attract: ["8M"],
@@ -23316,6 +23333,7 @@ cbt: ["8L1"],
 		learnset: {
 			toxicsteamtackle: ["8L1"],
 			hotpocketcrash: ["8L1"],
+			magmacannon: ["8L1"],
 steamsale: ["8L1"],
 ashrain: ["8L1"],
 technorush: ["8L1"],
@@ -26395,6 +26413,7 @@ midnight: ["8L1"],
 	senketula: {
 		learnset: {
 			sewing: ["8L1"],
+			gash: ["8L1"],
 			anglestab: ["8L1"],
 			bladerain: ["8L1"],
 			sanguinefang: ["8L1"],
@@ -27073,6 +27092,11 @@ rockgather: ["8L1"],
 	},
 	feferun: {
 		learnset: {
+			heatmirage: ["8M"],
+			gaiapulse: ["8M"],
+			gigaleech: ["8M"],
+			shiftingsands: ["8M"],
+			emojibeam: ["8M"],
 			acidspray: ["8L27"],
 			aerialace: ["8M"],
 			attract: ["8M"],
@@ -27271,6 +27295,8 @@ crystalize: ["8L1"],
 	},
 	faptime: {
 		learnset: {
+			sauna: ["8L1"],
+			fastforward: ["8L1"],
 			ballbreaker: ["8L1"],
 rubout: ["8L1"],
 edging: ["8L1"],
@@ -27529,10 +27555,21 @@ heavenshole: ["8L1"],
 	},
 	dedwheat: {
 		learnset: {
+			agingburst: ["8L1"],
+			consume: ["8L1"],
+			rottingburst: ["8L1"],
+			infect: ["8L1"],
+			undeadrespite: ["8L1"],
+			corpsewave: ["8L1"],
+			zombiebile: ["8L1"],
+			decaytouch: ["8L1"],
+			feast: ["8L1"],
+			moldburst: ["8L1"],
 			sandwichstack: ["8L1"],
 			foodpoison: ["8L1"],
 wildmushroom: ["8L1"],
 acidrain: ["8L1"],
+compost: ["8L1"],
 			block: ["8T"],
 			bodyslam: ["8T"],
 			bulletseed: ["8M"],
@@ -30215,6 +30252,7 @@ amberwave:["8L1"],
 	},
 	quiboom: {
 		learnset: {
+			sauna: ["8L1"],
 			acid: ["8E"],
 			acidarmor: ["8E"],
 			acidspray: ["8E"],
@@ -30244,6 +30282,7 @@ amberwave:["8L1"],
 	},
 	gynuke: {
 		learnset: {
+			sauna: ["8L1"],
 			steambomb: ["8L1"],
 			nuclearexplosion: ["8L1"],
 			atomicrush: ["8L1"],
@@ -32344,6 +32383,7 @@ daydream: ["8L1"],
 	},
 	tarditank: {
 		learnset: {
+			sauna: ["8L1"],
 			hightide: ["8L1"],
 			aquaring: ["8T"],
 			attract: ["8M"],
