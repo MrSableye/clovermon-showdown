@@ -47587,6 +47587,35 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+	blobbossunflower: {
+		num: 69132,
+		name: "Blobbos-Sunflower",
+		baseSpecies: "Blobbos",
+		forme: "Sunflower",
+		types: ["Grass", "Psychic"],
+		gender: "F",
+		baseStats: {
+			hp: 121,
+			atk: 51,
+			def: 90,
+			spa: 85,
+			spd: 90,
+			spe: 102,
+		},
+		abilities: {
+			0: "Solar Power",
+                        1: "Chlorophyll",
+                        H: "Supportive",
+                        S: "Flash Fire",
+		},
+		heightm: 0.8,
+		weightkg: 15.3,
+		color: "Blue",
+		eggGroups: [
+			"Human-Like", "Grass"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
