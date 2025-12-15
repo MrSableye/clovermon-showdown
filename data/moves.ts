@@ -79898,9 +79898,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onTryHit(target, source, move) {
 				if (move.category === 'Status') return;
 				if (target === source) return;
-				if (source.getMoveHitData(move).typeMod > 0) {
+				if (target.getMoveHitData(move).typeMod > 0) {
 					this.debug('Rubber Shield neutralize');
-					this.add('-immune', source, '[from] : Rubber Shield');
+					this.add('-immune', target, '[from] : Rubber Shield');
 					return null;
 				}
 			},
