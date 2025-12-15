@@ -6754,7 +6754,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			for (const pokemon of this.getAllActive()) {
 				if (pokemon === source) continue;
-				pokemon.addVolatile('retro');
+				pokemon.addVolatile('gastroacid');
 			}
 			this.field.addPseudoWeather('magicroom');
 		},
