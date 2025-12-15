@@ -12854,7 +12854,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
-			this.actions.useMove(move, pokemon, target);
+			this.actions.useMove(fullMove, pokemon, target);
 			return null;
 		},
 		secondary: null,
