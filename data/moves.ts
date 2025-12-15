@@ -79895,7 +79895,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-start', target, 'Rubber Shield');
 				this.add('-message', 'became immune to super effective moves');
 			},
-			onFoeTryMove(target, source, move) {
+			onTryHit(target, source, move) {
+				if (move.category === 'Status') return;
+				if (target === source) return;
 				if (source.getMoveHitData(move).typeMod > 0) {
 					this.debug('Rubber Shield neutralize');
 					this.add('-immune', source, '[from] : Rubber Shield');
