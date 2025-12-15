@@ -6399,6 +6399,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(pokemon) {
 			this.add('-message', pokemon.baseSpecies.baseSpecies);
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
+			if (pokemon.addType('Grass', pokemon, this.effect)) {
+				this.add('-start', pokemon, 'typeadd', 'Grass', '[from] ability: Board Power (/out/)');
+			}
 			this.field.setTerrain('grassyterrain');
 		},
 		onBasePower(relayVar, source, target, move) {

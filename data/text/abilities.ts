@@ -2422,7 +2422,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerout: {
 		name: "Board Power (/out/)",
-		shortDesc: "Sets Grassy Terrain on switch-in. 2x boost to Nature Power moves.",
+		shortDesc: "Adds Grass-type. Sets Grassy Terrain on switch-in. 2x boost to Nature Power moves.",
 	},
 	boardpowerpol: {
 		name: "Board Power (/pol/)",
