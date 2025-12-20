@@ -317,6 +317,7 @@ export class LadderStore {
 			if (format.searchShow) {
 				const store = new LadderStore(format.id);
 				const ladder = await store.getLadder();
+				if (!ladder) continue;
 				const userIndex = store.indexOfUser(name, false);
 				if (userIndex < 0) continue;
 				delete ladder[userIndex];
