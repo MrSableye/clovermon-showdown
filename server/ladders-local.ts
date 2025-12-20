@@ -321,7 +321,7 @@ export class LadderStore {
 		if (userIndex < 0) return;
 		await this.load();
 		if (!this.ladder) return;
-		delete this.ladder[userIndex];
+		this.ladder.splice(userIndex, 1);
 		this.save();
 	}
 
