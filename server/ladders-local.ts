@@ -312,6 +312,19 @@ export class LadderStore {
 		return [p1score, p1newElo, p2newElo];
 	}
 
+	static async purgeUser(name: string) {
+		for (const format of Dex.formats.all()) {
+			if (format.searchShow) {
+				const store = new LadderStore(format.id);
+				const ladder = await store.getLadder();
+				const userIndex = store.indexOfUser(name, false);
+				if (userIndex < 0) continue;
+				delete ladder[userIndex];
+				await store.save();
+			}
+		}
+	}
+
 	/**
 	 * Returns a promise for a <tr> with all ratings for the current format.
 	 */

@@ -13,6 +13,7 @@
 import * as path from 'path';
 import * as child_process from 'child_process';
 import {FS, Utils, ProcessManager, SQL} from '../../lib';
+import {LadderStore} from '../ladders-local';
 
 const BOT_GROUPS = ['*', 'ƒ'];
 
@@ -1713,6 +1714,7 @@ export const commands: Chat.ChatCommands = {
 		const [success] = await LoginServer.request('ladderupdate', {
 			user: target,
 		});
+		await LadderStore.purgeUser(target);
 
 		if (success) {
 			this.sendReply(`Successfully purged user ${toID(target)}`);	
