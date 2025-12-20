@@ -313,16 +313,20 @@ export class LadderStore {
 		return [p1score, p1newElo, p2newElo];
 	}
 
+	async deleteUser(userid: string) {
+		const userIndex = this.indexOfUser(userid, false);
+		if (userIndex < 0) return;
+		await this.load();
+		if (!this.ladder) return;
+		delete this.ladder[userIndex];
+		this.save();
+	}
+
 	static async purgeUser(name: string) {
 		for (const format of Dex.formats.all()) {
 			if (format.searchShow) {
 				const store = new LadderStore(format.id);
-				const ladder = await store.getLadder();
-				if (!ladder) continue;
-				const userIndex = store.indexOfUser(name, false);
-				if (userIndex < 0) continue;
-				delete ladder[userIndex];
-				await store.save();
+				store.deleteUser(toID(name));
 			}
 		}
 	}
