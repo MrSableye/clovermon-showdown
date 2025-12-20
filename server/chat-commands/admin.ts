@@ -1708,6 +1708,18 @@ export const commands: Chat.ChatCommands = {
 		`Short forms: /ebat h OR s OR pp OR b OR v OR sc OR fc OR w OR t`,
 		`[player] must be a username or number, [pokemon] must be species name or party slot number (not nickname), [move] must be move name.`,
 	],
+	async purgeratings(target, room, user) {
+		this.checkCan('console');
+		const [success] = await LoginServer.request('ladderupdate', {
+			user: target,
+		});
+
+		if (success) {
+			this.sendReply(`Successfully purged user ${toID(target)}`);	
+		} else {
+			this.sendReply(`Unsuccessfully purged user ${toID(target)}`);	
+		}
+	}
 };
 
 export const pages: Chat.PageTable = {
