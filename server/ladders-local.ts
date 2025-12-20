@@ -115,6 +115,7 @@ export class LadderStore {
 		if (!this.ladder) throw new Error(`Must be called with ladder loaded`);
 		const userid = toID(username);
 		for (const [i, user] of this.ladder.entries()) {
+			if (!user) continue;
 			if (user[0] === userid) return i;
 		}
 		if (createIfNeeded) {
@@ -138,6 +139,7 @@ export class LadderStore {
 		buf += `<table>`;
 		buf += `<tr><th>` + ['', 'Username', '<abbr title="Elo rating">Elo</abbr>', 'W', 'L', 'T'].join(`</th><th>`) + `</th></tr>`;
 		for (const [i, row] of ladder.entries()) {
+			if (!row) continue;
 			if (prefix && !row[0].startsWith(prefix)) continue;
 			buf += `<tr><td>` + [
 				i + 1, row[2], `<strong>${Math.round(row[1])}</strong>`, row[3], row[4], row[5],
@@ -151,6 +153,7 @@ export class LadderStore {
 		const data = [];
 
 		for (const [, row] of ladder.entries()) {
+			if (!row) continue;
 			if (prefix && !row[0].startsWith(prefix)) continue;
 			data.push(row);
 		}
