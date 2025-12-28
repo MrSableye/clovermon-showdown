@@ -98,6 +98,7 @@ export class LadderStore {
 		const stream = FS(`config/ladders/${this.formatid}.tsv`).createWriteStream();
 		void stream.write('Elo\tUsername\tW\tL\tT\tLast update\r\n');
 		for (const row of ladder) {
+			if (!row) continue;
 			void stream.write(row.slice(1).join('\t') + '\r\n');
 		}
 		void stream.writeEnd();
@@ -114,6 +115,7 @@ export class LadderStore {
 		if (!this.ladder) throw new Error(`Must be called with ladder loaded`);
 		const userid = toID(username);
 		for (const [i, user] of this.ladder.entries()) {
+			if (!user) continue;
 			if (user[0] === userid) return i;
 		}
 		if (createIfNeeded) {
@@ -137,6 +139,7 @@ export class LadderStore {
 		buf += `<table>`;
 		buf += `<tr><th>` + ['', 'Username', '<abbr title="Elo rating">Elo</abbr>', 'W', 'L', 'T'].join(`</th><th>`) + `</th></tr>`;
 		for (const [i, row] of ladder.entries()) {
+			if (!row) continue;
 			if (prefix && !row[0].startsWith(prefix)) continue;
 			buf += `<tr><td>` + [
 				i + 1, row[2], `<strong>${Math.round(row[1])}</strong>`, row[3], row[4], row[5],
@@ -150,6 +153,7 @@ export class LadderStore {
 		const data = [];
 
 		for (const [, row] of ladder.entries()) {
+			if (!row) continue;
 			if (prefix && !row[0].startsWith(prefix)) continue;
 			data.push(row);
 		}
@@ -310,6 +314,24 @@ export class LadderStore {
 		}
 
 		return [p1score, p1newElo, p2newElo];
+	}
+
+	async deleteUser(userid: string) {
+		const userIndex = this.indexOfUser(userid, false);
+		if (userIndex < 0) return;
+		await this.load();
+		if (!this.ladder) return;
+		this.ladder.splice(userIndex, 1);
+		this.save();
+	}
+
+	static async purgeUser(name: string) {
+		for (const format of Dex.formats.all()) {
+			if (format.searchShow) {
+				const store = new LadderStore(format.id);
+				store.deleteUser(toID(name));
+			}
+		}
 	}
 
 	/**

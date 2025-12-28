@@ -12854,7 +12854,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
-			this.actions.useMove(move, pokemon, target);
+			this.actions.useMove(fullMove, pokemon, target);
 			return null;
 		},
 		secondary: null,
@@ -79895,10 +79895,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-start', target, 'Rubber Shield');
 				this.add('-message', 'became immune to super effective moves');
 			},
-			onFoeTryMove(target, source, move) {
-				if (source.getMoveHitData(move).typeMod > 0) {
+			onTryHit(target, source, move) {
+				if (move.category === 'Status') return;
+				if (target === source) return;
+				if (target.getMoveHitData(move).typeMod > 0) {
 					this.debug('Rubber Shield neutralize');
-					this.add('-immune', source, '[from] : Rubber Shield');
+					this.add('-immune', target, '[from] : Rubber Shield');
 					return null;
 				}
 			},

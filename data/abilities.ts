@@ -6399,11 +6399,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(pokemon) {
 			this.add('-message', pokemon.baseSpecies.baseSpecies);
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
+			if (pokemon.addType('Grass', pokemon, this.effect)) {
+				this.add('-start', pokemon, 'typeadd', 'Grass', '[from] ability: Board Power (/out/)');
+			}
 			this.field.setTerrain('grassyterrain');
 		},
 		onBasePower(relayVar, source, target, move) {
 			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (move?.flags?.naturePower) return this.chainModify(2);
+			if (move?.flags?.naturePower) {
+				this.debug('Board Power (/out/) boost');
+				return this.chainModify(2);
+			}
 		},
 		isPermanent: true,
 		isNonstandard: "Future",
@@ -6754,7 +6760,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			for (const pokemon of this.getAllActive()) {
 				if (pokemon === source) continue;
-				pokemon.addVolatile('retro');
+				pokemon.addVolatile('gastroacid');
 			}
 			this.field.addPseudoWeather('magicroom');
 		},
