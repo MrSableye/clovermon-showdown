@@ -47616,6 +47616,35 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+	blobbosmoonflower: {
+		num: 69132,
+		name: "Blobbos-Moonflower",
+		baseSpecies: "Blobbos",
+		forme: "Moonflower",
+		types: ["Grass", "Dark"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 76,
+			atk: 115,
+			def: 84,
+			spa: 68,
+			spd: 84,
+			spe: 112,
+		},
+		abilities: {
+			0: "Leaf Guard",
+                        1: "Eclipse",
+                        H: "Lingering Aroma",
+                        S: "Brainwash",
+		},
+		heightm: 0.8,
+		weightkg: 12.3,
+		color: "White",
+		eggGroups: [
+			"Grass"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
