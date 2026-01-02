@@ -1408,6 +1408,21 @@ export const Formats: FormatList = [
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
+		name: '[Gen 8 Clover CAP Only] Mega OU',
+		mod: 'clovercap',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'! Nickname Clause',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Inversion', 'Sand Veil'],
+		unbanlist: [
+			'Blubbastardium Z', 'Fuckforce', 'Ultrafuckium Z', 'Fucker-Ultra'],
+	},
+	},
+	{
 		name: '[Gen 8 Cope Only] Anything Goes',
 		mod: 'cope',
 		ruleset: [
