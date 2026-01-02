@@ -1421,7 +1421,6 @@ export const Formats: FormatList = [
 		unbanlist: [
 			'Blubbastardium Z', 'Fuckforce', 'Ultrafuckium Z', 'Fucker-Ultra'],
 	},
-	},
 	{
 		name: '[Gen 8 Cope Only] Anything Goes',
 		mod: 'cope',
