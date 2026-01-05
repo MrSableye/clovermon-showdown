@@ -96992,7 +96992,29 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 		isNonstandard: "Future",
 	},
-	real: {
+	acidreflex: {
+		num: 42022,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Acid Reflex",
+		pp: 5,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		onTry(source, target) {
+			const action = this.queue.willMove(target);
+			const move = action?.choice === 'move' ? action.move : null;
+			if (!move || (move.category === 'Status' && move.id !== 'mefirst') || target.volatiles['mustrecharge']) {
+				return false;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+		real: {
 		num: 6,
 		accuracy: 100,
 		basePower: 250,

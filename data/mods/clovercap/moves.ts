@@ -1036,6 +1036,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	acidreflex: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	darkening: {
 		inherit: true,
 		isNonstandard: null,
@@ -1291,6 +1295,15 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 				def: -1,
 			},
 		},
+	},
+	belch: {
+		inherit: true,
+		accuracy: 100,
+		basePower: 140,
+	},
+	holdback: {
+		inherit: true,
+		category: "Special",
 	},
 	aquastep: {
 		inherit: true,
@@ -1666,6 +1679,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	oblivionwing: {
 		inherit: true,
 		basePower: 75,
+		drain: [1, 2],
 	},
 	meteorhammer: {
 		inherit: true,
@@ -1708,6 +1722,32 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Psychic",
 		contestType: "Beautiful",
 		isNonstandard: null,
+	},
+	coreenforcer: {
+		inherit: true,
+			onHit(target) {
+			if (target.getAbility().isPermanent) return;
+			target.addVolatile('gastroacid');
+		},
+		onAfterSubDamage(damage, target) {
+			if (target.getAbility().isPermanent) return;
+			target.addVolatile('gastroacid');
+		},
+	},
+	landswrath: {
+		inherit: true,
+			onHit(target) {
+			if (target.getAbility().isPermanent) return;
+			target.addVolatile('gastroacid');
+		},
+		onAfterSubDamage(damage, target) {
+			if (target.getAbility().isPermanent) return;
+			target.addVolatile('gastroacid');
+		},
+	},
+	toxicthread: {
+		inherit: true,
+		status: 'tox',
 	},
 	sleazyspores: {
 		inherit: true,

@@ -1786,6 +1786,8 @@
       "Epipheror",
       "Epipheror",
       "Epipheror",
+      "Red Nightmare",
+      "Double Dealer",
       "King Crimson"
     ],
     "sets": [
@@ -1807,7 +1809,7 @@
           "scarletchant",
           "recover"
         ],
-        "level": 84
+        "level": 82
       }
     ]
   },
@@ -2556,7 +2558,7 @@
       "Guertenity",
       "Guertenity",
       "Guertenity",
-      "IB Cap"
+      "Ib Cap"
     ],
     "sets": [
       {
@@ -2572,7 +2574,7 @@
           "spikyshield",
           "leechseed",
           "gigadrain",
-          "absorption"
+          "allaprima"
         ],
         "level": 83
       }
@@ -2704,12 +2706,12 @@
   },
   "horntuba": {
     "nicknames": [
-      "Haarshogun",
-      "Haarshogun",
-      "Haarshogun",
-      "Haarshogun",
-      "Haarshogun",
-      "Haarshogun",
+      "Horntuba",
+      "Horntuba",
+      "Horntuba",
+      "Sussyphone",
+      "Porntuba",
+      "Haarshogun...?",
       "AMONG US MUSICAL",
       "Foghorn"
     ],
@@ -2735,8 +2737,7 @@
           "sousaphone"
         ],
         "items": [
-          "assaultvest",
-          "sitrusberry",
+          "throatspray",
           "leftovers"
         ],
          "moves": [
@@ -5104,7 +5105,7 @@
       "Salezerker",
       "Salezerker",
       "Guts",
-      "Beserk",
+      "Berserk",
       "saled"
     ],
     "sets": [

@@ -2288,6 +2288,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	acidreflex: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	closeblobmat: {
 		inherit: true,
 		isNonstandard: "Past",

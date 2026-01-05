@@ -3815,6 +3815,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	acidreflex: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	cope: {
 		inherit: true,
 		isNonstandard: null,
