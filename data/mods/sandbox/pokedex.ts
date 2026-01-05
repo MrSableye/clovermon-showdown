@@ -804,7 +804,55 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	alcremie: {
 		inherit: true,
 		types: ["Fairy"],
-		baseStats: {hp: 65, atk: 60, def: 75, spa: 110, spd: 121, spe: 64},
+		baseStats: {hp: 65, atk: 60, def: 95, spa: 110, spd: 131, spe: 64},
 		abilities: {0: "Sweet Veil", 1: "Aroma Veil", H: "Thick Fat"},
+	},
+	tapukoko: {
+		inherit: true,
+		types: ["Electric", "Fairy"],
+		baseStats: {hp: 80, atk: 125, def: 85, spa: 100, spd: 75, spe: 135},
+		abilities: {0: "Electric Surge", H: "Telepathy", S: "Pixilate"},
+	},
+	tapulele: {
+		inherit: true,
+		types: ["Psychic", "Fairy"],
+		baseStats: {hp: 80, atk: 85, def: 75, spa: 135, spd: 125, spe: 100},
+		abilities: {0: "Psychic Surge", H: "Telepathy", S: "Berserk"},
+	},
+	tapubulu: {
+		inherit: true,
+		types: ["Grass", "Fairy"],
+		baseStats: {hp: 80, atk: 135, def: 125, spa: 85, spd: 100, spe: 75},
+		abilities: {0: "Grassy Surge", H: "Telepathy", S: "Seed Sower"},
+	},
+	tapufini: {
+		inherit: true,
+		types: ["Water", "Fairy"],
+		baseStats: {hp: 80, atk: 75, def: 125, spa: 100, spd: 135, spe: 85},
+		abilities: {0: "Misty Surge", H: "Telepathy", S: "Hydrothermal"},
+	},
+	magearna: {
+		inherit: true,
+		types: ["Steel", "Fairy"],
+		baseStats: {hp: 80, atk: 95, def: 115, spa: 130, spd: 115, spe: 65},
+		abilities: {0: "Soul-Heart", H: "Heavy Metal", S: "Volt Absorb"},
+	},
+	salazzle: {
+		inherit: true,
+		types: ["Poison", "Fire"],
+		baseStats: {hp: 68, atk: 64, def: 60, spa: 111, spd: 60, spe: 137},
+		abilities: {0: "Corrosion", H: "Queenly Majesty", S: "Intoxicate"},
+	},
+	lilligant: {
+		inherit: true,
+		types: ["Grass"],
+		baseStats: {hp: 70, atk: 50, def: 75, spa: 140, spd: 75, spe: 110},
+		abilities: {0: "Chlorophyll", 1: "Own Tempo", H: "Flower Veil", S: "Grassy Surge"},
+	},
+	lilliganthisui: {
+		inherit: true,
+		types: ["Grass", "Fighting"],
+		baseStats: {hp: 70, atk: 125, def: 75, spa: 50, spd: 75, spe: 125},
+		abilities: {0: "Chlorophyll", 1: "Hustle", H: "Flower Veil", S: "Striker"},
 	},
 };

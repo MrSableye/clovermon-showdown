@@ -110,4 +110,19 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		desc: "If the current terrain is Electric Terrain and the target is grounded, this move's power is raised by 1.5x.",
 		shortDesc: "1.5x power if target is grounded in Electric Terrain.",
 	},
+	coreenforcer: {
+		inherit: true,
+		desc: "The target's Ability is rendered ineffective as long as it remains active. If the target uses Baton Pass, the replacement will remain under this effect. If the target's Ability is As One, Battle Bond, Comatose, Commander, Disguise, Gulp Missile, Hadron Engine, Ice Face, Multitype, Orichalcum Pulse, Power Construct, Protosynthesis, Quark Drive, RKS System, Schooling, Shields Down, Stance Change, Zen Mode, or Zero to Hero, this effect does not happen, and receiving the effect through Baton Pass ends the effect immediately.",
+		shortDesc: "Nullifies the foe's Ability.",
+	},
+	landswrath: {
+		inherit: true,
+		desc: "The target's Ability is rendered ineffective as long as it remains active. If the target uses Baton Pass, the replacement will remain under this effect. If the target's Ability is As One, Battle Bond, Comatose, Commander, Disguise, Gulp Missile, Hadron Engine, Ice Face, Multitype, Orichalcum Pulse, Power Construct, Protosynthesis, Quark Drive, RKS System, Schooling, Shields Down, Stance Change, Zen Mode, or Zero to Hero, this effect does not happen, and receiving the effect through Baton Pass ends the effect immediately.",
+		shortDesc: "Nullifies the foe's Ability.",
+	},
+	toxicthread: {
+		name: "Toxic Thread",
+		desc: "Lowers the target's Speed by 1 stage and badly poisons it.",
+		shortDesc: "Lowers the foe's Speed by 1 and badly poisons it.",
+	},
 };

@@ -7948,6 +7948,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
 		shortDesc: "User drains 50% of damage dealt. S.E. on Water.",
 	},
+	acidreflex: {
+		name: "Acid Reflex",
+		desc: "Fails if the target did not select a physical attack, special attack, or Me First for use this turn, or if the target moves before the user.",
+		shortDesc: "Usually goes first. Fails if target is not attacking.",
+	},
 	grandbat: {
 		name: "Grand Bat",
 		shortDesc: "Forces the target to switch to a random ally.",
@@ -8022,7 +8027,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Hits 2-5 times, Special if Sp. Atk > Atk.",
 	},
 	brandingblade: {
-		name: "Flare Blitz",
+		name: "Branding Blade",
 		shortDesc: "Has 33% recoil. Nullifies the foe's Ability.",
 	},
 	mudmaelstrom: {
