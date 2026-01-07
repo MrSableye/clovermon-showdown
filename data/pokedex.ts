@@ -47645,6 +47645,35 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+	lobbosbatsquatch: {
+		num: 69132,
+		name: "Blobbos-Batsquatch",
+		baseSpecies: "Blobbos",
+		forme: "Batsquatch",
+		types: ["Flying", "???"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 104,
+			atk: 112,
+			def: 91,
+			spa: 78,
+			spd: 68,
+			spe: 67,
+		},
+		abilities: {
+			0: "Soundproof",
+                        1: "Berserk",
+                        H: "Stakeout",
+                        S: "Suddenly",
+		},
+		heightm: 2.2,
+		weightkg: 134.7,
+		color: "Brown",
+		eggGroups: [
+			"Human-Like", "Flying"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
