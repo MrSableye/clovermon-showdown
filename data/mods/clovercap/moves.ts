@@ -1203,7 +1203,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		accuracy: 100,
 		basePower: 90,
 		category: "Physical",
-		isNonstandard: "Past",
 		name: "Sky Uppercut",
 		pp: 15,
 		priority: 0,
