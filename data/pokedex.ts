@@ -47645,7 +47645,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
-	lobbosbatsquatch: {
+	blobbosbatsquatch: {
 		num: 69132,
 		name: "Blobbos-Batsquatch",
 		baseSpecies: "Blobbos",
