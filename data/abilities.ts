@@ -19102,6 +19102,699 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 	},
 
+	boostingskill: {
+		onResidual(pokemon) {
+			if (pokemon.hp) {
+				this.add('-message', `${pokemon.name} is honing its Gamer Skill!`);
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (move.multihit && Array.isArray(move.multihit) && move.multihit.length) {
+				move.multihit = move.multihit[1] + pokemon.activeTurns;
+			}
+			if (move.multiaccuracy) {
+				delete move.multiaccuracy;
+			}
+		},
+		name: "Boosting Skill",
+		shortDesc: "Skill Link + increase multihits by 1 at the end of each turn",
+	},
+
+	growingpressure: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Growing Pressure');
+		},
+		onResidual(pokemon) {
+			if (pokemon.hp) {
+				this.add('-message', `The pressure is growing.`);
+			}
+		},
+		onDeductPP(target, source) {
+			if (target.isAlly(source)) return;
+			return 1 + target.activeTurns;
+		},
+		name: "Growing Pressure",
+		shortDesc: "Pressure + increases the PP depletion by 1 for each full turn this Pokémon stays on the field.",
+	},
+
+	speeeen: {
+		onUpdate(pokemon) {
+			if (pokemon.volatiles['confusion']) {
+				if (!pokemon.volatiles['speeeen']) pokemon.addVolatile('speeeen');
+			} else pokemon.removeVolatile('speeeen');
+		},
+		condition: {
+			noCopy: true,
+			onStart(pokemon, source, effect) {
+				this.add('-activate', pokemon, 'ability: speeen');
+				this.effectState.bestStat = pokemon.getBestStat(false, true);
+				this.add('-start', pokemon, 'speeen' + this.effectState.bestStat);
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, pokemon) {
+				if (this.effectState.bestStat !== 'atk' || pokemon.ignoringAbility()) return;
+				this.debug('Protosynthesis atk boost');
+				return this.chainModify(2);
+			},
+			onModifyDefPriority: 6,
+			onModifyDef(def, pokemon) {
+				if (this.effectState.bestStat !== 'def' || pokemon.ignoringAbility()) return;
+				this.debug('Protosynthesis def boost');
+				return this.chainModify(2);
+			},
+			onModifySpAPriority: 5,
+			onModifySpA(spa, pokemon) {
+				if (this.effectState.bestStat !== 'spa' || pokemon.ignoringAbility()) return;
+				this.debug('Protosynthesis spa boost');
+				return this.chainModify(2);
+			},
+			onModifySpDPriority: 6,
+			onModifySpD(spd, pokemon) {
+				if (this.effectState.bestStat !== 'spd' || pokemon.ignoringAbility()) return;
+				this.debug('Protosynthesis spd boost');
+				return this.chainModify(2);
+			},
+			onModifySpe(spe, pokemon) {
+				if (this.effectState.bestStat !== 'spe' || pokemon.ignoringAbility()) return;
+				this.debug('Protosynthesis spe boost');
+				return this.chainModify(2);
+			},
+			onModifyAccuracyPriority: -1,
+			onModifyAccuracy(accuracy, target) {
+				if (typeof accuracy !== 'number') return;
+				return this.chainModify(0.5);
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'speeenatk', '[silent]');
+				this.add('-end', pokemon, 'speeendef', '[silent]');
+				this.add('-end', pokemon, 'speeenspa', '[silent]');
+				this.add('-end', pokemon, 'speeenspd', '[silent]');
+				this.add('-end', pokemon, 'speeenspe', '[silent]');
+			},
+		},
+		name: "Speeeen!!!",
+		shortDesc: "This Pokemon's highest stat and evasiveness are doubled as long as it is confused.",
+	},
+
+	rollingdices: {
+		onModifyMove(move) {
+			move.multihit = this.random(1, 200);
+		},
+		
+		name: "Rolling Dices",
+		shortDesc: "This Pokemon's moves hit a random amount of times.",
+	},
+
+	stillstanding: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.status) {
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(pokemon, target, move) {
+			if (move.ohko) {
+				this.add('-immune', pokemon, '[from] ability: Still Standing');
+				return null;
+			}
+		},
+		onDamagePriority: -30,
+		onDamage(damage, target, source, effect) {
+			if (target.status && damage >= target.hp && effect && effect.effectType === 'Move') {
+				this.add('-ability', target, 'Still Standing');
+				return target.hp - 1;
+			}
+		},
+		name: "Still Standing",
+		shortDesc: "Guts + if this Pokemon has a status, it lives any attack at 1 HP.",
+	},
+
+	seeingstars: {
+		onModifyMove(move) {
+			if (move.id === 'watershuriken') move.multihit = 12;
+		},
+		name: "Seeing Stars",
+		shortDesc: "This Pokemon's Water Shuriken hits 12 times.",
+	},
+
+	humongouspower: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk) {
+			return this.modify(atk, 3);
+		},
+		onSourceModifyAccuracyPriority: -1,
+		onSourceModifyAccuracy(accuracy, target, source, move) {
+			if (move.category === 'Physical' && typeof accuracy === 'number') {
+				return this.chainModify([2458, 4096]);
+			}
+		},
+		
+		name: "Humongous Power",
+		shortDesc: "This Pokemon's Attack is 3x and accuracy of its physical attacks is 0.6x.",
+	},
+	badhax: {
+		onModifyMovePriority: -2,
+		onModifyMove(move) {
+			if (move.secondaries) {
+				this.debug('doubling secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance = 100;
+				}
+			}
+			if (move.self?.chance) move.self.chance = 100;
+		},
+		onModifySecondaries(secondaries) {
+			this.debug('Bad Hax ensure secondary');
+			for (const effect of secondaries) {
+				effect.chance = 100;
+			}
+			return secondaries;
+		},
+		
+		name: "Bad Hax",
+		shortDesc: "Every move used by or against this Pokemon will always activate its secondary.",
+	},
+
+	gotyourguts: {
+		onFoeTrapPokemon(pokemon) {
+			if (!pokemon.hasAbility('gotyourguts') && pokemon.isAdjacent(this.effectState.target)) {
+				pokemon.tryTrap(true);
+			}
+		},
+		onFoeMaybeTrapPokemon(pokemon, source) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			if (!pokemon.hasAbility('gotyourguts')) {
+				pokemon.maybeTrapped = true;
+			}
+		},
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (!target.hp) {
+				this.damage(target.getUndynamaxedHP(damage), source, target);
+			}
+		},
+		name: "Got Your Guts!",
+		shortDesc: "Shadow Tag + Innards Out",
+	},
+
+
+	perfectfreeze: {
+		onModifyMovePriority: -2,
+		onModifyMove(move) {
+			if (move.secondaries) {
+				this.debug('doubling secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= 2;
+				}
+			}
+			if (move.self?.chance) move.self.chance *= 2;
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'hail') return false;
+		},
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			if (this.field.isWeather(['hail', 'snow'])) {
+				this.debug('Perfect Freeze - decreasing accuracy');
+				return this.chainModify([2731, 4096]);
+			}
+		},
+		
+		name: "Perfect Freeze",
+		shortDesc: "This Pokemon's moves have their secondary effect chance doubled.  If Snow is active, this Pokemon's evasiveness is 1.5x.",
+	},
+
+
+	jankster: {
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Jankster', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					target.addVolatile("jankster");
+					this.add('-message', `${target.name} was slowed down!`);
+				}
+			}
+		},
+		condition: {
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Jankster', '[silent]');
+			},
+			onModifyPriority(priority, pokemon, target, move) {
+				return priority - 1;
+			},
+		},
+		name: "Jankster",
+		shortDesc: "On switch-in, this Pokemon lowers opposing Pokemon's priority by 1.",
+	},
+
+	gamble: {
+		onPrepareHit(source, target, move) {
+			if (move.multihit) return;
+			if (move.id === 'metronome') {
+				move.multihit = 5;
+			}
+		},
+		name: "Gamble",
+		shortDesc: "This Pokémon's Metronome hits five times.",
+		rating: 3,
+		num: -5001,
+	},
+
+	ninelives: {
+		shortDesc: "Twice per battle, this Pokemon will survive a lethal hit with 1 HP remaining, regardless of HP.",
+		name: "Nine Lives",
+		onTryHit(pokemon, target, move) {
+			if (move.ohko) {
+				this.add('-immune', pokemon, '[from] ability: Nine Lives');
+				return null;
+			}
+		},
+		onDamagePriority: -30,
+		onDamage(damage, target, source, effect) {
+			if (damage >= target.hp && effect?.effectType === 'Move' && !this.effectState.busted) {
+				this.add('-ability', target, 'Nine Lives');
+				if (this.effectState.busted === 0) {
+					this.effectState.busted = 1;
+				} else {
+					this.effectState.busted = 0;
+				}
+				return target.hp - 1;
+			}
+		},
+		// Yes, this looks very patchwork-y. declaring new persistent global variables seems to be a no-go here
+		// so i repurposed one which should likely not affect anything else - have tested with clerica/zoro on both sides
+		// and their disguise/sturdy state is unaffected by modifying anything here. but let wg know if this breaks stuff.
+	},
+	youkaiofthedusk: {
+		shortDesc: "This Pokemon's Defense is doubled and its status moves gain +1 priority.",
+		name: "Youkai of the Dusk",
+		onModifyDefPriority: 6,
+		onModifyDef(def) {
+			return this.chainModify(2);
+		},
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.category === 'Status') {
+				move.pranksterBoosted = true;
+				return priority + 1;
+			}
+		},
+	},
+
+	unstableshell: {
+		shortDesc: "If a pokemon makes contact to this pokemon, this Pokemon loses 25% max HP and returns doubles of lost HP.",
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (move.flags['contact']) {
+				this.damage(Math.round(target.maxhp / 4), target, target);
+				this.damage(Math.round(target.maxhp / 2), source, target);
+			}
+		},
+		name: "Unstable Shell",
+		rating: 2.5,
+		num: -51,
+	},
+	peerpressure: {
+		shortDesc: "All moves used while this Pokemon is on the field consume 4 PP.",
+		name: "Peer Pressure",
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Peer Pressure');
+		},
+		onAnyDeductPP(target, source) {
+			return 3;
+		},
+		
+	},
+
+	spiritofgiving: {
+		desc: "On switch-in, every Pokémon in this Pokémon's party regains the item it started with, even if the item was a popped Air Balloon, if the item was picked up by a Pokémon with the Pickup Ability, or the item was lost to Bug Bite, Covet, Incinerate, Knock Off, Pluck, or Thief. It doesn't work if the Pokémon is already holding something else.",
+		shortDesc: "Restores the party's used or removed items on switch-in.",
+		name: "Spirit of Giving",
+		onStart(pokemon) {
+			this.hint(`${pokemon.name} was submitted to Megas for All by Hematite!`);
+			const side = pokemon.side;
+			let activated = false;
+			for (const ally of side.pokemon) {
+				if (ally.item) continue;
+				if ((ally as any).lostItemForDelibird) {
+					const item = (ally as any).lostItemForDelibird;
+					if (ally.setItem(item)) {
+						if (!activated) {
+							this.add('-ability', pokemon, 'Spirit of Giving');
+						}
+						activated = true;
+						this.add('-item', ally, this.dex.items.get(item), '[from] Ability: Spirit of Giving');
+					}
+				}
+			}
+		},
+		rating: 4,
+		num: -36,
+	},
+
+	pesteringassault: {
+		shortDesc: "Uses Knock Off, Taunt, Torment, Soak, and Confuse Ray with 40% accuracy at turn end.",
+		name: "Pestering Assault",
+		onResidual(pokemon, s, effect) {
+			const moves = ['knockoff', 'taunt', 'torment', 'soak', 'confuseray'];
+			for (const moveid of moves) {
+				const move = this.dex.getActiveMove(moveid);
+				move.accuracy = 40;
+				const target = pokemon.foes()[0];
+				if (target && !target.fainted) {
+					this.actions.useMove(move, pokemon, target, effect);
+				}
+			}
+		},
+	},
+
+	skillissue: {
+		onFlinch(pokemon) {
+			this.boost({spe: 1});
+		},
+		onStart(pokemon) {
+			// n.b. only affects Hackmons
+			// interaction with No Ability is complicated: https://www.smogon.com/forums/threads/pokemon-sun-moon-battle-mechanics-research.3586701/page-76#post-7790209
+			if (pokemon.adjacentFoes().some(foeActive => foeActive.ability === 'noability')) {
+				this.effectState.gaveUp = true;
+			}
+			// interaction with Ability Shield is similar to No Ability
+			if (pokemon.hasItem('Ability Shield')) {
+				this.add('-block', pokemon, 'item: Ability Shield');
+				this.effectState.gaveUp = true;
+			}
+			
+			if (!pokemon.isStarted || this.effectState.gaveUp) return;
+
+			const possibleTargets = pokemon.adjacentFoes().filter(
+				target => !target.getAbility().shortDesc && target.ability !== 'noability'
+			);
+			if (!possibleTargets.length) return;
+
+			const target = this.sample(possibleTargets);
+			const oldAbility = target.setAbility(pokemon.ability);
+			if (oldAbility) {
+				this.add('-ability', target, target.getAbility().name, '[from] ability: Skill Issue');
+				return;
+			}
+		},
+		name: "Skill Issue",
+		shortDesc: "Steadfast + On switchin, this Pokemon changes the ability of the opponent to this one.",
+	},
+
+	impalpable: {
+		onSourceModifyDamage(damage, target, source, move) {
+			if ((source.hasType(move.type) || target.hasType(move.type)) && target !== source) {
+				return this.chainModify(0.5);
+			}
+		},
+		name: "Impalpable",
+		shortDesc: "This Pokemon is non-grounded, and takes halved damage from its/foe's STABs.",
+	},
+
+	prismwings: {
+		onStart(pokemon) {
+			pokemon.addVolatile('prismwings');
+		},
+		condition: {
+			noCopy: true,
+			duration: 1,
+			onStart(pokemon) {
+				const allTypes = this.dex.deepClone(this.dex.types.all());
+				pokemon.setType(allTypes);
+				this.add('-start', pokemon, 'typechange', allTypes.join('/'), '[from] ability: Prism Wings');
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'typechange', '[silent]');
+			}
+		},
+		name: "Prism Wings",
+		shortDesc: "On switch-in, this Pokemon is all types for one turn.",
+	},
+
+		adaptation: {
+		shortDesc: "On switch-in, user gains a type matching its first move.",
+		onStart(pokemon) {
+			const type = this.dex.moves.get(pokemon.moveSlots[0].id).type;
+			if (pokemon.hasType(type) || !pokemon.addType(type)) return false;
+			this.add('-start', pokemon, 'typeadd', type);
+		},
+		name: "Adaptation",
+		rating: 3.5,
+		num: 3017,
+	},
+
+	vent: {
+		onAfterMoveSecondary(target, source, move) {
+			if (!source || source === target || !target.hp || !move.totalDamage) return;
+			const lastAttackedBy = target.getLastAttackedBy();
+			if (!lastAttackedBy) return;
+			const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
+			if (target.hp <= target.maxhp / 10 && target.hp + damage > target.maxhp / 10) {
+				this.add('-message', target.name + " is gonna Vent!");
+				target.switchFlag = true;
+				this.heal(target.baseMaxhp);
+			}
+		},
+		name: "Vent",
+		rating: 5,
+		num: 3018,
+	},
+
+	swagnetpull: {
+		shortDesc: "Prevents randomly-typed foes from choosing to switch.",
+		onFoeTrapPokemon(pokemon) {
+			const result = this.random(12);
+			let currType = "???";
+			if (result === 0) {
+				currType = "Dark";
+				this.hint("Dark-types are now being trapped.");
+			} else if (result === 1) {
+				currType = "Grass";
+				this.hint("Grass-types are now being trapped.");
+			} else if (result === 2) {
+				currType = "Fire";
+				this.hint("Fire-types are now being trapped.");
+			} else if (result === 3) {
+				currType = "Water";
+				this.hint("Water-types are now being trapped.");
+			} else if (result === 4) {
+				currType = "Electric";
+				this.hint("Electric-types are now being trapped.");
+			} else if (result === 5) {
+				currType = "Ground";
+				this.hint("Ground-types are now being trapped.");
+			} else if (result === 6) {
+				currType = "Flying";
+				this.hint("Flying-types are now being trapped.");
+			} else if (result === 7) {
+				currType = "Dragon";
+				this.hint("Dragon-types are now being trapped.");
+			} else if (result === 8) {
+				currType = "Fairy";
+				this.hint("Fairy-types are now being trapped.");
+			} else if (result === 9) {
+				currType = "Steel";
+				this.hint("Steel-types are now being trapped.");
+			} else if (result === 10) {
+				currType = "Bug";
+				this.hint("Bug-types are now being trapped.");
+			} else if (result === 11) {
+				currType = "Poison";
+				this.hint("Poison-types are now being trapped.");
+			}
+			if (pokemon.hasType(currType)) {
+				pokemon.tryTrap(true);
+			}
+		},
+		onFoeMaybeTrapPokemon(pokemon, source) {
+			pokemon.maybeTrapped = true;
+		},
+		name: "Swagnet Pull",
+		rating: 4,
+		num: 20,
+	},
+
+	tranquilizinggas: {
+		shortDesc: "Yawns both active Pokemon on switchin.",
+		onStart(pokemon) {
+			for (const target of this.getAllActive()) {
+				if (pokemon.status || target.status || !target.runStatusImmunity('slp')) {
+					return false;
+				}
+				target.addVolatile('yawn');
+			}
+		},
+		condition: {
+			noCopy: true, // doesn't get copied by Baton Pass
+			duration: 1,
+			onStart(target, source) {
+				this.add('-start', target, 'ability: Tranquilizing Gas', '[of] ' + source);
+			},
+			onResidualOrder: 19,
+			onEnd(target) {
+				this.add('-end', target, 'ability: Tranquilizing Gas', '[silent]');
+				target.trySetStatus('slp', this.effectState.source);
+			},
+		},
+		name: "Tranquilizing Gas",
+		rating: 4,
+		num: 3012,
+	},
+
+	lostmemory: {
+		shortDesc: "On switch, the user learns the used move if it has empty moveslots.",
+		onStart(pokemon) {
+			const move = this.lastMove;
+			if (move === null) return;
+			if (pokemon.moveSlots.length < 4) {
+				this.attrLastMove('[still]');
+				if (pokemon.moveSlots.length < 0) return false;
+				const learnedMove = {
+					move: move.name,
+					id: move.id,
+					pp: move.pp,
+					maxpp: move.pp,
+					target: move.target,
+					disabled: false,
+					used: false,
+				};
+				pokemon.moveSlots[pokemon.moveSlots.length] = learnedMove;
+				pokemon.baseMoveSlots[pokemon.moveSlots.length - 1] = learnedMove;
+				this.add('-start', pokemon, 'Lost Memory', move.name);
+			}
+		},
+		name: "Lost Memory",
+		rating: 3,
+		num: 3004,
+	},
+
+	stickystarch: {
+		onAnyTryMove(target, source, effect) {
+			if (['teleport', 'chillyreception', 'voltswitch', 'uturn', 'flipturn', 'batonpass', 'shedtail'].includes(effect.id)) {
+				this.attrLastMove('[still]');
+				this.add('cant', this.effectState.target, 'ability: Sticky Starch', effect, '[of] ' + target);
+				target.addVolatile('partiallytrapped');
+				target.volatiles['partiallytrapped'].duration = 2;
+				return false;
+			}
+		},
+		name: "Sticky Starch",
+		shortDesc: "Blocks and traps opponents when they use pivoting moves.",
+		rating: 1,
+		num: 9005,
+	},
+
+	hostabsorb: {
+		onModifyMove(move, attacker) {
+			if (!move || !move.flags['contact'] || move.target === 'self') return;
+			if (!move.secondaries) {
+				move.secondaries = [];
+			} // the 3 rows below this get deleted if there's issues
+			for (const target of attacker.side.foe.active) {
+				if (target.hasType('Grass')) return;
+				if (target.hasAbility('goodasgold') || target.hasAbility('Good as Gold')) return;
+				if (target.hasAbility('magicabsorb') || target.hasAbility('Magic Absorb')) return;
+			}
+			move.secondaries.push({
+				chance: 100,
+				volatileStatus: 'leechseed',
+				ability: this.dex.abilities.get('hostabsorb'),
+			});
+		},
+		name: "Host Absorb",
+		shortDesc: "Contact moves inflict Leech Seed.",
+		rating: 2,
+		num: 9002,
+	},
+
+	priorityreversal: {
+	name: "Priority Reversal",
+	shortDesc: "Immune to priority moves and reflects status moves.",
+
+	onTryHitPriority: 1,
+	onTryHit(target, source, move) {
+		if (!move || source === target) return;
+
+		
+		if (move.priority > 0 && move.category !== 'Status') {
+			this.add('-immune', target, '[from] ability: Priority Reversal');
+			return null;
+		}
+
+		if (move.category === 'Status') {
+			this.add('-activate', target, 'ability: Priority Reversal');
+			const magicBounce = this.dex.abilities.get('magicbounce') as any;
+			return magicBounce.onTryHit.call(this, target, source, move);
+		}
+	},
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
