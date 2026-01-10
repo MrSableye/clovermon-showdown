@@ -19299,7 +19299,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 
 
-	perfectfreeze: {
+	perfectfreezeaura: {
 		onModifyMovePriority: -2,
 		onModifyMove(move) {
 			if (move.secondaries) {
@@ -19322,7 +19322,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		
-		name: "Perfect Freeze",
+		name: "Perfect Freeze Aura",
 		shortDesc: "This Pokemon's moves have their secondary effect chance doubled.  If Snow is active, this Pokemon's evasiveness is 1.5x.",
 	},
 
