@@ -8801,6 +8801,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	emojinnraging: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	emojinnsobbing: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	emojinnjoyful: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	sporestool: {
 		tier: "Illegal",
 		isNonstandard: "Future",
