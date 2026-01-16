@@ -2036,6 +2036,10 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	ginoccite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	ultrablobbosiumz: {
 		inherit: true,
 		isNonstandard: "Past",

@@ -8541,6 +8541,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	ginocchiomega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	magmata: {
 		tier: "Illegal",
 		isNonstandard: "Future",

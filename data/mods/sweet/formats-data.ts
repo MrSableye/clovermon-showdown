@@ -7763,6 +7763,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	ginocchio: {
 		inherit: true,
 		isNonstandard: "Past",
+		},
+	ginocchiomega: {
+		inherit: true,
+		isNonstandard: "Past",
 	},
 	magmata: {
 		inherit: true,
