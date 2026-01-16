@@ -13246,4 +13246,19 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+	   skubmarine: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+	   skubmarineanti: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+	   faustival: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 };

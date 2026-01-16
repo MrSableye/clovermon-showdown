@@ -412,4 +412,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	starguardian: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

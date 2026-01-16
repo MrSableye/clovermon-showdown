@@ -7601,7 +7601,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
 				return false;
 			}
-			//To see how to add Keen eye effect later cause im tired lol
+		},
+		onTryBoost(boost, target, source, effect) {
+			let showMsg = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost.accuracy && boost.accuracy < 0) {
+					delete boost[i];
+					showMsg = true;
+					if (!(effect as ActiveMove).secondaries) {
+						this.add("-fail", target, "unboost", "accuracy", "[from] ability: Star Guardian", "[of] " + target);
+					}
+				}
+
+				if (!(effect as ActiveMove).secondaries) {
+					this.add("-fail", target, "unboost", "accuracy", "[from] ability: Star Guardian", "[of] " + target);
+				}
+			}
+		},
+		onModifyMove(move) {
+			move.ignoreEvasion = true;
 		},
 		name: "Star Guardian",
 		rating: 4,
