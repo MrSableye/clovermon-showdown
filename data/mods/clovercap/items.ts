@@ -389,6 +389,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fusjite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	ointmiteite: {
 		inherit: true,
 		isNonstandard: null,

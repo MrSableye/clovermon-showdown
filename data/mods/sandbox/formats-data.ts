@@ -9607,6 +9607,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
+		},
+	ginocchiomega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	magmata: {
 		inherit: true,

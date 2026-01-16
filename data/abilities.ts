@@ -7594,6 +7594,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		isNonstandard: "Future",
+		},
+	starguardian: {
+		onDamage(damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+				return false;
+			}
+			//To see how to add Keen eye effect later cause im tired lol
+		},
+		name: "Star Guardian",
+		rating: 4,
 	},
 	chording: {
 		name: "Chording",
