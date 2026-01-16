@@ -2522,7 +2522,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	starguardian: {
 		name: "Star Guardian",
-		shortDesc: "This Pokemon can only be damaged by direct attacks. Its accuracy cannot be dropped.",
+		shortDesc: "This Pokemon can only be damaged by direct attacks. Prevents Accuracy from being lowered by foe or self. Ignores evasiveness.",
 	},
 	blueblood: {
 		name: "Blue Blood",
