@@ -19737,6 +19737,425 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 },
 
+emergencybackup: {
+	name: "Emergency Backup",
+	shortDesc: "Once per battle, using Protect calls an ally to strike and retreat.",
+	rating: 5,
+	num: 4002,
+
+	onStart(pokemon) {
+		pokemon.abilityState.used = false;
+	},
+
+	onTryMovePriority: 1,
+	onTryMove(pokemon, target, move) {
+		if (move.id !== 'protect' || pokemon.abilityState.used) return;
+
+		const side = pokemon.side;
+		const ally = side.pokemon.find(p =>
+			!p.fainted && p !== pokemon && !p.isActive
+		);
+		if (!ally) return;
+
+		pokemon.abilityState.used = true;
+
+		this.add('-ability', pokemon, 'Emergency Backup');
+		this.add('-message', `${ally.name} jumps in to help!`);
+
+		// Entra temporariamente em campo
+		this.actions.switchIn(ally, pokemon.position);
+
+		// Escolhe o golpe mais forte manualmente
+let bestMoveId: string | null = null;
+let bestPower = 0;
+
+for (const moveSlot of ally.moveSlots) {
+	const move = this.dex.moves.get(moveSlot.id);
+	if (!move || move.category === 'Status' || !move.basePower) continue;
+
+	const atkStat =
+		move.category === 'Physical'
+			? ally.getStat('atk', false, true)
+			: ally.getStat('spa', false, true);
+
+	const power = move.basePower * atkStat;
+
+	if (power > bestPower) {
+		bestPower = power;
+		bestMoveId = move.id;
+	}
+}
+
+// Usa o golpe escolhido
+if (bestMoveId) {
+	const activeMove = this.dex.getActiveMove(bestMoveId);
+	this.actions.useMove(activeMove, ally, target);
+}
+
+
+		// Sai do campo após atacar
+		this.actions.runSwitch(ally);
+	},
+},
+
+
+possessiverage: {
+	name: "Possessive Rage",
+	shortDesc: "Foes become possessed: they use random moves, lose accuracy, gain power, and always crit.",
+	rating: 5,
+	num: 4001,
+
+	onStart(pokemon) {
+		this.add('-ability', pokemon, 'Possessive Rage');
+		this.add('-message', "A dark presence possesses the opposing Pokémon!");
+	},
+
+	// Força o inimigo a usar um move aleatório
+	onFoeBeforeMovePriority: 10,
+	onFoeBeforeMove(attacker, defender, move) {
+		if (!attacker.moveSlots.length) return;
+
+		const randomMove = this.sample(attacker.moveSlots).id;
+		const newMove = this.dex.getActiveMove(randomMove);
+
+		this.add('-message', `${attacker.name} is possessed and acts on its own!`);
+		this.actions.useMove(newMove, attacker, defender);
+
+		return false; // Cancela o move escolhido pelo treinador
+	},
+
+	// Reduz precisão dos golpes do oponente
+	onFoeModifyAccuracy(accuracy) {
+		if (typeof accuracy !== 'number') return;
+		return this.chainModify(0.85);
+	},
+
+	// Aumenta o Base Power dos golpes do oponente
+	onFoeBasePower(basePower) {
+		return this.chainModify(1.15);
+	},
+
+	// Força golpes críticos do oponente
+	onFoeModifyCritRatio(critRatio) {
+		return 5; // Garante crítico
+	},
+},
+
+echobarrage: {
+	name: "Echo Barrage",
+	shortDesc: "Repeating the same physical or special move increases hits, boosts total damage, resets on miss, and works with Technician.",
+	rating: 4,
+	num: 4003,
+
+	onStart(pokemon) {
+		pokemon.abilityState.lastMove = null;
+		pokemon.abilityState.count = 0;
+	},
+
+	onModifyMove(move, pokemon) {
+		if (move.category === 'Status') return;
+		if (move.multihit) return;
+
+		const state = pokemon.abilityState;
+
+		if (state.lastMove === move.id) {
+			state.count = Math.min(state.count + 1, 10);
+		} else {
+			state.lastMove = move.id;
+			state.count = 1;
+		}
+
+		if (state.count > 1) {
+			move.multihit = state.count;
+			move.basePower = Math.floor(move.basePower / state.count);
+
+			this.add(
+				'-message',
+				`${pokemon.name}'s attack echoes ${state.count} times!`
+			);
+		}
+	},
+
+	onBasePowerPriority: 21,
+	onBasePower(basePower, pokemon, target, move) {
+		const state = pokemon.abilityState;
+		if (state.lastMove === move.id && state.count > 1) {
+			return this.chainModify(1 + (state.count - 1) * 0.05);
+		}
+	},
+
+	// RESET SE O GOLPE NÃO ACERTAR
+	onAfterMove(pokemon, target, move) {
+		if (
+			move.category !== 'Status' &&
+			!pokemon.lastDamage
+		) {
+			pokemon.abilityState.lastMove = null;
+			pokemon.abilityState.count = 0;
+		}
+	},
+},
+
+primalcannonx: {
+	name: "Primal Cannonx",
+	shortDesc: "Hyper Beam becomes the user's primary type, ignores recharge, and gains +1 priority at 50% HP or less.",
+	rating: 5,
+	num: 5003,
+
+	// Muda o tipo do Hyper Beam para o tipo primário
+	onModifyMove(move, pokemon) {
+		if (move.id === 'hyperbeam') {
+			move.type = pokemon.getTypes()[0];
+
+			// Remove a recarga corretamente
+			delete move.flags['recharge'];
+			move.self = null;
+		}
+	},
+
+	// Segurança extra: remove volatile de recarga
+	onAfterMove(pokemon, target, move) {
+		if (move.id === 'hyperbeam') {
+			pokemon.removeVolatile('mustrecharge');
+		}
+	},
+
+	// Dá prioridade +2 se HP <= 50%
+	onModifyPriority(priority, pokemon, target, move) {
+		if (
+			move.id === 'hyperbeam' &&
+			pokemon.hp <= pokemon.maxhp / 2
+		) {
+			return priority + 1;
+		}
+	},
+},
+
+forewarnx: {
+	
+	onStart(pokemon) {
+		// Adiciona o efeito como um estado volátil para gerenciar os dados da esquiva
+		pokemon.addVolatile('forewarn');
+	},
+	condition: {
+		onStart(pokemon) {
+			// Usamos um Map para associar o Objeto do Pokémon ao ID do golpe
+			this.effectState.warnMoves = new Map();
+
+			for (const foe of pokemon.foes()) {
+				if (foe.fainted) continue;
+
+				// Pega os golpes do oponente e ordena pelo Base Power (BP)
+				const moves = foe.getMoves().map(m => this.dex.moves.get(m.move));
+				if (!moves.length) continue;
+
+				const maxBP = Math.max(...moves.map(m => m.basePower));
+				const strongestMoves = moves.filter(m => m.basePower === maxBP);
+				
+				// Seleciona um dos golpes mais fortes aleatoriamente
+				const move = this.sample(strongestMoves);
+				this.effectState.warnMoves.set(foe, move.id);
+
+				this.add('-activate', pokemon, 'ability: Forewarn', move.name, '[of] ' + foe);
+			}
+		},
+		onAnySwitchIn(pokemon) {
+			const source = this.effectState.target;
+			// Se quem entrou for um aliado ou for o próprio dono da habilidade, ignora
+			if (pokemon.side === source.side || pokemon === source) return;
+
+			const moves = pokemon.getMoves().map(m => this.dex.moves.get(m.move));
+			if (!moves.length) return;
+
+			const maxBP = Math.max(...moves.map(m => m.basePower));
+			const strongestMoves = moves.filter(m => m.basePower === maxBP);
+			
+			const move = this.sample(strongestMoves);
+			this.effectState.warnMoves.set(pokemon, move.id);
+
+			this.add('-activate', source, 'ability: Forewarn', move.name, '[of] ' + pokemon);
+		},
+		onAnySwitchOut(pokemon) {
+			// Limpa o registro quando o oponente sai de campo
+			this.effectState.warnMoves.delete(pokemon);
+		},
+		onAccuracy(accuracy, target, source, move) {
+			// Verifica se o alvo é o dono da habilidade
+			if (target !== this.effectState.target) return;
+			if (typeof accuracy !== 'number') return;
+			if (move.ignoreEvasion) return;
+
+			// Verifica se o golpe usado é o que foi registrado no Map para este oponente
+			const warnedMoveId = this.effectState.warnMoves.get(source);
+			if (warnedMoveId && move.id === warnedMoveId) {
+				this.add('-activate', target, 'ability: Forewarn');
+				this.add('-message', `${target.name} previu o movimento ${move.name} e esquivou-se!`);
+				return 0; // Força o erro (miss)
+			}
+		},
+	},
+	name: "Forewarnx",
+	rating: 3,
+	desc: "Ao entrar em campo, este Pokémon identifica o golpe mais forte de cada oponente. Se um oponente usar esse golpe específico contra este Pokémon, ele irá esquivar-se automaticamente.",
+	shortDesc: "Identifica o golpe mais forte do oponente e esquiva-se dele.",
+},
+
+
+tricksterx: {
+		name: "Tricksterx",
+		shortDesc: "A bunch of random status moves become physical (thanks anaconja)",
+		onModifyMove(move, pokemon) {
+			let trickyMoves = ["Toxic", "Block", "Spore", "Defog", "Protect", "Trick", "Heart Swap", "Instruct", "Lock-On", "Mean Look", "Substitute", "Pain Split", "Play Nice", "Power Split", "Power Swap", "Psych Up", "Rest", "Roar", "Role Play", "Skill Swap", "Speed Swap", "Sleep Talk", "Recover", "Transform", "Whirlwind", "Yawn"];
+			if (trickyMoves.includes(move.name)) {
+				move.category = "Physical";
+				move.basePower = 80;
+			}
+		},
+		num: 100004,
+
+
+
+
+},
+
+loosecannon: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (typeof move.accuracy !== 'number') return basePower;
+			return basePower + (100 - move.accuracy);
+		},
+		name: "Loose Cannon",
+		shortDesc: "This Pokemon's moves gain 1 BP per percent accuracy below 100.",
+		num: -5,
+	},
+
+
+	acidrockx: {
+		desc: "On switch-in, this Pokémon poisons every Pokémon on the field. Pokémon with Soundproof are immune. Poison inflicted through this Ability does half as much damage as normal poison.",
+		shortDesc: "On switch-in, this Pokémon poisons every Pokémon on the field.",
+		onStart(pokemon) {
+			for (const target of this.getAllActive()) {
+				if (!target || !target.isAdjacent(pokemon) || target.status) continue;
+				if (target.hasAbility('soundproof')) {
+					this.add('-ability', pokemon, 'Acid Rock');
+					this.add('-immune', target, "[from] ability: Soundproof", "[of] " + target);
+				} else if (!target.runStatusImmunity('psn')) {
+					this.add('-ability', pokemon, 'Acid Rock');
+					this.add('-immune', target);
+				} else {
+					if (target.setStatus('psn', pokemon)) {
+						this.hint(`Poison inflicted through Acid Rock is only half as damaging as normal poison.`);
+					}
+				}
+			}
+		},
+		name: "Acid Rockx",
+		rating: 4,
+		num: -45,
+
+	},
+
+	contagious: {
+		// upokecenter says this is implemented as an added secondary effect
+		onModifyMove(move) {
+			if (!move || move.target === 'self') return;
+			if (!move.secondaries) {
+				move.secondaries = [];
+			}
+			move.secondaries.push({
+				chance: 30,
+				status: 'frz',
+				ability: this.dex.abilities.get('contagious'),
+			});
+		},
+		name: "Contagious",
+		desc: "This Pokemon's moves have a 30% chance of freezing.",
+		rating: 2,
+		num: 10040,
+
+	},
+
+
+	horrendousskin: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Horrendous Skin');
+		},
+		onFoeTryMove(target, source, move) {
+			if (move.category == "Status") {
+				const pokemon = this.sample(target.adjacentFoes());
+				this.attrLastMove('[still]');
+				this.add('-message', `${pokemon.name} is abhorrent! ${target.name} wants to damage it ASAP so it dies and goes away!`);
+				this.add('cant', pokemon, 'ability: Horrendous Skin', move, '[of] ' + source, '[silent]');
+				return false;
+			}
+		},
+		name: "Horrendous Skin"
+
+
+
+	},
+
+
+	imleabinthisgronp: {
+		onFoeSwitchOut(pokemon) {
+			const target = this.sample(pokemon.adjacentFoes());
+			target.switchFlag = true;
+			this.add('-activate', target, 'ability: im leabin this gronp');
+		},
+		onFoeDragOut(pokemon) {
+			const target = this.sample(pokemon.adjacentFoes());
+			target.switchFlag = true;
+			this.add('-activate', target, 'ability: im leabin this gronp');
+		},
+		name: "im leabin this gronp",
+		//shortDesc: "Whenever the opponent switches out, this Pokemon also switches out.",
+
+
+
+
+
+	},
+
+	randomimposter: {
+		onStart(pokemon) {
+			// Verifica se o Pokémon já está transformado (para evitar loops)
+			if (pokemon.transformed) return;
+
+			// Obtém a lista de Pokémon do lado do oponente que não estão desmaiados
+			const foeParty = pokemon.side.foe.pokemon.filter(p => !p.fainted);
+
+			if (foeParty.length > 0) {
+				// Escolhe um Pokémon aleatório da equipe adversária
+				const target = this.sample(foeParty);
+
+				// Realiza a transformação
+				if (pokemon.transformInto(target)) {
+					this.add('-transform', pokemon, target, '[from] ability: Random Imposter');
+				}
+			}
+		},
+		name: "Random Imposter",
+		rating: 4.5,
+		shortDesc: "Ao entrar em campo, transforma-se em um Pokémon aleatório da equipe do oponente.",
+	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
