@@ -2437,6 +2437,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	ginocchiomega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	magmata: {
 		inherit: true,
 		isNonstandard: null,

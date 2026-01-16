@@ -2520,6 +2520,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Brain Power",
 		shortDesc: "This Pokemon's Special Attack is doubled.",
 	},
+	starguardian: {
+		name: "Star Guardian",
+		shortDesc: "This Pokemon can only be damaged by direct attacks. Its accuracy cannot be dropped.",
+	},
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",
