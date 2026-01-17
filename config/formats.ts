@@ -1419,7 +1419,7 @@ export const Formats: FormatList = [
 		],
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Inversion', 'Sand Veil'],
 		unbanlist: [
-			'Ginoccite', 'Ginocchio-Mega'],
+			'Ginoccite', 'Ginocchio-Mega', 'Salezerkite', 'Salezerker-Mega'],
 	},
 	{
 		name: '[Gen 8 Cope Only] Anything Goes',

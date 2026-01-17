@@ -2400,6 +2400,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	salezerkermega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	frudge: {
 		inherit: true,
 		isNonstandard: null,

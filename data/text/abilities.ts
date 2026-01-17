@@ -2524,6 +2524,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Star Guardian",
 		shortDesc: "This Pokemon can only be damaged by direct attacks. Prevents Accuracy from being lowered by foe or self. Ignores evasiveness.",
 	},
+	scorchingsmite: {
+        name: "Scorching Smite",
+        shortDesc: "Take 1.25x damage from Fire, Steel moves gain 30% burn, Fire moves spread this ability",
+
+        changeAbility: "  [TARGET] carries the flame!",
+    },
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",

@@ -787,6 +787,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+		},
+	salezerkermega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	frudge: {
 		inherit: true,
