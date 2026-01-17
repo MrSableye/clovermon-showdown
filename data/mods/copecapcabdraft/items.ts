@@ -353,6 +353,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	salezerkite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	ointmiteite: {
 		inherit: true,
 		isNonstandard: null,

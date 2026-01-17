@@ -8568,6 +8568,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	salezerker: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	salezerkermega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	frudge: {
 		tier: "Illegal",

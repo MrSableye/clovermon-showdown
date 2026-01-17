@@ -7779,6 +7779,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	salezerker: {
 		inherit: true,
 		isNonstandard: "Past",
+		},
+	salezerkermega: {
+		inherit: true,
+		isNonstandard: "Past",
 	},
 	frudge: {
 		inherit: true,
