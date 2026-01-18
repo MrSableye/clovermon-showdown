@@ -21194,18 +21194,23 @@ spectraloverlord: {
 	onResidual(pokemon) {
 		for (const foe of pokemon.foes()) {
 			let hasBoosts = false;
-			const boostTransfer = {};
-			for (const stat in foe.boosts) {
-				if (foe.boosts[stat] > 0) {
-					boostTransfer[stat] = foe.boosts[stat];
+			const boostTransfer: SparseBoostsTable = {};
+			
+			let stat: BoostID;
+			for (stat in foe.boosts) {
+				const boostValue = foe.boosts[stat];
+				if (boostValue && boostValue > 0) {
+					boostTransfer[stat] = boostValue;
+					// Zera o boost do oponente
 					foe.boosts[stat] = 0;
 					hasBoosts = true;
 				}
 			}
+
 			if (hasBoosts) {
 				this.add('-clearpositiveboost', foe, pokemon, 'ability: Spectral Overlord');
-				pokemon.setBoost(boostTransfer);
-				this.add('-boost', pokemon, pokemon.getBoosts(), '[from] ability: Spectral Overlord');
+				// Adiciona os boosts ao usuário usando a API de batalha
+				this.boost(boostTransfer, pokemon, pokemon);
 				this.add('-message', `${pokemon.name} stole the spiritual energy of its foe!`);
 			}
 		}
