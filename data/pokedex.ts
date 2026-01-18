@@ -122472,5 +122472,20 @@ bewilderbeast: {
         creator: "sungshadowwoo",
     },
 
+	vitreosspiritus: {
+        num: -90008,
+        name: "Vitreos-Spiritus",
+        types: ["Dragon", "Ghost"],
+        genderRatio: {M: 0.5, F: 0.5},
+        baseStats: {hp: 100, atk: 150, def: 70, spa: 10, spd: 120, spe: 150},
+        abilities: {0: "Genesis Overload"},
+        heightm: 2.0,
+        weightkg: 100,
+        color: "Dark",
+        eggGroups: ["Dragon"],
+        gen: 0,
+        creator: "sungshadowwoo",
+    },
+
 
 };

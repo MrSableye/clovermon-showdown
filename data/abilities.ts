@@ -21103,6 +21103,119 @@ genesisoverload: {
 	num: -5008,
 },
 
+spectraloverlord: {
+	name: "Spectral Overlord",
+	shortDesc: "Vitreos Base + Phantasma, Levitate, Mummy. Steals foe's boosts at turn end. Immune to Ghost and Curse.",
+
+	// --- BASE ABILITIES CONSOLIDATION ---
+	onAnyModifyBoost(boosts, pokemon) {
+		const unawareUser = this.effectState.target;
+		if (unawareUser === pokemon) return;
+		if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+			boosts['def'] = 0; boosts['spd'] = 0; boosts['evasion'] = 0;
+		}
+		if (pokemon === this.activePokemon && unawareUser === this.activeTarget) {
+			boosts['atk'] = 0; boosts['def'] = 0; boosts['spa'] = 0; boosts['accuracy'] = 0;
+		}
+	},
+	onTryHit(pokemon, target, move) {
+		// STURDY, MOUNTAINEER & GHOST IMMUNITY
+		if (move.ohko || (move.type === 'Rock' && !pokemon.activeTurns) || move.type === 'Ghost') {
+			this.add('-immune', pokemon, '[from] ability: Spectral Overlord');
+			return null;
+		}
+	},
+	onDamagePriority: -30,
+	onDamage(damage, target, source, effect) {
+		if (effect.effectType !== 'Move') {
+			if (effect.id === 'stealthrock') return false;
+			return false;
+		}
+		if (target.hp === target.maxhp && damage >= target.hp) {
+			this.add('-ability', target, 'Spectral Overlord (Sturdy)');
+			return target.hp - 1;
+		}
+	},
+	onBasePowerPriority: 30,
+	onBasePower(basePower, attacker, defender, move) {
+		if (this.modify(basePower, this.event.modifier) <= 60) return this.chainModify(1.5);
+	},
+	onFoeTryMove(target, source, move) {
+		const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+		if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) return;
+		const dazzlingHolder = this.effectState.target;
+		if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+			this.attrLastMove('[still]');
+			this.add('cant', dazzlingHolder, 'ability: Spectral Overlord', move, '[of] ' + target);
+			return false;
+		}
+	},
+	onTryAddVolatile(status, pokemon) {
+		if (status.id === 'flinch' || status.id === 'curse') return null;
+	},
+	onTryBoost(boost, target, source, effect) {
+		if (effect.name === 'Intimidate' && boost.atk) {
+			delete boost.atk;
+			this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Spectral Overlord', '[of] ' + target);
+		}
+	},
+	onTrapPokemon(pokemon) {
+		pokemon.trapped = pokemon.maybeTrapped = false;
+	},
+
+	// --- PHANTASMA & LEVITATE ---
+	onModifyAtkPriority: 5,
+	onModifyAtk(atk, attacker, defender, move) {
+		if (move.type === 'Ghost') return this.chainModify(1.5);
+	},
+	onModifySpAPriority: 5,
+	onModifySpA(spa, attacker, defender, move) {
+		if (move.type === 'Ghost') return this.chainModify(1.5);
+	},
+	onImmunity(type) {
+		if (type === 'trapped' || type === 'Ground') return false;
+	},
+
+	// --- MUMMY ---
+	onDamagingHit(damage, target, source, move) {
+		const sourceAbility = source.getAbility();
+		if (sourceAbility.isPermanent || sourceAbility.id === 'mummy') return;
+		if (this.checkMoveMakesContact(move, source, target, !source.isAlly(target))) {
+			const oldAbility = source.setAbility('mummy', target);
+			if (oldAbility) {
+				this.add('-activate', target, 'ability: Mummy', this.dex.abilities.get(oldAbility).name, '[of] ' + source);
+			}
+		}
+	},
+
+	// --- STAT STEAL (Spectral Thief mechanic) ---
+	onResidualOrder: 28,
+	onResidualSubOrder: 2,
+	onResidual(pokemon) {
+		for (const foe of pokemon.foes()) {
+			let hasBoosts = false;
+			const boostTransfer = {};
+			for (const stat in foe.boosts) {
+				if (foe.boosts[stat] > 0) {
+					boostTransfer[stat] = foe.boosts[stat];
+					foe.boosts[stat] = 0;
+					hasBoosts = true;
+				}
+			}
+			if (hasBoosts) {
+				this.add('-clearpositiveboost', foe, pokemon, 'ability: Spectral Overlord');
+				pokemon.setBoost(boostTransfer);
+				this.add('-boost', pokemon, pokemon.getBoosts(), '[from] ability: Spectral Overlord');
+				this.add('-message', `${pokemon.name} stole the spiritual energy of its foe!`);
+			}
+		}
+	},
+
+	isBreakable: true,
+	rating: 5,
+	num: -5009,
+},
+
 
 
 

@@ -30925,4 +30925,8 @@ vitreosauragenesis: {
     tier: "Illegal",
     isNonstandard: "Future",
 },
+vitreosspiritus: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
 };

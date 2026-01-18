@@ -26949,4 +26949,8 @@ vitreosauragenesis: {
     inherit: true,
     isNonstandard: "Past",
 },
+vitreosspiritus: {
+    inherit: true,
+    isNonstandard: "Past",
+},
 };
