@@ -4694,6 +4694,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			slackoff: ["8L1"],
 			moongeistbeam: ["8L1"],
 			calmmind: ["8L1"],
+			objection: ["8L1"],
+			takethat: ["8L1"],
+			holdit: ["8L1"],
 		},
 	},
 	dusknoir: {
