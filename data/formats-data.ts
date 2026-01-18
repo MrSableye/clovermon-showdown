@@ -30893,4 +30893,36 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	vitreosalba: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+vitreosumbros: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+vitreoscyan: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+vitreosjade: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+vitreospyre: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+vitreosocre: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+vitreosaura: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+vitreosauragenesis: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
 };

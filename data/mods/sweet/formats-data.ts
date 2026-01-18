@@ -28657,4 +28657,36 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	vitreosalba: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+vitreosumbros: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+vitreoscyan: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+vitreosjade: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+vitreospyre: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+vitreosocre: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+vitreosaura: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+vitreosauragenesis: {
+    inherit: true,
+    isNonstandard: "Past",
+},
 };

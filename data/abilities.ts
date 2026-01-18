@@ -20212,6 +20212,905 @@ loosecannon: {
 		shortDesc: "Ao entrar em campo, transforma-se em um Pokémon aleatório da equipe do oponente.",
 	},
 
+	sovereignwhite: {
+    name: "Sovereign White",
+    shortDesc: "Vitreos Base + Electric Surge + Electric moves ignore immunity",
+    
+    // --- BASE ABILITIES ---
+    onAnyModifyBoost(boosts, pokemon) {
+        const unawareUser = this.effectState.target;
+        if (unawareUser === pokemon) return;
+        if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+            boosts['def'] = 0; boosts['spd'] = 0; boosts['evasion'] = 0;
+        }
+        if (pokemon === this.activePokemon && unawareUser === this.activeTarget) {
+            boosts['atk'] = 0; boosts['def'] = 0; boosts['spa'] = 0; boosts['accuracy'] = 0;
+        }
+    },
+    onTryHit(pokemon, target, move) {
+        // STURDY (OHKO Immunity) & MOUNTAINEER (Rock Immunity on switch-in)
+        if (move.ohko || (move.type === 'Rock' && !pokemon.activeTurns)) {
+            this.add('-immune', pokemon, '[from] ability: Sovereign White');
+            return null;
+        }
+    },
+    onDamagePriority: -30,
+    onDamage(damage, target, source, effect) {
+        // MAGIC GUARD & MOUNTAINEER (Indirect damage prevention)
+        if (effect.effectType !== 'Move') {
+            if (effect.id === 'stealthrock') return false;
+            return false;
+        }
+        // STURDY (Survival at 1 HP)
+        if (target.hp === target.maxhp && damage >= target.hp) {
+            this.add('-ability', target, 'Sovereign White (Sturdy)');
+            return target.hp - 1;
+        }
+    },
+    onBasePowerPriority: 30,
+    onBasePower(basePower, attacker, defender, move) {
+        // TECHNICIAN (Boosts moves with <= 60 BP)
+        if (this.modify(basePower, this.event.modifier) <= 60) return this.chainModify(1.5);
+    },
+    onFoeTryMove(target, source, move) {
+        // DAZZLING (Priority move blocking)
+        const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+        if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) return;
+        const dazzlingHolder = this.effectState.target;
+        if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+            this.attrLastMove('[still]');
+            this.add('cant', dazzlingHolder, 'ability: Sovereign White', move, '[of] ' + target);
+            return false;
+        }
+    },
+    onTryAddVolatile(status, pokemon) {
+        // INNER FOCUS (Flinch immunity)
+        if (status.id === 'flinch') return null;
+    },
+    onTryBoost(boost, target, source, effect) {
+        // INNER FOCUS (Intimidate immunity)
+        if (effect.name === 'Intimidate' && boost.atk) {
+            delete boost.atk;
+            this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Sovereign White', '[of] ' + target);
+        }
+    },
+    onTrapPokemon(pokemon) {
+        // RUN AWAY (Trap immunity)
+        pokemon.trapped = pokemon.maybeTrapped = false;
+    },
+
+    // --- UNIQUE ABILITIES (WHITE) ---
+
+    // ELECTRIC SURGE (Activates Electric Terrain on switch-in)
+    onStart(source) {
+        this.field.setTerrain('electricterrain');
+    },
+
+    // Electric moves ignore immunities (e.g., hitting Ground types)
+    onModifyMovePriority: -5,
+    onModifyMove(move) {
+        if (move.type === 'Electric') {
+            move.ignoreImmunity = true;
+        }
+    },
+
+    onModifyAccuracyPriority: -5,
+    onModifyAccuracy(accuracy, target, source, move) {
+        if (typeof accuracy !== 'number' || target !== this.effectState.target) return;
+        this.debug('Sovereign White evasion boost');
+        return this.chainModify(0.8);
+    },
+
+    isBreakable: true,
+    rating: 5,
+    num: -5001,
+},
+
+abyssalblack: {
+    name: "Abyssal Black",
+    shortDesc: "Vitreos Base + Dark Aura + Intimidate",
+
+    // --- BASE ABILITIES ---
+    onAnyModifyBoost(boosts, pokemon) {
+        const unawareUser = this.effectState.target;
+        if (unawareUser === pokemon) return;
+        if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+            boosts['def'] = 0; boosts['spd'] = 0; boosts['evasion'] = 0;
+        }
+        if (pokemon === this.activePokemon && unawareUser === this.activeTarget) {
+            boosts['atk'] = 0; boosts['def'] = 0; boosts['spa'] = 0; boosts['accuracy'] = 0;
+        }
+    },
+    onTryHit(pokemon, target, move) {
+        // STURDY & MOUNTAINEER
+        if (move.ohko || (move.type === 'Rock' && !pokemon.activeTurns)) {
+            this.add('-immune', pokemon, '[from] ability: Abyssal Black');
+            return null;
+        }
+    },
+    onDamagePriority: -30,
+    onDamage(damage, target, source, effect) {
+        // MAGIC GUARD & MOUNTAINEER
+        if (effect.effectType !== 'Move') {
+            if (effect.id === 'stealthrock') return false;
+            return false;
+        }
+        // STURDY
+        if (target.hp === target.maxhp && damage >= target.hp) {
+            this.add('-ability', target, 'Abyssal Black (Sturdy)');
+            return target.hp - 1;
+        }
+        // ULTRA EGO (Custom logic: Boost SpA when taking damage from a move)
+        if (effect.effectType === 'Move' && damage > 0) {
+            this.boost({spa: 1}, target, target);
+        }
+    },
+    onBasePowerPriority: 30,
+    onBasePower(basePower, attacker, defender, move) {
+        // TECHNICIAN
+        if (this.modify(basePower, this.event.modifier) <= 60) return this.chainModify(1.5);
+    },
+    onFoeTryMove(target, source, move) {
+        // DAZZLING
+        const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+        if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) return;
+        const dazzlingHolder = this.effectState.target;
+        if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+            this.attrLastMove('[still]');
+            this.add('cant', dazzlingHolder, 'ability: Abyssal Black', move, '[of] ' + target);
+            return false;
+        }
+    },
+    onTryAddVolatile(status, pokemon) {
+        // INNER FOCUS
+        if (status.id === 'flinch') return null;
+    },
+    onTryBoost(boost, target, source, effect) {
+        // INNER FOCUS (Blocks Intimidate on the user)
+        if (effect.name === 'Intimidate' && boost.atk) {
+            delete boost.atk;
+            this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Abyssal Black', '[of] ' + target);
+        }
+    },
+    onTrapPokemon(pokemon) {
+        // RUN AWAY
+        pokemon.trapped = pokemon.maybeTrapped = false;
+    },
+
+    // --- UNIQUE ABILITIES (BLACK) ---
+
+    // DARK AURA & INTIMIDATE
+    onStart(pokemon) {
+        // Intimidate effect
+        let activated = false;
+        for (const target of pokemon.adjacentFoes()) {
+            if (!activated) {
+                this.add('-ability', pokemon, 'Abyssal Black (Intimidate)');
+                activated = true;
+            }
+            if (target.volatiles['substitute']) {
+                this.add('-immune', target);
+            } else {
+                this.boost({atk: -1}, target, pokemon, null, true);
+            }
+        }
+        // Dark Aura activation log
+        this.add('-activate', pokemon, 'ability: Dark Aura');
+    },
+
+    // DARK AURA LOGIC (Boosts Dark moves for everyone on field)
+    onAnyBasePowerPriority: 20,
+    onAnyBasePower(basePower, source, target, move) {
+        if (target === source || move.category === 'Status' || move.type !== 'Dark') return;
+        if (!move.auraBooster?.hasAbility('Abyssal Black')) move.auraBooster = this.effectState.target;
+        if (move.auraBooster !== this.effectState.target) return;
+        return this.chainModify([move.hasAuraBreak ? 3072 : 5448, 4096]);
+    },
+
+    isBreakable: true,
+    rating: 5,
+    num: -5002,
+},
+
+serenecyan: {
+    name: "Serene Cyan",
+    shortDesc: "Vitreos Base + Snow Warning + Adaptability + Resistance Piercing.",
+
+    // --- BASE ABILITIES ---
+    onAnyModifyBoost(boosts, pokemon) {
+        const unawareUser = this.effectState.target;
+        if (unawareUser === pokemon) return;
+        if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+            boosts['def'] = 0; boosts['spd'] = 0; boosts['evasion'] = 0;
+        }
+        if (pokemon === this.activePokemon && unawareUser === this.activeTarget) {
+            boosts['atk'] = 0; boosts['def'] = 0; boosts['spa'] = 0; boosts['accuracy'] = 0;
+        }
+    },
+    onTryHit(pokemon, target, move) {
+        // STURDY & MOUNTAINEER
+        if (move.ohko || (move.type === 'Rock' && !pokemon.activeTurns)) {
+            this.add('-immune', pokemon, '[from] ability: Serene Cyan');
+            return null;
+        }
+    },
+    onDamagePriority: -30,
+    onDamage(damage, target, source, effect) {
+        // MAGIC GUARD & MOUNTAINEER
+        if (effect.effectType !== 'Move') {
+            if (effect.id === 'stealthrock') return false;
+            return false;
+        }
+        // STURDY
+        if (target.hp === target.maxhp && damage >= target.hp) {
+            this.add('-ability', target, 'Serene Cyan (Sturdy)');
+            return target.hp - 1;
+        }
+    },
+    onBasePowerPriority: 30,
+    onBasePower(basePower, attacker, defender, move) {
+        // TECHNICIAN
+        if (this.modify(basePower, this.event.modifier) <= 60) return this.chainModify(1.5);
+    },
+    onFoeTryMove(target, source, move) {
+        // DAZZLING
+        const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+        if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) return;
+        const dazzlingHolder = this.effectState.target;
+        if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+            this.attrLastMove('[still]');
+            this.add('cant', dazzlingHolder, 'ability: Serene Cyan', move, '[of] ' + target);
+            return false;
+        }
+    },
+    onTryAddVolatile(status, pokemon) {
+        // INNER FOCUS
+        if (status.id === 'flinch') return null;
+    },
+    onTryBoost(boost, target, source, effect) {
+        // INNER FOCUS
+        if (effect.name === 'Intimidate' && boost.atk) {
+            delete boost.atk;
+            this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Serene Cyan', '[of] ' + target);
+        }
+    },
+    onTrapPokemon(pokemon) {
+        // RUN AWAY
+        pokemon.trapped = pokemon.maybeTrapped = false;
+    },
+
+    // --- UNIQUE ABILITIES (CYAN) ---
+
+    // SNOW WARNING (Activates Snow on switch-in)
+    onStart(source) {
+        this.field.setWeather('snow');
+    },
+
+    // ADAPTABILITY (Increases STAB multiplier)
+    onModifyMove(move) {
+        move.stab = 3;
+    },
+
+    // 30% Damage Reduction in Snow
+    onSourceModifyDamage(damage, source, target, move) {
+        if (this.field.isWeather('snow')) {
+            return this.chainModify(0.7);
+        }
+    },
+
+    // RESISTANCE PIERCING LOGIC
+    onEffectiveness(typeMod, target, type, move) {
+        // If the move is resisted (0.5x)
+        if (typeMod < 0 && typeMod > -2) {
+            return 0; // Makes it neutral (1.0x)
+        }
+        // If the move is double resisted (0.25x)
+        if (typeMod <= -2) {
+            return 1; // Makes it super effective (2.0x)
+        }
+    },
+
+    isBreakable: true,
+    rating: 5,
+    num: -5003,
+},
+
+vibrantjade: {
+    name: "Vibrant Jade",
+    shortDesc: "Vitreos Base + Grassy Surge + 2x Speed in Terrain + Immunity to secondary effects.",
+
+    // --- BASE ABILITIES ---
+    onAnyModifyBoost(boosts, pokemon) {
+        const unawareUser = this.effectState.target;
+        if (unawareUser === pokemon) return;
+        if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+            boosts['def'] = 0; boosts['spd'] = 0; boosts['evasion'] = 0;
+        }
+        if (pokemon === this.activePokemon && unawareUser === this.activeTarget) {
+            boosts['atk'] = 0; boosts['def'] = 0; boosts['spa'] = 0; boosts['accuracy'] = 0;
+        }
+    },
+    onTryHit(pokemon, target, move) {
+        // STURDY & MOUNTAINEER
+        if (move.ohko || (move.type === 'Rock' && !pokemon.activeTurns)) {
+            this.add('-immune', pokemon, '[from] ability: Vibrant Jade');
+            return null;
+        }
+    },
+    onDamagePriority: -30,
+    onDamage(damage, target, source, effect) {
+        // MAGIC GUARD & MOUNTAINEER
+        if (effect.effectType !== 'Move') {
+            if (effect.id === 'stealthrock') return false;
+            return false;
+        }
+        // STURDY
+        if (target.hp === target.maxhp && damage >= target.hp) {
+            this.add('-ability', target, 'Vibrant Jade (Sturdy)');
+            return target.hp - 1;
+        }
+    },
+    onBasePowerPriority: 30,
+    onBasePower(basePower, attacker, defender, move) {
+        // TECHNICIAN
+        if (this.modify(basePower, this.event.modifier) <= 60) return this.chainModify(1.5);
+    },
+    onFoeTryMove(target, source, move) {
+        // DAZZLING
+        const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+        if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) return;
+        const dazzlingHolder = this.effectState.target;
+        if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+            this.attrLastMove('[still]');
+            this.add('cant', dazzlingHolder, 'ability: Vibrant Jade', move, '[of] ' + target);
+            return false;
+        }
+    },
+    onTryAddVolatile(status, pokemon) {
+        // INNER FOCUS
+        if (status.id === 'flinch') return null;
+    },
+    onTryBoost(boost, target, source, effect) {
+        // INNER FOCUS
+        if (effect.name === 'Intimidate' && boost.atk) {
+            delete boost.atk;
+            this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Vibrant Jade', '[of] ' + target);
+        }
+    },
+    onTrapPokemon(pokemon) {
+        // RUN AWAY
+        pokemon.trapped = pokemon.maybeTrapped = false;
+    },
+
+    // --- UNIQUE ABILITIES (JADE) ---
+
+    // GRASSY SURGE
+    onStart(source) {
+        this.field.setTerrain('grassyterrain');
+    },
+
+    // 2x Speed in Grassy Terrain
+    onModifySpe(spe, pokemon) {
+        if (this.field.isTerrain('grassyterrain')) {
+            return this.chainModify(2);
+        }
+    },
+
+    // Auto Leech Seed on foe's switch-in
+    onFoeSwitchIn(pokemon) {
+        this.add('-ability', this.effectState.target, 'Vibrant Jade');
+        pokemon.addVolatile('leechseed', this.effectState.target);
+    },
+
+    // Immunity to secondary effects (Shield Dust logic)
+    onModifySecondaries(secondaries) {
+        this.debug('Vibrant Jade Shield Dust effect');
+        return secondaries.filter(s => !!(s.self || s.dustproof));
+    },
+
+    // Super Effective moves become Water type
+    onSourceModifyAtkPriority: 6,
+    onSourceModifyAtk(atk, attacker, defender, move) {
+        if (move.category !== 'Status' && defender.runEffectiveness(move) > 0) {
+            move.type = 'Water';
+            this.add('-activate', defender, 'ability: Vibrant Jade');
+        }
+    },
+    onSourceModifySpAPriority: 6,
+    onSourceModifySpA(spa, attacker, defender, move) {
+        if (move.category !== 'Status' && defender.runEffectiveness(move) > 0) {
+            move.type = 'Water';
+            this.add('-activate', defender, 'ability: Vibrant Jade');
+        }
+    },
+
+    isBreakable: true,
+    rating: 5,
+    num: -5004,
+},
+
+wrathfulpyre: {
+    name: "Wrathful Pyre",
+    shortDesc: "Vitreos Base + Drought + Flame Body + Flash Fire + Unseen Fist + Fire moves <= 60 BP hit twice.",
+
+    // --- BASE ABILITIES ---
+    onAnyModifyBoost(boosts, pokemon) {
+        const unawareUser = this.effectState.target;
+        if (unawareUser === pokemon) return;
+        if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+            boosts['def'] = 0; boosts['spd'] = 0; boosts['evasion'] = 0;
+        }
+        if (pokemon === this.activePokemon && unawareUser === this.activeTarget) {
+            boosts['atk'] = 0; boosts['def'] = 0; boosts['spa'] = 0; boosts['accuracy'] = 0;
+        }
+    },
+    onTryHit(target, source, move) {
+        // STURDY & MOUNTAINEER
+        if (move.ohko || (move.type === 'Rock' && !target.activeTurns)) {
+            this.add('-immune', target, '[from] ability: Wrathful Pyre');
+            return null;
+        }
+        // FLASH FIRE (Unique logic for Red)
+        if (target !== source && move.type === 'Fire') {
+            move.accuracy = true;
+            if (!target.addVolatile('flashfire')) {
+                this.add('-immune', target, '[from] ability: Flash Fire');
+            }
+            return null;
+        }
+    },
+    onDamagePriority: -30,
+    onDamage(damage, target, source, effect) {
+        // MAGIC GUARD & MOUNTAINEER
+        if (effect.effectType !== 'Move') {
+            if (effect.id === 'stealthrock') return false;
+            return false;
+        }
+        // STURDY
+        if (target.hp === target.maxhp && damage >= target.hp) {
+            this.add('-ability', target, 'Wrathful Pyre (Sturdy)');
+            return target.hp - 1;
+        }
+    },
+    onBasePowerPriority: 30,
+    onBasePower(basePower, attacker, defender, move) {
+        // TECHNICIAN (Applied to all moves <= 60 BP)
+        if (this.modify(basePower, this.event.modifier) <= 60) return this.chainModify(1.5);
+    },
+    onFoeTryMove(target, source, move) {
+        // DAZZLING
+        const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+        if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) return;
+        const dazzlingHolder = this.effectState.target;
+        if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+            this.attrLastMove('[still]');
+            this.add('cant', dazzlingHolder, 'ability: Wrathful Pyre', move, '[of] ' + target);
+            return false;
+        }
+    },
+    onTryAddVolatile(status, pokemon) {
+        // INNER FOCUS
+        if (status.id === 'flinch') return null;
+    },
+    onTryBoost(boost, target, source, effect) {
+        // INNER FOCUS
+        if (effect.name === 'Intimidate' && boost.atk) {
+            delete boost.atk;
+            this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Wrathful Pyre', '[of] ' + target);
+        }
+    },
+    onTrapPokemon(pokemon) {
+        // RUN AWAY
+        pokemon.trapped = pokemon.maybeTrapped = false;
+    },
+
+    // --- UNIQUE ABILITIES (PYRE) ---
+
+    // DROUGHT (Activates Sun on switch-in)
+    onStart(source) {
+        this.field.setWeather('sunnyday');
+    },
+
+    // 100% FLAME BODY (Burns on contact)
+    onDamagingHit(damage, target, source, move) {
+        if (this.checkMoveMakesContact(move, source, target)) {
+            source.trySetStatus('brn', target); // 100% chance
+        }
+    },
+
+    // UNSEEN FIST (Contact moves ignore Protect)
+    onModifyMove(move) {
+        if (move.flags['contact']) delete move.flags['protect'];
+        
+        // Double hit logic for Fire moves <= 60 BP
+        if (move.type === 'Fire' && move.basePower <= 60 && !move.multihit) {
+            move.multihit = 2;
+            delete move.secondaries; // Removes secondary effects
+            this.debug('Wrathful Pyre: Fire double hit, secondaries removed');
+        }
+    },
+
+    // FLASH FIRE VOLATILE (Boost logic)
+    condition: {
+        noCopy: true,
+        onStart(target) {
+            this.add('-start', target, 'ability: Flash Fire');
+        },
+        onModifyAtkPriority: 5,
+        onModifyAtk(atk, attacker, defender, move) {
+            if (move.type === 'Fire' && attacker.hasAbility('vitreospyreability')) {
+                return this.chainModify(1.5);
+            }
+        },
+        onModifySpAPriority: 5,
+        onModifySpA(spa, attacker, defender, move) {
+            if (move.type === 'Fire' && attacker.hasAbility('vitreospyreability')) {
+                return this.chainModify(1.5);
+            }
+        },
+        onEnd(target) {
+            this.add('-end', target, 'ability: Flash Fire', '[silent]');
+        },
+    },
+
+    isBreakable: true,
+    rating: 5,
+    num: -5005,
+},
+
+boldocre: {
+    name: "Bold Ocre",
+    shortDesc: "Vitreos Base + Sand Stream + Stamina + Shell Armor + Guaranteed Rock/Ground crits + Ice moves have 30% accuracy against user.",
+
+    // --- BASE ABILITIES ---
+    onAnyModifyBoost(boosts, pokemon) {
+        const unawareUser = this.effectState.target;
+        if (unawareUser === pokemon) return;
+        if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+            boosts['def'] = 0; boosts['spd'] = 0; boosts['evasion'] = 0;
+        }
+        if (pokemon === this.activePokemon && unawareUser === this.activeTarget) {
+            boosts['atk'] = 0; boosts['def'] = 0; boosts['spa'] = 0; boosts['accuracy'] = 0;
+        }
+    },
+    onTryHit(pokemon, target, move) {
+        // STURDY & MOUNTAINEER
+        if (move.ohko || (move.type === 'Rock' && !pokemon.activeTurns)) {
+            this.add('-immune', pokemon, '[from] ability: Bold Ocre');
+            return null;
+        }
+    },
+    onDamagePriority: -30,
+    onDamage(damage, target, source, effect) {
+        // MAGIC GUARD & MOUNTAINEER
+        if (effect.effectType !== 'Move') {
+            if (effect.id === 'stealthrock') return false;
+            return false;
+        }
+        // STURDY
+        if (target.hp === target.maxhp && damage >= target.hp) {
+            this.add('-ability', target, 'Bold Ocre (Sturdy)');
+            return target.hp - 1;
+        }
+    },
+    onBasePowerPriority: 30,
+    onBasePower(basePower, attacker, defender, move) {
+        // TECHNICIAN
+        if (this.modify(basePower, this.event.modifier) <= 60) return this.chainModify(1.5);
+    },
+    onFoeTryMove(target, source, move) {
+        // DAZZLING
+        const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+        if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) return;
+        const dazzlingHolder = this.effectState.target;
+        if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+            this.attrLastMove('[still]');
+            this.add('cant', dazzlingHolder, 'ability: Bold Ocre', move, '[of] ' + target);
+            return false;
+        }
+    },
+    onTryAddVolatile(status, pokemon) {
+        // INNER FOCUS
+        if (status.id === 'flinch') return null;
+    },
+    onTryBoost(boost, target, source, effect) {
+        // INNER FOCUS
+        if (effect.name === 'Intimidate' && boost.atk) {
+            delete boost.atk;
+            this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Bold Ocre', '[of] ' + target);
+        }
+    },
+    onTrapPokemon(pokemon) {
+        // RUN AWAY
+        pokemon.trapped = pokemon.maybeTrapped = false;
+    },
+
+    // --- UNIQUE ABILITIES (OCRE) ---
+
+    // SAND STREAM (Activates Sandstorm on switch-in)
+    onStart(source) {
+        this.field.setWeather('sandstorm');
+    },
+
+    // STAMINA (Boosts Defense when hit)
+    onDamagingHit(damage, target, source, move) {
+        this.boost({def: 1}, target);
+    },
+
+    // SHELL ARMOR (Immunity to Critical Hits)
+    onCriticalHit: false,
+
+    // NO GUARD (Guaranteed hits) + ICE ACCURACY PENALTY (30% accuracy)
+    onAnyInvulnerabilityPriority: 1,
+    onAnyInvulnerability(target, source, move) {
+        if (move && (source === this.effectState.target || target === this.effectState.target)) return 0;
+    },
+    onAnyAccuracy(accuracy, target, source, move) {
+        // Special penalty: Ice moves against Ocre have only 30% accuracy
+        if (move && target === this.effectState.target && move.type === 'Ice') {
+            return 30;
+        }
+        // General No Guard effect
+        if (move && (source === this.effectState.target || target === this.effectState.target)) {
+            return true;
+        }
+        return accuracy;
+    },
+
+    // ROCK/GROUND Moves are always Critical Hits
+    onModifyCritRatio(critRatio, source, target, move) {
+        if (move && (move.type === 'Rock' || move.type === 'Ground')) {
+            return 5; // Guaranteed critical hit
+        }
+    },
+
+    isBreakable: true,
+    rating: 5,
+    num: -5006,
+},
+
+chromaticaura: {
+	name: "Chromatic Aura",
+	shortDesc: "Vitreos Base + Adaptability, Regenerator, Serene Grace. Transforms and fully heals at 50% HP or less.",
+
+	// --- BASE ABILITIES CONSOLIDATION ---
+	onAnyModifyBoost(boosts, pokemon) {
+		const unawareUser = this.effectState.target;
+		if (unawareUser === pokemon) return;
+		if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+			boosts['def'] = 0; boosts['spd'] = 0; boosts['evasion'] = 0;
+		}
+		if (pokemon === this.activePokemon && unawareUser === this.activeTarget) {
+			boosts['atk'] = 0; boosts['def'] = 0; boosts['spa'] = 0; boosts['accuracy'] = 0;
+		}
+	},
+
+	onTryHit(pokemon, target, move) {
+		// STURDY & MOUNTAINEER (Immunity to OHKO and Rock on switch-in)
+		if (move.ohko || (move.type === 'Rock' && !pokemon.activeTurns)) {
+			this.add('-immune', pokemon, '[from] ability: Chromatic Aura');
+			return null;
+		}
+	},
+
+	onDamagePriority: -30,
+	onDamage(damage, target, source, effect) {
+		// MAGIC GUARD & MOUNTAINEER logic
+		if (effect.effectType !== 'Move') {
+			if (effect.id === 'stealthrock') return false;
+			return false;
+		}
+		// STURDY survival
+		if (target.hp === target.maxhp && damage >= target.hp) {
+			this.add('-ability', target, 'Chromatic Aura (Sturdy)');
+			return target.hp - 1;
+		}
+	},
+
+	onBasePowerPriority: 30,
+	onBasePower(basePower, attacker, defender, move) {
+		// TECHNICIAN logic
+		if (this.modify(basePower, this.event.modifier) <= 60) return this.chainModify(1.5);
+	},
+
+	onFoeTryMove(target, source, move) {
+		// DAZZLING logic
+		const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+		if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) return;
+		const dazzlingHolder = this.effectState.target;
+		if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+			this.attrLastMove('[still]');
+			this.add('cant', dazzlingHolder, 'ability: Chromatic Aura', move, '[of] ' + target);
+			return false;
+		}
+	},
+
+	onTryAddVolatile(status, pokemon) {
+		// INNER FOCUS (Flinch immunity)
+		if (status.id === 'flinch') return null;
+	},
+
+	onTryBoost(boost, target, source, effect) {
+		// INNER FOCUS (Intimidate immunity)
+		if (effect.name === 'Intimidate' && boost.atk) {
+			delete boost.atk;
+			this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Chromatic Aura', '[of] ' + target);
+		}
+	},
+
+	onTrapPokemon(pokemon) {
+		// RUN AWAY logic
+		pokemon.trapped = pokemon.maybeTrapped = false;
+	},
+
+	// --- UNIQUE RAINBOW ABILITIES ---
+
+	// REGENERATOR
+	onSwitchOut(pokemon) {
+		pokemon.heal(pokemon.baseMaxhp / 3);
+	},
+
+	// ADAPTABILITY + SERENE GRACE
+	onModifyMovePriority: -2,
+	onModifyMove(move) {
+		move.stab = 2;
+		if (move.secondaries) {
+			for (const secondary of move.secondaries) {
+				if (secondary.chance) secondary.chance *= 2;
+			}
+		}
+		if (move.self?.chance) move.self.chance *= 2;
+	},
+
+	// GENESIS AWAKENING (Transformation Logic)
+	// Triggers immediately when HP reaches 50% or less
+	onUpdate(pokemon) {
+		if (pokemon.species.id !== 'vitreosaura' || pokemon.transformed || !pokemon.hp) return;
+
+		if (pokemon.hp <= pokemon.maxhp / 2) {
+			this.add('-activate', pokemon, 'ability: Chromatic Aura');
+			this.add('-message', `${pokemon.name} reached 50% HP and is awakening!`);
+
+			// 1. Change Forme
+			pokemon.formeChange('Vitreos-Aura-Genesis', this.effect, true);
+
+			// 2. Status and Stat Reset (Clear debuffs and conditions)
+			pokemon.clearStatus();
+			pokemon.clearBoosts();
+			pokemon.volatiles = {};
+
+			// 3. Full Restoration (Heal to 100% of new max HP)
+			pokemon.heal(pokemon.maxhp);
+
+			this.add('-heal', pokemon, pokemon.getHealth, '[silent]');
+			this.add('-message', `${pokemon.name} transformed into its Genesis Form and restored its condition!`);
+		}
+	},
+
+	isBreakable: true,
+	rating: 5,
+	num: -5007,
+},
+
+genesisoverload: {
+	name: "Genesis Overload",
+	shortDesc: "Vitreos Base + Magic Bounce + Protean + Ignore Immunities + Stats move to the attacking category.",
+
+	// --- BASE ABILITIES CONSOLIDATION ---
+	onAnyModifyBoost(boosts, pokemon) {
+		const unawareUser = this.effectState.target;
+		if (unawareUser === pokemon) return;
+		if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+			boosts['def'] = 0; boosts['spd'] = 0; boosts['evasion'] = 0;
+		}
+		if (pokemon === this.activePokemon && unawareUser === this.activeTarget) {
+			boosts['atk'] = 0; boosts['def'] = 0; boosts['spa'] = 0; boosts['accuracy'] = 0;
+		}
+	},
+	onTryHit(pokemon, target, move) {
+		// STURDY & MOUNTAINEER logic
+		if (move.ohko || (move.type === 'Rock' && !pokemon.activeTurns)) {
+			this.add('-immune', pokemon, '[from] ability: Genesis Overload');
+			return null;
+		}
+		// MAGIC BOUNCE logic
+		if (pokemon === target || move.hasBounced || !move.flags['reflectable']) return;
+		const newMove = this.dex.getActiveMove(move.id);
+		newMove.hasBounced = true;
+		newMove.pranksterBoosted = false;
+		this.actions.useMove(newMove, pokemon, target);
+		return null;
+	},
+	onDamagePriority: -30,
+	onDamage(damage, target, source, effect) {
+		if (effect.effectType !== 'Move') {
+			if (effect.id === 'stealthrock') return false;
+			return false;
+		}
+		if (target.hp === target.maxhp && damage >= target.hp) {
+			this.add('-ability', target, 'Genesis Overload (Sturdy)');
+			return target.hp - 1;
+		}
+	},
+	onBasePowerPriority: 30,
+	onBasePower(basePower, attacker, defender, move) {
+		if (this.modify(basePower, this.event.modifier) <= 60) return this.chainModify(1.5);
+	},
+	onFoeTryMove(target, source, move) {
+		const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+		if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) return;
+		const dazzlingHolder = this.effectState.target;
+		if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+			this.attrLastMove('[still]');
+			this.add('cant', dazzlingHolder, 'ability: Genesis Overload', move, '[of] ' + target);
+			return false;
+		}
+	},
+	onTryAddVolatile(status, pokemon) {
+		if (status.id === 'flinch') return null;
+	},
+	onTryBoost(boost, target, source, effect) {
+		if (effect.name === 'Intimidate' && boost.atk) {
+			delete boost.atk;
+			this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Genesis Overload', '[of] ' + target);
+		}
+	},
+	onTrapPokemon(pokemon) {
+		pokemon.trapped = pokemon.maybeTrapped = false;
+	},
+
+	// --- UNIQUE GENESIS ABILITIES ---
+
+	// PROTEAN (Type changes to the move type used)
+	onPrepareHit(source, target, move) {
+		if (this.effectState.protean) return;
+		if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
+		const type = move.type;
+		if (type && type !== '???' && source.getTypes().join() !== type) {
+			if (!source.setType(type, false, source, this.effect)) return;
+			this.effectState.protean = true;
+			this.add('-start', source, 'typechange', type, '[from] ability: Genesis Overload (Protean)');
+		}
+	},
+	onSwitchIn(pokemon) {
+		delete this.effectState.protean;
+	},
+
+	// IGNORE IMMUNITIES (e.g., Ghost-type hitting Normal-type)
+	onModifyMovePriority: -5,
+	onModifyMove(move) {
+		move.ignoreImmunity = true;
+	},
+
+	// STAT TRANSFER (Atk to SpA or SpA to Atk depending on move category)
+	onModifyAtkPriority: 5,
+	onModifyAtk(atk, attacker, defender, move) {
+		if (move.category === 'Physical') {
+			this.debug('Genesis Stat Transfer: Adding SpA to Atk');
+			return atk + attacker.getStat('spa', false, true);
+		}
+	},
+	onModifySpAPriority: 5,
+	onModifySpA(spa, attacker, defender, move) {
+		if (move.category === 'Special') {
+			this.debug('Genesis Stat Transfer: Adding Atk to SpA');
+			return spa + attacker.getStat('atk', false, true);
+		}
+	},
+
+	isBreakable: true,
+	rating: 5,
+	num: -5008,
+},
+
+
+
+
+
+
+
+
+
 
 
 
