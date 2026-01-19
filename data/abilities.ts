@@ -7675,7 +7675,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     const defenderSpeed = defender.getStat('spe', false, false);    
     if (attackerSpeed > defenderSpeed) {
         this.debug('Lurking Terror boost');
-        return this.chainModify(1.5);
+        return this.chainModify(1.3);
         }
     },
     name: "Lurking Terror",
