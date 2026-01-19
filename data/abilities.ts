@@ -7673,7 +7673,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             onBasePower(target, source) {
                 if (source.speed > target) {
                     this.debug('Lurking Terror boost');
-                    return this.chainModify(1.5);
+                    return this.chainModify(1.3);
                 }
             },
             name: "Lurking Terror",
