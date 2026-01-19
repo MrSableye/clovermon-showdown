@@ -7654,15 +7654,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             return this.chainModify(1.25);
         }
     },
-    onDamagingHit(damage, target, source, move) {
-        if (move.type === 'Fire' && source && source.hp && source.isActive) {
-            const sourceAbility = source.getAbility();
-            if (sourceAbility.isPermanent || sourceAbility.id === 'scorchingsmite') {
+    onSourceHit(target, source, move) {
+        if (move.type === 'Fire' && move.category !== 'Status' && target && target.hp && target.isActive) {
+            const targetAbility = target.getAbility();
+            if (targetAbility.isPermanent || targetAbility.id === 'scorchingsmite') {
                 return;
             }
-            const oldAbility = source.setAbility('scorchingsmite', target);
+            const oldAbility = target.setAbility('scorchingsmite', source);
             if (oldAbility) {
-                this.add('-activate', target, 'ability: Scorching Smite', this.dex.abilities.get(oldAbility).name, '[of] ' + source);
+                this.add('-activate', source, 'ability: Scorching Smite', this.dex.abilities.get(oldAbility).name, '[of] ' + target);
             }
         }
     },
