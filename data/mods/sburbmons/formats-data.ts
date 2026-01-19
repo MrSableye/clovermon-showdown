@@ -7759,7 +7759,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	salezerker: {
 		inherit: true,
 		isNonstandard: "Past",
-		},
+	},
 	salezerkermega: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -7773,6 +7773,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	lemirethun: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	lemirethunmega: {
 		inherit: true,
 		isNonstandard: "Past",
 	},

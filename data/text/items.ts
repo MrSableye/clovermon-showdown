@@ -2926,6 +2926,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Salezerkite",
 		desc: "If held by a Salezerker, this item allows it to Mega Evolve in battle.",
 	},
+	lemirethite: {
+		name: "Lemirethite",
+		desc: "If held by a Lemirethun, this item allows it to Mega Evolve in battle.",
+	},
 	focusspecs: {
 		name: "Focus Specs",
 		shortDesc: "20% of the holder's Sp. Atk is 1.5x. 20% of the time is Focus Band. 60% nothing. Changes each turn. Only works on Weedlekind.",
