@@ -7669,15 +7669,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             isNonstandard: "Future",
         },
 		lurkingterror: {
-            onBasePowerPriority: 21,
-            onBasePower(target, source) {
-                if (source.speed > target) {
-                    this.debug('Lurking Terror boost');
-                    return this.chainModify(1.3);
-                }
-            },
-            name: "Lurking Terror",
-            isNonstandard: "Future",
+    onBasePowerPriority: 21,
+    onBasePower(basePower, attacker, defender, move) {
+    const attackerSpeed = attacker.getStat('spe', false, false);
+    const defenderSpeed = defender.getStat('spe', false, false);    
+    if (attackerSpeed > defenderSpeed) {
+        this.debug('Lurking Terror boost');
+        return this.chainModify(1.5);
+        }
+    },
+    name: "Lurking Terror",
+    isNonstandard: "Future",
         },
 	chording: {
 		name: "Chording",
