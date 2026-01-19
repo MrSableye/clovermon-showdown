@@ -4604,7 +4604,7 @@ explosion: ["8M"],
 curse: ["8M"],
 rockclimb: ["8M"],
 strength: ["8M"],
-precipiceblade: ["8E"],
+precipiceblades: ["8E"],
 				},
 			},
 			molterra: {
