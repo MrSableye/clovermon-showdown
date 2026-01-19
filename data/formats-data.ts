@@ -8584,6 +8584,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	lemirethun: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	lemirethunmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	venireal: {
 		tier: "Illegal",
