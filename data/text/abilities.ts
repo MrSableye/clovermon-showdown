@@ -2532,7 +2532,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
     },
 	lurkingterror: {
 		name: "Lurking Terror",
-		shortDesc: "If Speed stat higher then the Opponent, Damage dealt is multiplied by 1.5x.",
+		shortDesc: "If Speed stat higher then the Opponent, Damage dealt is multiplied by 1.3x.",
 	},
 	blueblood: {
 		name: "Blue Blood",
