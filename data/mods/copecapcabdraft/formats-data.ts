@@ -808,6 +808,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	lemirethunmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	venireal: {
 		inherit: true,
 		isNonstandard: null,

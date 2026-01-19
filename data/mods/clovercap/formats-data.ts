@@ -2475,6 +2475,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	lemirethunmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	venireal: {
 		inherit: true,
 		isNonstandard: null,

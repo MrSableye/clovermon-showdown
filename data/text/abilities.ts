@@ -2530,6 +2530,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
         changeAbility: "  [TARGET] carries the flame!",
     },
+	lurkingterror: {
+		name: "Lurking Terror",
+		shortDesc: "If Speed stat higher then the Opponent, Damage dealt is multiplied by 1.5x.",
+	},
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",
