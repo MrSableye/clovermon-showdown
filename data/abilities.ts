@@ -7626,48 +7626,48 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 	},
 	scorchingsmite: {
-            name: "Scorching Smite",
-            onModifyMove(move) {
-                if (!["Steel"].includes(move.type)) return;
-                if (move.category === 'Status') return;
-                if (!move.secondaries) {
-                    move.secondaries = [];
-                }
-                const burnIndexes = [];
-                move.secondaries.forEach((secondary, secondaryIndex) => {
-                    if (secondary.status === 'brn') {
-                        secondary.chance = (secondary.chance || 0) + 30;
-                        burnIndexes.push(secondaryIndex);
-                    }
-                });
-                if (!burnIndexes.length) {
-                    move.secondaries.push({
-                        chance: 30,
-                        status: 'brn',
-                        ability: this.dex.abilities.get('Scorching Smite'),
-                    });
-                }
-            },
-            onSourceBasePowerPriority: 17,
-            onSourceBasePower(basePower, attacker, defender, move) {
-                if (move.type === 'Fire') {
-                    return this.chainModify(1.25);
-                }
-            },
-            onSourceDamagingHit(damage, target, source, move) {
-                if (move.type === 'Fire') {
-                    const sourceAbility = source.getAbility();
-                    if (sourceAbility.isPermanent || sourceAbility.id === 'scorchingsmite') {
-                        return;
-                    }
-                    const oldAbility = source.setAbility('scorchingsmite', target);
-                    if (oldAbility) {
-                        this.add('-activate', target, 'ability: Scorching Smite', this.dex.abilities.get(oldAbility).name, '[of] ' + source);
-                    }
-                }
-            },
-            isNonstandard: "Future",
-        },
+    name: "Scorching Smite",
+    onModifyMove(move) {
+        if (!["Steel"].includes(move.type)) return;
+        if (move.category === 'Status') return;
+        if (!move.secondaries) {
+            move.secondaries = [];
+        }
+        const burnIndexes = [];
+        move.secondaries.forEach((secondary, secondaryIndex) => {
+            if (secondary.status === 'brn') {
+                secondary.chance = (secondary.chance || 0) + 30;
+                burnIndexes.push(secondaryIndex);
+            }
+        });
+        if (!burnIndexes.length) {
+            move.secondaries.push({
+                chance: 30,
+                status: 'brn',
+                ability: this.dex.abilities.get('Scorching Smite'),
+            });
+        }
+    },
+    onSourceBasePowerPriority: 17,
+    onSourceBasePower(basePower, attacker, defender, move) {
+        if (move.type === 'Fire') {
+            return this.chainModify(1.25);
+        }
+    },
+    onDamagingHit(damage, target, source, move) {
+        if (move.type === 'Fire' && source && source.hp && source.isActive) {
+            const sourceAbility = source.getAbility();
+            if (sourceAbility.isPermanent || sourceAbility.id === 'scorchingsmite') {
+                return;
+            }
+            const oldAbility = source.setAbility('scorchingsmite', target);
+            if (oldAbility) {
+                this.add('-activate', target, 'ability: Scorching Smite', this.dex.abilities.get(oldAbility).name, '[of] ' + source);
+            }
+        }
+    },
+    isNonstandard: "Future",
+},
 		lurkingterror: {
     onBasePowerPriority: 21,
     onBasePower(basePower, attacker, defender, move) {
