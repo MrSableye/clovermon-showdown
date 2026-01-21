@@ -269,7 +269,8 @@ export const Formats: FormatList = [
 			'Swagger Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Weird Flex', 'Stink Bomb'],
+		unbanlist: ['Venowatt', 'Pretzely', 'Chromox' ],
 	},
 	{
 		name: '[Gen 8 Clover Only] Triples OU',
