@@ -4541,7 +4541,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	pretzely: {
 		inherit: true,
-		tier: "Uber",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"boomburst",
@@ -6931,7 +6931,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	tunakking: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"fierydance",
@@ -7146,7 +7146,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	apartmant: {
 		inherit: true,
-		tier: "OU",
+		tier: "UUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"shellsmash",
