@@ -269,7 +269,7 @@ export const Formats: FormatList = [
 			'Swagger Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Weird Flex', 'Stink Bomb'],
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Weird Flex', 'Stink Bomb', 'Inversion'],
 		unbanlist: ['Venowatt', 'Pretzely', 'Chromox' ],
 	},
 	{
