@@ -26953,4 +26953,46 @@ vitreosspiritus: {
     inherit: true,
     isNonstandard: "Past",
 },
+aurion: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+savitarion: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+kageclaw: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+raijin: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+radiabun: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+frostsucold: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+frostsu: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+rosavage: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+obsididread: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+rikusen: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+
+
 };

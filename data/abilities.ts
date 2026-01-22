@@ -21222,6 +21222,569 @@ spectraloverlord: {
 },
 
 
+combatmemory: {
+	name: "Combat Memory",
+	shortDesc: "Learns enemy moves used against it. Repeated uses of the same move against it reduce that move's accuracy (10% → 20% → 40% → 80%). Memory resets on switch-out.",
+
+	onStart(pokemon) {
+		// Initialize the ability memory
+		pokemon.abilityState.learnedMoves = {};
+	},
+
+	// Registers when the Pokémon is hit by a damaging move
+	onDamagingHit(damage, target, source, move) {
+		if (!move || move.category === 'Status') return;
+
+		const mem = target.abilityState.learnedMoves;
+		const id = move.id;
+
+		if (!mem[id]) {
+			mem[id] = 1; // First time: only register, no accuracy reduction yet
+		} else {
+			mem[id]++; // Increment hit count for this move
+		}
+	},
+
+	// Also learns when an attack is blocked by Protect-like moves (Detect, King's Shield, etc.)
+	onTryHit(target, source, move) {
+		if (!move || !move.flags) return;
+
+		// If the move has the protect flag and the target is under a Protect volatile,
+		// count this as learning the move.
+		// Note: the presence of the 'protect' volatile usually indicates the target attempted protection.
+		if (move.flags.protect && target.volatiles && target.volatiles.protect) {
+			const mem = target.abilityState.learnedMoves;
+			const id = move.id;
+
+			if (!mem[id]) mem[id] = 1;
+			else mem[id]++;
+		}
+	},
+
+	// Applies accuracy reduction when the move is used against this Pokémon
+	onModifyMove(move, source, target) {
+		// If there is no target (e.g. self-target or field moves), do nothing
+		if (!target) return;
+
+		// Only apply if the target has this ability
+		if (!target.hasAbility('combatmemory')) return;
+
+		// Do not affect status moves or moves that never miss
+		if (!move || move.category === 'Status' || move.accuracy === true) return;
+
+		const mem = target.abilityState.learnedMoves;
+		if (!mem) return;
+
+		const id = move.id;
+		const hits = mem[id] || 0;
+
+		// Only apply reduction starting from the 2nd time (as per the rules)
+		if (hits < 2) return;
+
+		// Accuracy reduction calculation: doubling each time
+		// 10% → 20% → 40% → 80%, capped at 90% for safety
+		let reduction = 0.1 * Math.pow(2, hits - 2); // hits=2 => 0.1, hits=3 => 0.2, etc.
+		if (reduction > 0.9) reduction = 0.9;
+
+		// move.accuracy can be a number or a function; handle numeric accuracy normally
+		if (typeof move.accuracy === 'number') {
+			// Apply multiplier, keeping at least 1% absolute accuracy
+			const newAcc = Math.max(1, Math.floor(move.accuracy * (1 - reduction)));
+			move.accuracy = newAcc;
+		} else {
+			// If move.accuracy is a function/object (rare),
+			// a fallback could be implemented via onModifyAccuracy.
+			// In practice, the direct adjustment above is sufficient in most cases.
+		}
+	},
+
+	// Clear memory on switch-out
+	onSwitchOut(pokemon) {
+		delete pokemon.abilityState.learnedMoves;
+	},
+},
+
+
+firstlaw: {
+	name: "First Law",
+	shortDesc: "This Pokémon moves before most others. Moves used against it have priority -6. Protection moves fail against it.",
+
+	// Grants a small fractional priority advantage to help with speed ties and edge cases (e.g. Trick Room oddities)
+	onFractionalPriority(priority, pokemon, target, move) {
+		if (pokemon.hasAbility('firstlaw')) return 0.1;
+	},
+
+	// Forces any move used AGAINST the holder to have priority -6 (overrides normal priority)
+	onSourceModifyPriority(priority, source, target, move) {
+		if (!target) return;
+
+		if (target.hasAbility('firstlaw')) {
+			// Explicitly return -6 so the engine treats the move as very low priority
+			return -6;
+		}
+
+		return priority;
+	},
+
+	// Extra: gives an additional advantage to the user (optional).
+	// Can be redundant, but helps in some edge interactions.
+	onModifyPriority(priority, pokemon, target, move) {
+		if (pokemon.hasAbility('firstlaw')) {
+			// +6 usually places the user above most priorities
+			// (not strictly required if onSourceModifyPriority is active)
+			return priority + 6;
+		}
+		return priority;
+	},
+
+	// Causes Protect-like moves to fail against the user
+	onTryHit(target, source, move) {
+		if (!move) return;
+
+		if (target.hasAbility('firstlaw') && move.flags && move.flags.protect) {
+			this.add('-fail', source);
+			this.add('-message', `${source.name} tried to protect itself, but the First Law overruled it!`);
+			return null;
+		}
+	},
+},
+
+
+
+
+flyingthunderwarp: {
+    name: "Flying Thunder Warp",
+    shortDesc: "Teleport gains +6 priority and strikes the foe with Thunderbolt before switching out.",
+    
+    onModifyPriority(priority, pokemon, target, move) {
+        if (move?.id === 'teleport') {
+            return 6;
+        }
+    },
+
+    
+    onTryMove(pokemon, target, move) {
+       
+        if (move.id !== 'teleport') return;
+
+        
+        const possibleTarget = pokemon.side.foe.active.find(p => p && !p.fainted);
+
+        
+        if (!possibleTarget) return;
+
+        this.add('-ability', pokemon, 'Flying Thunder Warp');
+        this.add('-message', `${pokemon.name} vanished in a flash of lightning!`);
+
+        
+        this.actions.useMove('thunderbolt', pokemon, possibleTarget);
+
+        
+    },
+},
+
+genjutsudomain: {
+  name: "Genjutsu Domain",
+  shortDesc: "Traps foes in a Genjutsu. After a KO, Mangekyō activates, granting hidden power at a great cost.",
+
+  onStart(target) {
+    this.effectState.mangekyo = false;
+  },
+
+  
+  onResidual(target) {
+    
+    if (!this.effectState.mangekyo) {
+      this.boost({ atk: -1, spa: -1 }, target);
+    } else {
+      
+      this.damage(target.baseMaxhp / 5, target);
+    }
+
+    
+    for (const foe of target.side.foe.active) {
+      if (!foe || foe.fainted) continue;
+      if (!foe.volatiles['confusion']) {
+        foe.addVolatile('confusion');
+      }
+    }
+  },
+
+  
+  onModifyAccuracy(accuracy, source, target, move) {
+    if (target.hasAbility('genjutsudomain') && source.side !== target.side) {
+      return this.chainModify(0.8);
+    }
+  },
+
+  
+  onTryMove(source, target, move) {
+    if (target.hasAbility('genjutsudomain') && source.side !== target.side) {
+      if (this.randomChance(1, 5)) {
+        this.add('-message', `${source.name} was trapped in an illusion!`);
+        return false;
+      }
+    }
+  },
+
+  
+  onSourceAfterFaint(length, target, source) {
+    if (!source || source.fainted) return;
+    if (source.hasAbility('genjutsudomain') && !this.effectState.mangekyo) {
+      this.effectState.mangekyo = true;
+
+      
+      source.clearBoosts();
+
+      this.add('-message', 'Mangekyō activated!');
+    }
+  },
+
+ 
+  onModifyCritRatio(critRatio, source, target) {
+    if (this.effectState.mangekyo) {
+      return 5; 
+    }
+  },
+
+  onModifyAtk(atk, source) {
+    if (this.effectState.mangekyo) {
+      return this.chainModify(2);
+    }
+  },
+
+  onModifySpA(spa, source) {
+    if (this.effectState.mangekyo) {
+      return this.chainModify(2);
+    }
+  },
+},
+
+abyssalbreaker: {
+	name: "Abyssal Breaker",
+	shortDesc: "Contact moves remove the target's item. At or below 50% HP, Shell Smash is used once. Ground moves become Ground/Water.",
+
+	onStart(pokemon) {
+		pokemon.abilityState.shellSmashUsed = false;
+
+		if (pokemon.hp <= pokemon.maxhp / 2) {
+			this.add('-ability', pokemon, 'Abyssal Breaker');
+			this.actions.useMove('shellsmash', pokemon);
+			pokemon.abilityState.shellSmashUsed = true;
+		}
+	},
+
+	onDamage(damage, target) {
+		const state = target.abilityState;
+
+		if (!state.shellSmashUsed && target.hp <= target.maxhp / 2) {
+			this.add('-ability', target, 'Abyssal Breaker');
+			this.actions.useMove('shellsmash', target);
+			state.shellSmashUsed = true;
+		}
+	},
+
+	onAfterMove(source, target, move) {
+		if (!move || !target) return;
+		if (!move.flags?.contact) return;
+		if (!target.item || target.item === 'none') return;
+		if (target.hasAbility('stickyhold')) return;
+
+		this.add('-ability', source, 'Abyssal Breaker');
+		target.takeItem(source);
+	},
+
+	onModifyMove(move) {
+		if (move.type !== 'Ground') return;
+
+		(move as any).secondType = 'Water';
+	},
+},
+
+
+venomgenesis: {
+	name: "Venom Genesis",
+	shortDesc: "At full HP, the first hit taken is reduced to 10% damage. Physical attackers take recoil and may be badly poisoned. Poison moves gain 2x STAB and ignore immunities.",
+
+	onStart(pokemon) {
+		pokemon.abilityState.firstHitConsumed = false;
+	},
+
+	// First hit at full HP is reduced to 10%
+	onSourceModifyDamage(damage, source, target, move) {
+		if (!move || move.category === 'Status') return;
+
+		const state = target.abilityState;
+
+		if (state.firstHitConsumed || target.hp < target.maxhp) return;
+
+		state.firstHitConsumed = true;
+		this.add('-ability', target, 'Venom Genesis');
+
+		return this.chainModify(0.1);
+	},
+
+	// Recoil + poison chance to the attacker
+	onDamagingHit(damage, target, source, move) {
+		if (!move || move.category === 'Status') return;
+		if (!source || source.fainted) return;
+
+		const state = target.abilityState;
+		if (!state.firstHitConsumed) return;
+
+		// Physical attacker takes recoil
+		if (move.category === 'Physical') {
+			this.damage(source.baseMaxhp / 8, source, target);
+		}
+
+		// 50% chance to badly poison the attacker
+		if (!source.status && this.randomChance(1, 2)) {
+			source.trySetStatus('tox', target);
+		}
+	},
+
+	// Poison Adaptability + ignore immunity
+	onModifyMove(move) {
+		if (move.type !== 'Poison') return;
+
+		move.stab = 2;
+		(move as any).ignoreImmunity = true;
+	},
+
+	onSwitchOut(pokemon) {
+		pokemon.abilityState.firstHitConsumed = false;
+	},
+},
+
+
+timecollapse: {
+	name: "Time Collapse",
+	onAfterMove(source, target, move) {
+		if (!move.flags?.futuremove) return;
+
+		const side = target.side;
+		const position = target.position;
+		const slot = side.slotConditions[position]?.futuremove;
+
+		if (!slot) return;
+
+		
+		this.add('-activate', source, 'ability: Time Collapse');
+		this.runEvent(
+			'FutureMoveHit',
+			target,
+			source,
+			slot.moveData,
+			slot
+		);
+
+		
+		delete side.slotConditions[position].futuremove;
+	},
+},
+
+substitutionjutsu: {
+	name: "Substitution Jutsu",
+	shortDesc: "If hit by a strong attack, may create a reinforced Substitute. Using Subzero Slammer triggers a transformation.",
+
+	onDamage(damage, target, source, effect) {
+		if (!effect || typeof effect !== 'object') return;
+
+		const move = effect as ActiveMove;
+
+		if (move.category === 'Status') return;
+		if (target.volatiles['substitute']) return;
+
+		const maxHP = target.maxhp;
+
+		// Ignore fixed damage / OHKO
+		if (move.damage || move.ohko) return;
+
+		if (damage > maxHP / 2 && this.randomChance(1, 2)) {
+			this.add('-ability', target, 'Substitution Jutsu');
+			this.add('-message', `${target.name} used Substitution Jutsu!`);
+
+			target.addVolatile('substitute');
+
+			const sub = target.volatiles['substitute'] as any;
+			if (sub) {
+				sub.hp = Math.floor(maxHP / 2);
+			}
+
+			return Math.floor(maxHP / 4);
+		}
+	},
+
+	// 🔥 Z-MOVE TRANSFORMATION LOGIC
+	onAfterMove(source, target, move) {
+		if (!move || !source) return;
+
+		// Must be Subzero Slammer
+		if (!move.isZ || move.id !== 'subzeroslammer') return;
+
+		// Prevent re-trigger
+		if (source.transformed) return;
+
+		this.add('-ability', source, 'Substitution Jutsu');
+		this.add('-message', `${source.name} is enveloped by absolute zero!`);
+
+		// Forme Change
+		source.formeChange('Frostsu-Cold', this.effect, true);
+
+		// Clear status, boosts and volatiles
+		source.clearStatus();
+		source.clearBoosts();
+		source.volatiles = {};
+
+		// Full heal after transformation
+		source.heal(source.maxhp);
+		this.add('-heal', source, source.getHealth, '[silent]');
+
+		this.add('-message', `${source.name} transformed into Frostsu-Cold!`);
+	},
+},
+
+hyouton: {
+	name: "Hyouton",
+	shortDesc: "Summons Hail. Water moves become Ice. Fire moves fail. Opponents' Speed is reduced. Ice moves never miss.",
+
+	// Summon Hail on entry
+	onStart(pokemon) {
+		this.add('-ability', pokemon, 'Hyouton');
+
+		if (this.field.weather !== 'hail') {
+			this.field.setWeather('hail', pokemon);
+		}
+	},
+
+	// Reapply Hail every turn if removed
+	onResidual(pokemon) {
+		if (this.field.weather !== 'hail') {
+			this.field.setWeather('hail', pokemon);
+		}
+	},
+
+	// Water → Ice + Ice moves never miss
+	onModifyMove(move) {
+		if (move.type === 'Water') {
+			move.type = 'Ice';
+		}
+
+		if (move.type === 'Ice') {
+			move.accuracy = true;
+		}
+	},
+
+	// 🔥 Fire-type moves always fail
+	onTryMove(pokemon, target, move) {
+		if (move.type === 'Fire') {
+			this.add('-immune', target, '[from] ability: Hyouton');
+			return false;
+		}
+	},
+
+	// Hidden Speed reduction
+	onAnyModifySpe(spe, pokemon) {
+		const source = this.effectState.target;
+		if (!source || pokemon === source) return;
+
+		return this.chainModify(0.2);
+	},
+},
+
+lastresolve: {
+	name: "Last Resolve",
+	shortDesc: "Below 50% HP, the next attack has 70% accuracy, ignores Protect/Substitute, always OHKOs, lowers foe priority by 2. The user survives only if it is the last Pokémon alive and the move hits.",
+
+	onStart(pokemon) {
+		pokemon.abilityState.lastResolveUsed = false;
+		pokemon.abilityState.lastResolveActive = false;
+	},
+
+	// Activate when HP drops to 50% or below
+	onResidual(pokemon) {
+		const state = pokemon.abilityState;
+		if (state.lastResolveUsed) return;
+
+		if (pokemon.hp > 0 && pokemon.hp <= pokemon.maxhp / 2) {
+			state.lastResolveActive = true;
+			state.lastResolveUsed = true;
+
+			this.add('-ability', pokemon, 'Last Resolve');
+			this.add('-message', `${pokemon.name} enters its final stand!`);
+		}
+	},
+
+	// Modify the empowered move
+	onModifyMove(move, source) {
+		const state = source.abilityState;
+		if (!state?.lastResolveActive) return;
+
+		if (move.category === 'Status') return;
+		if (move.multihit) return;
+
+		// Fixed accuracy
+		move.accuracy = 70;
+
+		// Guaranteed KO on hit
+		move.ohko = true;
+
+		// Bypass Substitute
+		move.infiltrates = true;
+	},
+
+	// Ignore Protect-like moves during Last Resolve
+	onTryHit(target, source, move) {
+		const state = source?.abilityState;
+		if (!state?.lastResolveActive) return;
+
+		// If the target is protecting, allow the hit anyway
+		if (target.volatiles?.protect) {
+			this.add('-ability', source, 'Last Resolve');
+			this.add('-message', `${source.name} breaks through the protection!`);
+			return true;
+		}
+	},
+
+	// Lower opponent move priority by 2
+	onSourceModifyPriority(priority, source, target) {
+		if (target?.hasAbility('lastresolve')) {
+			return priority - 2;
+		}
+		return priority;
+	},
+
+	// Post-move survival logic
+	onAfterMove(source, target, move) {
+		const state = source.abilityState;
+		if (!state?.lastResolveActive) return;
+
+		const isLastAlive =
+			source.side.pokemon.filter(p => !p.fainted).length === 1;
+
+		if (isLastAlive && target && target.fainted) {
+			this.add('-message', `${source.name} stands victorious against all odds!`);
+		} else {
+			this.add('-message', `${source.name}'s body gave out after the final resolve!`);
+			source.faint();
+		}
+
+		state.lastResolveActive = false;
+	},
+
+	onSwitchOut(pokemon) {
+		pokemon.abilityState.lastResolveUsed = false;
+		pokemon.abilityState.lastResolveActive = false;
+	},
+},
+
+
+
+
+
+
+
+
 
 
 
