@@ -30933,4 +30933,51 @@ vitreosspiritus: {
     tier: "Illegal",
     isNonstandard: "Future",
 },
+aurion: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+savitarion: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+kageclaw: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+raijin: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+radiabun: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+frostsucold: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+frostsu: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+rosavage: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+obsididread: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+rikusen: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+arcanor: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+
+
+
 };
