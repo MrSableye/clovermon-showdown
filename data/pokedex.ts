@@ -122591,7 +122591,7 @@ bewilderbeast: {
 	kageclaw: {
         num: -90015,
         name: "Kageclaw",
-        types: ["Fight"],
+        types: ["Fighting"],
         genderRatio: {M: 0.5, F: 0.5},
         baseStats: {hp: 150, atk: 10, def: 90, spa: 140, spd: 80, spe: 80},
         abilities: {0: "Combat Memory"},
