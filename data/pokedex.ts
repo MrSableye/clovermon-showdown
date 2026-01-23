@@ -122634,6 +122634,23 @@ bewilderbeast: {
     },
 
 
+	arcanor: {
+        num: -90017,
+        name: "Arcanor",
+        types: ["Psychic"],
+        genderRatio: {M: 0.5, F: 0.5},
+        baseStats: {hp: 100, atk: 10, def: 80, spa: 140, spd: 120, spe: 100},
+        abilities: {0: "Two Move Jammer"},
+        heightm: 2.0,
+        weightkg: 300,
+        color: "White",
+        eggGroups: ["Human-Like"],
+        gen: 0,
+        creator: "sungshadowwoo",
+    },
+
+
+
 
 
 };

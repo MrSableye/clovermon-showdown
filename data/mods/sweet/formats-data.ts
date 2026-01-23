@@ -28733,6 +28733,10 @@ rikusen: {
     inherit: true,
     isNonstandard: "Past",
 },
+arcanor: {
+    inherit: true,
+    isNonstandard: "Past",
+},
 
 
 };

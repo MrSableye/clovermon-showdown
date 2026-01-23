@@ -30969,6 +30969,10 @@ rikusen: {
     tier: "Illegal",
     isNonstandard: "Future",
 },
+arcanor: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
 
 
 

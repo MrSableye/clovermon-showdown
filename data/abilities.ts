@@ -21779,6 +21779,82 @@ lastresolve: {
 },
 
 
+twomovejammer: {
+  name: "Two Move Jammer",
+  shortDesc: "When this Pokémon is on the field: upon entering or when a foe enters, 2 random moves from the foe's moveset are disabled. Disabled moves fail if used immediately.",
+  
+  // Triggered when the Pokémon with this ability enters the field
+  onStart(pokemon) {
+    this.add('-ability', pokemon, 'Two Move Jammer');
+
+    // Disable 2 random moves from each active opposing Pokémon
+    for (const foe of pokemon.side.foe.active) {
+      if (!foe || foe.fainted) continue;
+
+      // Get eligible moves (not already disabled and not Struggle)
+      const eligible = foe.moveSlots
+        .filter(ms => ms.id && ms.id !== 'struggle' && !ms.disabled)
+        .map(ms => ms.id);
+
+      if (!eligible.length) continue;
+
+      // Randomly pick up to 2 moves
+      const picked = [];
+      for (let i = 0; i < 2 && eligible.length; i++) {
+        const index = this.random(eligible.length);
+        picked.push(eligible.splice(index, 1)[0]);
+      }
+
+      // Disable selected moves
+      for (const moveid of picked) {
+        foe.disableMove(moveid);
+        this.add('-start', foe, 'Disable', this.dex.moves.get(moveid).name);
+      }
+    }
+  },
+
+  // Triggered whenever an opposing Pokémon switches in
+  onFoeSwitchIn(pokemon) {
+    const holder = this.effectState.target;
+    if (!holder || holder.fainted) return;
+    if (pokemon.side === holder.side) return;
+
+    this.add('-ability', holder, 'Two Move Jammer', '[from] ability');
+
+    const eligible = pokemon.moveSlots
+      .filter(ms => ms.id && ms.id !== 'struggle' && !ms.disabled)
+      .map(ms => ms.id);
+
+    if (!eligible.length) return;
+
+    const picked = [];
+    for (let i = 0; i < 2 && eligible.length; i++) {
+      const index = this.random(eligible.length);
+      picked.push(eligible.splice(index, 1)[0]);
+    }
+
+    for (const moveid of picked) {
+      pokemon.disableMove(moveid);
+      this.add('-start', pokemon, 'Disable', this.dex.moves.get(moveid).name);
+    }
+  },
+
+  // Prevents a foe from using a move that has just been disabled
+  // Covers cases where the foe attacks on the same turn as a switch
+  onFoeTryMove(target, source, move) {
+    const holder = this.effectState.target;
+    if (!holder || holder.fainted) return;
+    if (source.side === holder.side) return;
+
+    const moveSlot = source.moveSlots.find(ms => ms.id === move.id);
+    if (moveSlot && moveSlot.disabled) {
+      this.add('-fail', source, move.name, '[from] ability: Two Move Jammer');
+      return null;
+    }
+  },
+},
+
+
 
 
 
