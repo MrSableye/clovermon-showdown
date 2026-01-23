@@ -122606,7 +122606,7 @@ bewilderbeast: {
 	savitarion: {
         num: -90016,
         name: "Savitarion",
-        types: ["Fight"],
+        types: ["Fighting"],
         genderRatio: {M: 0.5, F: 0.5},
         baseStats: {hp: 110, atk: 190, def: 150, spa: 10, spd: 80, spe: 10},
         abilities: {0: "First Law"},
