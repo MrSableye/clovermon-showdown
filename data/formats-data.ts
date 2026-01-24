@@ -30977,6 +30977,31 @@ arcanor: {
     tier: "Illegal",
     isNonstandard: "Future",
 },
+beru: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+igris: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+iron: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+tuskshadow: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+tankshadow: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+kaisel: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+
 
 
 
