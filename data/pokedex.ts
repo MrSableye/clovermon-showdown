@@ -122696,7 +122696,7 @@ iron: {
 
 tuskshadow: {
     num: -90021,
-    name: "Tusk",
+    name: "Tusk Shadow",
     types: ["Ghost", "Psychic"],
     genderRatio: {M: 0.5, F: 0.5},
     baseStats: {hp: 110, atk: 10, def: 70, spa: 150, spd: 140, spe: 110},
@@ -122712,7 +122712,7 @@ tuskshadow: {
 
 tankshadow: {
     num: -90023,
-    name: "Tank",
+    name: "Tank Shadow",
     types: ["Ghost", "Ice"],
     genderRatio: {M: 0.5, F: 0.5},
     baseStats: {hp: 170, atk: 120, def: 160, spa: 10, spd: 100, spe: 30},
