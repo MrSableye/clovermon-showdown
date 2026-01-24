@@ -21320,47 +21320,38 @@ combatmemory: {
 
 firstlaw: {
 	name: "First Law",
-	shortDesc: "This Pokémon moves before most others. Moves used against it have priority -6. Protection moves fail against it.",
+	shortDesc: "Moves used against this Pokémon act last. Protect-like moves fail against it.",
 
-	// Grants a small fractional priority advantage to help with speed ties and edge cases (e.g. Trick Room oddities)
-	onFractionalPriority(priority, pokemon, target, move) {
+	
+	onFractionalPriority(priority, pokemon) {
 		if (pokemon.hasAbility('firstlaw')) return 0.1;
 	},
 
-	// Forces any move used AGAINST the holder to have priority -6 (overrides normal priority)
-	onSourceModifyPriority(priority, source, target, move) {
-		if (!target) return;
+	
+	onSourceModifyPriority(priority, source, target) {
+		if (!target) return priority;
 
 		if (target.hasAbility('firstlaw')) {
-			// Explicitly return -6 so the engine treats the move as very low priority
 			return -6;
 		}
 
 		return priority;
 	},
 
-	// Extra: gives an additional advantage to the user (optional).
-	// Can be redundant, but helps in some edge interactions.
-	onModifyPriority(priority, pokemon, target, move) {
-		if (pokemon.hasAbility('firstlaw')) {
-			// +6 usually places the user above most priorities
-			// (not strictly required if onSourceModifyPriority is active)
-			return priority + 6;
-		}
-		return priority;
-	},
+	onTryMove(source, target, move) {
+		if (!target) return;
 
-	// Causes Protect-like moves to fail against the user
-	onTryHit(target, source, move) {
-		if (!move) return;
-
-		if (target.hasAbility('firstlaw') && move.flags && move.flags.protect) {
+		if (
+			target.hasAbility('firstlaw') &&
+			move.flags?.protect
+		) {
 			this.add('-fail', source);
-			this.add('-message', `${source.name} tried to protect itself, but the First Law overruled it!`);
+			this.add('-message', `${source.name}'s protection was overridden by the First Law!`);
 			return null;
 		}
 	},
 },
+
 
 
 
@@ -21397,25 +21388,27 @@ flyingthunderwarp: {
 },
 
 genjutsudomain: {
+  id: "genjutsudomain",
   name: "Genjutsu Domain",
-  shortDesc: "Traps foes in a Genjutsu. After a KO, Mangekyō activates, granting hidden power at a great cost.",
+  shortDesc:
+    "Traps foes in a Genjutsu. After a KO, Mangekyō activates, removing negative stat drops and greatly empowering the user at a cost.",
 
-  onStart(target) {
-    this.effectState.mangekyo = false;
+  onStart(pokemon) {
+    pokemon.abilityState.mangekyo = false;
   },
 
-  
-  onResidual(target) {
-    
-    if (!this.effectState.mangekyo) {
-      this.boost({ atk: -1, spa: -1 }, target);
+  // Residual effects each turn
+  onResidual(pokemon) {
+    // Pre-Mangekyō drawback
+    if (!pokemon.abilityState.mangekyo) {
+      this.boost({ atk: -1, spa: -1 }, pokemon);
     } else {
-      
-      this.damage(target.baseMaxhp / 5, target);
+      // Mangekyō cost
+      this.damage(pokemon.baseMaxhp / 5, pokemon);
     }
 
-    
-    for (const foe of target.side.foe.active) {
+    // Trap foes in illusion
+    for (const foe of pokemon.side.foe.active) {
       if (!foe || foe.fainted) continue;
       if (!foe.volatiles['confusion']) {
         foe.addVolatile('confusion');
@@ -21423,16 +21416,16 @@ genjutsudomain: {
     }
   },
 
-  
-  onModifyAccuracy(accuracy, source, target, move) {
-    if (target.hasAbility('genjutsudomain') && source.side !== target.side) {
+  // Accuracy reduction against the domain user
+  onModifyAccuracy(accuracy, source, target) {
+    if (target?.hasAbility('genjutsudomain') && source.side !== target.side) {
       return this.chainModify(0.8);
     }
   },
 
-  
+  // Chance to fully block the foe's move
   onTryMove(source, target, move) {
-    if (target.hasAbility('genjutsudomain') && source.side !== target.side) {
+    if (target?.hasAbility('genjutsudomain') && source.side !== target.side) {
       if (this.randomChance(1, 5)) {
         this.add('-message', `${source.name} was trapped in an illusion!`);
         return false;
@@ -21441,78 +21434,95 @@ genjutsudomain: {
   },
 
   
-  onSourceAfterFaint(length, target, source) {
+  onSourceAfterFaint(target, source, effect) {
     if (!source || source.fainted) return;
-    if (source.hasAbility('genjutsudomain') && !this.effectState.mangekyo) {
-      this.effectState.mangekyo = true;
+    if (!source.hasAbility('genjutsudomain')) return;
+    if (source.abilityState.mangekyo) return;
 
-      
-      source.clearBoosts();
+    // Activate Mangekyō
+    source.abilityState.mangekyo = true;
 
-      this.add('-message', 'Mangekyō activated!');
+    // Remove ONLY negative stat drops
+    const cleared = {};
+    for (const stat in source.boosts) {
+      if (source.boosts[stat] < 0) {
+        cleared[stat] = -source.boosts[stat];
+      }
     }
+    if (Object.keys(cleared).length) {
+      this.boost(cleared, source);
+    }
+
+    this.add('-activate', source, 'ability: Genjutsu Domain');
+    this.add('-message', 'Mangekyō activated!');
   },
 
- 
-  onModifyCritRatio(critRatio, source, target) {
-    if (this.effectState.mangekyo) {
-      return 5; 
+  // Mangekyō offensive power
+  onModifyCritRatio(critRatio, source) {
+    if (source.abilityState.mangekyo) {
+      return critRatio + 3; // effectively near-guaranteed crits
     }
   },
 
   onModifyAtk(atk, source) {
-    if (this.effectState.mangekyo) {
+    if (source.abilityState.mangekyo) {
       return this.chainModify(2);
     }
   },
 
   onModifySpA(spa, source) {
-    if (this.effectState.mangekyo) {
+    if (source.abilityState.mangekyo) {
       return this.chainModify(2);
     }
   },
 },
 
+
 abyssalbreaker: {
-	name: "Abyssal Breaker",
-	shortDesc: "Contact moves remove the target's item. At or below 50% HP, Shell Smash is used once. Ground moves become Ground/Water.",
+  id: "abyssalbreaker",
+  name: "Abyssal Breaker",
+  shortDesc:
+    "Contact moves remove the target's item. At or below 50% HP, Shell Smash is used once. Ground moves become Ground/Water.",
 
-	onStart(pokemon) {
-		pokemon.abilityState.shellSmashUsed = false;
+  onStart(pokemon) {
+    pokemon.abilityState.shellSmashUsed = false;
 
-		if (pokemon.hp <= pokemon.maxhp / 2) {
-			this.add('-ability', pokemon, 'Abyssal Breaker');
-			this.actions.useMove('shellsmash', pokemon);
-			pokemon.abilityState.shellSmashUsed = true;
-		}
-	},
+    if (pokemon.hp <= pokemon.maxhp / 2) {
+      this.add('-ability', pokemon, 'Abyssal Breaker');
+      this.actions.useMove('shellsmash', pokemon);
+      pokemon.abilityState.shellSmashUsed = true;
+    }
+  },
 
-	onDamage(damage, target) {
-		const state = target.abilityState;
+  onDamage(damage, target) {
+    const state = target.abilityState;
 
-		if (!state.shellSmashUsed && target.hp <= target.maxhp / 2) {
-			this.add('-ability', target, 'Abyssal Breaker');
-			this.actions.useMove('shellsmash', target);
-			state.shellSmashUsed = true;
-		}
-	},
+    if (!state.shellSmashUsed && target.hp <= target.maxhp / 2) {
+      this.add('-ability', target, 'Abyssal Breaker');
+      this.actions.useMove('shellsmash', target);
+      state.shellSmashUsed = true;
+    }
+  },
 
-	onAfterMove(source, target, move) {
-		if (!move || !target) return;
-		if (!move.flags?.contact) return;
-		if (!target.item || target.item === 'none') return;
-		if (target.hasAbility('stickyhold')) return;
+  // Remove item on contact
+  onAfterMove(source, target, move) {
+    if (!move || !target) return;
+    if (!move.flags?.contact) return;
+    if (!target.item || target.item === 'none') return;
+    if (target.hasAbility('stickyhold')) return;
 
-		this.add('-ability', source, 'Abyssal Breaker');
-		target.takeItem(source);
-	},
+    this.add('-ability', source, 'Abyssal Breaker');
+    target.takeItem(source);
+  },
 
-	onModifyMove(move) {
-		if (move.type !== 'Ground') return;
-
-		(move as any).secondType = 'Water';
-	},
+  
+  onModifyType(move, pokemon) {
+    if (move.type === 'Ground') {
+      return ['Ground', 'Water'];
+    }
+  },
 },
+
 
 
 venomgenesis: {
@@ -21571,91 +21581,118 @@ venomgenesis: {
 
 
 timecollapse: {
-	name: "Time Collapse",
-	onAfterMove(source, target, move) {
-		if (!move.flags?.futuremove) return;
+  id: "timecollapse",
+  name: "Time Collapse",
+  onAfterMove(source, target, move) {
+    if (!move.flags || !move.flags.futuremove) return;
 
-		const side = target.side;
-		const position = target.position;
-		const slot = side.slotConditions[position]?.futuremove;
+    const side = target.side;
+    const position = target.position;
+    const slot = side.slotConditions?.[position]?.futuremove;
+    if (!slot) return;
 
-		if (!slot) return;
+    
+    const futureTarget = slot.target || side.active[position];
+    const futureSource = slot.source || source;
+    const futureMoveData = slot.moveData;
 
-		
-		this.add('-activate', source, 'ability: Time Collapse');
-		this.runEvent(
-			'FutureMoveHit',
-			target,
-			source,
-			slot.moveData,
-			slot
-		);
+    this.add('-activate', source, 'ability: Time Collapse');
 
-		
-		delete side.slotConditions[position].futuremove;
-	},
+   
+    this.runEvent('FutureMoveHit', futureTarget, futureSource, futureMoveData, slot);
+
+    
+    if (side.slotConditions && side.slotConditions[position]) {
+      delete side.slotConditions[position].futuremove;
+    }
+  },
 },
+
 
 substitutionjutsu: {
-	name: "Substitution Jutsu",
-	shortDesc: "If hit by a strong attack, may create a reinforced Substitute. Using Subzero Slammer triggers a transformation.",
+  id: "substitutionjutsu",
+  name: "Substitution Jutsu",
+  shortDesc:
+    "If hit by a strong attack, may create a reinforced Substitute (max 2 times per battle). Using Subzero Slammer triggers a transformation.",
 
-	onDamage(damage, target, source, effect) {
-		if (!effect || typeof effect !== 'object') return;
+  // Initialize per-battle state
+  onStart(pokemon) {
+    pokemon.abilityState.subJutsuUses = 0;
+    pokemon.abilityState.subJutsuTransformed = false;
+  },
 
-		const move = effect as ActiveMove;
+  // Defensive trigger
+  onDamage(damage, target, source, effect) {
+    if (!effect || typeof effect !== 'object') return;
 
-		if (move.category === 'Status') return;
-		if (target.volatiles['substitute']) return;
+    // Max 2 activations per battle
+    if (target.abilityState.subJutsuUses >= 2) return;
 
-		const maxHP = target.maxhp;
+    const move = effect as ActiveMove;
 
-		// Ignore fixed damage / OHKO
-		if (move.damage || move.ohko) return;
+    // Ignore status moves
+    if (move.category === 'Status') return;
 
-		if (damage > maxHP / 2 && this.randomChance(1, 2)) {
-			this.add('-ability', target, 'Substitution Jutsu');
-			this.add('-message', `${target.name} used Substitution Jutsu!`);
+    // Do not activate if already behind a Substitute
+    if (target.volatiles['substitute']) return;
 
-			target.addVolatile('substitute');
+    const maxHP = target.maxhp;
 
-			const sub = target.volatiles['substitute'] as any;
-			if (sub) {
-				sub.hp = Math.floor(maxHP / 2);
-			}
+    // Ignore fixed damage / OHKO moves
+    if (move.damage || move.ohko) return;
 
-			return Math.floor(maxHP / 4);
-		}
-	},
+    // Trigger condition
+    if (damage > maxHP / 2 && this.randomChance(1, 2)) {
+      this.add('-ability', target, 'Substitution Jutsu');
+      this.add('-message', `${target.name} used Substitution Jutsu!`);
 
-	// 🔥 Z-MOVE TRANSFORMATION LOGIC
-	onAfterMove(source, target, move) {
-		if (!move || !source) return;
+      // Count usage
+      target.abilityState.subJutsuUses++;
 
-		// Must be Subzero Slammer
-		if (!move.isZ || move.id !== 'subzeroslammer') return;
+      // Create reinforced Substitute
+      target.addVolatile('substitute');
+      const sub = target.volatiles['substitute'];
+      if (sub) {
+        sub.hp = Math.floor(maxHP / 2);
+      }
 
-		// Prevent re-trigger
-		if (source.transformed) return;
+      // Reduce damage taken
+      return Math.floor(maxHP / 4);
+    }
+  },
 
-		this.add('-ability', source, 'Substitution Jutsu');
-		this.add('-message', `${source.name} is enveloped by absolute zero!`);
+  // 🔥 Z-MOVE TRANSFORMATION LOGIC
+  onAfterZMove(source, target, move) {
+    // Must be Subzero Slammer
+    if (move.id !== 'subzeroslammer') return;
 
-		// Forme Change
-		source.formeChange('Frostsu-Cold', this.effect, true);
+    // Prevent multiple transformations
+    if (source.abilityState.subJutsuTransformed) return;
+    source.abilityState.subJutsuTransformed = true;
 
-		// Clear status, boosts and volatiles
-		source.clearStatus();
-		source.clearBoosts();
-		source.volatiles = {};
+    this.add('-ability', source, 'Substitution Jutsu');
+    this.add('-message', `${source.name} is enveloped by absolute zero!`);
 
-		// Full heal after transformation
-		source.heal(source.maxhp);
-		this.add('-heal', source, source.getHealth, '[silent]');
+    // Forme Change
+    source.formeChange('Frostsu-Cold', this.effect, true);
 
-		this.add('-message', `${source.name} transformed into Frostsu-Cold!`);
-	},
+    // Clear status and boosts
+    source.clearStatus();
+    source.clearBoosts();
+
+    // Safely remove all volatile conditions
+    for (const v in source.volatiles) {
+      source.removeVolatile(v);
+    }
+
+    // Full heal after transformation
+    source.heal(source.maxhp);
+    this.add('-heal', source, source.getHealth, '[silent]');
+
+    this.add('-message', `${source.name} transformed into Frostsu-Cold!`);
+  },
 },
+
 
 hyouton: {
 	name: "Hyouton",
@@ -21707,7 +21744,7 @@ hyouton: {
 
 lastresolve: {
 	name: "Last Resolve",
-	shortDesc: "Below 50% HP, the next attack has 70% accuracy, ignores Protect/Substitute, always OHKOs, lowers foe priority by 2. The user survives only if it is the last Pokémon alive and the move hits.",
+	shortDesc: "Below 50% HP, the next attack has 80% accuracy, ignores Protect/Substitute, always OHKOs, lowers foe priority by 2. The user survives only if it is the last Pokémon alive and the move hits.",
 
 	onStart(pokemon) {
 		pokemon.abilityState.lastResolveUsed = false;
@@ -21737,7 +21774,7 @@ lastresolve: {
 		if (move.multihit) return;
 
 		// Fixed accuracy
-		move.accuracy = 70;
+		move.accuracy = 80;
 
 		// Guaranteed KO on hit
 		move.ohko = true;
@@ -21793,32 +21830,58 @@ lastresolve: {
 
 
 twomovejammer: {
+  id: "twomovejammer",
   name: "Two Move Jammer",
-  shortDesc: "When this Pokémon is on the field: upon entering or when a foe enters, 2 random moves from the foe's moveset are disabled. Disabled moves fail if used immediately.",
-  
-  // Triggered when the Pokémon with this ability enters the field
+  shortDesc:
+    "While this Pokémon is on the field, upon entering or when a foe enters, 2 random moves of the foe are disabled.",
+
+  // When the ability holder enters the field
   onStart(pokemon) {
     this.add('-ability', pokemon, 'Two Move Jammer');
+    this.applyTwoMoveDisable(pokemon);
+  },
 
-    // Disable 2 random moves from each active opposing Pokémon
-    for (const foe of pokemon.side.foe.active) {
-      if (!foe || foe.fainted) continue;
+  // When an opposing Pokémon switches in
+  onFoeSwitchIn(target) {
+    const holder = this.effectState.target;
+    if (!holder || holder.fainted) return;
+    if (target.side === holder.side) return;
 
-      // Get eligible moves (not already disabled and not Struggle)
+    this.add('-ability', holder, 'Two Move Jammer', '[from] ability');
+    this.applyTwoMoveDisable(holder, target);
+  },
+
+  // Helper method
+  applyTwoMoveDisable(holder, specificTarget = null) {
+    const foes = specificTarget
+      ? [specificTarget]
+      : holder.side.foe.active.filter(p => p && !p.fainted);
+
+    for (const foe of foes) {
       const eligible = foe.moveSlots
-        .filter(ms => ms.id && ms.id !== 'struggle' && !ms.disabled)
+        .filter(ms =>
+          ms.id &&
+          ms.id !== 'struggle' &&
+          !ms.disabled
+        )
         .map(ms => ms.id);
 
       if (!eligible.length) continue;
 
-      // Randomly pick up to 2 moves
       const picked = [];
       for (let i = 0; i < 2 && eligible.length; i++) {
-        const index = this.random(eligible.length);
-        picked.push(eligible.splice(index, 1)[0]);
+        const idx = this.random(eligible.length);
+        picked.push(eligible.splice(idx, 1)[0]);
       }
 
-      // Disable selected moves
+      // Remove old volatile if it exists
+      foe.removeVolatile('twomovejammer');
+
+      // Apply volatile with stored moves
+      foe.addVolatile('twomovejammer', holder);
+      foe.volatiles.twomovejammer.effectState.moves = picked;
+
+      // Immediately disable the moves
       for (const moveid of picked) {
         foe.disableMove(moveid);
         this.add('-start', foe, 'Disable', this.dex.moves.get(moveid).name);
@@ -21826,46 +21889,16 @@ twomovejammer: {
     }
   },
 
-  // Triggered whenever an opposing Pokémon switches in
-  onFoeSwitchIn(pokemon) {
-    const holder = this.effectState.target;
-    if (!holder || holder.fainted) return;
-    if (pokemon.side === holder.side) return;
-
-    this.add('-ability', holder, 'Two Move Jammer', '[from] ability');
-
-    const eligible = pokemon.moveSlots
-      .filter(ms => ms.id && ms.id !== 'struggle' && !ms.disabled)
-      .map(ms => ms.id);
-
-    if (!eligible.length) return;
-
-    const picked = [];
-    for (let i = 0; i < 2 && eligible.length; i++) {
-      const index = this.random(eligible.length);
-      picked.push(eligible.splice(index, 1)[0]);
-    }
-
-    for (const moveid of picked) {
-      pokemon.disableMove(moveid);
-      this.add('-start', pokemon, 'Disable', this.dex.moves.get(moveid).name);
-    }
-  },
-
-  // Prevents a foe from using a move that has just been disabled
-  // Covers cases where the foe attacks on the same turn as a switch
-  onFoeTryMove(target, source, move) {
-    const holder = this.effectState.target;
-    if (!holder || holder.fainted) return;
-    if (source.side === holder.side) return;
-
-    const moveSlot = source.moveSlots.find(ms => ms.id === move.id);
-    if (moveSlot && moveSlot.disabled) {
-      this.add('-fail', source, move.name, '[from] ability: Two Move Jammer');
-      return null;
+  // When the ability holder leaves the field, clear the effect
+  onEnd(pokemon) {
+    for (const foe of pokemon.side.foe.active) {
+      if (foe && foe.volatiles.twomovejammer) {
+        foe.removeVolatile('twomovejammer');
+      }
     }
   },
 },
+
 
 sovereignofshadows: {
 	isNonstandard: "Future",
