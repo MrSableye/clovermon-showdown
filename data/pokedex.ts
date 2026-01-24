@@ -122649,6 +122649,98 @@ bewilderbeast: {
         creator: "sungshadowwoo",
     },
 
+	beru: {
+    num: -90018,
+    name: "Beru",
+    types: ["Bug", "Dark"],
+    genderRatio: {M: 0.5, F: 0.5},
+    baseStats: {hp: 100, atk: 150, def: 110, spa: 10, spd: 80, spe: 140},
+    abilities: {0: "Sovereign of Shadows"},
+    heightm: 2.2,
+    weightkg: 180,
+    color: "Black",
+    eggGroups: ["Bug"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
+
+igris: {
+    num: -90019,
+    name: "Igris",
+    types: ["Steel"],
+    genderRatio: {M: 0.5, F: 0.5},
+    baseStats: {hp: 90, atk: 130, def: 150, spa: 10, spd: 90, spe: 120},
+    abilities: {0: "Crimson Blade of Shadows"},
+    heightm: 2.1,
+    weightkg: 250,
+    color: "Red",
+    eggGroups: ["Human-Like"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
+
+iron: {
+    num: -90020,
+    name: "Iron",
+    types: ["Steel", "Ground"],
+    genderRatio: {M: 0.5, F: 0.5},
+    baseStats: {hp: 150, atk: 140, def: 130, spa: 10, spd: 110, spe: 50},
+    abilities: {0: "Iron Bastion of Shadows"},
+    heightm: 2.4,
+    weightkg: 420,
+    color: "Gray",
+    eggGroups: ["Human-Like"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
+
+tuskshadow: {
+    num: -90021,
+    name: "Tusk",
+    types: ["Ghost", "Psychic"],
+    genderRatio: {M: 0.5, F: 0.5},
+    baseStats: {hp: 110, atk: 10, def: 70, spa: 150, spd: 140, spe: 110},
+    abilities: {0: "Shaman of Shadows"},
+    heightm: 2.6,
+    weightkg: 200,
+    color: "Purple",
+    eggGroups: ["Human-Like"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
+
+
+tankshadow: {
+    num: -90023,
+    name: "Tank",
+    types: ["Ghost", "Ice"],
+    genderRatio: {M: 0.5, F: 0.5},
+    baseStats: {hp: 170, atk: 120, def: 160, spa: 10, spd: 100, spe: 30},
+    abilities: {0: "Tank of Shadows"},
+    heightm: 2.8,
+    weightkg: 600,
+    color: "Brown",
+    eggGroups: ["Field"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
+
+kaisel: {
+    num: -90024,
+    name: "Kaisel",
+    types: ["Dragon", "Flying"],
+    genderRatio: {M: 0.5, F: 0.5},
+    baseStats: {hp: 120, atk: 120, def: 100, spa: 10, spd: 100, spe: 140},
+    abilities: {0: "Kaisel of Shadows"},
+    heightm: 5.5,
+    weightkg: 900,
+    color: "Blue",
+    eggGroups: ["Dragon"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
+
+
 
 
 

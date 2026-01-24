@@ -21854,21 +21854,449 @@ twomovejammer: {
   },
 },
 
+sovereignofshadows: {
+	isNonstandard: "Future",
+
+	// Trigger when Beru enters the field
+	onStart(pokemon) {
+		if (this.suppressingAbility(pokemon)) return;
+		this.add('-ability', pokemon, 'Sovereign of Shadows');
+
+		// Intimidate all adjacent foes on entry
+		for (const target of pokemon.adjacentFoes()) {
+			if (target.volatiles['substitute']) {
+				this.add('-immune', target);
+			} else {
+				this.add('-ability', pokemon, 'Intimidate', 'boost');
+				this.boost({atk: -1}, target, pokemon, null, true);
+			}
+		}
+	},
+
+	// Intimidate opposing Pokémon whenever they switch in
+	onAnySwitchIn(pokemon) {
+		const source = this.effectState.target;
+
+		// Only trigger if Beru is active and the switched-in Pokémon is an opponent
+		if (!source.isActive || pokemon.isAlly(source)) return;
+
+		if (pokemon.volatiles['substitute']) {
+			this.add('-immune', pokemon);
+		} else {
+			this.add('-ability', source, 'Intimidate', 'boost');
+			this.boost({atk: -1}, pokemon, source, null, true);
+		}
+	},
+
+	// --- ATTACK REDUCTION (Legacy of Shadows)
+	// Lowers opposing Pokémon's Attack by 25%
+	onAnyModifyAtk(atk, source, target, move) {
+		const abilityHolder = this.effectState.target;
+
+		if (!source || source.hasAbility('Sovereign of Shadows')) return;
+		if (!move || move.category !== 'Physical') return;
+
+		if (!move.ruinedAtk) move.ruinedAtk = abilityHolder;
+		if (move.ruinedAtk !== abilityHolder) return;
+
+		this.debug('Sovereign of Shadows: Attack reduction');
+		return this.chainModify(0.6);
+	},
+
+	// --- SPECIAL ATTACK REDUCTION (Legacy of Shadows)
+	// Lowers opposing Pokémon's Special Attack by 25%
+	onAnyModifySpA(spa, source, target, move) {
+		const abilityHolder = this.effectState.target;
+
+		if (!source || source.hasAbility('Sovereign of Shadows')) return;
+		if (!move || move.category !== 'Special') return;
+
+		if (!move.ruinedSpA) move.ruinedSpA = abilityHolder;
+		if (move.ruinedSpA !== abilityHolder) return;
+
+		this.debug('Sovereign of Shadows: Special Attack reduction');
+		return this.chainModify(0.6);
+	},
+
+	// --- STATUS IMMUNITY (Legacy of Shadows)
+	// Immune to Poison, Toxic, Burn, Paralysis, and Sleep
+	onSetStatus(status, target, source, effect) {
+		if (['psn', 'tox', 'brn', 'par', 'slp'].includes(status.id)) {
+			this.debug('Sovereign of Shadows: Status immunity');
+			return false;
+		}
+	},
+
+	// --- PRESSURE EFFECT (Legacy of Shadows)
+	// Opponent moves consume 1 additional PP
+	onDeductPP(target, source) {
+		if (!source || target.isAlly(source)) return;
+		return 1;
+	},
+
+	// --- TINTED LENS EFFECT
+	// Doubles damage when hitting a resisted target
+	onModifyDamage(damage, source, target, move) {
+		if (source !== this.effectState.target) return;
+
+		if (target.getMoveHitData(move).typeMod < 0) {
+			this.debug('Sovereign of Shadows: Tinted Lens boost');
+			return this.chainModify(2);
+		}
+	},
+
+	// --- LEVITATE EFFECT
+	// Grants immunity to Ground-type moves (breakable)
+	isBreakable: true,
+
+	name: "Sovereign of Shadows",
+	shortDesc: "legacyofshadows + Tinted Lens + Intimidate (on entry and on opposing switch-in) + Levitate",
+},
 
 
 
 
 
+crimsonbladeofshadows: {
+	isNonstandard: "Future",
+
+	shortDesc: "legacyofshadows + Sharpness + Mold Breaker + Normal-type moves become Steel-type and gain 1.5x power",
+
+	onStart(pokemon) {
+		if (this.suppressingAbility(pokemon)) return;
+		this.add('-ability', pokemon, 'Crimson Blade of Shadows');
+	},
+
+	onAnyModifyAtk(atk, source, target, move) {
+		const holder = this.effectState.target;
+		if (!source || source.hasAbility('Crimson Blade of Shadows') || move?.category !== 'Physical') return;
+		if (!move.ruinedAtk) move.ruinedAtk = holder;
+		if (move.ruinedAtk !== holder) return;
+		return this.chainModify(0.6);
+	},
+
+	onAnyModifySpA(spa, source, target, move) {
+		const holder = this.effectState.target;
+		if (!source || source.hasAbility('Crimson Blade of Shadows') || move?.category !== 'Special') return;
+		if (!move.ruinedSpA) move.ruinedSpA = holder;
+		if (move.ruinedSpA !== holder) return;
+		return this.chainModify(0.6);
+	},
+
+	onSetStatus(status) {
+		if (['psn', 'tox', 'brn', 'par', 'slp'].includes(status.id)) return false;
+	},
+
+	onDeductPP(target, source) {
+		if (!source || target.isAlly(source)) return;
+		return 1;
+	},
+
+	onBasePowerPriority: 19,
+	onBasePower(basePower, attacker, defender, move) {
+		if (attacker !== this.effectState.target) return;
+
+		if (move.flags?.slicing) {
+			return this.chainModify(2);
+		}
+
+		if (move.type === 'Normal') {
+			move.type = 'Steel';
+			return this.chainModify(1.5);
+		}
+	},
+
+	onModifyMove(move) {
+		move.ignoreAbility = true;
+	},
+
+	name: "Crimson Blade of Shadows",
+},
+
+
+
+
+ironbastionofshadows: {
+	isNonstandard: "Future",
+
+	shortDesc: "legacyofshadows + Multiscale + Iron Barbs + Tough Claws",
+
+	onStart(pokemon) {
+		if (this.suppressingAbility(pokemon)) return;
+		this.add('-ability', pokemon, 'Iron Bastion of Shadows');
+	},
+
+	onAnyModifyAtk(atk, source, target, move) {
+		const holder = this.effectState.target;
+		if (!source || source.hasAbility('Iron Bastion of Shadows') || move?.category !== 'Physical') return;
+		if (!move.ruinedAtk) move.ruinedAtk = holder;
+		if (move.ruinedAtk !== holder) return;
+		return this.chainModify(0.6);
+	},
+
+	onAnyModifySpA(spa, source, target, move) {
+		const holder = this.effectState.target;
+		if (!source || source.hasAbility('Iron Bastion of Shadows') || move?.category !== 'Special') return;
+		if (!move.ruinedSpA) move.ruinedSpA = holder;
+		if (move.ruinedSpA !== holder) return;
+		return this.chainModify(0.6);
+	},
+
+	onSetStatus(status) {
+		if (['psn', 'tox', 'brn', 'par', 'slp'].includes(status.id)) return false;
+	},
+
+	onDeductPP(target, source) {
+		if (!source || target.isAlly(source)) return;
+		return 1;
+	},
+
+	onSourceModifyDamage(damage, source, target, move) {
+		if (target === this.effectState.target && target.hp >= target.maxhp) {
+			return this.chainModify(0.5);
+		}
+	},
+
+	onDamagingHitOrder: 1,
+	onDamagingHit(damage, target, source, move) {
+		if (target !== this.effectState.target) return;
+		if (this.checkMoveMakesContact(move, source, target, true)) {
+			this.damage(source.baseMaxhp / 8, source, target);
+		}
+	},
+
+	onBasePowerPriority: 21,
+	onBasePower(basePower, attacker, defender, move) {
+		if (attacker !== this.effectState.target) return;
+		if (move.flags?.contact) {
+			return this.chainModify([5325, 4096]);
+		}
+	},
+
+	name: "Iron Bastion of Shadows",
+},
+
+
+
+shamanofshadows: {
+	isNonstandard: "Future",
+
+	shortDesc: "legacyofshadows + Mongoose's Malice + Suddenly + moves never consume PP",
+
+	onStart(pokemon) {
+		if (this.suppressingAbility(pokemon)) return;
+		this.add('-ability', pokemon, 'Shaman of Shadows');
+	},
+
+	onAnyModifyAtk(atk, source, target, move) {
+		const holder = this.effectState.target;
+		if (!source || source.hasAbility('Shaman of Shadows') || move?.category !== 'Physical') return;
+		if (!move.ruinedAtk) move.ruinedAtk = holder;
+		if (move.ruinedAtk !== holder) return;
+		return this.chainModify(0.6);
+	},
+
+	onAnyModifySpA(spa, source, target, move) {
+		const holder = this.effectState.target;
+		if (!source || source.hasAbility('Shaman of Shadows') || move?.category !== 'Special') return;
+		if (!move.ruinedSpA) move.ruinedSpA = holder;
+		if (move.ruinedSpA !== holder) return;
+		return this.chainModify(0.6);
+	},
+
+	onSetStatus(status) {
+		if (['psn', 'tox', 'brn', 'par', 'slp'].includes(status.id)) return false;
+	},
+
+	onDeductPP(target, source) {
+		if (!source || target.isAlly(source)) return;
+		return 0;
+	},
+
+	onModifyAtkPriority: 5,
+	onModifyAtk(atk, attacker, defender, move) {
+		if (attacker !== this.effectState.target) return;
+		if (['Poison', 'Ghost'].includes(move.type)) return this.chainModify(1.5);
+		if (['Fighting', 'Normal'].includes(move.type)) return this.chainModify(0.5);
+	},
+
+	onModifySpAPriority: 5,
+	onModifySpA(spa, attacker, defender, move) {
+		if (attacker !== this.effectState.target) return;
+		if (['Poison', 'Ghost'].includes(move.type)) return this.chainModify(1.5);
+		if (['Fighting', 'Normal'].includes(move.type)) return this.chainModify(0.5);
+	},
+
+	onChargeMove(pokemon, target, move) {
+		this.attrLastMove('[still]');
+		this.addMove('-anim', pokemon, move.name, target);
+		return false;
+	},
+
+	name: "Shaman of Shadows",
+},
+
+tankofshadows: {
+	isNonstandard: "Future",
+	name: "Tank of Shadows",
+	shortDesc: "legacyofshadows + Fur Coat + Scrappy + Normal moves become Ice type and deal 2x damage.",
+
+	onStart(pokemon) {
+		if (this.suppressingAbility(pokemon)) return;
+		this.add('-ability', pokemon, 'Tank of Shadows');
+	},
+
+	/* --- legacyofshadows (Ruination Effects) --- */
+	onAnyModifyAtk(atk, source, target, move) {
+		const holder = this.effectState.target;
+		if (!source || source.hasAbility('Tank of Shadows') || move?.category !== 'Physical') return;
+		
+		
+		if (!(move as any).ruinedAtk) (move as any).ruinedAtk = holder;
+		if ((move as any).ruinedAtk !== holder) return;
+		return this.chainModify(0.6);
+	},
+
+	onAnyModifySpA(spa, source, target, move) {
+		const holder = this.effectState.target;
+		if (!source || source.hasAbility('Tank of Shadows') || move?.category !== 'Special') return;
+
+		if (!(move as any).ruinedSpA) (move as any).ruinedSpA = holder;
+		if ((move as any).ruinedSpA !== holder) return;
+		return this.chainModify(0.6);
+	},
+
+	/* --- Status Immunity --- */
+	onSetStatus(status) {
+		if (['psn', 'tox', 'brn', 'par', 'slp'].includes(status.id)) return false;
+	},
+
+	/* --- Fur Coat --- */
+	onModifyDefPriority: 6,
+	onModifyDef(def) {
+		return this.chainModify(2);
+	},
+
+	/* --- Scrappy Logic --- */
+	onModifyMovePriority: -5,
+	onModifyMove(move) {
+		if (!move.ignoreImmunity) move.ignoreImmunity = {};
+		if (move.ignoreImmunity !== true) {
+			move.ignoreImmunity['Normal'] = true;
+			move.ignoreImmunity['Fighting'] = true;
+		}
+	},
+
+	onTryBoost(boost, target, source, effect) {
+		if (effect?.name === 'Intimidate' && boost.atk) {
+			delete boost.atk;
+			this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Tank of Shadows');
+		}
+	},
+
+	/* --- Normal -> Ice Conversion & 2x Damage --- */
+	onModifyTypePriority: -1,
+	onModifyType(move, pokemon) {
+		const noModifyType = [
+			'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+		];
+		if (move.type === 'Normal' && !noModifyType.includes(move.id) && 
+			!move.isZ && move.category !== 'Status') {
+			move.type = 'Ice';
+			
+			
+			(move as any).tankShadowBoost = true;
+		}
+	},
+
+	onBasePowerPriority: 23,
+	onBasePower(basePower, attacker, defender, move) {
+		
+		if ((move as any).tankShadowBoost) return this.chainModify(2);
+	},
+},
 
 
 
 
 
+kaiselofshadows: {
+	isNonstandard: "Future",
 
+	shortDesc: "legacyofshadows + Spin Cleaner + lowers all other Pokémon's Speed + Normal-type moves become Dragon-type",
 
+	onStart(pokemon) {
+		if (this.suppressingAbility(pokemon)) return;
+		this.add('-ability', pokemon, 'Kaisel of Shadows');
 
+		// Spin Cleaner
+		const sideConditions = [
+			'spikes',
+			'toxicspikes',
+			'stealthrock',
+			'stickyweb',
+			'gmaxsteelsurge',
+			'sleazyspores',
+			'shattershard',
+		];
+		for (const condition of sideConditions) {
+			if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+				this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] ability: Spin Cleaner', '[of] ' + pokemon);
+			}
+		}
+	},
 
+	/* legacyofshadows */
+	onAnyModifyAtk(atk, source, target, move) {
+		const holder = this.effectState.target;
+		if (!source || source.hasAbility('Kaisel of Shadows') || move?.category !== 'Physical') return;
+		if (!move.ruinedAtk) move.ruinedAtk = holder;
+		if (move.ruinedAtk !== holder) return;
+		return this.chainModify(0.6);
+	},
 
+	onAnyModifySpA(spa, source, target, move) {
+		const holder = this.effectState.target;
+		if (!source || source.hasAbility('Kaisel of Shadows') || move?.category !== 'Special') return;
+		if (!move.ruinedSpA) move.ruinedSpA = holder;
+		if (move.ruinedSpA !== holder) return;
+		return this.chainModify(0.6);
+	},
+
+	onAnyModifySpe(spe, source) {
+		const holder = this.effectState.target;
+		if (!source || source.hasAbility('Kaisel of Shadows')) return;
+		if (!source.m?.ruinedSpe) source.m.ruinedSpe = holder;
+		if (source.m.ruinedSpe !== holder) return;
+		return this.chainModify(0.5);
+	},
+
+	onSetStatus(status) {
+		if (['psn', 'tox', 'brn', 'par', 'slp'].includes(status.id)) return false;
+	},
+
+	/* He Will Be Dragon */
+	onModifyTypePriority: -1,
+	onModifyType(move, pokemon) {
+		const noModifyType = [
+			'judgment', 'multiattack', 'naturalgift', 'revelationdance',
+			'technoblast', 'terrainpulse', 'weatherball',
+		];
+		if (move.type === 'Normal' && !noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+			move.type = 'Dragon';
+			move.typeChangerBoosted = this.effect;
+		}
+	},
+
+	onBasePowerPriority: 23,
+	onBasePower(basePower, pokemon, target, move) {
+		if (move.typeChangerBoosted === this.effect) {
+			return this.chainModify([4915, 4096]);
+		}
+	},
+
+	name: "Kaisel of Shadows",
+},
 
 
 

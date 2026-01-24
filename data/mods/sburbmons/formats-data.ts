@@ -26997,6 +26997,31 @@ arcanor: {
     inherit: true,
     isNonstandard: "Past",
 },
+beru: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+igris: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+iron: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+tuskshadow: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+tankshadow: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+kaisel: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+
 
 
 };
