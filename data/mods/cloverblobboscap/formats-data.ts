@@ -2993,6 +2993,58 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	 emojinnsobbing: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	 emojinnraging: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	 emojinnjoyful: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	 maleentis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	 medusith: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	 occlone: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	 permaceros: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	 scolifex: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	 tritanic: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	 substrale: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	 swinggle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	 sycosect: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	 triactite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,
@@ -4510,7 +4562,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	blobbosmythical: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	blobbospseudo: {
 		inherit: true,
