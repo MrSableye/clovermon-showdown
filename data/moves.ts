@@ -27206,7 +27206,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 50,
 		category: "Physical",
 		name: "Deep Fry",
-		pp: 20,
+		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onBasePower(basePower, source, target, move) {
@@ -32259,9 +32259,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Car Crash",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, mirror: 1, bypasssub: 1},
+		flags: {contact: 1, mirror: 1},
 		recoil: [33, 100],
-		breaksProtect: true,
 		secondaries: [
 			{
 				chance: 10,

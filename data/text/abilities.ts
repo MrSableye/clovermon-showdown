@@ -2526,7 +2526,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	scorchingsmite: {
         name: "Scorching Smite",
-        shortDesc: "Take 1.25x damage from Fire, Steel moves gain 30% burn, Fire moves spread this ability",
+        shortDesc: "Take 1.25x damage from Fire and Steel moves gain an 30% burn chance. Fire moves spread this ability.",
 
         changeAbility: "  [TARGET] carries the flame!",
     },
@@ -3418,7 +3418,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	kantonaut: {
 		name: "Kantonaut",
-		shortDesc: "Takes halved damage from Fairy, Steel, and Dark. Takes double damage from Ice.",
+		shortDesc: "Takes halved damage from Fairy, Steel, and Dark.",
 	},
 	doomed: {
 		name: "Doomed",

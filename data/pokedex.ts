@@ -40340,7 +40340,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			def: 80,
 			spa: 135,
 			spd: 65,
-			spe: 80,
+			spe: 74,
 		},
 		abilities: {
 			0: "Illuminate",
@@ -42285,11 +42285,11 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Fairy", "Normal"],
 		gender: "N",
 		baseStats: {
-			hp: 91,
-			atk: 60,
-			def: 99,
-			spa: 15,
-			spd: 96,
+			hp: 90,
+			atk: 70,
+			def: 106,
+			spa: 35,
+			spd: 106,
 			spe: 35,
 		},
 		abilities: {
@@ -43588,8 +43588,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Psychic"],
 		gender: "N",
 		baseStats: {
-			hp: 99,
-			atk: 55,
+			hp: 88,
+			atk: 66,
 			def: 88,
 			spa: 111,
 			spd: 111,

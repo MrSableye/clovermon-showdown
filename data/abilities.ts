@@ -12878,12 +12878,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(0.5);
 			}
 		},
-		onSourceBasePowerPriority: 17,
-		onSourceBasePower(basePower, attacker, defender, move) {
-			if (move.type === 'Ice') {
-				return this.chainModify(2);
-			}
-		},
 		isBreakable: true,
 		name: "Kantonaut",
 		rating: 3.5,
