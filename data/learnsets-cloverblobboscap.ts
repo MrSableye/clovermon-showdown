@@ -3825,7 +3825,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 				trickortreat: ["8L1"],
 				venomdrench: ["8L1"],
 				watershuriken: ["8L1"],
-				feudefee: ["8L1"],
 				geomancy: ["8L1"],
 			},
 		},
