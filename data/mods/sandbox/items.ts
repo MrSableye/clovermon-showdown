@@ -2255,6 +2255,14 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	lemirethite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	platylicite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	ultrablobbosiumz: {
 		inherit: true,
 		isNonstandard: null,
