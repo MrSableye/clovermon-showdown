@@ -8568,7 +8568,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	salezerker: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-		},
+	},
 	salezerkermega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -8638,6 +8638,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	platylics: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	platylicsmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

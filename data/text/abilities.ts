@@ -2534,6 +2534,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Lurking Terror",
 		shortDesc: "If Speed stat higher then the Opponent, Damage dealt is multiplied by 1.3x.",
 	},
+	dissect: {
+		name: "Dissect",
+		shortDesc: "On switch-in, this Pokemon clears all boosts of all Pokemon.",
+	},
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",
