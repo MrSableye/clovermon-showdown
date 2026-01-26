@@ -7692,6 +7692,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		isNonstandard: "Future",
+		},
+	dissect: {
+		name: "Dissect",
+		onStart() {
+			this.add('-clearallboost');
+			for (const pokemon of this.getAllActive()) {
+				pokemon.clearBoosts();
+			}
+		},
+		isNonstandard: "Future",
 	},
 	capacitance: {
 		name: "Capacitance",

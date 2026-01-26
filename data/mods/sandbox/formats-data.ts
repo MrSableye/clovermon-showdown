@@ -9723,6 +9723,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	platylicsmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	impfection: {
 		inherit: true,
 		tier: "OU",
