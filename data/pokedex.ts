@@ -36066,7 +36066,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		forme: "Mega",
 		types: ["Grass", "Fairy"],
 		genderRatio: {M: 0.875, F: 0.125},
-		baseStats: {hp: 65, atk: 150, def: 100, spa: 120, spd: 70, spe: 125},
+		baseStats: {hp: 65, atk: 152, def: 105, spa: 115, spd: 70, spe: 123},
 		abilities: {0: "Star Guardian"},
 		heightm: 1.8,
 		weightkg: 90,
