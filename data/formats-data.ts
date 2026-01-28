@@ -7969,6 +7969,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	glucursmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	tartis: {
 		tier: "Illegal",
 		isNonstandard: "Future",

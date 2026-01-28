@@ -2932,7 +2932,11 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	platylicite: {
 		name: "Platylicite",
-		desc: "If held by a Platylicite, this item allows it to Mega Evolve in battle.",
+		desc: "If held by a Platylics, this item allows it to Mega Evolve in battle.",
+	},
+	glucusite: {
+		name: "Glucusite",
+		desc: "If held by a Glucurs, this item allows it to Mega Evolve in battle.",
 	},
 	focusspecs: {
 		name: "Focus Specs",

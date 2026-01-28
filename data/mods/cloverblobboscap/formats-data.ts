@@ -2732,6 +2732,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	glucursmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	qrakenmark: {
 		tier: "Illegal",
 		isNonstandard: "Future",
