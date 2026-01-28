@@ -9894,7 +9894,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	reroll: {
 		name: "Reroll",
-		desc: "Randomly reroll all boosts and deboosts (not acc/eva), always adding 3 total boosts.",
+		desc: "Randomly reroll all boosts and deboosts (not acc/eva), always adding 2 total boosts.",
 	},
 	skillroom: {
 		name: "Skill Room",

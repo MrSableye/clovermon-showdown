@@ -47731,6 +47731,34 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+	blobbosbinding: {
+		num: 69132,
+		name: "Blobbos-Binding",
+		baseSpecies: "Blobbos",
+		forme: "Binding",
+		types: ["Normal"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 70,
+			atk: 110,
+			def: 70,
+			spa: 100,
+			spd: 70,
+			spe: 100,
+		},
+		abilities: {
+			0: "Wimp Out",
+                        1: "Defeatist",
+                        H: "Protean",
+		},
+		heightm: 1.01,
+		weightkg: 19.5,
+		color: "Blue",
+		eggGroups: [
+			"Human-Like"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
