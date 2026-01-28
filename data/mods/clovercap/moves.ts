@@ -1748,6 +1748,24 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		status: 'tox',
 	},
+	dragonhammer: {
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: null,
+		name: "Dragon Hammer",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, hammer: 1, contact: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				evasion: -1,
+			},
+		},
+		target: "normal",
+		type: "Dragon",
+	},
 	sleazyspores: {
 		inherit: true,
 		isNonstandard: null,

@@ -172,10 +172,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	feudefee: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	heavenpierce: {
 		inherit: true,
 		isNonstandard: null,

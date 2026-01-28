@@ -2539,6 +2539,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	platylicsmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	impfection: {
 		inherit: true,
 		isNonstandard: null,

@@ -125,4 +125,12 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		desc: "Lowers the target's Speed by 1 stage and badly poisons it.",
 		shortDesc: "Lowers the foe's Speed by 1 and badly poisons it.",
 	},
+	dragonhammer: {
+		inherit: true,
+		shortDesc: "100% chance to lower the target's Evasion by 1.",
+	},
+	oblivionwing: {
+		inherit: true,
+		shortDesc: "User recovers 50% of damage dealt.",
+	},
 };
