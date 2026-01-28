@@ -34122,12 +34122,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Reroll",
-		pp: 22,
+		pp: 10,
 		priority: 0,
 		flags: {},
 		noPPBoosts: true,
 		onHit(target) {
-			let totalBoosts = 3;
+			let totalBoosts = 2;
 			let totalDeboosts = 0;
 			let stat: BoostID;
 			const stats: BoostID[] = [];
