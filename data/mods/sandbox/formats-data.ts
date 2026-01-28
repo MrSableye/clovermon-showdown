@@ -10778,6 +10778,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	glucursmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	gyonin: {
 		inherit: true,
 		tier: "OU",

@@ -2968,6 +2968,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	glucursmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	qrakenmark: {
 		inherit: true,
 		isNonstandard: null,
