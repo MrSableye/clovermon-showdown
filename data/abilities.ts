@@ -22845,6 +22845,80 @@ bluecursededge: {
     },
 },
 
+overlord: {
+    name: "Overlord",
+    shortDesc: "Traps foes. Blocks priority. Getting hit boosts Def/SpD. Def/SpD boosts add to Atk/SpA.",
+
+    // --- 1. REACTIVE DEFENSE (Stamina Pro) ---
+    // Activates BEFORE damage calculation
+    onSourceTryHit(target, source, move) {
+        if (target === source || move.category === 'Status') return;
+
+        // If move is Physical, boost Defense
+        if (move.category === 'Physical') {
+            this.boost({ def: 1 }, target);
+        }
+        // If move is Special, boost Sp. Defense
+        else if (move.category === 'Special') {
+            this.boost({ spd: 1 }, target);
+        }
+    },
+
+    // --- 2. DAZZLING (Anti-Priority) ---
+    onFoeTryMove(target, source, move) {
+        const effectHolder = this.effectState.target;
+        // Checks if it's a priority move targeting the ability holder or allies
+        if (move.target !== 'self' && move.priority > 0.1 && target.isAlly(effectHolder)) {
+            this.attrLastMove('[still]');
+            this.add('cant', effectHolder, 'ability: Overlord', move, '[of] ' + source);
+            return false;
+        }
+    },
+
+    // --- 3. ARENA TRAP (Trapping) ---
+    onFoeTrapPokemon(pokemon) {
+        // Traps adjacent grounded foes (not Flying/Levitate)
+        if (!pokemon.isAdjacent(this.effectState.target)) return;
+        if (pokemon.isGrounded()) {
+            pokemon.tryTrap(true);
+        }
+    },
+    onFoeMaybeTrapPokemon(pokemon, source) {
+        if (!source) source = this.effectState.target;
+        if (!source || !pokemon.isAdjacent(source)) return;
+        if (pokemon.isGrounded()) {
+            // FIX: Set the property directly instead of calling a function
+            pokemon.maybeTrapped = true;
+        }
+    },
+
+    // --- 4. STAT TRANSFER (Defense -> Offense) ---
+    // Transfers defensive boosts to offense
+
+    // Transfer DEFENSE -> ATTACK
+    onModifyAtk(atk, pokemon) {
+        // If there is a positive Defense boost
+        if (pokemon.boosts.def > 0) {
+            // Calculate the multiplier (e.g., +1 = 1.5x, +2 = 2x)
+            const boost = pokemon.boosts.def;
+            const multiplier = (2 + boost) / 2;
+
+            // Apply this multiplier to Attack
+            return this.chainModify(multiplier);
+        }
+    },
+
+    // Transfer SP. DEFENSE -> SP. ATTACK
+    onModifySpA(spa, pokemon) {
+        // If there is a positive Sp. Def boost
+        if (pokemon.boosts.spd > 0) {
+            const boost = pokemon.boosts.spd;
+            const multiplier = (2 + boost) / 2;
+
+            return this.chainModify(multiplier);
+        }
+    },
+},
 
 
 

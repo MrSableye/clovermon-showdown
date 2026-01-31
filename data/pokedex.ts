@@ -122833,6 +122833,20 @@ valgaleon: {
     creator: "sungshadowwoo",
 },
 
+ainzooalgown: {
+    num: -90031,
+    name: "Ainz Ooal Gown",
+    types: ["Dark","Ghost"],
+    genderRatio: {M: 1.0, F: 0.0},
+    baseStats: {hp: 120, atk: 5, def: 90, spa: 140, spd: 90, spe: 140},
+    abilities: {0: "Overlord"},
+    heightm: 1.9,
+    weightkg: 90,
+    color: "Black",
+    eggGroups: ["Human-Like"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
 
 
 

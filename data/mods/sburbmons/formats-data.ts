@@ -27045,6 +27045,10 @@ kaijun8: {
     inherit: true,
     isNonstandard: "Past",
 },
+ainzooalgown: {
+    inherit: true,
+    isNonstandard: "Past",
+},
 
 
 

@@ -31021,6 +31021,10 @@ kaijun8: {
     tier: "Illegal",
     isNonstandard: "Future",
 },
+ainzooalgown: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
 
 
 
