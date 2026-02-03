@@ -11431,6 +11431,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	camerexmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	airuite: {
 		tier: "Illegal",
 		isNonstandard: "Future",

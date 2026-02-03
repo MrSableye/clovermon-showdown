@@ -2052,6 +2052,14 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	camerite: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	glucusite: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	ultrablobbosiumz: {
 		inherit: true,
 		isNonstandard: "Past",

@@ -2704,6 +2704,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	camerexmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	tamanaut: {
 		tier: "Illegal",
 		isNonstandard: "Future",

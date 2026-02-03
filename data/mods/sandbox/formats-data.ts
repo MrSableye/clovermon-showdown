@@ -12936,6 +12936,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	camerexmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	airuite: {
 		inherit: true,
 		isNonstandard: null,
