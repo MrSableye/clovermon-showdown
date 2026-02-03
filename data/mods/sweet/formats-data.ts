@@ -7496,6 +7496,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	molterramegax: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	junkgeist: {
 		inherit: true,
 		isNonstandard: "Past",

@@ -328,6 +328,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	molterramegax: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	moltama: {
 		inherit: true,
 		isNonstandard: null,
