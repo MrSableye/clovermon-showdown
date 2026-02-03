@@ -36664,7 +36664,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		eggGroups: ["Bug", "Field"],
 		gen: 8,
-		requiredItem: "Konekhotite",
+		requiredItem: "Konekothite",
 		creator: "Zac",
 	},
 	drattel: {
