@@ -7912,6 +7912,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	konekothmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	drattel: {
 		inherit: true,
 		isNonstandard: "Past",

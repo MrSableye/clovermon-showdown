@@ -9793,6 +9793,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	konekothmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	drattel: {
 		inherit: true,
 		tier: "OU",

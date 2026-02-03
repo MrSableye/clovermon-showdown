@@ -787,7 +787,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
-		},
+	},
 	salezerkermega: {
 		inherit: true,
 		isNonstandard: null,
@@ -959,6 +959,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NFE",
 	},
 	konekoth: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	konekothmega: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
