@@ -2399,6 +2399,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	konekoth: {
 		inherit: true,
 		isNonstandard: "Past",
+		},
+	konekothmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	drattel: {
 		inherit: true,

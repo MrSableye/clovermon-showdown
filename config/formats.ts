@@ -1420,7 +1420,7 @@ export const Formats: FormatList = [
 		],
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Inversion', 'Sand Veil'],
 		unbanlist: [
-			'Ginoccite', 'Ginocchio-Mega', 'Salezerkite', 'Salezerker-Mega','Lemirethun-Mega', 'Lemirethite','Platylics-Mega','Platylicite','Glucurs-Mega','Glucusite','Camerex-Mega','Camerite'],
+			'Ginoccite', 'Ginocchio-Mega', 'Salezerkite', 'Salezerker-Mega','Lemirethun-Mega', 'Lemirethite','Platylics-Mega','Platylicite','Glucurs-Mega','Glucusite','Camerex-Mega','Camerite','Konekoth-Mega','Konekothite'],
 	},
 	{
 		name: '[Gen 8 Cope Only] Anything Goes',

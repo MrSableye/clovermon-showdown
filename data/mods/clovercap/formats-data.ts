@@ -2628,6 +2628,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	konekothmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	drattel: {
 		inherit: true,
 		isNonstandard: null,

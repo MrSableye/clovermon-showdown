@@ -8717,6 +8717,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	konekothmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	drattel: {
 		tier: "Illegal",
 		isNonstandard: "Future",
