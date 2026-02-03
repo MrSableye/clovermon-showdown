@@ -2918,6 +2918,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	camerexmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kaquapo: {
 		inherit: true,
 		isNonstandard: null,

@@ -9250,6 +9250,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	camerite: {
+		name: "Camerite",
+		spritenum: 577,
+		megaStone: "Camerex-Mega",
+		megaEvolves: "Camerex",
+		itemUser: ["Camerex"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	ultrablobbosiumz: {
 		name: "Ultrablobbosium Z",
 		spritenum: 686,

@@ -2938,6 +2938,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Glucusite",
 		desc: "If held by a Glucurs, this item allows it to Mega Evolve in battle.",
 	},
+	cameriite: {
+		name: "Camerite",
+		desc: "If held by a Camerex, this item allows it to Mega Evolve in battle.",
+	},
 	focusspecs: {
 		name: "Focus Specs",
 		shortDesc: "20% of the holder's Sp. Atk is 1.5x. 20% of the time is Focus Band. 60% nothing. Changes each turn. Only works on Weedlekind.",
