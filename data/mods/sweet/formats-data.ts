@@ -28773,6 +28773,35 @@ kaisel: {
     inherit: true,
     isNonstandard: "Past",
 },
+valgaleon: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+revanight: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+helios: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+hakuja: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+nekroz: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+kaijun8: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+ainzooalgown: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+
 
 
 };

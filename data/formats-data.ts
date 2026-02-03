@@ -31013,6 +31013,35 @@ kaisel: {
     tier: "Illegal",
     isNonstandard: "Future",
 },
+valgaleon: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+revanight: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+helios: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+hakuja: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+nekroz: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+kaijun8: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+ainzooalgown: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+
 
 
 

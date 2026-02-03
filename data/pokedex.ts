@@ -122825,6 +122825,115 @@ kaisel: {
     creator: "sungshadowwoo",
 },
 
+kaijun8: {
+    num: -90025,
+    name: "Kaiju N8",
+    types: ["Fighting", "Dragon"],
+    genderRatio: {M: 1.0, F: 0.0},
+    baseStats: {hp: 100, atk: 145, def: 100, spa: 10, spd: 80, spe: 100},
+    abilities: {0: "Calamity Force"},
+    heightm: 2.2,
+    weightkg: 180,
+    color: "Black",
+    eggGroups: ["Human-Like"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
+
+nekroz: {
+    num: -90026,
+    name: "Nekroz",
+    types: ["Psychic", "Fighting"],
+    genderRatio: {M: 1.0, F: 0.0},
+    baseStats: {hp: 100, atk: 10, def: 85, spa: 135, spd: 100, spe: 140},
+    abilities: {0: "Mind Sovereign"},
+    heightm: 1.7,
+    weightkg: 70,
+    color: "Purple",
+    eggGroups: ["Human-Like"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
+
+
+hakuja: {
+    num: -90027,
+    name: "hakuja",
+    types: ["Normal", "Normal"],
+    genderRatio: {M: 1.0, F: 0.0},
+    baseStats: {hp: 100, atk: 10, def: 90, spa: 135, spd: 90, spe: 150},
+    abilities: {0: "White Shroud"},
+    heightm: 2.1,
+    weightkg: 95,
+    color: "White",
+    eggGroups: ["Bug"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
+
+
+helios: {
+    num: -90028,
+    name: "Helios",
+    types: ["Fire"],
+    genderRatio: {M: 1.0, F: 0.0},
+    baseStats: {hp: 150, atk: 150, def: 125, spa: 10, spd: 90, spe: 40},
+    abilities: {0: "Solar Tyrant"},
+    heightm: 2.0,
+    weightkg: 850,
+    color: "Red",
+    eggGroups: ["Fire 2"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
+
+revanight: {
+    num: -90029,
+    name: "Revanight",
+    types: ["Ghost"],
+    genderRatio: {M: 1.0, F: 0.0},
+    baseStats: {hp: 90, atk: 10, def: 100, spa: 145, spd: 130, spe: 100},
+    abilities: {0: "Blue Cursed Edge"},
+    heightm: 1.9,
+    weightkg: 90,
+    color: "Purple",
+    eggGroups: ["Human-Like"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
+
+
+valgaleon: {
+    num: -90030,
+    name: "Valgaleon",
+    types: ["Fire"],
+    genderRatio: {M: 1.0, F: 0.0},
+    baseStats: {hp: 90, atk: 145, def: 130, spa: 10, spd: 100, spe: 100},
+    abilities: {0: "Red Bleeding Edge"},
+    heightm: 1.9,
+    weightkg: 90,
+    color: "Red",
+    eggGroups: ["Human-Like"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
+
+ainzooalgown: {
+    num: -90031,
+    name: "Ainz Ooal Gown",
+    types: ["Dark","Ghost"],
+    genderRatio: {M: 1.0, F: 0.0},
+    baseStats: {hp: 120, atk: 5, def: 90, spa: 140, spd: 90, spe: 140},
+    abilities: {0: "Overlord"},
+    heightm: 1.9,
+    weightkg: 90,
+    color: "Black",
+    eggGroups: ["Human-Like"],
+    gen: 0,
+    creator: "sungshadowwoo",
+},
+
+
 
 
 
