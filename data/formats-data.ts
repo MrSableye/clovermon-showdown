@@ -8201,6 +8201,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	molterramegax: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	moltama: {
 		tier: "Illegal",
 		isNonstandard: "Future",

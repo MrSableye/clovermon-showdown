@@ -1852,6 +1852,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	molterramegax: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	junkgeist: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -2399,7 +2403,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	konekoth: {
 		inherit: true,
 		isNonstandard: "Past",
-		},
+	},
 	konekothmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",

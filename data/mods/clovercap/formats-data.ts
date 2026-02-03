@@ -2017,6 +2017,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	molterramegax: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	moltama: {
 		inherit: true,
 		isNonstandard: null,
