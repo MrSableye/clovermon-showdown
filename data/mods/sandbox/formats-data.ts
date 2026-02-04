@@ -9318,6 +9318,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	copolarm: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	magghost: {
 		inherit: true,
 		tier: "OU",

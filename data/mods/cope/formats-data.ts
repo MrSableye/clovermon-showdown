@@ -2020,6 +2020,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	copolarm: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	magghost: {
 		inherit: true,
 		isNonstandard: null,
