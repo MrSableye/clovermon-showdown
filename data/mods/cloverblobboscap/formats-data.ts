@@ -1904,6 +1904,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	copolarm: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	magghost: {
 		inherit: true,
 		isNonstandard: "Past",

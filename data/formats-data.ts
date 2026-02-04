@@ -8269,6 +8269,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	copolarm: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	magghost: {
 		tier: "Illegal",
 		isNonstandard: "Future",
