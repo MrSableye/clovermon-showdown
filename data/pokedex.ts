@@ -35207,7 +35207,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseSpecies: "Copolar",
 		forme: "M",
 		gender: "M",
-		baseStats: {hp: 89, atk: 115, def: 73, spa: 57, spd: 80, spe: 101},
+		baseStats: {hp: 79, atk: 115, def: 73, spa: 57, spd: 80, spe: 101},
 		abilities: {0: "Justified", 1: "Striker", H: "Slush Rush", S: "Shaved Ice"},
 		heightm: 1.37,
 		weightkg: 25.8,
