@@ -21242,77 +21242,48 @@ spectraloverlord: {
 combatmemory: {
     name: "Combat Memory",
     shortDesc: "Lowers accuracy of moves used repeatedly against it (20% > 40% > 80%).",
-
     onStart(pokemon) {
-        // Initialize the memory object
         pokemon.abilityState.learnedMoves = {};
     },
-
-    // 1. Register valid hits (Damage)
+    onTryHitPriority: 100,
+    onTryHit(target, source, move) {
+        if (target === source || move.category === 'Status') return;
+        const protectVolatiles = ['protect', 'detect', 'spikyshield', 'banefulbunker', 'kingsshield', 'obstruct', 'silktrap', 'burningbulwark'];
+        const isProtected = protectVolatiles.some(vol => target.volatiles[vol]);
+        if (isProtected && move.flags['protect']) {
+            if (!target.abilityState.learnedMoves) target.abilityState.learnedMoves = {};
+            const mem = target.abilityState.learnedMoves;
+            mem[move.id] = (mem[move.id] || 0) + 1;
+            this.add('-activate', target, 'ability: Combat Memory');
+            (move as any).combatMemoryCounted = true;
+        }
+    },
     onDamagingHit(damage, target, source, move) {
         if (!move || move.category === 'Status') return;
-
-        // Ensure state exists
+        if ((move as any).combatMemoryCounted) return;
         if (!target.abilityState.learnedMoves) target.abilityState.learnedMoves = {};
-        
         const mem = target.abilityState.learnedMoves;
-        const id = move.id;
-
-        // Increment hit count
-        mem[id] = (mem[id] || 0) + 1;
-        
-        // Visual cue (optional, helps debugging)
-        // this.add('-message', `${target.name} memorized the attack pattern of ${move.name}!`);
+        mem[move.id] = (mem[move.id] || 0) + 1;
     },
-
-    // 2. Register blocked hits (Protect/Detect)
-    onTryHit(target, source, move) {
-        // If the move hits into a Protect/Detect and is blocked
-        if (target.volatiles['stall'] || target.volatiles['protect']) {
-            if (move.flags && move.flags['protect']) { // If the move CAN be blocked
-                 if (!target.abilityState.learnedMoves) target.abilityState.learnedMoves = {};
-                 
-                 const mem = target.abilityState.learnedMoves;
-                 mem[move.id] = (mem[move.id] || 0) + 1;
-                 this.add('-activate', target, 'ability: Combat Memory');
-            }
-        }
-    },
-
-    // 3. Apply the Accuracy Penalty
     onModifyAccuracy(accuracy, target, source, move) {
-        // Check if the Defender (target) has the ability
         if (!target.hasAbility('combatmemory')) return;
-        if (source.side === target.side) return; // Ignore allies
+        if (source.side === target.side) return;
         if (!move || move.category === 'Status' || move.accuracy === true) return;
-
         const mem = target.abilityState.learnedMoves;
         if (!mem) return;
-
-        // Get how many times this move was used before
         const hits = mem[move.id] || 0;
-
-        // FIX: If it was hit at least once, start reducing.
-        // Original code had (hits < 2), which skipped the first stage.
         if (hits < 1) return;
-
         let reduction = 0;
-
-        // Logic: 20% -> 40% -> 80%
         if (hits === 1) {
-            reduction = 0.20; // 1st stack
+            reduction = 0.30;
         } else if (hits === 2) {
-            reduction = 0.40; // 2nd stack
+            reduction = 0.60;
         } else {
-            reduction = 0.80; // 3rd stack (Max)
+            reduction = 0.90;
         }
-
-        // Apply reduction
-        this.add('-activate', target, 'ability: Combat Memory'); // Notify activation
+        this.add('-activate', target, 'ability: Combat Memory');
         return this.chainModify(1 - reduction);
     },
-
-    // Reset on switch
     onSwitchOut(pokemon) {
         pokemon.abilityState.learnedMoves = {};
     },
@@ -21760,7 +21731,7 @@ hyouton: {
 
 lastresolve: {
     name: "Last Resolve",
-    shortDesc: "Below 50% HP, next attack: 70% acc, ignores Protect/Sub, OHKOs. User faints unless last alive.",
+    shortDesc: "Below 50% HP, next attack: 80% acc, ignores Protect/Sub, OHKOs. User faints unless last alive.",
 
     onStart(pokemon) {
         pokemon.abilityState.lastResolveUsed = false;
@@ -21788,38 +21759,35 @@ lastresolve: {
         if (move.category === 'Status') return;
         if (move.multihit) return;
 
-        // 1. Sets accuracy to 80%
-        move.accuracy = 70;
+        
+        move.accuracy = 80;
 
-        // 2. ACCURACY FIX:
-        // We do NOT use move.ohko = true because it locks accuracy to ~30%.
-        // Instead, we use damageCallback to set damage equal to the target's current HP.
+       
         move.damageCallback = function (pokemon, target) {
             return target.hp; 
         };
 
-        // 3. Bypass Substitute
+       
         move.infiltrates = true;
 
-        // 4. Bypass Protect (safer method than onTryHit)
-        // Removes the flag that allows the move to be blocked by Protect
+        
         if (move.flags && move.flags['protect']) {
             delete move.flags['protect'];
         }
-        // Ensures it breaks protection effects like King's Shield
+        
         move.breaksProtect = true; 
     },
 
-    // Lower opponent move priority by 2
+    
     onSourceModifyPriority(priority, source, target) {
-        // 'target' here is the ability user (who is being attacked)
+        
         if (target?.hasAbility('lastresolve')) {
              return priority - 2;
         }
         return priority;
     },
 
-    // Survival or fainting logic after the move
+    
     onAfterMove(source, target, move) {
         const state = source.abilityState;
         if (!state?.lastResolveActive) return;
@@ -22404,87 +22372,39 @@ kaiselofshadows: {
 
 calamityforce: {
     name: "Calamity Force",
-    shortDesc: "Overflow dmg on KO. Pierce Protect. Fighting moves: Never miss, ignore immunities, and act first (anti-priority). Neutralizes super-effective dmg.",
-
-    
-    onBeforeTurn(pokemon) {
-       
-        pokemon.abilityState.isUsingFighting = false;
-
+    shortDesc: "Overflow dmg on KO. Pierce Protect. Fighting moves: Never miss, ignore immunities, and act first (anti-priority). Neutralizes super-effective dmg. MASTER FOCUS PUNCH",
+    onModifyMove(move, source, target) {
         
-        const action = this.queue.list.find(a => a.choice === 'move' && a.pokemon === pokemon) as any;
-        
-        if (action && action.move) {
-           
-            const move = this.dex.moves.get(action.move.id);
-            
-            
-            if (move.type === 'Fighting') {
-                pokemon.abilityState.isUsingFighting = true;
-                this.add('-activate', pokemon, 'ability: Calamity Force');
-                this.add('-message', `${pokemon.name} moves faster than the blink of an eye!`);
+        if (move.type === 'Fighting') {
+            move.accuracy = true;
+            move.ignoreImmunity = true;
+
+            // ---  FOCUS PUNCH ---
+            if (move.id === 'focuspunch') {
+                delete move.priorityChargeCallback; 
+                delete move.beforeMoveCallback;     
+                move.priority = 0;                  
             }
         }
-    },
-
-    
-    
-    onAnyModifyPriority(priority, source, target, move) {
-        const holder = this.effectState.target;
-        
-        if (!holder.abilityState.isUsingFighting) return;
-        if (source === holder) return priority;
 
         
-        if (source.side !== holder.side && move.category !== 'Status') {
-            return -1;
-        }
-    },
-
-   
-    onModifySpe(spe, pokemon) {
-        if (pokemon.abilityState.isUsingFighting) {
-            return this.chainModify(1000);
-        }
-    },
-
-    
-    onModifyMove(move, source, target) {
-        // Golpes Lutadores Imparáveis
-        if (move.type === 'Fighting') {
-            move.accuracy = true;       
-            move.ignoreImmunity = true; 
-        }
-
-        // Lógica de Perfurar Protect
         if (!target || !move.flags['protect']) return;
-
-        const protectVolatiles = ['protect', 'detect', 'spikyshield', 'banefulbunker', 'kingsshield', 'obstruct', 'silktrap'];
+        const protectVolatiles = ['protect', 'detect', 'spikyshield', 'banefulbunker', 'kingsshield', 'obstruct', 'silktrap', 'burningbulwark'];
         const isProtected = protectVolatiles.some(vol => target.volatiles[vol]);
-
         if (isProtected) {
             delete move.flags['protect'];
-            
-            
             (move as any).calamityPierced = true;
-            
             this.add('-activate', source, 'ability: Calamity Force');
             this.add('-message', `${source.name}'s brute force breaches the defense!`);
         }
     },
-
-   
     onModifyDamage(damage, source, target, move) {
-       
         if ((move as any).calamityPierced) {
             return this.chainModify(0.5);
         }
     },
-
-    
     onSourceModifyDamage(damage, source, target, move) {
         const abilityHolder = this.effectState.target;
-
         
         if (target === abilityHolder) {
             const typeMod = target.getMoveHitData(move).typeMod;
@@ -22495,54 +22415,61 @@ calamityforce: {
                 return this.chainModify(factor);
             }
         }
-
-       
+        
         if (source === abilityHolder) {
             if (!source.abilityState.overflowData) source.abilityState.overflowData = {};
             source.abilityState.overflowData.rawDamage = damage;
         }
     },
-
-    
+    onAnyModifyPriority(priority, source, target, move) {
+        const holder = this.effectState.target;
+        if (source === holder) return;
+        if (source.side === holder.side) return;
+        if (move.category === 'Status') return;
+        
+        
+        const holderAction = this.queue.list.find(a => a.choice === 'move' && a.pokemon === holder) as any;
+        
+        if (holderAction && holderAction.move) {
+            const holderMove = this.dex.moves.get(holderAction.move.id);
+            if (holderMove.type === 'Fighting' && priority > 0) {
+                this.add('-activate', holder, 'ability: Calamity Force');
+                this.add('-message', `${holder.name} suppresses the opponent's priority!`);
+                return -1;
+            }
+        }
+    },
     onSourceTryHit(target, source, move) {
         if (!source.abilityState.overflowData) source.abilityState.overflowData = {};
         source.abilityState.overflowData.targetPreHitHP = target.hp;
     },
-
     onSourceAfterFaint(length, target, source) {
         if (!source || !source.isActive) return;
-
         const data = source.abilityState.overflowData;
         if (!data) return;
-
+        
         const rawDamage = data.rawDamage || 0;
         const targetHP = data.targetPreHitHP || 0;
-
+        
+        
         if (rawDamage > targetHP) {
             const overflow = Math.floor(rawDamage - targetHP);
-
             if (!source.abilityState.storedShockwave) source.abilityState.storedShockwave = 0;
             source.abilityState.storedShockwave += overflow;
-
             this.add('-ability', source, 'Calamity Force');
             this.add('-message', `The impact generates a massive shockwave of ${overflow} damage!`);
         }
         source.abilityState.overflowData = {};
     },
-
     onAfterMove(source, target, move) {
-        
         if ((move as any).calamityPierced && target && !target.fainted) {
             this.boost({ spe: -1 }, target, source);
         }
     },
-
     onFoeSwitchIn(foe) {
         const source = this.effectState.target;
         if (!source || !source.isActive) return;
-
         const damage = source.abilityState.storedShockwave;
-
         if (damage && damage > 0) {
             this.add('-ability', source, 'Calamity Force');
             this.add('-message', `The lingering shockwave hits ${foe.name}!`);
@@ -22550,11 +22477,9 @@ calamityforce: {
             source.abilityState.storedShockwave = 0;
         }
     },
-    
     onSwitchOut(pokemon) {
         pokemon.abilityState.storedShockwave = 0;
         pokemon.abilityState.overflowData = {};
-        pokemon.abilityState.isUsingFighting = false;
     },
 },
 
@@ -22751,50 +22676,34 @@ whiteshroud: {
 redbleedingedge: {
     name: "Red Bleeding Edge",
     shortDesc: "Slicing moves: 1.5x dmg, +3 Prio, Crit, Bypass. Hits cause Bleeding.",
-
-    // 1. Base Power Boost
-    onBasePowerPriority: 19,
     onBasePower(basePower, attacker, defender, move) {
-        if (move.flags['slicing']) return this.chainModify(1.5);
+        if (move.flags['slicing']) {
+            return this.chainModify(1.5);
+        }
     },
-    // 2. Priority +3
     onModifyPriority(priority, pokemon, target, move) {
-        if (move.flags['slicing']) return priority + 3;
+        if (move.flags['slicing']) {
+            return priority + 3;
+        }
     },
-    // 3. Guaranteed Crit
     onModifyCritRatio(critRatio, source, target, move) {
-        if (move.flags['slicing']) return 5;
+        if (move.flags['slicing']) {
+            return 5;
+        }
     },
-    // 4. Bypass Protect/Sub/Screens
     onModifyMove(move, pokemon) {
         if (move.flags['slicing']) {
             move.infiltrates = true;
+            move.ignoreDefensive = true;
+            move.ignoreEvasion = true;
             if (move.flags['protect']) delete move.flags['protect'];
         }
     },
-    // 5. Unaware (Offensive)
-    onAnyModifyBoost(boosts, pokemon) {
-        const source = this.event.source;
-        const target = this.event.target;
-        const move = this.event.effect;
-        if (source === this.effectState.target && pokemon === target && move && (move as any).flags?.['slicing']) {
-            boosts['def'] = 0;
-            boosts['spd'] = 0;
-            boosts['evasion'] = 0;
-        }
-    },
-
-    // --- RED EFFECT: Bleed on Hit ---
     onSourceHit(target, source, move) {
-        if (!move || !target || target.fainted) return;
-
         if (move.flags['slicing']) {
-            // Apply the custom 'bleeding' condition
-            target.addVolatile('bleeding');
+            target.addVolatile('bleeding', source);
         }
     },
-
-    // Definition of "Bleeding"
     condition: {
         name: 'Bleeding',
         onStart(pokemon) {
@@ -22803,9 +22712,8 @@ redbleedingedge: {
         },
         onResidualOrder: 1,
         onResidual(pokemon) {
-            // 20% Max HP Damage
             if (pokemon.hp > 0) {
-                this.damage(pokemon.baseMaxhp / 5);
+                this.damage(pokemon.baseMaxhp / 8);
                 this.add('-message', `${pokemon.name} is losing blood!`);
             }
         },
@@ -22864,37 +22772,35 @@ bluecursededge: {
 
 overlord: {
     name: "Overlord",
-    shortDesc: "Traps foes. Blocks priority. Getting hit boosts Def/SpD. Def/SpD boosts add to Atk/SpA.",
-
-    // --- 1. REACTIVE DEFENSE (Stamina Pro) ---
-    // Activates BEFORE damage calculation
-    onSourceTryHit(target, source, move) {
+    shortDesc: "Traps foes. Blocks priority. Hit: Boosts Def/SpD. Attack: Converts Def/SpD boosts to Atk/SpA.",
+    onTryHit(target, source, move) {
         if (target === source || move.category === 'Status') return;
-
-        // If move is Physical, boost Defense
         if (move.category === 'Physical') {
             this.boost({ def: 1 }, target);
-        }
-        // If move is Special, boost Sp. Defense
-        else if (move.category === 'Special') {
+        } else if (move.category === 'Special') {
             this.boost({ spd: 1 }, target);
         }
     },
-
-    // --- 2. DAZZLING (Anti-Priority) ---
+    onBeforeMove(pokemon, target, move) {
+        if (move.category === 'Physical' && pokemon.boosts.def > 0) {
+            const transfer = pokemon.boosts.def;
+            this.add('-activate', pokemon, 'ability: Overlord');
+            this.boost({ atk: transfer, def: -transfer }, pokemon);
+        } else if (move.category === 'Special' && pokemon.boosts.spd > 0) {
+            const transfer = pokemon.boosts.spd;
+            this.add('-activate', pokemon, 'ability: Overlord');
+            this.boost({ spa: transfer, spd: -transfer }, pokemon);
+        }
+    },
     onFoeTryMove(target, source, move) {
         const effectHolder = this.effectState.target;
-        // Checks if it's a priority move targeting the ability holder or allies
         if (move.target !== 'self' && move.priority > 0.1 && target.isAlly(effectHolder)) {
             this.attrLastMove('[still]');
             this.add('cant', effectHolder, 'ability: Overlord', move, '[of] ' + source);
             return false;
         }
     },
-
-    // --- 3. ARENA TRAP (Trapping) ---
     onFoeTrapPokemon(pokemon) {
-        // Traps adjacent grounded foes (not Flying/Levitate)
         if (!pokemon.isAdjacent(this.effectState.target)) return;
         if (pokemon.isGrounded()) {
             pokemon.tryTrap(true);
@@ -22904,35 +22810,7 @@ overlord: {
         if (!source) source = this.effectState.target;
         if (!source || !pokemon.isAdjacent(source)) return;
         if (pokemon.isGrounded()) {
-            // FIX: Set the property directly instead of calling a function
             pokemon.maybeTrapped = true;
-        }
-    },
-
-    // --- 4. STAT TRANSFER (Defense -> Offense) ---
-    // Transfers defensive boosts to offense
-
-    // Transfer DEFENSE -> ATTACK
-    onModifyAtk(atk, pokemon) {
-        // If there is a positive Defense boost
-        if (pokemon.boosts.def > 0) {
-            // Calculate the multiplier (e.g., +1 = 1.5x, +2 = 2x)
-            const boost = pokemon.boosts.def;
-            const multiplier = (2 + boost) / 2;
-
-            // Apply this multiplier to Attack
-            return this.chainModify(multiplier);
-        }
-    },
-
-    // Transfer SP. DEFENSE -> SP. ATTACK
-    onModifySpA(spa, pokemon) {
-        // If there is a positive Sp. Def boost
-        if (pokemon.boosts.spd > 0) {
-            const boost = pokemon.boosts.spd;
-            const multiplier = (2 + boost) / 2;
-
-            return this.chainModify(multiplier);
         }
     },
 },
