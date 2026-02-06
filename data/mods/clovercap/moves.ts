@@ -584,7 +584,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			return 20 * move.hit;
 		},
 		category: "Physical",
-		isNonstandard: "Past",
+		isNonstandard: null,
 		name: "Triple Kick",
 		pp: 10,
 		priority: 0,
