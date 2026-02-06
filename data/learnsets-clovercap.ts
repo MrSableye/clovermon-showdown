@@ -6238,7 +6238,7 @@ soak: ["8E"],
 					swordbreaker: ["8T"],
 				},
 			},
-			copolarm: {
+			copolarmale: {
 				learnset: {
 					agility: ["8L1"],
 					armthrust: ["8L1"],

@@ -35200,14 +35200,14 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		"Copolar", "Copolar-Male",
 		],
 	},
-	copolarm: {
+	copolarmale: {
 		num: 42075,
 		name: "Copolar-Male",
 		types: ["Ice", "Fighting"],
 		baseSpecies: "Copolar",
 		forme: "M",
 		gender: "M",
-		baseStats: {hp: 69, atk: 105, def: 83, spa: 77, spd: 81, spe: 100},
+		baseStats: {hp: 69, atk: 105, def: 73, spa: 77, spd: 81, spe: 100},
 		abilities: {0: "Justified", 1: "Striker", H: "Slush Rush", S: "Shaved Ice"},
 		heightm: 1.37,
 		weightkg: 25.8,
