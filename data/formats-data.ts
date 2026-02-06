@@ -8269,7 +8269,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	copolarm: {
+	copolarmale: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

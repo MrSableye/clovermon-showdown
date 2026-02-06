@@ -1904,7 +1904,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	copolarm: {
+	copolarmale: {
 		inherit: true,
 		isNonstandard: "Past",
 	},

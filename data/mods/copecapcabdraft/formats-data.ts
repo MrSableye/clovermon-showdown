@@ -413,7 +413,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	copolarm: {
+	copolarmale: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
