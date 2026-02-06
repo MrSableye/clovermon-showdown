@@ -19803,6 +19803,8 @@ crosschop: ["8E"],
 crushclaw: ["8E"],
 drillrun: ["8E"],
 extremeedge: ["8E"],
+dragonhammer: ["8E"],
+dragondance: ["8M"],
 				},
 			},
 			polybrawn: {
