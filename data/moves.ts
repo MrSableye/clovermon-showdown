@@ -23153,7 +23153,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Faraday Cage",
-		pp: 20,
+		pp: 15,
 		priority: 0,
 		flags: {snatch: 1, nonsky: 1},
 		volatileStatus: 'faradaycage',
