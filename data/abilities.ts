@@ -22841,6 +22841,336 @@ overlord: {
     isBreakable: true,
 },
 
+hyperkinetic: {
+    name: "Hyper Kinetic",
+    shortDesc: "Speed x100. Punching moves hit 3 times.",
+
+    onModifySpe(spe, pokemon) {
+        return this.chainModify(100);
+    },
+
+    // --- EFFECT 2: TRIPLE PUNCH ---
+    onModifyMove(move, pokemon) {
+        if (move.flags['punch'] && move.category !== 'Status') {
+            move.multihit = 3;
+        }
+    },
+},
+
+lightglitch: {
+    name: "Light Glitch",
+    shortDesc: "Speed x100. Foes' accuracy against this Pokemon is lowered by 30%.",
+
+    // --- EFFECT 1: SPEED x100 (User) ---
+    onModifySpe(spe, pokemon) {
+        return this.chainModify(100);
+    },
+
+    onSourceModifyAccuracy(accuracy, target, source, move) {
+        if (typeof accuracy !== 'number') return;
+
+        
+        return this.chainModify(0.7);
+    },
+},
+
+absolutenull: {
+    name: "Absolute Null",
+    shortDesc: "Speed x100. While on the field, suppresses all other abilities.",
+
+    // --- EFFECT 1: SPEED x100 ---
+    onModifySpe(spe, pokemon) {
+        // Multiplies the base speed by 100 to ensure first-turn action
+        return this.chainModify(100);
+    },
+
+    // --- EFFECT 2: NEUTRALIZING GAS LOGIC ---
+    // Handles the activation and deactivation of ability suppression
+    
+    onPreStart(pokemon) {
+        if (pokemon.transformed) return;
+        this.add('-ability', pokemon, 'Absolute Null');
+        pokemon.abilityState.ending = false;
+        
+        const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
+        
+        for (const target of this.getAllActive()) {
+            if (target.hasItem('Ability Shield')) {
+                this.add('-block', target, 'item: Ability Shield');
+                continue;
+            }
+            // Can't suppress a Tatsugiri inside of Dondozo already
+            if (target.volatiles['commanding']) {
+                continue;
+            }
+            // Force end Illusion
+            if (target.illusion) {
+                this.singleEvent('End', this.dex.abilities.get('Illusion'), target.abilityState, target, pokemon, 'absolutenull');
+            }
+            // Remove Slow Start since abilities are suppressed
+            if (target.volatiles['slowstart']) {
+                delete target.volatiles['slowstart'];
+                this.add('-end', target, 'Slow Start', '[silent]');
+            }
+            // Force end strong weathers that depend on abilities
+            if (strongWeathers.includes(target.getAbility().id)) {
+                this.singleEvent('End', this.dex.abilities.get(target.getAbility().id), target.abilityState, target, pokemon, 'absolutenull');
+            }
+        }
+    },
+
+    onEnd(source) {
+        if (source.transformed) return;
+        
+        // Check if another Pokemon with this ability is still active
+        for (const pokemon of this.getAllActive()) {
+            if (pokemon !== source && pokemon.hasAbility('Absolute Null')) {
+                return;
+            }
+        }
+        this.add('-end', source, 'ability: Absolute Null');
+
+        // Mark this pokemon's ability as ending so Pokemon#ignoringAbility skips it
+        if (source.abilityState.ending) return;
+        source.abilityState.ending = true;
+        
+        const sortedActive = this.getAllActive();
+        this.speedSort(sortedActive);
+        
+        // Re-activate abilities of other Pokemon
+        for (const pokemon of sortedActive) {
+            if (pokemon !== source) {
+                if (pokemon.getAbility().isPermanent) continue; // does not interact with e.g. Ice Face, Zen Mode
+
+                // Restart the ability events
+                this.singleEvent('Start', pokemon.getAbility(), pokemon.abilityState, pokemon);
+                
+                // Reset Gluttony state if applicable
+                if (pokemon.ability === "gluttony") {
+                    pokemon.abilityState.gluttony = false;
+                }
+            }
+        }
+    },
+},
+
+solaroverdrive: {
+    name: "Solar Overdrive",
+    shortDesc: "Speed x100. Sets 10-turn Sun. Burns foes on first entry.",
+
+    // --- EFFECT 1: SPEED x100 ---
+    onModifySpe(spe, pokemon) {
+        // Multiplies the base speed by 100 to ensure first-turn action
+        return this.chainModify(100);
+    },
+
+    // --- EFFECT 2 & 3: SUN & BURN ---
+    onStart(pokemon) {
+        // Activates Sunny Day
+        this.field.setWeather('sunnyday');
+        
+        // Extends weather duration to 10 turns
+        // We access the weather state directly to override the default 5 turns
+        if (this.field.weatherState.source === pokemon) {
+            this.field.weatherState.duration = 10;
+            this.add('-message', `The sunlight turned extremely harsh for 10 turns!`);
+        }
+
+        // Applies Burn (Only once per battle)
+        // We check a custom property on the pokemon instance
+        if (!pokemon.m.solarOverdriveBurned) {
+            let activated = false;
+            for (const target of pokemon.foes()) {
+                // Attempts to inflict burn status
+                if (target.trySetStatus('brn', pokemon)) {
+                    activated = true;
+                }
+            }
+            
+            if (activated) {
+                this.add('-activate', pokemon, 'ability: Solar Overdrive');
+                this.add('-message', `The initial burst incinerated the opposing team!`);
+            }
+            
+            // Mark as used so it doesn't trigger again if switched out and back in
+            pokemon.m.solarOverdriveBurned = true;
+        }
+    },
+},
+
+sakura: {
+    name: "Sakura",
+    shortDesc: "Speed x100. Blocks priority moves. STAB is 2x.",
+    isBreakable: true, // Important so Mold Breaker can bypass the priority block
+
+    // --- EFFECT 1: SPEED x100 ---
+    onModifySpe(spe, pokemon) {
+        // Multiplies the base speed by 100 to ensure first-turn action
+        return this.chainModify(100);
+    },
+
+    // --- EFFECT 2: DAZZLING (Anti-Priority) ---
+    onFoeTryMove(target, source, move) {
+        const effectHolder = this.effectState.target;
+        
+        // Define exceptions for moves that target 'all' but shouldn't be blocked
+        const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+        
+        // If the move targets the user's own side (like Tailwind) or specific field moves, ignore
+        if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) {
+            return;
+        }
+
+        // Check if the move has priority (> 0.1) and is targeting the ability holder or its allies
+        if ((target === effectHolder || target.isAlly(effectHolder)) && move.priority > 0.1) {
+            this.attrLastMove('[still]');
+            this.add('cant', effectHolder, 'ability: Sakura', move, '[of] ' + source);
+            return false;
+        }
+    },
+	onModifyMove(move) {
+        move.stab = 2;
+    },
+},
+
+omegadrive: {
+    name: "Omega Drive",
+    shortDesc: "Speed x100. Libero. Mold Breaker. Sheer Force.",
+    
+    // --- EFFECT 1: SPEED x100 ---
+    onModifySpe(spe, pokemon) {
+        // Multiplies the base speed by 100 to ensure first-turn action
+        return this.chainModify(100);
+    },
+
+    // --- EFFECT 2: LIBERO (Type Change) ---
+    onSwitchIn() {
+        // Resets the Libero flag when switching in so it can activate once again
+        delete this.effectState.libero;
+    },
+    onPrepareHit(source, target, move) {
+        // Checks if Libero has already activated this turn/switch-in
+        if (this.effectState.libero) return;
+        if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
+        
+        const type = move.type;
+        // Changes the user's type to match the move being used
+        if (type && type !== '???' && source.getTypes().join() !== type) {
+            if (!source.setType(type)) return;
+            this.effectState.libero = true;
+            this.add('-start', source, 'typechange', type, '[from] ability: Omega Drive');
+        }
+    },
+
+    // --- EFFECT 3 & 4: MOLD BREAKER & SHEER FORCE (Move Modification) ---
+    onStart(pokemon) {
+        // Announces the ability on entry (standard for Mold Breaker effects)
+        this.add('-ability', pokemon, 'Omega Drive');
+    },
+    onModifyMove(move, pokemon) {
+        // Mold Breaker: Allows moves to ignore target's abilities (e.g., Levitate, Unaware)
+        move.ignoreAbility = true;
+
+        // Sheer Force: Removes secondary effects
+        if (move.secondaries) {
+            delete move.secondaries;
+            // Technically not a secondary effect, but it is negated by Sheer Force logic
+            delete move.self;
+            if (move.id === 'clangoroussoulblaze') delete move.selfBoost;
+            // Marks the move to receive the power boost later
+            move.hasSheerForce = true;
+        }
+    },
+
+    // --- EFFECT 4: SHEER FORCE (Power Boost) ---
+    onBasePowerPriority: 21,
+    onBasePower(basePower, pokemon, target, move) {
+        // Boosts power by ~1.3x if secondary effects were removed
+        if (move.hasSheerForce) return this.chainModify([5325, 4096]);
+    },
+},
+
+flashimpediment: {
+    name: "Flash Impediment",
+    shortDesc: "Speed x100. Takes 50% dmg from STAB moves. Paralyzes foes on first entry.",
+
+    // --- EFFECT 1: SPEED x100 ---
+    onModifySpe(spe, pokemon) {
+        // Multiplies the base speed by 100 to ensure first-turn action
+        return this.chainModify(100);
+    },
+
+    // --- EFFECT 2: STAB RESISTANCE (50% Reduction) ---
+    onSourceModifyDamage(damage, source, target, move) {
+        // Checks if the attacker (source) has the type of the move used (STAB)
+        if (source.hasType(move.type)) {
+            this.debug('Flash Impediment STAB reduction');
+            return this.chainModify(0.5);
+        }
+    },
+
+    // --- EFFECT 3: INSTANT PARALYSIS (Once per Battle) ---
+    onStart(pokemon) {
+        // Checks a custom property to ensure this only runs once per battle
+        if (!pokemon.m.flashImpedimentUsed) {
+            let activated = false;
+            for (const target of pokemon.foes()) {
+                // Attempts to inflict paralysis on the foe
+                if (target.trySetStatus('par', pokemon)) {
+                    activated = true;
+                }
+            }
+
+            if (activated) {
+                this.add('-activate', pokemon, 'ability: Flash Impediment');
+                this.add('-message', `A sudden flash paralyzed the opposing team!`);
+            }
+
+            // Flags the ability as used for this specific Pokemon instance
+            pokemon.m.flashImpedimentUsed = true;
+        }
+    },
+},
+
+cryovelocity: {
+    name: "Cryo-Velocity",
+    shortDesc: "Speed x100. Summons Snow. Freezes foes on first entry.",
+
+    // --- EFFECT 1: SPEED x100 ---
+    onModifySpe(spe, pokemon) {
+        // Multiplies the base speed by 100 to ensure first-turn action
+        return this.chainModify(100);
+    },
+
+    // --- EFFECT 2 & 3: SNOW & FREEZE ---
+    onStart(pokemon) {
+        // Activates Snow (Snow Warning)
+        this.field.setWeather('snow');
+
+        // Activates Instant Freeze (Only once per battle)
+        // We check a custom property on the pokemon instance
+        if (!pokemon.m.cryoVelocityUsed) {
+            let activated = false;
+            for (const target of pokemon.foes()) {
+                // Attempts to inflict freeze status
+                if (target.trySetStatus('frz', pokemon)) {
+                    activated = true;
+                }
+            }
+
+            if (activated) {
+                this.add('-activate', pokemon, 'ability: Cryo-Velocity');
+                this.add('-message', `${pokemon.name} froze the air itself in a blink of an eye!`);
+            }
+
+            // Mark as used so it doesn't trigger again
+            pokemon.m.cryoVelocityUsed = true;
+        }
+    },
+},
+
+
+
 
 
 

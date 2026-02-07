@@ -31025,6 +31025,38 @@ ainzooalgown: {
     tier: "Illegal",
     isNonstandard: "Future",
 },
+simiflar: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+pharameow: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+kabutoronin: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+glacipaw: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+rabblaze: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+charmew: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+vangato: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
+draconyan: {
+    tier: "Illegal",
+    isNonstandard: "Future",
+},
 
 
 
