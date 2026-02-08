@@ -35212,6 +35212,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 1.37,
 		weightkg: 25.8,
 		color: "Blue",
+		prevo: "Pechit",
+		evoLevel: 40,
 		eggGroups: ["Water 1", "Flying"],
 		gen: 8,
 		creator: "Arsej",
