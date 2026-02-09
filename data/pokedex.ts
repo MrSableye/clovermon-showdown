@@ -52637,7 +52637,7 @@ bewilderbeast: {
 		name: "Adentity",
 		types: ["Electric", "Ghost"],
 		gender: "N",
-		baseStats: {hp: 85, atk: 99, def: 101, spa: 129, spd: 69, spe: 61},
+		baseStats: {hp: 85, atk: 90, def: 101, spa: 129, spd: 69, spe: 70},
 		abilities: {0: "Insomnia", 1: "Dazzling", H: "Shadow Tag", S: "Magnet Pull"},
 		heightm: 2,
 		weightkg: 50,

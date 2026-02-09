@@ -24951,9 +24951,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		noSketch: true,
 		secondary: {
 			chance: 30,
 			status: 'frz',
+		},
+		onTry(source, target, move) {
+			if (source.species.name === 'Doomsday'  || 'Doomsay' || 'Forgotno' || 'Blobbos-Retro' || 'Blobbos-GL17CH') {
+				return;
+			}
+			this.add('-fail', source, 'move: Blizzard-D');
+			this.hint("You are unworthy to use this strength.");
+			return null;
 		},
 		target: "allAdjacentFoes",
 		type: "Ice",
@@ -24967,12 +24976,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		noSketch: true,
 		boosts: {
 			spa: 2,
 			spd: 2,
 		},
+		onTry(source, target, move) {
+			if (source.species.name === 'Doomsday'  || 'Doomsay' || 'Forgotno') {
+				return;
+			}
+			this.add('-fail', source, 'move: Amnesia-D');
+			this.hint("You are unworthy to use this strength.");
+			return null;
+		},
 		secondary: null,
-		noSketch: true,
 		target: "self",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -24989,6 +25006,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target && target.hp) {
 				source.addVolatile('mustrecharge');
 			}
+		},
+		onTry(source, target, move) {
+			if (source.species.name === 'Doomsday'  || 'Doomsay' || 'Forgotno' || 'Blobbos-Retro' || 'Blobbos-GL17CH') {
+				return;
+			}
+			this.add('-fail', source, 'move: Hyper Beam-D');
+			this.hint("You are unworthy to use this strength.");
+			return null;
 		},
 		secondary: null,
 		noSketch: true,
