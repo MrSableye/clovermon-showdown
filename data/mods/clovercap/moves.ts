@@ -1812,7 +1812,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	sleazyspores: {
 		inherit: true,
-		isNonstandard: null,
+		isNonstandard: "Past",
 		condition: {
 			onSideStart(side) {
 				this.add('-sidestart', side, 'move: Sleazy Spores');
