@@ -1857,23 +1857,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		desc: "Uses the users Primary typing for the typing of this move. Destroys Reflect, Light Screen and Aurora Veil.",
 		shortDesc: "Type varies based on user's primary type. Destroys screens.",
 	},
-	toxic: {
-		num: 92,
-		accuracy: 90,
-		basePower: 0,
-		category: "Status",
-		name: "Toxic",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1},
-		// No Guard-like effect for Poison-type users implemented in Scripts#tryMoveHit
-		status: 'tox',
-		secondary: null,
-		target: "normal",
-		type: "Poison",
-		zMove: {boost: {def: 1}},
-		contestType: "Clever",
-	},
 	eggbomb: {
 		num: 121,
 		accuracy: 100,
