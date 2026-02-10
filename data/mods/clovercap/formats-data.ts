@@ -2104,7 +2104,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	copolarmale: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	magghost: {
 		inherit: true,
