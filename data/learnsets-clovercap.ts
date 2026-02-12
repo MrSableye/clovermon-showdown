@@ -889,6 +889,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 					echoedvoice: ["8T"],
 					nightshade: ["8T"],
 					lunarimpact: ["8T"],
+					moonlight: ["8E"],
 				},
 			},
 			turturret: {
@@ -23780,6 +23781,7 @@ meanlook: ["8E"],
 				echoedvoice: ["8T"],
 				nightshade: ["8T"],
 				lunarimpact: ["8T"],
+				moonlight: ["8E"]
 			},
 		},
 		crolord: {
