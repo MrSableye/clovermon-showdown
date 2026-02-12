@@ -7711,7 +7711,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             this.add('-message', `${pokemon.name} harnesses dimensional energy!`);
         },
         desc: "When this Pokemon uses Quantum Pounce, it transforms upon entering the semi-invulnerable state.",
-        shortDesc: "Transforms when using Quantum Pounce.",
+        shortDesc: "If Shiribiko, Transforms into Shiribiko-Ultra when using Quantum Pounce.",
         rating: 4,
         num: 10002,
 

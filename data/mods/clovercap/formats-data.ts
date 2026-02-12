@@ -1856,7 +1856,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	shiribikoultra: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "Uber",
 	},
 	simionach: {
 		inherit: true,
