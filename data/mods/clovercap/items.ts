@@ -192,136 +192,71 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	/* Clover CAP Mega Stones */
-	ooganite: {
+	burntsiennapaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	wifeminite: {
+	ceruleanbluepaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bitekinite: {
+	manganesevioletpaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	fonduppite: {
+	umberpaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ebolabite: {
+	yellowochrepaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	somboludite: {
+	malachitepaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	floriousite: {
+	cobaltwhitepaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	illumatrixite: {
+	leadwhitepaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	grimdakite: {
+	pyrroleorangepaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	hazmatite: {
+	azuritepaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	krokizonite: {
+	phthalogreenpaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	spookzillite: {
+	hansayellowpaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	lizakbarite: {
+	quinacridonepaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	rectreemite: {
+	titaniumwhitepaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	unjoyite: {
+	ultramarinepaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	emplyinite: {
+	carbonblackpaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	upbeddite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	smelloxite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	pigusonite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	condoomite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	hohohomite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	faptite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	jerklite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	dowsterite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	reptrillite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	kuklanite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	ricosuavite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	vandashite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	chasumite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	goryannusite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	spookscarite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	honradite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	ointmiteite: {
+	potterspinkpaint: {
 		inherit: true,
 		isNonstandard: null,
 	},

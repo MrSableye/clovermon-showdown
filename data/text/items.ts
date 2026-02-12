@@ -2556,6 +2556,74 @@ export const ItemsText: {[k: string]: ItemText} = {
 		desc: "An item to be held by Emojinn. Changes forme to Sobbing.",
 		shortDesc: "An item to be held by Emojinn. Changes forme to Sobbing.",
 	},
+	burntsiennapaint: {
+		name: "Burnt Sienna Paint",
+		desc: "Multi-Attack and Judgment are Fighting-Type. Changes Ulmiraints forme to Fighting.",
+	},
+	ceruleanbluepaint: {
+		name: "Cerulean Blue Paint",
+		desc: "Multi-Attack and Judgment are Flying-Type. Changes Ulmiraints forme to Flying.",
+	},
+	manganesevioletpaint: {
+		name: "Manganese Violet Paint",
+		desc: "Multi-Attack and Judgment are Poison-Type. Changes Ulmiraints forme to Poison.",
+	},
+	umberpaint: {
+		name: "Umber Paint",
+		desc: "Multi-Attack and Judgment are Ground-Type. Changes Ulmiraints forme to Ground.",
+	},
+	yellowochrepaint: {
+		name: "Yellow Ochre Paint",
+		desc: "Multi-Attack and Judgment are Rock-Type. Changes Ulmiraints forme to Rock.",
+	},
+	malachitepaint: {
+		name: "Malachite Paint",
+		desc: "Multi-Attack and Judgment are Bug-Type. Changes Ulmiraints forme to Bug.",
+	},
+	cobaltvioletpaint: {
+		name: "Cobalt Violet Paint",
+		desc: "Multi-Attack and Judgment are Ghost-Type. Changes Ulmiraints forme to Ghost.",
+	},
+	leadwhitepaint: {
+		name: "Lead White Paint",
+		desc: "Multi-Attack and Judgment are Steel-Type. Changes Ulmiraints forme to Steel.",
+	},
+	pyrroleorangepaint: {
+		name: "Pyrrole Orange Paint",
+		desc: "Multi-Attack and Judgment are Fire-Type. Changes Ulmiraints forme to Fire.",
+	},
+	azuritepaint: {
+		name: "Azurite Paint",
+		desc: "Multi-Attack and Judgment are Water-Type. Changes Ulmiraints forme to Water.",
+	},
+	phthalogreenpaint: {
+		name: "Phthalo Green Paint",
+		desc: "Multi-Attack and Judgment are Grass-Type. Changes Ulmiraints forme to Grass.",
+	},
+	hansayellowpaint: {
+		name: "Hansa Yellow Paint",
+		desc: "Multi-Attack and Judgment are Electric-Type. Changes Ulmiraints forme to Electric.",
+	},
+	quincridonepaint: {
+		name: "Quincridone Paint",
+		desc: "Multi-Attack and Judgment are Psychic-Type. Changes Ulmiraints forme to Psychic.",
+	},
+	titaniumwhitepaint: {
+		name: "Titanium White Paint",
+		desc: "Multi-Attack and Judgment are Ice-Type. Changes Ulmiraints forme to Ice.",
+	},
+	ultramarinepaint: {
+		name: "Ultramarine Paint",
+		desc: "Multi-Attack and Judgment are Dragon-Type. Changes Ulmiraints forme to Dragon.",
+	},
+	carbonblackpaint: {
+		name: "Carbon Black Paint",
+		desc: "Multi-Attack and Judgment are Dark-Type. Changes Ulmiraints forme to Dark.",
+	},
+	potterspinkpaint: {
+		name: "Potter's Pink Paint",
+		desc: "Multi-Attack and Judgment are Fairy-Type. Changes Ulmiraints forme to Fairy.",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",

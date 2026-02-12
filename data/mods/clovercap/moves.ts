@@ -291,7 +291,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	judgment: {
-		inherit: true,
+		inherit: true, 
+		basePower: 120,
 		isNonstandard: null,
 	},
 	junglehealing: {
