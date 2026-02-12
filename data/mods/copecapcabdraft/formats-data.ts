@@ -174,6 +174,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	shiribikoultra: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	simionach: {
 		inherit: true,
 		isNonstandard: null,

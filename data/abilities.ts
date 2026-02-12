@@ -7703,6 +7703,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		isNonstandard: "Future",
 	},
+    
+    ultraposition: {
+        name: "Ultraposition",
+        onStart: function(pokemon) {
+            this.add('-ability', pokemon, 'Ultraposition');
+            this.add('-message', `${pokemon.name} harnesses dimensional energy!`);
+        },
+        desc: "When this Pokemon uses Quantum Pounce, it transforms upon entering the semi-invulnerable state.",
+        shortDesc: "Transforms when using Quantum Pounce.",
+        rating: 4,
+        num: 10002,
+
+
+	},
 	capacitance: {
 		name: "Capacitance",
 		onDamagingHitOrder: 1,

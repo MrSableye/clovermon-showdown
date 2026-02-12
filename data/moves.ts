@@ -75212,7 +75212,58 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
-	},
+	},  
+    quantumpounce: {
+        num: 10001,
+        accuracy: 100,
+        basePower: 120,
+        category: "Physical",
+        desc: "The user dissapears on the first turn and reappears in the second one on tremendous impact that shatter the dimentions. Hits Fairy-type Pokemon neutrally. If the user has Ultraposition and is Shiribiko, it transforms into Shiribiko-Ultra upon dissapering between dimensions.",
+        shortDesc: "Dissapear turn 1, hits turn 2. Hits Fairies neutrally. IF: Shiribiko transforms on turn 1.",
+        name: "Quantum Pounce",
+        pp: 5,
+        priority: 0,
+        flags: {charge: 1, mirror: 1, contact: 1},
+        ignoreImmunity: {"Dragon": true},
+        onTryMove: function(attacker, defender, move) {
+            if (attacker.removeVolatile(move.id)) {
+                return;
+            }
+            this.add('-prepare', attacker, move.name, defender);
+            this.add('-anim', attacker, 'Shadow Force', defender);
+            this.add('-message', `${attacker.name} shifted between dimensions!`);
+            
+            if (attacker.hasAbility('interdimensionalfiend')) {
+                this.add('-activate', attacker, 'ability: Ultraposition');
+                this.add('-message', `${attacker.name} was empowered by the Ultraposition!`);
+                
+                if (attacker.template.species === 'Shiribiko') {
+                    attacker.formeChange('Shiribiko-Ultra');
+                    this.add('-formechange', attacker, 'Shiribiko-Ultra');
+                    this.add('-message', `${attacker.name} assumed its Ultra Burst form!`);
+                }
+            }
+            
+            if (!attacker.volatiles['lockon'] && attacker.moveStatus(attacker.lastMove) !== undefined) {
+                this.effectData.stopSoundMove = true;
+                attacker.addVolatile(move.id);
+            }
+            return null;
+        },
+        onEffect: function(target, source, effect) {
+            this.add('-anim', source, 'Shadow Force', target);
+            if (source.hasAbility('ultraposition')) {
+                this.add('-message', `${source.name} struck from beyond dimensions!`);
+            }
+        },
+        secondary: false,
+        target: "normal",
+        type: "Dragon",
+        zMovePower: 190,
+        contestType: "Tough",
+    }
+
+    },
 	wakingchant: {
 		num: 668748,
 		accuracy: 100,

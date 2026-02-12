@@ -8081,6 +8081,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	shiribikoultra: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	simionach: {
 		tier: "Illegal",
 		isNonstandard: "Future",
