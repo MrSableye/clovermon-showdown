@@ -75212,21 +75212,83 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
-	},
-	wakingchant: {
-		num: 668748,
-		accuracy: 100,
-		basePower: 90,
-		category: "Special",
-		name: "Waking Chant",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
-		target: "randomNormal",
-		type: "Fear",
-		isNonstandard: "Future",
-	},
+	},  
+    quantumpounce: {
+        num: 10001,
+        accuracy: 100,
+        basePower: 120,
+        category: "Physical",
+        desc: "The user dissapears on the first turn and reappears in the second one on tremendous impact that shatter the dimentions. Hits Fairy-type Pokemon neutrally. If the user has Ultraposition and is Shiribiko, it transforms into Shiribiko-Ultra upon dissapering between dimensions.",
+        shortDesc: "Dissapear turn 1, hits turn 2. Hits Fairies neutrally. IF: Shiribiko transforms on turn 1.",
+        name: "Quantum Pounce",
+        pp: 5,
+        priority: 0,
+        flags: {charge: 1, mirror: 1, contact: 1},
+        ignoreImmunity: {"Dragon": true},
+        onTryMove: function(attacker, defender, move) {
+    if (attacker.removeVolatile(move.id)) {
+        return;
+    }
+    
+    this.add('-prepare', attacker, move.name, defender);
+    this.add('-anim', attacker, 'Shadow Force', defender);
+    this.add('-message', `${attacker.name} shifted between dimensions!`);
+    
+    if (attacker.hasAbility('ultraposition')) {
+        this.add('-activate', attacker, 'ability: Ultraposition');
+        this.add('-message', `${attacker.name} was empowered by the Ultraposition!`);
+        
+        if (attacker.species.name === 'Shiribiko') {
+            attacker.formeChange('Shiribiko-Ultra');
+            this.add('-formechange', attacker, 'Shiribiko-Ultra');
+            this.add('-message', `${attacker.name} assumed its Ultra Burst form!`);
+        }
+    }
+    
+    attacker.addVolatile(move.id);
+    
+    return null;
+},
+    
+    condition: {
+        noCopy: true,
+        onStart: function(target) {
+            this.add('-singleturn', target, 'move: Quantum Pounce');
+        },
+        onTryHit: function(target, source, move) {
+            if (target !== source && move.id !== 'quantumpounce') {
+                this.add('-fail', target, 'move: Quantum Pounce');
+                return null;
+            }
+        }
+    },
+    
+    onHit: function(target, source) {
+        this.add('-anim', source, 'Shadow Force', target);
+        if (source.hasAbility('ultraposition')) {
+            this.add('-message', `${source.name} struck from beyond dimensions!`);
+        }
+    },
+        secondary: null,
+        target: "normal",
+        type: "Dragon",
+        contestType: "Tough",
+    }, 
+    
+    wakingchant: { 
+        num: 668748,
+        accuracy: 100,
+        basePower: 90,
+        category: "Special",
+        name: "Waking Chant",
+        pp: 10,
+        priority: 0,
+        flags: {protect: 1, mirror: 1, sound: 1},
+        secondary: null,
+        target: "randomNormal",
+        type: "Fear",
+        isNonstandard: "Future",
+    },  
 	steamsale: {
 		num: 668749,
 		accuracy: 100,

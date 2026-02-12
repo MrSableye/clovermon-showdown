@@ -2140,6 +2140,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 					extinction: ["8L1"],
 					braindamage: ["8L1"],
 					lunarimpact: ["8T"],
+					quantumpounce: ["8T"],
 				},
 			},
 			simionach: {

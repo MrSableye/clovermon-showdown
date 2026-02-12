@@ -7372,6 +7372,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	shiribikoultra: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	simionach: {
 		inherit: true,
 		isNonstandard: "Past",
