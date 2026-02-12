@@ -75251,24 +75251,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 },
     
     condition: {
-        noCopy: true,
-        onStart: function(target) {
-            this.add('-singleturn', target, 'move: Quantum Pounce');
-        },
-        onTryHit: function(target, source, move) {
-            if (target !== source && move.id !== 'quantumpounce') {
+    noCopy: true,
+    duration: 2,
+    onStart: function(target) {
+        this.add('-singleturn', target, 'move: Quantum Pounce');
+    },
+    onLockMove: function(target) {
+        return 'quantumpounce';
+    },
+    onInvulnerability: function(target, source, move) {
+        if (move.id === 'quantumpounce' || move.id === 'shadowforce' || move.id === 'fly' || move.id === 'bounce' || move.id === 'skyattack') {
+            return;
+        }
+        return false;
+    },
+    onTryHit: function(target, source, move) {
+        if (target !== source && move.id !== 'quantumpounce') {
+            if (!move.flags['charge']) {
                 this.add('-fail', target, 'move: Quantum Pounce');
                 return null;
             }
+            return;
         }
     },
-    
-    onHit: function(target, source) {
-        this.add('-anim', source, 'Shadow Force', target);
-        if (source.hasAbility('ultraposition')) {
-            this.add('-message', `${source.name} struck from beyond dimensions!`);
-        }
-    },
+    onEnd: function(target) {
+        this.add('-end', target, 'move: Quantum Pounce');
+    }
+},
         secondary: null,
         target: "normal",
         type: "Dragon",
