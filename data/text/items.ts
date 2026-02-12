@@ -2584,6 +2584,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Cobalt Violet Paint",
 		desc: "Multi-Attack and Judgment are Ghost-Type. Changes Ulmiraints forme to Ghost.",
 	},
+	cobaltblackpaint: {
+		name: "Cobalt Black Paint",
+		desc: "Multi-Attack and Judgment are Dark-Type. Changes Ulmiraints forme to Dark.",
+	},
 	leadwhitepaint: {
 		name: "Lead White Paint",
 		desc: "Multi-Attack and Judgment are Steel-Type. Changes Ulmiraints forme to Steel.",
@@ -2604,8 +2608,8 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Hansa Yellow Paint",
 		desc: "Multi-Attack and Judgment are Electric-Type. Changes Ulmiraints forme to Electric.",
 	},
-	quincridonepaint: {
-		name: "Quincridone Paint",
+	quinacridonepaint: {
+		name: "Quinacridone Paint",
 		desc: "Multi-Attack and Judgment are Psychic-Type. Changes Ulmiraints forme to Psychic.",
 	},
 	titaniumwhitepaint: {

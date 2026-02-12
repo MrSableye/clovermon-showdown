@@ -8874,7 +8874,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	cobaltviolet: {
+	cobaltvioletpaint: {
 		name: "Cobalt Violet Paint",
 		spritenum: 464,
 		onPlate: 'Ghost',
