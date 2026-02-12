@@ -7705,16 +7705,25 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
     
     ultraposition: {
-        name: "Ultraposition",
-        onStart: function(pokemon) {
-            this.add('-ability', pokemon, 'Ultraposition');
-            this.add('-message', `${pokemon.name} harnesses dimensional energy!`);
-        },
-        desc: "When this Pokemon uses Quantum Pounce, it transforms upon entering the semi-invulnerable state.",
-        shortDesc: "Transforms Shiribiko into Shiribiko-Ultra when using Quantum Pounce",
-        rating: 4,
-        num: 10002,
-
+    name: "Ultraposition",
+    onStart: function(pokemon) {
+        this.add('-ability', pokemon, 'Ultraposition');
+        this.add('-message', `${pokemon.name} harnesses dimensional energy!`);
+    },
+    onSwitchOut: function(pokemon) {
+        if (pokemon.species.name === 'Shiribiko-Ultra') {
+            pokemon.formeChange('Shiribiko-Ultra');
+        }
+    },
+    onAnySwitchIn: function(pokemon) {
+        if (pokemon.species.name === 'Shiribiko' && pokemon.volatiles['ultraburst']) {
+            pokemon.formeChange('Shiribiko-Ultra');
+        }
+    },
+    desc: "When this Pokemon uses Quantum Pounce, it transforms into Shiribiko-Ultra upon entering the semi-invulnerable state. This form persists through switching and battle.",
+    shortDesc: "Transforms Shiribiko when using Quantum Pounce. Form Persists",
+    rating: 4,
+    num: 10002,
 
 	},
 	capacitance: {
