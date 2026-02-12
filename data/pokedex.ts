@@ -53750,7 +53750,7 @@ bewilderbeast: {
 		types: ["Flying"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 114, atk: 87, def: 67, spa: 129, spd: 76, spe: 77},
-		abilities: {0: "Pressure", 1: "Early Bird", H: "Super Luck", S: "Air Lock"},
+		abilities: {0: "Levitate", 1: "Air Lock", H: "Super Luck", S: "Dragon's Maw"},
 		heightm: 6.77,
 		weightkg: 200.4,
 		color: "Black",
