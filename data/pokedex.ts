@@ -35384,7 +35384,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Dark"],
 		gender: "N",
 		baseStats: {hp: 48, atk: 118, def: 58, spa: 128, spd: 48, spe: 118},
-		abilities: {0: "Bone Zone", 1: "Super Luck", H: "Degenerate", S: "Truant"},
+		abilities: {0: "Super Luck", H: "Degenerate", S: "Truant"},
 		heightm: 1.34,
 		weightkg: 40,
 		color: "White",
@@ -52362,7 +52362,7 @@ bewilderbeast: {
 		name: "Rootchew",
 		types: ["Ground", "Water"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 71, atk: 92, def: 67, spa: 78, spd: 67, spe: 50},
+		baseStats: {hp: 71, atk: 94, def: 71, spa: 68, spd: 71, spe: 50},
 		abilities: {0: "Damp", 1: "Sap Sipper", H: "Hustle", S: "Mimicry"},
 		heightm: 0.7,
 		weightkg: 66,
@@ -52377,7 +52377,7 @@ bewilderbeast: {
 		name: "Toofgrew",
 		types: ["Ground", "Grass"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 96, atk: 138, def: 100, spa: 91, spd: 85, spe: 30},
+		baseStats: {hp: 96, atk: 128, def: 100, spa: 81, spd: 85, spe: 30},
 		abilities: {0: "Regenerator", 1: "Strong Jaw", H: "Hustle", S: "Mimicry"},
 		heightm: 2.1,
 		weightkg: 214,
@@ -52394,7 +52394,7 @@ bewilderbeast: {
 		name: "Hognaw",
 		types: ["Ground", "Normal"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 148, atk: 110, def: 68, spa: 107, spd: 68, spe: 39},
+		baseStats: {hp: 142, atk: 116, def: 72, spa: 78, spd: 72, spe: 40},
 		abilities: {0: "Thick Fat", 1: "Sap Sipper", H: "Hustle", S: "Unburden"},
 		heightm: 1.9,
 		weightkg: 347,
@@ -52638,7 +52638,7 @@ bewilderbeast: {
 		types: ["Electric", "Ghost"],
 		gender: "N",
 		baseStats: {hp: 85, atk: 90, def: 101, spa: 129, spd: 69, spe: 70},
-		abilities: {0: "Insomnia", 1: "Dazzling", H: "Shadow Tag", S: "Magnet Pull"},
+		abilities: {0: "Insomnia", 1: "Dazzling", H: "Shadow Shield", S: "Magnet Pull"},
 		heightm: 2,
 		weightkg: 50,
 		color: "White",
@@ -52810,7 +52810,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Insect Plate", "Buginium Z", "Bug Memory"],
+		requiredItems: ["Malachite Plate", "Buginium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintdark: {
@@ -52828,7 +52828,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Dread Plate", "Darkinium Z", "Dark Memory"],
+		requiredItems: ["Carbon Black Paint", "Darkinium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintdragon: {
@@ -52846,7 +52846,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Draco Plate", "Dragonium Z", "Dragon Memory"],
+		requiredItems: ["Ultramarine Paint", "Dragonium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintelectric: {
@@ -52864,7 +52864,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Zap Plate", "Electrium Z", "Electric Memory"],
+		requiredItems: ["Hansa Yellow", "Electrium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintfairy: {
@@ -52882,7 +52882,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Pixie Plate", "Fairinium Z", "Fairy Memory"],
+		requiredItems: ["Potter's Pink Paint", "Fairinium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintfighting: {
@@ -52900,7 +52900,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Fist Plate", "Fightinium Z", "Fighting Memory"],
+		requiredItems: ["Burnt Sienna Paint", "Fightinium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintfire: {
@@ -52918,7 +52918,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Flame Plate", "Firinium Z", "Fire Memory"],
+		requiredItems: ["Pyrrole Orange Paint", "Firinium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintflying: {
@@ -52936,7 +52936,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Sky Plate", "Flyinium Z", "Flying Memory"],
+		requiredItems: ["Cerulean Blue Paint", "Flyinium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintghost: {
@@ -52954,7 +52954,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Spooky Plate", "Ghostium Z", "Ghost Memory"],
+		requiredItems: ["Cobalt Violet Paint", "Ghostium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintgrass: {
@@ -52972,7 +52972,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Meadow Plate", "Grassium Z", "Grass Memory"],
+		requiredItems: ["Phthalo Green Paint", "Grassium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintground: {
@@ -52990,7 +52990,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Earth Plate", "Groundium Z", "Ground Memory"],
+		requiredItems: ["Umber Paint", "Groundium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintice: {
@@ -53008,7 +53008,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Icicle Plate", "Icium Z", "Ice Memory"],
+		requiredItems: ["Titanium White Paint", "Icium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintpoison: {
@@ -53026,7 +53026,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Toxic Plate", "Poisonium Z", "Poison Memory"],
+		requiredItems: ["Manganese Violet Paint", "Poisonium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintpsychic: {
@@ -53044,7 +53044,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Mind Plate", "Psychium Z", "Psychic Memory"],
+		requiredItems: ["Quinacridone Paint", "Psychium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintrock: {
@@ -53062,7 +53062,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Stone Plate", "Rockium Z", "Rock Memory"],
+		requiredItems: ["Yellow Ochre Paint", "Rockium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintsteel: {
@@ -53080,7 +53080,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Iron Plate", "Steelium Z", "Steel Memory"],
+		requiredItems: ["Lead White Paint", "Steelium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintwater: {
@@ -53098,7 +53098,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Splash Plate", "Waterium Z", "Water Memory"],
+		requiredItems: ["Azurite Paint", "Waterium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	vanitwin: {

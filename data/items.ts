@@ -8679,6 +8679,261 @@ export const Items: {[itemid: string]: ItemData} = {
 		  isNonstandard: "Future",
 		rating: 1,
 	},
+	ultramarinepaint: {
+		name: "Ultramarine Paint",
+		spritenum: 105,
+		onPlate: 'Dragon',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Dragon",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	cobaltblackpaint: {
+		name: "Cobalt Black Paint",
+		spritenum: 110,
+		onPlate: 'Dark',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Dark",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	umberpaint: {
+		name: "Umber Paint",
+		spritenum: 117,
+		onPlate: 'Ground',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Ground",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	burntsiennapaint: {
+		name: "Burnt Sienna Paint",
+		spritenum: 143,
+		onPlate: 'Fighting',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Fighting",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	pyrroleorangepaint: {
+		name: "Pyrrole Orange Paint",
+		spritenum: 105,
+		onPlate: 'Fire',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Fire",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	titaniumwhitepaint: {
+		name: "Titanium White Paint",
+		spritenum: 220,
+		onPlate: 'Ice',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Ice",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	malachitepaint: {
+		name: "Malachite Paint",
+		spritenum: 223,
+		onPlate: 'Bug',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Bug",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	leadwhitepaint: {
+		name: "Lead White Paint",
+		spritenum: 225,
+		onPlate: 'Steel',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Steel",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	phthalogreenpaint: {
+		name: "Phthalo Green Paint",
+		spritenum: 282,
+		onPlate: 'Grass',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Grass",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	quinacridonepaint: {
+		name: "Quinacridone Paint",
+		spritenum: 291,
+		onPlate: 'Psychic',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Psychic",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	potterspinkpaint: {
+		name: "Potter's Pink Paint",
+		spritenum: 610,
+		onPlate: 'Fairy',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Fairy",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	ceruleanbluepaint: {
+		name: "Cerulean Blue Paint",
+		spritenum: 450,
+		onPlate: 'Flying',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Flying",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	azuritepaint: {
+		name: "Azurite Paint",
+		spritenum: 463,
+		onPlate: 'Water',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Water",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	cobaltviolet: {
+		name: "Cobalt Violet Paint",
+		spritenum: 464,
+		onPlate: 'Ghost',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Ghost",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	yellowochrepaint: {
+		name: "Yellow Ochre Paint",
+		spritenum: 477,
+		onPlate: 'Rock',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Rock",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	manganesevioletpaint: {
+		name: "Manganese Violet Paint",
+		spritenum: 105,
+		onPlate: 'Poison',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Poison",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	hansayellowpaint: {
+		name: "Hansa Yellow Paint",
+		spritenum: 572,
+		onPlate: 'Electric',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8621) || pokemon.baseSpecies.num === -8621) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Ulmiraint-Electric",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",
