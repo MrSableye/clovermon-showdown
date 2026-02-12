@@ -2628,7 +2628,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	paletteswap: {
 		name: "Palette Swap",
-		desc: "If this Pokemon is an Ulmiraint, its type changes to match its held Plate, Memory or Z-Crystal.",
+		desc: "If this Pokemon is an Ulmiraint, its type changes to match its held Paint or Z-Crystal.",
 	},
 	collapsingruin: {
 		name: "Collapsing Ruin",
