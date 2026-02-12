@@ -52810,7 +52810,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Malachite Plate", "Buginium Z"],
+		requiredItems: ["Malachite Paint", "Buginium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintdark: {
@@ -52864,7 +52864,7 @@ bewilderbeast: {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		creator: "Greed",
-		requiredItems: ["Hansa Yellow", "Electrium Z"],
+		requiredItems: ["Hansa Yellow Paint", "Electrium Z"],
 		changesFrom: "Ulmiraint",
 	},
 	ulmiraintfairy: {
