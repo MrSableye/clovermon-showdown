@@ -260,4 +260,12 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	chargedmicrophone: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	powermask: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

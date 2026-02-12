@@ -2624,6 +2624,14 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Potter's Pink Paint",
 		desc: "Multi-Attack and Judgment are Fairy-Type. Changes Ulmiraints forme to Fairy.",
 	},
+	powermask: {
+		name: "Power Mask",
+		desc: "An Item to be held by Naughtycoot. Doubles Attack.",
+	},
+	chargedmicrophone: {
+		name: "Charged Microphone",
+		desc: "An Item to be held by Ampstar. Doubles Attack and Special Attack.",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",

@@ -8934,6 +8934,44 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	powermask: {
+		name: "Power Mask",
+		spritenum: 760,
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Naughtycoot') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Naughtycoot"],
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	chargedmicrophone: {
+		name: "Charged Microphone",
+		spritenum: 343,
+		fling: {
+			basePower: 30,
+			status: 'par',
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Ampstar') {
+				return this.chainModify(2);
+			}
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Ampstar') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Ampstar"],
+		num: 236,
+		isNonstandard: "Future",
+		gen: 8,
+		rating: 1,
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",
