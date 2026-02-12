@@ -216,7 +216,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	cobaltwhitepaint: {
+	cobaltvioletpaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -252,7 +252,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	carbonblackpaint: {
+	cobaltblackpaint: {
 		inherit: true,
 		isNonstandard: null,
 	},
