@@ -75226,58 +75226,69 @@ export const Moves: {[moveid: string]: MoveData} = {
         flags: {charge: 1, mirror: 1, contact: 1},
         ignoreImmunity: {"Dragon": true},
         onTryMove: function(attacker, defender, move) {
-            if (attacker.removeVolatile(move.id)) {
-                return;
-            }
-            this.add('-prepare', attacker, move.name, defender);
-            this.add('-anim', attacker, 'Shadow Force', defender);
-            this.add('-message', `${attacker.name} shifted between dimensions!`);
-            
-            if (attacker.hasAbility('interdimensionalfiend')) {
-                this.add('-activate', attacker, 'ability: Ultraposition');
-                this.add('-message', `${attacker.name} was empowered by the Ultraposition!`);
-                
-                if (attacker.template.species === 'Shiribiko') {
-                    attacker.formeChange('Shiribiko-Ultra');
-                    this.add('-formechange', attacker, 'Shiribiko-Ultra');
-                    this.add('-message', `${attacker.name} assumed its Ultra Burst form!`);
-                }
-            }
-            
-            if (!attacker.volatiles['lockon'] && attacker.moveStatus(attacker.lastMove) !== undefined) {
-                this.effectData.stopSoundMove = true;
-                attacker.addVolatile(move.id);
-            }
-            return null;
+    if (attacker.removeVolatile(move.id)) {
+        return;
+    }
+    
+    this.add('-prepare', attacker, move.name, defender);
+    this.add('-anim', attacker, 'Shadow Force', defender);
+    this.add('-message', `${attacker.name} shifted between dimensions!`);
+    
+    if (attacker.hasAbility('ultraposition')) {
+        this.add('-activate', attacker, 'ability: Ultraposition');
+        this.add('-message', `${attacker.name} was empowered by the Ultraposition!`);
+        
+        if (attacker.species.name === 'Shiribiko') {
+            attacker.formeChange('Shiribiko-Ultra');
+            this.add('-formechange', attacker, 'Shiribiko-Ultra');
+            this.add('-message', `${attacker.name} assumed its Ultra Burst form!`);
+        }
+    }
+    
+    attacker.addVolatile(move.id);
+    
+    return null;
+},
+    
+    condition: {
+        noCopy: true,
+        onStart: function(target) {
+            this.add('-singleturn', target, 'move: Quantum Pounce');
         },
-        onEffect: function(target, source, effect) {
-            this.add('-anim', source, 'Shadow Force', target);
-            if (source.hasAbility('ultraposition')) {
-                this.add('-message', `${source.name} struck from beyond dimensions!`);
+        onTryHit: function(target, source, move) {
+            if (target !== source && move.id !== 'quantumpounce') {
+                this.add('-fail', target, 'move: Quantum Pounce');
+                return null;
             }
-        },
-        secondary: false,
+        }
+    },
+    
+    onHit: function(target, source) {
+        this.add('-anim', source, 'Shadow Force', target);
+        if (source.hasAbility('ultraposition')) {
+            this.add('-message', `${source.name} struck from beyond dimensions!`);
+        }
+    },
+        secondary: null,
         target: "normal",
         type: "Dragon",
-        zMovePower: 190,
         contestType: "Tough",
-    }
-
-    },
-	wakingchant: {
-		num: 668748,
-		accuracy: 100,
-		basePower: 90,
-		category: "Special",
-		name: "Waking Chant",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
-		target: "randomNormal",
-		type: "Fear",
-		isNonstandard: "Future",
-	},
+    }, 
+    
+    wakingchant: { 
+        num: 668748,
+        accuracy: 100,
+        basePower: 90,
+        category: "Special",
+        name: "Waking Chant",
+        pp: 10,
+        priority: 0,
+        flags: {protect: 1, mirror: 1, sound: 1},
+        secondary: null,
+        target: "randomNormal",
+        type: "Fear",
+        isNonstandard: "Future",
+    },  
 	steamsale: {
 		num: 668749,
 		accuracy: 100,
