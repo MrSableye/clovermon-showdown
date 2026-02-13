@@ -34580,7 +34580,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		forme: "Ultra",
 		types: ["Psychic", "Dragon"],
 		gender: "N",
-		baseStats: {hp: 113, atk: 151, def: 151, spa: 151, spd: 151, spe: 79},
+		baseStats: {hp: 113, atk: 151, def: 151, spa: 151, spd: 151, spe: 83},
 		abilities: {0: "Ultraposition"},
 		heightm: 9999999.99,
 		weightkg: 777777777777771,
