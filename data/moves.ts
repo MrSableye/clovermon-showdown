@@ -75213,71 +75213,105 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Cosmic",
 		isNonstandard: "Future",
 	},  
-    quantumpounce: {
+    "quantumpounce": {
         num: 10001,
         accuracy: 100,
         basePower: 120,
         category: "Physical",
-        desc: "The user disappears on the first turn and reappears in the second one on tremendous impact that shatter the dimentions. Hits Fairy-type Pokemon neutrally. If the user has Ultraposition and is Shiribiko, it transforms into Shiribiko-Ultra upon dissapering between dimensions.",
-        shortDesc: "Disappear turn 1, hits turn 2. Hits Fairies neutrally. If Shiribiko, transforms on turn 1.",
+        desc: "This move becomes semi-invulnerable on turn 1, then hits on turn 2. Hits Fairy-type Pokemon neutrally. If the user has Ultraposition and is Shiribiko, it transforms into Shiribiko-Ultra upon entering the semi-invulnerable state. The transformation persists for the rest of the battle and updates base stats. If the user is holding Power Herb, the first turn is skipped and it hits immediately.",
+        shortDesc: "Semi-invulnerable turn 1, hits turn 2. Hits Fairies neutrally. Power Herb: skips charge. UP: Shiribiko transforms permanently with new base stats.",
+        id: "quantumpounce",
         name: "Quantum Pounce",
         pp: 5,
         priority: 0,
         flags: {charge: 1, mirror: 1, contact: 1},
         ignoreImmunity: {"Dragon": true},
-        onTryMove: function(attacker, defender, move) {
-    if (attacker.removeVolatile(move.id)) {
-        return;
-    }
-    
-    this.add('-prepare', attacker, move.name, defender);
-    this.add('-anim', attacker, 'Shadow Force', defender);
-    this.add('-message', `${attacker.name} shifted between dimensions!`);
-    
-    if (attacker.hasAbility('ultraposition')) {
-        this.add('-activate', attacker, 'ability: Ultraposition');
-        this.add('-message', `${attacker.name} was empowered by the Ultraposition!`);
         
-        if (attacker.species.name === 'Shiribiko') {
-            attacker.formeChange('Shiribiko-Ultra');
-            this.add('-formechange', attacker, 'Shiribiko-Ultra');
-            this.add('-message', `${attacker.name} assumed its Ultra Burst form!`);
-        }
-    }
-    
-    attacker.addVolatile(move.id);
-    
-    return null;
-},
-    
-    condition: {
-    noCopy: true,
-    duration: 2,
-    onStart: function(target) {
-        this.add('-singleturn', target, 'move: Quantum Pounce');
-    },
-    onLockMove: function(target) {
-        return 'quantumpounce';
-    },
-    onInvulnerability: function(target, source, move) {
-        if (move.id === 'quantumpounce' || move.id === 'shadowforce' || move.id === 'fly' || move.id === 'bounce' || move.id === 'skyattack') {
-            return;
-        }
-        return false;
-    },
-    onTryHit: function(target, source, move) {
-        if (target !== source && move.id !== 'quantumpounce') {
-            if (!move.flags['charge']) {
-                this.add('-fail', target, 'move: Quantum Pounce');
-                return null;
+        onTryMove: function(attacker, defender, move) {
+            if (attacker.removeVolatile(move.id)) {
+                return;
             }
-            return;
-        }
-    },
-    onEnd: function(target) {
-        this.add('-end', target, 'move: Quantum Pounce');
-    }
-},
+            
+            if (attacker.hasItem('powerherb')) {
+                this.add('-activate', attacker, 'item: Power Herb');
+                attacker.useItem();
+                
+                if (attacker.hasAbility('ultraposition')) {
+                    this.add('-activate', attacker, 'ability: Ultraposition');
+                    this.add('-message', `${attacker.name} was empowered by the Ultraposition!`);
+                    if (attacker.species.id === 'shiribiko' && attacker.species.id !== 'shiribiko-ultra') {
+                        let hpPercent = attacker.hp / attacker.maxhp;
+                        
+                        attacker.formeChange('Shiribiko-Ultra');
+                        this.add('-formechange', attacker, 'Shiribiko-Ultra');
+                        this.add('-message', `${attacker.name} assumed its Ultra Burst form!`);
+                        
+                        attacker.hp = Math.floor(attacker.maxhp * hpPercent);
+                        
+                        attacker.addVolatile('ultraburst');
+                    }
+                }
+                return;
+            }
+            this.add('-prepare', attacker, move.name, defender);
+            this.add('-message', `${attacker.name} shifted between dimensions!`);
+            
+            if (attacker.hasAbility('ultraposition')) {
+                this.add('-activate', attacker, 'ability: Ultraposition');
+                this.add('-message', `${attacker.name} was empowered by the Ultraposition!`);
+                
+                if (attacker.species.id === 'shiribiko' && attacker.species.id !== 'shiribiko-ultra') {
+                    let hpPercent = attacker.hp / attacker.maxhp;
+                    
+                    attacker.formeChange('Shiribiko-Ultra');
+                    this.add('-formechange', attacker, 'Shiribiko-Ultra');
+                    this.add('-message', `${attacker.name} assumed its Ultra Burst form!`);
+                    
+                    attacker.hp = Math.floor(attacker.maxhp * hpPercent);
+                    
+                    attacker.addVolatile('ultraburst');
+                }
+            }
+            
+            attacker.addVolatile(move.id);
+            return null;
+        },
+        
+        condition: {
+            noCopy: true,
+            duration: 2,
+            onStart: function(target) {
+                this.add('-singleturn', target, 'move: Quantum Pounce');
+            },
+            onLockMove: function(target) {
+                return 'quantumpounce';
+            },
+            onInvulnerability: function(target, source, move) {
+                if (move.id === 'quantumpounce' || move.id === 'shadowforce' || move.flags['charge']) {
+                    return;
+                }
+                return false;
+            },
+            onTryHit: function(target, source, move) {
+                if (target !== source && move.id !== 'quantumpounce') {
+                    if (!move.flags['charge']) {
+                        this.add('-fail', target, 'move: Quantum Pounce');
+                        return null;
+                    }
+                    return;
+                }
+            },
+            onEnd: function(target) {
+                this.add('-end', target, 'move: Quantum Pounce');
+            }
+        },
+        
+        onHit: function(target, source) {
+            this.add('-anim', source, 'Shadow Force', target);
+            if (source.hasAbility('ultraposition')) {
+                this.add('-message', `${source.name} struck from beyond dimensions!`);
+            }
+        },
         secondary: null,
         target: "normal",
         type: "Dragon",
