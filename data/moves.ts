@@ -75218,9 +75218,8 @@ export const Moves: {[moveid: string]: MoveData} = {
         accuracy: 100,
         basePower: 120,
         category: "Physical",
-        desc: "This move becomes semi-invulnerable on turn 1, then hits on turn 2. Hits Fairy-type Pokemon neutrally. If the user has Ultraposition and is Shiribiko, it transforms into Shiribiko-Ultra upon entering the semi-invulnerable state. The transformation persists for the rest of the battle and updates base stats. If the user is holding Power Herb, the first turn is skipped and it hits immediately.",
-        shortDesc: "Semi-invulnerable turn 1, hits turn 2. Hits Fairies neutrally. Power Herb: skips charge. UP: Shiribiko transforms permanently with new base stats.",
-        id: "quantumpounce",
+        desc: "Dissapears Turn 1,Reapears turn as Shiribiko-Ultra if used by Shiribiko with Ultraposition",
+        shortDesc: "Dissapears Turn 1,Reapears turn as Shiribiko-Ultra if used by Shiribiko with Ultraposition",
         name: "Quantum Pounce",
         pp: 5,
         priority: 0,
@@ -75238,45 +75237,62 @@ export const Moves: {[moveid: string]: MoveData} = {
                 
                 if (attacker.hasAbility('ultraposition')) {
                     this.add('-activate', attacker, 'ability: Ultraposition');
-                    this.add('-message', `${attacker.name} was empowered by the Ultraposition!`);
-                    if (attacker.species.id === 'shiribiko' && attacker.species.id !== 'shiribiko-ultra') {
-                        let hpPercent = attacker.hp / attacker.maxhp;
+                    this.add('-message', `${attacker.name} was empowered by Ultraposition!`);
+                    
+                    if (attacker.species.baseSpecies === 'Shiribiko' && 
+                        attacker.species.name !== 'Shiribiko-Ultra' && 
+                        !attacker.volatiles['ultraburst']) {
+                        
+                        let oldMaxHP = attacker.maxhp;
+                        let oldCurHP = attacker.hp;
+                        let damageTaken = oldMaxHP - oldCurHP;
                         
                         attacker.formeChange('Shiribiko-Ultra');
                         this.add('-formechange', attacker, 'Shiribiko-Ultra');
                         this.add('-message', `${attacker.name} assumed its Ultra Burst form!`);
                         
-                        attacker.hp = Math.floor(attacker.maxhp * hpPercent);
+                        let newMaxHP = attacker.maxhp;
+                        attacker.hp = Math.max(1, newMaxHP - damageTaken);
                         
                         attacker.addVolatile('ultraburst');
+                        
+                        this.add('-message', `${attacker.name}'s HP increased with its new form!`);
                     }
                 }
+                
                 return;
             }
+            
             this.add('-prepare', attacker, move.name, defender);
             this.add('-message', `${attacker.name} shifted between dimensions!`);
             
             if (attacker.hasAbility('ultraposition')) {
                 this.add('-activate', attacker, 'ability: Ultraposition');
-                this.add('-message', `${attacker.name} was empowered by the Ultraposition!`);
+                this.add('-message', `${attacker.name} was empowered by Ultraposition!`);
                 
-                if (attacker.species.id === 'shiribiko' && attacker.species.id !== 'shiribiko-ultra') {
-                    let hpPercent = attacker.hp / attacker.maxhp;
+                if (attacker.species.baseSpecies === 'Shiribiko' && 
+                    attacker.species.name !== 'Shiribiko-Ultra' && 
+                    !attacker.volatiles['ultraburst']) {
+                    
+                    let oldMaxHP = attacker.maxhp;
+                    let oldCurHP = attacker.hp;
+                    let damageTaken = oldMaxHP - oldCurHP;
                     
                     attacker.formeChange('Shiribiko-Ultra');
                     this.add('-formechange', attacker, 'Shiribiko-Ultra');
                     this.add('-message', `${attacker.name} assumed its Ultra Burst form!`);
                     
-                    attacker.hp = Math.floor(attacker.maxhp * hpPercent);
+                    let newMaxHP = attacker.maxhp;
+                    attacker.hp = Math.max(1, newMaxHP - damageTaken);
                     
                     attacker.addVolatile('ultraburst');
+                    
+                    this.add('-message', `${attacker.name}'s HP increased with its new form!`);
                 }
             }
-            
             attacker.addVolatile(move.id);
             return null;
         },
-        
         condition: {
             noCopy: true,
             duration: 2,
@@ -75298,14 +75314,12 @@ export const Moves: {[moveid: string]: MoveData} = {
                         this.add('-fail', target, 'move: Quantum Pounce');
                         return null;
                     }
-                    return;
                 }
             },
             onEnd: function(target) {
                 this.add('-end', target, 'move: Quantum Pounce');
             }
         },
-        
         onHit: function(target, source) {
             this.add('-anim', source, 'Shadow Force', target);
             if (source.hasAbility('ultraposition')) {
