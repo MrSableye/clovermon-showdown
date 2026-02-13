@@ -75244,7 +75244,7 @@ export const Moves: {[moveid: string]: MoveData} = {
                         attacker.species.name !== 'Shiribiko-Ultra' && 
                         !attacker.volatiles['ultraburst']) {
                         
-                        // Perform forme change pokemon.formeChange('Shiribiko-Ultra', this.effect, true);
+                        // Perform forme change
                         attacker.formeChange('Shiribiko-Ultra', this.effect, true);
                         this.add('-formechange', attacker, 'Shiribiko-Ultra');
                         this.add('-message', `${attacker.name} assumed its Ultra Burst form!`);
