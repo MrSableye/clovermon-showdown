@@ -7705,21 +7705,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
     
     ultraposition: {
-    name: "Ultraposition",
-    onStart: function(pokemon) {
-        this.add('-ability', pokemon, 'Ultraposition');
-        this.add('-message', `${pokemon.name} harnesses dimensional energy!`);
-    },
-    onSwitchOut: function(pokemon) {
-        if (pokemon.species.name === 'Shiribiko-Ultra') {
-            pokemon.formeChange('Shiribiko-Ultra');
-        }
-    },
-    onAnySwitchIn: function(pokemon) {
-        if (pokemon.species.name === 'Shiribiko' && pokemon.volatiles['ultraburst']) {
-            pokemon.formeChange('Shiribiko-Ultra');
-        }
-    },
+        name: "Ultraposition",
+        onStart: function(pokemon) {
+            this.add('-ability', pokemon, 'Ultraposition');
+            this.add('-message', `${pokemon.name} harnesses dimensional energy!`);
+        },
+        onSwitchIn: function(pokemon) {
+            if (pokemon.species.name === 'Shiribiko' && pokemon.volatiles['ultraburst']) {
+                pokemon.formeChange('Shiribiko-Ultra');
+                this.add('-formechange', pokemon, 'Shiribiko-Ultra');
+                this.add('-message', `${pokemon.name} reverted to its Ultra Burst form!`);
+            }
+        },
+        onAnySwitchIn: function(pokemon) {
+            if (pokemon.species.name === 'Shiribiko' && pokemon.volatiles['ultraburst']) {
+                pokemon.formeChange('Shiribiko-Ultra');
+            }
+        },
     desc: "When this Pokemon uses Quantum Pounce, it transforms into Shiribiko-Ultra upon entering the semi-invulnerable state. This form persists through switching and battle.",
     shortDesc: "Transforms Shiribiko when using Quantum Pounce. Form Persists",
     rating: 4,
