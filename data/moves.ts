@@ -75219,7 +75219,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         basePower: 120,
         category: "Physical",
         desc: "This move becomes semi-invulnerable on turn 1, then hits on turn 2. Hits Fairy-type Pokemon neutrally. If the user has Ultraposition and is Shiribiko, it transforms into Shiribiko-Ultra upon entering the semi-invulnerable state. The transformation persists through switching. If the user is holding Power Herb, the first turn is skipped and it hits immediately.",
-        shortDesc: "Semi-invulnerable turn 1, hits turn 2. Hits Fairies neutrally. Power Herb: skips charge. UP: Shiribiko transforms permanently.",
+        shortDesc: "Disappears turn 1. Hits turn 2. Neutral on Fairy.",
         name: "Quantum Pounce",
         pp: 5,
         priority: 0,
