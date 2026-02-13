@@ -75253,10 +75253,10 @@ export const Moves: {[moveid: string]: MoveData} = {
                         
                         let newMaxHP = attacker.maxhp;
                         attacker.hp = Math.max(1, newMaxHP - damageTaken);
-                        
+
                         attacker.addVolatile('ultraburst');
                         
-                        this.add('-message', `${attacker.name}'s HP increased with its new form!`);
+                        this.add('-message', `${attacker.name}'s HP increased to ${attacker.hp}/${attacker.maxhp}!`);
                     }
                 }
                 
@@ -75284,17 +75284,18 @@ export const Moves: {[moveid: string]: MoveData} = {
                     
                     let newMaxHP = attacker.maxhp;
                     attacker.hp = Math.max(1, newMaxHP - damageTaken);
-                    
                     attacker.addVolatile('ultraburst');
                     
-                    this.add('-message', `${attacker.name}'s HP increased with its new form!`);
+                    this.add('-message', `${attacker.name}'s HP increased to ${attacker.hp}/${attacker.maxhp}!`);
                 }
             }
+            
             attacker.addVolatile(move.id);
             return null;
         },
+        
         condition: {
-            noCopy: true,
+            noCopy: false,
             duration: 2,
             onStart: function(target) {
                 this.add('-singleturn', target, 'move: Quantum Pounce');
@@ -75320,6 +75321,7 @@ export const Moves: {[moveid: string]: MoveData} = {
                 this.add('-end', target, 'move: Quantum Pounce');
             }
         },
+        
         onHit: function(target, source) {
             this.add('-anim', source, 'Shadow Force', target);
             if (source.hasAbility('ultraposition')) {
