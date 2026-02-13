@@ -7705,50 +7705,88 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
     
      ultraposition: {
-    name: "Ultraposition",
-    
-    onStart: function(pokemon) {
-        this.add('-ability', pokemon, 'Ultraposition');
-        this.add('-message', `${pokemon.name} harnesses dimensional energy!`);
-    },
-    
-    onSwitchIn: function(pokemon) {
-        if (pokemon.species.baseSpecies === 'Shiribiko' && 
-            pokemon.volatiles['ultraburst'] && 
-            pokemon.species.name !== 'Shiribiko-Ultra') {
+        name: "Ultraposition",
+        
+        onStart: function(pokemon) {
+            this.add('-ability', pokemon, 'Ultraposition');
+            this.add('-message', `${pokemon.name} harnesses dimensional energy!`);
             
-            let oldMaxHP = pokemon.maxhp;
-            let oldCurHP = pokemon.hp;
-            let damageTaken = oldMaxHP - oldCurHP;
+            if (pokemon.species.baseSpecies === 'Shiribiko' && pokemon.volatiles['ultraburst']) {
+                this.debug('Ultraposition: Reapplying Ultra form on start');
+                let oldMaxHP = pokemon.maxhp;
+                let oldCurHP = pokemon.hp;
+                let damageTaken = oldMaxHP - oldCurHP;
+                
+                pokemon.formeChange('Shiribiko-Ultra');
+                pokemon.hp = Math.max(1, pokemon.maxhp - damageTaken);
+            }
+        },
+        
+        onSwitchIn: function(pokemon) {
+            if (pokemon.species.baseSpecies === 'Shiribiko' && pokemon.volatiles['ultraburst']) {
+                this.debug('Ultraposition: Reapplying Ultra form on switch-in');
+                
+                let oldMaxHP = pokemon.maxhp;
+                let oldCurHP = pokemon.hp;
+                let damageTaken = oldMaxHP - oldCurHP;
+                
+                pokemon.formeChange('Shiribiko-Ultra');
+                this.add('-formechange', pokemon, 'Shiribiko-Ultra');
+                this.add('-message', `${pokemon.name} reverted to its Ultra Burst form!`);
+                pokemon.hp = Math.max(1, pokemon.maxhp - damageTaken);
+                
+                pokemon.addVolatile('ultraburst');
+                
+                this.add('-message', `${pokemon.name} has ${pokemon.hp}/${pokemon.maxhp} HP!`);
+            }
+        },
+        
+        onSwitchOut: function(pokemon) {
+            if (pokemon.species.name === 'Shiribiko-Ultra' || pokemon.volatiles['ultraburst']) {
+                this.debug('Ultraposition: Preserving Ultra Burst volatile on switch-out');
+                if (!pokemon.volatiles['ultraburst']) {
+                    pokemon.addVolatile('ultraburst');
+                }
+            }
+        },
+        
+        onAnySwitchIn: function(pokemon) {
+            if (pokemon.species.baseSpecies === 'Shiribiko' && pokemon.volatiles['ultraburst']) {
+                this.debug('Ultraposition: Backup Ultra form reapplication');
+                
+                if (pokemon.species.name !== 'Shiribiko-Ultra') {
+                    let oldMaxHP = pokemon.maxhp;
+                    let oldCurHP = pokemon.hp;
+                    let damageTaken = oldMaxHP - oldCurHP;
+                    
+                    pokemon.formeChange('Shiribiko-Ultra');
+                    pokemon.hp = Math.max(1, pokemon.maxhp - damageTaken);
+                    pokemon.addVolatile('ultraburst');
+                }
+            }
+        },
+        
+        onUpdate: function(pokemon) {
+            if (pokemon.species.baseSpecies === 'Shiribiko' && 
+                pokemon.volatiles['ultraburst'] && 
+                pokemon.species.name !== 'Shiribiko-Ultra') {
+                
+                this.debug('Ultraposition: Reapplying Ultra form on update');
+                
+                let oldMaxHP = pokemon.maxhp;
+                let oldCurHP = pokemon.hp;
+                let damageTaken = oldMaxHP - oldCurHP;
+                
+                pokemon.formeChange('Shiribiko-Ultra');
+                pokemon.hp = Math.max(1, pokemon.maxhp - damageTaken);
+            }
             
-            pokemon.formeChange('Shiribiko-Ultra');
-            this.add('-formechange', pokemon, 'Shiribiko-Ultra');
-            this.add('-message', `${pokemon.name} reverted to its Ultra Burst form!`);
-            
-            let newMaxHP = pokemon.maxhp;
-            pokemon.hp = Math.max(1, newMaxHP - damageTaken);
-        }
-    },
-    
-    onSwitchOut: function(pokemon) {
-        if (pokemon.species.name === 'Shiribiko-Ultra' && pokemon.volatiles['ultraburst']) {
-            this.add('-message', `${pokemon.name} retains its Ultra Burst energy!`);
-        }
-    },
-    
-    onAnySwitchIn: function(pokemon) {
-        if (pokemon.species.baseSpecies === 'Shiribiko' && 
-            pokemon.volatiles['ultraburst'] && 
-            pokemon.species.name !== 'Shiribiko-Ultra') {
-            
-            let oldMaxHP = pokemon.maxhp;
-            let oldCurHP = pokemon.hp;
-            let damageTaken = oldMaxHP - oldCurHP;
-            
-            pokemon.formeChange('Shiribiko-Ultra');
-            pokemon.hp = Math.max(1, pokemon.maxhp - damageTaken);
-        }
-    },
+            if (pokemon.species.name === 'Shiribiko-Ultra' && pokemon.volatiles['ultraburst']) {
+                if (pokemon.hp > pokemon.maxhp) {
+                    pokemon.hp = pokemon.maxhp;
+                }
+            }
+        },
     desc: "When this Pokemon uses Quantum Pounce, it transforms into Shiribiko-Ultra upon entering the semi-invulnerable state. This form persists through switching and battle.",
     shortDesc: "Transforms Shiribiko when using Quantum Pounce. Form Persists",
     rating: 4,
