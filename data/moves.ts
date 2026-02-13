@@ -75218,45 +75218,65 @@ export const Moves: {[moveid: string]: MoveData} = {
         accuracy: 100,
         basePower: 120,
         category: "Physical",
-        desc: "This move becomes semi-invulnerable on turn 1, then hits on turn 2. Hits Fairy-type Pokemon neutrally. If the user has Ultraposition and is Shiribiko, it transforms into Shiribiko-Ultra upon entering the semi-invulnerable state. The transformation persists for the rest of the battle.",
-        shortDesc: "2 Turn Move, Turn 1 transforms Shiribiko with Ultraposition into Shiribiko-Ultra",
+        desc: "This move becomes semi-invulnerable on turn 1, then hits on turn 2. Hits Fairy-type Pokemon neutrally. If the user has Ultraposition and is Shiribiko, it transforms into Shiribiko-Ultra upon entering the semi-invulnerable state. The transformation persists for the rest of the battle and updates base stats. If the user is holding Power Herb, the first turn is skipped and it hits immediately.",
+        shortDesc: "Semi-invulnerable turn 1, hits turn 2. Hits Fairies neutrally. Power Herb: skips charge. UP: Shiribiko transforms permanently with new base stats.",
+        id: "quantumpounce",
         name: "Quantum Pounce",
         pp: 5,
         priority: 0,
         flags: {charge: 1, mirror: 1, contact: 1},
         ignoreImmunity: {"Dragon": true},
         
-        // Turn 1: Set up the charge and semi-invulnerable state
         onTryMove: function(attacker, defender, move) {
             if (attacker.removeVolatile(move.id)) {
                 return;
             }
             
+            if (attacker.hasItem('powerherb')) {
+                this.add('-activate', attacker, 'item: Power Herb');
+                attacker.useItem();
+                
+                if (attacker.hasAbility('ultraposition')) {
+                    this.add('-activate', attacker, 'ability: Ultraposition');
+                    this.add('-message', `${attacker.name} was empowered by the Ultraposition!`);
+                    if (attacker.species.id === 'shiribiko' && attacker.species.id !== 'shiribiko-ultra') {
+                        let hpPercent = attacker.hp / attacker.maxhp;
+                        
+                        attacker.formeChange('Shiribiko-Ultra');
+                        this.add('-formechange', attacker, 'Shiribiko-Ultra');
+                        this.add('-message', `${attacker.name} assumed its Ultra Burst form!`);
+                        
+                        attacker.hp = Math.floor(attacker.maxhp * hpPercent);
+                        
+                        attacker.addVolatile('ultraburst');
+                    }
+                }
+                return;
+            }
             this.add('-prepare', attacker, move.name, defender);
             this.add('-message', `${attacker.name} shifted between dimensions!`);
             
-            // Ultraposition transformation
             if (attacker.hasAbility('ultraposition')) {
                 this.add('-activate', attacker, 'ability: Ultraposition');
                 this.add('-message', `${attacker.name} was empowered by the Ultraposition!`);
                 
-                // Transform Shiribiko into Ultra Burst form (only if not already transformed)
-                if (attacker.species.name === 'Shiribiko' && attacker.species.name !== 'Shiribiko-Ultra') {
+                if (attacker.species.id === 'shiribiko' && attacker.species.id !== 'shiribiko-ultra') {
+                    let hpPercent = attacker.hp / attacker.maxhp;
+                    
                     attacker.formeChange('Shiribiko-Ultra');
                     this.add('-formechange', attacker, 'Shiribiko-Ultra');
                     this.add('-message', `${attacker.name} assumed its Ultra Burst form!`);
                     
-                    // Add volatile to track permanent transformation
+                    attacker.hp = Math.floor(attacker.maxhp * hpPercent);
+                    
                     attacker.addVolatile('ultraburst');
                 }
             }
             
-            // Add the charge volatile
             attacker.addVolatile(move.id);
             return null;
         },
         
-        // Define the charge volatile behavior (semi-invulnerable state)
         condition: {
             noCopy: true,
             duration: 2,
@@ -75267,7 +75287,6 @@ export const Moves: {[moveid: string]: MoveData} = {
                 return 'quantumpounce';
             },
             onInvulnerability: function(target, source, move) {
-                // Allow Quantum Pounce, charge moves, and Shadow Force to hit
                 if (move.id === 'quantumpounce' || move.id === 'shadowforce' || move.flags['charge']) {
                     return;
                 }
@@ -75287,7 +75306,6 @@ export const Moves: {[moveid: string]: MoveData} = {
             }
         },
         
-        // Turn 2: The attack hits
         onHit: function(target, source) {
             this.add('-anim', source, 'Shadow Force', target);
             if (source.hasAbility('ultraposition')) {
