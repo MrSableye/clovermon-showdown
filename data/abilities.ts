@@ -7738,7 +7738,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             }
         },
     desc: "When this Pokemon uses Quantum Pounce, it transforms into Shiribiko-Ultra upon entering the semi-invulnerable state. This form persists through switching and battle.",
-    shortDesc: "Transforms Shiribiko when using Quantum Pounce. Form Persists",
+    shortDesc: "Permanently transforms Shiribiko into Ultra-Shiribiko when using Quantum Pounce.",
     rating: 4,
     num: 10002,
 
