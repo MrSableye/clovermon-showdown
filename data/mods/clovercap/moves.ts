@@ -961,10 +961,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	brutalmauling: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	awaken: {
 		inherit: true,
 		isNonstandard: null,
