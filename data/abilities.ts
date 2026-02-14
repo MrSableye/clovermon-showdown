@@ -19248,6 +19248,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Boosting Skill",
 		shortDesc: "Skill Link + increase multihits by 1 at the end of each turn",
+		isNonstandard: "Future",
 	},
 
 	growingpressure: {
@@ -19265,6 +19266,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Growing Pressure",
 		shortDesc: "Pressure + increases the PP depletion by 1 for each full turn this Pokémon stays on the field.",
+		isNonstandard: "Future",
 	},
 
 	speeeen: {
@@ -19324,6 +19326,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Speeeen!!!",
 		shortDesc: "This Pokemon's highest stat and evasiveness are doubled as long as it is confused.",
+		isNonstandard: "Future",
 	},
 
 	rollingdices: {
@@ -19333,6 +19336,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		
 		name: "Rolling Dices",
 		shortDesc: "This Pokemon's moves hit a random amount of times.",
+		isNonstandard: "Future",
 	},
 
 	stillstanding: {
@@ -19357,6 +19361,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Still Standing",
 		shortDesc: "Guts + if this Pokemon has a status, it lives any attack at 1 HP.",
+		isNonstandard: "Future",
 	},
 
 	seeingstars: {
@@ -19365,6 +19370,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Seeing Stars",
 		shortDesc: "This Pokemon's Water Shuriken hits 12 times.",
+		isNonstandard: "Future",
 	},
 
 	humongouspower: {
@@ -19381,6 +19387,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		
 		name: "Humongous Power",
 		shortDesc: "This Pokemon's Attack is 3x and accuracy of its physical attacks is 0.6x.",
+		isNonstandard: "Future",
 	},
 	badhax: {
 		onModifyMovePriority: -2,
@@ -19403,6 +19410,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		
 		name: "Bad Hax",
 		shortDesc: "Every move used by or against this Pokemon will always activate its secondary.",
+		isNonstandard: "Future",
 	},
 
 	gotyourguts: {
@@ -19426,6 +19434,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Got Your Guts!",
 		shortDesc: "Shadow Tag + Innards Out",
+		isNonstandard: "Future",
 	},
 
 
@@ -19454,6 +19463,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		
 		name: "Perfect Freeze Aura",
 		shortDesc: "This Pokemon's moves have their secondary effect chance doubled.  If Snow is active, this Pokemon's evasiveness is 1.5x.",
+		isNonstandard: "Future",
 	},
 
 
@@ -19483,6 +19493,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Jankster",
 		shortDesc: "On switch-in, this Pokemon lowers opposing Pokemon's priority by 1.",
+		isNonstandard: "Future",
 	},
 
 	gamble: {
@@ -19496,6 +19507,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		shortDesc: "This Pokémon's Metronome hits five times.",
 		rating: 3,
 		num: -5001,
+		isNonstandard: "Future",
 	},
 
 	ninelives: {
@@ -19519,12 +19531,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return target.hp - 1;
 			}
 		},
+		isNonstandard: "Future",
 		// Yes, this looks very patchwork-y. declaring new persistent global variables seems to be a no-go here
 		// so i repurposed one which should likely not affect anything else - have tested with clerica/zoro on both sides
 		// and their disguise/sturdy state is unaffected by modifying anything here. but let wg know if this breaks stuff.
 	},
 	youkaiofthedusk: {
 		shortDesc: "This Pokemon's Defense is doubled and its status moves gain +1 priority.",
+		isNonstandard: "Future",
 		name: "Youkai of the Dusk",
 		onModifyDefPriority: 6,
 		onModifyDef(def) {
@@ -19540,6 +19554,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 	unstableshell: {
 		shortDesc: "If a pokemon makes contact to this pokemon, this Pokemon loses 25% max HP and returns doubles of lost HP.",
+		isNonstandard: "Future",
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
 			if (move.flags['contact']) {
@@ -19566,6 +19581,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	spiritofgiving: {
 		desc: "On switch-in, every Pokémon in this Pokémon's party regains the item it started with, even if the item was a popped Air Balloon, if the item was picked up by a Pokémon with the Pickup Ability, or the item was lost to Bug Bite, Covet, Incinerate, Knock Off, Pluck, or Thief. It doesn't work if the Pokémon is already holding something else.",
 		shortDesc: "Restores the party's used or removed items on switch-in.",
+		isNonstandard: "Future",
 		name: "Spirit of Giving",
 		onStart(pokemon) {
 			this.hint(`${pokemon.name} was submitted to Megas for All by Hematite!`);
@@ -19591,6 +19607,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 	pesteringassault: {
 		shortDesc: "Uses Knock Off, Taunt, Torment, Soak, and Confuse Ray with 40% accuracy at turn end.",
+		isNonstandard: "Future",
 		name: "Pestering Assault",
 		onResidual(pokemon, s, effect) {
 			const moves = ['knockoff', 'taunt', 'torment', 'soak', 'confuseray'];
@@ -19606,6 +19623,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 
 	skillissue: {
+		isNonstandard: "Future",
 		onFlinch(pokemon) {
 			this.boost({spe: 1});
 		},
@@ -19647,6 +19665,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Impalpable",
 		shortDesc: "This Pokemon is non-grounded, and takes halved damage from its/foe's STABs.",
+		isNonstandard: "Future",
 	},
 
 	prismwings: {
@@ -19667,6 +19686,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Prism Wings",
 		shortDesc: "On switch-in, this Pokemon is all types for one turn.",
+		isNonstandard: "Future",
 	},
 
 		adaptation: {
@@ -19679,6 +19699,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Adaptation",
 		rating: 3.5,
 		num: 3017,
+		isNonstandard: "Future",
 	},
 
 	vent: {
@@ -19696,6 +19717,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Vent",
 		rating: 5,
 		num: 3018,
+		isNonstandard: "Future",
 	},
 
 	swagnetpull: {
@@ -19750,6 +19772,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Swagnet Pull",
 		rating: 4,
 		num: 20,
+		isNonstandard: "Future",
 	},
 
 	tranquilizinggas: {
@@ -19777,6 +19800,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Tranquilizing Gas",
 		rating: 4,
 		num: 3012,
+		isNonstandard: "Future",
 	},
 
 	lostmemory: {
@@ -19804,6 +19828,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Lost Memory",
 		rating: 3,
 		num: 3004,
+		isNonstandard: "Future",
 	},
 
 	stickystarch: {
@@ -19820,6 +19845,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		shortDesc: "Blocks and traps opponents when they use pivoting moves.",
 		rating: 1,
 		num: 9005,
+		isNonstandard: "Future",
 	},
 
 	hostabsorb: {
@@ -19843,11 +19869,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		shortDesc: "Contact moves inflict Leech Seed.",
 		rating: 2,
 		num: 9002,
+		isNonstandard: "Future",
 	},
 
 	priorityreversal: {
 	name: "Priority Reversal",
 	shortDesc: "Immune to priority moves and reflects status moves.",
+	isNonstandard: "Future",
 
 	onTryHitPriority: 1,
 	onTryHit(target, source, move) {
@@ -19870,6 +19898,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 emergencybackup: {
 	name: "Emergency Backup",
 	shortDesc: "Once per battle, using Protect calls an ally to strike and retreat.",
+	isNonstandard: "Future",
 	rating: 5,
 	num: 4002,
 
@@ -19932,6 +19961,7 @@ if (bestMoveId) {
 possessiverage: {
 	name: "Possessive Rage",
 	shortDesc: "Foes become possessed: they use random moves, lose accuracy, gain power, and always crit.",
+	isNonstandard: "Future",
 	rating: 5,
 	num: 4001,
 
@@ -19974,6 +20004,7 @@ possessiverage: {
 echobarrage: {
 	name: "Echo Barrage",
 	shortDesc: "Repeating the same physical or special move increases hits, boosts total damage, resets on miss, and works with Technician.",
+	isNonstandard: "Future",
 	rating: 4,
 	num: 4003,
 
@@ -20029,6 +20060,7 @@ echobarrage: {
 primalcannonx: {
 	name: "Primal Cannonx",
 	shortDesc: "Hyper Beam becomes the user's primary type, ignores recharge, and gains +1 priority at 50% HP or less.",
+	isNonstandard: "Future",
 	rating: 5,
 	num: 5003,
 
@@ -20062,7 +20094,7 @@ primalcannonx: {
 },
 
 forewarnx: {
-	
+	isNonstandard: "Future",
 	onStart(pokemon) {
 		// Adiciona o efeito como um estado volátil para gerenciar os dados da esquiva
 		pokemon.addVolatile('forewarn');
@@ -20133,6 +20165,7 @@ forewarnx: {
 
 tricksterx: {
 		name: "Tricksterx",
+		isNonstandard: "Future",
 		shortDesc: "A bunch of random status moves become physical (thanks anaconja)",
 		onModifyMove(move, pokemon) {
 			let trickyMoves = ["Toxic", "Block", "Spore", "Defog", "Protect", "Trick", "Heart Swap", "Instruct", "Lock-On", "Mean Look", "Substitute", "Pain Split", "Play Nice", "Power Split", "Power Swap", "Psych Up", "Rest", "Roar", "Role Play", "Skill Swap", "Speed Swap", "Sleep Talk", "Recover", "Transform", "Whirlwind", "Yawn"];
@@ -20156,6 +20189,7 @@ loosecannon: {
 		},
 		name: "Loose Cannon",
 		shortDesc: "This Pokemon's moves gain 1 BP per percent accuracy below 100.",
+		isNonstandard: "Future",
 		num: -5,
 	},
 
@@ -20180,6 +20214,7 @@ loosecannon: {
 			}
 		},
 		name: "Acid Rockx",
+		isNonstandard: "Future",
 		rating: 4,
 		num: -45,
 
@@ -20200,6 +20235,7 @@ loosecannon: {
 		},
 		name: "Contagious",
 		desc: "This Pokemon's moves have a 30% chance of freezing.",
+		isNonstandard: "Future",
 		rating: 2,
 		num: 10040,
 
@@ -20207,6 +20243,7 @@ loosecannon: {
 
 
 	horrendousskin: {
+		isNonstandard: "Future",
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Horrendous Skin');
 		},
@@ -20227,6 +20264,7 @@ loosecannon: {
 
 
 	imleabinthisgronp: {
+		isNonstandard: "Future",
 		onFoeSwitchOut(pokemon) {
 			const target = this.sample(pokemon.adjacentFoes());
 			target.switchFlag = true;
@@ -20265,6 +20303,7 @@ loosecannon: {
 			}
 		},
 		name: "Random Imposter",
+		isNonstandard: "Future",
 		rating: 4.5,
 		shortDesc: "Ao entrar em campo, transforma-se em um Pokémon aleatório da equipe do oponente.",
 	},
@@ -20272,6 +20311,7 @@ loosecannon: {
 	sovereignwhite: {
     name: "Sovereign White",
     shortDesc: "Vitreos Base + Electric Surge + Electric moves ignore immunity",
+	isNonstandard: "Future",
     
     // --- BASE ABILITIES ---
     onAnyModifyBoost(boosts, pokemon) {
@@ -20366,6 +20406,7 @@ loosecannon: {
 abyssalblack: {
     name: "Abyssal Black",
     shortDesc: "Vitreos Base + Dark Aura + Intimidate",
+	isNonstandard: "Future",
 
     // --- BASE ABILITIES ---
     onAnyModifyBoost(boosts, pokemon) {
@@ -20471,6 +20512,7 @@ abyssalblack: {
 
 serenecyan: {
     name: "Serene Cyan",
+	isNonstandard: "Future",
     shortDesc: "Vitreos Base + Snow Warning + Adaptability + Resistance Piercing.",
 
     // --- BASE ABILITIES ---
@@ -20574,6 +20616,7 @@ serenecyan: {
 
 vibrantjade: {
     name: "Vibrant Jade",
+	isNonstandard: "Future",
     shortDesc: "Vitreos Base + Grassy Surge + 2x Speed in Terrain + Immunity to secondary effects.",
 
     // --- BASE ABILITIES ---
@@ -20688,6 +20731,7 @@ vibrantjade: {
 
 wrathfulpyre: {
     name: "Wrathful Pyre",
+	isNonstandard: "Future",
     shortDesc: "Vitreos Base + Drought + Flame Body + Flash Fire + Unseen Fist + Fire moves <= 60 BP hit twice.",
 
     // --- BASE ABILITIES ---
@@ -20817,6 +20861,7 @@ wrathfulpyre: {
 
 boldocre: {
     name: "Bold Ocre",
+	isNonstandard: "Future",
     shortDesc: "Vitreos Base + Sand Stream + Stamina + Shell Armor + Guaranteed Rock/Ground crits + Ice moves have 30% accuracy against user.",
 
     // --- BASE ABILITIES ---
@@ -20928,6 +20973,7 @@ boldocre: {
 
 chromaticaura: {
 	name: "Chromatic Aura",
+	isNonstandard: "Future",
 	shortDesc: "Vitreos Base + Adaptability, Regenerator, Serene Grace. Transforms and fully heals at 50% HP or less.",
 
 	// --- BASE ABILITIES CONSOLIDATION ---
@@ -21051,6 +21097,7 @@ chromaticaura: {
 
 genesisoverload: {
 	name: "Genesis Overload",
+	isNonstandard: "Future",
 	shortDesc: "Vitreos Base + Magic Bounce + Protean + Ignore Immunities + Stats move to the attacking category.",
 
 	// --- BASE ABILITIES CONSOLIDATION ---
@@ -21162,6 +21209,7 @@ genesisoverload: {
 
 spectraloverlord: {
 	name: "Spectral Overlord",
+	isNonstandard: "Future",
 	shortDesc: "Vitreos Base + Phantasma, Levitate, Mummy. Steals foe's boosts at turn end. Immune to Ghost and Curse.",
 
 	// --- BASE ABILITIES CONSOLIDATION ---
@@ -21281,6 +21329,7 @@ spectraloverlord: {
 
 combatmemory: {
     name: "Combat Memory",
+	isNonstandard: "Future",
     shortDesc: "Lowers accuracy of moves used repeatedly against it (20% > 40% > 80%).",
     onStart(pokemon) {
         pokemon.abilityState.learnedMoves = {};
@@ -21333,6 +21382,7 @@ combatmemory: {
 
 firstlaw: {
 	name: "First Law",
+	isNonstandard: "Future",
 	shortDesc: "Moves used against this Pokémon act last. Protect-like moves fail against it.",
 
 	
@@ -21371,6 +21421,7 @@ firstlaw: {
 
 flyingthunderwarp: {
     name: "Flying Thunder Warp",
+	isNonstandard: "Future",
     shortDesc: "Teleport gains +6 priority and strikes the foe with Thunderbolt before switching out.",
     
     onModifyPriority(priority, pokemon, target, move) {
@@ -21402,6 +21453,7 @@ flyingthunderwarp: {
 
 genjutsudomain: {
     name: "Genjutsu Domain",
+	isNonstandard: "Future",
     shortDesc: "Confuses foes & drops Atk/SpA. KOs trigger Mangekyō (Double Atk/SpA, Max Crit).",
 
     onStart(pokemon) {
@@ -21501,6 +21553,7 @@ genjutsudomain: {
 
 abyssalbreaker: {
     name: "Abyssal Breaker",
+	isNonstandard: "Future",
     shortDesc: "Contact moves remove the target's item. At or below 50% HP, Shell Smash is used once. Ground moves become Ground/Water.",
 
     onStart(pokemon) {
@@ -21552,6 +21605,7 @@ abyssalbreaker: {
 
 venomgenesis: {
 	name: "Venom Genesis",
+	isNonstandard: "Future",
 	shortDesc: "At full HP, the first hit taken is reduced to 10% damage. Physical attackers take recoil and may be badly poisoned. Poison moves gain 2x STAB and ignore immunities.",
 
 	onStart(pokemon) {
@@ -21607,6 +21661,7 @@ venomgenesis: {
 
 timecollapse: {
     name: "Time Collapse",
+	isNonstandard: "Future",
     shortDesc: "Future moves activate immediately.",
     
     onAfterMove(source, target, move) {
@@ -21653,6 +21708,7 @@ timecollapse: {
 
 substitutionjutsu: {
     name: "Substitution Jutsu",
+	isNonstandard: "Future",
     shortDesc: "If hit by >50% HP dmg, creates reinforced Sub (max 2). Subzero Slammer transforms.",
 
     onDamage(damage, target, source, effect) {
@@ -21723,6 +21779,7 @@ substitutionjutsu: {
 
 hyouton: {
 	name: "Hyouton",
+	isNonstandard: "Future",
 	shortDesc: "Summons Hail. Water moves become Ice. Fire moves fail. Opponents' Speed is reduced. Ice moves never miss.",
 
 	// Summon Hail on entry
@@ -21771,6 +21828,7 @@ hyouton: {
 
 lastresolve: {
     name: "Last Resolve",
+	isNonstandard: "Future",
     shortDesc: "Below 50% HP, next attack: 80% acc, ignores Protect/Sub, OHKOs. User faints unless last alive.",
 
     onStart(pokemon) {
@@ -21859,6 +21917,7 @@ lastresolve: {
 
 neuraljammer: {
     name: "Neural Jammer",
+	isNonstandard: "Future",
     shortDesc: "On entry or foe switch-in, disables 2 random moves of the opponent while active.",
 
     onStart(pokemon) {
@@ -22412,6 +22471,7 @@ kaiselofshadows: {
 
 calamityforce: {
     name: "Calamity Force",
+	isNonstandard: "Future",
     shortDesc: "Overflow dmg on KO. Pierce Protect. Fighting moves: Never miss, ignore immunities, and act first (anti-priority). Neutralizes super-effective dmg. MASTER FOCUS PUNCH",
     onModifyMove(move, source, target) {
         
@@ -22526,6 +22586,7 @@ calamityforce: {
 
 mindsovereign: {
     name: "Mind Sovereign",
+	isNonstandard: "Future",
     shortDesc: "Spec. hits boost SpA/SpD. Unaware. Psychic moves confuse. Foes' items blocked (Auto-Embargo).",
 
     // --- EFFECT 1: Special hits boost Sp. Atk & Sp. Def ---
@@ -22615,6 +22676,7 @@ mindsovereign: {
 
 solartyrant: {
     name: "Solar Tyrant",
+	isNonstandard: "Future",
     shortDesc: "Summons Intense Sun. Burn foes based on Fire weakness. Normal moves -> Fire (1.5x).",
 
     // 1. Summon Intense Sun (Desolate Land) on entry
@@ -22762,6 +22824,7 @@ redbleedingedge: {
 
 bluecursededge: {
     name: "Blue Cursed Edge",
+	isNonstandard: "Future",
     shortDesc: "Slicing moves: 1.5x dmg, +3 Prio, Crit, Bypass. Hits apply Curse.",
 
     // 1. Base Power Boost
@@ -22812,6 +22875,7 @@ bluecursededge: {
 
 overlord: {
     name: "Overlord",
+	isNonstandard: "Future",
     shortDesc: "Traps foes. Blocks priority. Hit: Boosts Def/SpD. Attack: Converts Def/SpD boosts to Atk/SpA.",
     onTryHit(target, source, move) {
         if (target === source || move.category === 'Status') return;
