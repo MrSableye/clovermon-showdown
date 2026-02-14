@@ -7938,18 +7938,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(1.5);
 			}
 		},
-		onSourceModifyAtkPriority: 6,
-		onSourceModifyAtk(atk, attacker, defender, move) {
+		onTryHit(target, source, move) {
+			if (move.category === 'Status') return;
 			if (target !== source && move.type === 'Normal' || move.type === 'Fighting') {
-				this.debug('Second Shadow Atk weaken');
-				return this.chainModify(0);
-			}
-		},
-		onSourceModifySpAPriority: 5,
-		onSourceModifySpA(atk, attacker, defender, move) {
-			if (target !== source && move.type === 'Normal' || move.type === 'Fighting') {
-				this.debug('Second Shadow SpA weaken');
-				return this.chainModify(0);
+				this.add('-immune', target, '[from] ability: Phantasmagoric');
+				return null;
 			}
 		},
 		isNonstandard: "Future",
