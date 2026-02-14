@@ -7706,6 +7706,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     
      ultraposition: {
         name: "Ultraposition",
+		isNonstandard: "Future",
         
         onStart: function(pokemon) {
             this.add('-ability', pokemon, 'Ultraposition');
@@ -22777,6 +22778,7 @@ whiteshroud: {
 
 redbleedingedge: {
     name: "Red Bleeding Edge",
+	isNonstandard: "Future",
     shortDesc: "Slicing moves: 1.5x dmg, +3 Prio, Crit, Bypass. Hits cause Bleeding.",
     onBasePower(basePower, attacker, defender, move) {
         if (move.flags['slicing']) {

@@ -2093,4 +2093,8 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ultraposition: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
