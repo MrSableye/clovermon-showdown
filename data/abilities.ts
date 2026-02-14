@@ -7922,26 +7922,34 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 		num: 215,
 	},
-	phantasmagoric: {
-		name: "Phantasmagoric",
+	secondshadow: {
+		name: "Second Shadow",
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Ghost') {
-				this.debug('Phantasmagoric boost');
+				this.debug('Second Shadow boost');
 				return this.chainModify(1.5);
 			}
 		},
 		onModifySpAPriority: 5,
 		onModifySpA(atk, attacker, defender, move) {
 			if (move.type === 'Ghost') {
-				this.debug('Phantasmagoric boost');
+				this.debug('Second Shadow boost');
 				return this.chainModify(1.5);
 			}
 		},
-		onTryHit(target, source, move) {
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
 			if (target !== source && move.type === 'Normal' || move.type === 'Fighting') {
-				this.add('-immune', target, '[from] ability: Phantasmagoric');
-				return null;
+				this.debug('Second Shadow Atk weaken');
+				return this.chainModify(0);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (target !== source && move.type === 'Normal' || move.type === 'Fighting') {
+				this.debug('Second Shadow SpA weaken');
+				return this.chainModify(0);
 			}
 		},
 		isNonstandard: "Future",
