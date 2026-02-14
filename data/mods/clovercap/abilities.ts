@@ -266,7 +266,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	phantasmagoric: {
+	secondshadow: {
 		inherit: true,
 		isNonstandard: null,
 	},

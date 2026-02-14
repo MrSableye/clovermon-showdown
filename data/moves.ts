@@ -23998,7 +23998,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	backdraft: {
 		num: 366,
 		accuracy: true,
-		basePower: 65,
+		basePower: 70,
 		category: "Special",
 		name: "Backdraft",
 		pp: 5,
