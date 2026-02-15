@@ -4281,26 +4281,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	glassing: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	meltedplastic: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	plasticblaze: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	fadereflection: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	recycleray: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	spectresabre: {
 		inherit: true,
 		isNonstandard: null,
