@@ -10418,16 +10418,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
-	blobboswack: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
-	},
-	blobboswackmega: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
-	},
 	blobboscup: {
 		inherit: true,
 		tier: "OU",
