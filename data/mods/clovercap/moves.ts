@@ -785,6 +785,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	spotlight: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	afteryou: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	telekinesis: {
 		inherit: true,
 		condition: {

@@ -7917,6 +7917,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	tunghaska: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	meatier: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	ouroblack: {
 		tier: "Illegal",
 		isNonstandard: "Future",

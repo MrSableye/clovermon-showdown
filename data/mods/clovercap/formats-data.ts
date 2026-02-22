@@ -1713,6 +1713,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	},
+	meatier: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	tunghaska: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
 	braxitytan: {
 		inherit: true,
 		isNonstandard: null,
