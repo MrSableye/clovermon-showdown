@@ -2345,6 +2345,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	dogan: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
 	smogars: {
 		inherit: true,
 		isNonstandard: null,
