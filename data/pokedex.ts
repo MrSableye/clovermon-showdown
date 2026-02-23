@@ -35821,7 +35821,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	dogan: {
 		num: -8644,
-		name: "Smogars",
+		name: "Dogan",
 		types: ["Poison"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 65, atk: 75, def: 90, spa: 60, spd: 45, spe: 45},
