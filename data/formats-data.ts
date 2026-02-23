@@ -8481,6 +8481,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	dogan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	smogars: {
 		tier: "Illegal",
 		isNonstandard: "Future",
