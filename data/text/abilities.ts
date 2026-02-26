@@ -2582,6 +2582,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
 		shortDesc: "This Pokemon's Normal-type moves become Dragon type and have 1.2x power.",
 	},
+	lizarbrain: {
+		name: "Lizarbrain",
+		desc: "This Pokemon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's Normal-type moves become Dragon type and have 1.2x power.",
+	},
 	hydrothermal: {
 		name: "Hydrothermal",
 		desc: "Fire- and Water-type moves have a 20% higher chance to burn.",
