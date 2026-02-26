@@ -596,8 +596,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	dusknoir: {
 		inherit: true,
-		baseStats: {hp: 80, atk: 120, def: 135, spa: 55, spd: 135, spe: 25},
-		abilities: {0: "Pressure", 1: "Iron Fist", H: "Frisk", S: "Leech"},
+		baseStats: {hp: 120, atk: 100, def: 150, spa: 65, spd: 150, spe: 45},
+		abilities: {0: "Pressure", 1: "Iron Fist", H: "Thick Fat", S: "Leech"},
 	},
 	luvdisc: {
 		inherit: true,

@@ -57,11 +57,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	rebound: {
+	shortcircuit: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	shortcircuit: {
+	propellertail: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -168,7 +168,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	hewillbedragon: {
+	lizardbrain: {
 		inherit: true,
 		isNonstandard: null,
 	},
