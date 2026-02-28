@@ -793,6 +793,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	allyswitch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psychicd: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	telekinesis: {
 		inherit: true,
 		condition: {
