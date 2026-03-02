@@ -915,6 +915,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	healorder: {
+		inherit: true,
+		pp: 5,
+		isNonstandard: null,
+	},
 	zippyzap: {
 		inherit: true,
 		basePower: 50,

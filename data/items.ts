@@ -8355,7 +8355,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				return this.chainModify(2);
 			}
 		},
-		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot", "Blobbos-Skeleton", "Pasdawg-Gambino", "Pasdawg-Toadagi", "Pasdawg-Whiteout", "Pasdawg-Swoldier", "Pasdawg-Mr. Toad", "Pasdawg-Staypuft"],
+		itemUser: ["Masdawg", "Pasdawg", "Blobbos-Skeleton", "Pasdawg-Gambino", "Pasdawg-Toadagi", "Pasdawg-Whiteout", "Pasdawg-Swoldier", "Pasdawg-Mr. Toad", "Pasdawg-Staypuft"],
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -8724,8 +8724,8 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	cobaltblackpaint: {
-		name: "Cobalt Black Paint",
+	carbonblackpaint: {
+		name: "Carbon Black Paint",
 		spritenum: 110,
 		onPlate: 'Dark',
 		onTakeItem(item, pokemon, source) {
@@ -8964,16 +8964,16 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	powermask: {
-		name: "Power Mask",
+	madnessmask: {
+		name: "Madness Mask",
 		spritenum: 760,
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Naughtycoot') {
+			if (pokemon.baseSpecies.baseSpecies === 'Bandicute' || pokemon.baseSpecies.baseSpecies === 'Naughtycoot') {
 				return this.chainModify(2);
 			}
 		},
-		itemUser: ["Naughtycoot"],
+		itemUser: ["Bandicute", "Naughtycoot"],
 		isNonstandard: "Future",
 		rating: 1,
 	},
