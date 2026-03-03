@@ -28817,6 +28817,38 @@ ainzooalgown: {
     inherit: true,
     isNonstandard: "Past",
 },
+simiflar: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+pharameow: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+kabutoronin: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+glacipaw: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+rabblaze: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+charmew: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+vangato: {
+    inherit: true,
+    isNonstandard: "Past",
+},
+draconyan: {
+    inherit: true,
+    isNonstandard: "Past",
+},
 
 
 
