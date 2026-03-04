@@ -10887,6 +10887,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
+		},
+	shroomalicemega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	slub: {
 		inherit: true,

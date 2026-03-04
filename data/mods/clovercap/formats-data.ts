@@ -3113,6 +3113,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	shroomalicemega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	piurette: {
 		inherit: true,
 		isNonstandard: null,

@@ -2945,6 +2945,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	shroomalicemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	termagnius: {
 		tier: "Illegal",
 		isNonstandard: "Future",
