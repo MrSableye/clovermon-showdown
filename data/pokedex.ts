@@ -37954,7 +37954,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		requiredItem: "Shroomalicite",
 		creator: "NeyOkaou",
 	},
-	},
 	seadle: {
 		num: -8253,
 		name: "Seadle",
