@@ -2864,6 +2864,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+		},
+	shroomalicemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	seadle: {
 		inherit: true,

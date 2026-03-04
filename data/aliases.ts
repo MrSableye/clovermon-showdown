@@ -726,6 +726,7 @@ export const Aliases: {[alias: string]: string} = {
 	chandy: "Chandelure",
 	chomp: "Garchomp",
 	chups: "Lapras",
+	chipshroom: "Shroomalice",
 	clanger: "Kommo-o",
 	clef: "Clefable",
 	coba: "Cobalion",

@@ -1323,6 +1323,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+		},
+	shroomalicemega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	seadle: {
 		inherit: true,
