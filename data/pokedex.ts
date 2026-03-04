@@ -37993,7 +37993,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	shroomalicemega: {
 		num: -8252,
 		name: "Shroomalice-Mega",
-		baseSpecies: "Konekoth",
+		baseSpecies: "Shroomalice",
 		forme: "Mega",
 		types: ["Psychic"],
 		baseStats: {hp: 95, atk: 40, def: 105, spa: 145, spd: 105, spe: 85},
