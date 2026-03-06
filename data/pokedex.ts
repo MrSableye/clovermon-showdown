@@ -37324,7 +37324,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Dawn Stone",
 		eggGroups: ["Human-Like"],
 		gen: 8,
-		creator: "Bugs",
+		creator: "Bugs/Zac",
 	 },
 	 vergilion: {
 		num: -42669,
@@ -37341,7 +37341,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Dusk Stone",
 		eggGroups: ["Human-Like"],
 		gen: 8,
-		creator: "Bugs",
+		creator: "Bugs/Zac",
 	 },
 	 leopawn: {
 		num: -8624,
@@ -50869,7 +50869,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Virtuita"],
 		eggGroups: ["Grass", "Fairy"],
 		gen: 8,
-		creator: "Con",
+		creator: "Con/Rexcanyon792",
 	},
 	peashroom: {
 		num: 42168,
@@ -53364,9 +53364,9 @@ bewilderbeast: {
 		gen: 8,
 		creator: "The Fiend",
 	},
-	swinggle: {
+	swingrub: {
 		num: -8636,
-		name: "Swinggle",
+		name: "Swingrub",
 		types: ["Bug", "Poison"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 45, atk: 84, def: 50, spa: 32, spd: 42, spe: 30},
@@ -53389,7 +53389,7 @@ bewilderbeast: {
 		heightm: 2.2,
 		weightkg: 109.9,
 		color: "Brown",
-                prevo: "Swinggle",
+                prevo: "Swingrub",
 		evoLevel: 37,
 		eggGroups: ["Bug"],
 		gen: 8,

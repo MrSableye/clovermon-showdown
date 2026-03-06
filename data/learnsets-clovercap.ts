@@ -31310,7 +31310,7 @@ absorb: ["8L1"],
 		dreameater: ["8E"],
 			}
 		},
-		swinggle: {
+		swingrub: {
 			learnset: {
 				guillotine: ["8L1"],
 				counter: ["8L1"],
