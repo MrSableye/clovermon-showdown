@@ -3332,7 +3332,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	swinggle: {
+	swingrub: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",

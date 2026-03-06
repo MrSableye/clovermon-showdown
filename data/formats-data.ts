@@ -11531,7 +11531,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	swinggle: {
+	swingrub: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
