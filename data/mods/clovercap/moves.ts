@@ -920,6 +920,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		pp: 5,
 		isNonstandard: null,
 	},
+	gyroball: {
+		inherit: true,
+		pp: 15,
+		isNonstandard: null,
+	},
 	zippyzap: {
 		inherit: true,
 		basePower: 50,
