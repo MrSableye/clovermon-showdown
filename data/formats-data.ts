@@ -11423,6 +11423,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	fettorch: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	manicle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	shaikle: {
 		tier: "Illegal",
 		isNonstandard: "Future",

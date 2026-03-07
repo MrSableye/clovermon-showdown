@@ -2900,6 +2900,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	fettorch: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	manicle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
 	shaikle: {
 		inherit: true,
 		isNonstandard: null,
