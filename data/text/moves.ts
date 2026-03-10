@@ -8032,8 +8032,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mudmaelstrom: {
 		name: "Mud Maelstrom",
-		desc: "Has a 30% chance to lower the target's Speed by 1 stage.",
-		shortDesc: "30% chance to lower the target(s) Spe by 1.",
+		desc: "Deals 1/8 max HP each turn.",
+		shortDesc: "Deals 1/8 max HP each turn.",
 	},
 	finalhour: {
 		name: "Final Hour",
