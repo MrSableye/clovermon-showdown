@@ -52871,7 +52871,7 @@ bewilderbeast: {
 		heightm: 0.6,
 		weightkg: 41.5,
 		color: "Green",
-		evos: ["Kramberry"],
+		evos: ["Faustival"],
 		eggGroups: ["Grass", "Human-Like"],
 		gen: 8,
 		creator: "Frozen Seraphim",
