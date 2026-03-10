@@ -8393,6 +8393,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	arcridget: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	monikat: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -11484,6 +11488,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	yardstein: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kramberry: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
