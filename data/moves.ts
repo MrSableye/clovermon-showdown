@@ -23811,17 +23811,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	mudmaelstrom: {
-		accuracy: 90,
-		basePower: 110,
+		accuracy: 80,
+		basePower: 100,
 		category: "Special",
 		name: "Mud Maelstrom",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 30,
-			boosts: {
-				spe: -1,
+		volatileStatus: 'mudmaelstrom',
+		secondary: null,
+		target: "normal",
+		condition: {
+			name: "Mud Maelstrom",
+			duration: 0, 
+			onStart(target) {
+				this.add('-start', target, 'Mud Maelstrom');
+			},
+			onResidualOrder: 10,
+			onResidual(target) {
+				this.damage(target.baseMaxhp / 8);
+			},
+			onEnd(target) {
+				this.add('-end', target, 'Mud Maelstrom');
 			},
 		},
 		target: "allAdjacentFoes",
