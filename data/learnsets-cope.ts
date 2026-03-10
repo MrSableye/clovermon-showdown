@@ -1,4 +1,4 @@
-export const Learnsets: {[speciesid: string]: LearnsetData} = {
+export const Learnsets: {[k: string]: LearnsetData} = {
   arcridget: {
     learnset: {
       acrobatics: ["8M"],
