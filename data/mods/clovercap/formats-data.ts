@@ -2974,6 +2974,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	kramberry: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
 	faustival: {
 		inherit: true,
 		isNonstandard: null,

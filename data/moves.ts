@@ -23820,7 +23820,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		volatileStatus: 'mudmaelstrom',
 		secondary: null,
-		target: "normal",
 		condition: {
 			name: "Mud Maelstrom",
 			duration: 0, 
