@@ -2636,6 +2636,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Charged Microphone",
 		desc: "An Item to be held by Ampstar. Doubles Attack and Special Attack.",
 	},
+	sublimekey: {
+		name: "Sublime Key",
+		desc: "If Arctiglobe, forces forme into Freed and Fire-type attacks have 1.5x power.",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",
