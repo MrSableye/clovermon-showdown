@@ -268,4 +268,8 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	sublimekey: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
