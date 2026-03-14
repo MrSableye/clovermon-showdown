@@ -37,7 +37,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
       focusblast: ["8M"],
       focusmunch: ["8T"],
       focuspunch: ["8M"],
-      frustation: ["8M"],
+      frustration: ["8M"],
       fruitpunch: ["8T"],
       geargrind: ["8L50"],
       gigaimpact: ["8L71"],
