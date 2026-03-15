@@ -9002,6 +9002,25 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		rating: 1,
 	},
+	sublimekey: {
+		name: "Sublime Key",
+		spritenum: 387,
+		onBasePower(basePower, user, target, move) {
+			if (user.baseSpecies.num === -8293 && (move.type === 'Fire')) {
+				return this.chainModify(1.5);
+			}
+		},
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === -8293) || pokemon.baseSpecies.num === -8293) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Arctiglobe-Freed",
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",

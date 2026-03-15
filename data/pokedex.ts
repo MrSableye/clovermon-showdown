@@ -37774,6 +37774,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Mineral"],
 		battleOnly: "Arctiglobe",
+		requiredItem: "Sublime Key",
+		changesFrom: "Arctiglobe",
 		gen: 8,
 		creator: "Fiend",
 	},
