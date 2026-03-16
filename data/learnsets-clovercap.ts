@@ -613,6 +613,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
       woodhammer: ["8E"],
       workup: ["8M"],
       zenheadbutt: ["8M"],
+	  rocketpunch: ["8T"],
+	  earthquake: ["8M"],
 				},
 			},
 	      meatier: {
@@ -735,6 +737,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
       woodhammer: ["8E"],
       workup: ["8M"],
       zenheadbutt: ["8M"],
+	  rocketpunch: ["8T"],
+	  earthquake: ["8M"],
 				},
 			},
 	    tunghaska: {
@@ -871,6 +875,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 		disable: ["8E"],
 		shadowpunch: ["8E"],
 		spotlight: ["8E"],
+		rocketpunch: ["8T"],
+	  earthquake: ["8M"],
 				},
 			},
 			ouroblack: {
