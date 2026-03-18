@@ -87,6 +87,11 @@ export class Item extends BasicEffect implements Readonly<BasicEffect> {
 	/** Is this item a Gem? */
 	readonly isGem: boolean;
 	/** Is this item a Pokeball? */
+	readonly onGem?: string;
+	/**
+	 * If this is a Gem: The type it turns stuff into.
+	 * undefined, if not a Gem.
+	 */
 	readonly isPokeball: boolean;
 	/** Rating from -1 Detrimental to +5 Essential; see `data/abilities.ts` for details. */
 	readonly rating: number;
@@ -122,6 +127,7 @@ export class Item extends BasicEffect implements Readonly<BasicEffect> {
 		this.isBerry = !!data.isBerry;
 		this.ignoreKlutz = !!data.ignoreKlutz;
 		this.onPlate = data.onPlate || undefined;
+		this.onGem = data.onGem || undefined;
 		this.isGem = !!data.isGem;
 		this.isPokeball = !!data.isPokeball;
 		this.rating = data.rating || 0;

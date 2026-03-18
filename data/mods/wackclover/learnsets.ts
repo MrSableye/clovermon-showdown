@@ -16420,6 +16420,7 @@ shedleaves: ["8L1"],
 	},
 	polossus: {
 		learnset: {
+			tempest: ["8L1"],
 			filthbomb: ["8L1"],
 			cloudcrash: ["8L1"],
 			wastecloud: ["8L1"],
@@ -17130,6 +17131,7 @@ charisma: ["8L1"],
 	},
 	spaghefant: {
 		learnset: {
+			meatmash: ["8L1"],
 			spagettiwrap: ["8L1"],
 			matzoball: ["8L1"],
 			searingsauce: ["8L1"],
@@ -25292,6 +25294,7 @@ sonicpulse: ["8L1"],
 	},
 	fondupple: {
 		learnset: {
+			sprinkle: ["8L1"],
 			poundcake: ["8L1"],
 cakeslice: ["8L1"],
 cakewalk: ["8L1"],

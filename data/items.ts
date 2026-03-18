@@ -728,6 +728,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				source.addVolatile('gem');
 			}
 		},
+		onGem: 'Bug',
 		num: 558,
 		gen: 5,
 		isNonstandard: "Past",
@@ -1302,6 +1303,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 562,
+		onDrive: 'Dark',
 		gen: 5,
 		isNonstandard: "Past",
 		rating: 2,
@@ -1510,6 +1512,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 561,
+		onDrive: 'Dragon',
 		gen: 5,
 		isNonstandard: "Past",
 		rating: 2,
@@ -1740,6 +1743,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 550,
+		onDrive: 'Electric',
 		gen: 5,
 		isNonstandard: "Past",
 		rating: 2,
@@ -1898,6 +1902,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 715,
 		gen: 6,
+		onDrive: 'Fairy',
 		isNonstandard: "Past",
 		rating: 2,
 	},
@@ -1938,6 +1943,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 553,
 		gen: 5,
+		onGem: 'Fighting',
 		isNonstandard: "Past",
 		rating: 2,
 	},
@@ -2009,6 +2015,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 548,
+		onGem: 'Fire',
 		gen: 5,
 		isNonstandard: "Past",
 		rating: 2,
@@ -2148,6 +2155,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 556,
+		onGem: 'Flying',
 		gen: 5,
 		isNonstandard: "Past",
 		rating: 3,
@@ -2395,6 +2403,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 560,
+		onGem: 'Ghost',
 		gen: 5,
 		isNonstandard: "Past",
 		rating: 2,
@@ -2465,6 +2474,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 551,
+		onGem: 'Grass',
 		gen: 5,
 		isNonstandard: "Past",
 		rating: 2,
@@ -2605,6 +2615,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 555,
+		onGem: 'Ground',
 		gen: 5,
 		isNonstandard: "Past",
 		rating: 2,
@@ -2845,6 +2856,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 552,
+		onGem: 'Ice',
 		gen: 5,
 		isNonstandard: "Past",
 		rating: 2,
@@ -4248,6 +4260,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 564,
+		onGem: 'Normal',
 		gen: 5,
 		rating: 2,
 	},
@@ -4614,6 +4627,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 554,
 		gen: 5,
+		onGem: 'Poison',
 		isNonstandard: "Past",
 		rating: 2,
 	},
@@ -4835,6 +4849,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 557,
 		gen: 5,
+		onGem: 'Psychic',
 		isNonstandard: "Past",
 		rating: 2,
 	},
@@ -5188,6 +5203,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 559,
 		gen: 5,
+		onGem: 'Rock',
 		isNonstandard: "Past",
 		rating: 2,
 	},
@@ -6002,6 +6018,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 563,
 		gen: 5,
+		onGem: 'Steel',
 		isNonstandard: "Past",
 		rating: 2,
 	},
@@ -7594,6 +7611,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 549,
 		gen: 5,
+		onGem: 'Water',
 		isNonstandard: "Past",
 		rating: 2,
 	},
@@ -9967,6 +9985,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 558,
 		gen: 5,
+		onGem: 'PLastic',
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -9982,6 +10001,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 558,
 		gen: 5,
+		onGem: 'Glass',
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14600,6 +14620,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67097,
+		onGem: 'Wood',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14615,6 +14636,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67098,
+		onGem: 'Magma',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14625,11 +14647,12 @@ export const Items: {[itemid: string]: ItemData} = {
 		onSourceTryPrimaryHit(target, source, move) {
 			const pledges = ['firepledge', 'grasspledge', 'waterpledge'];
 			if (target === source || move.category === 'Status' || pledges.includes(move.id)) return;
-			if (move.type === 'Magma' && source.useItem()) {
+			if (move.type === 'Steam' && source.useItem()) {
 				source.addVolatile('gem');
 			}
 		},
 		num: 67099,
+		onGem: 'Steam',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14645,6 +14668,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67100,
+		onGem: 'Wind',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14660,6 +14684,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67101,
+		onGem: 'Paper',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14675,6 +14700,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67102,
+		onGem: 'Tech',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14690,6 +14716,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67103,
+		onGem: 'Magic',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14705,6 +14732,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67104,
+		onGem: 'Rubber',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14720,6 +14748,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67105,
+		onGem: 'Fear',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14735,6 +14764,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67106,
+		onGem: 'Light',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14750,6 +14780,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67107,
+		onGem: 'Cosmic',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14765,6 +14796,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67108,
+		onGem: 'Sound',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14780,6 +14812,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67109,
+		onGem: 'Food',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14795,6 +14828,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67110,
+		onGem: 'Zombie',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14810,6 +14844,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67111,
+		onGem: 'Nuclear',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14825,6 +14860,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67112,
+		onGem: 'Virus',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14840,6 +14876,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67113,
+		onGem: 'Cyber',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14855,6 +14892,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67114,
+		onGem: 'Fabric',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14870,6 +14908,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67115,
+		onGem: 'Chaos',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14885,6 +14924,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67116,
+		onGem: 'Divine',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14900,6 +14940,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67117,
+		onGem: 'Qmarks',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14915,6 +14956,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67118,
+		onGem: 'Time',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14930,6 +14972,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67119,
+		onGem: 'Paint',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14945,6 +14988,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67120,
+		onGem: 'Crystal',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14960,6 +15004,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67121,
+		onGem: 'Meme',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14975,6 +15020,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67122,
+		onGem: 'Blood',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -14990,6 +15036,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67123,
+		onGem: 'Greasy',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -15005,6 +15052,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67124,
+		onGem: 'Heart',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -15020,6 +15068,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67125,
+		onGem: 'Ogre',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -15035,6 +15084,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 67126,
+		onGem: 'Shadow',
 		isNonstandard: "Future",
 		rating: 2,
 	},
@@ -17773,7 +17823,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			basePower: 80,
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (!move.damage && !move.damageCallback && target.getMoveHitData(move).typeMod < 0) {
+			if (!move.damage && !move.damageCallback && target.getMoveHitData(move).typeMod > 0) {
 				target.useItem();
 			}
 		},

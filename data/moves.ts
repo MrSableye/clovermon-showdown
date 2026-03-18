@@ -1101,6 +1101,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				source.skipBeforeSwitchOutEventFlag = true;
 			},
 		},
+		
 		selfSwitch: 'copyvolatile',
 		secondary: null,
 		target: "self",
@@ -40112,7 +40113,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1, defrost: 1},
 		secondary: {
 			chance: 30,
-			status: 'psn',
+			status: 'brn',
 		},
 		target: "normal",
 		type: "Nuclear",
@@ -41392,7 +41393,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		critRatio: 2,
 		secondary: null,
-		target: "self",
+		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
 	},
@@ -63715,7 +63716,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
-		secondary: null,
+		boosts: {
+			evasion: 4,
+		},
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				target.addVolatile('throatchop');
+			},
+		},
 		target: "self",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -64075,8 +64084,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 					return false;
 				}
 			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 1,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Padded Room');
+			},
+		
 
 		},
+		
 		secondary: null,
 		target: "scripted",
 		type: "Fabric",
@@ -64319,6 +64335,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		status: 'brn',
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -67845,6 +67862,51 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		noSketch: true,
+		volatileStatus: 'saintwarorder',
+		condition: {
+			duration: 5,
+			onStart(target) {
+				this.add('-start', target, 'Saint War Order');
+				this.add('-message', 'Now is the time to advance! Saint War Order: Rally Upon the Holy Banner and Roar!');
+				this.add('-message', 'Attack Strength, Speed and Crit Rate went up!');
+			},
+			onModifyDamage(damage, source, target, move) {
+				if (target.getMoveHitData(move).crit) {
+					this.debug('Saint War Order boost');
+					return this.chainModify(2.0);
+				}
+			},
+			onModifyCritRatio(critRatio) {
+				return critRatio + 2;
+			},
+		onModifySpe(spe, pokemon) {
+				return this.chainModify(2.0);
+			},
+			onResidualOrder: 18,
+			onEnd(target) {
+				this.add('-end', target, 'Saint War Order');
+			},
+		},
+		
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'moxie' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('moxie');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Moxie', '[from] move: Saint War Order');
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		self: {
+			boosts: {
+				def: -1,
+			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Divine",
@@ -69234,6 +69296,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, bite: 1},
+		onHit(pokemon) {
+			const success = !!this.heal(this.modify(pokemon.maxhp, 0.5));
+			return pokemon.cureStatus() || success;
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Sound",
@@ -74628,6 +74694,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -80122,17 +80193,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondaries: [
-			{
-				chance: 100,
-				self: {
-					status: 'prz',
-				},
-			}, {
-				chance: 100,
-				status: 'prz',
-			},
-		],
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
+		onAfterHit(target, source) {
+			source.trySetStatus('par');
+		},
 		target: "normal",
 		type: "Normal",
 		isNonstandard: "Future",
@@ -80795,17 +80862,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondaries: [
-			{
-				chance: 100,
-				self: {
-					status: 'prz',
-				},
-			}, {
-				chance: 100,
-				status: 'prz',
-			},
-		],
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
+		onAfterHit(target, source) {
+			source.trySetStatus('par');
+		},
 		target: "normal",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -81611,6 +81674,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('chaoslabyrintho');
+				}
+			},
+		},
+		condition: {
+			duration: 6,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'Chaos Labyrintho');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (target.activeTurns) {
+					this.boost({atk: -1, def: 1});
+				}
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'Chaos Labyrintho');
+			},
+		},
 		secondary: null,
 		target: "foeSide",
 		type: "Chaos",
@@ -82213,6 +82301,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		volatileStatus: 'applylipstick',
+		condition: {
+			
+			onStart(target) {
+				this.add('-start', target, 'Apply Lipstick');
+				this.add('-message', 'increased the power of its kissing moves!');
+				
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.flags.kiss ) {
+					this.debug('applylipstick increase');
+					return this.chainModify([2.0]);
+				}
+			},
+			onDamagingHitOrder: 1,
+		onHit(target, source, move) {
+			if (move.flags.kiss){
+				 if (this.randomChance(3, 10)) {
+					target.addVolatile('attract');
+				}
+			}
+			},
+			
+		onResidualOrder: 18,
+			onEnd(target) {
+				this.add('-end', target, 'Apply Lipstick');
+			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Heart",
@@ -83500,6 +83617,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		onHit(target, pokemon, move) {
+			if (pokemon.item) return;
+			const types = this.dex.types.all().map((type) => type.name);
+			const newType = this.sample(types);
+			const itemText = `${newType} Gem`;
+				const item = this.dex.items.get(itemText);
+				if (pokemon.setItem(item)) {
+					this.add('-item', pokemon, item, '[from] move: Gem Create');
+				}
+		},
 		secondary: null,
 		target: "self",
 		type: "Crystal",
@@ -85765,7 +85892,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bite: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -89439,6 +89569,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			let move: Move | ActiveMove | null = target.lastMove;
+			if (!move || move.isZ) return false;
+			if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
+
+			const ppDeducted = target.deductPP(move.id, 2);
+			if (!ppDeducted) return false;
+			this.add("-activate", target, 'move: Pilpil', move.name, ppDeducted);
+		},
+		boosts: {
+			spd: 2,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -90432,7 +90574,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		onModifyType(move, pokemon) {
 			if (pokemon.ignoringItem()) return;
-			move.type = this.runEvent('Gem', pokemon, null, move, 'Normal');
+			const item = pokemon.getItem();
+			if (item.id && item.onGem && !item.zMove) {
+				move.type = item.onGem;
+			}
 		},
 		secondary: null,
 		target: "normal",
@@ -91801,6 +91946,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		multihit: [2, 5],
 		target: "adjacentAllyOrSelf",
 		type: "Dark",
 		isNonstandard: "Future",
