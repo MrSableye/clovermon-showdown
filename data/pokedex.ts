@@ -47940,6 +47940,34 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+	blobbosmirror: {
+		num: 69132,
+		name: "Blobbos-Mirror",
+		baseSpecies: "Blobbos",
+		forme: "Mirror",
+		types: ["Steel", "Ghost"],
+		gender: "N",
+		baseStats: {
+			hp: 53,
+			atk: 77,
+			def: 121,
+			spa: 121,
+			spd: 77,
+			spe: 35,
+		},
+		abilities: {
+			0: "Mirror Armor",
+                        1: "Magic Bounce",
+                        H: "Clear Body",
+		},
+		heightm: 1.89,
+		weightkg: 659.3,
+		color: "Yellow",
+		eggGroups: [
+			"Mineral"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
