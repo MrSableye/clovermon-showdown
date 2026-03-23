@@ -9016,6 +9016,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 			return true;
 		},
+		itemUser: ["Arctiglobe"],
 		forcedForme: "Arctiglobe-Freed",
 		gen: 8,
 		isNonstandard: "Future",

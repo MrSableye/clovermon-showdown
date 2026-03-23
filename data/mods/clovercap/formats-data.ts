@@ -3033,11 +3033,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	arctiglobefreed: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	lober: {
 		inherit: true,
 		isNonstandard: null,

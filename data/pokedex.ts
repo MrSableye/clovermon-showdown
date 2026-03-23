@@ -47968,6 +47968,35 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+	lobboshummingbird: {
+		num: 69132,
+		name: "Blobbos-Hummingbird",
+		baseSpecies: "Blobbos",
+		forme: "Hummingbird",
+		types: ["Flying", "Grass"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 79,
+			atk: 80,
+			def: 65,
+			spa: 87,
+			spd: 64,
+			spe: 137,
+		},
+		abilities: {
+			0: "Soundproof",
+                        1: "Big Pecks",
+                        H: "Aerilate",
+                        S: "Chording",
+		},
+		heightm: 0.91,
+		weightkg: 3.5,
+		color: "Green",
+		eggGroups: [
+			"Flying", "Grass"
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",
