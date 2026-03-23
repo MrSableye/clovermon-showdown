@@ -40161,35 +40161,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
-	blobbostandor: {
-		num: 69132,
-		name: "Blobbos-Tandor",
-		baseSpecies: "Blobbos",
-		forme: "Tandor",
-		types: ["Ice", "Nuclear"],
-		gender: "N",
-		baseStats: {
-			hp: 49,
-			atk: 127,
-			def: 43,
-			spa: 127,
-			spd: 33,
-			spe: 86,
-		},
-		abilities: {
-			0: "Aftermath",
-			1: "Pollution",
-			H: "Poison Touch",
-			S: "Poison Point",
-		},
-		heightm: 0.4,
-		weightkg: 5.7,
-		color: "Green",
-		eggGroups: [
-			"Ditto",
-		],
-		gen: 8,
-	},
 	blobboshorse: {
 		num: 69132,
 		name: "Blobbos-Horse",
@@ -47965,6 +47936,35 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Yellow",
 		eggGroups: [
 			"Mineral"
+		],
+		gen: 8,
+	},
+	blobboshummingbird: {
+		num: 69132,
+		name: "Blobbos-Hummingbird",
+		baseSpecies: "Blobbos",
+		forme: "Hummingbird",
+		types: ["Flying", "Grass"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {
+			hp: 79,
+			atk: 80,
+			def: 65,
+			spa: 87,
+			spd: 64,
+			spe: 137,
+		},
+		abilities: {
+			0: "Soundproof",
+                        1: "Big Pecks",
+                        H: "Aerilate",
+                        S: "Chording",
+		},
+		heightm: 0.91,
+		weightkg: 3.5,
+		color: "Green",
+		eggGroups: [
+			"Flying", "Grass"
 		],
 		gen: 8,
 	},

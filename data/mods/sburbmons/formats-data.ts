@@ -8336,10 +8336,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	blobbostandor: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	blobboshorse: {
 		inherit: true,
 		isNonstandard: "Past",

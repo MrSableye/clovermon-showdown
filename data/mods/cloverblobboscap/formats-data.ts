@@ -3017,6 +3017,30 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	dogan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	manicle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fettorch: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tunghaska: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kramberry: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	meatier: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	 crolord: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -3065,7 +3089,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	 swinggle: {
+	 swingrub: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -3412,11 +3436,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbossinnoh: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	blobbostandor: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -4259,7 +4278,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	ablobbos: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	blobbosslug: {
 		inherit: true,
@@ -4817,6 +4836,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbosmirror: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshummingbird: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

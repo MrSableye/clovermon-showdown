@@ -9687,10 +9687,6 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	blobbostandor: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
 	blobboshorse: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -10516,6 +10512,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	blobbosmirror: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboshummingbird: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
