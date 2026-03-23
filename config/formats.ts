@@ -948,7 +948,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie',
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet', 'Discombubbles',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'After Image','Perfect Freeze', 'Lunatic Time', 'Electrify + Lightning Rod', 'Electrify + Motor Drive', 'Electrify + Volt Absorb', 'Green Card', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
+			'Hell Drag', 'Pacify', 'Rift Strike', 'Magic Cape', 'After Image','Perfect Freeze', 'Lunatic Time', 'Electrify + Lightning Rod', 'Electrify + Motor Drive', 'Electrify + Volt Absorb', 'Green Card', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
 		],
 	},
 	{
@@ -969,7 +969,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie',
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet', 'Discombubbles',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'After Image','Perfect Freeze', 'Electrify + Lightning Rod', 'Electrify + Motor Drive', 'Electrify + Volt Absorb', 'Lunatic Time', 'Green Card', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
+			'Hell Drag', 'Pacify', 'Kaleido Scope', 'WildBeastsLogic', 'Squirm', 'Rift Strike', 'Magic Cape', 'After Image','Perfect Freeze', 'Electrify + Lightning Rod', 'Electrify + Motor Drive', 'Electrify + Volt Absorb', 'Lunatic Time', 'Green Card', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
 		],
 	},
 	
@@ -1013,7 +1013,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie',
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis',
+			'Hell Drag', 'Pacify', 'Magic Cape', 'Rift Strike', 'Perfect Freeze', 'Time Stasis',
 		],
 	},
 	{
@@ -1035,7 +1035,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie',
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis',
+			'Hell Drag', 'Pacify','Magic Cape', 'Rift Strike', 'Perfect Freeze', 'Time Stasis',
 		],
 	},
 	{
@@ -1057,7 +1057,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie',
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis',
+			'Hell Drag', 'Pacify', 'Magic Cape','Rift Strike', 'Perfect Freeze', 'Time Stasis',
 		],
 	},
 	{
@@ -1094,7 +1094,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie',
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis',
+			'Hell Drag', 'Pacify', 'Magic Cape','Rift Strike', 'Perfect Freeze', 'Time Stasis',
 		],
 	},
 	{
@@ -1118,7 +1118,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie',
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis',
+			'Hell Drag', 'Pacify', 'Magic Cape', 'Rift Strike', 'Perfect Freeze', 'Time Stasis',
 		],
 	},
 	{
@@ -1177,7 +1177,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie',
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet', 'Discombubbles',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
+			'Hell Drag', 'Pacify', 'Magic Cape', 'Rift Strike', 'Perfect Freeze', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
 		],
 	},
 

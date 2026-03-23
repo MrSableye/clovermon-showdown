@@ -11258,9 +11258,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onModifyTypePriority: -1,
 		onModifyType(move, source) {
-			if (move.hit === 2 && move.type === source.getTypes()[0]) 
+			if (move.hit === 1 && move.type === source.getTypes()[0]) 
 				 move.type = source.getTypes()[1]; 
-			else if (move.hit === 2 && move.type === source.getTypes()[1]) 
+			else if (move.hit === 1 && move.type === source.getTypes()[1]) 
 				move.type = source.getTypes()[0]; 
 		},
 

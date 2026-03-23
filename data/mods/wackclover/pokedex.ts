@@ -412,6 +412,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Crystal", "Poison"],
 	},
+	polossus: {
+		inherit: true,
+		types: ["Poison", "Wind"],
+	},
 	snugware: {
 		inherit: true,
 		types: ["Bug", "Cyber"],

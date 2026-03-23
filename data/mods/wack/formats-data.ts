@@ -2301,7 +2301,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	weavile: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	magnezone: {
@@ -15172,7 +15172,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	kaguyainbow: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	mokanou: {
@@ -18092,7 +18092,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	mpyroar: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	ayymask: {

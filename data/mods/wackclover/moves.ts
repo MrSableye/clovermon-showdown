@@ -1092,6 +1092,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	sprinkle: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	stoneaxe: {
 		inherit: true,
 		isNonstandard: "Past",
