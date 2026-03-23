@@ -2189,7 +2189,6 @@ export const Aliases: {[alias: string]: string} = {
 	bswitchblue: "Blobbos-Switch-Blue",
 	bswitchb: "Blobbos-Switch-Blue",
 	bmarsh: "Blobbos-Swamp",
-	btandor: "Blobbos-Tandor",
 	btrap: "Blobbos-Trap",
 	bastolfo: "Blobbos-Trap",
 	btriple: "Blobbos-Triple",
