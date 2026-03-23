@@ -1988,7 +1988,6 @@ export const Formats: FormatList = [
 			'Huge Power + Blobbos-Chad',
 			'Pure Power + Blobbos-Chad',
 			'Power Herb + Awaken',
-			'Blobbos-Tandor',
 			'Catalyst',
 			'Transfusion',
 			'More Room',
