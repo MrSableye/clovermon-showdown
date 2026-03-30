@@ -44600,7 +44600,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		basePowerCallback(pokemon, target, move) {
-			return 10 * move.hit;
+			return 30 * move.hit;
 		},
 		multihit: 3,
 		multiaccuracy: true,
@@ -46870,7 +46870,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
 		basePowerCallback(pokemon, target, move) {
-			return 10 * move.hit;
+			return 30 * move.hit;
 		},
 		multihit: 3,
 		multiaccuracy: true,
@@ -53468,7 +53468,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -55275,6 +55278,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Tsubame Gaeshi",
 		pp: 5,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			return 40 * move.hit;
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -57957,7 +57963,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, beak: 1},
 		basePowerCallback(pokemon, target, move) {
-			return 10 * move.hit;
+			return 30 * move.hit;
 		},
 		multihit: 3,
 		secondary: null,
@@ -59489,7 +59495,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		basePowerCallback(pokemon, target, move) {
-			return 10 * move.hit;
+			return 30 * move.hit;
 		},
 		multihit: 3,
 		multiaccuracy: true,
@@ -66493,7 +66499,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
 		basePowerCallback(pokemon, target, move) {
-			return 10 * move.hit;
+			return 30 * move.hit;
 		},
 		multihit: 3,
 		multiaccuracy: true,
@@ -66527,7 +66533,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
 		basePowerCallback(pokemon, target, move) {
-			return 10 * move.hit;
+			return 30 * move.hit;
 		},
 		multihit: 3,
 		multiaccuracy: true,
@@ -67767,7 +67773,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			volatileStatus: 'disable',
+		},
 		target: "normal",
 		type: "Qmarks",
 		isNonstandard: "Future",
@@ -67781,7 +67790,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			boosts: {
+				atk: -1,
+			},
+		},
 		target: "normal",
 		type: "Qmarks",
 		isNonstandard: "Future",
@@ -69632,7 +69646,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -70171,7 +70188,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		basePowerCallback(pokemon, target, move) {
-			return 10 * move.hit;
+			return 25 * move.hit;
 		},
 		multihit: 3,
 		multiaccuracy: true,
@@ -70638,7 +70655,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		onTry(source) {
+			if (source.moveSlots.length < 2) return false; // Last Resort fails unless the user knows at least 2 moves
+			let hasLastResort = false; // User must actually have Last Resort for it to succeed
+			for (const moveSlot of source.moveSlots) {
+				if (moveSlot.id === 'ochddeugodin') {
+					hasLastResort = true;
+					continue;
+				}
+				if (!moveSlot.used) return false;
+			}
+			return hasLastResort;
+		},
+		onHit(target) {
+			target.clearBoosts();
+			this.add('-clearboost', target);
+		},
+		boosts: {
+			atk: -1,
+			def: -1,
+			spa: -1,
+			spd: -1,
+			spe: -1,
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'disable',
+		},
 		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
@@ -73750,7 +73793,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		basePowerCallback(pokemon, target, move) {
-			return 10 * move.hit;
+			return 20 * move.hit;
 		},
 		multihit: 3,
 		multiaccuracy: true,
@@ -74554,7 +74597,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		basePowerCallback(pokemon, target, move) {
-			return 10 * move.hit;
+			return 30 * move.hit;
 		},
 		multihit: 3,
 		multiaccuracy: true,
@@ -74765,6 +74808,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		sleepUsable: true,
 		onTry(source) {
 			return source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz') || source.hasAbility('lethargic');
 		},
@@ -81690,7 +81734,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onResidualSubOrder: 1,
 			onResidual(target) {
 				if (target.activeTurns) {
-					this.boost({atk: -1, def: 1});
+					this.boost({atk: -1, def: -1});
 				}
 			},
 			onSideResidualOrder: 26,
@@ -81816,7 +81860,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		basePowerCallback(pokemon, target, move) {
-			return 10 * move.hit;
+			return 30 * move.hit;
 		},
 		multihit: 3,
 		multiaccuracy: true,
@@ -87754,6 +87798,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		multihit: [2, 5],
 		critRatio: 2,
 		target: "normal",
 		type: "Fighting",
@@ -89981,6 +90026,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 3,
 		flags: {},
+		volatileStatus: 'followme',
+		boosts: {
+			def: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Steel",
@@ -90295,6 +90344,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
 		secondary: null,
+		volatileStatus: 'attract',
+		boosts: {
+			atk: -2,
+			def: -2,
+		},
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -90836,7 +90890,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		basePowerCallback(pokemon, target, move) {
-			return 10 * move.hit;
+			return 30 * move.hit;
 		},
 		multihit: 3,
 		multiaccuracy: true,
