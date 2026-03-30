@@ -1303,7 +1303,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 562,
-		onDrive: 'Dark',
+		onGem: 'Dark',
 		gen: 5,
 		isNonstandard: "Past",
 		rating: 2,
@@ -9986,7 +9986,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 558,
 		gen: 5,
-		onGem: 'PLastic',
+		onGem: 'Plastic',
 		isNonstandard: "Future",
 		rating: 1,
 	},

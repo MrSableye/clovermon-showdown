@@ -5166,6 +5166,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
 		isNonstandard: null,
 		},
+		sludgepunch: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		slugsmooch: {
 		inherit: true,
 		isNonstandard: null,

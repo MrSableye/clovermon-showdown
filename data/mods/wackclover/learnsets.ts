@@ -2869,6 +2869,7 @@ selffatten: ["8L1"],
 	},
 	tripecs: {
 		learnset: {
+			sludgepunch: ["8L1"],
 			tequilapunch: ["8L1"],
 			rubberpunch: ["8L1"],
 			atomicpunch: ["8L1"],
