@@ -170,6 +170,40 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onSwitchIn() {},
 		rating: 4.5,
 	},
+	unnerve: {
+		inherit: true,
+		onPreStart(pokemon) {
+			this.add('-ability', pokemon, 'Unnerve');
+			this.effectState.unnerved = true;
+		},
+		onStart(pokemon) {
+			if (this.effectState.unnerved) return;
+			this.add('-ability', pokemon, 'Unnerve');
+			this.effectState.unnerved = true;
+		},
+		onEnd() {
+			this.effectState.unnerved = false;
+		},
+		onFoeTryEatItem() {
+			return !this.effectState.unnerved;
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fear') {
+				this.debug('Unnerve boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fear') {
+				this.debug('Unnerve boost');
+				return this.chainModify(1.5);
+			}
+		},
+		shortDesc: "While this Pokemon is active, it prevents opposing Pokemon from using their Berries. Fear type attacks do 1.5x normal damage",
+		rating: 4.5,
+	},
 	illuminate: {
 		inherit: true,
 		onSourceModifyAccuracyPriority: -1,

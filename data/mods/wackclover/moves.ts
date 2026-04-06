@@ -2424,6 +2424,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		plasmaball: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		acidrain: {
 		inherit: true,
 		isNonstandard: null,
@@ -2530,6 +2534,30 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		artgallery: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		artificiaslam: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		recyclebeam: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		bottleblast: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		bottleslam: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		garbagethrash: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		trashthrash: {
 		inherit: true,
 		isNonstandard: null,
 		},
@@ -4763,7 +4791,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
-		
+		psypunch: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		
 		prowl: {
 		inherit: true,
@@ -4886,6 +4917,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		},
 		rubberball: {
+		inherit: true,
+		isNonstandard: null,
+		},
+		rubberpunch: {
 		inherit: true,
 		isNonstandard: null,
 		},
