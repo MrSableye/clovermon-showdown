@@ -57745,7 +57745,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'par',
+		},
 		target: "allAdjacent",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -60134,7 +60137,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 96,
+			status: 'brn',
+		},
 		target: "allAdjacent",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -69649,6 +69655,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, bounce: 1, moon: 1},
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+		},
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -72057,7 +72066,40 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			onHit(target, source) {
+				if (source.hasType('Fighting')) {
+					this.boost({atk: 1}, source, source);
+				} else if (source.hasType('Flying')) {
+					this.boost({spe: 1}, source, source);
+				} else if (source.hasType('Rubber')) {
+					this.boost({spd: 1}, source, source);
+				} else if (source.hasType('Rock')) {
+					this.boost({def: 1}, source, source);
+				} else if (source.hasType('Fire')) {
+					target.trySetStatus('brn', source);
+				} else if (source.hasType('Electric')) {
+					target.trySetStatus('par', source);
+				} else if (source.hasType('Ice')) {
+					target.trySetStatus('frz', source);
+				} else if (source.hasType('Poison')) {
+					target.trySetStatus('tox', source);
+				} else if (source.hasType('Nuclear')) {
+					target.trySetStatus('tox', source);
+				} else if (source.hasType('Cosmic')) {
+					target.trySetStatus('slp', source);
+				} else if (source.hasType('Heart')) {
+					target.addVolatile('attract');
+				} else if (source.hasType('Fairy')) {
+					target.addVolatile('attract');
+				} else if (source.hasType('Psychic')) {
+					target.addVolatile('confusion');
+				} else if (source.hasType('Water')) {
+					this.boost({spe: -1}, target, source);
+			}
+		},
+		},
 		target: "normal",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -76946,6 +76988,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -85673,6 +85718,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		volatileStatus: 'glitter',
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
@@ -85684,6 +85730,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 70,
 		category: "Special",
 		name: "Glitter Bomb",
+		volatileStatus: 'glitter',
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, bullet: 1},
@@ -85701,7 +85748,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, bite: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			volatileStatus: 'glitter',
+		},
 		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
@@ -94631,7 +94681,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 40,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Qmarks",
 		isNonstandard: "Future",
@@ -97068,6 +97129,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Fire', type);
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Fire",
@@ -97362,6 +97426,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		overrideOffensivePokemon: 'target',
+		overrideOffensiveStat: 'spd',
 		secondary: null,
 		target: "normal",
 		type: "Magic",
