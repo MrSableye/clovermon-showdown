@@ -67969,6 +67969,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		volatileStatus: 'mark',
+		self: {
+			boosts: {
+				accuracy: 1,
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -67983,7 +67989,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, arrow: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			onHit(target) {
+				target.addVolatile('mark');
+			},
+		},
 		target: "allAdjacent",
 		type: "Normal",
 		isNonstandard: "Future",

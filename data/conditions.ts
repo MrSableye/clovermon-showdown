@@ -985,6 +985,28 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-end', pokemon, 'Glitter');
 		},
 	},
+	mark: {
+		name: 'mark',
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'Mark');
+		},
+		duration: 3,
+		durationCallback(target, source, effect) {
+			if (effect?.name === "Mark Target") {
+				return 6;
+			}
+			return 3;
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			let mod = 1;
+			if (move.flags.arrow) mod *= 2;
+
+			return this.chainModify(mod);
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, 'Mark');
+		},
+	},
 	icing: {
 		name: 'icing',
 		onStart(pokemon) {
