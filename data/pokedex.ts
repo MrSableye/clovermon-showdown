@@ -86443,7 +86443,7 @@ bewilderbeast: {
 		name: "Mozarter",
 		types: ["Sound"],
 		baseStats: {hp: 65, atk: 75, def: 65, spa: 100, spd: 105, spe: 95},
-		abilities: {0: "Soundproof", 1: "Cacophony", H: "MOZART"},
+		abilities: {0: "Soundproof", 1: "Cacophony", H: "Mozart"},
 		heightm: 1.80,
 		weightkg: 65.0,
 		color: "Blue",
