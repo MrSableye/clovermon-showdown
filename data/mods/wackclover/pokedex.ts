@@ -124,6 +124,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	wantnaut: {
 		inherit: true,
+		types: ["Steel", "Plastic"],
 		abilities: {
 			0: "Battle Armor",
 			1: "Iron Barbs",
