@@ -89325,7 +89325,32 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		self: {
+			volatileStatus: 'macanluin',
+		},
+		condition: {
+			duration: 5,
+			onStart(pokemon) {
+				this.add('-singlemove', pokemon, 'Mac an Luin');
+			},
+			onTryAddVolatile(status, pokemon) {
+				if (status.id === 'taunt') {
+					this.add('-activate', pokemon, 'move: Mac an Luin');
+					return null;
+				}
+			},
+			onResidualOrder: 21,
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Mac an Luin');
+			},
+		},
+		
+		secondary: {
+			chance: 100,
+			boosts: {
+				atk: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Water",
 		isNonstandard: "Future",

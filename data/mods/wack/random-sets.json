@@ -14704,11 +14704,37 @@
           "painsplit",
           "shadowsneak",
           "stompingtantrum",
-          "stealthrock",
-          "hallucinogen"
+          "stealthrock"
         ],
         "lockedMoves": [
-          "firepunch"
+          "firepunch",
+          "hallucinogen"
+        ],
+        "level": 86
+      }
+    ]
+  },
+  "humuk": {
+    "nicknames": [
+      "Humek"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "magmaarmor"
+        ],
+        "items": [
+          "leftovers"
+        ],
+        "moves": [
+          "embrace",
+          "haze",
+          "acidbath",
+          "sludgehammer"
+        ],
+        "lockedMoves": [
+          "lovesick",
+          "hallucinogen"
         ],
         "level": 86
       }
