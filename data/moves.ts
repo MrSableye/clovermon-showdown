@@ -90114,7 +90114,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Water",
 		isNonstandard: "Future",
 	},
