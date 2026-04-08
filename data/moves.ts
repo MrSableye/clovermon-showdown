@@ -66592,6 +66592,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		volatileStatus: 'seasoning',
 		condition: {
 			duration: 3,
 			onStart(pokemon) {
