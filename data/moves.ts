@@ -89312,7 +89312,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		heal: [1, 2],
 		secondary: null,
-		target: "allySide",
+		target: "allies",
 		type: "Water",
 		isNonstandard: "Future",
 	},
