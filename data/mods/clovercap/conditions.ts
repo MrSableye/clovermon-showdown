@@ -7,4 +7,13 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			return this.chainModify(1.33);
 		},
 	},
+	par: {
+    name: 'par',
+    onBeforeMove(pokemon) {
+      if (this.randomChance(1, 8)) {
+        this.add('cant', pokemon, 'par');
+        return false;
+      }
+    },
+  },
 };

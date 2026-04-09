@@ -133,4 +133,12 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		inherit: true,
 		shortDesc: "User recovers 50% of damage dealt.",
 	},
+	moonblast: {
+		inherit: true,
+		shortDesc: "10% chance to lower the target's Sp. Atk by 1.",
+	},
+	ironhead: {
+		inherit: true,
+		shortDesc: "20% chance to make the target flinch.",
+	},
 };
