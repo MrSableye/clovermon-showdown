@@ -6,12 +6,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	moonblast: {
 		inherit: true,
-		secondary: {
-			chance: 10,
-			boosts: {
-				spa: -1,
-			},
-		},
 		flags: {protect: 1, mirror: 1, bullet: 1},
 	},
 	technoblast: {
@@ -21,13 +15,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	fireblast: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, bullet: 1},
-	},
-	ironhead: {
-		inherit: true,
-	    secondary: {
-			chance: 20,
-			volatileStatus: 'flinch',
-		},
 	},
 	abyssalwave: {
 		inherit: true,
