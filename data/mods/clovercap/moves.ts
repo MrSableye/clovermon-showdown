@@ -1747,6 +1747,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		basePower: 75,
 		drain: [1, 2],
 	},
+	tropkick: {
+		inherit: true,
+		basePower: 85,
+	},
 	meteorhammer: {
 		inherit: true,
 		isNonstandard: null,
