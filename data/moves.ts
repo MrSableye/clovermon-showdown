@@ -91985,7 +91985,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
 		secondary: null,
-		volatileStatus: 'gastroacid',
+		volatileStatus: 'curse',
 		boosts: {
 			atk: -2,
 			def: -2,
