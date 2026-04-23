@@ -36809,7 +36809,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		creator: "Emilight",
 	},
 	zillichinamega: {
-		num: 42025,
+		num: 42091,
 		name: "Zillichina-Mega",
 		baseSpecies: "Zillichina",
 		forme: "Mega",
