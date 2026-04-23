@@ -9823,6 +9823,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	zillichinamega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	tarantagon: {
 		inherit: true,
 		tier: "OU",

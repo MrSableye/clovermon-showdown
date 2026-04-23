@@ -8757,6 +8757,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	zillichinamega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	tarantagon: {
 		tier: "Illegal",
 		isNonstandard: "Future",

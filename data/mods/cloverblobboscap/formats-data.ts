@@ -2424,6 +2424,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	zillichinamega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	tarantagon: {
 		inherit: true,
 		isNonstandard: "Past",

@@ -2670,6 +2670,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	zillichinamega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	tarantagon: {
 		inherit: true,
 		isNonstandard: null,
