@@ -9652,6 +9652,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	zillichinite: {
+		name: "Zillichinite",
+		spritenum: 577,
+		megaStone: "Zillichina-Mega",
+		megaEvolves: "Zillichina",
+		itemUser: ["Zillichina"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	ultrablobbosiumz: {
 		name: "Ultrablobbosium Z",
 		spritenum: 686,

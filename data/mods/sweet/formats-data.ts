@@ -7935,6 +7935,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	zillichina: {
 		inherit: true,
 		isNonstandard: "Past",
+		},
+	zillichinamega: {
+		inherit: true,
+		isNonstandard: "Past",
 	},
 	tarantagon: {
 		inherit: true,

@@ -3033,10 +3033,14 @@ export const ItemsText: {[k: string]: ItemText} = {
 	molterritex: {
 		name: "Molterrite X",
 		desc: "If held by a Molterra, this item allows it to Mega Evolve in battle.",
-		},
+	},
 	shroomalicite: {
 		name: "Shroomalicite",
 		desc: "If held by a Shromalice, this item allows it to Mega Evolve in battle.",
+		},
+	zillichinite: {
+		name: "Zillichinite",
+		desc: "If held by a Zillichina, this item allows it to Mega Evolve in battle.",
 	},
 	focusspecs: {
 		name: "Focus Specs",
