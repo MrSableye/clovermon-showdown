@@ -2825,6 +2825,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	sepulturemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	ibask: {
 		tier: "Illegal",
 		isNonstandard: "Future",

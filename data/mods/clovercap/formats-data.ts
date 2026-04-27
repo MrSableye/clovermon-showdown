@@ -1758,6 +1758,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	sepulturemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	flockarrion: {
 		inherit: true,
 		isNonstandard: null,

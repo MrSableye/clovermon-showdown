@@ -9687,6 +9687,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	sepulture: {
 		inherit: true,
 		isNonstandard: "Past",
+		},
+	sepulturemega: {
+		inherit: true,
+		isNonstandard: "Past",
 	},
 	dirtybis: {
 		inherit: true,
