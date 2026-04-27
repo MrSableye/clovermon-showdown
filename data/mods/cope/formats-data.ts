@@ -2599,6 +2599,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
+		},
+	sepulture: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+		},
+	sepulturemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	zillichina: {
 		inherit: true,

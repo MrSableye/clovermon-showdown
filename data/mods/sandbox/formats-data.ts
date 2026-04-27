@@ -10818,6 +10818,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	sepulturemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	flockarrion: {
 		inherit: true,
 		tier: "OU",

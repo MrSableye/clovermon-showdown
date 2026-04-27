@@ -8032,6 +8032,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	sepulture: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	sepulturemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	onusalt: {
 		tier: "Illegal",
