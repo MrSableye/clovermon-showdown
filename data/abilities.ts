@@ -7774,7 +7774,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const targets = this.sides.flatMap((side) => side.allies(true));
 			for (const target of targets) {
 				if (!target || !target.hp || pokemon === target) continue;
-				if (!['Fire'].some((type) => target.hasType(type))) {
+				if (!target.hasType(['Fire'])) {
 					this.damage(target.baseMaxhp / 12, target, pokemon);
 				}
 			}
