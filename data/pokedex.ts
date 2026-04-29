@@ -35032,8 +35032,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Mineral", "Amorphous"],
 		gen: 8,
 		creator: "Zac",
-		otherFormes: ["Molterra-Mega-X","Molterra-Mega-Y"],
-		formeOrder: ["Molterra", "Molterra-Mega-X","Molterra-Mega-Y"],
+		otherFormes: ["Molterra-Mega-X", "Molterra-Mega-Y"],
+		formeOrder: ["Molterra", "Molterra-Mega-X", "Molterra-Mega-Y"],
 	},
 	molterramegax: {
 		num: 42106,
@@ -35064,7 +35064,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		eggGroups: ["Mineral", "Amorphous"],
 		gen: 8,
-		requiredItem: "Molterrite X",
+		requiredItem: "Molterrite Y",
 		creator: "Jewipede",
 	},
 	junkgeist: {
