@@ -9257,6 +9257,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+		},
+	molterramegay: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	poltire: {
 		inherit: true,

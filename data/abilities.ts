@@ -7761,6 +7761,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     shortDesc: "Permanently transforms Shiribiko into Ultra-Shiribiko when using Quantum Pounce.",
     rating: 4,
     num: 10002,
+	},
+	furnace: {
+		name: "Furnace",
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Furnace');
+		},
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			const targets = this.sides.flatMap((side) => side.allies(true));
+			for (const target of targets) {
+				if (!target || !target.hp || pokemon === target) continue;
+				if (!target.hasType(['Fire'])) {
+					this.damage(target.baseMaxhp / 12, target, pokemon);
+				}
+			}
+		},
+		rating: 3,
+		isNonstandard: "Future",
 
 	},
 	capacitance: {

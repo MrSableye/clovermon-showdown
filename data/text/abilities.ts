@@ -2537,6 +2537,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	dissect: {
 		name: "Dissect",
 		shortDesc: "On switch-in, this Pokemon clears all boosts of all Pokemon.",
+		},
+	Furnace: {
+		name: "Furnace",
+		shortDesc: "On switch-in, this Pokemon clears all boosts of all Pokemon.",
+		start: "  [POKEMON] is getting ready to throw a concert!",
 	},
 	blueblood: {
 		name: "Blue Blood",

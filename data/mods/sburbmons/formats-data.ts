@@ -7479,8 +7479,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	molterra: {
 		inherit: true,
 		isNonstandard: "Past",
-		},
+	},
 	molterramegax: {
+		inherit: true,
+		isNonstandard: "Past",
+		},
+	molterramegay: {
 		inherit: true,
 		isNonstandard: "Past",
 	},

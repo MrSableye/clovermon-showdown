@@ -9656,6 +9656,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	molterritey: {
+		name: "Molterrite Y",
+		spritenum: 577,
+		megaStone: "Molterra-Mega-Y",
+		megaEvolves: "Molterra",
+		itemUser: ["Molterra"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	shroomalicite: {
 		name: "Shroomalicite",
 		spritenum: 577,
