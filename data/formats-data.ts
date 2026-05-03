@@ -9325,6 +9325,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	sacrifleece: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		tier: "Illegal",

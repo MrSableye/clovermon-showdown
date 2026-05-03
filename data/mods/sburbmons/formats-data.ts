@@ -9495,6 +9495,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	beegyosh: {
 		inherit: true,
 		isNonstandard: "Past",
+		},
+	sacrifleece: {
+		inherit: true,
+		isNonstandard: "Past",
 	},
 	monikat: {
 		inherit: true,

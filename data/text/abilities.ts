@@ -2537,11 +2537,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	dissect: {
 		name: "Dissect",
 		shortDesc: "On switch-in, this Pokemon clears all boosts of all Pokemon.",
-		},
+	},
 	Furnace: {
 		name: "Furnace",
-		shortDesc: "On switch-in, this Pokemon clears all boosts of all Pokemon.",
-		start: "  [POKEMON] is getting ready to throw a concert!",
+		shortDesc: "All Pokemon on the field lose 1/12 HP per turn if they're not Fire type.",
+		start: "  [POKEMON] is melting it's foe!",
+	},
+	bleatingheart: {
+		name: "Bleating Heart",
+		shortDesc: "Raises one of the user's stats per every ally fainted. Progresses from highest to lowest stat",
 	},
 	blueblood: {
 		name: "Blue Blood",
