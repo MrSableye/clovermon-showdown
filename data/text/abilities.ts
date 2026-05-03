@@ -2545,7 +2545,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	bleatingheart: {
 		name: "Bleating Heart",
-		shortDesc: "Raises one of the user's stats per every ally fainted. Progresses from highest to lowest stat",
+		shortDesc: "Boosts one of the user's stats by 1.2x per ally fainted. Boosts stats from highest to lowest.",
 	},
 	blueblood: {
 		name: "Blue Blood",
