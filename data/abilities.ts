@@ -7785,7 +7785,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	bleatingheart: {
     name: "Bleating Heart",
     rating: 3,
-    num: -999,
+    num: 10003,
     isNonstandard: "Future",
     onStart(pokemon) {
         if (!(pokemon as any).bleatingHeartBoosts) (pokemon as any).bleatingHeartBoosts = [];
