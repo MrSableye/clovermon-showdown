@@ -53984,7 +53984,7 @@ bewilderbeast: {
 		baseSpecies: "Sepulture",
 		forme: "Mega",
 		types: ["Ghost", "Flying"],
-		baseStats: {hp: 78, atk: 101, def: 153, spa: 137, spd: 141, spe: 40},
+		baseStats: {hp: 78, atk: 141, def: 153, spa: 97, spd: 141, spe: 40},
 		abilities: {0: "Gale Wings"},
 		heightm: 2.8,
 		weightkg: 35.8,
