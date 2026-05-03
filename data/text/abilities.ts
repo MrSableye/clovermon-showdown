@@ -2543,6 +2543,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "All Pokemon on the field lose 1/12 HP per turn if they're not Fire type.",
 		start: "  [POKEMON] is melting it's foe!",
 	},
+	bleatingheart: {
+		name: "Bleating Heart",
+		shortDesc: "Raises one of the user's stats per every ally fainted. Progresses from highest to lowest stat",
+	},
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",

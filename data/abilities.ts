@@ -7781,6 +7781,95 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		rating: 3,
 		isNonstandard: "Future",
+    },
+	bleatingheart: {
+    name: "Bleating Heart",
+    rating: 3,
+    num: -999,
+    isNonstandard: "Future",
+    onStart(pokemon) {
+        if (!(pokemon as any).bleatingHeartBoosts) (pokemon as any).bleatingHeartBoosts = [];
+
+        const faintedAllies = pokemon.side.pokemon.filter(
+            (ally: Pokemon) => ally !== pokemon && ally.fainted
+        ).length;
+
+        const statsOrder: (keyof StatsExceptHPTable)[] = ['atk', 'def', 'spa', 'spd', 'spe'];
+        const storedStats = pokemon.storedStats;
+
+        const sortedStats = statsOrder.slice().sort(function (a, b) {
+            const valA = storedStats[a];
+            const valB = storedStats[b];
+            if (valB !== valA) return valB - valA;
+            return statsOrder.indexOf(a) - statsOrder.indexOf(b);
+        });
+
+        (pokemon as any).bleatingHeartBoosts = sortedStats.slice(0, faintedAllies);
+    },
+    onAllyFaint(pokemon) {
+        const holder = this.effectState.target as Pokemon;
+        if (!holder) return;
+
+        if (!(holder as any).bleatingHeartBoosts) (holder as any).bleatingHeartBoosts = [];
+
+        const faintedAllies = holder.side.pokemon.filter(
+            (ally: Pokemon) => ally !== holder && ally.fainted
+        ).length;
+
+        const statsOrder: (keyof StatsExceptHPTable)[] = ['atk', 'def', 'spa', 'spd', 'spe'];
+        const storedStats = holder.storedStats;
+
+        const sortedStats = statsOrder.slice().sort(function (a, b) {
+            const valA = storedStats[a];
+            const valB = storedStats[b];
+            if (valB !== valA) return valB - valA;
+            return statsOrder.indexOf(a) - statsOrder.indexOf(b);
+        });
+
+        (holder as any).bleatingHeartBoosts = sortedStats.slice(0, faintedAllies);
+    },
+    onAllySwitchIn(pokemon) {
+        const holder = this.effectState.target as Pokemon;
+        if (!holder) return;
+
+        if (!(holder as any).bleatingHeartBoosts) (holder as any).bleatingHeartBoosts = [];
+
+        const faintedAllies = holder.side.pokemon.filter(
+            (ally: Pokemon) => ally !== holder && ally.fainted
+        ).length;
+
+        const statsOrder: (keyof StatsExceptHPTable)[] = ['atk', 'def', 'spa', 'spd', 'spe'];
+        const storedStats = holder.storedStats;
+
+        const sortedStats = statsOrder.slice().sort(function (a, b) {
+            const valA = storedStats[a];
+            const valB = storedStats[b];
+            if (valB !== valA) return valB - valA;
+            return statsOrder.indexOf(a) - statsOrder.indexOf(b);
+        });
+
+        (holder as any).bleatingHeartBoosts = sortedStats.slice(0, faintedAllies);
+    },
+    onModifyAtk(relayVar, pokemon) {
+        const boosts: string[] | undefined = (pokemon as any).bleatingHeartBoosts;
+        if (boosts && boosts.includes('atk')) return this.chainModify(1.2);
+    },
+    onModifyDef(relayVar, pokemon) {
+        const boosts: string[] | undefined = (pokemon as any).bleatingHeartBoosts;
+        if (boosts && boosts.includes('def')) return this.chainModify(1.2);
+    },
+    onModifySpA(relayVar, pokemon) {
+        const boosts: string[] | undefined = (pokemon as any).bleatingHeartBoosts;
+        if (boosts && boosts.includes('spa')) return this.chainModify(1.2);
+    },
+    onModifySpD(relayVar, pokemon) {
+        const boosts: string[] | undefined = (pokemon as any).bleatingHeartBoosts;
+        if (boosts && boosts.includes('spd')) return this.chainModify(1.2);
+    },
+    onModifySpe(relayVar, pokemon) {
+        const boosts: string[] | undefined = (pokemon as any).bleatingHeartBoosts;
+        if (boosts && boosts.includes('spe')) return this.chainModify(1.2);
+    },
 
 	},
 	capacitance: {

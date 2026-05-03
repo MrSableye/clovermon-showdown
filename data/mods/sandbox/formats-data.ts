@@ -11557,6 +11557,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
+		},
+	sacrifleece: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
 	},
 	oogabugamega: {
 		inherit: true,
