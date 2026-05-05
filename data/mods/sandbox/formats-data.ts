@@ -13316,4 +13316,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+		arcridget: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		auculus: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 };
