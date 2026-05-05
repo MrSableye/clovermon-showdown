@@ -7811,7 +7811,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (current >= 3) return;
 
 			// Add one layer of spikes properly
-			const spikes = side.sideConditions['spikes'];
+			side.addSideCondition('spikes', source);
 
 			this.add('-ability', pokemon, 'Crown of Thorns');
 		},
