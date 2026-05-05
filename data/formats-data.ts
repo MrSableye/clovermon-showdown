@@ -8409,6 +8409,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	cotstall: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wyndvyrm: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	stallter: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	monikat: {
 		tier: "Illegal",
 		isNonstandard: "Future",

@@ -2547,6 +2547,18 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Bleating Heart",
 		shortDesc: "Boosts one of the user's stats by 1.2x per ally fainted. Boosts stats from highest to lowest.",
 	},
+	crownofthorns: {
+		name: "Crown of Thorns",
+		shortDesc: "Upon switch-out, this Pokemon lays a Spike on their side of the field.",
+	},
+	darkflame: {
+		name: "Dark Flame",
+		shortDesc: "At the end of each turn, burned Pokemon take damage equal to an additional 1/8 of their max HP.",
+	},
+	fortified: {
+		name: "Fortified",
+		shortDesc: "This Pokemon's Defense and Special Defense are boosted by 1.5x for the turn when it uses a negative priority move.",
+	},
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",

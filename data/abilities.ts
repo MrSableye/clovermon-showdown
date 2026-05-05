@@ -7782,6 +7782,73 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		isNonstandard: "Future",
     },
+	darkflame: {
+		name: "Dark Flame",
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Dark Flame');
+		},
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			const targets = this.sides.flatMap((side) => side.allies(true));
+			for (const target of targets) {
+				if (!target || !target.hp || pokemon === target) continue;
+				if (target && target.status === 'brn') {
+					this.damage(target.baseMaxhp / 8, target, pokemon);
+				}
+			}
+		},
+		rating: 3,
+		isNonstandard: "Future",
+    },
+	crownofthorns: {
+		name: "Crown of Thorns",
+		onSwitchOut(pokemon) {
+			const side = pokemon.side;
+
+			const current = side.sideConditions['spikes']?.layers || 0;
+			if (current >= 3) return;
+
+			// Add one layer of spikes properly
+			const spikes = side.sideConditions['spikes'];
+
+			this.add('-ability', pokemon, 'Crown of Thorns');
+		},
+	rating: 3,
+	num: 10004,
+	isNonstandard: "Future",
+    },
+	fortified: {
+		onModifyPriority(priority, pokemon, target, move) {
+			// Only trigger for negative priority moves
+			if (move && move.priority < 0) {
+				if (!pokemon.volatiles['fortified']) {
+					pokemon.addVolatile('fortified');
+					this.add('-ability', pokemon, 'Fortified');
+				}
+			}
+			return priority;
+		},
+		condition: {
+			noCopy: true,
+			duration: 1,
+			onModifyDef() {
+				return this.chainModify(1.5);
+			},
+			onModifySpD() {
+				return this.chainModify(1.5);
+			},
+			onAfterMoveSecondarySelf(source) {
+				source.removeVolatile('fortified');
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'ability: Fortified', '[silent]');
+			},
+		},
+		name: "Fortified",
+		isNonstandard: "Future",
+	},
 	bleatingheart: {
     name: "Bleating Heart",
     rating: 3,
