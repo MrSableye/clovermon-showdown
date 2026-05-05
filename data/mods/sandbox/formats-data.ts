@@ -13326,4 +13326,19 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+		wyndvyrm: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		cotstall: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		stallter: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 };

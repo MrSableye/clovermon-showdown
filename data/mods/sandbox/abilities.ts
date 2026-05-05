@@ -2097,4 +2097,20 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	bleatingheart: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fortified: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	darkflame: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	crownofthorns: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
