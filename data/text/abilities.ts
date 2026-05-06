@@ -2549,15 +2549,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	crownofthorns: {
 		name: "Crown of Thorns",
-		shortDesc: "Upon switch-out, this Pokemon lays a Spike on their side of the field.",
+		shortDesc: "Upon switch-out, this Pokemon lays a layer of Spikes on their side of the field.",
 	},
 	darkflame: {
 		name: "Dark Flame",
-		shortDesc: "At the end of each turn, burned Pokemon take damage equal to an additional 1/8 of their max HP.",
+		shortDesc: "All other burned Pokemon lose 1/8 of their max HP per turn.",
 	},
 	fortified: {
 		name: "Fortified",
-		shortDesc: "This Pokemon's Defense and Special Defense are boosted by 1.5x for the turn when it uses a negative priority move.",
+		shortDesc: "Defense and Special Defense are boosted by 1.5x when using a negative priority move.",
 	},
 	blueblood: {
 		name: "Blue Blood",
