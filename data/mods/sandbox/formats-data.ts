@@ -13341,4 +13341,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+		gunflyre: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		garerowl: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		stanchagram: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		corperial: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 };
