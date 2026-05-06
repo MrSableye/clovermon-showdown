@@ -426,4 +426,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	bereavement: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
