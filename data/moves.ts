@@ -76394,6 +76394,48 @@ export const Moves: {[moveid: string]: MoveData} = {
         type: "Dragon",
         contestType: "Tough",
     }, 
+	discipline: {
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Discipline",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
+		onTryHit(target, source) {
+			if (target === source || target.volatiles['dynamax']) return false;
+
+			const additionalBannedSourceAbilities = [
+				// Zen Mode included here for compatability with Gen 5-6
+				'commander', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',
+			];
+			if (
+				target.ability === source.ability ||
+				target.getAbility().isPermanent || target.ability === 'truant' ||
+				source.getAbility().isPermanent || additionalBannedSourceAbilities.includes(source.ability)
+			) {
+				return false;
+			}
+		},
+		onHit(target, source) {
+			const oldAbility = target.setAbility(source.ability);
+			if (oldAbility) {
+				this.add('-ability', target, target.getAbility().name, '[from] move: Entrainment');
+				if (!target.isAlly(source)) target.volatileStaleness = 'external';
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+	},
     
     wakingchant: { 
         num: 668748,

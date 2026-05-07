@@ -2559,6 +2559,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Fortified",
 		shortDesc: "Defense and Special Defense are boosted by 1.5x when using a negative priority move.",
 	},
+	steelyresolve: {
+		name: "Steely Resolve",
+		shortDesc: "This Pokémon takes half damage from attacks at 1/3 Max HP or Less.",
+	},
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",

@@ -410,7 +410,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bleatingheart: {
+	steelyresolve: {
 		inherit: true,
 		isNonstandard: null,
 	},

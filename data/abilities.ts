@@ -7819,6 +7819,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	num: 10004,
 	isNonstandard: "Future",
     },
+	steelyresolve: {
+		name: "Steely Resolve",
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.category === 'Status') return;
+			if (target.hp <= target.maxhp / 3) {
+				this.debug('Steely Resolve weaken');
+				this.add('-ability', target, 'Steely Resolve');
+				return this.chainModify(0.5);
+			}
+		},
+	rating: 4,
+	num: 10005,
+	isNonstandard: "Future",
+	},
 	fortified: {
 		onModifyPriority(priority, pokemon, target, move) {
 			// Only trigger for negative priority moves
