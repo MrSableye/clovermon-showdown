@@ -39083,7 +39083,7 @@ garerowl: {
 		types: ["Ice", "Rock"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 88, atk: 140, def: 115, spa: 37, spd: 57, spe: 72},
-		abilities: {0: "Tangled Feet", 1: "Oblivious", H: "Mold Breaker", S: "Shaved Ice"},
+		abilities: {0: "Tangled Feet", 1: "Oblivious", H: "Mold Breaker", S: "Berserk"},
 		heightm: 1.5,
 		weightkg: 106,
 		color: "White",
