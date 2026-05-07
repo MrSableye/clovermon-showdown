@@ -8429,6 +8429,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	oazaki: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	merulin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	chambrira: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	hullabuoy: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	gunflyre: {
 		tier: "Illegal",
 		isNonstandard: "Future",

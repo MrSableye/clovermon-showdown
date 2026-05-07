@@ -13361,4 +13361,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+		hullabuoy: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		chambrira: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		merulin: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		oazaki: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 };
