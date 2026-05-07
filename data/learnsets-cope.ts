@@ -642,7 +642,7 @@ stanchagram: {
 	present: ["8L1"],
 	protect: ["8L1"],
 	psychic: ["8L1"],
-	psychicfang: ["8L1"],
+	psychicfangs: ["8L1"],
 	psychocut: ["8L1"],
 	punishment: ["8L1"],
 	purge: ["8L1"],
