@@ -1541,6 +1541,8 @@ export const Conditions: {[k: string]: ConditionData} = {
 			if (pokemon.fainted) return;
 			this.effectState.turns++;
 			this.effectState.multiplier *= 1.05;
+			pokemon.removeVolatile('passageoftime');
+			pokemon.addVolatile('passageoftime');
 			this.damage(pokemon.baseMaxhp / 16);
 		},
 
