@@ -7811,7 +7811,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (current >= 3) return;
 
 			// Add one layer of spikes properly
-			side.addSideCondition('spikes', side);
+			side.addSideCondition('spikes');
 
 			this.add('-ability', pokemon, 'Crown of Thorns');
 		},
@@ -7873,6 +7873,25 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-ability', pokemon, 'Passage of Time');
 			this.damage(pokemon.baseMaxhp / 16);
 		},
+	},
+	thirddegree: {
+		// Implemented in sim/pokemon.js:Pokemon#setStatus
+		name: "Third Degree",
+		rating: 2.5,
+		num: 212,
+	},
+	bloomingdusk: {
+		onModifyMovePriority: 1,
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.baseSpecies !== 'Cerius' || attacker.transformed) return;
+			if (!move.flags['powder'] && move.id !== 'bulbclinch') return;
+			const targetForme = (move.id === 'bulbclinch' ? 'Cerius' : 'Cerius-Open');
+			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+		},
+		isPermanent: true,
+		name: "Blooming Dusk",
+		rating: 4,
+		num: 176,
 	},
 	bleatingheart: {
     name: "Bleating Heart",

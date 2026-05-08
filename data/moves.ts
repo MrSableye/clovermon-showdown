@@ -8395,7 +8395,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(target, source, effect) {
-				if (effect?.name === "Frozen Song" || "Brackish Gash") {
+				if (effect?.name === "Frozen Song" || "Brackish Gash" || "Withering Bloom") {
 					return 2;
 				}
 				if (source?.hasAbility('persistent')) {
@@ -76436,7 +76436,557 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		isNonstandard: "Future",
 	},
-    
+    deepblue: {
+		accuracy: true,
+		basePower: 55,
+		category: "Physical",
+		name: "Deep Blue",
+		pp: 10,
+		priority: -3,
+		flags: {failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1},
+		onHit(pokemon) {
+			const moves = [];
+			for (const moveSlot of pokemon.moveSlots) {
+				const moveid = moveSlot.id;
+				if (!moveid) continue;
+				const move = this.dex.moves.get(moveid);
+				if (move.flags['nosleeptalk'] || move.flags['charge'] || (move.isZ && move.basePower !== 1) || move.isMax) {
+					continue;
+				}
+				moves.push(moveid);
+			}
+			let randomMove = '';
+			if (moves.length) randomMove = this.sample(moves);
+			if (!randomMove) {
+				return false;
+			}
+			this.actions.useMove(randomMove, pokemon);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		isNonstandard: "Future",
+	},
+	firebrand: {
+		accuracy: 100,
+		basePower: 140,
+		category: "Physical",
+		name: "Firebrand",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Tough",
+	},
+	ignition: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Future",
+		name: "Ignition",
+		pp: 30,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+		},
+		volatileStatus: 'focusenergy',
+		secondary: null,
+		target: "self",
+		type: "Fire",
+	},
+	allurespore: {
+		accuracy: 100,
+		basePower: 60,
+		basePowerCallback(pokemon, target, move) {
+			if (!target.volatiles['allurespore'] || move.hit === 1) {
+				target.addVolatile('allurespore');
+			}
+			const bp = this.clampIntRange(move.basePower * target.volatiles['furycutter'].multiplier, 1, 240);
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		category: "Special",
+		name: "Allure Spore",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, powder: 1,},
+		condition: {
+			duration: 2,
+			onStart() {
+				this.effectState.multiplier = 1;
+			},
+			onRestart() {
+				if (this.effectState.multiplier < 4) {
+					this.effectState.multiplier <<= 1;
+				}
+				this.effectState.duration = 2;
+			},
+		},
+		secondary: null,
+		isNonstandard: "Future",
+		target: "normal",
+		type: "Grass",
+	},
+	shearwave: {
+		accuracy: 90,
+		basePower: 60,
+		category: "Physical",
+		name: "Shear Wave",
+		pp: 10,
+		priority: -6,
+		flags: {protect: 1, mirror: 1, noassist: 1, failcopycat: 1},
+		forceSwitch: true,
+		target: "allAdjacentFoes",
+		type: "Ground",
+		isNonstandard: "Future",
+	},
+	restlesswake: {
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Restless Wake",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		sleepUsable: true,
+		basePowerCallback(pokemon, target, move) {
+			if (pokemon.status == 'slp' && !pokemon.hasType('Water')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		onHit(pokemon, target) {
+			if (pokemon.hasType('Water')) {
+				const oldAbility = target.setAbility('insomnia');
+				if (oldAbility) {
+					this.add('-ability', target, 'insomnia', '[from] move: Restless Wake');
+					return;
+				}
+				return oldAbility as false | null;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+	},
+	pixieprank: {
+		accuracy: true,
+		basePower: 70,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Pixie Prank",
+		pp: 10,
+		priority: -1,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
+		flags: {contact: 1, protect: 1, mirror: 1},
+		target: "normal",
+		type: "Fairy",
+	},
+	landslide: {
+		accuracy: true,
+		basePower: 120,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Landslide",
+		pp: 5,
+		priority: -1,
+		secondary: {
+			chance: 50,
+			volatileStatus: 'flinch',
+		},
+		flags: {protect: 1, mirror: 1},
+		target: "allAdjacentFoes",
+		type: "Ground",
+	},
+	rockcycle: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Rock Cycle",
+		pp: 10,
+		priority: 0,
+		flags: {heal: 1,},
+		onTry(source) {
+			if (this.field.isWeather(['sandstorm'])) {
+				this.heal(source.baseMaxhp / 4);
+			}
+			return !!this.canSwitch(source.side);
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "self",
+		type: "Rock",
+		isNonstandard: "Future",
+	},
+	monument: {
+		accuracy: 100,
+		basePower: 255,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Monument",
+		pp: 5,
+		priority: -3,
+		flags: {protect: 1, failmefirst: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, cantusetwice: 1},
+		priorityChargeCallback(pokemon) {
+			pokemon.addVolatile('monument');
+		},
+		onTryMove(pokemon) {
+			if (!pokemon.volatiles['monument']?.gotHit) {
+				this.attrLastMove('[still]');
+				this.add('cant', pokemon, 'Monument', 'Monument');
+				return null;
+			}
+		},
+		condition: {
+			duration: 1,
+			onStart(pokemon) {
+				this.add('-singleturn', pokemon, 'move: Monument');
+			},
+			onHit(pokemon, source, move) {
+				if (!pokemon.isAlly(source)) {
+					this.effectState.gotHit = true;
+					const action = this.queue.willMove(pokemon);
+					if (action) {
+						this.queue.prioritizeAction(action);
+					}
+				}
+			},
+		},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Rock",
+	},
+	fiveofakind: {
+		accuracy: 100,
+		basePower: 20,
+		category: "Special",
+		name: "Five of a Kind",
+		pp: 10,
+		priority: 0,
+		flags: {bite: 1, protect: 1, mirror: 1},
+		multihit: [2, 5],
+		critRatio: 1,
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
+	inkjet: {
+		accuracy: 50,
+		basePower: 120,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Inkjet",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				accuracy: -2,
+			},
+		},
+		target: "normal",
+		type: "Water",
+	},
+	blusteryfront: {
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Blustery Front",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, wind: 1},
+		self: {
+			boosts: {
+				accuracy: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+	},
+	witheringbloom: {
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Withering Bloom",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'healblock',
+		},
+		target: "normal",
+		type: "Grass",
+		isNonstandard: "Future",
+	},
+	cometfall: {
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Cometfall",
+		pp: 10,
+		priority: 0,
+		flags: {allyanim: 1, futuremove: 1},
+		ignoreImmunity: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 3,
+				move: 'cometfall',
+				source: source,
+				moveData: {
+					id: 'cometfall',
+					name: "Cometfall",
+					accuracy: 100,
+					basePower: 120,
+					category: "Special",
+					priority: 0,
+					flags: {allyanim: 1, futuremove: 1},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					type: 'Normal',
+				},
+			});
+			this.add('-start', source, 'move: Cometfall');
+			return this.NOT_FAIL;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+	},
+	trample: {
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Trample",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, failinstruct: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "randomNormal",
+		type: "Normal",
+				isNonstandard: "Future",
+	},
+	cloudburst: {
+		accuracy: 100,
+		basePower: 150,
+		category: "Physical",
+		name: "Cloudburst",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, noparentalbond: 1},
+		selfdestruct: "always",
+		onHit(target) {
+			if (!this.field.isWeather([''])) {
+					this.field.setWeather('raindance');
+			}
+		},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Flying",
+		isNonstandard: "Future",
+	},
+	pumpingheart: {
+		accuracy: true,
+		basePower: 100,
+		category: "Physical",
+		name: "Pumping Heart",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, bypasssub: 1},
+		onDamagePriority: -20,
+		onDamage(damage, target, source, effect) {
+			if (damage >= target.hp) return target.hp - 1;
+		},
+		drain: [3, 4],
+		secondary: null,
+		target: "any",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
+	historicpower: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Historic Power",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			spe: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Rock",
+		isNonstandard: "Future",
+	},
+	bulbclinch: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Future",
+		name: "Bulb Clinch",
+		pp: 10,
+		priority: 4,
+		flags: {noassist: 1, failcopycat: 1, failinstruct: 1},
+		stallingMove: true,
+		volatileStatus: 'bulbclinch',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect'] || move.category === 'Status') {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					source.addVolatile('leechseed', target), source, target, this.dex.getActiveMove("Bulb Clinch");
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+					source.addVolatile('leechseed', target), source, target, this.dex.getActiveMove("Bulb Clinch");
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Grass",
+	},
+	discoveredattack: {
+		accuracy: 100,
+		basePower: 85,
+		basePowerCallback(pokemon, target, move) {
+			if (target.newlySwitched) {
+				this.debug('Discovered Attack damage boost');
+				return move.basePower * 2;
+			}
+			this.debug('Discovered Attack NOT boosted');
+			return move.basePower;
+		},
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Discovered Attack",
+		pp: 10,
+		priority: 0,
+		flags: {slicing: 1, contact: 1, mirror: 1, bypasssub: 1},
+		breaksProtect: true,
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+	},
+	insight: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Insight",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			spd: 1,
+			accuracy: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
+	cruiser: {
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Cruiser",
+		pp: 10,
+		priority: 0,
+		flags: {charge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (['raindance', 'primordialsea'].includes(attacker.effectiveWeather())) {
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				this.field.clearWeather();
+				return;
+			}
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	shadowstick: {
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Shadow Stick",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Ghost",
+	},
     wakingchant: { 
         num: 668748,
         accuracy: 100,

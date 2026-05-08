@@ -7981,6 +7981,105 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Discipline",
 		shortDesc: "The target's Ability changes to match the user's. Type varies based on the user's primary type.",
 	},
+	deepblue: {
+		name: "Deep Blue",
+		shortDesc: "After use, selects another random move the user knows and uses it.",
+	},
+	ignition: {
+		name: "Ignition",
+		shortDesc: "Raises the user's Sp. Atk. by 1 stage and sets Focus Energy effect on the user.",
+	},
+	firebrand: {
+		name: "Firebrand",
+		shortDesc: "Confuses the user.",
+	},
+	allurespore: {
+		name: "Allure Spore",
+		shortDesc: "Power doubles with each hit on the same target consecutively, up to 240.",
+	},
+	pixieprank: {
+		name: "Pixie Prank",
+		shortDesc: "This move does not check accuracy. 30% chance to confuse.",
+	},
+	shearwave: {
+		name: "Shear Wave",
+		shortDesc: "Forces the targets to switch to a random ally.",
+	},
+	landslide: {
+		name: "Landslide",
+		shortDesc: "Goes last. 50% chance to flinch.",
+	},
+	rockcycle: {
+		name: "Rock Cycle",
+		shortDesc: "Switches the user out. Recover 25% of health if Sandstorm is active.",
+	},
+	monument: {
+		name: "Shell Trap",
+		shortDesc: "User must take damage before moving. Cannot be used consecutively.",
+
+		start: "  [POKEMON] constructed a monument!",
+		prepare: "  [POKEMON] constructed a monument!",
+		cant: "[POKEMON]'s monument didn't fall!",
+	},
+	fiveofakind: {
+		name: "Five of a Kind",
+		shortDesc: "Hits 2-5 times in one turn. High crit rate.",
+	},
+	inkjet: {
+		name: "Inkjet",
+		shortDesc: "100% chance to lower the target's accuracy by 2 stages.",
+	},
+	blusteryfront: {
+		name: "Blustery Front",
+		desc: "Lowers the user's Accuracy by 1 stage.",
+		shortDesc: "Lowers the user's Accuracy by 1.",
+	},
+	witheringbloom: {
+		name: "Withering Bloom",
+		shortDesc: "For 2 turns, the foe is prevented from healing.",
+	},
+	cometfall: {
+		name: "Cometfall",
+		shortDesc: "Hits two turns after being used.",
+
+		start: "  [POKEMON] cast down a star!",
+		activate: "  [TARGET] was struck by the falling star!",
+	},
+	trample: {
+		name: "Trample",
+		shortDesc: "Lasts 2-3 turns. Confuses the user afterwards. 30% chance to flinch.",
+	},
+	cloudburst: {
+		name: "Cloudburst",
+		shortDesc: "User faints. If the weather is not clear, sets rain.",
+	},
+	pumpingheart: {
+		name: "Pumping Heart",
+		shortDesc: "Drains 75% of damage dealt, but leaves the target with at least 1 HP.",
+	},
+	historicpower: {
+		name: "Historic Power",
+		desc: "Raises the user's Special Attack and Speed by 1 stage.",
+		shortDesc: "Raises the user's Special Attack and Speed by 1.",
+	},
+	bulbclinch: {
+		name: "Bulb Clinch",
+		shortDesc: "Protects from damaging attacks. Contact: Leech Seed.",
+	},
+	discoveredattack: {
+		name: "Discovered Attack",
+		shortDesc: "Power doubles if the target switched out this turn. Breaks protect.",
+	},
+	insight: {
+		name: "Insight",
+		shortDesc: "Raises user's Special Attack, Special Defense, accuracy by 1.",
+	},
+	cruiser: {
+		name: "Cruiser",
+		shortDesc: "Clears weather turn 1. Hits turn 2. No charge in Rain.",
+
+		prepare: "[POKEMON] fired missiles!",
+	},
 	phasethrough: {
 		name: "Phase Through",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
