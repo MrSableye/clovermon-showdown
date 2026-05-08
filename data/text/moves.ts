@@ -8040,7 +8040,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	cometfall: {
 		name: "Cometfall",
-		shortDesc: "Hits two turns after being used.",
+		shortDesc: "Hits two turns after being used. 100% chance to drop Sp.Def by 2.",
 
 		start: "  [POKEMON] cast down a star!",
 		activate: "  [TARGET] was struck by the falling star!",
