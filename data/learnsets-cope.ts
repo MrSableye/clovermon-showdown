@@ -191,6 +191,8 @@ strength: ["8L1"],
 tarshot: ["8L1"],
 zapcannon: ["8L1"],
 rockcycle: ["8L1"],
+steelbeam: ["8L1"],
+sandstorm: ["8L1"],
             },
 },
 cotstall: {
