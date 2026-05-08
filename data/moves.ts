@@ -76477,8 +76477,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		secondary: null,
 		target: "normal",
-		type: "Fighting",
-		contestType: "Tough",
+		type: "Fire",
+		isNonstandard: "Future",
 	},
 	ignition: {
 		accuracy: true,
