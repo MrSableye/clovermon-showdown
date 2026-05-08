@@ -2563,13 +2563,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Steely Resolve",
 		shortDesc: "This Pokémon takes half damage from attacks at 1/3 Max HP or Less.",
 	},
-	passageoftime: {
-		name: "Passage of Time",
-		shortDesc: "At the end of each turn, boost all stats by 5% and lose 1/16 HP.",
-
-		start: "  Time is passing...",
-		end: "  Time has stopped!",
-	},
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",
