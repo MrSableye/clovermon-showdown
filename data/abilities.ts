@@ -7863,6 +7863,56 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Fortified",
 		isNonstandard: "Future",
 	},
+	passageoftime: {
+		name: "Passage of Time",
+		isNonstandard: "Future",
+		rating: 4.5,
+		onStart(pokemon) {
+			pokemon.addVolatile('passageoftime');
+			this.add('-ability', pokemon, 'Passage of Time');
+		},
+		onSwitchIn(pokemon) {
+			pokemon.removeVolatile('passageoftime');
+			pokemon.addVolatile('passageoftime');
+		},
+		condition: {
+			name: "Passage of Time",
+			noCopy: true,
+			onStart(pokemon) {
+				this.effectState.multiplier = 1.0;
+				this.effectState.turns = 0;
+				this.add('-start', pokemon, 'Passage of Time');
+			},
+			onResidualOrder: 28,
+			onResidual(pokemon) {
+				if (pokemon.fainted) return;
+				this.effectState.turns++;
+				this.effectState.multiplier *= 1.05;
+				this.damage(pokemon.baseMaxhp / 16, pokemon, pokemon, {
+					id: 'passageoftime',
+					name: 'Passage of Time',
+					effectType: 'Ability',
+				});
+			onModifyAtk(atk, pokemon) {
+				return this.chainModify(this.effectState.multiplier);
+			},
+			onModifyDef(def, pokemon) {
+				return this.chainModify(this.effectState.multiplier);
+			},
+			onModifySpA(spa, pokemon) {
+				return this.chainModify(this.effectState.multiplier);
+			},
+			onModifySpD(spd, pokemon) {
+				return this.chainModify(this.effectState.multiplier);
+			},
+			onModifySpe(spe, pokemon) {
+				return this.chainModify(this.effectState.multiplier);
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Passage of Time');
+			},
+		},
+	},
 	bleatingheart: {
     name: "Bleating Heart",
     rating: 3,
