@@ -7865,42 +7865,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	passageoftime: {
 		name: "Passage of Time",
-		noCopy: true,
+		rating: 5,
+	    num: 10006,
+	    isNonstandard: "Future",
 		onStart(pokemon) {
-			this.effectState.multiplier = 1;
-			this.effectState.turns = 0;
-			this.add('-start', pokemon, 'Passage of Time');
+			pokemon.addVolatile('passageoftime');
+			this.add('-ability', pokemon, 'Passage of Time');
 		},
-		onResidualOrder: 28,
-		onResidual(pokemon) {
-			if (pokemon.fainted) return;
-			this.effectState.turns++;
-			this.effectState.multiplier *= 1.05;
-			this.damage(pokemon.baseMaxhp / 16);
-		},
-		onModifyAtk(atk) {
-			return this.chainModify(this.effectState.multiplier);
-		},
-		onModifyDef(def) {
-			return this.chainModify(this.effectState.multiplier);
-		},
-		onModifySpA(spa) {
-			return this.chainModify(this.effectState.multiplier);
-		},
-		onModifySpD(spd) {
-			return this.chainModify(this.effectState.multiplier);
-		},
-		onModifySpe(spe) {
-			return this.chainModify(this.effectState.multiplier);
-		},
-
-		onEnd(pokemon) {
-			this.add('-end', pokemon, 'Passage of Time');
-		},
-	},
-    rating: 5,
-	num: 10006,
-	isNonstandard: "Future",
 	},
 	bleatingheart: {
     name: "Bleating Heart",
