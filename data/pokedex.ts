@@ -39167,7 +39167,7 @@ hullabuoy: {
 		types: ["Water", "Fire"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 63, atk: 144, def: 59, spa: 144, spd: 42, spe: 58},
-		abilities: {0: "Pressure-Fuzed", 1: "Swift Swim", H: "Mega Launcher", S: "Shower Power"},
+		abilities: {0: "Pressure Fuzed", 1: "Swift Swim", H: "Mega Launcher", S: "Shower Power"},
 		heightm: 1.8,
 		weightkg: 60.9,
 		color: "Blue",
