@@ -1532,12 +1532,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 
 		onStart(pokemon) {
 			this.effectState.layers = 1;
-			this.add('-start', pokemon, 'passageoftime' + this.effectState.layers);
-			this.effectState.multiplier = 1 + this.effectState.layers * 0.05;
+			this.add('-start', pokemon, 'Time Passing ' + this.effectState.layers);
 		},
 		onRestart(pokemon) {
 			this.effectState.layers++;
-			this.add('-start', pokemon, 'passageoftime' + this.effectState.layers);
+			this.add('-start', pokemon, 'Time Passing ' + this.effectState.layers);
 			this.effectState.multiplier = 1 + this.effectState.layers * 0.05;
 		},
 		onEnd(pokemon) {
