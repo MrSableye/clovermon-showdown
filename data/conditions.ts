@@ -1526,22 +1526,22 @@ export const Conditions: {[k: string]: ConditionData} = {
 			}
 		},
 	},
-	passageoftime: {
-		name: "Passage of Time",
+	timepassing: {
+		name: "Time Passing",
 		noCopy: true,
 
 		onStart(pokemon) {
-			this.effectState.multiplier = 1;
-			this.effectState.turns = 0;
-			this.add('-start', pokemon, 'Passage of Time');
+			this.effectState.layers = 1;
+			this.add('-start', pokemon, 'passageoftime' + this.effectState.layers);
+			this.effectState.multiplier = 1 + this.effectState.layers * 0.05;
 		},
-
-		onResidualOrder: 28,
-		onResidual(pokemon) {
-			if (pokemon.fainted) return;
-			this.effectState.turns++;
-			this.effectState.multiplier *= 1.05;
-			this.damage(pokemon.baseMaxhp / 16);
+		onRestart(pokemon) {
+			this.effectState.layers++;
+			this.add('-start', pokemon, 'passageoftime' + this.effectState.layers);
+			this.effectState.multiplier = 1 + this.effectState.layers * 0.05;
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, 'Time Passing');
 		},
 
 		onModifyAtk(atk) {
@@ -1558,10 +1558,6 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onModifySpe(spe) {
 			return this.chainModify(this.effectState.multiplier);
-		},
-
-		onEnd(pokemon) {
-			this.add('-end', pokemon, 'Passage of Time');
 		},
 	},
 	blobbosdragonmaid: {

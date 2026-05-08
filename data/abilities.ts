@@ -7868,9 +7868,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 5,
 	    num: 10006,
 	    isNonstandard: "Future",
-		onStart(pokemon) {
-			pokemon.addVolatile('passageoftime');
+		onResidual(pokemon) {
+			pokemon.addVolatile('timepassing');
 			this.add('-ability', pokemon, 'Passage of Time');
+			this.damage(pokemon.baseMaxhp / 16);
 		},
 	},
 	bleatingheart: {
