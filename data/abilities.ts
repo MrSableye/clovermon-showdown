@@ -7863,6 +7863,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Fortified",
 		isNonstandard: "Future",
 	},
+	passageoftime: {
+		name: "Passage of Time",
+		rating: 5,
+	    num: 10006,
+	    isNonstandard: "Future",
+		onStart(pokemon) {
+			pokemon.addVolatile('passageoftime');
+			this.add('-ability', pokemon, 'Passage of Time');
+		},
+	},
 	bleatingheart: {
     name: "Bleating Heart",
     rating: 3,
