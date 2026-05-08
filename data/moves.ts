@@ -76444,9 +76444,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: -3,
 		flags: {failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1},
-		onHit(pokemon) {
+		onHit(target, source) {
 			const moves = [];
-			for (const moveSlot of pokemon.moveSlots) {
+			for (const moveSlot of source.moveSlots) {
 				const moveid = moveSlot.id;
 				if (!moveid) continue;
 				const move = this.dex.moves.get(moveid);
@@ -76460,7 +76460,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (!randomMove) {
 				return false;
 			}
-			this.actions.useMove(randomMove, pokemon);
+			this.actions.useMove(randomMove, source);
 		},
 		secondary: null,
 		target: "normal",
@@ -76499,12 +76499,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	allurespore: {
 		accuracy: 100,
-		basePower: 60,
+		basePower: 50,
 		basePowerCallback(pokemon, target, move) {
-			if (!target.volatiles['allurespore'] || move.hit === 1) {
-				target.addVolatile('allurespore');
+			if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
+				pokemon.addVolatile('furycutter');
 			}
-			const bp = this.clampIntRange(move.basePower * target.volatiles['furycutter'].multiplier, 1, 240);
+			const bp = this.clampIntRange(move.basePower * pokemon.volatiles['furycutter'].multiplier, 1, 200);
 			this.debug('BP: ' + bp);
 			return bp;
 		},
@@ -76733,7 +76733,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	cometfall: {
 		accuracy: 100,
-		basePower: 120,
+		basePower: 100,
 		category: "Special",
 		name: "Cometfall",
 		pp: 10,
@@ -76750,13 +76750,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 					id: 'cometfall',
 					name: "Cometfall",
 					accuracy: 100,
-					basePower: 120,
+					basePower: 100,
 					category: "Special",
 					priority: 0,
 					flags: {allyanim: 1, futuremove: 1},
 					ignoreImmunity: false,
 					effectType: 'Move',
 					type: 'Normal',
+					secondary: {
+						chance: 100,
+						boosts: {
+							spd: -2,
+						},
+					},
 				},
 			});
 			this.add('-start', source, 'move: Cometfall');
