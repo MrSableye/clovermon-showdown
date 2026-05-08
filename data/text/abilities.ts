@@ -2570,6 +2570,17 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		start: "  Time is passing...",
 		end: "  Time has stopped!",
 	},
+	thirddegree: {
+		name: "Third Degree",
+		shortDesc: "This Pokemon can burn a Pokemon regardless of its typing and statuses.",
+	},
+	bloomingdusk: {
+		name: "Blooming Dusk",
+		shortDesc: "If Cerius, changes Forme to Open before powder moves and Closed before Bulb Clinch.",
+
+		transform: "The flower bulb opened!",
+		transformEnd: "The flower bulb closed!",
+	},
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",

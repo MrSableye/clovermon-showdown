@@ -13351,6 +13351,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+		apcora: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		drosolstice: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		cerius: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		alclione: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 		stanchagram: {
 			inherit: true,
 			isNonstandard: null,

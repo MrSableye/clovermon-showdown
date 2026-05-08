@@ -8453,6 +8453,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	apcora: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	drosolstice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cerius: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ceriusopen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	alclione: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	monikat: {
 		tier: "Illegal",
 		isNonstandard: "Future",
