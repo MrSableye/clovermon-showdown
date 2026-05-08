@@ -8014,7 +8014,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Switches the user out. Recover 25% of health if Sandstorm is active.",
 	},
 	monument: {
-		name: "Shell Trap",
+		name: "Monument",
 		shortDesc: "User must take damage before moving. Cannot be used consecutively.",
 
 		start: "  [POKEMON] constructed a monument!",
