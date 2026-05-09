@@ -11552,8 +11552,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
-		},
+	},
 	sacrifleece: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	astrattagon: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
