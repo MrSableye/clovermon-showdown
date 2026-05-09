@@ -7983,11 +7983,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	deepblue: {
 		name: "Deep Blue",
-		shortDesc: "After use, selects another random move the user knows and uses it.",
+		shortDesc: "Uses another move the user knows after. Goes last.",
 	},
 	ignition: {
 		name: "Ignition",
-		shortDesc: "Raises the user's Sp. Atk. by 1 stage and sets Focus Energy effect on the user.",
+		shortDesc: "Raises user's Sp.Atk. by 1 and sets Focus Energy.",
 	},
 	firebrand: {
 		name: "Firebrand",
@@ -8011,7 +8011,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	rockcycle: {
 		name: "Rock Cycle",
-		shortDesc: "Switches the user out. Recover 25% of health if Sandstorm is active.",
+		shortDesc: "User switches. Heals user by 1/4 max HP in sand.",
 	},
 	monument: {
 		name: "Monument",
@@ -8055,7 +8055,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	pumpingheart: {
 		name: "Pumping Heart",
-		shortDesc: "Drains 75% of damage dealt, but leaves the target with at least 1 HP.",
+		shortDesc: "User drains 75% of damage dealt. Cannot KO target.",
 	},
 	historicpower: {
 		name: "Historic Power",
@@ -8068,7 +8068,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	discoveredattack: {
 		name: "Discovered Attack",
-		shortDesc: "Power doubles if the target switched out this turn. Breaks protect.",
+		shortDesc: "Power doubles if target switched. Breaks protection.",
 	},
 	insight: {
 		name: "Insight",
@@ -8076,7 +8076,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	cruiser: {
 		name: "Cruiser",
-		shortDesc: "Clears weather turn 1. Hits turn 2. No charge in Rain.",
+		shortDesc: "Clears weather turn 1. Hits turn 2. No charge in rain.",
 
 		prepare: "[POKEMON] fired missiles!",
 	},
