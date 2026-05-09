@@ -1021,6 +1021,7 @@ whirlpool: ["8L1"],
 zenheadbutt: ["8L1"],
 blusteryfront: ["8L1"],
 cloudburst: ["8L1"],
+curse: ["8L1"],
             },
 },
 merulin: {
