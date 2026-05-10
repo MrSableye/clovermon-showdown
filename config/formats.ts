@@ -1444,7 +1444,7 @@ export const Formats: FormatList = [
 			'Auculus','Stallter','Cotstall','Wyndvyrm','Garerowl','Corperial','Stanchagram','Gunflyre','Arcridget','Gem','Azumarite','Wyldhaunt','Wyldhaunt-Dullahan','Requiem Rend','Hullabuoy','Oazaki','Chambrira','Merulin',
 			'Ignition', 'Firebrand', 'Allure Spore', 'Pixie Prank', 'Shear Wave', 'Landslide', 'Rock Cycle', 'Monument', 'Five of a Kind', 'Inkjet', 'Blustery Front', 'Withering Bloom', 'Cometfall', 'Trample', 'Cloudburst',
 			'Pumping Heart', 'Historic Power', 'Bulb Clinch', 'Discovered Attack', 'Insight', 'Deep Blue', 'Cruiser', 'Shadow Stick', 'Apcora', 'Drosolstice', 'Cerius', 'Blooming Dusk', 'Alclione', 'Operapus', 'Hydro Steam',
-			'Astrattagon', 'move:firewall', 'Discipline', 'Supreme Overlord','Mortal Spin','Esenkra','Alkaleuf','Whidraw','Censer'],
+			'Astrattagon', 'move:firewall', 'Discipline', 'Supreme Overlord','Mortal Spin','Esenkra','Alkaleuf','Whidraw','Censer','Passage of Time'],
 	},
 	{
 		name: '[Gen 8 Cope Only] Anything Goes',
