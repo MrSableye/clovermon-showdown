@@ -1626,7 +1626,7 @@ drosolstice: {
 operapus: {
 		learnset: {
 	dazzlinggleam: ["8L1"],
-	sparklinggleam: ["8L1"],
+	sparklingaria: ["8L1"],
 	sweetkiss: ["8L1"],
 	inkjet: ["8L1"],
 	icebeam: ["8L1"],
