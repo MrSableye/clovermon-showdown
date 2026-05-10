@@ -39252,7 +39252,7 @@ hullabuoy: {
 		gen: 8,
 		creator: "Fiend Inc.",
 	},
-	whidraw {
+	whidraw: {
 		num: -8668,
 		name: "Whidraw",
 		types: ["Grass"],
@@ -39285,7 +39285,7 @@ esenkra: {
 		name: "Esenkra",
 		types: ["Ghost", "Fairy"],
 		gender: "F",
-		baseStats: {hp: 116, atk: 80, def: 127, spa: 80, spd: 130, spe: 30},
+		baseStats: {hp: 56, atk: 61, def: 54, spa: 117, spd: 83, spe: 103},
 		abilities: {0: "Censer", 1: "Flash Fire", H: "Prankster", S: "Neutralizing Gas"},
 		heightm: 1.2,
 		weightkg: 0.3,
