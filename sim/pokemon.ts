@@ -1637,7 +1637,7 @@ export class Pokemon {
 		if (this.status === status.id) {
 			if ((sourceEffect as Move)?.status === this.status) {
 				this.battle.add('-fail', this, this.status);
-			} else if ((sourceEffect as Move)?.status || !source?.hasAbility(['thirddegree'])) {
+			} else if ((sourceEffect as Move)?.status) {
 				this.battle.add('-fail', source);
 				this.battle.attrLastMove('[still]');
 			}
