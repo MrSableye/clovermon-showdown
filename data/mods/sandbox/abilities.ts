@@ -2117,4 +2117,12 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	passageoftime: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	censer: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
