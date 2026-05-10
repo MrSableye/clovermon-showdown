@@ -969,7 +969,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie',
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet', 'Discombubbles',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Substitute + Angel Powder', 'Plague Orb', 'Vanish', 'Seal Break', 'May King', 'Optic Camo', 'Squirm', 
+			'Hell Drag', 'Pacify', 'Substitute + Angel Powder', 'Plague Orb', 'Vanish', 'Seal Break', 'May King', 'Optic Camo',  
 			'Vr Headset', 'Kaleido Scope', 'tiptoe', 'Searing Quills', 'Stigmata Strike', 'Stigmatic Gleam', 'WildBeastsLogic', 'Squirm', 'Rift Strike', 
 			'Magic Cape', 'After Image','Perfect Freeze', 'Electrify + Lightning Rod', 'Electrify + Motor Drive', 'Electrify + Volt Absorb', 'Lunatic Time', 
 			'Green Card', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
