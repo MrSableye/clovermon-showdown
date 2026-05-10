@@ -7874,6 +7874,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.damage(pokemon.baseMaxhp / 16);
 		},
 	},
+	censer: {
+		name: "Censer",
+		rating: 4,
+		num: 10007,
+		isNonstandard: "Future",
+		onSetStatus(status, target, source, effect) {
+			const holder = this.effectState.target;
+			if (!holder || holder.fainted || !holder.isActive) return;
+			if (this.field.terrain === 'mistyterrain') return;
+			this.field.setTerrain('mistyterrain', holder, {
+				duration: 5,
+			});
+			
+			this.add('-ability', holder, 'Censer');
+		},
+	},
 	thirddegree: {
 		// Implemented in sim/pokemon.js:Pokemon#setStatus
 		name: "Third Degree",

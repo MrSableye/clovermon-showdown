@@ -2574,6 +2574,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Third Degree",
 		shortDesc: "This Pokemon can burn a Pokemon regardless of its typing and statuses.",
 	},
+	censer: {
+		name: "Censer",
+		shortDesc: "When any Pokemon is status'd, Misty Terrain is set for 5 turns.",
+	},
 	bloomingdusk: {
 		name: "Blooming Dusk",
 		shortDesc: "If Cerius, changes Forme to Open before powder moves and Closed before Bulb Clinch.",
