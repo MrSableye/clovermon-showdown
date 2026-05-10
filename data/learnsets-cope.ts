@@ -1675,7 +1675,6 @@ operapus: {
 	wish: ["8L1"],
 	octolock: ["8L1"],
 	taunt: ["8L1"],
-	alluringvoice: ["8L1"],
 	encore: ["8L1"],
 	acupressure: ["8L1"],
 	relicsong: ["8L1"],
