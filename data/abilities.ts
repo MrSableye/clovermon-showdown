@@ -7761,6 +7761,226 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     shortDesc: "Permanently transforms Shiribiko into Ultra-Shiribiko when using Quantum Pounce.",
     rating: 4,
     num: 10002,
+	},
+	furnace: {
+		name: "Furnace",
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Furnace');
+		},
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			const targets = this.sides.flatMap((side) => side.allies(true));
+			for (const target of targets) {
+				if (!target || !target.hp || pokemon === target) continue;
+				if (!target.hasType(['Fire'])) {
+					this.damage(target.baseMaxhp / 12, target, pokemon);
+				}
+			}
+		},
+		rating: 3,
+		isNonstandard: "Future",
+    },
+	darkflame: {
+		name: "Dark Flame",
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Dark Flame');
+		},
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			const targets = this.sides.flatMap((side) => side.allies(true));
+			for (const target of targets) {
+				if (!target || !target.hp || pokemon === target) continue;
+				if (target && target.status === 'brn') {
+					this.damage(target.baseMaxhp / 8, target, pokemon);
+				}
+			}
+		},
+		rating: 3,
+		isNonstandard: "Future",
+    },
+	crownofthorns: {
+		name: "Crown of Thorns",
+		onSwitchOut(pokemon) {
+			const side = pokemon.side;
+
+			const current = side.sideConditions['spikes']?.layers || 0;
+			if (current >= 3) return;
+
+			// Add one layer of spikes properly
+			side.addSideCondition('spikes');
+
+			this.add('-ability', pokemon, 'Crown of Thorns');
+		},
+	rating: 3,
+	num: 10004,
+	isNonstandard: "Future",
+    },
+	steelyresolve: {
+		name: "Steely Resolve",
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.category === 'Status') return;
+			if (target.hp <= target.maxhp / 3) {
+				this.debug('Steely Resolve weaken');
+				this.add('-ability', target, 'Steely Resolve');
+				return this.chainModify(0.5);
+			}
+		},
+	rating: 4,
+	num: 10005,
+	isNonstandard: "Future",
+	},
+	fortified: {
+		onModifyPriority(priority, pokemon, target, move) {
+			// Only trigger for negative priority moves
+			if (move && move.priority < 0) {
+				if (!pokemon.volatiles['fortified']) {
+					pokemon.addVolatile('fortified');
+					this.add('-ability', pokemon, 'Fortified');
+				}
+			}
+			return priority;
+		},
+		condition: {
+			noCopy: true,
+			duration: 1,
+			onModifyDef() {
+				return this.chainModify(1.5);
+			},
+			onModifySpD() {
+				return this.chainModify(1.5);
+			},
+			onAfterMoveSecondarySelf(source) {
+				source.removeVolatile('fortified');
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'ability: Fortified', '[silent]');
+			},
+		},
+		name: "Fortified",
+		isNonstandard: "Future",
+	},
+	passageoftime: {
+		name: "Passage of Time",
+		rating: 5,
+	    num: 10006,
+	    isNonstandard: "Future",
+		onResidual(pokemon) {
+			pokemon.addVolatile('timepassing');
+			this.add('-ability', pokemon, 'Passage of Time');
+			this.damage(pokemon.baseMaxhp / 16);
+		},
+	},
+	thirddegree: {
+		// Implemented in sim/pokemon.js:Pokemon#setStatus
+		name: "Third Degree",
+		rating: 2.5,
+		num: 212,
+	},
+	bloomingdusk: {
+		onModifyMovePriority: 1,
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.baseSpecies !== 'Cerius' || attacker.transformed) return;
+			if (!move.flags['powder'] && move.id !== 'bulbclinch') return;
+			const targetForme = (move.id === 'bulbclinch' ? 'Cerius' : 'Cerius-Open');
+			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+		},
+		isPermanent: true,
+		name: "Blooming Dusk",
+		rating: 4,
+		num: 176,
+	},
+	bleatingheart: {
+    name: "Bleating Heart",
+    rating: 3,
+    num: 10003,
+    isNonstandard: "Future",
+    onStart(pokemon) {
+        if (!(pokemon as any).bleatingHeartBoosts) (pokemon as any).bleatingHeartBoosts = [];
+
+        const faintedAllies = pokemon.side.pokemon.filter(
+            (ally: Pokemon) => ally !== pokemon && ally.fainted
+        ).length;
+
+        const statsOrder: (keyof StatsExceptHPTable)[] = ['atk', 'def', 'spa', 'spd', 'spe'];
+        const storedStats = pokemon.storedStats;
+
+        const sortedStats = statsOrder.slice().sort(function (a, b) {
+            const valA = storedStats[a];
+            const valB = storedStats[b];
+            if (valB !== valA) return valB - valA;
+            return statsOrder.indexOf(a) - statsOrder.indexOf(b);
+        });
+
+        (pokemon as any).bleatingHeartBoosts = sortedStats.slice(0, faintedAllies);
+    },
+    onAllyFaint(pokemon) {
+        const holder = this.effectState.target as Pokemon;
+        if (!holder) return;
+
+        if (!(holder as any).bleatingHeartBoosts) (holder as any).bleatingHeartBoosts = [];
+
+        const faintedAllies = holder.side.pokemon.filter(
+            (ally: Pokemon) => ally !== holder && ally.fainted
+        ).length;
+
+        const statsOrder: (keyof StatsExceptHPTable)[] = ['atk', 'def', 'spa', 'spd', 'spe'];
+        const storedStats = holder.storedStats;
+
+        const sortedStats = statsOrder.slice().sort(function (a, b) {
+            const valA = storedStats[a];
+            const valB = storedStats[b];
+            if (valB !== valA) return valB - valA;
+            return statsOrder.indexOf(a) - statsOrder.indexOf(b);
+        });
+
+        (holder as any).bleatingHeartBoosts = sortedStats.slice(0, faintedAllies);
+    },
+    onAllySwitchIn(pokemon) {
+        const holder = this.effectState.target as Pokemon;
+        if (!holder) return;
+
+        if (!(holder as any).bleatingHeartBoosts) (holder as any).bleatingHeartBoosts = [];
+
+        const faintedAllies = holder.side.pokemon.filter(
+            (ally: Pokemon) => ally !== holder && ally.fainted
+        ).length;
+
+        const statsOrder: (keyof StatsExceptHPTable)[] = ['atk', 'def', 'spa', 'spd', 'spe'];
+        const storedStats = holder.storedStats;
+
+        const sortedStats = statsOrder.slice().sort(function (a, b) {
+            const valA = storedStats[a];
+            const valB = storedStats[b];
+            if (valB !== valA) return valB - valA;
+            return statsOrder.indexOf(a) - statsOrder.indexOf(b);
+        });
+
+        (holder as any).bleatingHeartBoosts = sortedStats.slice(0, faintedAllies);
+    },
+    onModifyAtk(relayVar, pokemon) {
+        const boosts: string[] | undefined = (pokemon as any).bleatingHeartBoosts;
+        if (boosts && boosts.includes('atk')) return this.chainModify(1.2);
+    },
+    onModifyDef(relayVar, pokemon) {
+        const boosts: string[] | undefined = (pokemon as any).bleatingHeartBoosts;
+        if (boosts && boosts.includes('def')) return this.chainModify(1.2);
+    },
+    onModifySpA(relayVar, pokemon) {
+        const boosts: string[] | undefined = (pokemon as any).bleatingHeartBoosts;
+        if (boosts && boosts.includes('spa')) return this.chainModify(1.2);
+    },
+    onModifySpD(relayVar, pokemon) {
+        const boosts: string[] | undefined = (pokemon as any).bleatingHeartBoosts;
+        if (boosts && boosts.includes('spd')) return this.chainModify(1.2);
+    },
+    onModifySpe(relayVar, pokemon) {
+        const boosts: string[] | undefined = (pokemon as any).bleatingHeartBoosts;
+        if (boosts && boosts.includes('spe')) return this.chainModify(1.2);
+    },
 
 	},
 	capacitance: {

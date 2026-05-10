@@ -1758,6 +1758,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	sepulturemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	flockarrion: {
 		inherit: true,
 		isNonstandard: null,
@@ -2032,6 +2036,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	molterramegax: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+		},
+	molterramegay: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -2669,6 +2677,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+	},
+	zillichinamega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	tarantagon: {
 		inherit: true,

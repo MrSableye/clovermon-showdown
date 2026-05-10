@@ -1859,6 +1859,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	molterramegax: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	molterramegay: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	junkgeist: {
 		inherit: true,
@@ -2424,6 +2428,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	zillichinamega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	tarantagon: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -2818,6 +2826,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	sepulture: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sepulturemega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

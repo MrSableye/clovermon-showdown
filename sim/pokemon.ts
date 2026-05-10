@@ -1637,7 +1637,7 @@ export class Pokemon {
 		if (this.status === status.id) {
 			if ((sourceEffect as Move)?.status === this.status) {
 				this.battle.add('-fail', this, this.status);
-			} else if ((sourceEffect as Move)?.status) {
+			} else if ((sourceEffect as Move)?.status || !source?.hasAbility(['thirddegree'])) {
 				this.battle.add('-fail', source);
 				this.battle.attrLastMove('[still]');
 			}
@@ -1646,7 +1646,7 @@ export class Pokemon {
 
 		if (!ignoreImmunities && status.id &&
 				!((source?.hasAbility(['corrosion', 'cancer']) || source?.hasItem('plagueorb')) && ['tox', 'psn'].includes(status.id)) &&
-				!((source?.hasItem('infernoorb')) && status.id === 'brn') &&
+				!((source?.hasAbility(['thirddegree']) || source?.hasItem('infernoorb')) && status.id === 'brn') &&
 				!((source?.hasItem('stormorb')) && status.id === 'par')) {
 			// the game currently never ignores immunities
 			if (!this.runStatusImmunity(status.id === 'tox' ? 'psn' : status.id)) {

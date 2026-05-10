@@ -68,6 +68,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+		},
+	sepulturemega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	flockarrion: {
 		inherit: true,
@@ -334,6 +339,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	molterramegax: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+		},
+	molterramegay: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -989,6 +999,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 	},
 	zillichina: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	zillichinamega: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

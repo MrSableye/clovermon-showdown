@@ -1526,6 +1526,38 @@ export const Conditions: {[k: string]: ConditionData} = {
 			}
 		},
 	},
+	timepassing: {
+		name: "Time Passing",
+		noCopy: true,
+
+		onStart(pokemon) {
+			this.effectState.layers = 1;
+			this.add('-start', pokemon, 'Time Passing ' + this.effectState.layers);
+		},
+		onRestart(pokemon) {
+			this.effectState.layers++;
+			this.add('-start', pokemon, 'Time Passing ' + this.effectState.layers);
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, 'Time Passing');
+		},
+
+		onModifyAtk(atk) {
+			return this.chainModify(1 + this.effectState.layers * 0.05);
+		},
+		onModifyDef(def) {
+			return this.chainModify(1 + this.effectState.layers * 0.05);
+		},
+		onModifySpA(spa) {
+			return this.chainModify(1 + this.effectState.layers * 0.05);
+		},
+		onModifySpD(spd) {
+			return this.chainModify(1 + this.effectState.layers * 0.05);
+		},
+		onModifySpe(spe) {
+			return this.chainModify(1 + this.effectState.layers * 0.05);
+		},
+	},
 	blobbosdragonmaid: {
 		name: 'Blobbos-Dragon Maid',
 		onAfterMoveSecondarySelf(source) {

@@ -7503,6 +7503,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	molterramegax: {
 		inherit: true,
 		isNonstandard: "Past",
+		},
+	molterramegay: {
+		inherit: true,
+		isNonstandard: "Past",
 	},
 	junkgeist: {
 		inherit: true,
@@ -7933,6 +7937,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	zillichina: {
+		inherit: true,
+		isNonstandard: "Past",
+		},
+	zillichinamega: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -9681,6 +9689,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	sepulture: {
+		inherit: true,
+		isNonstandard: "Past",
+		},
+	sepulturemega: {
 		inherit: true,
 		isNonstandard: "Past",
 	},

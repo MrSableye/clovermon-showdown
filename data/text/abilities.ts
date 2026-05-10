@@ -2538,6 +2538,49 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Dissect",
 		shortDesc: "On switch-in, this Pokemon clears all boosts of all Pokemon.",
 	},
+	Furnace: {
+		name: "Furnace",
+		shortDesc: "All Pokemon on the field lose 1/12 HP per turn if they're not Fire type.",
+		start: "  [POKEMON] is melting it's foe!",
+	},
+	bleatingheart: {
+		name: "Bleating Heart",
+		shortDesc: "Boosts one of the user's stats by 1.2x per ally fainted. Boosts stats from highest to lowest.",
+	},
+	crownofthorns: {
+		name: "Crown of Thorns",
+		shortDesc: "Upon switch-out, this Pokemon lays a layer of Spikes on their side of the field.",
+	},
+	darkflame: {
+		name: "Dark Flame",
+		shortDesc: "All other burned Pokemon lose 1/8 of their max HP per turn.",
+	},
+	fortified: {
+		name: "Fortified",
+		shortDesc: "Defense and Special Defense are boosted by 1.5x when using a negative priority move.",
+	},
+	steelyresolve: {
+		name: "Steely Resolve",
+		shortDesc: "This Pokémon takes half damage from attacks at 1/3 Max HP or Less.",
+	},
+	passageoftime: {
+		name: "Passage of Time",
+		shortDesc: "At the end of each turn, boost all stats by 5% and lose 1/16 HP.",
+
+		start: "  Time is passing...",
+		end: "  Time has stopped!",
+	},
+	thirddegree: {
+		name: "Third Degree",
+		shortDesc: "This Pokemon can burn a Pokemon regardless of its typing and statuses.",
+	},
+	bloomingdusk: {
+		name: "Blooming Dusk",
+		shortDesc: "If Cerius, changes Forme to Open before powder moves and Closed before Bulb Clinch.",
+
+		transform: "The flower bulb opened!",
+		transformEnd: "The flower bulb closed!",
+	},
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",

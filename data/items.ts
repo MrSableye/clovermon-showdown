@@ -9656,12 +9656,57 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	molterritey: {
+		name: "Molterrite Y",
+		spritenum: 577,
+		megaStone: "Molterra-Mega-Y",
+		megaEvolves: "Molterra",
+		itemUser: ["Molterra"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	shroomalicite: {
 		name: "Shroomalicite",
 		spritenum: 577,
 		megaStone: "Shroomalice-Mega",
 		megaEvolves: "Shroomalice",
 		itemUser: ["Shroomalice"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	zillichinite: {
+		name: "Zillichinite",
+		spritenum: 577,
+		megaStone: "Zillichina-Mega",
+		megaEvolves: "Zillichina",
+		itemUser: ["Zillichina"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	sepulturite: {
+		name: "Sepulturite",
+		spritenum: 577,
+		megaStone: "Sepulture-Mega",
+		megaEvolves: "Sepulture",
+		itemUser: ["Sepulture"],
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;

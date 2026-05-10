@@ -8032,6 +8032,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	sepulture: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	sepulturemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	onusalt: {
 		tier: "Illegal",
@@ -8217,6 +8221,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	molterramegay: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	moltama: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -8394,6 +8402,74 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	arcridget: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	auculus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cotstall: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wyndvyrm: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	stallter: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	corperial: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	stanchagram: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	oazaki: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	merulin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	chambrira: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	hullabuoy: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	gunflyre: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	garerowl: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	apcora: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	drosolstice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cerius: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ceriusopen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	alclione: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8754,6 +8830,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	zillichina: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	zillichinamega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -9310,6 +9390,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	beegyosh: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sacrifleece: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	astrattagon: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

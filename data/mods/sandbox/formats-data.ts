@@ -9257,6 +9257,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+		},
+	molterramegay: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	poltire: {
 		inherit: true,
@@ -9822,6 +9827,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
+	},
+	zillichinamega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	tarantagon: {
 		inherit: true,
@@ -10813,6 +10823,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	sepulturemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	flockarrion: {
 		inherit: true,
 		tier: "OU",
@@ -11534,6 +11549,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	beegyosh: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	sacrifleece: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+		},
+	astrattagon: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
@@ -13292,6 +13317,91 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			tier: "OU",
 		},
 	   faustival: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		arcridget: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		auculus: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		wyndvyrm: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		cotstall: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		stallter: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		gunflyre: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		garerowl: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		apcora: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		drosolstice: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		cerius: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		alclione: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		stanchagram: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		corperial: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		hullabuoy: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		chambrira: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		merulin: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		oazaki: {
 			inherit: true,
 			isNonstandard: null,
 			tier: "OU",
