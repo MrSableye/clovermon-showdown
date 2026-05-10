@@ -13406,4 +13406,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+		operapus: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 };

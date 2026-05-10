@@ -1439,7 +1439,12 @@ export const Formats: FormatList = [
 		],
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Inversion', 'Sand Veil', 'Shell Smash + Molterra'],
 		unbanlist: [
-			'Ginoccite', 'Ginocchio-Mega', 'Salezerkite', 'Salezerker-Mega','Lemirethun-Mega', 'Lemirethite','Platylics-Mega','Platylicite','Glucurs-Mega','Glucusite','Camerex-Mega','Camerite','Konekoth-Mega','Konekothite','Molterra-Mega-X','Molterrite X','Shroomalicite','Shroomalice-Mega','Zillichinite','Zillichina-Mega','Sepulturite','Sepulture-Mega','Molterra-Mega-Y','Molterrite Y','Auculus','Stallter','Cotstall','Wyndvyrm','Garerowl','Corperial','Stanchagram','Gunflyre','Arcridget','Gem','Azumarite','Wyldhaunt','Wyldhaunt-Dullahan','Requiem Rend','Hullabuoy','Oazaki','Chambrira','Merulin', 'Ignition', 'Firebrand', 'Allure Spore', 'Pixie Prank', 'Shear Wave', 'Landslide', 'Rock Cycle', 'Monument', 'Five of a Kind', 'Inkjet', 'Blustery Front', 'Withering Bloom', 'Cometfall', 'Trample', 'Cloudburst', 'Pumping Heart', 'Historic Power', 'Bulb Clinch', 'Discovered Attack', 'Insight', 'Deep Blue', 'Cruiser', 'Shadow Stick', 'Apcora', 'Drosolstice', 'Cerius', 'Blooming Dusk', 'Alclione', 'Hydro Steam','Astrattagon','move:firewall','Discipline'],
+			'Ginoccite', 'Ginocchio-Mega', 'Salezerkite', 'Salezerker-Mega','Lemirethun-Mega', 'Lemirethite','Platylics-Mega','Platylicite','Glucurs-Mega','Glucusite','Camerex-Mega','Camerite','Konekoth-Mega','Konekothite',
+			'Molterra-Mega-X','Molterrite X','Shroomalicite','Shroomalice-Mega','Zillichinite','Zillichina-Mega','Sepulturite','Sepulture-Mega','Molterra-Mega-Y','Molterrite Y',
+			'Auculus','Stallter','Cotstall','Wyndvyrm','Garerowl','Corperial','Stanchagram','Gunflyre','Arcridget','Gem','Azumarite','Wyldhaunt','Wyldhaunt-Dullahan','Requiem Rend','Hullabuoy','Oazaki','Chambrira','Merulin',
+			'Ignition', 'Firebrand', 'Allure Spore', 'Pixie Prank', 'Shear Wave', 'Landslide', 'Rock Cycle', 'Monument', 'Five of a Kind', 'Inkjet', 'Blustery Front', 'Withering Bloom', 'Cometfall', 'Trample', 'Cloudburst',
+			'Pumping Heart', 'Historic Power', 'Bulb Clinch', 'Discovered Attack', 'Insight', 'Deep Blue', 'Cruiser', 'Shadow Stick', 'Apcora', 'Drosolstice', 'Cerius', 'Blooming Dusk', 'Alclione', 'Operapus', 'Hydro Steam',
+			'Astrattagon', 'move:firewall', 'Discipline', 'Supreme Overlord'],
 	},
 	{
 		name: '[Gen 8 Cope Only] Anything Goes',
