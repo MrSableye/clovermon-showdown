@@ -39243,7 +39243,7 @@ hullabuoy: {
 		name: "Operapus",
 		types: ["Water", "Fairy"],
 		gender: "F",
-		baseStats: {hp: 79, atk: 58, def: 63, spa: 119, spd: 85, spe: 119},
+		baseStats: {hp: 79, atk: 58, def: 67, spa: 118, spd: 81, spe: 119},
 		abilities: {0: "Competitive", 1: "Supreme Overlord", H: "Dazzling", S: "Victory Star"},
 		heightm: 0.2,
 		weightkg: 1.2,
