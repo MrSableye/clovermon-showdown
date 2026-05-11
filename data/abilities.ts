@@ -7921,7 +7921,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
     },
 	eagleeye: {
-       eagleeye: {
         onBasePowerPriority: 30,
         onBasePower(basePower, pokemon, target, move) {
             if (move.category !== 'Status' &&(move.accuracy === true || (typeof move.accuracy === 'number' && move.accuracy > 100))) {
@@ -7930,7 +7929,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             }
         },
         name: "Eagle Eye",
-		isNonstandard: "Future",
+		  isNonstandard: "Future",
         rating: 3.5,
     },
 	showdown: {
