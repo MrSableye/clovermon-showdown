@@ -2215,7 +2215,7 @@ skullbash: ["8L1"],
 },
 challiope: {
 		learnset: {
-	accupressure: ["8L1"],
+	acupressure: ["8L1"],
 	acrobatics: ["8L1"],
 	agility: ["8L1"],
 	allyswitch: ["8L1"],
