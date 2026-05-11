@@ -7921,11 +7921,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
     },
 	eagleeye: {
+       eagleeye: {
         onBasePowerPriority: 30,
-        onBasePower(accuracy, attacker, defender, move) {
-            const moveaccuracy = this.modify(accuracy, this.event.modifier);
-            this.debug('Base Power: ' + moveaccuracy);
-            if (moveaccuracy >= 100) {
+        onBasePower(basePower, pokemon, target, move) {
+            if (move.category !== 'Status' &&(move.accuracy === true || (typeof move.accuracy === 'number' && move.accuracy > 100))) {
                 this.debug('Eagle Eye boost');
                 return this.chainModify(1.5);
             }
