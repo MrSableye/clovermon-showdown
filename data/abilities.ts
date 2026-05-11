@@ -7890,6 +7890,66 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-ability', holder, 'Censer');
 		},
 	},
+    resonant: {
+        onTryHit(target, source, move) {
+            if (target !== source && move.type === 'Psychic') {
+                this.add('-immune', target, '[from] ability: Resonant');
+                source.clearStatus();
+                return null;
+            }
+        },
+        isBreakable: true,
+		isNonstandard: "Future",
+        name: "Resonant",
+    },
+	pitchblack: {
+        onStart(pokemon) {
+            let activated = false;
+            for (const target of pokemon.adjacentFoes()) {
+                if (!activated) {
+                    this.add('-ability', pokemon, 'Pitch Black', 'boost');
+                    activated = true;
+                }
+                if (target.volatiles['substitute']) {
+                    this.add('-immune', target);
+                } else {
+                    pokemon.addVolatile('tarshot', this.effectState.target);
+                }
+            }
+        },
+        name: "Pitch Black",
+		isNonstandard: "Future",
+    },
+	eagleeye: {
+        onBasePowerPriority: 30,
+        onBasePower(accuracy, attacker, defender, move) {
+            const moveaccuracy = this.modify(accuracy, this.event.modifier);
+            this.debug('Base Power: ' + moveaccuracy);
+            if (moveaccuracy >= 100) {
+                this.debug('Eagle Eye boost');
+                return this.chainModify(1.5);
+            }
+        },
+        name: "Eagle Eye",
+		isNonstandard: "Future",
+        rating: 3.5,
+    },
+	showdown: {
+        onFoeTrapPokemon(pokemon) {
+            if (pokemon.hasType('Fighting') && pokemon.isAdjacent(this.effectState.target)) {
+                pokemon.tryTrap(true);
+            }
+        },
+        onFoeMaybeTrapPokemon(pokemon, source) {
+            if (!source) source = this.effectState.target;
+            if (!source || !pokemon.isAdjacent(source)) return;
+            if (!pokemon.knownType || pokemon.hasType('Fighting')) {
+                pokemon.maybeTrapped = true;
+            }
+        },
+        name: "Showdown",
+		isNonstandard: "Future",
+    },
 	thirddegree: {
 		// Implemented in sim/pokemon.js:Pokemon#setStatus
 		name: "Third Degree",

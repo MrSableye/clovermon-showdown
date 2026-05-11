@@ -2585,6 +2585,22 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		transform: "The flower bulb opened!",
 		transformEnd: "The flower bulb closed!",
 	},
+	showdown: {
+		name: "Showdown",
+		shortDesc: "Prevents opposing Fighting-type Pokemon from choosing to switch out.",
+	},
+	eagleeye: {
+		name: "Eagle Eye",
+		shortDesc: "This Pokemon's moves with more than 100% acc are boosted by 1.5x.",
+	},
+	pitchblack: {
+		name: "Pitch Black",
+		shortDesc: "Upon switch-in, this Pokemon gives opponents the Tar Shot effect.",
+	},
+	resonant: {
+		name: "Resonant",
+		shortDesc: "Psychic-type moves cure non-volatile status conditions; Psychic immunity.",
+	},
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",
