@@ -39138,7 +39138,7 @@ oazaki: {
 		name: "Oazaki",
 		types: ["Water", "Ground"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 170, atk: 61, def: 72, spa: 85, spd: 90, spe: 22},
+		baseStats: {hp: 130, atk: 61, def: 72, spa: 85, spd: 90, spe: 22},
 		abilities: {0: "Drought"},
 		heightm: 4.1,
 		weightkg: 458.1,
