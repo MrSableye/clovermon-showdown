@@ -12024,6 +12024,43 @@
           "patchworkdeluge"
         ],
         "level": 78
+      },
+       {
+        "abilities": [    
+          "Protean",
+          "Regenerator"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "cosmicgem",
+          "lumberry",
+          "starfieldcapsule",
+          "zodziberry",
+          "whiteherb",
+          "angelpowder"
+        ],
+        "moves": [     
+          "icebeam",
+          "gunkshot",
+          "patchworkdeluge",
+          "voidsmaw",
+          "earthquake",
+          "thunderbolt",
+          "surf",
+          "sludgebomb",
+          "earthpower",
+          "toxic",
+          "taunt",
+          "magiccoat",
+          "protect",
+          "icywind"    
+
+        ],
+        "lockedMoves": [   
+          "galacticforce",
+          "knockoff"
+        ],
+        "level": 84       
       }
     ]
   },
@@ -18818,33 +18855,7 @@
       }
     ]
   },
-  "ygolonacol": {
-    "nicknames": [
-      "Ygolonacol"
-    ],
-    "sets": [
-      {
-        "abilities": [
-          "prankster"
-        ],
-        "items": [
-          "murkycapsule",
-          "angelpowder",
-          "heavydutyboots"
-        ],
-        "moves": [
-          "brainrot",
-          "pastalavista",
-          "trickroom"
-        ],
-        "lockedMoves": [
-          "lunatictime",
-          "knockoff"
-        ],
-        "level": 84
-      }
-    ]
-  },
+  
   "yebus": {
     "nicknames": [
       "Yebus"
@@ -18975,6 +18986,7 @@
       }
     ]      
   },
+  
    "yuck": {
     "nicknames": [
       "Yuck"
@@ -18997,6 +19009,112 @@
         ],
         "level": 84
       }
+    ]
+  },
+  "ygolonacol": {   
+    "nicknames": [   
+      "Headless",
+      "Greediest"
+    ],
+    "sets": [
+        {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "murkycapsule",
+          "angelpowder",
+          "heavydutyboots"
+        ],
+        "moves": [
+          "brainrot",
+          "pastalavista",
+          "trickroom"
+        ],
+        "lockedMoves": [
+          "lunatictime",
+          "knockoff"
+        ],
+        "level": 84
+      }
+    ]
+  },
+      {
+        
+        "abilities": [    
+          "gluttony",
+          "prankster"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "lumberry",
+          "lifeorb",
+          "rockyhelmet",
+          "angelpowder"
+        ],
+        "moves": [     
+          "brainrot",
+          "pastalavista",
+          "pukeblood",
+          "knockoff",
+          "toxic",
+          "lazyday",
+          "curse",
+          "babylongoblet",
+          "invocation",
+          "coffeedrink"
+        ],
+        "lockedMoves": [   
+          "pursuit",
+          "suckerpunch"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "angelpowder"    
+        ],
+        "lockedMoves": [
+          "taunt",
+          "lazyday",
+          "knockoff",
+          "toxic"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "prankster"
+        ],
+        "items": [
+          "powerherb"    
+        ],
+        "lockedMoves": [
+          "ritual",
+          "invocation",
+          "specialorder",
+          "suckerpunch"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "gluttony"
+        ],
+        "items": [
+          "apicotberry"    
+        ],
+        "lockedMoves": [
+          "rest",
+          "curse",
+          "avarice",
+          "sleeptalk"
+           ],
+        "level": 84
+      }   
     ]
   },
   "zenature": {
