@@ -18881,6 +18881,100 @@
       }
     ]
   },
+  
+
+"Hublastoise": {   
+    "nicknames": [   
+      "Misty"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "torrent"
+        ],
+        "items": [ 
+          "venusorb",
+          "jupiterorb",
+          "rainycapsule",
+          "mysticwater"
+        ],
+        "moves": [     
+          "steameruption",
+          "flashcannon",
+          "slackoff",
+          "earthquake",
+          "icebeam"
+        ],
+        "lockedMoves": [   
+          "squirtcannon",
+          "rapidspin",
+          "originpulse"
+        ],
+        "level": 84       
+      }
+    ]      
+  },
+  "Hucharizard": {   
+    "nicknames": [   
+      "Flannery"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "blaze"
+        ],
+        "items": [ 
+          "venusorb",
+          "jupiterorb",
+          "sunnycapsule",
+          "charcoal"
+        ],
+        "moves": [     
+          "airslash",
+          "burningpassion",
+          "toxic",
+          "substitute"
+        ],
+        "lockedMoves": [   
+          "maxwildfire",
+          "attract",
+          "domesticabuse"
+        ],
+        "level": 84       
+      }
+    ]      
+  },
+  "Huvenusaur": {   
+    "nicknames": [   
+      "Erika"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "overgrow"
+        ],
+        "items": [
+          "blacksludge", 
+          "venusorb",
+          "jupiterorb",
+          "miracleseed"
+        ],
+        "moves": [     
+          "cbt",
+          "earthpower",
+          "sleeppowder",
+          "knockoff",
+          "sludgebomb"
+        ],
+        "lockedMoves": [   
+          "loveseed",
+          "dazzlingpetals",
+          "pollenseason"
+        ],
+        "level": 84       
+      }
+    ]      
+  },
    "yuck": {
     "nicknames": [
       "Yuck"
@@ -18899,7 +18993,7 @@
         ],
         "lockedMoves": [
           "sludgehammer",
-          "shaowsneak"
+          "shadowsneak"
         ],
         "level": 84
       }
