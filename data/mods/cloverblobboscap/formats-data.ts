@@ -3024,6 +3024,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	colombolt: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	colomboltmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	coilspill: {
 		tier: "Illegal",

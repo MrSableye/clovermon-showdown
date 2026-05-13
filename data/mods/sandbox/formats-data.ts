@@ -11343,6 +11343,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	colomboltmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	jerkistal: {
 		inherit: true,
 		tier: "OU",
