@@ -8989,11 +8989,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			basePower: 80,
 		},
 		onDamage(damage, target, source, effect) {
-			if (
-				effect &&
-				effect.id === 'stealthrock' &&
-				target.hasType('Ice')
-			) {
+			if (effect?.id === 'stealthrock' && target.hasType('Ice')) {
 				this.add('-immune', target, '[from] item: Ice Cleats');
 				return false;
 			}
@@ -9014,7 +9010,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				return false; 
 			}
 		},
-			if (side.sideConditions['stickyweb','sleazyspores']) {
+		if (side.sideConditions['stickyweb','sleazyspores']) {
 				if (pokemon.boosts.spe < 0) {
 					pokemon.setBoost({spe: 0});
 					this.add('-immune', pokemon, '[from] item: Ice Cleats');
