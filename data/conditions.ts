@@ -1558,6 +1558,76 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return this.chainModify(1 + this.effectState.layers * 0.05);
 		},
 	},
+	stealthrock: {
+		onSwitchIn(pokemon) {
+			if (pokemon.hasItem('icecleats') && pokemon.hasType('Ice')) {
+				this.add('-immune', pokemon, '[from] item: Ice Cleats');
+				return;
+			}
+
+			const typeMod = this.clampIntRange(
+				pokemon.runEffectiveness(this.dex.getActiveMove('stealthrock')),
+				-6,
+				6
+			);
+			this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 8);
+		},
+	},
+
+	spikes: {
+		onSwitchIn(pokemon) {
+			if (pokemon.hasItem('icecleats') && pokemon.hasType('Ice')) {
+				this.add('-immune', pokemon, '[from] item: Ice Cleats');
+				return;
+			}
+
+			if (!pokemon.isGrounded()) return;
+
+			const layers = this.effectState.layers || 1;
+			const damageTable = [0, 1 / 8, 1 / 6, 1 / 4];
+			this.damage(pokemon.maxhp * damageTable[layers]);
+		},
+	},
+
+	toxicspikes: {
+		onSwitchIn(pokemon) {
+			if (pokemon.hasItem('icecleats') && pokemon.hasType('Ice')) {
+				this.add('-immune', pokemon, '[from] item: Ice Cleats');
+				return;
+			}
+
+			if (!pokemon.isGrounded()) return;
+
+			if (pokemon.hasType('Poison')) {
+				this.add('-sideend', pokemon.side, 'Toxic Spikes');
+				pokemon.side.removeSideCondition('toxicspikes');
+				return;
+			}
+
+			if (pokemon.status) return;
+
+			const layers = this.effectState.layers || 1;
+			if (layers >= 2) {
+				pokemon.trySetStatus('tox', pokemon);
+			} else {
+				pokemon.trySetStatus('psn', pokemon);
+			}
+		},
+	},
+
+	stickyweb: {
+		onSwitchIn(pokemon) {
+			if (pokemon.hasItem('icecleats') && pokemon.hasType('Ice')) {
+				this.add('-immune', pokemon, '[from] item: Ice Cleats');
+				return;
+			}
+
+			if (!pokemon.isGrounded()) return;
+
+			this.add('-activate', pokemon, 'move: Sticky Web');
+			this.boost({ spe: -1 }, pokemon, pokemon);
+		},
+	},
 	blobbosdragonmaid: {
 		name: 'Blobbos-Dragon Maid',
 		onAfterMoveSecondarySelf(source) {
