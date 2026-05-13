@@ -119,6 +119,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	colossus: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	comatose: {
 		inherit: true,
 		isNonstandard: null,

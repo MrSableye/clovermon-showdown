@@ -8313,10 +8313,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isPermanent: true,
 		isNonstandard: "Future",
 	},
-	colossal: {
-		name: "Colossal",
+	colossus: {
+		name: "Colossus",
 		onStart(pokemon) {
-			this.add('-activate', pokemon, 'ability: Big Guy');
+			this.add('-activate', pokemon, 'ability: Colossus');
 			this.field.addPseudoWeather('gravity');
 		},
 		rating: 4,

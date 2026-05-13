@@ -2538,12 +2538,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Dissect",
 		shortDesc: "On switch-in, this Pokemon clears all boosts of all Pokemon.",
 	},
-	Furnace: {
+	furnace: {
 		name: "Furnace",
 		shortDesc: "All Pokemon on the field lose 1/12 HP per turn if they're not Fire type.",
 		start: "  [POKEMON] is melting it's foe!",
 	},
-	Battlefield: {
+	battlefield: {
 		name: "Battlefield",
 		shortDesc: "Gains +1 Defense on Electric and Grassy Terrain, Gains +1 Special Defense on Misty and Psychic Terrain",
 		start: "  [POKEMON] used the battlefield to power itself!",
@@ -2721,8 +2721,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Transfusion",
 		shortDesc: "Upon being hit, changes the opponent's type to the primary type of the ability-holder. When the ability-holder switches out, change their types back.",
 	},
-	colossal: {
-		name: "Colossal",
+	colossus: {
+		name: "Colossus",
 		shortDesc: "Summons Gravity upon switch-in.",
 	},
 	delirious: {

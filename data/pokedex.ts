@@ -35009,7 +35009,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Rock"],
 		gender: "N",
 		baseStats: {hp: 160, atk: 65, def: 130, spa: 65, spd: 80, spe: 0},
-		abilities: {0: "Stall", H: "Pressure", S: "Colossal"},
+		abilities: {0: "Stall", H: "Pressure", S: "Colossus"},
 		heightm: 30.48,
 		weightkg: 1157321617.52,
 		color: "Gray",
