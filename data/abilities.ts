@@ -7787,18 +7787,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     onStart(pokemon) {
         this.add('-ability', pokemon, 'Battlefield');
         const terrain = this.field.terrain;
-        if (terrain === 'grassy' || terrain === 'electric') {
+        if (terrain === 'grassyterrain' || terrain === 'electricterrain') {
             this.boost({ def: 1 }, pokemon);
-        } else if (terrain === 'misty' || terrain === 'psychic') {
+        } else if (terrain === 'mistyterrain' || terrain === 'psychicterrain') {
             this.boost({ spd: 1 }, pokemon);
         }
     },
     onTerrainChange(pokemon) {
         if (!pokemon.isActive) return;
         const terrain = this.field.terrain;
-        if (terrain === 'grassy' || terrain === 'electric') {
+        if (terrain === 'grassyterrain' || terrain === 'electricterrain') {
             this.boost({ def: 1 }, pokemon);
-        } else if (terrain === 'misty' || terrain === 'psychic') {
+        } else if (terrain === 'mistyterrain' || terrain === 'psychicterrain') {
             this.boost({ spd: 1 }, pokemon);
         }
     },
