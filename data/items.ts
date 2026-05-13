@@ -8982,22 +8982,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	icecleats: {
-		name: "Ice Cleats",
-		spritenum: 715,
-		fling: {
-			basePower: 80,
-		},
-		onModifyPriority(priority, pokemon) {
-			if (!pokemon.hasType('Ice')) return priority;
-			return priority;
-		},
-		num: 1120,
-		gen: 8,
-		isNonstandard: "Future",
-		// Hazard Immunity implemented in moves.ts
-		rating: 3,
-	},
 	madnessmask: {
 		name: "Madness Mask",
 		spritenum: 760,
