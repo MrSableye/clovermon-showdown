@@ -9451,6 +9451,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	colombolt: {
 		inherit: true,
 		isNonstandard: "Past",
+		},
+	colomboltmega: {
+		inherit: true,
+		isNonstandard: "Past",
 	},
 	puppois: {
 		inherit: true,

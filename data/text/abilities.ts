@@ -2543,6 +2543,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "All Pokemon on the field lose 1/12 HP per turn if they're not Fire type.",
 		start: "  [POKEMON] is melting it's foe!",
 	},
+	Battlefield: {
+		name: "Battlefield",
+		shortDesc: "Gains +1 Defense on Electric and Grassy Terrain, Gains +1 Special Defense on Misty and Psychic Terrain",
+		start: "  [POKEMON] used the battlefield to power itself!",
+	},
 	bleatingheart: {
 		name: "Bleating Heart",
 		shortDesc: "Boosts one of the user's stats by 1.2x per ally fainted. Boosts stats from highest to lowest.",

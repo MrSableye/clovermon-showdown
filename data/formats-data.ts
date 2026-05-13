@@ -11782,6 +11782,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	colombolt: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	colomboltmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	fatherfuck: {
 		tier: "Illegal",
