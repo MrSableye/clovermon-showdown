@@ -2640,6 +2640,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Sublime Key",
 		desc: "If Arctiglobe, forces forme into Freed and Fire-type attacks have 1.5x power.",
 	},
+	icecleats: {
+		name: "Ice Cleats",
+		desc: "If the holder is Ice type, unaffected by hazards on its side of the field.",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",
