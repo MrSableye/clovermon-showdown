@@ -9021,7 +9021,6 @@ export const Items: {[itemid: string]: ItemData} = {
 				}
 			}
 		},
-	},
 		num: 1120,
 		gen: 8,
 		isNonstandard: "Future",
