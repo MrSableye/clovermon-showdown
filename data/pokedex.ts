@@ -39229,7 +39229,7 @@ hullabuoy: {
 		name: "Alclione",
 		types: ["Fairy", "Dark"],
 		genderRatio: {M: 0.125, F: 0.875},
-		baseStats: {hp: 93, atk: 120, def: 66, spa: 65, spd: 82, spe: 99},
+		baseStats: {hp: 93, atk: 120, def: 66, spa: 55, spd: 92, spe: 99},
 		abilities: {0: "Justified", 1: "Symbiosis", H: "Water Veil", S: "Hospitality"},
 		heightm: 0.9,
 		weightkg: 5.6,

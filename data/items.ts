@@ -8982,6 +8982,52 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	icecleats: {
+		name: "Ice Cleats",
+		spritenum: 715,
+		fling: {
+			basePower: 80,
+		},
+		onDamage(damage, target, source, effect) {
+			if (
+				effect &&
+				effect.id === 'stealthrock' &&
+				target.hasType('Ice')
+			) {
+				this.add('-immune', target, '[from] item: Ice Cleats');
+				return false;
+			}
+		},
+		onSwitchIn(pokemon) {
+			if (!pokemon.hasType('Ice')) return;
+			const side = pokemon.side;
+			if (side.sideConditions['spikes']) {
+				this.add('-immune', pokemon, '[from] item: Ice Cleats');
+			}		
+			onSetStatus(status, target, source, effect) {
+			if (
+				target.hasType('Ice') &&
+				(status.id === 'psn' || status.id === 'tox') &&
+				effect?.id === 'toxicspikes'
+			) {
+				this.add('-immune', target, '[from] item: Ice Cleats');
+				return false; 
+			}
+		},
+			if (side.sideConditions['stickyweb','sleazyspores']) {
+				if (pokemon.boosts.spe < 0) {
+					pokemon.setBoost({spe: 0});
+					this.add('-immune', pokemon, '[from] item: Ice Cleats');
+				}
+			}
+		},
+	},
+		num: 1120,
+		gen: 8,
+		isNonstandard: "Future",
+		// Hazard Immunity implemented in moves.ts
+		rating: 3,
+	},
 	madnessmask: {
 		name: "Madness Mask",
 		spritenum: 760,
