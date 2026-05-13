@@ -7783,16 +7783,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
     },
 	battlefield: {
-  name: "Battlefield",
-  onResidual(pokemon) {
-    if (!pokemon.isActive) return;
-    const terrain = this.field.terrain;
-    if (terrain === 'grassy' || terrain === 'electric') {
-      this.boost({ def: 1 }, pokemon);
-    } else if (terrain === 'misty' || terrain === 'psychic') {
-      this.boost({ spd: 1 }, pokemon);
-    }
-  },
+    name: "Battlefield",
+    onStart(pokemon) {
+        this.add('-ability', pokemon, 'Battlefield');
+        const terrain = this.field.terrain;
+        if (terrain === 'grassy' || terrain === 'electric') {
+            this.boost({ def: 1 }, pokemon);
+        } else if (terrain === 'misty' || terrain === 'psychic') {
+            this.boost({ spd: 1 }, pokemon);
+        }
+    },
+    onTerrainChange(pokemon) {
+        if (!pokemon.isActive) return;
+        const terrain = this.field.terrain;
+        if (terrain === 'grassy' || terrain === 'electric') {
+            this.boost({ def: 1 }, pokemon);
+        } else if (terrain === 'misty' || terrain === 'psychic') {
+            this.boost({ spd: 1 }, pokemon);
+        }
+    },
+    rating: 3,
+    isNonstandard: "Future",
 },
 	darkflame: {
 		name: "Dark Flame",
