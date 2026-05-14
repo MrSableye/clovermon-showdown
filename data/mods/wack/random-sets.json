@@ -11188,6 +11188,73 @@
       }
     ]
   },
+      "carolden": {   
+        "nicknames": [   
+          "Goldkarpfen",
+          "Marina"
+        ],
+        "sets": [
+          {
+            "abilities": [    
+              "voltabsorb"
+            ],
+            "items": [ 
+              "boisonberry",
+              "angelpowder",
+              "rainycapsule",
+              "angerorb",
+              "supermalevitality"
+            ],
+            "moves": [     
+              "streamline",
+              "ironhead",
+              "bodypress",
+              "toxic",
+              "aquaring"
+            ],
+            "lockedMoves": [   
+              "liquidation",
+              "armorcrash"
+            ],
+            "level": 84       
+          }
+        ]      
+      },
+
+
+    "seedin": {   
+        "nicknames": [   
+          "Exploseed",
+          "Pianta"
+        ],
+        "sets": [
+          {
+            "abilities": [    
+              "levitate",
+              "shedskin"
+            ],
+            "items": [ 
+              "angelpowder",
+              "rainycapsule",
+              "bigroot"
+            ],
+            "moves": [     
+              "healingwish",
+              "seedbomb",
+              "aromatherapy",
+              "grasswhistle",
+              "tempest",
+              "leafcanopy"
+            ],
+            "lockedMoves": [   
+              "leechseed",
+              "tornadocrash",
+              "airpressure"
+            ],
+            "level": 86       
+          }
+        ]      
+      },
   "thereisonlyhell": {   
     "nicknames": [   
       "All is well",
@@ -19036,9 +19103,7 @@
           "knockoff"
         ],
         "level": 84
-      }
-    ]
-  },
+      },
       {
         
         "abilities": [    
