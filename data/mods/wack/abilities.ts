@@ -1064,7 +1064,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move.selfdestruct) delete move.selfdestruct;
 		},
 		onAfterMove(source, target, move) {
-			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct', 'mutualdestruction', 'nuclearexplosion'].includes(move.id)) {
+			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct', 'poisonexplosion', 'mutualdestruction', 'nuclearexplosion', 'fieryexplosion', 'steambomb', 'voltexplosion'].includes(move.id)) {
 				this.damage(source.baseMaxhp / 5, source, source);
 			}
 		},
