@@ -17852,6 +17852,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Steam Balloon",
 		spritenum: 0,
 		num: 67281,
+		onDamagingHit(damage, target, source, move) {
+			target.useItem();
+			this.field.addPseudoWeather('steamsport');
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
