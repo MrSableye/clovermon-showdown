@@ -1512,6 +1512,12 @@ export const Conditions: {[k: string]: ConditionData} = {
 			if (this.effectState.layers >= 3) return critRatio + 1;
 		},
 	},
+	greedle: {
+		duration: 1,
+		onModifyType(move) {
+			move.type = 'Electric';
+		},
+	},
 	overkill: {
 		name: "Overkill",
 		onUpdate(pokemon) {
@@ -1558,6 +1564,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return this.chainModify(1 + this.effectState.layers * 0.05);
 		},
 	},
+
 	blobbosdragonmaid: {
 		name: 'Blobbos-Dragon Maid',
 		onAfterMoveSecondarySelf(source) {

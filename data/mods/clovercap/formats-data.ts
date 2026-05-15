@@ -2038,7 +2038,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	molterramegax: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-		},
+	},
 	molterramegay: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -3168,6 +3168,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+	},
+	colomboltmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	klasicope: {
 		inherit: true,

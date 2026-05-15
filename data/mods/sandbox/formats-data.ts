@@ -11343,6 +11343,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	colomboltmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	jerkistal: {
 		inherit: true,
 		tier: "OU",
@@ -13402,6 +13407,46 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			tier: "OU",
 		},
 		oazaki: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		operapus: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+        alkaleuf: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		whidraw: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		esenkra: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		tsurugiri: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		challiope: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		baalbek: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		apomaza: {
 			inherit: true,
 			isNonstandard: null,
 			tier: "OU",

@@ -2538,10 +2538,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Dissect",
 		shortDesc: "On switch-in, this Pokemon clears all boosts of all Pokemon.",
 	},
-	Furnace: {
+	furnace: {
 		name: "Furnace",
 		shortDesc: "All Pokemon on the field lose 1/12 HP per turn if they're not Fire type.",
 		start: "  [POKEMON] is melting it's foe!",
+	},
+	battlefield: {
+		name: "Battlefield",
+		shortDesc: "Gains +1 Defense on Electric and Grassy Terrain, Gains +1 Special Defense on Misty and Psychic Terrain",
+		start: "  [POKEMON] used the battlefield to power itself!",
 	},
 	bleatingheart: {
 		name: "Bleating Heart",
@@ -2574,12 +2579,32 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Third Degree",
 		shortDesc: "This Pokemon can burn a Pokemon regardless of its typing and statuses.",
 	},
+	censer: {
+		name: "Censer",
+		shortDesc: "When any Pokemon is status'd, Misty Terrain is set for 5 turns.",
+	},
 	bloomingdusk: {
 		name: "Blooming Dusk",
 		shortDesc: "If Cerius, changes Forme to Open before powder moves and Closed before Bulb Clinch.",
 
 		transform: "The flower bulb opened!",
 		transformEnd: "The flower bulb closed!",
+	},
+	showdown: {
+		name: "Showdown",
+		shortDesc: "Prevents opposing Fighting-type Pokemon from choosing to switch out.",
+	},
+	eagleeye: {
+		name: "Eagle Eye",
+		shortDesc: "This Pokemon's moves with more than 100% acc are boosted by 1.5x.",
+	},
+	pitchblack: {
+		name: "Pitch Black",
+		shortDesc: "Upon switch-in, this Pokemon gives opponents the Tar Shot effect.",
+	},
+	resonant: {
+		name: "Resonant",
+		shortDesc: "Psychic-type moves cure non-volatile status conditions; Psychic immunity.",
 	},
 	blueblood: {
 		name: "Blue Blood",
@@ -2696,8 +2721,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Transfusion",
 		shortDesc: "Upon being hit, changes the opponent's type to the primary type of the ability-holder. When the ability-holder switches out, change their types back.",
 	},
-	colossal: {
-		name: "Colossal",
+	colossus: {
+		name: "Colossus",
 		shortDesc: "Summons Gravity upon switch-in.",
 	},
 	delirious: {

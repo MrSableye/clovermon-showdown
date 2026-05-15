@@ -7782,6 +7782,29 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		isNonstandard: "Future",
     },
+	battlefield: {
+    name: "Battlefield",
+    onStart(pokemon) {
+        this.add('-ability', pokemon, 'Battlefield');
+        const terrain = this.field.terrain;
+        if (terrain === 'grassyterrain' || terrain === 'electricterrain') {
+            this.boost({ def: 1 }, pokemon);
+        } else if (terrain === 'mistyterrain' || terrain === 'psychicterrain') {
+            this.boost({ spd: 1 }, pokemon);
+        }
+    },
+    onTerrainChange(pokemon) {
+        if (!pokemon.isActive) return;
+        const terrain = this.field.terrain;
+        if (terrain === 'grassyterrain' || terrain === 'electricterrain') {
+            this.boost({ def: 1 }, pokemon);
+        } else if (terrain === 'mistyterrain' || terrain === 'psychicterrain') {
+            this.boost({ spd: 1 }, pokemon);
+        }
+    },
+    rating: 3,
+    isNonstandard: "Future",
+},
 	darkflame: {
 		name: "Dark Flame",
 		onResidualOrder: 26,
@@ -7874,6 +7897,88 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.damage(pokemon.baseMaxhp / 16);
 		},
 	},
+	censer: {
+		name: "Censer",
+		rating: 4,
+		num: 10007,
+		isNonstandard: "Future",
+		onSetStatus(status, target, source, effect) {
+			const holder = this.effectState.target;
+			if (!holder || holder.fainted || !holder.isActive) return;
+			if (this.field.terrain === 'mistyterrain') return;
+			this.field.setTerrain('mistyterrain', holder, {
+				duration: 5,
+			});
+			
+			this.add('-ability', holder, 'Censer');
+		},
+	},
+    resonant: {
+        onTryHit(target, source, move) {
+            if (target !== source && move.type === 'Psychic') {
+                this.add('-immune', target, '[from] ability: Resonant');
+                source.clearStatus();
+                return null;
+            }
+        },
+        isBreakable: true,
+		isNonstandard: "Future",
+        name: "Resonant",
+    },
+	pitchblack: {
+        onStart(pokemon) {
+            let activated = false;
+            for (const target of pokemon.adjacentFoes()) {
+                if (!activated) {
+                    this.add('-ability', pokemon, 'Pitch Black', 'boost');
+                    activated = true;
+                }
+                if (target.volatiles['substitute']) {
+                    this.add('-immune', target);
+                } else {
+                    pokemon.addVolatile('tarshot', this.effectState.target);
+                }
+            }
+        },
+        name: "Pitch Black",
+		isNonstandard: "Future",
+    },
+	eagleeye: {
+        onBasePowerPriority: 30,
+        onBasePower(basePower, pokemon, target, move) {
+            if (move.category === 'Status') return;
+            if (move.accuracy === true) {
+                this.debug('Eagle Eye boost');
+                return this.chainModify(1.5);
+            }
+
+            if (typeof move.accuracy !== 'number') return;
+            const boostedAccuracy = this.runEvent( 'ModifyAccuracy', target, pokemon, move, move.accuracy);
+            if (typeof boostedAccuracy === 'number' && boostedAccuracy > 100) {
+                this.debug('Eagle Eye boost');
+                    return this.chainModify(1.5);
+            }
+        },
+        name: "Eagle Eye",
+		  isNonstandard: "Future",
+        rating: 3.5,
+    },
+	showdown: {
+        onFoeTrapPokemon(pokemon) {
+            if (pokemon.hasType('Fighting') && pokemon.isAdjacent(this.effectState.target)) {
+                pokemon.tryTrap(true);
+            }
+        },
+        onFoeMaybeTrapPokemon(pokemon, source) {
+            if (!source) source = this.effectState.target;
+            if (!source || !pokemon.isAdjacent(source)) return;
+            if (!pokemon.knownType || pokemon.hasType('Fighting')) {
+                pokemon.maybeTrapped = true;
+            }
+        },
+        name: "Showdown",
+		isNonstandard: "Future",
+    },
 	thirddegree: {
 		// Implemented in sim/pokemon.js:Pokemon#setStatus
 		name: "Third Degree",
@@ -8208,10 +8313,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isPermanent: true,
 		isNonstandard: "Future",
 	},
-	colossal: {
-		name: "Colossal",
+	colossus: {
+		name: "Colossus",
 		onStart(pokemon) {
-			this.add('-activate', pokemon, 'ability: Big Guy');
+			this.add('-activate', pokemon, 'ability: Colossus');
 			this.field.addPseudoWeather('gravity');
 		},
 		rating: 4,

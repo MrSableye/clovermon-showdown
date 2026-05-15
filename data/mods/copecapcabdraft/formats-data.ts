@@ -342,7 +342,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
-		},
+	},
 	molterramegay: {
 		inherit: true,
 		isNonstandard: null,
@@ -1505,6 +1505,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    tier: "OU",
 	},
 	colombolt: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	colomboltmega: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

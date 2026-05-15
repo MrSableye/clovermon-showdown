@@ -119,6 +119,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	colossus: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	comatose: {
 		inherit: true,
 		isNonstandard: null,
@@ -2114,6 +2118,30 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	steelyresolve: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	passageoftime: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	censer: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	resonant: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	showdown: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pitchblack: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	eagleeye: {
 		inherit: true,
 		isNonstandard: null,
 	},
