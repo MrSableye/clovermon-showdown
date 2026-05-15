@@ -11243,8 +11243,7 @@
               "seedbomb",
               "aromatherapy",
               "grasswhistle",
-              "tempest",
-              "leafcanopy"
+              "tempest"
             ],
             "lockedMoves": [   
               "leechseed",
@@ -18961,7 +18960,7 @@
   },
   
 
-"Hublastoise": {   
+"hublastoise": {   
     "nicknames": [   
       "Misty"
     ],
@@ -18992,7 +18991,7 @@
       }
     ]      
   },
-  "Hucharizard": {   
+  "hucharizard": {   
     "nicknames": [   
       "Flannery"
     ],
@@ -19022,7 +19021,7 @@
       }
     ]      
   },
-  "Huvenusaur": {   
+  "huvenusaur": {   
     "nicknames": [   
       "Erika"
     ],
