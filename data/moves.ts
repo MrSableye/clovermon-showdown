@@ -88836,7 +88836,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return 5;
 			},
 			onFieldStart(field, source) {
-				this.add('-fieldstart', 'move: Arboreum', '[of] ' + source);
+				this.add('-fieldstart', 'move: Manaverse', '[of] ' + source);
 			},
 			onBasePowerPriority: 1,
 			onBasePower(basePower, attacker, defender, move) {
