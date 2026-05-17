@@ -7943,18 +7943,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         name: "Pitch Black",
 		isNonstandard: "Future",
 	},
-    eagleeye: {
+	eagleeye: {
     onBasePowerPriority: 30,
     onBasePower(basePower, pokemon, target, move) {
         if (move.category === 'Status') return;
+
         if (move.accuracy === true) {
-            this.debug('Eagle Eye boost (always-hit move)');
+            this.debug('Eagle Eye boost (always-hit)');
             return this.chainModify(1.5);
         }
 
         if (typeof move.accuracy !== 'number') return;
-        const boostedAccuracy = this.runEvent('ModifyAccuracy', pokemon, target, move, move.accuracy);
-        if (typeof boostedAccuracy === 'number' && boostedAccuracy > 100) {
+
+        let accuracy = move.accuracy;
+        const boost = pokemon.boosts.accuracy;
+        if (boost !== 0) {
+            const multiplier = boost > 0 ? (boost + 3) / 3 : 3 / (3 - boost);
+            accuracy = Math.floor(accuracy * multiplier);
+        }
+        const modifiedAccuracy = this.runEvent('ModifyAccuracy', pokemon, target, move, accuracy);
+
+        if (typeof modifiedAccuracy === 'number' && modifiedAccuracy > 100) {
             this.debug('Eagle Eye boost (accuracy > 100)');
             return this.chainModify(1.5);
         }
@@ -7962,7 +7971,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     name: "Eagle Eye",
     isNonstandard: "Future",
     rating: 3.5,
-    },
+},
 	showdown: {
         onFoeTrapPokemon(pokemon) {
             if (pokemon.hasType('Fighting') && pokemon.isAdjacent(this.effectState.target)) {
