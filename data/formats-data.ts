@@ -8505,6 +8505,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	chickenfiddle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	monikat: {
 		tier: "Illegal",
 		isNonstandard: "Future",
