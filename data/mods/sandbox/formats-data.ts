@@ -13441,6 +13441,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+		chickenfiddle: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 		baalbek: {
 			inherit: true,
 			isNonstandard: null,
