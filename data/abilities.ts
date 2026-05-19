@@ -7805,6 +7805,40 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     rating: 3,
     isNonstandard: "Future",
 },
+	holybarrier: {
+    shortDesc: "When using an attacking move, swaps Atk and Def for the turn.",
+    name: "Holy Barrier",
+    rating: 4,
+    onBeforeMovePriority: 10,
+    onBeforeMove(pokemon, target, move) {
+        if (!move.category || move.category === 'Status') return;
+
+        if (!pokemon.volatiles['holybarrier']) {
+            pokemon.addVolatile('holybarrier');
+        }
+    },
+    onModifyAtkPriority: 5,
+    onModifyAtk(atk, attacker, defender, move) {
+        if (attacker.volatiles['holybarrier']) {
+            return attacker.getStat('def', false, true);
+        }
+    },
+    onModifyDefPriority: 5,
+    onModifyDef(def, attacker, defender, move) {
+        if (attacker.volatiles['holybarrier']) {
+            return attacker.getStat('atk', false, true);
+        }
+    },
+    onAfterMove(pokemon) {
+        pokemon.removeVolatile('holybarrier');
+    },
+    onSwitchOut(pokemon) {
+        pokemon.removeVolatile('holybarrier');
+    },
+    onFaint(pokemon) {
+        pokemon.removeVolatile('holybarrier');
+    },
+},
 	darkflame: {
 		name: "Dark Flame",
 		onResidualOrder: 26,

@@ -2343,6 +2343,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	cristaniummega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	fleurrium: {
 		inherit: true,
 		isNonstandard: null,

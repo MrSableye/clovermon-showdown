@@ -7667,6 +7667,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	cristanium: {
 		inherit: true,
 		isNonstandard: "Past",
+		},
+	cristaniummega: {
+		inherit: true,
+		isNonstandard: "Past",
 	},
 	jermin: {
 		inherit: true,
@@ -9451,7 +9455,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	colombolt: {
 		inherit: true,
 		isNonstandard: "Past",
-		},
+	},
 	colomboltmega: {
 		inherit: true,
 		isNonstandard: "Past",

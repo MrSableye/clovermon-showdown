@@ -9497,6 +9497,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
+		},
+	cristaniummega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	jermin: {
 		inherit: true,

@@ -8601,6 +8601,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	cristaniummega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	fleurrium: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -11798,7 +11802,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	colombolt: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-		},
+	},
 	colomboltmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",

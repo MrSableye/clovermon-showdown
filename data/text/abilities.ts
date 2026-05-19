@@ -2548,6 +2548,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Gains +1 Defense on Electric and Grassy Terrain, Gains +1 Special Defense on Misty and Psychic Terrain",
 		start: "  [POKEMON] used the battlefield to power itself!",
 	},
+	holybarrier: {
+		name: "Holy Barrier",
+		shortDesc: "Whenever using an attacking Move,Apply for the turn a Power Trick effect that is reverted once the turn ends.",
+	},
 	bleatingheart: {
 		name: "Bleating Heart",
 		shortDesc: "Boosts one of the user's stats by 1.2x per ally fainted. Boosts stats from highest to lowest.",
