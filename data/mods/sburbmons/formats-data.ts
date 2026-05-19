@@ -7535,6 +7535,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	copolar: {
 		inherit: true,
 		isNonstandard: "Past",
+		},
+	copolarmega: {
+		inherit: true,
+		isNonstandard: "Past",
 	},
 	copolarmale: {
 		inherit: true,

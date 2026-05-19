@@ -2552,6 +2552,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Holy Barrier",
 		shortDesc: "Whenever using an attacking Move,Apply for the turn a Power Trick effect that is reverted once the turn ends.",
 	},
+	sublimation: {
+		name: "Sublimation",
+		shortDesc: "This Pokemon's Speed is multiplied by 1.5, but it can only select the first move it executes. These effects are prevented while this Pokemon is Dynamaxed.",
+		},
+	cruelty: {
+		name: "Cruelty",
+		shortDesc: "This Pokemon's Special Attack is multiplied by 1.5 and the accuracy of its physical attacks is multiplied by 0.8.",
+	},
 	bleatingheart: {
 		name: "Bleating Heart",
 		shortDesc: "Boosts one of the user's stats by 1.2x per ally fainted. Boosts stats from highest to lowest.",
