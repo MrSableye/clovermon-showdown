@@ -13446,6 +13446,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+		velvernean: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		apatambora: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		sharpsire: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 		baalbek: {
 			inherit: true,
 			isNonstandard: null,
