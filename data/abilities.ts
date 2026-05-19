@@ -7804,39 +7804,57 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     },
     rating: 3,
     isNonstandard: "Future",
-},
+    },
 	holybarrier: {
-    shortDesc: "When using an attacking move, swaps Atk and Def for the turn.",
     name: "Holy Barrier",
     rating: 4,
     onBeforeMovePriority: 10,
     onBeforeMove(pokemon, target, move) {
         if (!move.category || move.category === 'Status') return;
 
-        if (!pokemon.volatiles['holybarrier']) {
-            pokemon.addVolatile('holybarrier');
+        const battle: any = this;
+        if (!battle.holyBarrierActivated) {
+            battle.holyBarrierActivated = new Map();
         }
+        battle.holyBarrierActivated.set((pokemon as any).id, battle.turn);
     },
     onModifyAtkPriority: 5,
-    onModifyAtk(atk, attacker, defender, move) {
-        if (attacker.volatiles['holybarrier']) {
+    onModifyAtk(atk, attacker) {
+        const battle: any = this;
+        const map = battle.holyBarrierActivated;
+        if (map && map.get((attacker as any).id) === battle.turn) {
             return attacker.getStat('def', false, true);
         }
     },
     onModifyDefPriority: 5,
-    onModifyDef(def, attacker, defender, move) {
-        if (attacker.volatiles['holybarrier']) {
+    onModifyDef(def, attacker) {
+        const battle: any = this;
+        const map = battle.holyBarrierActivated;
+        if (map && map.get((attacker as any).id) === battle.turn) {
             return attacker.getStat('atk', false, true);
         }
     },
-    onAfterMove(pokemon) {
-        pokemon.removeVolatile('holybarrier');
+    onModifySpAPriority: 5,
+    onModifySpA(spa, attacker) {
+        const battle: any = this;
+        const map = battle.holyBarrierActivated;
+        if (map && map.get((attacker as any).id) === battle.turn) {
+            return attacker.getStat('spd', false, true);
+        }
     },
-    onSwitchOut(pokemon) {
-        pokemon.removeVolatile('holybarrier');
+    onModifySpDPriority: 5,
+    onModifySpD(spd, attacker) {
+        const battle: any = this;
+        const map = battle.holyBarrierActivated;
+        if (map && map.get((attacker as any).id) === battle.turn) {
+            return attacker.getStat('spa', false, true);
+        }
     },
-    onFaint(pokemon) {
-        pokemon.removeVolatile('holybarrier');
+    onBeforeTurn() {
+        const battle: any = this;
+        if (battle.holyBarrierActivated) {
+            battle.holyBarrierActivated.clear();
+        }
     },
 },
 	darkflame: {
