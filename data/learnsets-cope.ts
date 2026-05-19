@@ -2362,6 +2362,7 @@ snatch: ["8L1"],
 strength: ["8L1"],
 morningsun: ["8L1"],
 flamethrower: ["8L1"],
+slipturn: ["8L1"],
             },
 },
 velvernean: {

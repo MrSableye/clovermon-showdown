@@ -8289,6 +8289,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	copolarmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	copolarmale: {
 		tier: "Illegal",
 		isNonstandard: "Future",

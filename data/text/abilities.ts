@@ -2538,12 +2538,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Dissect",
 		shortDesc: "On switch-in, this Pokemon clears all boosts of all Pokemon.",
 	},
-	Furnace: {
+	furnace: {
 		name: "Furnace",
 		shortDesc: "All Pokemon on the field lose 1/12 HP per turn if they're not Fire type.",
 		start: "  [POKEMON] is melting it's foe!",
 	},
-	Battlefield: {
+	battlefield: {
 		name: "Battlefield",
 		shortDesc: "Gains +1 Defense on Electric and Grassy Terrain, Gains +1 Special Defense on Misty and Psychic Terrain",
 		start: "  [POKEMON] used the battlefield to power itself!",
@@ -2551,6 +2551,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	holybarrier: {
 		name: "Holy Barrier",
 		shortDesc: "Whenever using an attacking Move,Apply for the turn a Power Trick effect that is reverted once the turn ends.",
+	},
+	sublimation: {
+		name: "Sublimation",
+		shortDesc: "This Pokemon's Speed is multiplied by 1.5, but it can only select the first move it executes. These effects are prevented while this Pokemon is Dynamaxed.",
+		},
+	cruelty: {
+		name: "Cruelty",
+		shortDesc: "This Pokemon's Special Attack is multiplied by 1.5 and the accuracy of its physical attacks is multiplied by 0.8.",
 	},
 	bleatingheart: {
 		name: "Bleating Heart",

@@ -2029,6 +2029,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	copolarmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	copolarmale: {
 		inherit: true,
 		isNonstandard: null,
