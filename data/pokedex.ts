@@ -39367,7 +39367,7 @@ chickenfiddle: {
 	velvernean: {
 		num: -8676,
 		name: "Velvernean",
-		types: ["Fire"],
+		types: ["Fire", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 120, atk: 90, def: 110, spa: 90, spd: 110, spe: 50},
 		abilities: {0: "Sturdy", 1: "Flash Fire", H: "Well-Baked Body", S: "Marvel Scale"},
