@@ -8501,6 +8501,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	velvernean: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	apatambora: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sharpsire: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	challiope: {
 		tier: "Illegal",
 		isNonstandard: "Future",

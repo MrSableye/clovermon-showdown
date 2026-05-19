@@ -8259,6 +8259,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 		num: 215,
 	},
+	cruelty: {
+		// This should be applied directly to the stat as opposed to chaining with the others
+		onModifyAtkPriority: 5,
+		onModifySpA(spa) {
+			return this.modify(spa, 1.5);
+		},
+		onSourceModifyAccuracyPriority: -1,
+		onSourceModifyAccuracy(accuracy, target, source, move) {
+			if (move.category === 'Special' && typeof accuracy === 'number') {
+				return this.chainModify([3277, 4096]);
+			}
+		},
+		name: "Cruelty",
+		rating: 3.5,
+		num: 55,
+	},
 	pressurefuzed: {
 		name: "Pressure Fuzed",
 		onModifyMove(move, pokemon, target) {
