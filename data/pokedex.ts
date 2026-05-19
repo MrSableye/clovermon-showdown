@@ -35807,7 +35807,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Cristanium-Mega",
 		baseSpecies: "Cristanium",
 		forme: "Mega",
-		types: ["Ghost", "Flying"],
+		types: ["Steel", "Grass"],
 		baseStats: {hp: 50, atk: 101, def: 144, spa: 110, spd: 140, spe: 60},
 		abilities: {0: "Holy Barrier"},
 		heightm: 0.9,
