@@ -973,7 +973,7 @@ export const Formats: FormatList = [
 			'Vr Headset', 'Kaleido Scope', 'tiptoe', 'Searing Quills', 'Stigmata Strike', 'Stigmatic Gleam', 'WildBeastsLogic', 'Squirm', 'Rift Strike', 
 			'Magic Cape', 'After Image','Perfect Freeze', 'Electrify + Lightning Rod', 'Electrify + Motor Drive', 'Electrify + Volt Absorb', 'Lunatic Time', 
 			'Green Card', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
-			'Shrink Wrap', 'MeditativeSensitivity', 'Boots of Blinding Speed', 'Sheriff Badge', 'Cosmic Law', 'Undying Spear', 'Eviocicle', 'Eviolate', 'Rule Breaker', 'Cold Snap', 'Abyss Nova', 'Acid Trap',
+			'Shrink Wrap', 'MeditativeSensitivity','Boison Berry', 'Boots of Blinding Speed', 'Sheriff Badge', 'Cosmic Law', 'Undying Spear', 'Eviocicle', 'Eviolate', 'Rule Breaker', 'Cold Snap', 'Abyss Nova', 'Acid Trap',
 		],
 	},
 	
