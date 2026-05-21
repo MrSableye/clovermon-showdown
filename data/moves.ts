@@ -33057,6 +33057,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	summondonkeys: {
+		num: 668286,
+		accuracy: 90,
+		basePower: 25,
+		category: "Special",
+		name: "Summon Donkeys",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		multihit: [2, 5],
+		overrideDefensiveStat: 'def',
+		target: "normal",
+		type: "Ogre",
+		isNonstandard: "Future",
+	},
 	combatorders: {
 		isNonstandard: "Future",
 		accuracy: true,
@@ -39874,7 +39890,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Mend",
 		pp: 10,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1, bite: 1, heal: 1},
 		heal: [1, 2],
 		secondary: null,
 		target: "self",
@@ -52078,7 +52094,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spa: 1,
+					spd: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -66721,7 +66745,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 70,
 			self: {
 				boosts: {
-					spe: 1,
+					atk: 1,
 				},
 			},
 		},
@@ -76134,6 +76158,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		onAfterHit(target, source) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 3,
+				move: 'trojanhorse',
+				source: source,
+				moveData: {
+					id: 'trojanhorse',
+					name: "Trojan Horse",
+					accuracy: 100,
+					basePower: 100,
+					category: "Special",
+					priority: 0,
+					flags: {allyanim: 1, futuremove: 1},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					type: 'Virus',
+				},
+			});
+			this.add('-start', source, 'move: Trojan Horse');
+			return this.NOT_FAIL;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Virus",
@@ -79778,7 +79824,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			self: {
+			onHit(source) {
+				for (const ally of source.side.pokemon) {
+					const success = !!this.heal(this.modify(source.maxhp, 0.33));
+					ally.cureStatus();
+				}
+			},
+		},
+		},
 		target: "allAdjacentFoes",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -80122,7 +80178,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					accuracy: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -82249,6 +82312,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		boosts: {
+			spa: -3,
+		},
+		volatileStatus: 'confusion',
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -88785,7 +88852,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return 5;
 			},
 			onFieldStart(field, source) {
-				this.add('-fieldstart', 'move: Arboreum', '[of] ' + source);
+				this.add('-fieldstart', 'move: Manaverse', '[of] ' + source);
 			},
 			onBasePowerPriority: 1,
 			onBasePower(basePower, attacker, defender, move) {
@@ -89932,7 +89999,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			onStart(pokemon) {
-				this.add('-singlemove', pokemon, 'Mac an Luin');
+				this.add('-start', pokemon, 'Mac an Luin');
 			},
 			onTryAddVolatile(status, pokemon) {
 				if (status.id === 'taunt') {
@@ -92586,7 +92653,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
 		secondary: null,
-		volatileStatus: 'gastroacid',
+		volatileStatus: 'curse',
 		boosts: {
 			atk: -2,
 			def: -2,
@@ -92993,6 +93060,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target.hasType('Divine')) {
+				this.debug('BP doubled on Divine pokemon');
+				this.add('-message', 'Moksha is delivered!');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Divine",
@@ -93873,6 +93948,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['attract']) {
+				return this.chainModify(1.5);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Heart",
@@ -95020,6 +95100,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		secondary: null,
+		boosts: {
+			def: 2,
+			spd: 2,
+			evasion: 1,
+		},
 		target: "self",
 		type: "Qmarks",
 		isNonstandard: "Future",
@@ -95685,7 +95770,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
-		secondary: null,
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles['attract']) {
+				return this.chainModify(1.5);
+			}
+		},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -96865,7 +96958,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
+		multihit: 6,
 		target: "normal",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -97274,6 +97375,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		onHit(target, source, move) {
+			for (const ally of target.adjacentAllies()) {
+				this.damage(ally.baseMaxhp / 16, ally, source, this.dex.conditions.get('Flame Burst'));
+			}
+		},
+		onAfterSubDamage(damage, target, source, move) {
+			for (const ally of target.adjacentAllies()) {
+				this.damage(ally.baseMaxhp / 16, ally, source, this.dex.conditions.get('Flame Burst'));
+			}
+		},
 		target: "allAdjacentFoes",
 		type: "Tech",
 		isNonstandard: "Future",
