@@ -20443,9 +20443,9 @@ export const Items: {[itemid: string]: ItemData} = {
 	hasturite: {
 		name: "Hasturite",
 		spritenum: 577,
-		megaStone: "Copolar-Mega",
-		megaEvolves: "Copolar",
-		itemUser: ["Copolar"],
+		megaStone: "Kingellow-Mega",
+		megaEvolves: "Kingellow",
+		itemUser: ["Kingellow"],
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
