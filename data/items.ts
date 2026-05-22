@@ -11895,7 +11895,13 @@ export const Items: {[itemid: string]: ItemData} = {
 	arbroodite: {
 		name: "Arbroodite",
 		spritenum: 577,
-		
+		megaStone: "Arbrood-Mega",
+		megaEvolves: "Arbrood",
+		itemUser: ["Arbrood"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
