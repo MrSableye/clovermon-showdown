@@ -3555,6 +3555,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	hasturite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	jungrillite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	dusknoirite: {
 		inherit: true,
 		isNonstandard: null,
