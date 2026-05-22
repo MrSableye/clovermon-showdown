@@ -11914,13 +11914,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	gachambite: {
 		name: "Gachambite",
 		spritenum: 577,
-		megaStone: "Gachamber-Mega",
-		megaEvolves: "Gachamber",
-		itemUser: ["Gachamber"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
@@ -11928,13 +11922,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	gummite: {
 		name: "Gummite",
 		spritenum: 577,
-		megaStone: "Gummi-Mega",
-		megaEvolves: "Gummi",
-		itemUser: ["Gummi"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
@@ -13032,13 +13020,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	frankenspookite: {
 		name: "Frankenspookite",
 		spritenum: 577,
-		megaStone: "Frankenspook-Mega",
-		megaEvolves: "Frankenspook",
-		itemUser: ["Frankenspook"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
@@ -13102,13 +13084,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	lynchite: {
 		name: "Lynchite",
 		spritenum: 577,
-		megaStone: "Lynchost-Mega",
-		megaEvolves: "Lynchost",
-		itemUser: ["Lynchost"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
