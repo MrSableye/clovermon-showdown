@@ -11484,13 +11484,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	vanilluxite: {
 		name: "Vanilluxite",
 		spritenum: 577,
-		megaStone: "Vanilluxe-Mega",
-		megaEvolves: "Vanilluxe",
-		itemUser: ["Vanilluxe"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
@@ -11895,13 +11889,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	arbroodite: {
 		name: "Arbroodite",
 		spritenum: 577,
-		megaStone: "Arbrood-Mega",
-		megaEvolves: "Arbrood",
-		itemUser: ["Arbrood"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
@@ -11910,13 +11898,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	steamboatite: {
 		name: "Steamboatite",
 		spritenum: 577,
-		megaStone: "Steamboatle-Mega",
-		megaEvolves: "Steamboatle",
-		itemUser: ["Steamboatle"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
@@ -11924,13 +11906,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	lavagunite: {
 		name: "Lavagunite",
 		spritenum: 577,
-		megaStone: "Lavagun-Mega",
-		megaEvolves: "Lavagun",
-		itemUser: ["Lavagun"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
@@ -12051,13 +12027,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	gourgeistite: {
 		name: "Gourgeistite",
 		spritenum: 577,
-		megaStone: "Gourgeist-Mega",
-		megaEvolves: "Gourgeist",
-		itemUser: ["Gourgeist"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
