@@ -7804,7 +7804,101 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     },
     rating: 3,
     isNonstandard: "Future",
+    },
+	holybarrier: {
+    name: "Holy Barrier",
+    rating: 4,
+    onBeforeMovePriority: 10,
+    onBeforeMove(pokemon, target, move) {
+        if (!move.category || move.category === 'Status') return;
+
+        const battle: any = this;
+        if (!battle.holyBarrierActivated) {
+            battle.holyBarrierActivated = new Map();
+        }
+        battle.holyBarrierActivated.set((pokemon as any).id, battle.turn);
+    },
+    onModifyAtkPriority: 5,
+    onModifyAtk(atk, attacker) {
+        const battle: any = this;
+        const map = battle.holyBarrierActivated;
+        if (map && map.get((attacker as any).id) === battle.turn) {
+            return attacker.getStat('def', false, true);
+        }
+    },
+    onModifyDefPriority: 5,
+    onModifyDef(def, attacker) {
+        const battle: any = this;
+        const map = battle.holyBarrierActivated;
+        if (map && map.get((attacker as any).id) === battle.turn) {
+            return attacker.getStat('atk', false, true);
+        }
+    },
+    onModifySpAPriority: 5,
+    onModifySpA(spa, attacker) {
+        const battle: any = this;
+        const map = battle.holyBarrierActivated;
+        if (map && map.get((attacker as any).id) === battle.turn) {
+            return attacker.getStat('spd', false, true);
+        }
+    },
+    onModifySpDPriority: 5,
+    onModifySpD(spd, attacker) {
+        const battle: any = this;
+        const map = battle.holyBarrierActivated;
+        if (map && map.get((attacker as any).id) === battle.turn) {
+            return attacker.getStat('spa', false, true);
+        }
+    },
+    onBeforeTurn() {
+        const battle: any = this;
+        if (battle.holyBarrierActivated) {
+            battle.holyBarrierActivated.clear();
+        }
+    },
 },
+	sublimation: {
+		onStart(pokemon) {
+			pokemon.abilityState.choiceLock = "";
+		},
+		onBeforeMove(pokemon, target, move) {
+			if (move.isZOrMaxPowered || move.id === 'struggle') return;
+			if (pokemon.abilityState.choiceLock && pokemon.abilityState.choiceLock !== move.id) {
+				// Fails unless ability is being ignored (these events will not run), no PP lost.
+				this.addMove('move', pokemon, move.name);
+				this.attrLastMove('[still]');
+				this.debug("Disabled by Sublimation");
+				this.add('-fail', pokemon);
+				return false;
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.abilityState.choiceLock || move.isZOrMaxPowered || move.id === 'struggle') return;
+			pokemon.abilityState.choiceLock = move.id;
+		},
+		onModifyAtkPriority: 1,
+		onModifySpe(Spe, pokemon) {
+			if (pokemon.volatiles['dynamax']) return;
+			// PLACEHOLDER
+			this.debug('Sublimation Speed Boost');
+			return this.chainModify(1.5);
+		},
+		onDisableMove(pokemon) {
+			if (!pokemon.abilityState.choiceLock) return;
+			if (pokemon.volatiles['dynamax']) return;
+			for (const moveSlot of pokemon.moveSlots) {
+				if (moveSlot.id !== pokemon.abilityState.choiceLock) {
+					pokemon.disableMove(moveSlot.id, false, this.effectState.sourceEffect);
+				}
+			}
+		},
+		onEnd(pokemon) {
+			pokemon.abilityState.choiceLock = "";
+		},
+		name: "Sublimation",
+		rating: 4.5,
+		num: 255,
+	},
 	darkflame: {
 		name: "Dark Flame",
 		onResidualOrder: 26,
@@ -7942,27 +8036,36 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         },
         name: "Pitch Black",
 		isNonstandard: "Future",
-    },
+	},
 	eagleeye: {
-        onBasePowerPriority: 30,
-        onBasePower(basePower, pokemon, target, move) {
-            if (move.category === 'Status') return;
-            if (move.accuracy === true) {
-                this.debug('Eagle Eye boost');
-                return this.chainModify(1.5);
-            }
+    onBasePowerPriority: 30,
+    onBasePower(basePower, pokemon, target, move) {
+        if (move.category === 'Status') return;
 
-            if (typeof move.accuracy !== 'number') return;
-            const boostedAccuracy = this.runEvent( 'ModifyAccuracy', target, pokemon, move, move.accuracy);
-            if (typeof boostedAccuracy === 'number' && boostedAccuracy > 100) {
-                this.debug('Eagle Eye boost');
-                    return this.chainModify(1.5);
-            }
-        },
-        name: "Eagle Eye",
-		  isNonstandard: "Future",
-        rating: 3.5,
+        if (move.accuracy === true) {
+            this.debug('Eagle Eye boost (always-hit)');
+            return this.chainModify(1.5);
+        }
+
+        if (typeof move.accuracy !== 'number') return;
+
+        let accuracy = move.accuracy;
+        const boost = pokemon.boosts.accuracy;
+        if (boost !== 0) {
+            const multiplier = boost > 0 ? (boost + 3) / 3 : 3 / (3 - boost);
+            accuracy = Math.floor(accuracy * multiplier);
+        }
+        const modifiedAccuracy = this.runEvent('ModifyAccuracy', pokemon, target, move, accuracy);
+
+        if (typeof modifiedAccuracy === 'number' && modifiedAccuracy > 100) {
+            this.debug('Eagle Eye boost (accuracy > 100)');
+            return this.chainModify(1.5);
+        }
     },
+    name: "Eagle Eye",
+    isNonstandard: "Future",
+    rating: 3.5,
+},
 	showdown: {
         onFoeTrapPokemon(pokemon) {
             if (pokemon.hasType('Fighting') && pokemon.isAdjacent(this.effectState.target)) {
@@ -8249,6 +8352,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		isNonstandard: "Future",
 		num: 215,
+	},
+	cruelty: {
+		// This should be applied directly to the stat as opposed to chaining with the others
+		onModifyAtkPriority: 5,
+		onModifySpA(spa) {
+			return this.modify(spa, 1.5);
+		},
+		onSourceModifyAccuracyPriority: -1,
+		onSourceModifyAccuracy(accuracy, target, source, move) {
+			if (move.category === 'Special' && typeof accuracy === 'number') {
+				return this.chainModify([3277, 4096]);
+			}
+		},
+		name: "Cruelty",
+		rating: 3.5,
+		num: 55,
 	},
 	pressurefuzed: {
 		name: "Pressure Fuzed",

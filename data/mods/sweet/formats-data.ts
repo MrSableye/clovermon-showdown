@@ -7555,6 +7555,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	copolar: {
 		inherit: true,
 		isNonstandard: "Past",
+		},
+	copolarmega: {
+		inherit: true,
+		isNonstandard: "Past",
 	},
 	copolarmale: {
 		inherit: true,
@@ -7685,6 +7689,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	cristanium: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	cristaniummega: {
 		inherit: true,
 		isNonstandard: "Past",
 	},

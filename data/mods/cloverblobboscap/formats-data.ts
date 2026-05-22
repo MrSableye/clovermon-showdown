@@ -1912,6 +1912,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	copolarmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	copolarmale: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -2039,6 +2043,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	cristanium: {
 		inherit: true,
 		isNonstandard: "Past",
+	},
+	cristaniummega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	jermin: {
 		inherit: true,
@@ -3024,7 +3032,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	colombolt: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-		},
+	},
 	colomboltmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",

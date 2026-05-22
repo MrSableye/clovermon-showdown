@@ -9327,6 +9327,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
+		},
+	copolarmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	copolarmale: {
 		inherit: true,
@@ -9497,6 +9502,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
+		},
+	cristaniummega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	jermin: {
 		inherit: true,
@@ -13437,6 +13447,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			tier: "OU",
 		},
 		challiope: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		chickenfiddle: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		velvernean: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		apatambora: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		sharpsire: {
 			inherit: true,
 			isNonstandard: null,
 			tier: "OU",

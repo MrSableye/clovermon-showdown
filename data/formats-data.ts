@@ -8289,6 +8289,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	copolarmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	copolarmale: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -8501,7 +8505,23 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	velvernean: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	apatambora: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sharpsire: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	challiope: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	chickenfiddle: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8582,6 +8602,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	cristanium: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cristaniummega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -11782,7 +11806,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	colombolt: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-		},
+	},
 	colomboltmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
