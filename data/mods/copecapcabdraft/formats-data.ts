@@ -657,6 +657,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+		},
+	cristaniummega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	fleurrium: {
 		inherit: true,
