@@ -85137,7 +85137,7 @@ bewilderbeast: {
         forme: "Mega",
         types: ["Grass", "Fighting"],
         baseStats: {hp: 80, atk: 60, def: 100, spa: 70, spd: 100, spe: 110},
-        abilities: {0: "HugePower"},
+        abilities: {0: "Huge Power"},
         heightm: 1.8,
         weightkg: 1000.0,
         color: "Black",
