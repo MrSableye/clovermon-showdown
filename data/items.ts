@@ -11854,6 +11854,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
 		},
+		gen: 8,
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
