@@ -13523,6 +13523,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	neonazimega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	encyclodia: {
 		tier: "Illegal",
 		isNonstandard: "Future",
