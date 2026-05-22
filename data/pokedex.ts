@@ -57462,7 +57462,20 @@ bewilderbeast: {
 		prevo: "Pagie",
 		eggGroups: ["Field", "Flying"],
 	},
-	
+	swanapermega: {
+        num: 666010,
+        name: "Swanaper-Mega",
+        baseSpecies: "Swanaper",
+        forme: "Mega",
+       	types: ["Paper", "Flying"],
+        baseStats: {hp: 75, atk: 140, def: 99, spa: 81, spd: 102, spe: 120},
+        abilities: {0: "Vast Knowledge"},
+		heightm: 22,
+        weightkg: 50.5,
+        color: "White",
+       	eggGroups: ["Field", "Flying"],
+        requiredItem: "Pagieite2",
+    },
 	smoball: {
 		num: 666011,
 		name: "Smoball",
