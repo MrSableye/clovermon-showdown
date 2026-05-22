@@ -4353,6 +4353,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Pagieite",
 		desc: "Mega evolve Swanaper, Encyclodia, Pagolem.",
 	},
+	pagieite2: {
+		name: "Pagieite",
+		desc: "Mega evolve Swanaper.",
+	},
 	booklyite: {
 		name: "Booklyite",
 		desc: "Mega Bookly.",

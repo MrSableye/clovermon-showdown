@@ -20468,4 +20468,19 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	pagieite2: {
+		name: "Pagieite2",
+		spritenum: 0,
+		megaStone: "Swanaper-Mega",
+		megaEvolves: "Swanaper",
+		itemUser: ["Swanaper"],
+		
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 67087,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 };
