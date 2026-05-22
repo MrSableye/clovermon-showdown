@@ -4085,6 +4085,14 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Nukreepite",
 		desc: "Mega Nukreep.",
 	},
+	jungrillite: {
+		name: "Jungrillite",
+		desc: "Mega Jungrilla.",
+	},
+	hasturite: {
+		name: "Hasturite",
+		desc: "Mega Kingellow.",
+	},
 	tutterflite: {
 		name: "Tutterflite",
 		desc: "Mega Tutterfly.",
