@@ -11906,6 +11906,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	
 	steamboatite: {
 		name: "Steamboatite",
 		spritenum: 0,
@@ -20479,7 +20480,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
 		},
-		num: 67087,
+		num: 67666,
 		isNonstandard: "Future",
 		rating: 1,
 	},
