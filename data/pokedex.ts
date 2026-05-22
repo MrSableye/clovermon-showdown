@@ -60755,7 +60755,7 @@ bewilderbeast: {
         weightkg: 490.0,
         color: "Brown",
         eggGroups: ["Field"],
-        requiredItem: "DONGORILLITE",
+        requiredItem: "Dongorillite",
     },
 	altarule: {
 		num: 666272,

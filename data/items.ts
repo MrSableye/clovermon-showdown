@@ -13897,7 +13897,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		rating: 1,
 	},
 	dongorillite: {
-		name: "DONGORILLITE",
+		name: "Dongorillite",
 		spritenum: 0,
 		num: 66980,
 		megaStone: "Dongorilla-Mega",

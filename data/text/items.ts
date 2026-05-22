@@ -3978,7 +3978,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 		desc: "Boosts SpDef in Icy Terrain.",
 	},
 	dongorillite: {
-		name: "DONGORILLITE",
+		name: "Dongorillite",
 		desc: "Mega DONGORILLA.",
 	},
 	helioliskite: {
