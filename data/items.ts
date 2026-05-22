@@ -13846,13 +13846,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	dongorillite: {
 		name: "Dongorillite",
 		spritenum: 577,
-		megaStone: "Dongorilla-Mega",
-		megaEvolves: "Dongorilla",
-		itemUser: ["Dongorilla"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
@@ -14061,13 +14055,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	nukreepite: {
 		name: "Nukreepite",
 		spritenum: 577,
-		megaStone: "Nukreep-Mega",
-		megaEvolves: "Nukreep",
-		itemUser: ["Nukreep"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
@@ -14616,13 +14604,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	snatanite: {
 		name: "Snatanite",
 		spritenum: 577,
-		megaStone: "Snatan-Mega",
-		megaEvolves: "Snatan",
-		itemUser: ["Snatan"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
@@ -14630,13 +14612,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	pagieite: {
 		name: "Pagieite",
 		spritenum: 577,
-		megaStone: "Encyclodia-Mega",
-		megaEvolves: "Encyclodia",
-		itemUser: ["Encyclodia"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
@@ -19087,13 +19063,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	trojorsite: {
 		name: "Trojorsite",
 		spritenum: 577,
-		megaStone: "Trojorse-Mega",
-		megaEvolves: "Trojorse",
-		itemUser: ["Trojorse"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
@@ -19182,13 +19152,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	prismolisite: {
 		name: "Prismolisite",
 		spritenum: 577,
-		megaStone: "Prismolis-Mega",
-		megaEvolves: "Prismolis",
-		itemUser: ["Prismolis"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
@@ -20389,13 +20353,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	hasturite: {
 		name: "Hasturite",
 		spritenum: 577,
-		megaStone: "Kingellow-Mega",
-		megaEvolves: "Kingellow",
-		itemUser: ["Kingellow"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
+		
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
