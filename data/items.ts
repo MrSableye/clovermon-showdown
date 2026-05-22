@@ -20349,7 +20349,13 @@ export const Items: {[itemid: string]: ItemData} = {
 	jungrillite: {
 		name: "Jungrillite",
 		spritenum: 577,
-		
+		megaStone: "Jungrilla-Mega",
+		megaEvolves: "Jungrilla",
+		itemUser: ["Jungrilla"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
