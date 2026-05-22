@@ -20427,7 +20427,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	jungrillite: {
 		name: "Jungrillite",
 		spritenum: 0,
-		num: 67485,
+		num: 67486,
 		megaStone: "Jungrilla-Mega",
 		megaEvolves: "Jungrilla",
 		itemUser: ["Jungrilla"],
