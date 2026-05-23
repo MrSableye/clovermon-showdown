@@ -57474,7 +57474,7 @@ bewilderbeast: {
         weightkg: 50.5,
         color: "White",
        	eggGroups: ["Field", "Flying"],
-        requiredItem: "Pagieite",
+        requiredItem: "Pagieite2",
     },
 	smoball: {
 		num: 666011,
@@ -60348,6 +60348,7 @@ bewilderbeast: {
 		eggGroups: ["Amorphous", "Mineral"],
 		otherFormes: ["Neonazi-Mega"],
 		formeOrder: ["Neonazi", "Neonazi-Mega"],
+		
 	},
 	neonazimega: {
         num: 666242,
@@ -60749,7 +60750,7 @@ bewilderbeast: {
         baseSpecies: "Dongorilla",
         forme: "Mega",
         types: ["Grass", "Sound"],
-        baseStats: {hp: 72, atk: 135, def: 100, spa: 135, spd: 97, spe: 101},
+        baseStats: {hp: 85, atk: 135, def: 100, spa: 135, spd: 97, spe: 101},
         abilities: {0: "Drum Roll"},
         heightm: 0.8,
         weightkg: 490.0,
@@ -85137,7 +85138,7 @@ bewilderbeast: {
         forme: "Mega",
         types: ["Grass", "Fighting"],
         baseStats: {hp: 80, atk: 60, def: 100, spa: 70, spd: 100, spe: 110},
-        abilities: {0: "HugePower"},
+        abilities: {0: "Huge Power"},
         heightm: 1.8,
         weightkg: 1000.0,
         color: "Black",

@@ -11483,8 +11483,15 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	vanilluxite: {
 		name: "Vanilluxite",
-		spritenum: 0,
-		num: 66670,
+		spritenum: 577,
+		megaStone: "Vanilluxe-Mega",
+		megaEvolves: "Vanilluxe",
+		itemUser: ["Vanilluxe"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -11846,7 +11853,15 @@ export const Items: {[itemid: string]: ItemData} = {
 	neonazite: {
 		name: "Neonazite",
 		spritenum: 0,
-		num: 66716,
+		megaStone: "Neonazi-Mega",
+		megaEvolves: "Neonazi",
+		itemUser: ["Neonazi"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		gen: 8,
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -11866,43 +11881,86 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	socialite: {
 		name: "Socialite",
-		spritenum: 0,
-		num: 66719,
+		spritenum: 577,
+		megaStone: "Feborius-Mega",
+		megaEvolves: "Feborius",
+		itemUser: ["Feborius"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
 	arbroodite: {
 		name: "Arbroodite",
-		spritenum: 0,
-		num: 66720,
+		spritenum: 577,
+		megaStone: "Arbrood-Mega",
+		megaEvolves: "Arbrood",
+		itemUser: ["Arbrood"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	
 	steamboatite: {
 		name: "Steamboatite",
-		spritenum: 0,
-		num: 66721,
+		spritenum: 577,
+		megaStone: "Steamboatle-Mega",
+		megaEvolves: "Steamboatle",
+		itemUser: ["Steamboatle"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
 	lavagunite: {
 		name: "Lavagunite",
-		spritenum: 0,
-		num: 66722,
+		spritenum: 577,
+		megaStone: "Lavagun-Mega",
+		megaEvolves: "Lavagun",
+		itemUser: ["Lavagun"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
 	gachambite: {
 		name: "Gachambite",
-		spritenum: 0,
-		num: 66723,
+		spritenum: 577,
+		megaStone: "Gachamber-Mega",
+		megaEvolves: "Gachamber",
+		itemUser: ["Gachamber"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
 	gummite: {
 		name: "Gummite",
-		spritenum: 0,
-		num: 66724,
+		spritenum: 577,
+		megaStone: "Gummi-Mega",
+		megaEvolves: "Gummi",
+		itemUser: ["Gummi"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -11993,8 +12051,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	gourgeistite: {
 		name: "Gourgeistite",
-		spritenum: 0,
-		num: 66768,
+		spritenum: 577,
+		megaStone: "Gourgeist-Mega",
+		megaEvolves: "Gourgeist",
+		itemUser: ["Gourgeist"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -12997,8 +13063,15 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	frankenspookite: {
 		name: "Frankenspookite",
-		spritenum: 0,
-		num: 66873,
+		spritenum: 577,
+		megaStone: "Frankenspook-Mega",
+		megaEvolves: "Frankenspook",
+		itemUser: ["Frankenspook"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -13060,8 +13133,15 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	lynchite: {
 		name: "Lynchite",
-		spritenum: 0,
-		num: 66892,
+		spritenum: 577,
+		megaStone: "Lynchost-Mega",
+		megaEvolves: "Lynchost",
+		itemUser: ["Lynchost"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -13820,9 +13900,16 @@ export const Items: {[itemid: string]: ItemData} = {
 		rating: 1,
 	},
 	dongorillite: {
-		name: "DONGORILLITE",
-		spritenum: 0,
-		num: 66980,
+		name: "Dongorillite",
+		spritenum: 577,
+		megaStone: "Dongorilla-Mega",
+		megaEvolves: "Dongorilla",
+		itemUser: ["Dongorilla"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14029,8 +14116,15 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	nukreepite: {
 		name: "Nukreepite",
-		spritenum: 0,
-		num: 67008,
+		spritenum: 577,
+		megaStone: "Nukreep-Mega",
+		megaEvolves: "Nukreep",
+		itemUser: ["Nukreep"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14577,15 +14671,29 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	snatanite: {
 		name: "Snatanite",
-		spritenum: 0,
-		num: 67086,
+		spritenum: 577,
+		megaStone: "Snatan-Mega",
+		megaEvolves: "Snatan",
+		itemUser: ["Snatan"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
 	pagieite: {
 		name: "Pagieite",
-		spritenum: 0,
-		num: 67087,
+		spritenum: 577,
+		megaStone: "Encyclodia-Mega",
+		megaEvolves: "Encyclodia",
+		itemUser: ["Encyclodia"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -19034,8 +19142,15 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	trojorsite: {
 		name: "Trojorsite",
-		spritenum: 0,
-		num: 67368,
+		spritenum: 577,
+		megaStone: "Trojorse-Mega",
+		megaEvolves: "Trojorse",
+		itemUser: ["Trojorse"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -19122,8 +19237,15 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	prismolisite: {
 		name: "Prismolisite",
-		spritenum: 0,
-		num: 67378,
+		spritenum: 577,
+		megaStone: "Prismolis-Mega",
+		megaEvolves: "Prismolis",
+		itemUser: ["Prismolis"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -20317,6 +20439,48 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Starry Rock",
 		spritenum: 0,
 		num: 67484,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	hasturite: {
+		name: "Hasturite",
+		spritenum: 577,
+		megaStone: "Kingellow-Mega",
+		megaEvolves: "Kingellow",
+		itemUser: ["Kingellow"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	jungrillite: {
+		name: "Jungrillite",
+		spritenum: 577,
+		megaStone: "Jungrilla-Mega",
+		megaEvolves: "Jungrilla",
+		itemUser: ["Jungrilla"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	pagieite2: {
+		name: "Pagieite2",
+		spritenum: 577,
+		megaStone: "Swanaper-Mega",
+		megaEvolves: "Swanaper",
+		itemUser: ["Swanaper"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		isNonstandard: "Future",
 		rating: 1,
 	},
