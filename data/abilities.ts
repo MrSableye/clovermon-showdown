@@ -8008,17 +8008,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 	},
     resonant: {
-        onTryHit(target, source, move) {
-            if (target !== source && move.type === 'Psychic') {
-                this.add('-immune', target, '[from] ability: Resonant');
-                source.clearStatus();
-                return null;
-            }
-        },
-        isBreakable: true,
-		isNonstandard: "Future",
-        name: "Resonant",
+    onTryHit(target, source, move) {
+        if (target !== source && move.type === 'Psychic' && move.category === 'Status') {
+            this.add('-immune', target, '[from] ability: Resonant');
+            return null;
+        }
     },
+    onHit(target, source, move) {
+        if (move.type === 'Psychic' && target.status) {
+            target.cureStatus();
+        }
+    },
+    isBreakable: true,
+    isNonstandard: "Future",
+    name: "Resonant",
+},
 	pitchblack: {
         onStart(pokemon) {
             let activated = false;
