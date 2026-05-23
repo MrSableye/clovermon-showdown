@@ -60348,6 +60348,7 @@ bewilderbeast: {
 		eggGroups: ["Amorphous", "Mineral"],
 		otherFormes: ["Neonazi-Mega"],
 		formeOrder: ["Neonazi", "Neonazi-Mega"],
+		
 	},
 	neonazimega: {
         num: 666242,
@@ -60749,7 +60750,7 @@ bewilderbeast: {
         baseSpecies: "Dongorilla",
         forme: "Mega",
         types: ["Grass", "Sound"],
-        baseStats: {hp: 72, atk: 135, def: 100, spa: 135, spd: 97, spe: 101},
+        baseStats: {hp: 85, atk: 135, def: 100, spa: 135, spd: 97, spe: 101},
         abilities: {0: "Drum Roll"},
         heightm: 0.8,
         weightkg: 490.0,
