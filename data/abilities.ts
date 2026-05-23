@@ -8009,14 +8009,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
     resonant: {
     onTryHit(target, source, move) {
-        if (target !== source && move.type === 'Psychic' && move.category === 'Status') {
+        if (target !== source && move.type === 'Psychic') {
+            if (target.status) {
+                target.cureStatus();
+            }
             this.add('-immune', target, '[from] ability: Resonant');
-            return null;
-        }
-    },
-    onHit(target, source, move) {
-        if (move.type === 'Psychic' && target.status) {
-            target.cureStatus();
+            return null; 
         }
     },
     isBreakable: true,
