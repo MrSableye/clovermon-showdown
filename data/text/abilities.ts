@@ -2558,7 +2558,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		},
 	cruelty: {
 		name: "Cruelty",
-		shortDesc: "This Pokemon's Special Attack is multiplied by 1.5 and the accuracy of its physical attacks is multiplied by 0.8.",
+		shortDesc: "This Pokemon's Special Attack is multiplied by 1.5 and the accuracy of its special attacks is multiplied by 0.8.",
 	},
 	bleatingheart: {
 		name: "Bleating Heart",
