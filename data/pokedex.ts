@@ -39332,7 +39332,7 @@ alkaleuf: {
 		name: "Alkaleuf",
 		types: ["Ground", "Poison"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 111, atk: 52, def: 142, spa: 72, spd: 158, spe: 38},
+		baseStats: {hp: 101, atk: 52, def: 127, spa: 52, spd: 143, spe: 38},
 		abilities: {0: "Passage of Time", H: "Stench", S: "Neutralizing Gas"},
 		heightm: 4.8,
 		weightkg: 250,
