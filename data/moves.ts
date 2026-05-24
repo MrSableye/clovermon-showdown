@@ -76863,6 +76863,7 @@ export const Moves: {[moveid: string]: MoveData} = {
     priority: 0,
     flags: {},
     onHit(target, source, effect) {
+
         const noMetronome = [
             'afteryou', 'assist', 'banefulbunker', 'belch', 'bestow', 'celebrate', 'chatter',
             'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'diamondstorm',
@@ -76879,7 +76880,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         const bannedSet = new Set(noMetronome);
 
         const moves = this.dex.moves.all().filter(move => {
-            if (move.isZ || move.isMax || move.isNonstandard) return false;
+            if (move.isZ || move.isMax || move.isGMax || move.isNonstandard) return false;
             if (move.ohko) return false;
             if (move.multihit) {
                 const hits = Array.isArray(move.multihit) ? move.multihit : [move.multihit];
@@ -76906,13 +76907,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 
         const modifiedMove = { ...move, type: randomType };
 
-        this.actions.useMove(modifiedMove, target, source);
+        this.actions.useMove(modifiedMove, target, source, { metronome: true } as any);
 
-        return false; 
+        return false; // Chaos deals no direct damage
     },
     secondary: null,
     target: "normal",
-    type: "???",
+    type: "Normal",
 },
 	bulbclinch: {
 		accuracy: true,
