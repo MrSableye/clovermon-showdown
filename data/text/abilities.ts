@@ -2545,20 +2545,20 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	battlefield: {
 		name: "Battlefield",
-		shortDesc: "Gains +1 Defense on Electric and Grassy Terrain, Gains +1 Special Defense on Misty and Psychic Terrain",
+		shortDesc: "If there is a terrain, raises Defense or Sp. Def. by 1 stage based on corresponding terrain.",
 		start: "  [POKEMON] used the battlefield to power itself!",
 	},
 	holybarrier: {
 		name: "Holy Barrier",
-		shortDesc: "Whenever using an attacking Move,Apply for the turn a Power Trick effect that is reverted once the turn ends.",
+		shortDesc: "Sets Power Trick before the user attacks, effect ends at the end of the turn.",
 	},
 	sublimation: {
 		name: "Sublimation",
-		shortDesc: "This Pokemon's Speed is multiplied by 1.5, but it can only select the first move it executes. These effects are prevented while this Pokemon is Dynamaxed.",
+		shortDesc: "This Pokemon's Speed is multiplied by 1.5, but it can only select the first move it executes.",
 		},
 	cruelty: {
 		name: "Cruelty",
-		shortDesc: "This Pokemon's Special Attack is multiplied by 1.5 and the accuracy of its special attacks is multiplied by 0.8.",
+		shortDesc: "This Pokemon's Special Attack is 1.5x and accuracy of its special attacks is 0.8x.",
 	},
 	bleatingheart: {
 		name: "Bleating Heart",

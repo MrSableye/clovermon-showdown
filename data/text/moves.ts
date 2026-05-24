@@ -8082,7 +8082,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	chaos: {
 		name: "Chaos",
-		shortDesc: "Summons a Random Move and Give it a Random Type",
+		shortDesc: "Picks a random move and gives it a random type.",
 	},
 	phasethrough: {
 		name: "Phase Through",
