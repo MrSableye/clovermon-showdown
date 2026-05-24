@@ -76854,6 +76854,66 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rock",
 		isNonstandard: "Future",
 	},
+	chaos: {
+    accuracy: true,
+    basePower: 0,
+    category: "Status",
+    name: "Chaos",
+    pp: 10,
+    priority: 0,
+    flags: {},
+    onHit(target, source, effect) {
+        const noMetronome = [
+            'afteryou', 'assist', 'banefulbunker', 'belch', 'bestow', 'celebrate', 'chatter',
+            'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'diamondstorm',
+            'doodle', 'dragonascent', 'endure', 'feint', 'fleurcannon', 'focuspunch', 'followme',
+            'freezeshock', 'glaciallance', 'helpinghand', 'holdhands', 'iceburn', 'instruct',
+            'kingsshield', 'lifedew', 'lightofruin', 'matblock', 'mefirst', 'metronome', 'mimic',
+            'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'originpulse', 'precipiceblades',
+            'protect', 'purify', 'quash', 'quickguard', 'ragepowder', 'relicsong', 'revivalblessing',
+            'secretsword', 'shelltrap', 'sketch', 'sleeptalk', 'snarl', 'snatch', 'snore',
+            'sparklingaria', 'spikyshield', 'spotlight', 'steameruption', 'struggle', 'switcheroo',
+            'technoblast', 'thief', 'thousandarrows', 'thousandwaves', 'topsyturvy', 'trick',
+            'twineedle', 'vcreate', 'watershuriken', 'wideguard',
+        ];
+        const bannedSet = new Set(noMetronome);
+
+        const moves = this.dex.moves.all().filter(move => {
+            if (move.isZ || move.isMax || move.isNonstandard) return false;
+            if (move.ohko) return false;
+            if (move.multihit) {
+                const hits = Array.isArray(move.multihit) ? move.multihit : [move.multihit];
+                if (hits.some(h => h > 1)) return false;
+            }
+            if (bannedSet.has(move.id)) return false;
+            const flags: any = move.flags;
+            if (flags['metronome'] === false) return false;
+            if (flags['charge'] || flags['recharge'] || flags['futuremove']) return false;
+            return true;
+        });
+
+        if (!moves.length) return false;
+        const move = this.sample(moves);
+        if (!move) return false;
+
+        const types = [
+            'Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice',
+            'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug',
+            'Rock', 'Ghost', 'Dragon', 'Dark', 'Steel', 'Fairy', '???'
+        ];
+        const randomType = this.sample(types);
+        if (!randomType) return false;
+
+        const modifiedMove = { ...move, type: randomType };
+
+        this.actions.useMove(modifiedMove, target, source);
+
+        return false; 
+    },
+    secondary: null,
+    target: "normal",
+    type: "???",
+},
 	bulbclinch: {
 		accuracy: true,
 		basePower: 0,
