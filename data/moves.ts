@@ -76861,41 +76861,77 @@ export const Moves: {[moveid: string]: MoveData} = {
     name: "Chaos",
     pp: 20,
     priority: 0,
-    flags: {failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1},
+    flags: {
+        failencore: 1,
+        nosleeptalk: 1,
+        noassist: 1,
+        failcopycat: 1,
+        failinstruct: 1,
+        failmimic: 1,
+    },
     noMetronome: [
-        "After You", "Apple Acid", "Armor Cannon", "Assist", "Astral Barrage", "Aura Wheel", "Baneful Bunker", "Beak Blast", "Behemoth Bash", "Behemoth Blade", "Belch", "Bestow", "Blazing Torque", "Body Press", "Branch Poke", "Breaking Swipe", "Celebrate", "Chatter", "Chilling Water", "Chilly Reception", "Clangorous Soul", "Collision Course", "Combat Torque", "Comeuppance", "Copycat", "Counter", "Covet", "Crafty Shield", "Decorate", "Destiny Bond", "Detect", "Diamond Storm", "Doodle", "Double Iron Bash", "Double Shock", "Dragon Ascent", "Dragon Energy", "Drum Beating", "Dynamax Cannon", "Electro Drift", "Endure", "Eternabeam", "False Surrender", "Feint", "Fiery Wrath", "Fillet Away", "Fleur Cannon", "Focus Punch", "Follow Me", "Freeze Shock", "Freezing Glare", "Glacial Lance", "Grav Apple", "Helping Hand", "Hold Hands", "Hyper Drill", "Hyperspace Fury", "Hyperspace Hole", "Ice Burn", "Instruct", "Jet Punch", "Jungle Healing", "King's Shield", "Life Dew", "Light of Ruin", "Magical Torque", "Make It Rain", "Mat Block", "Me First", "Meteor Assault", "Metronome", "Mimic", "Mind Blown", "Mirror Coat", "Mirror Move", "Moongeist Beam", "Nature Power", "Nature's Madness", "Noxious Torque", "Obstruct", "Order Up", "Origin Pulse", "Overdrive", "Photon Geyser", "Plasma Fists", "Population Bomb", "Pounce", "Power Shift", "Precipice Blades", "Protect", "Pyro Ball", "Quash", "Quick Guard", "Rage Fist", "Rage Powder", "Raging Bull", "Raging Fury", "Relic Song", "Revival Blessing", "Ruination", "Salt Cure", "Secret Sword", "Shed Tail", "Shell Trap", "Silk Trap", "Sketch", "Sleep Talk", "Snap Trap", "Snarl", "Snatch", "Snore", "Snowscape", "Spectral Thief", "Spicy Extract", "Spiky Shield", "Spirit Break", "Spotlight", "Springtide Storm", "Steam Eruption", "Steel Beam", "Strange Steam", "Struggle", "Sunsteel Strike", "Surging Strikes", "Switcheroo", "Techno Blast", "Thief", "Thousand Arrows", "Thousand Waves", "Thunder Cage", "Thunderous Kick", "Tidy Up", "Trailblaze", "Transform", "Trick", "Twin Beam", "V-create", "Wicked Blow", "Wicked Torque", "Wide Guard",
+        "After You", "Apple Acid", "Armor Cannon", "Assist", "Astral Barrage", "Aura Wheel",
+        "Baneful Bunker", "Beak Blast", "Behemoth Bash", "Behemoth Blade", "Belch", "Bestow",
+        "Blazing Torque", "Body Press", "Branch Poke", "Breaking Swipe", "Celebrate", "Chatter",
+        "Chilling Water", "Chilly Reception", "Clangorous Soul", "Collision Course", "Combat Torque",
+        "Comeuppance", "Copycat", "Counter", "Covet", "Crafty Shield", "Decorate", "Destiny Bond",
+        "Detect", "Diamond Storm", "Doodle", "Double Iron Bash", "Double Shock", "Dragon Ascent",
+        "Dragon Energy", "Drum Beating", "Dynamax Cannon", "Electro Drift", "Endure", "Eternabeam",
+        "False Surrender", "Feint", "Fiery Wrath", "Fillet Away", "Fleur Cannon", "Focus Punch",
+        "Follow Me", "Freeze Shock", "Freezing Glare", "Glacial Lance", "Grav Apple", "Helping Hand",
+        "Hold Hands", "Hyper Drill", "Hyperspace Fury", "Hyperspace Hole", "Ice Burn", "Instruct",
+        "Jet Punch", "Jungle Healing", "King's Shield", "Life Dew", "Light of Ruin", "Magical Torque",
+        "Make It Rain", "Mat Block", "Me First", "Meteor Assault", "Metronome", "Mimic", "Mind Blown",
+        "Mirror Coat", "Mirror Move", "Moongeist Beam", "Nature Power", "Nature's Madness",
+        "Noxious Torque", "Obstruct", "Order Up", "Origin Pulse", "Overdrive", "Photon Geyser",
+        "Plasma Fists", "Population Bomb", "Pounce", "Power Shift", "Precipice Blades", "Protect",
+        "Pyro Ball", "Quash", "Quick Guard", "Rage Fist", "Rage Powder", "Raging Bull", "Raging Fury",
+        "Relic Song", "Revival Blessing", "Ruination", "Salt Cure", "Secret Sword", "Shed Tail",
+        "Shell Trap", "Silk Trap", "Sketch", "Sleep Talk", "Snap Trap", "Snarl", "Snatch", "Snore",
+        "Snowscape", "Spectral Thief", "Spicy Extract", "Spiky Shield", "Spirit Break", "Spotlight",
+        "Springtide Storm", "Steam Eruption", "Steel Beam", "Strange Steam", "Struggle",
+        "Sunsteel Strike", "Surging Strikes", "Switcheroo", "Techno Blast", "Thief",
+        "Thousand Arrows", "Thousand Waves", "Thunder Cage", "Thunderous Kick", "Tidy Up",
+        "Trailblaze", "Transform", "Trick", "Twin Beam", "V-create", "Wicked Blow",
+        "Wicked Torque", "Wide Guard",
     ],
     onHit(target, source, effect) {
-        const allMoves = [];
+        const movePool = [];
+
         for (const move of this.dex.moves.all()) {
             const moveData = this.dex.moves.get(move.id);
-            if (
-                ([2, 4].includes(this.gen) && source.moves.includes(move.id)) ||
-                moveData.isZ ||
-                moveData.isMax ||
-                moveData.realMove ||
-                (moveData.isNonstandard && moveData.isNonstandard !== 'Unobtainable') ||
-                effect.noMetronome!.includes(moveData.name)
-            ) {
-                continue;
-            }
-            allMoves.push(moveData);
+
+            if (moveData.isZ) continue;
+
+            if (moveData.realMove) continue;
+
+            if (moveData.isNonstandard) continue;
+
+            if (moveData.isMax) continue;
+
+            if ([2, 4].includes(this.gen) && source.moves.includes(moveData.id)) continue;
+
+    
+            if (effect.noMetronome!.includes(moveData.name)) continue;
+
+            movePool.push(moveData);
         }
 
-        if (!allMoves.length) return false;
+        if (!movePool.length) return false;
 
-        const chosenMove = this.sample(allMoves);
+        const chosenMove = this.sample(movePool);
         if (!chosenMove) return false;
 
         const types = [
             'Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice',
             'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug',
-            'Rock', 'Ghost', 'Dragon', 'Dark', 'Steel', 'Fairy'
-        ];
+            'Rock', 'Ghost', 'Dragon', 'Dark', 'Steel', 'Fairy',
+        ] as const;
         const randomType = this.sample(types);
         if (!randomType) return false;
 
         source.side.lastSelectedMove = this.toID(chosenMove.id);
+
         this.actions.useMove(chosenMove.id, target, undefined, undefined, { type: randomType });
 
         return false;
