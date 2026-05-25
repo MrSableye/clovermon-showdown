@@ -76853,6 +76853,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "self",
 		type: "Rock",
 		isNonstandard: "Future",
+	},
 	chaos: {
     accuracy: true,
     basePower: 0,
@@ -76891,10 +76892,10 @@ export const Moves: {[moveid: string]: MoveData} = {
         source.side.lastSelectedMove = this.toID(randomMove);
         this.actions.useMove(randomMove, target, undefined, undefined, { type: randomType } as any);
 
-        return false; // Chaos itself deals no damage
+        return false; 
     },
     secondary: null,
-    target: "self",   // <-- exactly like Metronome
+    target: "self",   
     type: "???",
 },
 	bulbclinch: {
