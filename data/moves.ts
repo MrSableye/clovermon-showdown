@@ -76915,7 +76915,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         return false;
     },
     secondary: null,
-    target: "normal",
+    target: "self",
     type: "Normal",
 },
 	bulbclinch: {
