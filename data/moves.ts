@@ -76905,7 +76905,7 @@ export const Moves: {[moveid: string]: MoveData} = {
     basePower: 0,
     category: "Status",
     name: "Chaos",
-    pp: 10,
+    pp: 20,
     priority: 0,
     flags: {},
     onHit(target, source, effect) {
@@ -76925,13 +76925,18 @@ export const Moves: {[moveid: string]: MoveData} = {
         const bannedSet = new Set(noMetronome);
 
         const moves = this.dex.moves.all().filter(move => {
-            if (move.isZ || move.isMax || move.isGMax || move.isNonstandard) return false;
+
+            if (move.isMax || move.isNonstandard) return false;
+
             if (move.ohko) return false;
+
             if (move.multihit) {
                 const hits = Array.isArray(move.multihit) ? move.multihit : [move.multihit];
                 if (hits.some(h => h > 1)) return false;
             }
+
             if (bannedSet.has(move.id)) return false;
+
             const flags: any = move.flags;
             if (flags['metronome'] === false) return false;
             if (flags['charge'] || flags['recharge'] || flags['futuremove']) return false;
@@ -76945,24 +76950,19 @@ export const Moves: {[moveid: string]: MoveData} = {
         const types = [
             'Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice',
             'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug',
-            'Rock', 'Ghost', 'Dragon', 'Dark', 'Steel', 'Fairy', '???'
+            'Rock', 'Ghost', 'Dragon', 'Dark', 'Steel', 'Fairy'
         ];
         const randomType = this.sample(types);
         if (!randomType) return false;
 
-        this.actions.useMove(
-            move,
-            target,
-            source,
-            { metronome: true } as any,         
-            { type: randomType } as any         
-        );
+        const chaosMove = Object.assign(Object.create(move), move, { type: randomType });
+        this.actions.useMove(chaosMove, target, source, { metronome: true } as any);
 
-        return false; 
+        return false;
     },
     secondary: null,
     target: "normal",
-    type: "???",
+    type: "Normal",
 },
 	bulbclinch: {
 		accuracy: true,
