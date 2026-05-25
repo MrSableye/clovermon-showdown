@@ -76859,7 +76859,7 @@ export const Moves: {[moveid: string]: MoveData} = {
     basePower: 0,
     category: "Status",
     name: "Chaos",
-    pp: 10,
+    pp: 20,
     priority: 0,
     flags: {failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1},
     noMetronome: [
@@ -76868,13 +76868,12 @@ export const Moves: {[moveid: string]: MoveData} = {
     onHit(target, source, effect) {
         const moves = this.dex.moves.all().filter(move => (
             (![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
-            !move.realMove && !move.isZ && !move.isMax &&
+            !move.isMax &&  
             (!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
             !effect.noMetronome!.includes(move.name)
         ));
 
         if (!moves.length) return false;
-
 
         moves.sort((a, b) => a.num - b.num);
         let randomMove = this.sample(moves);
