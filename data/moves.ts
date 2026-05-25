@@ -76863,7 +76863,6 @@ export const Moves: {[moveid: string]: MoveData} = {
     priority: 0,
     flags: {},
     onHit(target, source, effect) {
-
         const noMetronome = [
             'afteryou', 'assist', 'banefulbunker', 'belch', 'bestow', 'celebrate', 'chatter',
             'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'diamondstorm',
@@ -76905,15 +76904,19 @@ export const Moves: {[moveid: string]: MoveData} = {
         const randomType = this.sample(types);
         if (!randomType) return false;
 
-        const modifiedMove = { ...move, type: randomType };
+        this.actions.useMove(
+            move,
+            target,
+            source,
+            { metronome: true } as any,         
+            { type: randomType } as any         
+        );
 
-        this.actions.useMove(modifiedMove, target, source, { metronome: true } as any);
-
-        return false; // Chaos deals no direct damage
+        return false; 
     },
     secondary: null,
     target: "normal",
-    type: "Normal",
+    type: "???",
 },
 	bulbclinch: {
 		accuracy: true,
