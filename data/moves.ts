@@ -76914,7 +76914,7 @@ export const Moves: {[moveid: string]: MoveData} = {
     onHit(target, source, effect) {
         const moves = this.dex.moves.all().filter(move => (
             (![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
-            !move.isMax &&  
+            !move.realMove && !move.isZ && !move.isMax &&   
             (!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
             !effect.noMetronome!.includes(move.name)
         ));
@@ -76934,6 +76934,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         const randomType = this.sample(types);
         if (!randomType) return false;
 
+        
         source.side.lastSelectedMove = this.toID(randomMove);
         this.actions.useMove(randomMove, target, undefined, undefined, { type: randomType } as any);
 
