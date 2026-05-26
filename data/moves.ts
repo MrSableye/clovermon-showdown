@@ -76899,22 +76899,14 @@ export const Moves: {[moveid: string]: MoveData} = {
         const movePool = [];
 
         for (const move of this.dex.moves.all()) {
-            const moveData = this.dex.moves.get(move.id);
+            if (move.isZ) continue;
+            if (move.isMax) continue;
+            if (move.realMove) continue;
+            if (move.isNonstandard) continue;
+            if ([2, 4].includes(this.gen) && source.moves.includes(move.id)) continue;
+            if (effect.noMetronome!.includes(move.name)) continue;
 
-            if (moveData.isZ) continue;
-
-            if (moveData.realMove) continue;
-
-            if (moveData.isNonstandard) continue;
-
-            if (moveData.isMax) continue;
-
-            if ([2, 4].includes(this.gen) && source.moves.includes(moveData.id)) continue;
-
-    
-            if (effect.noMetronome!.includes(moveData.name)) continue;
-
-            movePool.push(moveData);
+            movePool.push(move);
         }
 
         if (!movePool.length) return false;
@@ -76930,9 +76922,16 @@ export const Moves: {[moveid: string]: MoveData} = {
         const randomType = this.sample(types);
         if (!randomType) return false;
 
-        source.side.lastSelectedMove = this.toID(chosenMove.id);
+        source.side.lastSelectedMove = chosenMove.id;
+        const savedItem = source.item;
+        const savedItemData = source.itemData;
+        source.item = '' as ID;
+        source.itemData = this.dex.items.get('') as any;
 
         this.actions.useMove(chosenMove.id, target, undefined, undefined, { type: randomType });
+
+        source.item = savedItem;
+        source.itemData = savedItemData;
 
         return false;
     },
