@@ -39470,7 +39470,7 @@ sharpsire: {
 	observeda: {
 		num: -8679,
 		name: "Observeda",
-		types: ["Fire"],
+		types: ["Electric", "Fairy"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 106, atk: 70, def: 70, spa: 113, spd: 121, spe: 54},
 		abilities: {0: "Illuminate", 1: "Electrodiffusion", H: "Galvanize", S: "Pixilate"},
