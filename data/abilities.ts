@@ -8369,7 +8369,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Cruelty",
 		rating: 3.5,
+		isNonstandard: "Future",
 		num: 55,
+	},
+	electrodiffusion: {
+		name: "Electrodiffusion",
+		rating: 4,
+	    num: 10005,
+	    isNonstandard: "Future",
+		onAfterMove(source, target, move) {
+			   if (move.id !== 'charge') return;
+
+			   if (this.field.isTerrain('electricterrain')) return;
+
+			   this.field.setTerrain('electricterrain');
+
+			   this.add('-ability', source, 'Electrodiffusion');
+		    },
 	},
 	pressurefuzed: {
 		name: "Pressure Fuzed",
