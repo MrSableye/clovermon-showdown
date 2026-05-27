@@ -76857,6 +76857,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	chaos: {
     accuracy: true,
     basePower: 0,
+	isNonstandard: "Future",
     category: "Status",
     name: "Chaos",
     pp: 20,
@@ -101055,6 +101056,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Ice",
+		isNonstandard: "Future",
 		zMove: {basePower: 220},
 		contestType: "Cool",
 	},
