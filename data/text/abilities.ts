@@ -2618,6 +2618,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Resonant",
 		shortDesc: "Psychic-type moves cure non-volatile status conditions; Psychic immunity.",
 	},
+	electrodiffusion: {
+		name: "Electrodiffusion",
+		shortDesc: "This Pokemon summons Electric Terrain for 5 Turns after using Charge.",
+	},
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",

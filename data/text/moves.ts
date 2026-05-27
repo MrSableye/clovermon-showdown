@@ -8084,6 +8084,18 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Chaos",
 		shortDesc: "Picks a random move and gives it a random type.",
 	},
+	shadowstick: {
+		name: "Shadow Stick",
+		shortDesc: "30% chance to paralyze the target.",
+	},
+	manaflux: {
+		name: "Mana Flux",
+		shortDesc: "Uses target's Sp. Atk stat in damage calculation. 100% chance to raise Sp. Atk for the user and target by 1.",
+	},
+	electroshot: {
+		name: "Electro Shot",
+		shortDesc: "Raises user's Sp. Atk by 1 on turn 1. Hits turn 2. No charge in rain.",
+	},
 	phasethrough: {
 		name: "Phase Through",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
@@ -9388,7 +9400,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Summons Sandstorm.",
 	},
 	squash: {
-		name: "Body Slam",
+		name: "Squash",
 		shortDesc: "30% chance to paralyze the target.",
 	},
 	cherrynobyl: {

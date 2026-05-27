@@ -8533,6 +8533,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	sirinx: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cerael: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	observeda: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	milleon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	monikat: {
 		tier: "Illegal",
 		isNonstandard: "Future",
