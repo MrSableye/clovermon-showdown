@@ -3829,6 +3829,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	meteorhammer: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	chaos: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	closeblobmat: {
 		inherit: true,
 		isNonstandard: null,
