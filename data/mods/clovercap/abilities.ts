@@ -284,7 +284,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	colossal: {
+	colossus: {
 		inherit: true,
 		isNonstandard: null,
 	},

@@ -3978,7 +3978,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 		desc: "Boosts SpDef in Icy Terrain.",
 	},
 	dongorillite: {
-		name: "DONGORILLITE",
+		name: "Dongorillite",
 		desc: "Mega DONGORILLA.",
 	},
 	helioliskite: {
@@ -4084,6 +4084,14 @@ export const ItemsText: {[k: string]: ItemText} = {
 	nukreepite: {
 		name: "Nukreepite",
 		desc: "Mega Nukreep.",
+	},
+	jungrillite: {
+		name: "Jungrillite",
+		desc: "Mega Jungrilla.",
+	},
+	hasturite: {
+		name: "Hasturite",
+		desc: "Mega Kingellow.",
 	},
 	tutterflite: {
 		name: "Tutterflite",
@@ -4344,6 +4352,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 	pagieite: {
 		name: "Pagieite",
 		desc: "Mega evolve Swanaper, Encyclodia, Pagolem.",
+	},
+	pagieite2: {
+		name: "Pagieite",
+		desc: "Mega evolve Swanaper.",
 	},
 	booklyite: {
 		name: "Booklyite",

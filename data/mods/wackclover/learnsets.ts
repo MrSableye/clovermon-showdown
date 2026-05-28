@@ -2869,6 +2869,7 @@ selffatten: ["8L1"],
 	},
 	tripecs: {
 		learnset: {
+			psypunch: ["8L1"],
 			sludgepunch: ["8L1"],
 			tequilapunch: ["8L1"],
 			rubberpunch: ["8L1"],
@@ -9090,7 +9091,6 @@ reptize: ["8L1"],
 			volcaniceruption: ["8L1"],
 			volcanicterrain: ["8L1"],
 lavablitz: ["8L1"],
-abruption: ["8L1"],
 caldera: ["8L1"],
 lavaquake: ["8L1"],
 lavadrip: ["8L1"],
@@ -19477,6 +19477,7 @@ midnight: ["8L1"],
 	},
 	florigrace: {
 		learnset: {
+			podburst: ["8L1"],
 			bloom: ["8L1"],
 			flowerkiss: ["8L1"],
 seasonalflowers: ["8L1"],
@@ -21379,6 +21380,8 @@ sugarrush: ["8L1"],
 	},
 	regirode: {
 		learnset: {
+			hollowburst: ["8L1"],
+			invokedread: ["8L1"],
 			solidify: ["8L1"],
 amberwave: ["8L1"],
 			accelerock: ["8L37"],
@@ -21465,6 +21468,8 @@ amberwave: ["8L1"],
 	},
 	regimelt: {
 		learnset: {
+			hollowburst: ["8L1"],
+			invokedread: ["8L1"],
 			thawing: ["8L1"],
 slushcrush: ["8L1"],
 			agility: ["8L43"],
@@ -21552,6 +21557,8 @@ slushcrush: ["8L1"],
 	},
 	regirust: {
 		learnset: {
+			hollowburst: ["8L1"],
+			invokedread: ["8L1"],
 			rustyblade: ["8L1"],
 			bladerain: ["8L1"],
 armorburst: ["8L1"],

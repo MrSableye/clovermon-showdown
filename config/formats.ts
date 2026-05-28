@@ -969,7 +969,11 @@ export const Formats: FormatList = [
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie',
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet', 'Discombubbles',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Kaleido Scope', 'Searing Quills', 'Stigmata Strike', 'Stigmatic Gleam', 'Seal Break', 'WildBeastsLogic', 'Squirm', 'Rift Strike', 'Magic Cape', 'After Image','Perfect Freeze', 'Electrify + Lightning Rod', 'Electrify + Motor Drive', 'Electrify + Volt Absorb', 'Lunatic Time', 'Green Card', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
+			'Hell Drag', 'Pacify', 'Substitute + Angel Powder', 'Plague Orb', 'Vanish', 'Seal Break', 'May King', 'Optic Camo',  
+			'Vr Headset', 'Kaleido Scope', 'tiptoe', 'Searing Quills', 'Stigmata Strike', 'Stigmatic Gleam', 'WildBeastsLogic', 'Squirm', 'Rift Strike', 
+			'Magic Cape', 'After Image','Perfect Freeze', 'Electrify + Lightning Rod', 'Electrify + Motor Drive', 'Electrify + Volt Absorb', 'Lunatic Time', 
+			'Green Card', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
+			'Shrink Wrap', 'MeditativeSensitivity','Boison Berry', 'Celebrate', 'Boots of Blinding Speed', 'Sheriff Badge', 'Cosmic Law', 'Undying Spear', 'Eviocicle', 'Eviolate', 'Rule Breaker', 'Cold Snap', 'Abyss Nova', 'Acid Trap',
 		],
 	},
 	
@@ -1125,7 +1129,7 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Wack Only] Random Battle',
 		mod: 'wack',
 		team: 'random',
-		ruleset: ['Terastal Clause', 'Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod'],
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
 		name: '[Gen 8 Wack Only] Pick Your Team Random Battle',
@@ -1807,7 +1811,7 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause but Special for Blobbos',
 		],
-		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Glass Cat', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs', 'Skull Cannon', 'Extinction Wave', 'Wonder Guard', 'Junkbane', 'Shed Tail'],
+		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Glass Cat', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs', 'Skull Cannon', 'Extinction Wave', 'Wonder Guard', 'Junkbane', 'Shed Tail'],
 	},
 	{
 		name: '[Gen 8 Sandbox Only] Random Battle',

@@ -2443,6 +2443,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	pagieite2: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	booklyite: {
 		inherit: true,
 		isNonstandard: null,
@@ -3552,6 +3556,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	trojorsite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hasturite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	jungrillite: {
 		inherit: true,
 		isNonstandard: null,
 	},

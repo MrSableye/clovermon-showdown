@@ -2733,8 +2733,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Transfusion",
 		shortDesc: "Upon being hit, changes the opponent's type to the primary type of the ability-holder. When the ability-holder switches out, change their types back.",
 	},
-	colossal: {
-		name: "Colossal",
+	colossus: {
+		name: "Colossus",
 		shortDesc: "Summons Gravity upon switch-in.",
 	},
 	delirious: {
