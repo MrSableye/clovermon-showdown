@@ -39525,7 +39525,7 @@ cerael: {
 	},
 cabbot: {
 		num: -8683,
-		name: "Cannpt",
+		name: "Cabbot",
 		types: ["Steel", "Fairy"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 80},
