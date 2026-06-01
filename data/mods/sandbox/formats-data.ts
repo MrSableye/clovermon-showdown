@@ -13491,6 +13491,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+		cabbot: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 		observeda: {
 			inherit: true,
 			isNonstandard: null,

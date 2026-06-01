@@ -8541,6 +8541,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	cabbot: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	observeda: {
 		tier: "Illegal",
 		isNonstandard: "Future",

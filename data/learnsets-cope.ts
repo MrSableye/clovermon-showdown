@@ -2865,6 +2865,14 @@ blusteryfront: ["8L1"],
 witheringbloom: ["8L1"],
 allurespore: ["8L1"],
             },
+	},
+cabbot: {
+    learnset: {
+hiddenpower: ["8L1"],
+geargrind: ["8L1"],
+wish: ["8L1"],
+dazzlinggleam: ["8L1"],
+            },
 },
 sirinx: {
     learnset: {
