@@ -2874,6 +2874,14 @@ wish: ["8L1"],
 dazzlinggleam: ["8L1"],
             },
 },
+crazidaze: {
+    learnset: {
+futuresight: ["8L1"],
+chaos: ["8L1"],
+teleport: ["8L1"],
+batonpass: ["8L1"],
+            },
+},
 sirinx: {
     learnset: {
 protect: ["8L1"],
