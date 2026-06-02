@@ -186,7 +186,13 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			this.add('-message', 'A Zona de Estase desapareceu! Os Pokémon adversários podem agir novamente.');
 		},
 	},
-
+gem: {
+		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			this.debug('Gem Boost');
+			return this.chainModify(1.5);
+		},
+	},
 	// Pokemon innate ability
 	// Destiny Bond and Perish Song immunities are handled in data/mod/wack/moves.ts
 	tapukoko: {

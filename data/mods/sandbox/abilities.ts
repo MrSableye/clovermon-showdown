@@ -2053,6 +2053,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	malleable: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	deadlypincers: {
 		inherit: true,
 		isNonstandard: null,

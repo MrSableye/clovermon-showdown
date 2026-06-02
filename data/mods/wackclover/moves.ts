@@ -3990,6 +3990,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+		hollowburst: {
+		inherit: true,
+		isNonstandard: null,
+		},
 		holykick: {
 		inherit: true,
 		isNonstandard: null,
@@ -4709,6 +4713,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		plastichammer: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
+		isNonstandard: null,
+		},
+		podburst: {
+		inherit: true,
 		isNonstandard: null,
 		},
 		pollenseason: {

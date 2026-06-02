@@ -11702,10 +11702,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onModifyTypePriority: -1,
 		onModifyType(move, source) {
-			if (move.hit === 1 && move.type === source.getTypes()[0]) 
+			if (move.hit > 0 && move.type === source.getTypes()[0]) 
 				 move.type = source.getTypes()[1]; 
-			else if (move.hit === 1 && move.type === source.getTypes()[1]) 
+			else if (move.hit >0 && move.type === source.getTypes()[1]) 
 				move.type = source.getTypes()[0]; 
+			
 		},
 
 		// Damage modifier implemented in BattleActions#modifyDamage()
@@ -14517,6 +14518,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		isNonstandard: "Future",
 	},
+
+	malleable: {
+		name: "Malleable",
+		onStart(pokemon) {
+			const type1 = this.dex.moves.get(pokemon.moveSlots[0].id).type;
+			const type2 = this.dex.moves.get(pokemon.moveSlots[1].id).type;
+			const types = [type1, type2];			
+			if (pokemon.hasType(types)) return false;
+			this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Malleable');
+			
+		},
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
+
+	
 
 	acapability: {
 		onSourceAfterFaint(length, target, source, effect) {

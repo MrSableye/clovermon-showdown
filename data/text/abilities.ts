@@ -3706,8 +3706,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Immune to sound-based moves. Opponent loses 1/4 of its max HP if it uses a sound-based move.",
 	},
 	sapiophile: {
-		name: "sapiophile",
+		name: "Sapiophile",
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Psychic-type attack. This Pokemon is healed 1/4 by Psychic, 1/8 by Psychic Terain.",
+	},
+	malleable: {
+		name: "Malleable",
+		shortDesc: "This Pokemon's typing becomes the types of the 1st 2 moves in its movesets.",
 	},
 	sufferasihave: {
 		name: "Suffer As I Have",

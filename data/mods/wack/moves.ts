@@ -2136,7 +2136,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	naturesmadness: {
 		inherit: true,
 		damageCallback(pokemon, target) {
-			return this.clampIntRange(target.getUndynamaxedHP() / 4, 1);
+			return this.clampIntRange(target.getUndynamaxedHP() / 4, 3);
 		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		desc: "Deals damage to the target equal to a quarter of its current HP, rounded down, but not less than 1 HP.",
@@ -4101,6 +4101,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	bouncybubble: {
 		inherit: true,
+		basePower: 100,
+		accuracy: 95,
+		pp: 10,
 		isNonstandard: null,
 	},
 	bravebird: {
@@ -4129,6 +4132,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	buzzybuzz: {
 		inherit: true,
+		basePower: 100,
+		pp: 10,
 		isNonstandard: null,
 	},
 	calmmind: {
@@ -5299,6 +5304,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	sizzlyslide: {
 		inherit: true,
+		basePower: 95,
+		pp: 5,
 		isNonstandard: null,
 	},
 	skittersmack: {

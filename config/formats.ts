@@ -960,7 +960,7 @@ export const Formats: FormatList = [
 			'! Nickname Clause',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
-
+			'Freeze Clause Mod',
 		],
 		banlist: [
 			'OU', 'UUBL', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
@@ -972,8 +972,11 @@ export const Formats: FormatList = [
 			'Hell Drag', 'Pacify', 'Substitute + Angel Powder', 'Plague Orb', 'Vanish', 'Seal Break', 'May King', 'Optic Camo',  
 			'Vr Headset', 'Kaleido Scope', 'tiptoe', 'Searing Quills', 'Stigmata Strike', 'Stigmatic Gleam', 'WildBeastsLogic', 'Squirm', 'Rift Strike', 
 			'Magic Cape', 'After Image','Perfect Freeze', 'Electrify + Lightning Rod', 'Electrify + Motor Drive', 'Electrify + Volt Absorb', 'Lunatic Time', 
-			'Green Card', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier',
-			'Shrink Wrap', 'MeditativeSensitivity','Boison Berry', 'Celebrate', 'Boots of Blinding Speed', 'Sheriff Badge', 'Cosmic Law', 'Undying Spear', 'Eviocicle', 'Eviolate', 'Rule Breaker', 'Cold Snap', 'Abyss Nova', 'Acid Trap',
+			'Green Card', 'Time Stasis', 'Suwise Glasses', 'Pressure Orb', 'Training Glove', 'Wire Trap', 'Sketch', 'Soul Barrier', 'Belly Drum', 'Ebola', 'Heroic Charge',
+			'Shrink Wrap', 'MeditativeSensitivity','TristarAmoreMio', 'Tail Bite', 'Honor Bind', 'Restrict Beam', 'Shell Smash', 'Boison Berry', 'Celebrate', 
+			'Buzzy Buzz', 'Sizzly Slide', 'Boots of Blinding Speed', 'Sheriff Badge', 'Cosmic Law', 'Undying Spear', 'Eviocicle', 'Eviolate', 'Rule Breaker', 
+			'Abruption + Magma Armor', 'Cold Snap', 'Abyss Nova', 'Acid Trap', 'Pester', 'Secret Ingredient + Vanilluxe', 'Gorgon Eye', 'Shatter Body', 'Pursuit Tackle',
+			'Heaven Power', 'Perdition', 'Geomancy', 'Optimization', 'Preach'
 		],
 	},
 	
