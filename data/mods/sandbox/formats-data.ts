@@ -13481,4 +13481,29 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+		sirinx: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		cerael: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		cabbot: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		observeda: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		milleon: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 };

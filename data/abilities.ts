@@ -8008,17 +8008,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 	},
     resonant: {
-        onTryHit(target, source, move) {
-            if (target !== source && move.type === 'Psychic') {
-                this.add('-immune', target, '[from] ability: Resonant');
-                source.clearStatus();
-                return null;
+    onTryHit(target, source, move) {
+        if (target !== source && move.type === 'Psychic') {
+            if (target.status) {
+                target.cureStatus();
             }
-        },
-        isBreakable: true,
-		isNonstandard: "Future",
-        name: "Resonant",
+            this.add('-immune', target, '[from] ability: Resonant');
+            return null; 
+        }
     },
+    isBreakable: true,
+    isNonstandard: "Future",
+    name: "Resonant",
+},
 	pitchblack: {
         onStart(pokemon) {
             let activated = false;
@@ -8367,7 +8369,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Cruelty",
 		rating: 3.5,
+		isNonstandard: "Future",
 		num: 55,
+	},
+	electrodiffusion: {
+		name: "Electrodiffusion",
+		rating: 4,
+	    num: 10005,
+	    isNonstandard: "Future",
+		onAfterMove(source, target, move) {
+			   if (move.id !== 'charge') return;
+
+			   if (this.field.isTerrain('electricterrain')) return;
+
+			   this.field.setTerrain('electricterrain');
+
+			   this.add('-ability', source, 'Electrodiffusion');
+		    },
 	},
 	pressurefuzed: {
 		name: "Pressure Fuzed",
