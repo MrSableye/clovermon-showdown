@@ -1685,7 +1685,7 @@
         "lockedMoves": [
           "chaosbolt"
         ],
-        "level": 84
+        "level": 90
       }
     ]
   },
@@ -11254,6 +11254,513 @@
           }
         ]      
       },
+      "burbcurry": {   
+    "nicknames": [   
+      "Mariana",
+      "Gettin' fatter"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "stamina"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "angelpowder",
+          "greasygem",
+          "rockyhelmet",
+          "soupbowl"
+        ],
+        "moves": [     
+          "secretingredient",
+          "storedcalories",
+          "fattenup",
+          "spicypowder",
+          "seasoning"
+        ],
+        "lockedMoves": [   
+          "fatslam",
+          "saucesplash",
+          "selffatten"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "stamina"
+        ],
+        "items": [
+          "angelpowder"    
+        ],
+        "lockedMoves": [
+          "stockpile",
+          "swallow",
+          "greasesplat",
+          "storedcalories"
+        ],
+        "level": 84      
+      }
+    ]
+  },
+  
+  "tropbcurry": {   
+    "nicknames": [   
+      "Mauna Kea",
+      "Tropico"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "sunbathe"
+        ],
+        "items": [ 
+          "sunnycapsule",
+          "soupbowl"
+        ],
+        "moves": [     
+          "growth",
+          "bananarang",
+          "fattenup",
+          "specialorder"
+        ],
+        "lockedMoves": [   
+          "synthesis",
+          "curryburst",
+          "seasoning"
+        ],
+        "level": 84       
+      }
+    ]      
+  },
+ 
+  "statikman": {   
+    "nicknames": [   
+      "Boo!",
+      "CRTman"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "simple",
+          "analytic"
+        ],
+        "items": [
+          "sitrusberry", 
+          "lumberry",
+          "machineplate",
+          "freshcream",
+          "packagedcurry",
+          "precookedburger",
+          "angelpowder"
+        ],
+        "moves": [     
+          "hyperbeam"
+        ],
+        "lockedMoves": [   
+          "mines",
+          "boostbeam",
+          "glitch"
+        ],
+        "level": 84  
+      }
+    ]
+  },
+
+  
+"crustolor": {   
+    "nicknames": [   
+      "Colress",
+      "DeepSea"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "clearbody",
+          "filter"
+        ],
+        "items": [
+          "angelpowder", 
+          "gripclaw",
+          "bindingband"
+        ],
+        "moves": [     
+          "clamp",
+          "whirpool"
+        ],
+        "lockedMoves": [   
+          "crunch",
+          "solidify",
+          "eldritchpower"
+        ],
+        "level": 84      
+      }
+    ]
+  },
+
+  "cherbim": {   
+    "nicknames": [   
+      "Clover",
+      "Cherraw",
+      "Sunnyboom"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "chlorophyll"
+        ],
+        "items": [
+          "heavydutyboots",
+          "sunnycapsule",
+          "saladmix",
+          "pricklythorns",
+          "angelpowder"
+        ],
+        "moves": [     
+          "leechseed",
+          "moonblast",
+          "weatherball",
+          "luckychant",
+          "growth"
+        ],
+        "lockedMoves": [   
+          "sunnyday",
+          "solarbeam"
+        ],
+        "level": 84       
+      }
+    ]
+  },
+
+  "feborius": {   
+    "nicknames": [   
+      "Markus",
+      "Tatsu",
+      "F"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "adaptability",
+          "technician"
+        ],
+        "items": [
+          "Cyberspacecapsule",
+          "heavydutyboots",
+          "socialite",
+          "angelpowder"
+        ],
+        "moves": [     
+          "knockoff",
+          "flamethrower",
+          "icebeam",
+          "thunderbolt",
+          "taunt",
+          "zenheadbutt",
+          "chatter",
+          "breakingswipe",
+          "glitch",
+          "dracometeor",
+          "rapidspin"
+        ],
+        "lockedMoves": [   
+          "cyberchase",
+          "dedotatedwam"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "adaptability"
+        ],
+        "items": [
+          "banhammer"    
+        ],
+        "lockedMoves": [
+          "techerror",
+          "voltswitch",
+          "dracometeor",
+          "gigabyte"
+        ],
+        "level": 84      
+      },
+      {
+        "abilities": [
+          "adaptability"
+        ],
+        "items": [
+          "socialite"    
+        ],
+        "lockedMoves": [
+          "techsavvy",
+          "dragonruins",
+          "dragonpulse",
+          "icebeam"
+        ],
+        "level": 80      
+      },
+      {
+        "abilities": [
+          "adaptability"
+        ],
+        "items": [
+          "socialite"    
+        ],
+        "lockedMoves": [
+          "knockoff",
+          "cyberchase",
+          "voltswitch",
+          "dragonpulse"
+        ],
+        "level": 82      
+      }
+    ]
+  },
+
+  "dongorilla": {   
+    "nicknames": [   
+      "Miguel",
+      "OOGABOOGA",
+      "KongoDongo"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "insomnia",
+          "sheerforce"
+        ],
+        "items": [
+          "dongorillite",
+          "heavydutyboots",
+          "angelpowder"
+        ],
+        "moves": [     
+          "earthpower",
+          "fruitpunch",
+          "encore",
+          "taunt",
+          "knockoff",
+          "zenheadbutt",
+          "toxic",
+          "grasswhistle",
+          "elegy",
+          "bulkup"
+        ],
+        "lockedMoves": [   
+          "drumbeating",
+          "slackoff",
+          "drumpalm"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "insomnia"
+        ],
+        "items": [
+          "dongorillite"    
+        ],
+        "lockedMoves": [
+          "bulkup",
+          "drumbeating",
+          "drumpalm",
+          "slackoff"
+        ],
+        "level": 84      
+      },
+      {
+        "abilities": [
+          "insomnia"
+        ],
+        "items": [
+          "dongorillite"    
+        ],
+        "lockedMoves": [
+          "junglesong",
+          "drumroll",
+          "earthpower",
+          "synthesis"
+        ],
+        "level": 84      
+      },
+      {
+        "abilities": [
+          "insomnia"
+        ],
+        "items": [
+          "dongorillite"    
+        ],
+        "lockedMoves": [
+          "knockoff",
+          "drumbeating",
+          "elegy",
+          "earthquake"
+        ],
+        "level": 84      
+      }
+    ]
+  },
+
+  "shaunaph": {   
+    "nicknames": [   
+      "Michelangelo",
+      "Raphael",
+      "Donatello",
+      "Leonardo"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "gooey"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "lumberry",
+          "steamer",
+          "rockyhelmet",
+          "angelpowder"
+        ],
+        "moves": [     
+          "bulkup",
+          "hijumpkick",
+          "meatmash",
+          "sauna",
+          "suckerpunch"
+        ],
+        "lockedMoves": [   
+          "rapidspin",
+          "steamcharge"
+        ],
+        "level": 84       
+      },   
+      {
+        "abilities": [
+          "swiftswim"
+        ],
+        "items": [
+          "rainycapsule"    
+        ],
+        "lockedMoves": [
+          "bulkup",
+          "hijumpkick",
+          "meatmash",
+          "steamcharge"
+        ],
+        "level": 84      
+      }
+    ]
+  },
+
+"tuberm": {   
+    "nicknames": [   
+      "CallTheCops!",
+      "Get'Em Kiddo!",
+      "HIM"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "Swiftswim",
+          "hydration"
+        ],
+        "items": [
+          "eviolite", 
+          "angelpowder"
+        ],
+        "moves": [     
+          "encore",
+          "counter",
+          "protection",
+          "soak",
+          "faketears"
+        ],
+        "lockedMoves": [   
+          "tubebind",
+          "knockoff",
+          "surf"
+        ],
+        "level": 88
+      },
+      {
+        "abilities": [
+          "swiftswim"
+        ],
+        "items": [
+          "eviolite"    
+        ],
+        "lockedMoves": [
+          "powertrick",
+          "icepunch",
+          "knockoff",
+          "closecombat"
+        ],
+        "level": 90      
+      }
+    ]
+  },
+
+
+"tuberf": {   
+    "nicknames": [   
+      "CallTheCops!",
+      "Get'Em Kiddo!",
+      "HER"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "Swiftswim",
+          "hydration"
+        ],
+        "items": [
+          "eviolite", 
+          "angelpowder"
+        ],
+        "moves": [     
+          "knockoff",
+          "lightscreen",
+          "soak",
+          "encore",
+          "faketears"
+        ],
+        "lockedMoves": [   
+          "tubebind",
+          "tearfullook",
+          "surf"
+        ],
+        "level": 88
+      }
+    ]
+  },
+
+"beedrill": {   
+    "nicknames": [   
+      "Giga",
+      "Beeabeedrill"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "sniper"
+        ],
+        "items": [ 
+          "choicescarf",
+          "focussash"
+        ],
+        "moves": [     
+          "numbinginjection",
+          "drillrun",
+          "drillpeck",
+          "poisonjab",
+          "pester"
+        ],
+        "lockedMoves": [   
+          "anglestab",
+          "gigadrillbreak"
+        ],
+        "level": 84       
+      }
+    ]      
+  },
   "thereisonlyhell": {   
     "nicknames": [   
       "All is well",
@@ -12436,7 +12943,9 @@
         "unburden"
       ],
       "items": [
-        "normalgem"   
+        "normalgem",
+        "flyinggem",
+        "powerherb"
       ],
       "moves": [     
         "darkpulse",   
@@ -12452,7 +12961,8 @@
       ],
       "lockedMoves": [  
         "fakeout",
-        "acrobatics"
+        "acrobatics",
+        "megamissile"
       ],
       "level": 84         
     },   
@@ -18775,7 +19285,8 @@
           "bulletseed",
           "thousandyoung",
           "painsplit",
-          "milkdrain",
+          "milkdrink",
+          "gigadrain",
           "woodpike"
         ],
         "lockedMoves": [
@@ -18835,7 +19346,7 @@
         "lockedMoves": [
           "fatslam"
         ],
-        "level": 84
+        "level": 90
       }
     ]
   },

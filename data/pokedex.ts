@@ -57539,7 +57539,7 @@ bewilderbeast: {
         forme: "Mega",
        	types: ["Paper", "Flying"],
         baseStats: {hp: 75, atk: 140, def: 99, spa: 81, spd: 102, spe: 120},
-        abilities: {0: "Vast Knowledge"},
+        abilities: {0: "Stamina"},
 		heightm: 22,
         weightkg: 50.5,
         color: "White",
