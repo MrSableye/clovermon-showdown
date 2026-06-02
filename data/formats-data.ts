@@ -8545,6 +8545,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	crazidaze: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	observeda: {
 		tier: "Illegal",
 		isNonstandard: "Future",

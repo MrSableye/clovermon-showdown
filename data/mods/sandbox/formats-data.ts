@@ -13506,4 +13506,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+		crazidaze: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 };
