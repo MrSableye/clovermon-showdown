@@ -2715,6 +2715,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.5.",
 		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.5x damage.",
 	},
+	boundary2: {
+		name: "Boundary 2",
+		desc: "This Pokemon warns its opponents of what types of moves it has.",
+		shortDesc: "Warns its opponents of its move types.",
+
+		activate: "  [POKEMON] heralds the coming of [TYPELIST]!",
+	},
 	paletteswap: {
 		name: "Palette Swap",
 		desc: "If this Pokemon is an Ulmiraint, its type changes to match its held Paint or Z-Crystal.",

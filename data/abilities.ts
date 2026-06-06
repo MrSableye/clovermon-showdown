@@ -8318,6 +8318,47 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Boundary",
 		rating: 2.5,
 	},
+	boundary2: {
+		onStart(pokemon) {
+			const moveTypes = new Set(pokemon.moves
+				.map((move) => this.dex.moves.get(move))
+				.map((move) => move.type));
+
+			const flavorfulNames: Record<string, string> = {
+				normal: 'form',
+				grass: 'flora',
+				fire: 'flame',
+				water: 'flood',
+				electric: 'flux',
+				bug: 'fester',
+				flying: 'flock',
+				rock: 'facet',
+				ground: 'fissure',
+				fighting: 'fervor',
+				poison: 'filth',
+				psychic: 'focus',
+				ghost: 'fright',
+				ice: 'frost',
+				dragon: 'fury',
+				steel: 'forge',
+				dark: 'fiend',
+				fairy: 'fable',
+				'???': 'fiction',
+			};
+
+			const formatList = (items: string[]) => {
+				if (items.length === 0) return 'nothing';
+				if (items.length === 1) return items[0];
+				if (items.length === 2) return `${items[0]} and ${items[1]}`;
+				return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+			};
+
+			const flavorList = formatList([...moveTypes].map((type) => flavorfulNames[type.toLowerCase()] || type));
+			this.add('-activate', pokemon, 'ability: Boundary 2', `[typelist] ${flavorList}`);
+		},
+		name: "Boundary 2",
+		isNonstandard: "Future"
+	},
 	shortcircuit: {
 		onTryHit(target, source, move) {
 			if (target === source) return;
