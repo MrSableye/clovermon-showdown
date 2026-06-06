@@ -2717,8 +2717,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boundary2: {
 		name: "Boundary 2",
-		desc: "This Pokemon warns its opponents of what types of moves it has.",
-		shortDesc: "Warns its opponents of its move types.",
+		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.5 and warns its opponents of what types of moves it has.",
+		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.5x damage and it warns its opponents of its move types.",
 
 		activate: "  [POKEMON] heralds the coming of [TYPELIST]!",
 	},

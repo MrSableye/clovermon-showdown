@@ -8319,6 +8319,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2.5,
 	},
 	boundary2: {
+		onModifyDamage(damage, source, target, move) {
+			if (move && target.getMoveHitData(move).typeMod > 0) {
+				return this.chainModify(1.5);
+			}
+		},
 		onStart(pokemon) {
 			const moveTypes = new Set(pokemon.moves
 				.map((move) => this.dex.moves.get(move))
