@@ -2714,6 +2714,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Boundary",
 		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.5.",
 		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.5x damage.",
+		
+		activate: "  [POKEMON] heralds the coming of [TYPELIST]!",
 	},
 	boundary2: {
 		name: "Boundary 2",
