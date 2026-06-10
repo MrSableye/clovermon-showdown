@@ -8553,6 +8553,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	kityphon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kurilty: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	milleon: {
 		tier: "Illegal",
 		isNonstandard: "Future",

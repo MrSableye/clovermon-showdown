@@ -13495,6 +13495,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			inherit: true,
 			isNonstandard: null,
 			tier: "OU",
+			
 		},
 		observeda: {
 			inherit: true,
@@ -13507,6 +13508,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			tier: "OU",
 		},
 		crazidaze: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		kurilty: {
 			inherit: true,
 			isNonstandard: null,
 			tier: "OU",
