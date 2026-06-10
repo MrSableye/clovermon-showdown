@@ -39570,7 +39570,7 @@ crazidaze: {
 		name: "Crazidaze",
 		types: ["Poison", "Dark"],
 		gender: "N",
-		baseStats: {hp: 139, atk: 127, def: 47, spa: 131, spd: 47, spe: 113},
+		baseStats: {hp: 139, atk: 127, def: 43, spa: 131, spd: 47, spe: 113},
 		abilities: {0: "Beast Boost",  H: "Protean", S: "Boundary"},
 		heightm: 5.1,
 		weightkg: 667.5,
