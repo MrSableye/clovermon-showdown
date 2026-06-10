@@ -3067,7 +3067,7 @@ crazidaze: {
 futuresight: ["8L1"],
 chaos: ["8L1"],
 teleport: ["8L1"],
-batonpass: ["8L1"],
+recover: ["8L1"],
             },
 },
 sirinx: {
