@@ -8096,6 +8096,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Electro Shot",
 		shortDesc: "Raises user's Sp. Atk by 1 on turn 1. Hits turn 2. No charge in rain.",
 	},
+	prominencelance: {
+		name: "Prominence Lance",
+		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move, unless the target or its substitute was knocked out by this move. 50% Chance to Burn",
+		shortDesc: "Can't move next turn if target or sub is not KOed. 50% Burn chance.",
+	},
 	phasethrough: {
 		name: "Phase Through",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",

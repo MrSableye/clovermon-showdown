@@ -13517,4 +13517,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+		vignite: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		wickire: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 };
