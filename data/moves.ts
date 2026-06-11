@@ -77163,7 +77163,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 130,
 		category: "Physical",
-		name: "Prominaece Lance",
+		name: "Prominence Lance",
 		pp: 5,
 		priority: 0,
 		flags: {recharge: 1, protect: 1, mirror: 1, slicing: 1},
