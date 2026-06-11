@@ -2144,5 +2144,9 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 	eagleeye: {
 		inherit: true,
 		isNonstandard: null,
+		},
+	confinement: {
+		inherit: true,
+		isNonstandard: null,
 	},
 };

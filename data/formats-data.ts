@@ -8564,6 +8564,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	vignite: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	aethephagus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+		},
+	forgertri: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	wickire: {
 		tier: "Illegal",

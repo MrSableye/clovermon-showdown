@@ -8103,6 +8103,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 176,
 	},
+	confinement: {
+		onTakeItem(item, pokemon, source) {
+			if (!this.activeMove) throw new Error("Battle.activeMove is null");
+			if (!pokemon.hp || pokemon.item === 'stickybarb') return;
+			if ((source && source !== pokemon) || this.activeMove.id === 'knockoff') {
+				this.add('-activate', pokemon, 'ability: Confinement');
+				return false;
+			}
+		},
+		isBreakable: true,
+		name: "Confinement",
+		rating: 1.5,
+		num: 60,
+	},
 	bleatingheart: {
     name: "Bleating Heart",
     rating: 3,
@@ -22088,6 +22102,7 @@ abyssalbreaker: {
         if (!move.flags?.contact) return;
         if (!target.item || target.item === 'none') return;
         if (target.hasAbility('stickyhold')) return;
+		if (target.hasAbility('confinement')) return;
 
         this.add('-ability', source, 'Abyssal Breaker');
         target.takeItem(source);
