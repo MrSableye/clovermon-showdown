@@ -39610,7 +39610,7 @@ aethephagus: {
 forgertri: {
 		num: -8670,
 		name: "Forgertri",
-		types: ["Flying", "Steel"],
+		types: ["Steel", "Fire"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 78, atk: 96, def: 72, spa: 118, spd: 64, spe: 112},
 		abilities: {0: "Big Pecks", 1: "Clear Body", H: "Unburden"},
