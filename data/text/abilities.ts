@@ -2622,6 +2622,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Electrodiffusion",
 		shortDesc: "This Pokemon summons Electric Terrain for 5 Turns after using Charge.",
 	},
+	confinement: {
+		name: "Confinement",
+		desc: "This Pokemon cannot lose its held item due to another Pokemon's Ability or attack, unless the attack knocks out this Pokemon. A Sticky Barb will be transferred to other Pokemon regardless of this Ability.",
+		shortDesc: "This Pokemon cannot lose its held item due to another Pokemon's Ability or attack.",
+
+		block: "  [POKEMON]'s item is confined!",
+	},
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",

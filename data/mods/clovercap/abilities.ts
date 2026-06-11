@@ -430,4 +430,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	confinement: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

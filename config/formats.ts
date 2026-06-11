@@ -1453,7 +1453,8 @@ export const Formats: FormatList = [
 			'Pumping Heart', 'Historic Power', 'Bulb Clinch', 'Discovered Attack', 'Insight', 'Deep Blue', 'Cruiser', 'Shadow Stick', 'Apcora', 'Drosolstice', 'Cerius', 'Blooming Dusk', 'Alclione', 'Operapus', 'Hydro Steam',
 			'Astrattagon', 'move:firewall', 'Discipline', 'Supreme Overlord','Mortal Spin','Esenkra','Alkaleuf','Whidraw','Censer','Passage of Time','Resonant','Showdown','Eagle Eye','Pitch Black','Apomaza','Baalbek','Tsurugiri', 
 		    'Challiope','Colombite','Colombolt-Mega','Chicken Fiddle','Chording','Velvernean','Cruelty','Sharpsire','Apatambora','Third Degree','Well-Baked Body','Cristanium-Mega','Cristanite','Copolar-Mega','Copolarite','Chaos', 
-		    'Electro Shot','Mana Flux','Electrodiffusion','Cerael','Sirinx','Milleon','Observeda','Pastel Veil','Cabbot','Crazidaze','Kityphon','Kurilty','Vignite','Sharpness','Prominence Lance','Wickire'],
+		    'Electro Shot','Mana Flux','Electrodiffusion','Cerael','Sirinx','Milleon','Observeda','Pastel Veil','Cabbot','Crazidaze','Kityphon','Kurilty','Vignite','Sharpness','Prominence Lance','Wickire','Aethephagus','Confinement','Forgertri',
+		    'Bitter Blade'],
 	},
 	{
 		name: '[Gen 8 Cope Only] Anything Goes',

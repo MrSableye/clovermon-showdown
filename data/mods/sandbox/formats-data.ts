@@ -13527,4 +13527,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",
 		},
+		aethephagus: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		forgertri: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
 };
