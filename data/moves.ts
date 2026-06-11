@@ -77170,6 +77170,28 @@ export const Moves: {[moveid: string]: MoveData} = {
         type: "Electric",
 		isNonstandard: "Future",
     },
+	prominencelance: {
+		accuracy: 100,
+		basePower: 130,
+		category: "Physical",
+		name: "Prominence Lance",
+		pp: 5,
+		priority: 0,
+		flags: {recharge: 1, protect: 1, mirror: 1, slicing: 1},
+		onAfterHit(target, source) {
+			if (target && target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+		secondary: {
+			chance: 50,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Fire",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
     wakingchant: { 
         num: 668748,
         accuracy: 100,
