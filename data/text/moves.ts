@@ -8101,6 +8101,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move, unless the target or its substitute was knocked out by this move. 50% Chance to Burn",
 		shortDesc: "Can't move next turn if target or sub is not KOed. 50% Burn chance.",
 	},
+	deaththroes: {
+		name: "Death Throes",
+		desc: "The power of this move is 20 if X is 33 to 48, 40 if X is 17 to 32, 80 if X is 10 to 16, 100 if X is 5 to 9, 150 if X is 2 to 4, and 200 if X is 0 or 1, where X is equal to (user's current HP * 48 / user's maximum HP), rounded down.",
+		shortDesc: "More power the less HP the user has left.",
+	},
 	phasethrough: {
 		name: "Phase Through",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",

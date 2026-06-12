@@ -39130,7 +39130,7 @@ corperial: {
 		types: ["Fire", "Dark"],
 		gender: "N",
 		baseStats: {hp: 63, atk: 101, def: 38, spa: 106, spd: 63, spe: 122},
-		abilities: {0: "Dark Flame", H: "Second Shadow", S: "Shadow Shield"},
+		abilities: {0: "Dark Flame", 1: "Shadow Shield", H: "Cruelty", S: "Second Shadow"},
 		heightm: 2.4,
 		weightkg: 0.1,
 		color: "Black",
