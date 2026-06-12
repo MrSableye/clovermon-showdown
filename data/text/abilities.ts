@@ -2608,7 +2608,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	eagleeye: {
 		name: "Eagle Eye",
-		shortDesc: "This Pokemon's moves with more than 100% acc are boosted by 1.5x.",
+		shortDesc: "This Pokemon's moves with more than 100% accuracy do 1.3x damage.",
 	},
 	pitchblack: {
 		name: "Pitch Black",

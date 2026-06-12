@@ -8046,7 +8046,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
         if (move.accuracy === true) {
             this.debug('Eagle Eye boost (always-hit)');
-            return this.chainModify(1.5);
+            return this.chainModify(1.3);
         }
 
         if (typeof move.accuracy !== 'number') return;
@@ -8061,7 +8061,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
         if (typeof modifiedAccuracy === 'number' && modifiedAccuracy > 100) {
             this.debug('Eagle Eye boost (accuracy > 100)');
-            return this.chainModify(1.5);
+            return this.chainModify(1.3);
         }
     },
     name: "Eagle Eye",
