@@ -8046,7 +8046,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
         if (move.accuracy === true) {
             this.debug('Eagle Eye boost (always-hit)');
-            return this.chainModify(1.5);
+            return this.chainModify(1.3);
         }
 
         if (typeof move.accuracy !== 'number') return;
@@ -8061,7 +8061,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
         if (typeof modifiedAccuracy === 'number' && modifiedAccuracy > 100) {
             this.debug('Eagle Eye boost (accuracy > 100)');
-            return this.chainModify(1.5);
+            return this.chainModify(1.3);
         }
     },
     name: "Eagle Eye",
@@ -8117,6 +8117,51 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 1.5,
 		num: 60,
 	},
+	ignite: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Ignite boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Ignite boost');
+				return this.chainModify(1.5);
+			}
+			},
+		onSourceBasePowerPriority: 17,
+		onSourceBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Water') {
+				return this.chainModify(4);
+			}
+		},
+			onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fire') {
+					this.add('-immune', target, '[from] ability: Ignite');
+				}
+				return null;
+			},
+		name: "Ignite",
+		rating: 3.5,
+		num: 200,
+	},
+	fragile: {
+	onDamagingHit(damage, target, source, move) {
+		if (target.hp > 1) {
+			target.sethp(1);
+			this.add('-sethp', target, target.getHealth, '[from] ability: Fragile');
+		}
+	},
+	onTryHeal() {
+		return false;
+	},
+	name: "Fragile",
+	rating: -5,
+	num: -1,
+    },
 	bleatingheart: {
     name: "Bleating Heart",
     rating: 3,

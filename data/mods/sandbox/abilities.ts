@@ -2148,8 +2148,16 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 	eagleeye: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	confinement: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ignite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fragile: {
 		inherit: true,
 		isNonstandard: null,
 	},
