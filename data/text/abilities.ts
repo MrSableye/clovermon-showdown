@@ -2626,8 +2626,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Confinement",
 		desc: "This Pokemon cannot lose its held item due to another Pokemon's Ability or attack, unless the attack knocks out this Pokemon. A Sticky Barb will be transferred to other Pokemon regardless of this Ability.",
 		shortDesc: "This Pokemon cannot lose its held item due to another Pokemon's Ability or attack.",
-
-		block: "  [POKEMON]'s item is confined!",
+        block: "  [POKEMON]'s item is confined!",
+	},
+	ignite: {
+		name: "Ignite",
+		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Steel-type attack.Fire Immunity and Extremely Weak to Water",
+	},
+	fragile: {
+		name: "Fragile",
+		shortDesc: "This Pokemon HP is set to 1 whenever it is hit. Prevents the User from Healing",
 	},
 	blueblood: {
 		name: "Blue Blood",
