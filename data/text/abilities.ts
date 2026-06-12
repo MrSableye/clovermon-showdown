@@ -2630,7 +2630,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	ignite: {
 		name: "Ignite",
-		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Steel-type attack.Fire Immunity and Extremely Weak to Water",
+		shortDesc: "User's Fire-type moves deal 1.5x damage, Fire immunity, takes 4x damage from Water.",
 	},
 	fragile: {
 		name: "Fragile",
