@@ -39571,7 +39571,7 @@ vignite: {
 		types: ["Grass", "Steel"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 90, atk: 130, def: 115, spa: 50, spd: 90, spe: 50},
-		abilities: {0: "Ignite", H: "Battle Armor", S: "Blademaster"},
+		abilities: {0: "Ignition Armor", H: "Battle Armor", S: "Blademaster"},
 		heightm: 1.4,
 		weightkg: 266.2,
 		color: "Green",

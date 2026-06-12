@@ -8117,7 +8117,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 1.5,
 		num: 60,
 	},
-	ignite: {
+	ignitionarmor: {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Fire') {
@@ -8138,13 +8138,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(4);
 			}
 		},
-			onTryHit(target, source, move) {
+		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fire') {
+				if (!this.heal(target.baseMaxhp / 4)) {
 					this.add('-immune', target, '[from] ability: Ignite');
 				}
 				return null;
-			},
-		name: "Ignite",
+			}
+		},
+		name: "Ignition Armor",
 		rating: 3.5,
 		num: 200,
 	},

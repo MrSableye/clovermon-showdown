@@ -1444,7 +1444,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Inversion', 'Sand Veil', 'Shell Smash + Molterra','Ultraposition','ability:ignite',],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Inversion', 'Sand Veil', 'Shell Smash + Molterra','Ultraposition','Ignition Armor',],
 		unbanlist: [
 			'Ginoccite', 'Ginocchio-Mega', 'Salezerkite', 'Salezerker-Mega','Lemirethun-Mega', 'Lemirethite','Platylics-Mega','Platylicite','Glucurs-Mega','Glucusite','Camerex-Mega','Camerite','Konekoth-Mega','Konekothite',
 			'Molterra-Mega-X','Molterrite X','Shroomalicite','Shroomalice-Mega','Zillichinite','Zillichina-Mega','Sepulturite','Sepulture-Mega','Molterra-Mega-Y','Molterrite Y',
@@ -1454,7 +1454,7 @@ export const Formats: FormatList = [
 			'Astrattagon', 'move:firewall', 'Discipline', 'Supreme Overlord','Mortal Spin','Esenkra','Alkaleuf','Whidraw','Censer','Passage of Time','Resonant','Showdown','Eagle Eye','Pitch Black','Apomaza','Baalbek','Tsurugiri', 
 		    'Challiope','Colombite','Colombolt-Mega','Chicken Fiddle','Chording','Velvernean','Cruelty','Sharpsire','Apatambora','Third Degree','Well-Baked Body','Cristanium-Mega','Cristanite','Copolar-Mega','Copolarite','Chaos', 
 		    'Electro Shot','Mana Flux','Electrodiffusion','Cerael','Sirinx','Milleon','Observeda','Pastel Veil','Cabbot','Crazidaze','Kityphon','Kurilty','Vignite','Sharpness','Prominence Lance','Wickire','Aethephagus','Confinement','Forgertri',
-		    'Bitter Blade','Fragile','ability:ignite','Death Throes'], 
+		    'Bitter Blade','Fragile','Death Throes'], 
 	},
 	{
 		name: '[Gen 8 Cope Only] Anything Goes',
