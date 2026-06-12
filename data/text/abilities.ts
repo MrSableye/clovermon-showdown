@@ -2628,8 +2628,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon cannot lose its held item due to another Pokemon's Ability or attack.",
         block: "  [POKEMON]'s item is confined!",
 	},
-	ignite: {
-		name: "Ignite",
+	ignitionarmor: {
+		name: "Ignition Armor",
 		shortDesc: "User's Fire-type moves deal 1.5x damage, Fire immunity, takes 4x damage from Water.",
 	},
 	fragile: {

@@ -2149,7 +2149,7 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ignite: {
+	ignitionarmor: {
 		inherit: true,
 		isNonstandard: null,
 	},
