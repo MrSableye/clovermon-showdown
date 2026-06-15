@@ -39556,7 +39556,7 @@ kurilty: {
 		name: "Kurilty",
 		types: ["Dark", "Water"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 101, atk: 58, def: 56, spa: 48, spd: 200, spe: 22},
+		baseStats: {hp: 88, atk: 58, def: 54, spa: 48, spd: 200, spe: 22},
 		abilities: {0: "Cruelty", 1: "Pressure", H: "Rain Dish", S: "Wonder Skin"},
 		heightm: 1.9,
 		weightkg: 250.5,
