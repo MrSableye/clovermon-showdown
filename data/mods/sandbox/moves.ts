@@ -3685,6 +3685,34 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	prominencelance: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	blusteryfront: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	cloudburst: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	manaflux: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	cruiser: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	discipline: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	bulbclinch: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	psychofists: {
 		inherit: true,
 		isNonstandard: null,
