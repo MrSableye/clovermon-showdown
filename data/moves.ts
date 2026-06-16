@@ -65931,7 +65931,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {snatch: 1},
-		pseudoWeather: 'greehouse',
+		pseudoWeather: 'greehousegas',
 		condition: {
 			duration: 6,
 			onFieldStart(field, source) {
