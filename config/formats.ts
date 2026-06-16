@@ -1303,7 +1303,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Inversion', 'Sand Veil', 'Ultraposition'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Inversion', 'Sand Veil', 'Ultraposition','Sketch',],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] NFE',
@@ -1444,7 +1444,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Inversion', 'Sand Veil', 'Shell Smash + Molterra','Ultraposition','Ignition Armor',],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Inversion', 'Sand Veil', 'Shell Smash + Molterra','Ultraposition','Ignition Armor','Sketch',],
 		unbanlist: [
 			'Ginoccite', 'Ginocchio-Mega', 'Salezerkite', 'Salezerker-Mega','Lemirethun-Mega', 'Lemirethite','Platylics-Mega','Platylicite','Glucurs-Mega','Glucusite','Camerex-Mega','Camerite','Konekoth-Mega','Konekothite',
 			'Molterra-Mega-X','Molterrite X','Shroomalicite','Shroomalice-Mega','Zillichinite','Zillichina-Mega','Sepulturite','Sepulture-Mega','Molterra-Mega-Y','Molterrite Y',
