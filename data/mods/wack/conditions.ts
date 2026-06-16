@@ -1380,6 +1380,20 @@ gem: {
 			}
 		  },
 	},
+	univax: {
+		onSwitchIn(pokemon) {
+			if (!('starfield' in this.field.pseudoWeather) && pokemon.getItem().id === 'minigalaxy') {
+				this.field.addPseudoWeather('starfield');
+			}
+		},
+	},
+	cosmix: {
+		onSwitchIn(pokemon) {
+			if (!('starfield' in this.field.pseudoWeather) && pokemon.getItem().id === 'minigalaxy') {
+				this.field.addPseudoWeather('starfield');
+			}
+		},
+	},
 
 
 };

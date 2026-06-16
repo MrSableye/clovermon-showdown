@@ -2084,7 +2084,6 @@
           "intimidate"
         ],
         "items": [
-          "tempestcapsule", 
           "invertedcapsule",
           "gravitycapsule",
           "acidycapsule"
@@ -4004,7 +4003,7 @@
     "sets": [
       {
         "abilities": [
-          "godsendurace"
+          "godsendurance"
         ],
         "items": [
           "lifeorb"
@@ -6531,6 +6530,60 @@
         ],
         
         "level": 78
+      }
+    ]
+  },
+ "sufdonyut": {
+    "nicknames": [
+      "Simpsons Did It",
+      "Gummy Bears",
+      "Marge"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "thickfat",
+          "sugarrush"
+        ],
+        "items": [
+          "plainrock"
+        ],
+        "moves": [
+          "bakingpowderveil",
+          "recover",
+          "icingspray"
+        ],
+        "lockedMoves": [
+          "homersimpson"
+        ],
+        "level": 84
+      }
+    ]
+  },
+  "doughnutter": {
+    "nicknames": [
+      "Simp",
+      "Homer",
+      "WHY YOU LITTLE"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "guts",
+          "trace"
+        ],
+        "items": [
+          "plainrock"
+        ],
+        "moves": [
+          "bakingpowderveil",
+          "recover",
+          "donutring"
+        ],
+        "lockedMoves": [
+          "homersimpson"
+        ],
+        "level": 84
       }
     ]
   },
@@ -10536,7 +10589,7 @@
         "lockedMoves": [
           "venusburst"
         ],
-        "level": 84
+        "level": 80
       }
     ]
   },
@@ -11730,6 +11783,31 @@
         "level": 88
       }
     ]
+  },
+
+"trojorse": {   
+    "nicknames": [   
+      "Statiscally Confused"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "moldbreaker"
+        ],
+        "items": [ 
+          "trojorsite"
+        ],
+        "moves": [     
+          "trailblaze",
+          "foulplay"
+        ],
+        "lockedMoves": [   
+          "anaphylacticshock",
+          "barkpress"
+        ],
+        "level": 78       
+      }
+    ]      
   },
 
 "beedrill": {   
@@ -12932,6 +13010,9 @@
       }
     ]
   },
+
+
+  
   "solidsnake": {   
   "nicknames": [   
     "metalslug",       
