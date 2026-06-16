@@ -59512,6 +59512,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: -4,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		basePowerCallback(pokemon, target, move) {
+			const damagedByTarget = pokemon.attackedBy.some(
+				p => p.source === target && p.damage > 0 && p.thisTurn
+			);
+			if (damagedByTarget) {
+				this.debug('BP doubled for getting hit by ' + target);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		drain: [1, 5],
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
