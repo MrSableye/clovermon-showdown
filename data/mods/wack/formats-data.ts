@@ -176,7 +176,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	clefable: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 	},
 	vulpix: {
