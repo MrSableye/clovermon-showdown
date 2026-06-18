@@ -2121,6 +2121,30 @@
           "acrobatics",
           "nightslash"
         ],
+        "level": 99       
+      }
+    ]
+  },
+   "simislash": {  
+    "nicknames": [
+      "notpanslash"
+    ], 
+    "sets": [
+      {
+        "abilities": [   
+          "defiant"
+        ],
+        "items": [
+          "flyinggem"
+        ],
+        "moves": [     
+          "howl",    
+          "taunt"
+        ],
+        "lockedMoves": [   
+          "acrobatics",
+          "nightslash"
+        ],
         "level": 88       
       }
     ]
