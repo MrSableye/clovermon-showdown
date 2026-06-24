@@ -15647,7 +15647,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	headache: {
 		onModifySpAPriority: -1,
 		onModifySpA(spa, source, target, move) {
-			if (target?.volatiles['confusion']) {
+			if (source?.volatiles['confusion']) {
 				this.debug('Headache - increasing spatk');
 				return this.chainModify(2);
 			}
