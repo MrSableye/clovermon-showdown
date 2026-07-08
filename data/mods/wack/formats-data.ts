@@ -17653,12 +17653,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	mplusle: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	mminun: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	voltcube: {
@@ -20213,7 +20213,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	cclefable: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 	},
 	elecmon: {

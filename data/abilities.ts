@@ -14651,7 +14651,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const type2 = this.dex.moves.get(pokemon.moveSlots[1].id).type;
 			const types = [type1, type2];			
 			if (pokemon.hasType(types)) return false;
+			if (type1 === type2) {
+				this.add('-start', pokemon, 'typechange', type1, '[from] ability: Malleable');
+				pokemon.setType([type1]);
+			}
+			else {
 			this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Malleable');
+			pokemon.setType([type1,type2]);
+			}
 			
 		},
 		rating: 3.5,
@@ -15640,7 +15647,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	headache: {
 		onModifySpAPriority: -1,
 		onModifySpA(spa, source, target, move) {
-			if (target?.volatiles['confusion']) {
+			if (source?.volatiles['confusion']) {
 				this.debug('Headache - increasing spatk');
 				return this.chainModify(2);
 			}

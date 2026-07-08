@@ -19050,10 +19050,18 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		onModifyPriority(priority, source, target, move) {
 			if (move.category === 'Status') {
-				source.useItem();
+				
 				return priority + 1;
+				
+			}
+			
+		},
+		onAfterMoveSecondarySelf(target, source, move) {
+			if (move.category === 'Status') {
+				source.useItem();
 			}
 		},
+		
 		num: 67360,
 		isNonstandard: "Future",
 		rating: 1,
@@ -20446,6 +20454,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Misty Rock",
 		spritenum: 0,
 		num: 67484,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	mechanicrock: {
+		name: "Misty Rock",
+		spritenum: 0,
+		num: 67485,
 		isNonstandard: "Future",
 		rating: 1,
 	},
