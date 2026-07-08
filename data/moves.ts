@@ -28695,6 +28695,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move.type = pokemon.getTypes()[0];
 			}
 		},
+		
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -85805,18 +85806,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		volatileStatus: 'taunt',
+		volatileStatus: 'nitpick',
 		condition: {
 			duration: 3,
 			onStart(target) {
 				if (target.activeTurns && !this.queue.willMove(target)) {
 					this.effectState.duration++;
 				}
-				this.add('-start', target, 'move: Taunt');
+				this.add('-start', target, 'move: Nitpick');
 			},
 			onResidualOrder: 15,
 			onEnd(target) {
-				this.add('-end', target, 'move: Taunt');
+				this.add('-end', target, 'move: Nitpick');
 			},
 			onDisableMove(pokemon) {
 				for (const moveSlot of pokemon.moveSlots) {
@@ -85829,7 +85830,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onBeforeMovePriority: 5,
 			onBeforeMove(attacker, defender, move) {
 				if (!move.isZ && !move.isMax && move.category === 'Status' && move.id !== 'mefirst') {
-					this.add('cant', attacker, 'move: Taunt', move);
+					this.add('cant', attacker, 'move: Nitpick', move);
 					return false;
 				}
 			},
@@ -96702,7 +96703,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			this.actions.useMove(move, pokemon, target);
 			return null;
 		},
-		target: "scripted",
+		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
 	},

@@ -1433,6 +1433,160 @@
       }
     ]
   },
+  "kyotsufall": {   
+    "nicknames": [   
+      "WindAndWaves",
+      "WaveToGo!"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "beastboost",
+          "drizzle"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "stickybarb", 
+          "laggingtail", 
+          "angelpowder"
+        ],
+        "moves": [     
+          "ancienttsunami",
+          "psywave",
+          "waveshot",
+          "thousandwaves",
+          "burningwave",  
+          "lunarwave",  
+          "capsize",  
+          "sonicwave",  
+          "waveleaderfan",  
+          "thalassowave",  
+          "mistywave",  
+          "paleowave",  
+          "corpsewave",  
+          "adhesivewave",  
+          "shockwave",  
+          "thunderwave",  
+          "vacuumwave",  
+          "heatwave",  
+          "sludgewave",  
+          "psywave",  
+          "tropicalwave",  
+          "ghostwave",  
+          "windwave",  
+          "hightide",
+          "poseidonwave"    
+
+        ],
+        "lockedMoves": [   
+          "rainbowwave",
+          "surf"
+        ],
+        "level": 78     
+      },   
+      {
+        "abilities": [
+          "beastboost"
+        ],
+        "items": [
+          "powerherb"    
+        ],
+        "lockedMoves": [
+          "dimensionshamble",
+          "depthcharge",
+          "shadowstrike",
+          "recyclebeam"
+        ],
+        "level": 78    
+       }
+    ]
+  },  
+  "kirby": {   
+    "nicknames": [   
+      "PoyoPoyo!",
+      "Snt. Kirbius",
+      "IMurderGods."
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "protean",
+          "colorchange"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "angelpowder"
+        ],
+        "moves": [     
+          "virusdrain",
+          "spacedrain",
+          "preach",
+          "faithbeam",
+          "faithcharge",
+          "bind",
+          "vore",
+          "treasurechest",
+          "headsmash",
+          "lovelykiss",
+          "mysticdance",
+          "dragondance",
+          "teleportaway",
+          "lightspeed",
+          "warpaway"    
+
+        ],
+        "lockedMoves": [   
+          "revelationdance",
+          "slackoff"
+        ],
+        "level": 84      
+      },   
+      {
+        "abilities": [
+          "protean"
+        ],
+        "items": [
+          "powerherb"    
+        ],
+        "lockedMoves": [
+          "matteroftime",
+          "substitute",
+          "chaosmissile",
+          "fastforward"
+        ],
+        "level": 88     
+      }
+    ]
+  },     
+  "ashgaaaaaa": {   
+    "nicknames": [   
+      "AAAAAAAAAAAAAAAA",
+      "AAAAAAAA",
+      "AAAAAAAAAAAA"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "aftermath"
+        ],
+        "items": [
+          "c4", 
+          "sitrusberry",
+          "angelpowder"
+        ],
+        "moves": [     
+          "glare",
+          "pixiedust",
+          "cottonguard"
+        ],
+        "lockedMoves": [   
+          "curse",
+          "aargh"
+        ],
+        "level": 86
+      }
+    ]
+  },
   "fissiom": {
     "nicknames": [
       "Fissiom"
@@ -7343,7 +7497,7 @@
       }
     ]
   },
-  "mspain": {
+  "monsterpain": {
     "nicknames": [
       "Monster Pain"
     ],
@@ -11785,7 +11939,7 @@
     "sets": [
       {
         "abilities": [    
-          "Swiftswim",
+          "swiftswim",
           "hydration"
         ],
         "items": [
@@ -15439,7 +15593,7 @@
     "sets": [
       {
         "abilities": [
-          "magmaarmor"
+          "poisontouch"
         ],
         "items": [
           "leftovers"
