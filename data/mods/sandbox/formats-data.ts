@@ -13495,7 +13495,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			inherit: true,
 			isNonstandard: null,
 			tier: "OU",
-			
+		},
+		unvoile: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
 		},
 		observeda: {
 			inherit: true,

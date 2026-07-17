@@ -36293,7 +36293,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Salezerker"],
 		eggGroups: ["Monster", "Dragon"],
 		gen: 8,
-		creator: "Zac/GML",
+		creator: "Zac",
 	},
 	salezerker: {
 		num: 42006,
@@ -39620,6 +39620,20 @@ forgertri: {
 		eggGroups: ["Plains"],
 		gen: 8,
 		creator: "Cyaneedle",
+	},
+unvoile: {
+		num: -8690,
+		name: "Unvoile",
+		types: ["Psychic", "Fairy"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 40, atk: 41, def: 55, spa: 131, spd: 148, spe: 66},
+		abilities: {0: "Magician", 1: "Magic Guard", H: "Gluttony", S: "Trace"}, //Add memoir and Philosopher later
+		heightm: 0.3,
+		weightkg: 70.5,
+		color: "Purple",
+		eggGroups: ["Field"],
+		gen: 8,
+		creator: "Fiend Inc.",
 	},
 crazidaze: {
 		num: -8684,

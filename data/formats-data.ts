@@ -8557,6 +8557,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	unvoile: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kurilty: {
 		tier: "Illegal",
 		isNonstandard: "Future",
