@@ -8420,6 +8420,52 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Boundary",
 		rating: 2.5,
 	},
+	boundary2: {
+		onModifyDamage(damage, source, target, move) {
+			if (move && target.getMoveHitData(move).typeMod > 0) {
+				return this.chainModify(1.5);
+			}
+		},
+		onStart(pokemon) {
+			const moveTypes = new Set(pokemon.moves
+				.map((move) => this.dex.moves.get(move))
+				.map((move) => move.type));
+
+			const flavorfulNames: Record<string, string> = {
+				normal: 'form',
+				grass: 'flora',
+				fire: 'flame',
+				water: 'flood',
+				electric: 'flux',
+				bug: 'fester',
+				flying: 'flock',
+				rock: 'facet',
+				ground: 'fissure',
+				fighting: 'fervor',
+				poison: 'filth',
+				psychic: 'focus',
+				ghost: 'fright',
+				ice: 'frost',
+				dragon: 'fury',
+				steel: 'forge',
+				dark: 'fiend',
+				fairy: 'fable',
+				'???': 'fiction',
+			};
+
+			const formatList = (items: string[]) => {
+				if (items.length === 0) return 'nothing';
+				if (items.length === 1) return items[0];
+				if (items.length === 2) return `${items[0]} and ${items[1]}`;
+				return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+			};
+
+			const flavorList = formatList([...moveTypes].map((type) => flavorfulNames[type.toLowerCase()] || type));
+			this.add('-activate', pokemon, 'ability: Boundary 2', `[typelist] ${flavorList}`);
+		},
+		name: "Boundary 2",
+		isNonstandard: "Future"
+	},
 	shortcircuit: {
 		onTryHit(target, source, move) {
 			if (target === source) return;
@@ -8488,6 +8534,78 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 			   this.add('-ability', source, 'Electrodiffusion');
 		    },
+	},
+	philosopher: {
+    onStart(pokemon) {
+        if (pokemon.abilityState.philosopherIndex === undefined) {
+            pokemon.abilityState.philosopherIndex = 0;
+        }
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex];
+        this.add('-activate', pokemon, 'ability: Philosopher', currentType);
+    },
+    onSwitchOut(pokemon) {
+        if (pokemon.abilityState.philosopherIndex === undefined) return;
+        pokemon.abilityState.philosopherIndex = (pokemon.abilityState.philosopherIndex + 1) % 5;
+    },
+    onResidualOrder: 28,
+    onResidualSubOrder: 3,
+    onResidual(pokemon) {
+        if (pokemon.abilityState.philosopherIndex === undefined) return;
+        pokemon.abilityState.philosopherIndex = (pokemon.abilityState.philosopherIndex + 1) % 5;
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex];
+        this.add('-activate', pokemon, 'ability: Philosopher', currentType);
+    },
+    onModifyPriority(priority, pokemon, target, move) {
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex ?? 0];
+        if (move?.type === currentType) return priority + 1;
+    },
+    onBasePowerPriority: 8,
+    onBasePower(basePower, pokemon, target, move) {
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex ?? 0];
+        if (move.type === currentType) {
+            return this.chainModify(1.5);
+        }
+    },
+    name: "Philosopher",
+    isNonstandard: "Future",
+},
+	memoir: {
+		name: "Memoir",
+		rating: 4,
+	    num: 10005,
+	    isNonstandard: "Future",
+		onStart() {
+			this.effectState.lastStatusMove = '';
+		},
+
+		onAnyAfterMove(source, target, move) {
+			if (!move) return;
+			if (move.category !== 'Status') return;
+			if (source.fainted) return;
+			if (this.activeMoveActions > 1) return;
+
+			this.effectState.lastStatusMove = move.id;
+		},
+
+		onResidualOrder: 28,
+		onResidual(pokemon) {
+			const moveid: string = this.effectState.lastStatusMove;
+			if (!moveid || pokemon.fainted) return;
+
+			const move = this.dex.moves.get(moveid);
+
+			if (!move.exists) return;
+
+			this.add('-ability', pokemon, 'Memoir');
+
+			this.actions.useMove(move, pokemon);
+
+			this.effectState.lastStatusMove = '';
+		 },
 	},
 	pressurefuzed: {
 		name: "Pressure Fuzed",
@@ -11822,10 +11940,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onModifyTypePriority: -1,
 		onModifyType(move, source) {
-			if (move.hit === 1 && move.type === source.getTypes()[0]) 
+			if (move.hit > 0 && move.type === source.getTypes()[0]) 
 				 move.type = source.getTypes()[1]; 
-			else if (move.hit === 1 && move.type === source.getTypes()[1]) 
+			else if (move.hit >0 && move.type === source.getTypes()[1]) 
 				move.type = source.getTypes()[0]; 
+			
 		},
 
 		// Damage modifier implemented in BattleActions#modifyDamage()
@@ -14637,6 +14756,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		isNonstandard: "Future",
 	},
+
+	malleable: {
+		name: "Malleable",
+		onStart(pokemon) {
+			const type1 = this.dex.moves.get(pokemon.moveSlots[0].id).type;
+			const type2 = this.dex.moves.get(pokemon.moveSlots[1].id).type;
+			const types = [type1, type2];			
+			if (pokemon.hasType(types)) return false;
+			this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Malleable');
+			
+		},
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
+
+	
 
 	acapability: {
 		onSourceAfterFaint(length, target, source, effect) {

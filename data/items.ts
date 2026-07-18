@@ -20442,6 +20442,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	mistyrock: {
+		name: "Misty Rock",
+		spritenum: 0,
+		num: 67484,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	hasturite: {
 		name: "Hasturite",
 		spritenum: 577,

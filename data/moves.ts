@@ -62947,6 +62947,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -71555,7 +71566,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
 		onTry(source) {
-			if (source.status === 'frz' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')) return false;
+			if (source.status === 'frz') return false;
 
 			if (source.hp === source.maxhp) {
 				this.add('-fail', source, 'heal');
@@ -81112,8 +81123,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1},
-		secondary: {
-			chance: 100,
+		
 			onHit(target, source) {
 				if (source.hasAbility('strongjaw')) {
 					this.boost({def: -2}, target, source);
@@ -81123,7 +81133,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					this.boost({atk: 1}, source, source);
 				}
 			},
-		},
+		secondary: null,
 		target: "normal",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -85651,6 +85661,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		volatileStatus: 'taunt',
+		condition: {
+			duration: 3,
+			onStart(target) {
+				if (target.activeTurns && !this.queue.willMove(target)) {
+					this.effectState.duration++;
+				}
+				this.add('-start', target, 'move: Taunt');
+			},
+			onResidualOrder: 15,
+			onEnd(target) {
+				this.add('-end', target, 'move: Taunt');
+			},
+			onDisableMove(pokemon) {
+				for (const moveSlot of pokemon.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.id);
+					if (move.category === 'Status' && move.id !== 'mefirst') {
+						pokemon.disableMove(moveSlot.id);
+					}
+				}
+			},
+			onBeforeMovePriority: 5,
+			onBeforeMove(attacker, defender, move) {
+				if (!move.isZ && !move.isMax && move.category === 'Status' && move.id !== 'mefirst') {
+					this.add('cant', attacker, 'move: Taunt', move);
+					return false;
+				}
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -87727,6 +87766,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -88687,7 +88727,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				if (!target.hp) return;
+				let move: Move | ActiveMove | null = target.lastMove;
+				if (!move || move.isZ) return;
+				if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
+
+				const ppDeducted = target.deductPP(move.id, 3);
+				if (!ppDeducted) return;
+				this.add('-activate', target, 'move: Eerie Spell', move.name, ppDeducted);
+			},
+		},
 		target: "normal",
 		type: "Dragon",
 		isNonstandard: "Future",
@@ -88854,7 +88906,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, web: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Water",
 		isNonstandard: "Future",
@@ -88891,6 +88948,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "LetThemEatCake",
+		
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
@@ -89636,8 +89694,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(target, source, effect) {
-				if (source?.hasItem('mysticrock')|| source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
-					return 8;
+				if (source?.hasItem('mistyrock')|| source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
+					return 10;
 				}
 				return 5;
 			},
@@ -89646,14 +89704,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onBasePowerPriority: 1,
 			onBasePower(basePower, attacker, defender, move) {
-				if (move.flags['moon']) {
+				if (move.type === 'Fairy' && move.flags['moon']) {
 					this.debug('fullmoon increase');
-					return this.chainModify([1.4]);
+					return this.chainModify([2.1]);
 				}
-				if (move.type === 'Fairy') {
+				
+				else if (move.type === 'Fairy') {
 					this.debug('fullmoon increase');
 					return this.chainModify([1.5]);
 				}
+				
+				else if (move.flags['moon']) {
+					this.debug('fullmoon increase');
+					return this.chainModify([1.4]);
+				}
+				
 			},
 			
 			onFieldResidualOrder: 27,
@@ -89744,7 +89809,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Frozen Iceberg",
 		pp: 15,
 		priority: 0,
+		onTry(source) {
+			return source.status === 'frz';
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
+		overrideOffensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -90100,6 +90169,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 30,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		volatileStatus: 'aciddrench',
+		onTryHit(target) {
+			if (target.volatiles['aciddrench']) return false;
+		},
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Acid Drench');
+			},
+			onNegateImmunity(pokemon, type) {
+				if (pokemon.hasType('Steel') && type === 'Poison') return false;
+			},
+			
+		},
+		boosts: {
+			spd: -1,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -90795,6 +90881,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 40,
 		priority: 3,
 		flags: {protect: 1, mirror: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('bleed');
+				target.addVolatile('curse');
+				target.addVolatile('block');
+				target.addVolatile('healblock');
+				target.trySetStatus('psn');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Magic",
@@ -93868,6 +93963,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		heal: [1, 2],
+		boosts: {
+			atk: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Chaos",

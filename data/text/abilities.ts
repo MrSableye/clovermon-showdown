@@ -2628,6 +2628,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon cannot lose its held item due to another Pokemon's Ability or attack.",
         block: "  [POKEMON]'s item is confined!",
 	},
+	philosopher: {
+		name: "Philosopher",
+		shortDesc: "Gives +1 priority and 1.5x power to Fire, Water, Grass, Ground or Steel moves. Rotates.",
+	},
+	memoir: {
+		name: "Memoir",
+		shortDesc: "This Pokemon uses the last status move used at the end of the turn.",
+	},
 	ignitionarmor: {
 		name: "Ignition Armor",
 		shortDesc: "User's Fire-type moves deal 1.5x damage, Fire immunity, takes 4x damage from Water.",
@@ -2732,6 +2740,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Boundary",
 		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.5.",
 		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.5x damage.",
+		
+		activate: "  [POKEMON] heralds the coming of [TYPELIST]!",
+	},
+	boundary2: {
+		name: "Boundary 2",
+		desc: "This Pokemon's attacks that are super effective against the target have their damage multiplied by 1.5 and warns its opponents of what types of moves it has.",
+		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.5x damage and it warns its opponents of its move types.",
+
+		activate: "  [POKEMON] heralds the coming of [TYPELIST]!",
 	},
 	paletteswap: {
 		name: "Palette Swap",
@@ -3728,8 +3745,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Immune to sound-based moves. Opponent loses 1/4 of its max HP if it uses a sound-based move.",
 	},
 	sapiophile: {
-		name: "sapiophile",
+		name: "Sapiophile",
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Psychic-type attack. This Pokemon is healed 1/4 by Psychic, 1/8 by Psychic Terain.",
+	},
+	malleable: {
+		name: "Malleable",
+		shortDesc: "This Pokemon's typing becomes the types of the 1st 2 moves in its movesets.",
 	},
 	sufferasihave: {
 		name: "Suffer As I Have",
