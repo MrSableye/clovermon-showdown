@@ -39627,7 +39627,7 @@ unvoile: {
 		types: ["Psychic", "Fairy"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 40, atk: 41, def: 55, spa: 131, spd: 148, spe: 66},
-		abilities: {0: "Magician", 1: "Magic Guard", H: "Gluttony", S: "Philosoper"}, //Add memoir and Philosopher later
+		abilities: {0: "Magician", 1: "Magic Guard", H: "Gluttony", S: "Philosopher"}, //Add memoir and Philosopher later
 		heightm: 0.3,
 		weightkg: 70.5,
 		color: "Purple",
