@@ -39625,13 +39625,13 @@ unvoile: {
 		num: -8690,
 		name: "Unvoile",
 		types: ["Psychic", "Fairy"],
-		genderRatio: {M: 0.5, F: 0.5},
+		gender: "N",
 		baseStats: {hp: 40, atk: 41, def: 55, spa: 131, spd: 148, spe: 66},
-		abilities: {0: "Magician", 1: "Magic Guard", H: "Gluttony", S: "Trace"}, //Add memoir and Philosopher later
-		heightm: 0.3,
-		weightkg: 70.5,
+		abilities: {0: "Magician", 1: "Magic Guard", H: "Memoir", S: "Philosopher"}, //Add memoir and Philosopher later
+		heightm: 0.5,
+		weightkg: 5.5,
 		color: "Purple",
-		eggGroups: ["Field"],
+		eggGroups: ["Fairy"],
 		gen: 8,
 		creator: "Fiend Inc.",
 	},

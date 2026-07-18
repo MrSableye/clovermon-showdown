@@ -2630,7 +2630,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	philosopher: {
 		name: "Philosopher",
-		shortDesc: "This Pokemons secondary type rotates between Fire, Water, Grass, Steel and Ground each turn and have their priority increased by 1.",
+		shortDesc: "Gives +1 priority and 1.5x power to Fire, Water, Grass, Ground or Steel moves. Rotates.",
 	},
 	memoir: {
 		name: "Memoir",
