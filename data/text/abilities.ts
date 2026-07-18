@@ -2643,6 +2643,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	fragile: {
 		name: "Fragile",
 		shortDesc: "This Pokemon HP is set to 1 whenever it is hit. Prevents the User from Healing",
+		},
+	philosopher: {
+		name: "Philosopher",
+		shortDesc: "Priority on different typings depending on the turn.",
 	},
 	blueblood: {
 		name: "Blue Blood",

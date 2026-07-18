@@ -8164,6 +8164,47 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	rating: -5,
 	num: -1,
     },
+	philosopher: {
+    name: "Philosopher",
+    rating: 3,
+    num: 10003,
+    isNonstandard: "Future",
+    onStart(pokemon) {
+        if (pokemon.abilityState.philosopherIndex === undefined) {
+            pokemon.abilityState.philosopherIndex = 0;
+        }
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex];
+        this.add('-activate', pokemon, 'ability: Philosopher', currentType);
+    },
+    onSwitchOut(pokemon) {
+        if (pokemon.abilityState.philosopherIndex === undefined) return;
+        pokemon.abilityState.philosopherIndex = (pokemon.abilityState.philosopherIndex + 1) % 5;
+    },
+    onResidualOrder: 28,
+    onResidualSubOrder: 3,
+    onResidual(pokemon) {
+        if (pokemon.abilityState.philosopherIndex === undefined) return;
+        pokemon.abilityState.philosopherIndex = (pokemon.abilityState.philosopherIndex + 1) % 5;
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex];
+        this.add('-activate', pokemon, 'ability: Philosopher', currentType);
+    },
+    onModifyPriority(priority, pokemon, target, move) {
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex ?? 0];
+        if (move?.type === currentType) return priority + 1;
+    },
+    onBasePowerPriority: 8,
+    onBasePower(basePower, pokemon, target, move) {
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex ?? 0];
+        if (move.type === currentType) {
+            return this.chainModify(1.5);
+        }
+    },
+
+	},
 	bleatingheart: {
     name: "Bleating Heart",
     rating: 3,
