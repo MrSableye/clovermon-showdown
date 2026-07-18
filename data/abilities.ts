@@ -8494,6 +8494,78 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			   this.add('-ability', source, 'Electrodiffusion');
 		    },
 	},
+	philosopher: {
+    onStart(pokemon) {
+        if (pokemon.abilityState.philosopherIndex === undefined) {
+            pokemon.abilityState.philosopherIndex = 0;
+        }
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex];
+        this.add('-activate', pokemon, 'ability: Philosopher', currentType);
+    },
+    onSwitchOut(pokemon) {
+        if (pokemon.abilityState.philosopherIndex === undefined) return;
+        pokemon.abilityState.philosopherIndex = (pokemon.abilityState.philosopherIndex + 1) % 5;
+    },
+    onResidualOrder: 28,
+    onResidualSubOrder: 3,
+    onResidual(pokemon) {
+        if (pokemon.abilityState.philosopherIndex === undefined) return;
+        pokemon.abilityState.philosopherIndex = (pokemon.abilityState.philosopherIndex + 1) % 5;
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex];
+        this.add('-activate', pokemon, 'ability: Philosopher', currentType);
+    },
+    onModifyPriority(priority, pokemon, target, move) {
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex ?? 0];
+        if (move?.type === currentType) return priority + 1;
+    },
+    onBasePowerPriority: 8,
+    onBasePower(basePower, pokemon, target, move) {
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex ?? 0];
+        if (move.type === currentType) {
+            return this.chainModify(1.5);
+        }
+    },
+    name: "Philosopher",
+    isNonstandard: "Future",
+},
+	memoir: {
+		name: "Memoir",
+		rating: 4,
+	    num: 10005,
+	    isNonstandard: "Future",
+		onStart() {
+			this.effectState.lastStatusMove = '';
+		},
+
+		onAnyAfterMove(source, target, move) {
+			if (!move) return;
+			if (move.category !== 'Status') return;
+			if (source.fainted) return;
+			if (this.activeMoveActions > 1) return;
+
+			this.effectState.lastStatusMove = move.id;
+		},
+
+		onResidualOrder: 28,
+		onResidual(pokemon) {
+			const moveid: string = this.effectState.lastStatusMove;
+			if (!moveid || pokemon.fainted) return;
+
+			const move = this.dex.moves.get(moveid);
+
+			if (!move.exists) return;
+
+			this.add('-ability', pokemon, 'Memoir');
+
+			this.actions.useMove(move, pokemon);
+
+			this.effectState.lastStatusMove = '';
+		 },
+	},
 	pressurefuzed: {
 		name: "Pressure Fuzed",
 		onModifyMove(move, pokemon, target) {
