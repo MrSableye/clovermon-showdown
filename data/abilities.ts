@@ -8164,6 +8164,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	rating: -5,
 	num: -1,
     },
+	treasury: {
+    name: "Treasury",
+    rating: 3,
+    num: 10003,
+    isNonstandard: "Future",
+    onSourceAfterFaint(length, target, source, effect) {
+        if (source.item) return;
+        if (effect && effect.effectType === 'Move') {
+            this.add('-item', source, this.dex.items.get('bignugget'), '[from] ability: Treasury');
+            source.setItem('bignugget');
+        }
+    },
+	},
 	philosopher: {
     name: "Philosopher",
     rating: 3,
