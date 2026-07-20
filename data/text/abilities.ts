@@ -2636,6 +2636,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Memoir",
 		shortDesc: "This Pokemon uses the last status move used at the end of the turn.",
 	},
+	treasury: {
+		name: "Treasury",
+		shortDesc: "This Pokemon gains the item Big Nugget if it attacks and knocks out another Pokemon.",
+	},
 	ignitionarmor: {
 		name: "Ignition Armor",
 		shortDesc: "User's Fire-type moves deal 1.5x damage, Fire immunity, takes 4x damage from Water.",

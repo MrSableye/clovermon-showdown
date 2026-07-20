@@ -8561,6 +8561,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	ucorsair: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	gallegator: {
 		tier: "Illegal",
 		isNonstandard: "Future",
