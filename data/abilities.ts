@@ -8151,18 +8151,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 200,
 	},
 	fragile: {
-	onDamagingHit(damage, target, source, move) {
-		if (target.hp > 1) {
-			target.sethp(1);
-			this.add('-sethp', target, target.getHealth, '[from] ability: Fragile');
-		}
-	},
-	onTryHeal() {
-		return false;
-	},
-	name: "Fragile",
-	rating: -5,
-	num: -1,
+    onDamagePriority: -30,
+    onDamage(damage, target, source, effect) {
+        if (target.hp > 1 && effect && effect.effectType === 'Move') {
+            this.add('-ability', target, 'Fragile');
+            return target.hp - 1;
+        }
+    },
+    isBreakable: true,
+    name: "Fragile",
+    isNonstandard: "Future",
     },
 	treasury: {
     name: "Treasury",
@@ -8175,20 +8173,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             this.add('-item', source, this.dex.items.get('bignugget'), '[from] ability: Treasury');
             source.setItem('bignugget');
         }
-    },
 	},
+    },
 	philosopher: {
-    name: "Philosopher",
-    rating: 3,
-    num: 10003,
-    isNonstandard: "Future",
     onStart(pokemon) {
         if (pokemon.abilityState.philosopherIndex === undefined) {
             pokemon.abilityState.philosopherIndex = 0;
         }
         const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
         const currentType = types[pokemon.abilityState.philosopherIndex];
-        this.add('-activate', pokemon, 'ability: Philosopher', currentType);
+        this.add('-message', `${pokemon.name} is empowering ${currentType}-type moves!`);
     },
     onSwitchOut(pokemon) {
         if (pokemon.abilityState.philosopherIndex === undefined) return;
@@ -8201,7 +8195,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         pokemon.abilityState.philosopherIndex = (pokemon.abilityState.philosopherIndex + 1) % 5;
         const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
         const currentType = types[pokemon.abilityState.philosopherIndex];
-        this.add('-activate', pokemon, 'ability: Philosopher', currentType);
+        this.add('-message', `${pokemon.name} is empowering ${currentType}-type moves!`);
     },
     onModifyPriority(priority, pokemon, target, move) {
         const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
@@ -8213,9 +8207,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
         const currentType = types[pokemon.abilityState.philosopherIndex ?? 0];
         if (move.type === currentType) {
-            return this.chainModify(1.5);
+            return this.chainModify(1.33);
         }
     },
+    name: "Philosopher",
+    isNonstandard: "Future",
 
 	},
 	bleatingheart: {
