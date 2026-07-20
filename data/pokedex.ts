@@ -39669,7 +39669,7 @@ ucorsair: {
 		types: ["Fighting", "Water"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 71, atk: 105, def: 113, spa: 105, spd: 77, spe: 43},
-		abilities: {0: "Shell Armor", 1: "Treasury", H: "Jewelry", S: "Reasonant"}, 
+		abilities: {0: "Shell Armor", 1: "Treasury", H: "Jewelry", S: "Resonant"}, 
 		heightm: 0.96,
 		weightkg: 206.6,
 		color: "Green",
