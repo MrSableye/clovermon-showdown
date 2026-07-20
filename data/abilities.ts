@@ -8158,6 +8158,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             return target.hp - 1;
         }
     },
+	onTryHeal(damage, target, source, effect) {
+		return false;
+	},
     isBreakable: true,
     name: "Fragile",
     isNonstandard: "Future",
