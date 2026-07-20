@@ -2630,7 +2630,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	philosopher: {
 		name: "Philosopher",
-		shortDesc: "Rotates between and Gives +1 priority and 1.5x power to Fire, Water, Grass, Steel or Ground moves in that order each turn.",
+		shortDesc: "Fire, Water, Grass, Steel or Ground have +1 priority and 1.33x power depending on turn.",
 	},
 	memoir: {
 		name: "Memoir",
