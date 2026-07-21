@@ -8560,6 +8560,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	unvoile: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	eurorasol: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	ucorsair: {
 		tier: "Illegal",

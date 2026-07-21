@@ -446,4 +446,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fogbow: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

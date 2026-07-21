@@ -13516,6 +13516,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",	
 		},
+		eurorasol: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
+		},
 		observeda: {
 			inherit: true,
 			isNonstandard: null,
