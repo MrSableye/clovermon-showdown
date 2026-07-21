@@ -2642,7 +2642,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	fogbow: {
 		name: "Fogbow",
-		shortDesc: "If Misty Terrain is active, this Pokemon's Defenses are multiplied by 1.5.",
+		shortDesc: "This Pokemon's Defense and Special Defense are boosted by 1.5x in Misty Terrain.",
 	},
 	ignitionarmor: {
 		name: "Ignition Armor",
