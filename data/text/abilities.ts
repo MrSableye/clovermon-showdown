@@ -2640,6 +2640,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Treasury",
 		shortDesc: "This Pokemon gains the item Big Nugget if it attacks and knocks out another Pokemon.",
 	},
+	fogbow: {
+		name: "Fogbow",
+		shortDesc: "This Pokemon's Defense and Special Defense are boosted by 1.5x in Misty Terrain.",
+	},
 	ignitionarmor: {
 		name: "Ignition Armor",
 		shortDesc: "User's Fire-type moves deal 1.5x damage, Fire immunity, takes 4x damage from Water.",

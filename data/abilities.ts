@@ -8177,6 +8177,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             source.setItem('bignugget');
         }
 	},
+	},
+	fogbow: {
+    name: "Fogbow",
+    rating: 3,
+    num: 10003,
+    isNonstandard: "Future",
+    onModifyDefPriority: 6,
+        onModifyDef(pokemon) {
+            if (this.field.isTerrain('mistyterrain')) return this.chainModify(1.5);
+        },
+        onModifySpDPriority: 6,
+        onModifySpD(pokemon) {
+            if (this.field.isTerrain('mistyterrain')) return this.chainModify(1.5);
+        },
     },
 	philosopher: {
     onStart(pokemon) {
