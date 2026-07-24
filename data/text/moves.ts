@@ -8108,7 +8108,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		},
 	timejaunt: {
 		name: "Time Jaunt",
-		desc: "The next move has +5 prio. Can't be used consecutively.",
+		desc: "The user's next move has +5 priority and breaks protection. If this move is successful, it breaks through the target's Baneful Bunker, Detect, King's Shield, Protect, or Spiky Shield for this turn, allowing other Pokemon to attack the target normally. If the target's side is protected by Crafty Shield, Mat Block, Quick Guard, or Wide Guard, that protection is also broken for this turn and other Pokemon may attack the target's side normally. Cannot be used twice in a row.",
 		shortDesc: "Next move has +5 prio. Can't be used consecutively.",
 	},
 	phasethrough: {
