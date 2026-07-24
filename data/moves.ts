@@ -76726,10 +76726,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	fiveofakind: {
 		accuracy: 100,
-		basePower: 20,
+		basePower: 25,
 		category: "Special",
 		name: "Five of a Kind",
-		pp: 10,
+		pp: 15,
 		priority: 0,
 		flags: {bite: 1, protect: 1, mirror: 1},
 		multihit: [2, 5],
