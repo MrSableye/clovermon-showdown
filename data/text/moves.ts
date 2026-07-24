@@ -8105,6 +8105,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Death Throes",
 		desc: "The power of this move is 20 if X is 33 to 48, 40 if X is 17 to 32, 80 if X is 10 to 16, 100 if X is 5 to 9, 150 if X is 2 to 4, and 200 if X is 0 or 1, where X is equal to (user's current HP * 48 / user's maximum HP), rounded down.",
 		shortDesc: "More power the less HP the user has left.",
+		},
+	timejaunt: {
+		name: "Time Jaunt",
+		desc: "The next move has +5 prio. Can't be used consecutively.",
+		shortDesc: "Next move has +5 prio. Can't be used consecutively.",
 	},
 	phasethrough: {
 		name: "Phase Through",

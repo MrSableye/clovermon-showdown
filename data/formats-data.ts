@@ -8561,6 +8561,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 		},
+	geldiarch: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+		},
 	eurorasol: {
 		tier: "Illegal",
 		isNonstandard: "Future",

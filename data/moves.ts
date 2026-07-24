@@ -77226,6 +77226,49 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {basePower: 160},
 		contestType: "Cool",
 	},
+	 timejaunt: {
+        num: 0,
+        accuracy: true,
+        basePower: 50,
+        category: "Special",
+        name: "Time Jaunt",
+        pp: 10,
+        priority: 0,
+        flags: {protect: 1, mirror: 1, cantusetwice: 1},
+        self: {
+            volatileStatus: 'timejaunt',
+        },
+        condition: {
+            duration: 2,
+            onStart(pokemon) {
+                this.add('-start', pokemon, 'move: Time Jaunt', '[silent]');
+            },
+            onRestart(pokemon) {
+                this.effectState.duration = 2;
+                this.add('-start', pokemon, 'move: Time Jaunt', '[silent]');
+            },
+            onModifyPriority(priority, source, target, move) {
+                if (move.category !== 'Status') return priority + 5;
+            },
+            onModifyMove(move, pokemon) {
+                if (move.category !== 'Status') {
+                    move.willCrit = true;
+                    move.infiltrates = true;
+                    move.breaksProtect = true;
+                }
+            },
+            onAfterMove(pokemon, target, move) {
+                pokemon.removeVolatile('timejaunt');
+            },
+            onEnd(pokemon) {
+                this.add('-end', pokemon, 'move: Time Jaunt', '[silent]');
+            },
+        },
+        secondary: null,
+        target: "normal",
+        type: "Ice",
+        isNonstandard: "Future",
+    },
     wakingchant: { 
         num: 668748,
         accuracy: 100,
