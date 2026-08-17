@@ -13530,6 +13530,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			inherit: true,
 			isNonstandard: null,
 			tier: "OU",	
+			},
+		paleodrift: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
 		},
 		observeda: {
 			inherit: true,
