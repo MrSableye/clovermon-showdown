@@ -13520,8 +13520,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			inherit: true,
 			isNonstandard: null,
 			tier: "OU",	
-			},
+		},
 		geldiarch: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
+		},
+		amygdas: {
 			inherit: true,
 			isNonstandard: null,
 			tier: "OU",	
