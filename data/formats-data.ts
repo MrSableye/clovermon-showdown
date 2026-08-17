@@ -8581,6 +8581,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	amygdas: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kurilty: {
 		tier: "Illegal",
 		isNonstandard: "Future",
