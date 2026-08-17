@@ -3562,7 +3562,6 @@ zenheadbutt: ["8L1"],
 discipline: ["8L1"],
 manaflux: ["8L1"],
 eggbomb: ["8L1"],
-gravapple: ["8L1"],
             },
 			},
 			paleodrift: {
