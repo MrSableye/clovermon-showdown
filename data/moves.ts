@@ -77291,6 +77291,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Electric",
+		isNonstandard: "Future",
 		contestType: "Tough",
 	},
     wakingchant: { 
