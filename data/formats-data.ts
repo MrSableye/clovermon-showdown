@@ -8589,6 +8589,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	neodrift: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kurilty: {
 		tier: "Illegal",
 		isNonstandard: "Future",
