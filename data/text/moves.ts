@@ -8105,11 +8105,16 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Death Throes",
 		desc: "The power of this move is 20 if X is 33 to 48, 40 if X is 17 to 32, 80 if X is 10 to 16, 100 if X is 5 to 9, 150 if X is 2 to 4, and 200 if X is 0 or 1, where X is equal to (user's current HP * 48 / user's maximum HP), rounded down.",
 		shortDesc: "More power the less HP the user has left.",
-		},
+	},
 	timejaunt: {
 		name: "Time Jaunt",
 		desc: "The user's next move has +5 priority and breaks protection. If this move is successful, it breaks through the target's Baneful Bunker, Detect, King's Shield, Protect, or Spiky Shield for this turn, allowing other Pokemon to attack the target normally. If the target's side is protected by Crafty Shield, Mat Block, Quick Guard, or Wide Guard, that protection is also broken for this turn and other Pokemon may attack the target's side normally. Cannot be used twice in a row.",
 		shortDesc: "Next move has +5 prio. Can't be used consecutively.",
+	},
+	auxiliarypower: {
+		name: "Auxiliary Power",
+		desc: "Has a 10% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
+		shortDesc: "10% chance to raise all stats by 1 (not acc/eva).",
 	},
 	phasethrough: {
 		name: "Phase Through",
