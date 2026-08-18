@@ -77273,7 +77273,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 60,
 		category: "Special",
-		name: "Auxilary Power",
+		name: "Auxiliary Power",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},

@@ -8111,8 +8111,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The next move has +5 prio. Can't be used consecutively.",
 		shortDesc: "Next move has +5 prio. Can't be used consecutively.",
 	},
-	auxilarypower: {
-		name: "Auxilary Power",
+	auxiliarypower: {
+		name: "Auxiliary Power",
 		desc: "Has a 10% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
 		shortDesc: "10% chance to raise all stats by 1 (not acc/eva).",
 	},
