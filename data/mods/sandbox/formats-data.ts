@@ -13546,6 +13546,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			isNonstandard: null,
 			tier: "OU",	
 		},
+		attacoma: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
+		},
 		observeda: {
 			inherit: true,
 			isNonstandard: null,

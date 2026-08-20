@@ -8592,8 +8592,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	neodrift: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-		},
+	},
 	karakili: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	attacoma: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

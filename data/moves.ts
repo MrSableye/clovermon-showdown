@@ -77294,6 +77294,44 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		contestType: "Tough",
 	},
+	rockwave: {
+		accuracy: 90,
+		basePower: 100,
+		category: "Special",
+		name: "Rock Wave",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		isNonstandard: "Future",
+		type: "Rock",
+		contestType: "Tough",
+	},
+	bunrakublade: {
+        num: 0,
+        accuracy: 90,
+        basePower: 50,
+        category: "Physical",
+        name: "Bunraku Blade",
+        pp: 15,
+        priority: 1,
+        flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+        onAfterMoveSecondarySelf(pokemon, target, move) {
+            if (!target || target.fainted || target.hp <= 0) {
+                for (const side of pokemon.side.foeSidesWithConditions()) {
+                    side.addSideCondition('spikes');
+                }
+            }
+        },
+        secondary: null,
+        target: "normal",
+        type: "Steel",
+        isNonstandard: "Future",
+    },
     wakingchant: { 
         num: 668748,
         accuracy: 100,
