@@ -3817,6 +3817,7 @@ workup: ["8L1"],
 discipline: ["8L1"],
 shadowstick: ["8L1"],
 pixieprank: ["8L1"],
+bunrakublade: ["8L1"],
             },
 			},
 			attacoma: {

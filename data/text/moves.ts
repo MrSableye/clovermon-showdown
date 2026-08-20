@@ -8115,6 +8115,16 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Auxiliary Power",
 		desc: "Has a 10% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
 		shortDesc: "10% chance to raise all stats by 1 (not acc/eva).",
+		},
+	rockwave: {
+		name: "Rock Wave",
+		desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the target flinch.",
+	},
+	bunrakublade: {
+		name: "Bunraku Blade",
+		desc: "Sets a layer of spikes if this move knocks out the target.",
+		shortDesc: "Sets Spikes if this KOes the target.",
 	},
 	phasethrough: {
 		name: "Phase Through",
