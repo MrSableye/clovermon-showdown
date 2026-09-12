@@ -21987,8 +21987,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		target: "normal",
 		type: "Dark",
-		onAfterHit(target, source) {
-			this.damage(Math.round(source.maxhp / 2), source, source, this.dex.conditions.get('Overbite'), true);
+		mindBlownRecoil: true,
+		onAfterMove(pokemon, target, move) {
+			if (move.mindBlownRecoil && !move.multihit) {
+				const hpBeforeRecoil = pokemon.hp;
+				this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Overbite'), true);
+				if (pokemon.hp <= pokemon.maxhp / 2 && hpBeforeRecoil > pokemon.maxhp / 2) {
+					this.runEvent('EmergencyExit', pokemon, pokemon);
+				}
+			}
 		},
 		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 		isNonstandard: "Future",
