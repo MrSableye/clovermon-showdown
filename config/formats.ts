@@ -1455,7 +1455,7 @@ export const Formats: FormatList = [
 		    'Challiope','Colombite','Colombolt-Mega','Chicken Fiddle','Chording','Velvernean','Cruelty','Sharpsire','Apatambora','Third Degree','Well-Baked Body','Cristanium-Mega','Cristanite','Copolar-Mega','Copolarite','Chaos', 
 		    'Electro Shot','Mana Flux','Electrodiffusion','Cerael','Sirinx','Milleon','Observeda','Pastel Veil','Cabbot','Crazidaze','Kityphon','Kurilty','Vignite','Sharpness','Prominence Lance','Wickire','Aethephagus','Confinement','Forgertri',
 		    'Bitter Blade','Fragile','Death Throes','Unvoile','Memoir','Philosopher','Caergian','Gallegator','Treasury','Ucorsair','Eurorasol','Fogbow','Geldiarch','Time Jaunt','Amygdas','Paleodrift','Neodrift','Auxiliary Power','Karakili',
-			'Attacoma','Rock Wave','Bunraku Blade','Electro Drift','Collision Course'], 
+			'Attacoma','Rock Wave','Bunraku Blade','Electro Drift','Collision Course', 'Chaudron', 'Ketobasis', 'Ithomoff', 'Dayami', 'Powder Gift'], 
 	},
 	{
 		name: '[Gen 8 Cope Only] Anything Goes',
