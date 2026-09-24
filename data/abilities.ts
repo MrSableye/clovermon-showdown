@@ -7936,6 +7936,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	num: 10004,
 	isNonstandard: "Future",
     },
+	powdergift: {
+		name: "Powder Gift",
+		onSwitchOut(pokemon) {
+			this.add('-ability', pokemon, 'Powder Gift');
+			this.add('-message', `This ability is currently offline and will not function.`);
+			this.add('-message', `Please contact 'Evil Money The Fiend' for customer support for this ability.`);
+		},
+	rating: 3,
+	isNonstandard: "Future",
+    },
 	steelyresolve: {
 		name: "Steely Resolve",
 		onSourceModifyDamage(damage, source, target, move) {
