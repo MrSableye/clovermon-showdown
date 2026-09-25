@@ -2611,6 +2611,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mechanicrock: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	hulklearite: {
 		inherit: true,
 		isNonstandard: null,

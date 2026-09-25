@@ -952,8 +952,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (!target.setType(type)) return false;
 			this.add('-start', target, 'typechange', type);
 		},
-		isNonstandard: null,
 
+		
 		onAfterHit(target) {
 			if (this.field.getPseudoWeather('cyberspace')) {
 				this.boost({
@@ -963,9 +963,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 					spd: 1,
 					spe: 1,
 				});
+			} else {
+				
 			}
 		},
+		isNonstandard: null,
+
+		
 	},
+
+	
 	conversion2: {
 		inherit: true,
 		pp: 5,
@@ -1001,6 +1008,20 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	cosmicpower: {	// TODO: Add +1 speed boost during Starfield
 		inherit: true,
 		type: "Cosmic",
+		onHit(target) {
+			if (this.field.getPseudoWeather('starfield')) {
+				this.boost({
+					def: 1,
+					spd: 1,
+					spe: 1,
+				});
+			} else {
+				this.boost({
+					def: 1,
+					spd: 1,
+				});
+			}
+		},
 		isNonstandard: null,
 	},
 	craftyshield: {
@@ -19090,6 +19111,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 40,
 		priority: 6,
 		flags: {protect: 1, mirror: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('bleed');
+				target.addVolatile('curse');
+				target.addVolatile('block');
+				target.addVolatile('healblock');
+				target.trySetStatus('psn');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Chaos",

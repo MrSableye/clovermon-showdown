@@ -4521,6 +4521,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Black Rock",
 		desc: "Extends the duration of the move Midnight used by the holder.",
 	},
+	mechanicrock: {
+		name: "Mechanic Rock",
+		desc: "Extends the duration of the move Factory used by the holder.",
+	},
 	hulklearite: {
 		name: "Hulklearite",
 		desc: "Mega Hulklear.",
@@ -5248,10 +5252,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 	steamyrock: {
 		name: "Steamy Rock",
 		desc: "Extends the duration of the move Sauna used by the holder.",
-	},
-	mechanicrock: {
-		name: "Mechanic Rock",
-		desc: "Extends the duration of the move Factory used by the holder.",
 	},
 	featherrock: {
 		name: "Feather Rock",
