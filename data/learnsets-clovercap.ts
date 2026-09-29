@@ -1943,6 +1943,7 @@ disable: ["8L1"],
 					mistyexplosion: ["8L1"],
 					terrainpulse: ["8L1"],
 					lunarimpact: ["8T"],
+					mop: ["8T"],
 				},
 			},
 			empidae: {
