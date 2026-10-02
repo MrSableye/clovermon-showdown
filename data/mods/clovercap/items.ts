@@ -172,10 +172,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	lampoffortunes: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	joyfulmask: {
 		inherit: true,
 		isNonstandard: null,
