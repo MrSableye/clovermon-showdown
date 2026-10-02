@@ -931,6 +931,7 @@ export const Aliases: {[alias: string]: string} = {
 	zong: "Bronzong",
 	zor: "Scizor",
 	zyg: "Zygarde",
+	chowder: "Chaudron",
 
 	// ultra beast codenames
 	ub01: "Nihilego",
