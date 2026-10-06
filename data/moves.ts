@@ -88569,6 +88569,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		volatileStatus: 'leechingfangs',
+		condition: {
+			onStart(pokemon, source, effect) {
+				
+					this.add('-start', pokemon, 'Leeching Fangs');
+					this.add('-message', 'Biting moves drain health!');
+			},
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (target.hasAbility('liquidooze') && move && move.flags['bite']) {
+				this.damage(source.baseMaxhp / 8, source, target);
+			} else if (source && source !== target && move && move.flags['bite'] && !source.forceSwitchFlag) {
+				this.heal(source.baseMaxhp / 8, source, source);
+			}
+		},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Leeching Fangs', '[silent]');
+			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Blood",
