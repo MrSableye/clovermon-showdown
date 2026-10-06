@@ -88794,7 +88794,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		
+		secondary: {
+			chance: 90,
+			volatileStatus: 'confusion',
+			onHit(target, source, move) {
+				if (source?.hasAbility('dazzling')) {
+					this.boost({accuracy: -1}, target, source);
+				}
+			},
+		},
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -93547,7 +93556,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					def: 2,
+				},
+			},
+		},
+			onHit(target) {
+				target.addVolatile('flammable');
+			},
 		target: "normal",
 		type: "Dragon",
 		isNonstandard: "Future",
