@@ -88186,6 +88186,39 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		sideCondition: 'glassceiling',
+		condition: {
+			duration: 6,
+			durationCallback(source, effect) {
+				if (source?.hasItem('reflectiverock') || source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 12;
+				}
+				return 6;
+			},
+			onSideStart(target, source) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-fieldstart', 'move: Glass Ceiling', '[of] ' + source, '[persistent]');
+				} else {
+					this.add('-fieldstart', 'move: Glass Ceiling', '[of] ' + source);
+				}
+			},
+			onChangeBoost(boost, target, source, effect) {
+			if (effect && effect.id === 'zpower') return;
+			let i: BoostID;
+			for (i in boost) {
+				boost[i]! *= -1;
+			}
+		},
+			
+			// Item suppression implemented in Pokemon.ignoringItem() within sim/pokemon.js
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 6,
+			onSideEnd() {
+				this.add('-fieldend', 'move: Glass Ceiling', '[of] ' + this.effectState.source);
+			},
+		},
+		
 		secondary: null,
 		target: "foeSide",
 		type: "Glass",
@@ -88216,29 +88249,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		sideCondition: 'pressuretime',
 		condition: {
-			duration: 5,
-			durationCallback(target, source, effect) {
-				if (source?.hasItem('darkclay') || source?.hasAbility('builder')) {
-					return 8;
-				}
-				return 5;
-			},
-			onAnyModifyDamage(damage, source, target, move) {
-				if (target !== source && this.effectState.target.hasAlly(target) && this.getCategory(move) === 'Special') {
-					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
-						this.debug('Dark Screen weaken');
-						if (this.activePerHalf > 1) return this.chainModify([2732, 4096]);
-						return this.chainModify(0.5);
-					}
-				}
-			},
+			duration: 6,
+			
 			onSideStart(side) {
-				this.add('-sidestart', side, 'move: Dark Screen');
+				this.add('-sidestart', side, 'move: Pressure Time');
 			},
+			
+			onDeductPP(target, source) {
+			if (target.isAlly(source)) return;
+			return 1;
+		},
+			
 			onSideResidualOrder: 26,
 			onSideResidualSubOrder: 2,
 			onSideEnd(side) {
-				this.add('-sideend', side, 'move: Dark Screen');
+				this.add('-sideend', side, 'move: Pressure Time');
 			},
 		},
 		secondary: null,
