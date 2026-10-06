@@ -21987,8 +21987,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		target: "normal",
 		type: "Dark",
-		onAfterHit(target, source) {
-			this.damage(Math.round(source.maxhp / 2), source, source, this.dex.conditions.get('Overbite'), true);
+		mindBlownRecoil: true,
+		onAfterMove(pokemon, target, move) {
+			if (move.mindBlownRecoil && !move.multihit) {
+				const hpBeforeRecoil = pokemon.hp;
+				this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Overbite'), true);
+				if (pokemon.hp <= pokemon.maxhp / 2 && hpBeforeRecoil > pokemon.maxhp / 2) {
+					this.runEvent('EmergencyExit', pokemon, pokemon);
+				}
+			}
 		},
 		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 		isNonstandard: "Future",
@@ -76597,47 +76604,44 @@ export const Moves: {[moveid: string]: MoveData} = {
         contestType: "Tough",
     }, 
 	discipline: {
-		accuracy: 100,
-		basePower: 70,
-		category: "Physical",
-		name: "Discipline",
-		pp: 20,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, contact: 1},
-		onModifyType(move, pokemon) {
-			let type = pokemon.getTypes()[0];
-			if (type === "Bird") type = "???";
-			move.type = type;
-		},
-		onTryHit(target, source) {
-			if (target === source || target.volatiles['dynamax']) return false;
+        accuracy: 100,
+        basePower: 70,
+        category: "Physical",
+        name: "Discipline",
+        pp: 20,
+        priority: 0,
+        flags: {contact: 1, protect: 1, mirror: 1},
+        onModifyType(move, pokemon) {
+            move.type = pokemon.types[0];
+        },
+        onTryHit(target, source) {
+            if (target === source || target.volatiles['dynamax']) return false;
 
-			const additionalBannedSourceAbilities = [
-				// Zen Mode included here for compatability with Gen 5-6
-				'commander', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',
-			];
-			if (
-				target.ability === source.ability ||
-				target.getAbility().isPermanent || target.ability === 'truant' ||
-				source.getAbility().isPermanent || additionalBannedSourceAbilities.includes(source.ability)
-			) {
-				return false;
-			}
-		},
-		onHit(target, source) {
-			const oldAbility = target.setAbility(source.ability);
-			if (oldAbility) {
-				this.add('-ability', target, target.getAbility().name, '[from] move: Entrainment');
-				if (!target.isAlly(source)) target.volatileStaleness = 'external';
-				return;
-			}
-			return oldAbility as false | null;
-		},
-		secondary: null,
-		target: "normal",
-		type: "Normal",
-		isNonstandard: "Future",
-	},
+            const additionalBannedSourceAbilities = [
+                // Zen Mode included here for compatability with Gen 5-6
+                'commander', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',
+            ];
+            if (
+                target.getAbility().isPermanent || target.ability === 'truant' ||
+                source.getAbility().isPermanent || additionalBannedSourceAbilities.includes(source.ability)
+            ) {
+                return false;
+            }
+        },
+        onHit(target, source) {
+            const oldAbility = target.setAbility(source.ability);
+            if (oldAbility) {
+                this.add('-ability', target, target.getAbility().name, '[from] move: Discipline');
+                if (!target.isAlly(source)) target.volatileStaleness = 'external';
+                return;
+            }
+            return oldAbility as false | null;
+        },
+        secondary: null,
+        target: "normal",
+        type: "Normal",
+        isNonstandard: "Future",
+    },
     deepblue: {
 		accuracy: true,
 		basePower: 55,
@@ -76871,10 +76875,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	fiveofakind: {
 		accuracy: 100,
-		basePower: 20,
+		basePower: 25,
 		category: "Special",
 		name: "Five of a Kind",
-		pp: 10,
+		pp: 15,
 		priority: 0,
 		flags: {bite: 1, protect: 1, mirror: 1},
 		multihit: [2, 5],
@@ -77371,6 +77375,112 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {basePower: 160},
 		contestType: "Cool",
 	},
+	 timejaunt: {
+        num: 0,
+        accuracy: true,
+        basePower: 50,
+        category: "Special",
+        name: "Time Jaunt",
+        pp: 10,
+        priority: 0,
+        flags: {protect: 1, mirror: 1, cantusetwice: 1},
+        self: {
+            volatileStatus: 'timejaunt',
+        },
+        condition: {
+            duration: 2,
+            onStart(pokemon) {
+                this.add('-start', pokemon, 'move: Time Jaunt', '[silent]');
+            },
+            onRestart(pokemon) {
+                this.effectState.duration = 2;
+                this.add('-start', pokemon, 'move: Time Jaunt', '[silent]');
+            },
+            onModifyPriority(priority, source, target, move) {
+                if (move.category !== 'Status') return priority + 5;
+            },
+            onModifyMove(move, pokemon) {
+                if (move.category !== 'Status') {
+                    move.willCrit = true;
+                    move.infiltrates = true;
+                    move.breaksProtect = true;
+                }
+            },
+            onAfterMove(pokemon, target, move) {
+                pokemon.removeVolatile('timejaunt');
+            },
+            onEnd(pokemon) {
+                this.add('-end', pokemon, 'move: Time Jaunt', '[silent]');
+            },
+        },
+        secondary: null,
+        target: "normal",
+        type: "Ice",
+        isNonstandard: "Future",
+    },
+	auxiliarypower: {
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Auxiliary Power",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Electric",
+		isNonstandard: "Future",
+		contestType: "Tough",
+	},
+	rockwave: {
+		accuracy: 90,
+		basePower: 100,
+		category: "Special",
+		name: "Rock Wave",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		isNonstandard: "Future",
+		type: "Rock",
+		contestType: "Tough",
+	},
+	bunrakublade: {
+        num: 0,
+        accuracy: 100,
+        basePower: 50,
+        category: "Physical",
+        name: "Bunraku Blade",
+        pp: 15,
+        priority: 1,
+        flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+        onAfterMoveSecondarySelf(pokemon, target, move) {
+            if (!target || target.fainted || target.hp <= 0) {
+                for (const side of pokemon.side.foeSidesWithConditions()) {
+                    side.addSideCondition('spikes');
+                }
+            }
+        },
+        secondary: null,
+        target: "normal",
+        type: "Steel",
+        isNonstandard: "Future",
+    },
     wakingchant: { 
         num: 668748,
         accuracy: 100,

@@ -8557,6 +8557,50 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	unvoile: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+		},
+	geldiarch: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+		},
+	eurorasol: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ucorsair: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	gallegator: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	caergian: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	amygdas: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	paleodrift: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	neodrift: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	karakili: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	attacoma: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kurilty: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -8578,6 +8622,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	milleon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	chaudron: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ketobasis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ithomoff: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	dayami: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

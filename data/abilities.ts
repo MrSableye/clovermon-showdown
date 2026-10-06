@@ -7774,8 +7774,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const targets = this.sides.flatMap((side) => side.allies(true));
 			for (const target of targets) {
 				if (!target || !target.hp || pokemon === target) continue;
-				if (!target.hasType(['Fire'])) {
-					this.damage(target.baseMaxhp / 12, target, pokemon);
+				if (!target.hasType(['Fire']))
+				if (!target.hasType(['Water'])) {
+					this.damage(target.baseMaxhp / 16, target, pokemon);
 				}
 			}
 		},
@@ -7934,6 +7935,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 	rating: 3,
 	num: 10004,
+	isNonstandard: "Future",
+    },
+	powdergift: {
+		name: "Powder Gift",
+		onSwitchOut(pokemon) {
+			this.add('-ability', pokemon, 'Powder Gift');
+			this.add('-message', `This ability is currently offline and will not function.`);
+			this.add('-message', `Please contact 'Evil Money The Fiend' for customer support for this ability.`);
+		},
+	rating: 3,
 	isNonstandard: "Future",
     },
 	steelyresolve: {
@@ -8151,19 +8162,86 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 200,
 	},
 	fragile: {
-	onDamagingHit(damage, target, source, move) {
-		if (target.hp > 1) {
-			target.sethp(1);
-			this.add('-sethp', target, target.getHealth, '[from] ability: Fragile');
-		}
-	},
-	onTryHeal() {
+    onDamagePriority: -30,
+    onDamage(damage, target, source, effect) {
+        if (target.hp > 1 && effect && effect.effectType === 'Move') {
+            this.add('-ability', target, 'Fragile');
+            return target.hp - 1;
+        }
+    },
+	onTryHeal(damage, target, source, effect) {
 		return false;
 	},
-	name: "Fragile",
-	rating: -5,
-	num: -1,
+    isBreakable: true,
+    name: "Fragile",
+    isNonstandard: "Future",
     },
+	treasury: {
+    name: "Treasury",
+    rating: 3,
+    num: 10003,
+    isNonstandard: "Future",
+    onSourceAfterFaint(length, target, source, effect) {
+        if (source.item) return;
+        if (effect && effect.effectType === 'Move') {
+            this.add('-item', source, this.dex.items.get('bignugget'), '[from] ability: Treasury');
+            source.setItem('bignugget');
+        }
+	},
+	},
+	fogbow: {
+    name: "Fogbow",
+    rating: 3,
+    num: 10003,
+    isNonstandard: "Future",
+    onModifyDefPriority: 6,
+        onModifyDef(pokemon) {
+            if (this.field.isTerrain('mistyterrain')) return this.chainModify(1.5);
+        },
+        onModifySpDPriority: 6,
+        onModifySpD(pokemon) {
+            if (this.field.isTerrain('mistyterrain')) return this.chainModify(1.5);
+        },
+    },
+	philosopher: {
+    onStart(pokemon) {
+        if (pokemon.abilityState.philosopherIndex === undefined) {
+            pokemon.abilityState.philosopherIndex = 0;
+        }
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex];
+        this.add('-message', `${pokemon.name} is empowering ${currentType}-type moves!`);
+    },
+    onSwitchOut(pokemon) {
+        if (pokemon.abilityState.philosopherIndex === undefined) return;
+        pokemon.abilityState.philosopherIndex = (pokemon.abilityState.philosopherIndex + 1) % 5;
+    },
+    onResidualOrder: 28,
+    onResidualSubOrder: 3,
+    onResidual(pokemon) {
+        if (pokemon.abilityState.philosopherIndex === undefined) return;
+        pokemon.abilityState.philosopherIndex = (pokemon.abilityState.philosopherIndex + 1) % 5;
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex];
+        this.add('-message', `${pokemon.name} is empowering ${currentType}-type moves!`);
+    },
+    onModifyPriority(priority, pokemon, target, move) {
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex ?? 0];
+        if (move?.type === currentType) return priority + 1;
+    },
+    onBasePowerPriority: 8,
+    onBasePower(basePower, pokemon, target, move) {
+        const types = ['Fire', 'Water', 'Grass', 'Steel', 'Ground'];
+        const currentType = types[pokemon.abilityState.philosopherIndex ?? 0];
+        if (move.type === currentType) {
+            return this.chainModify(1.33);
+        }
+    },
+    name: "Philosopher",
+    isNonstandard: "Future",
+
+	},
 	bleatingheart: {
     name: "Bleating Heart",
     rating: 3,
@@ -8493,6 +8571,40 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 			   this.add('-ability', source, 'Electrodiffusion');
 		    },
+	},
+	memoir: {
+		name: "Memoir",
+		rating: 4,
+	    num: 10005,
+	    isNonstandard: "Future",
+		onStart() {
+			this.effectState.lastStatusMove = '';
+		},
+
+		onAnyAfterMove(source, target, move) {
+			if (!move) return;
+			if (move.category !== 'Status') return;
+			if (source.fainted) return;
+			if (this.activeMoveActions > 1) return;
+
+			this.effectState.lastStatusMove = move.id;
+		},
+
+		onResidualOrder: 28,
+		onResidual(pokemon) {
+			const moveid: string = this.effectState.lastStatusMove;
+			if (!moveid || pokemon.fainted) return;
+
+			const move = this.dex.moves.get(moveid);
+
+			if (!move.exists) return;
+
+			this.add('-ability', pokemon, 'Memoir');
+
+			this.actions.useMove(move, pokemon);
+
+			this.effectState.lastStatusMove = '';
+		 },
 	},
 	pressurefuzed: {
 		name: "Pressure Fuzed",

@@ -148,7 +148,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	eternabeam: {
 		inherit: true,
-		isNonstandard: null,
+		basePower: 180,
+	},
+	prismaticlaser: {
+		inherit: true,
+		basePower: 180,
 	},
 	expandingforce: {
 		inherit: true,
@@ -336,7 +340,27 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	meteorassault: {
 		inherit: true,
-		isNonstandard: null,
+		basePower: 170,
+	},
+	hydrocannon: {
+		inherit: true,
+		basePower: 170,
+	},
+	blastburn: {
+		inherit: true,
+		basePower: 170,
+	},
+	frenzyplant: {
+		inherit: true,
+		basePower: 170,
+	},
+	roaroftime: {
+		inherit: true,
+		basePower: 170,
+	},
+	rockwrecker: {
+		inherit: true,
+		basePower: 170,
 	},
 	meteorbeam: {
 		accuracy: 100,
@@ -705,8 +729,27 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		noSketch: true,
 	},
 	steelbeam: {
-		inherit: true,
-		isNonstandard: null,
+		num: 796,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Steel Beam",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		mindBlownRecoil: true,
+		onAfterMove(pokemon, target, move) {
+			if (move.mindBlownRecoil && !move.multihit) {
+				const hpBeforeRecoil = pokemon.hp;
+				this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Steel Beam'), true);
+				if (pokemon.hp <= pokemon.maxhp / 2 && hpBeforeRecoil > pokemon.maxhp / 2) {
+					this.runEvent('EmergencyExit', pokemon, pokemon);
+				}
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
 	},
 	steelroller: {
 		num: 798,
@@ -1750,6 +1793,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	tropkick: {
 		inherit: true,
 		basePower: 85,
+	},
+	blazekick: {
+		inherit: true,
+		accuracy: 100,
 	},
 	meteorhammer: {
 		inherit: true,

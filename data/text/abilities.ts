@@ -2628,14 +2628,34 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon cannot lose its held item due to another Pokemon's Ability or attack.",
         block: "  [POKEMON]'s item is confined!",
 	},
+	philosopher: {
+		name: "Philosopher",
+		shortDesc: "Fire, Water, Grass, Steel or Ground have +1 priority and 1.33x power depending on turn.",
+	},
+	memoir: {
+		name: "Memoir",
+		shortDesc: "This Pokemon uses the last status move used at the end of the turn.",
+	},
+	treasury: {
+		name: "Treasury",
+		shortDesc: "This Pokemon gains the item Big Nugget if it attacks and knocks out another Pokemon.",
+	},
+	fogbow: {
+		name: "Fogbow",
+		shortDesc: "This Pokemon's Defense and Special Defense are boosted by 1.5x in Misty Terrain.",
+	},
 	ignitionarmor: {
 		name: "Ignition Armor",
 		shortDesc: "User's Fire-type moves deal 1.5x damage, Fire immunity, takes 4x damage from Water.",
 	},
 	fragile: {
 		name: "Fragile",
-		shortDesc: "This Pokemon HP is set to 1 whenever it is hit. Prevents the User from Healing",
-	},
+		shortDesc: "This Pokemon's HP is set to 1 whenever it is hit. Prevents the user from healing.",
+		},
+	powdergift: {
+		name: "Powder Gift",
+		shortDesc: "This Pokemon uses Powder when switching in and out. Presently nonfunctional.",
+		},
 	blueblood: {
 		name: "Blue Blood",
 		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",

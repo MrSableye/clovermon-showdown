@@ -13495,7 +13495,61 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			inherit: true,
 			isNonstandard: null,
 			tier: "OU",
-			
+		},
+		unvoile: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
+		},
+		caergian: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
+		},
+		gallegator: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",
+		},
+		ucorsair: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
+		},
+		eurorasol: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
+		},
+		geldiarch: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
+		},
+		amygdas: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
+		},
+		paleodrift: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
+		},
+		neodrift: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
+		},
+		karakili: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
+		},
+		attacoma: {
+			inherit: true,
+			isNonstandard: null,
+			tier: "OU",	
 		},
 		observeda: {
 			inherit: true,
