@@ -8398,6 +8398,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (effect?.name === "Frozen Song" || "Brackish Gash" || "Withering Bloom") {
 					return 2;
 				}
+				if (effect?.name === "Gash") {
+					return 8;
+				}
 				if (source?.hasAbility('persistent')) {
 					this.add('-activate', source, 'ability: Persistent', '[move] Heal Block');
 					return 7;
@@ -36676,6 +36679,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 				},
 			},
 		},
+		onHit(target, source, move) {
+			if (this.field.getPseudoWeather('graveyard')) {
+				source.side.addSideCondition('tailwind');
+			} 
+		},
 		target: "normal",
 		type: "Zombie",
 		isNonstandard: "Future",
@@ -43616,6 +43624,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		onModifyMove(move, attacker) {
+			if (this.field.getPseudoWeather('birdflock')) {
+				move.multihit = 5;
+			}
+		},
 		multihit: [2, 5],
 		target: "normal",
 		type: "Flying",
@@ -52074,9 +52087,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Gash",
 		pp: 10,
 		priority: 0,
-		secondary: {
-			chance: 100,
-			volatileStatus: 'bleed',
+		onHit(target) {
+			target.addVolatile('bleed');
+			target.addVolatile('healblock');
 		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		target: "normal",
@@ -53255,8 +53268,37 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		pseudoWeather: 'steadywind',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('featherrock')|| source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
+					return 10;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Steady Wind', '[of] ' + source);
+			},
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Flying') {
+					this.debug('steadywind increase');
+					return this.chainModify([1.5]);
+				}
+				if (move.type === 'Wind') {
+					this.debug('steadywind increase');
+					return this.chainModify([0.75]);
+				}
+			},
+			
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Steady Wind');
+			},
+		},
 		secondary: null,
-		target: "allySide",
+		target: "all",
 		type: "Flying",
 		isNonstandard: "Future",
 	},
@@ -79507,8 +79549,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1, gravity: 1},
 		volatileStatus: 'magnetrise',
-		boosts: {
-			spe: 2,
+		
+		onHit(target) {
+			if (this.field.getPseudoWeather('steadywind')) {
+				this.boost({
+					atk: 1,
+					spa: 1,
+					spe: 2,
+				});
+			} else {
+				this.boost({
+					spe: 2,
+				});
+			}
 		},
 		target: "self",
 		type: "Flying",
@@ -87191,7 +87244,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {},
-		secondary: null,
 		boosts: {
 			spe: 1,
 		},
@@ -87214,6 +87266,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-fieldend', 'move: Flying Sport');
 			},
 		},
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				if (this.field.getPseudoWeather('steadywind')) {
+					this.boost({atk: 1, spa: 1}, source, source);
+				} else {
+					
+				}
+			},
+			},
+
 		target: "all",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -88464,6 +88527,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {pulse: 1},
+		pseudoWeather: 'birdflock',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('featherrock')|| source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
+					return 10;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Bird Flock', '[of] ' + source);
+				this.add('-message', 'A flock covered the field!');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (!pokemon.hasType('Flying')) {
+					this.damage(pokemon.baseMaxhp / 64);
+				}
+			},
+
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Arboreum');
+				this.add('-message', 'The flock disappeared from the battlefield!');
+			},
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Flying",
@@ -91408,7 +91499,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			if (!targets.length && !anyAirborne) return false; // Fails when there are no grounded Grass types or airborne Pokemon
 			for (const pokemon of targets) {
-				this.boost({atk: 1, spe: 1}, pokemon, source);
+				if (this.field.getPseudoWeather('birdflock')) {
+					this.boost({atk: 2, spe: 1}, pokemon, source);
+				} else if (this.field.getPseudoWeather('steadywind')){
+					this.boost({atk: 1, spe: 2}, pokemon, source);
+				} else {
+					this.boost({atk: 1, spe: 1}, pokemon, source);
+				}
+				
 			}
 		},
 		secondary: null,

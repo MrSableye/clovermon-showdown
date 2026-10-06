@@ -15776,10 +15776,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 80,
-			type: "Berry",
+			type: "Zombie",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Berry' && target.getMoveHitData(move).typeMod > 0) {
+			if (move.type === 'Zombie' && target.getMoveHitData(move).typeMod > 0) {
 				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
