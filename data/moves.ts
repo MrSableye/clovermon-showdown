@@ -84577,6 +84577,36 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		sideCondition: 'healingchime',
+		condition: {
+			// this is a side condition
+			duration: 15,
+			durationCallback(source, effect) {
+				if (source?.hasItem('lightclay')) {
+					return 20;
+				}
+				return 15;
+			},
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Healing Chime');
+			},
+
+			onResidual(pokemon) {
+				 if (pokemon.side.getSideCondition('tailwind')) {
+
+				this.heal(pokemon.baseMaxhp / 8);
+			}
+				else this.heal(pokemon.baseMaxhp / 16);
+			},
+
+			
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 2,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Healing Chime');
+			},
+			
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Sound",
