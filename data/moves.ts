@@ -68930,7 +68930,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		basePowerCallback(pokemon, target, move) {
-			const bp = move.basePower + 20 * pokemon.positiveBoosts();
+			const bp = move.basePower + 20 * pokemon.negativeBoosts();
 			this.debug('BP: ' + bp);
 			return bp;
 		},
@@ -69345,6 +69345,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		secondary: null,
+		sideCondition: 'critup',
+		condition: {
+			duration: 4,
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Crit Up'); // "The Lucky Chant shielded [side.name]'s team from critical hits!"
+			},
+			onModifyCritRatio(critRatio) {
+			return critRatio + 1;
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 6,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Crit Up'); // "[side.name]'s team's Lucky Chant wore off!"
+			},
+		},
 		target: "allySide",
 		type: "Normal",
 		isNonstandard: "Future",
@@ -92617,7 +92632,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (!move || (move.category === 'Status' && move.id !== 'mefirst') || target.volatiles['mustrecharge']) {
 				return;
 			}
-			return this.chainModify(1.5);
+			return this.chainModify(2.0);
 		},
 		secondary: null,
 		target: "normal",
@@ -93777,6 +93792,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
+		onHit(target, pokemon, move) {
+			if (pokemon.item) return;
+			 const types = [
+            'Ground', 'Fire', 'Water', 'Wind',
+        ] as const;
+			const newType = this.sample(types);
+			const itemText = `${newType} Gem`;
+				const item = this.dex.items.get(itemText);
+				if (pokemon.setItem(item)) {
+					this.add('-item', pokemon, item, '[from] move: Elemental Gem');
+				}
+		},
 		secondary: null,
 		target: "self",
 		type: "Crystal",
