@@ -12071,7 +12071,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Magma') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12092,7 +12092,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Steam') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12113,7 +12113,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Wood') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12134,7 +12134,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Divine') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12155,7 +12155,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Chaos') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12176,7 +12176,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Paper') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12197,7 +12197,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Light') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12218,7 +12218,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Wind') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12239,7 +12239,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Magic') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12260,7 +12260,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Tech') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12281,7 +12281,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Rubber') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12302,7 +12302,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Fear') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12323,7 +12323,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Cosmic') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12344,7 +12344,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Sound') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12365,7 +12365,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Food') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12386,7 +12386,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Zombie') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12407,7 +12407,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Nuclear') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12428,7 +12428,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Virus') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12449,7 +12449,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Cyber') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12470,7 +12470,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Glass') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12491,7 +12491,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Plastic') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12512,7 +12512,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Fabric') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12533,7 +12533,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Time') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12554,7 +12554,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Paint') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12575,7 +12575,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Crystal') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12596,7 +12596,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Meme') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12617,7 +12617,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Blood') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12638,7 +12638,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Greasy') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12659,7 +12659,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Heart') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12682,7 +12682,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Paper') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66806,
@@ -12698,7 +12698,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Rubber') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66807,
@@ -12714,7 +12714,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Fear') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66808,
@@ -12730,7 +12730,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Cosmic') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66809,
@@ -12746,7 +12746,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Sound') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66810,
@@ -12762,7 +12762,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Food') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66811,
@@ -12778,7 +12778,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Zombie') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66812,
@@ -12794,7 +12794,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Nuclear') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66813,
@@ -12810,7 +12810,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Cyber') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66814,
@@ -12826,7 +12826,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Virus') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66815,
@@ -12842,7 +12842,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Glass') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66816,
@@ -12858,7 +12858,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Plastic') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66817,
@@ -12874,7 +12874,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Fabric') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66818,
@@ -12890,7 +12890,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Divine') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66819,
@@ -12906,7 +12906,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Time') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66820,
@@ -12941,7 +12941,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Ogre') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -20300,7 +20300,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Heart') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 67477,
