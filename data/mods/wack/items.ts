@@ -1414,9 +1414,9 @@ export const Items: {[k: string]: ModdedItemData} = {
 	safetygoggles: {
 		inherit: true,
 		onImmunity(type, pokemon) {
-			if (type === 'sandstorm' || type === 'hail' || type === 'acidrain' || type === 'bladerain' || type === 'powder') return false;
+			if (type === 'sandstorm' || type === 'hail' || type === 'acidrain' || type === 'bladerain' || type === 'birdflock'|| type === 'powder') return false;
 		},
-		desc: "Holder is immune to powder moves and damage from Sandstorm, Hail, Acid Rain and Blade Rain.",
+		desc: "Holder is immune to powder moves and damage from Sandstorm, Hail, Bird Flock, Acid Rain and Blade Rain.",
 		isNonstandard: null,
 	},
 	weaknesspolicy: {
@@ -2808,6 +2808,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	blackrock: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mechanicrock: {
 		inherit: true,
 		isNonstandard: null,
 	},

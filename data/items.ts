@@ -15776,10 +15776,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 80,
-			type: "Berry",
+			type: "Zombie",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Berry' && target.getMoveHitData(move).typeMod > 0) {
+			if (move.type === 'Zombie' && target.getMoveHitData(move).typeMod > 0) {
 				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
@@ -19050,10 +19050,18 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		onModifyPriority(priority, source, target, move) {
 			if (move.category === 'Status') {
-				source.useItem();
+				
 				return priority + 1;
+				
+			}
+			
+		},
+		onAfterMoveSecondarySelf(target, source, move) {
+			if (move.category === 'Status') {
+				source.useItem();
 			}
 		},
+		
 		num: 67360,
 		isNonstandard: "Future",
 		rating: 1,
@@ -20446,6 +20454,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Misty Rock",
 		spritenum: 0,
 		num: 67484,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	mechanicrock: {
+		name: "Misty Rock",
+		spritenum: 0,
+		num: 67485,
 		isNonstandard: "Future",
 		rating: 1,
 	},
