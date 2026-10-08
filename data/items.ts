@@ -20458,7 +20458,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		rating: 1,
 	},
 	mechanicrock: {
-		name: "Misty Rock",
+		name: "Mechanic Rock",
 		spritenum: 0,
 		num: 67485,
 		isNonstandard: "Future",
