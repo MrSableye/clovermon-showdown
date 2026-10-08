@@ -227,10 +227,20 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	muscleband: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.category === 'Physical') {
+				return this.chainModify([4915, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	wiseglasses: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.category === 'Special') {
+				return this.chainModify([4915, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	razorclaw: {
@@ -331,154 +341,344 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	seaincense: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Water') {
+				return this.chainModify([5120, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	waveincense: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Water') {
+				return this.chainModify([5120, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	roseincense: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Grass') {
+				return this.chainModify([5120, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	oddincense: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Psychic') {
+				return this.chainModify([5120, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	rockincense: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Rock') {
+				return this.chainModify([5120, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	charcoal: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Fire') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	mysticwater: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Water') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	magnet: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Electric') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	miracleseed: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Grass') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	nevermeltice: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Ice') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	blackbelt: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Fighting') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	poisonbarb: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Poison') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	softsand: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Ground') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	sharpbeak: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Flying') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	twistedspoon: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Psychic') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	silverpowder: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Bug') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	hardstone: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Rock') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	spelltag: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Ghost') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	dragonfang: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Dragon') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	blackglasses: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Dark') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	metalcoat: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Steel') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	silkscarf: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Normal') {
+				return this.chainModify([5324, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	flameplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Fire') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	splashplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Water') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	zapplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Electric') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	meadowplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Grass') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	icicleplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Ice') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	fistplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Fighting') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	toxicplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Poison') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	earthplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Ground') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	skyplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Flying') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	mindplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Psychic') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	insectplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Bug') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	stoneplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Rock') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	spookyplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Ghost') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	dracoplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Dragon') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	dreadplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Dark') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	ironplate: {
 		inherit: true,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Steel') {
+				return this.chainModify([5529, 4096]);
+			}
+		},
 		isNonstandard: null,
 	},
 	firegem: {
