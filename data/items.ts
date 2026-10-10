@@ -19272,6 +19272,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Steadywind Capsule",
 		spritenum: 0,
 		num: 67380,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('steadywind');
+			target.useItem();
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -19308,6 +19312,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Manaverse Capsule",
 		spritenum: 0,
 		num: 67384,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('manaverse');
+			target.useItem();
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
