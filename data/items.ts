@@ -18959,6 +18959,10 @@ export const Items: {[itemid: string]: ItemData} = {
 	graveyardcapsule: {/* TODO when introduced **/
 		name: "Graveyard Capsule",
 		spritenum: 0,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('graveyard');
+			target.useItem();
+		},
 		num: 67351,
 		isNonstandard: "Future",
 		rating: 1,
