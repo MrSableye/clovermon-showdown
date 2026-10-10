@@ -86108,7 +86108,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			target.statusState.startTime = 3;
 			this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
 		},
-		selfdestruct: "always",
+		selfdestruct: "ifHit",
 		flags: {snatch: 1, bite: 1},
 		secondary: null,
 		target: "self",

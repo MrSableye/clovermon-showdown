@@ -5584,8 +5584,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	arbrood: {
-		tier: "Illegal",
-		isNonstandard: "Future",
+		inherit: true,
+		isNonstandard: "Past",
 	},
 	maggie: {
 		tier: "Illegal",
@@ -7291,10 +7291,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	kingellow: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
+	
 	hasterror: {
 		tier: "Illegal",
 		isNonstandard: "Future",
