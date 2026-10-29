@@ -72475,8 +72475,8 @@ bewilderbeast: {
 		weightkg: 238.5,
 		color: "Red",
 		eggGroups: ["Monster", "Dragon"],
-		otherFormes: ["Khezear-Mega"],
-		formeOrder: ["Khezear", "Khezear-Mega"],
+		otherFormes: ["Zenith Khezear"],
+		formeOrder: ["Khezear", "Zenith Khezear"],
 	},
 	zenithkhezear: {
 		num: 667066,
