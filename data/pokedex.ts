@@ -58811,7 +58811,7 @@ bewilderbeast: {
 		weightkg: 54.5,
 		color: "Purple",
 		eggGroups: ["Monster"],
-		requiredItem: "Tenablerusnite",
+		requiredItem: "Tenablerusite",
 	},
 	bargear: {
 		num: 666063,
