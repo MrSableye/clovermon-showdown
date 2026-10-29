@@ -299,6 +299,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
+	nidoqueenmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	nidoranm: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -1276,6 +1280,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "RU",
 		doublesTier: "DUU",
 		natDexTier: "RU",
+	},
+	typhlosionmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	totodile: {
 		isNonstandard: "Past",
@@ -2325,6 +2333,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "PU",
 		doublesTier: "DUU",
 		natDexTier: "RU",
+	},
+	dusknoirmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	tropius: {
 		tier: "(PU)",
@@ -12739,7 +12751,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	snofistormega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	frostear: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	frostearmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -12756,6 +12776,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	rubbero: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	rubberomega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -12800,6 +12824,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	haicaw: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	haicawmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -12848,6 +12876,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	capsileau: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	capsileaumega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -12931,11 +12963,19 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	tropilightningmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	seatie: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
 	tenablerus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tenablerusmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -13056,6 +13096,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	horrorux: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	horroruxmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -13295,6 +13339,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	bauminemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	microette: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -13312,6 +13360,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	otyash: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	otyashmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -13347,6 +13399,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	mladeemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	grasses: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -13379,7 +13435,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	novaismega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	darkole: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	darkolemega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -13511,6 +13575,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	melonvilemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	earring: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -13620,6 +13688,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	eyeluminid: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	eyeluminidmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -14399,6 +14471,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	cultulzugmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	steamos: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -14811,6 +14887,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	ninetalesmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	ameowth: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -14907,6 +14987,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	wendigoremega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	transformed: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -14960,6 +15044,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	sloggeroth: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sloggerothmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -15052,6 +15140,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	paintip: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	paintipmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -17283,11 +17375,19 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	tuskact4: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	mystiarrow: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
 	bowser: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bowsermega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -17431,6 +17531,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	khezearmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	veloprey: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -17528,6 +17632,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	lagannech: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	lagannechmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -18023,6 +18131,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	vladpiremega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	chirontaur: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -18148,6 +18260,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	kiarayoin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kiarayoinmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -18452,6 +18568,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	venustoise: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	venustoisemegab: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	venustoisemegav: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -18955,6 +19079,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	yamchamega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kagerawoo: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -19231,6 +19359,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	donphanmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	mstantler: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -19411,6 +19543,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	pizzaurexmegax: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pizzaurexmegay: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	drewi: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -19576,6 +19716,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	steamercom: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	steamercommega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -21107,11 +21251,19 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	articunomega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	gzapdos: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
 	gmoltres: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	moltresmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -21204,6 +21356,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	ahypno: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	hypnomega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -22056,6 +22212,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	floweyrst: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	omegafloweyrst: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -23415,6 +23575,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	okinaseasonex: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	jooney: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -23799,6 +23963,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	magmortarmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	ibouffalant: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -24075,6 +24243,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	
 	hunidoranma: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -26119,6 +26288,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	empoleonmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	bshinx: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -26919,6 +27092,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	kecleonmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kerkecleon: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -27579,6 +27756,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	edashmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	krampusird: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -27780,6 +27961,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	cmtorterra: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	torterramega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
