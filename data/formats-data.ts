@@ -13815,6 +13815,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	jgolurkite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	golurkite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	gachambermega: {
 		tier: "Illegal",
 		isNonstandard: "Future",

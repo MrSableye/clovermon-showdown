@@ -2536,6 +2536,14 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	jgolurkite: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	golurkite: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	gummite: {
 		inherit: true,
 		isNonstandard: "Past",

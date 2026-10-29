@@ -3398,6 +3398,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		desc: "One of the mysterious Mega Stones. Have Gachamber hold it, and this stone will enable it to Mega Evolve in battle.",
 	},
 	
+	jgolurkite: {
+		name: "Jgolurkite",
+		desc: "One of the mysterious Mega Stones. Have Jgolurk hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
 	gummite: {
 		name: "Gummite",
 		desc: "One of the mysterious Mega Stones. Have Gummi hold it, and this stone will enable it to Mega Evolve in battle.",
