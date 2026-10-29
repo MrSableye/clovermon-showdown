@@ -15547,7 +15547,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
-	khezearmega: {
+	zenithkhezear: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
