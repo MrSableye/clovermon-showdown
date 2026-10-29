@@ -13819,6 +13819,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	stantlermega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	elding: {
 		tier: "Illegal",
 		isNonstandard: "Future",
