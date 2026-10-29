@@ -58113,7 +58113,7 @@ bewilderbeast: {
 		color: "White",
 		prevo: "Smoman",
 		eggGroups: ["Mineral", "Field"],
-		requiredItem: "Snofistinite",
+		requiredItem: "Snofistite",
 	},
 	frostear: {
 		num: 666014,

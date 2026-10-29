@@ -3285,8 +3285,8 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Hitmonite",
 		desc: "One of the mysterious Mega Stones. Have Hitmon -chan, -lee or -top hold it, and this stone will enable them to Mega Evolve in battle.",
 	},
-	snowfistnite: {
-		name: "Snowfistnite",
+	snofistite: {
+		name: "Snofistite",
 		desc: "One of the mysterious Mega Stones. Have Snofistor hold it, and this stone will enable it to Mega Evolve in battle.",
 	},
 	capsilite: {
@@ -3397,6 +3397,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Gachambite",
 		desc: "One of the mysterious Mega Stones. Have Gachamber hold it, and this stone will enable it to Mega Evolve in battle.",
 	},
+	
 	gummite: {
 		name: "Gummite",
 		desc: "One of the mysterious Mega Stones. Have Gummi hold it, and this stone will enable it to Mega Evolve in battle.",

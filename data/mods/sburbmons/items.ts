@@ -2424,7 +2424,7 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	snowfistnite: {
+	snofistite: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
