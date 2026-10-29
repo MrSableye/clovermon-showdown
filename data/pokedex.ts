@@ -63372,7 +63372,7 @@ bewilderbeast: {
 		weightkg: 53.0,
 		color: "Green",
 		eggGroups: ["Amorphous", "Water3"],
-		requiredItem: "Cultulzute",
+		requiredItem: "Cultulzite",
 	},
 
 	steamos: {
