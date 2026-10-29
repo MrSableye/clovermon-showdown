@@ -17387,7 +17387,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	bowsermega: {
+	gigabowser: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
