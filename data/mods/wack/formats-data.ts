@@ -16837,7 +16837,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
-	venustoisemega: {
+	venustoisemegav: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	venustoisemegab: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
