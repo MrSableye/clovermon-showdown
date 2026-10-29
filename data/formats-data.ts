@@ -17531,7 +17531,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	khezearmega: {
+	zenithkhezear: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
