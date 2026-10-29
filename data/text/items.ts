@@ -3953,11 +3953,11 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Moltresite",
 		desc: "One of the mysterious Mega Stones. Have Moltres hold it, and this stone will enable it to Mega Evolve in battle.",
 	},
-	Venustoisitev: {
+	venustoisitev: {
 		name: "Venustoisite",
 		desc: "One of the mysterious Mega Stones. Have Venustoise hold it, and this stone will enable it to Mega Evolve in battle.",
 	},
-	Venustoisiteb: {
+	venustoisiteb: {
 		name: "Venustoisite",
 		desc: "One of the mysterious Mega Stones. Have Venustoise hold it, and this stone will enable it to Mega Evolve in battle.",
 	},
