@@ -1709,6 +1709,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	
 	jgolurkite: {
 		inherit: true,
 		isNonstandard: null,
@@ -3946,10 +3947,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	pengemperorite: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	golurkite: {
 		inherit: true,
 		isNonstandard: null,
 	},

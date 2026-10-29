@@ -2536,6 +2536,10 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	steamercomite: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	moltresite: {
 		inherit: true,
 		isNonstandard: "Past",
