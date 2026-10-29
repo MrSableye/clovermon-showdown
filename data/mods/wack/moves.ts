@@ -1011,15 +1011,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onHit(target) {
 			if (this.field.getPseudoWeather('starfield')) {
 				this.boost({
-					def: 1,
-					spd: 1,
 					spe: 1,
 				});
 			} else {
-				this.boost({
-					def: 1,
-					spd: 1,
-				});
+				
 			}
 		},
 		isNonstandard: null,
@@ -3405,7 +3400,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (pokemon.species.name !== 'Chatot') delete move.secondaries;
 		},
 		secondary: {
-			chance: 10,
+			chance: 100,
 			volatileStatus: 'confusion',
 		},
 		flags: {protect: 1, sound: 1, distance: 1},
@@ -18954,6 +18949,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				accuracy: -1,
 			},
 		},
+		selfSwitch: false,
 		target: "normal",
 		type: "Sound",
 		isNonstandard: null,

@@ -41969,6 +41969,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 		isNonstandard: "Future",
 	},
+	fkiblast: {
+		num: 666965,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Fire Ki Blast",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		isNonstandard: "Future",
+	},
 	happyglow: {
 		num: 666966,
 		accuracy: 100,
@@ -56389,7 +56403,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {pulse: 1},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Psychic",
 		isNonstandard: "Future",
 	},
@@ -61673,7 +61687,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Chaos",
 		isNonstandard: "Future",
 	},
@@ -61731,7 +61745,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Divine",
 		isNonstandard: "Future",
 	},
@@ -63330,7 +63344,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Ice",
 		isNonstandard: "Future",
 	},
@@ -63444,7 +63458,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Fire",
 		isNonstandard: "Future",
 	},
@@ -64296,7 +64310,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Light",
 		isNonstandard: "Future",
 	},
@@ -64759,7 +64773,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasAbility(['persistent', 'moreroom'])) {
+				if (source?.hasAbility(['persistent', 'moreroom', 'builder'])) {
 					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
 				}
@@ -64801,7 +64815,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Fabric",
 		isNonstandard: "Future",
 	},
@@ -68930,7 +68944,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		basePowerCallback(pokemon, target, move) {
-			const bp = move.basePower + 20 * pokemon.negativeBoosts();
+			const bp = move.basePower + 20 * pokemon.negativeBoosts()*-1;
 			this.debug('BP: ' + bp);
 			return bp;
 		},
@@ -82098,7 +82112,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return null;
 		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Tech",
 		isNonstandard: "Future",
 	},
@@ -82458,7 +82472,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 
 		
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Magma",
 		isNonstandard: "Future",
 	},
@@ -82505,7 +82519,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Magma",
 		isNonstandard: "Future",
 	},
@@ -82908,7 +82922,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Fire",
 		isNonstandard: "Future",
 	},
@@ -88252,7 +88266,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (effect && effect.id === 'zpower') return;
 			let i: BoostID;
 			for (i in boost) {
-				boost[i]! *= -1;
+				boost[i]! *= 0;
 			}
 		},
 			
@@ -88397,7 +88411,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {pulse: 1},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Normal",
 		isNonstandard: "Future",
 	},
@@ -88448,7 +88462,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		flags: {pulse: 1},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Heart",
 		isNonstandard: "Future",
 	},
@@ -88491,7 +88505,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-fieldend', 'move: Factory');
 			},
 		},
-		target: "scripted",
+		target: "all",
 		type: "Tech",
 		isNonstandard: "Future",
 	},
@@ -88626,7 +88640,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Flying",
 		isNonstandard: "Future",
 	},
@@ -88672,7 +88686,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {pulse: 1},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Plastic",
 		isNonstandard: "Future",
 	},
@@ -88708,7 +88722,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Steam",
 		isNonstandard: "Future",
 	},
@@ -89176,8 +89190,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-
-		secondary: null,
+		secondary: {
+			chance: 40,
+			self: {
+					sideCondition: 'auroraveil',
+			},
+		},
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -96404,7 +96422,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "scripted",
+		target: "all",
 		type: "Greasy",
 		isNonstandard: "Future",
 	},

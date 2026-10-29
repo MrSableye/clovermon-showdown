@@ -9962,29 +9962,6 @@
       }
     ]
   },
-  "airunown": {
-    
-    "sets": [
-      {
-       
-        "items": [
-          
-          "angelpowder",
-          "heavydutyboots",
-          "assaultvest",
-          "riotshield",
-          "windgem"
-        ],
-        "moves": [
-          "windspin",
-          "typhoon",
-          "foehnwinds",
-          "westerlies"
-        ],
-        "level": 84
-      }
-    ]
-  },
   "nfarfetchd": {
     "nicknames": [
       "N'd"
@@ -10011,6 +9988,88 @@
       }
     ]
   },
+  "birdkeeper": {   
+    "nicknames": [   
+      "Peter",
+      "Lance"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "speedboost"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "liechiberry", 
+          "angelpowder"
+        ],
+        "moves": [     
+          "encore",
+          "firepunch",
+          "roost",
+          "icepunch",
+          "thunderpunch",  
+          "flock",  
+          "featherdance",  
+          "rollingkick"
+        ],
+        "lockedMoves": [   
+          "mirrormove",
+          "knockoff"
+        ],
+        "level": 84
+      } 
+    ]
+  }, 
+  "hufearow": {   
+    "nicknames": [   
+      "Gungnir",
+      "Zephyr"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "bigpecks"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "sausages", 
+          "sharpbeak"
+        ],
+        "moves": [     
+          "pursuit",
+          "ornithophobia",
+          "roost",
+          "rend",
+          "schizoboost",  
+          "drillrun",  
+          "megahorn",  
+          "quickattack",  
+          "tailwind"
+        ],
+        "lockedMoves": [   
+          "megapeck",
+          "furyattack"
+        ],
+        "level": 78
+      },   
+      {
+        "abilities": [
+          "sniper"
+        ],
+        "items": [
+          "scopelens"    
+        ],
+        "lockedMoves": [
+          "stormthrow",
+          "drilldive",
+          "drillrun",
+          "focusenergy"
+        ],
+        "level": 80   
+      }
+    ]
+  },   
   "jybaba": {
     "nicknames": [
       "Jybaba"
@@ -19729,7 +19788,149 @@
     ]
   },
   
-
+"zomboom": {
+    "nicknames": [
+      "Game Ruined"
+    ],
+    "sets": [
+      {
+        "abilities": [
+          "roughskin"
+        ],
+        "items": [
+          "invertedcapsule"
+        ],
+        "moves": [
+          "fallout",
+          "rottingburst",
+          "graveyard"
+        ],
+        "lockedMoves": [
+          "burialground"
+        ],
+        "level": 70
+      }
+    ]
+  },
+  "fishor": {   
+    "nicknames": [   
+      "Karplord",
+      "Kooky's Fav"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "waterveil"
+        ],
+        "items": [
+          "choiceband", 
+          "liechiberry",
+          "splashplate",
+          "sausages"
+        ],
+        "moves": [     
+          "pursuit",
+          "aquajet",
+          "aquaring",
+          "agility",
+          "skullbash",
+          "mudsport"
+        ],
+        "lockedMoves": [   
+          "torpedo",
+          "lunge"
+        ],
+        "level": 92
+      }
+    ]
+  },
+  "aparasect": {   
+    "nicknames": [   
+      "Shinyshroom",
+      "Lightbulb",
+      "Goldenbell"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "effectspore",
+          "dryskin",
+          "damp"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "angelpowder",
+          "pixieplate",
+          "bigroot"
+        ],
+        "moves": [     
+          "aromatherapy",
+          "gigaleech",
+          "counter",
+          "webball",
+          "beacon"
+        ],
+        "lockedMoves": [   
+          "spore",
+          "leechseed",
+          "essencedrain"
+        ],
+        "level": 92
+      }   
+    ]
+  },
+  "airunown": {   
+    "nicknames": [   
+      "Windy",
+      "Vortex",
+      "Aether"
+    ],
+    "sets": [
+      {
+        "abilities": [    
+          "filter"
+        ],
+        "items": [
+          "heavydutyboots", 
+          "vaccuberry", 
+          "angelpowder",
+          "tornadoplate"
+        ],
+        "moves": [     
+          "airraid",
+          "tempest",
+          "macroburst",
+          "foehnwinds",
+          "westerlies",  
+          "eyewall"
+        ],
+        "lockedMoves": [   
+          "clearingwind",
+          "airpressure",
+          "nightwind"
+        ],
+        "level": 84
+      },
+      {
+       
+        "items": [
+          
+          "angelpowder",
+          "heavydutyboots",
+          "assaultvest",
+          "riotshield",
+          "windgem"
+        ],
+        "moves": [
+          "windspin",
+          "typhoon",
+          "foehnwinds",
+          "westerlies"
+        ],
+        "level": 84
+      }
+    ]
+  },
 "hublastoise": {   
     "nicknames": [   
       "Misty"
