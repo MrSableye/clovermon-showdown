@@ -18042,7 +18042,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
-	pizzaurexmega: {
+	pizzaurexmegax: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	pizzaurexmegay: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
