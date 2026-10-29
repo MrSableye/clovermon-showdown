@@ -11674,6 +11674,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Bauminite",
 		spritenum: 0,
 		num: 66698,
+		megaStone: "Baumine-Mega",
+		megaEvolves: "Baumine",
+		itemUser: ["Baumine"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},

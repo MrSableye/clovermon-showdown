@@ -59917,7 +59917,7 @@ bewilderbeast: {
 		weightkg: 5.4,
 		color: "Red",
 		eggGroups: ["Amorphous"],
-		requiredItem: "Baumineite",
+		requiredItem: "Bauminite",
 	},
 	microette: {
 		num: 666149,
