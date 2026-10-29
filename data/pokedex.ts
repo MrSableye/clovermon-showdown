@@ -58512,7 +58512,7 @@ bewilderbeast: {
 		weightkg: 1222.7,
 		color: "Purple",
 		eggGroups: ["Amorphous"],
-		requiredItem: "Capsileau",
+		requiredItem: "Capsilite",
 	},
 	tuterpill: {
 		num: 666042,
