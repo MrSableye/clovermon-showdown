@@ -22747,6 +22747,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	jgolurkmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	golurkmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	wrufflet: {
 		tier: "Illegal",
 		isNonstandard: "Future",
