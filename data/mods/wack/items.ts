@@ -4125,6 +4125,26 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	moltresite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	articunite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	venustoisiteb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	venustoisitev: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	steamercomite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	/** Wack items that have their name taken by Clover */
 	glassgem: {
 		inherit: true,

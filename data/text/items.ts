@@ -3945,6 +3945,22 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Darkolite",
 		desc: "One of the mysterious Mega Stones. Have Darkole hold it, and this stone will enable it to Mega Evolve in battle.",
 	},
+	articunite: {
+		name: "Articunite",
+		desc: "One of the mysterious Mega Stones. Have Articuno hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	moltresite: {
+		name: "Moltresite",
+		desc: "One of the mysterious Mega Stones. Have Moltres hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	Venustoisitev: {
+		name: "Venustoisite",
+		desc: "One of the mysterious Mega Stones. Have Venustoise hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	Venustoisiteb: {
+		name: "Venustoisite",
+		desc: "One of the mysterious Mega Stones. Have Venustoise hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
 	vivillonite: {
 		name: "Vivillonite",
 		desc: "One of the mysterious Mega Stones. Have Vivillon hold it, and this stone will enable it to Mega Evolve in battle.",
