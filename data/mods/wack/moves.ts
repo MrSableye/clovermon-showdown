@@ -7555,6 +7555,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fkiblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	happyglow: {
 		inherit: true,
 		isNonstandard: null,
