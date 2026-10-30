@@ -19895,7 +19895,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	jgolurkite: {
 		name: "Jgolurkite",
 		spritenum: 0,
-		num: 67411,
+		num: -1,
 		megaStone: "Jgolurk-Mega",
 		megaEvolves: "Jgolurk",
 		itemUser: ["Jgolurk"],
@@ -20794,7 +20794,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	snofistite: {
 		name: "Snofistite",
-		spritenum: 0,
+		spritenum: 577,
 		num: -1,
 		megaStone: "Snofistor-Mega",
 		megaEvolves: "Snofistor",
