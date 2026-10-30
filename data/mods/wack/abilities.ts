@@ -159,12 +159,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	ironfist: {
 		inherit: true,
+		onBasePowerPriority: 23,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['punch']) {
 				this.debug('Iron Fist boost');
-				return this.chainModify([5325, 4096]);
+				return this.chainModify(1.3);
 			}
 		},
+		
 		desc: "This Pokemon's punch-based attacks have their power multiplied by 1.3.",
 	},
 	protean: {
