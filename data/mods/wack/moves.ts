@@ -18949,7 +18949,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				accuracy: -1,
 			},
 		},
-		selfSwitch: false,
 		target: "normal",
 		type: "Sound",
 		isNonstandard: null,
