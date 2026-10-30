@@ -41970,7 +41970,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	fkiblast: {
-		num: 666965,
+		num: -666965,
 		accuracy: 100,
 		basePower: 90,
 		category: "Special",
