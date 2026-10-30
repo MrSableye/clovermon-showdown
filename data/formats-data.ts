@@ -13815,14 +13815,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	jgolurkite: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	golurkite: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
+	
 	gachambermega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -17387,7 +17380,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	tuskact4: {
+	tuskact3tuskact4: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -17399,7 +17392,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	gigabowser: {
+	bowsergiga: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -17543,7 +17536,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	zenithkhezear: {
+	khezearzenith: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -22227,7 +22220,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	omegafloweyrst: {
+	floweyrstomega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
