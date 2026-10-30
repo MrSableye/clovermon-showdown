@@ -8222,7 +8222,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: -1,
 		gen: 6,
-		isNonstandard: "CAP",
+		isNonstandard: "Past",
 		rating: 1,
 	},
 	vilevial: {
