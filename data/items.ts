@@ -12045,7 +12045,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	mladite: {
 		name: "Mladite",
 		spritenum: 577,
-		num: 66741,
+		num: -1,
 		megaStone: "Mladee-Mega",
 		megaEvolves: "Mladee",
 		itemUser: ["Mladee"],
@@ -12973,7 +12973,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	hypnite: {
 		name: "Hypnite",
 		spritenum: 0,
-		num: 66824,
+		num: -1,
 		megaStone: "Hypno-Mega",
 		megaEvolves: "Hypno",
 		itemUser: ["Hypno"],
@@ -13050,7 +13050,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	empoleonite: {
 		name: "Empoleonite",
 		spritenum: 0,
-		num: 66865,
+		num: -1,
 		megaStone: "Empoleon-Mega",
 		megaEvolves: "Empoleon",
 		itemUser: ["Empoleon"],
@@ -13071,7 +13071,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	torterrite: {
 		name: "Torterrite",
 		spritenum: 0,
-		num: 66867,
+		num: -1,
 		megaStone: "Torterra-Mega",
 		megaEvolves: "Torterra",
 		itemUser: ["Torterra"],
@@ -13156,7 +13156,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	rubberite: {
 		name: "Rubberite",
 		spritenum: 0,
-		num: 66876,
+		num: -1,
 		megaStone: "Rubbero-Mega",
 		megaEvolves: "Rubbero",
 		itemUser: ["Rubbero"],
@@ -13247,7 +13247,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	typhlosionite: {
 		name: "Typhlosionite",
 		spritenum: 0,
-		num: 66899,
+		num: -1,
 		megaStone: "Typhlosion-Mega",
 		megaEvolves: "Typhlosion",
 		itemUser: ["Typhlosion"],
@@ -20795,7 +20795,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	snofistite: {
 		name: "Snofistite",
 		spritenum: 0,
-		num: 577,
+		num: -1,
 		megaStone: "Snofistor-Mega",
 		megaEvolves: "Snofistor",
 		itemUser: ["Snofistor"],
