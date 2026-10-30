@@ -63402,7 +63402,7 @@ bewilderbeast: {
 		formeOrder: ["Steamist", "Steamist-Mega"],
 	},
 	steamistmega: {
-		num: 3,
+		num: 666318,
 		name: "Steamist-Mega",
 		baseSpecies: "Steamist",
 		forme: "Mega",
