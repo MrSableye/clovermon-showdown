@@ -100685,12 +100685,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Zombie",
 	},
-	fkiblast: {
+	yamchablast: {
 		num: 420666965,
 		accuracy: 100,
 		basePower: 90,
 		category: "Special",
-		name: "Fire Ki Blast",
+		name: "Yamcha Blast",
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},

@@ -11925,8 +11925,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user gathers spiritual energy and launches it at the foe. Critical hits land more easily.",
 		shortDesc: "The user gathers spiritual energy and launches it at the foe. Critical hits land more easily.",
 	},
-	fkiblast: {
-		name: "Fire Ki Blast",
+	yamchablast: {
+		name: "Yamcha Blast",
 		desc: "The user gathers spiritual energy and launches it at the foe. Critical hits land more easily.",
 		shortDesc: "The user gathers spiritual energy and launches it at the foe. Critical hits land more easily.",
 	},

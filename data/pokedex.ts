@@ -77011,7 +77011,7 @@ bewilderbeast: {
 		weightkg: 172.0,
 		color: "Gray",
 		eggGroups: ["Humanlike"],
-		requiredMove: "Fire Ki Blast",
+		requiredMove: "Yamcha Blast",
 	},
 	kagerawoo: {
 		num: 667445,

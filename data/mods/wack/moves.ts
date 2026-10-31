@@ -7546,7 +7546,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	fkiblast: {
+	yamchablast: {
 		inherit: true,
 		isNonstandard: null,
 	},

@@ -253758,7 +253758,7 @@ vladpire: {
 			sokidan: ['9L1', '8L1'],
 			taunt: ['9M', '8M'],
 			thief: ['9M', '8M'],
-			fkiblast: ['9L1', '8L1'],
+			yamchablast: ['9L1', '8L1'],
 		},
 	},
 	kagerawoo: {
