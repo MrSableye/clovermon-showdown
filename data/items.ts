@@ -11600,20 +11600,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	snowfistnite: {
-		name: "Snowfistnite",
-		spritenum: 0,
-		num: 66685,
-		megaStone: "Snowfistor-Mega",
-		megaEvolves: "Snowfistor",
-		itemUser: ["Snowfistor"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
-		isNonstandard: "Future",
-		rating: 1,
-	},
+	
 	capsilite: {
 		name: "Capsilite",
 		spritenum: 0,
