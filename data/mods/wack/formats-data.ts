@@ -15372,7 +15372,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
-	bowsergiga: {
+	bowsermega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -15547,7 +15547,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
-	khezearzenith: {
+	khezearmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -23012,7 +23012,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
-	okinaseasonex: {
+	okinaseasonmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,

@@ -17392,7 +17392,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	bowsergiga: {
+	bowsermega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -17536,7 +17536,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	khezearzenith: {
+	khezearmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -23588,7 +23588,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	okinaseasonex: {
+	okinaseasonmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
