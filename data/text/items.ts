@@ -3945,6 +3945,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Golden Fiddle",
 		desc: "Reduces damage taken from Chaos and Divine type moves.",
 	},
+	edashite: {
+		name: "Novaisite",
+		desc: "One of the mysterious Mega Stones. Have Edash hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
 	novaisite: {
 		name: "Novaisite",
 		desc: "One of the mysterious Mega Stones. Have Novais hold it, and this stone will enable it to Mega Evolve in battle.",

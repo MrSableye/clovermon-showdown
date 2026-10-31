@@ -4080,6 +4080,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	edashite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	superpaper: {
 		inherit: true,
 		isNonstandard: null,

@@ -20431,13 +20431,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Necronomicon",
 		spritenum: 0,
 		num: 67469,
-		megaStone: "Edash-Mega",
-		megaEvolves: "Edash",
-		itemUser: ["Edash"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -20847,6 +20840,20 @@ export const Items: {[itemid: string]: ItemData} = {
 		megaStone: "Steamercom-Mega",
 		megaEvolves: "Steamercom",
 		itemUser: ["Steamercom"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	edashite: {
+		name: "Edashite",
+		spritenum: 577,
+		megaStone: "Edash-Mega",
+		megaEvolves: "Edash",
+		itemUser: ["Edash"],
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
