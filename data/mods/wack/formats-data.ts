@@ -15357,7 +15357,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
-	tuskact3tuskact4: {
+	tuskact3mega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,

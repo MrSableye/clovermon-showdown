@@ -72018,10 +72018,10 @@ bewilderbeast: {
 		color: "Blue",
 		prevo: "Tusk",
 		eggGroups: ["Amorphous"],
-		otherFormes: ["Tusk Act 4"],
-		formeOrder: ["Tusk Act 3", "Tusk Act 4-Tusk Act 4"],
+		otherFormes: ["Tusk Act 3-Mega"],
+		formeOrder: ["Tusk Act 3", "Tusk Act 3-Mega"],
 	},
-	tuskact3tuskact4: {
+	tuskact3mega: {
 		num: 667030,
 		name: "Tusk Act 4-Tusk Act 4",
 		baseSpecies: "Tusk Act 3",

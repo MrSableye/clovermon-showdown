@@ -17380,7 +17380,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	tuskact3tuskact4: {
+	tuskact3mega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
