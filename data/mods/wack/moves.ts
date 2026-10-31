@@ -1008,15 +1008,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	cosmicpower: {	// TODO: Add +1 speed boost during Starfield
 		inherit: true,
 		type: "Cosmic",
-		onHit(target) {
-			if (this.field.getPseudoWeather('starfield')) {
-				this.boost({
-					spe: 1,
-				});
-			} else {
-				
-			}
-		},
 		isNonstandard: null,
 	},
 	craftyshield: {
