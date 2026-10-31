@@ -41969,20 +41969,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 		isNonstandard: "Future",
 	},
-	fkiblast: {
-		num: 666965,
-		accuracy: 100,
-		basePower: 90,
-		category: "Special",
-		name: "Fire Ki Blast",
-		pp: 20,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		target: "normal",
-		type: "Fire",
-		isNonstandard: "Future",
-	},
+	
+	
 	happyglow: {
 		num: 666966,
 		accuracy: 100,
@@ -100696,6 +100684,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Zombie",
+	},
+	fkiblast: {
+		num: 420666965,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Fire Ki Blast",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		isNonstandard: "Future",
 	},
 	earthshatter: {
 		num: 42010,
