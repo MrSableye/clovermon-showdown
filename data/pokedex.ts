@@ -59908,7 +59908,7 @@ bewilderbeast: {
 	bauminemega: {
 		num: 666148,
 		name: "Baumine-Mega",
-		baseSpecies: "Venusaur",
+		baseSpecies: "Baumine",
 		forme: "Mega",
 		types: ["Fire", "Virus"],
 		baseStats: {hp: 78, atk: 79, def: 110, spa: 128, spd: 135, spe: 117},
