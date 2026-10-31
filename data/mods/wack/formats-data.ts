@@ -4750,11 +4750,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
-	crucibellemega: {
-		inherit: true,
-		tier: "UU",
-		isNonstandard: null,
-	},
+	
 	pluffle: {
 		inherit: true,
 		tier: "LC",

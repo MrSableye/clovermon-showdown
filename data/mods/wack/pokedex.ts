@@ -3098,11 +3098,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		types: ["Rock", "Fairy"],
 		abilities: {0: "Regenerator", H: "Mold Breaker"},
 	},
-	crucibellemega: {
-		inherit: true,
-		types: ["Rock", "Fairy"],
-		baseStats: {hp: 106, atk: 135, def: 75, spa: 85, spd: 125, spe: 114},
-	},
+	
 	monohm: {
 		inherit: true,
 		types: ["Electric", "Dragon"],
