@@ -11772,6 +11772,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	steamistmega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	blackdoor: {
 		inherit: true,
 		tier: "UU",
