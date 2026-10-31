@@ -8614,7 +8614,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Reaper Cloth",
 		eggGroups: ["Amorphous"],
 	},
-	dusknoiremega: {
+	dusknoirmega: {
 		num: 477,
 		name: "Dusknoir-Mega",
 		baseSpecies: "Dusknoir",
@@ -102725,7 +102725,7 @@ bewilderbeast: {
 		weightkg: 77,
 		color: "Brown",
 		eggGroups: ["Humanlike"],
-		requiredItem: "Necronomicon",
+		requiredItem: "Edashite",
 	},
 	krampusird: {
 		num: 669582,
