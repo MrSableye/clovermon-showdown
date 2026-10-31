@@ -72478,7 +72478,7 @@ bewilderbeast: {
 	},
 	khezearzenith: {
 		num: 667066,
-		name: "Khezear-Zeneth",
+		name: "Khezear-Zenith",
 		baseSpecies: "Khezear",
 		forme: "Mega",
 		types: ["Electric", "Fear"],
