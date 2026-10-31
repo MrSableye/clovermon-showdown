@@ -14,6 +14,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	venusaurmega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	charmander: {
 		inherit: true,
 		tier: "LC",
@@ -40,6 +45,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	blastoise: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	blastoisemega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -154,6 +164,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	nidoqueenmega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	nidoranm: {
 		inherit: true,
 		tier: "LC",
@@ -187,6 +202,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	ninetales: {
 		inherit: true,
 		tier: "NFE",
+		isNonstandard: null,
+	},
+	ninetalesmega: {
+		inherit: true,
+		tier: "UU",
 		isNonstandard: null,
 	},
 	jigglypuff: {
@@ -484,6 +504,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NFE",
 		isNonstandard: null,
 	},
+	hypnomega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	krabby: {
 		inherit: true,
 		tier: "LC",
@@ -719,12 +744,22 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	articunomega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	zapdos: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
 	},
 	moltres: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	moltresmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -780,6 +815,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	typhlosion: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	typhlosionmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -1159,6 +1199,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NFE",
 		isNonstandard: null,
 	},
+	donphanmega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	porygon2: {
 		inherit: true,
 		tier: "NFE",
@@ -1167,6 +1212,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	stantler: {
 		inherit: true,
 		tier: "LC",
+		isNonstandard: null,
+	},
+	stantlermega: {
+		inherit: true,
+		tier: "UU",
 		isNonstandard: null,
 	},
 	smeargle: {
@@ -1531,7 +1581,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	aggronmega: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	meditite: {
@@ -1764,6 +1814,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
+	kecleonmega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	shuppet: {
 		inherit: true,
 		tier: "LC",
@@ -1949,6 +2004,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	torterramega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	chimchar: {
 		inherit: true,
 		tier: "LC",
@@ -1975,6 +2035,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	empoleon: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	empoleonmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -2339,6 +2404,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	magmortarmega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	togekiss: {
 		inherit: true,
 		tier: "UU",
@@ -2385,6 +2455,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	dusknoir: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	dusknoirmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -3120,6 +3195,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	golurk: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	golurkmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -4670,6 +4750,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	
 	pluffle: {
 		inherit: true,
 		tier: "LC",
@@ -5006,10 +5087,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	caimanoe: {
-		inherit: true,
-		isNonstandard: "Future",
-	},
-	crucibellemega: {
 		inherit: true,
 		isNonstandard: "Future",
 	},
@@ -9525,7 +9602,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	snofistormega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	frostear: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	frostearmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -9546,6 +9633,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	rubbero: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	rubberomega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -9601,6 +9693,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	haicaw: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	haicawmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -9661,6 +9758,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	capsileau: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	capsileaumega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -9765,12 +9867,22 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	tropilightningmega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	seatie: {
 		inherit: true,
 		tier: "LC",
 		isNonstandard: null,
 	},
 	tenablerus: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	tenablerusmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -9921,6 +10033,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	horrorux: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	horroruxmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -10220,6 +10337,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	bauminemega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	microette: {
 		inherit: true,
 		tier: "LC",
@@ -10241,6 +10363,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	otyash: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	otyashmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -10285,6 +10412,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	mladeemega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	grasses: {
 		inherit: true,
 		tier: "LC",
@@ -10325,7 +10457,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NFE",
 		isNonstandard: null,
 	},
+	novaismega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	darkole: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	darkolemega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -10490,6 +10632,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	melonvilemega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	earring: {
 		inherit: true,
 		tier: "LC",
@@ -10626,6 +10773,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	eyeluminid: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	eyeluminidmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -11601,12 +11753,22 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	cultulzumega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	steamos: {
 		inherit: true,
 		tier: "LC",
 		isNonstandard: null,
 	},
 	steamist: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	steamistmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -12231,6 +12393,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	wendigoremega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	transformed: {
 		inherit: true,
 		tier: "UU",
@@ -12297,6 +12464,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	sloggeroth: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	sloggerothmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -12412,6 +12584,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	paintip: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	paintipmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -15181,6 +15358,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	tuskact3mega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	mystiarrow: {
 		inherit: true,
 		tier: "LC",
@@ -15189,6 +15371,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	bowser: {
 		inherit: true,
 		tier: "LC",
+		isNonstandard: null,
+	},
+	bowsermega: {
+		inherit: true,
+		tier: "UU",
 		isNonstandard: null,
 	},
 	risatsuki: {
@@ -15361,6 +15548,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	khezearmega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	veloprey: {
 		inherit: true,
 		tier: "LC",
@@ -15484,6 +15676,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	lagannech: {
 		inherit: true,
 		tier: "LC",
+		isNonstandard: null,
+	},
+	lagannechmega: {
+		inherit: true,
+		tier: "UU",
 		isNonstandard: null,
 	},
 	gurrenlagannech: {
@@ -16101,6 +16298,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	vladpiremega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	chirontaur: {
 		inherit: true,
 		tier: "OU",
@@ -16257,6 +16459,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	kiarayoin: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	kiarayoinmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -16627,6 +16834,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	venustoise: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	venustoisemegav: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	venustoisemegab: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -17251,6 +17468,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 	},
+	yamchamega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	kagerawoo: {
 		inherit: true,
 		tier: "UU",
@@ -17818,7 +18040,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	pizzaurex: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
+		isNonstandard: null,
+	},
+	pizzaurexmegax: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	pizzaurexmegay: {
+		inherit: true,
+		tier: "UU",
 		isNonstandard: null,
 	},
 	drewi: {
@@ -18027,6 +18259,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	steamercom: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	steamercommega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -21086,6 +21323,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NFE",
 		isNonstandard: null,
 	},
+	floweyrstmega: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
 	dwelder: {
 		inherit: true,
 		tier: "LC",
@@ -21727,6 +21969,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	jgolurk: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	jgolurkmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -22762,6 +23009,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	okinaseason: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	okinaseasonmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,
@@ -27942,6 +28194,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	edash: {
+		inherit: true,
+		tier: "UU",
+		isNonstandard: null,
+	},
+	edashmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,

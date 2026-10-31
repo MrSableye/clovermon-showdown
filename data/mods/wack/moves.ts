@@ -1008,20 +1008,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	cosmicpower: {	// TODO: Add +1 speed boost during Starfield
 		inherit: true,
 		type: "Cosmic",
-		onHit(target) {
-			if (this.field.getPseudoWeather('starfield')) {
-				this.boost({
-					def: 1,
-					spd: 1,
-					spe: 1,
-				});
-			} else {
-				this.boost({
-					def: 1,
-					spd: 1,
-				});
-			}
-		},
 		isNonstandard: null,
 	},
 	craftyshield: {
@@ -3405,7 +3391,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (pokemon.species.name !== 'Chatot') delete move.secondaries;
 		},
 		secondary: {
-			chance: 10,
+			chance: 100,
 			volatileStatus: 'confusion',
 		},
 		flags: {protect: 1, sound: 1, distance: 1},
@@ -7557,6 +7543,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	kiblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	yamchablast: {
 		inherit: true,
 		isNonstandard: null,
 	},

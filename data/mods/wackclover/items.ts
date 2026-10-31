@@ -119,7 +119,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	crucibellite: {
 		inherit: true,
-		isNonstandard: "Future",
+		isNonstandard: "Past",
 	},
 	dawnstone: {
 		inherit: true,

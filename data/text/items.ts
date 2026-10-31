@@ -3285,8 +3285,8 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Hitmonite",
 		desc: "One of the mysterious Mega Stones. Have Hitmon -chan, -lee or -top hold it, and this stone will enable them to Mega Evolve in battle.",
 	},
-	snowfistnite: {
-		name: "Snowfistnite",
+	snofistite: {
+		name: "Snofistite",
 		desc: "One of the mysterious Mega Stones. Have Snofistor hold it, and this stone will enable it to Mega Evolve in battle.",
 	},
 	capsilite: {
@@ -3396,6 +3396,14 @@ export const ItemsText: {[k: string]: ItemText} = {
 	gachambite: {
 		name: "Gachambite",
 		desc: "One of the mysterious Mega Stones. Have Gachamber hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	steamercomite: {
+		name: "Steamercomite",
+		desc: "One of the mysterious Mega Stones. Have Stearmercom hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	jgolurkite: {
+		name: "Jgolurkite",
+		desc: "One of the mysterious Mega Stones. Have Jgolurk hold it, and this stone will enable it to Mega Evolve in battle.",
 	},
 	gummite: {
 		name: "Gummite",
@@ -3937,6 +3945,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Golden Fiddle",
 		desc: "Reduces damage taken from Chaos and Divine type moves.",
 	},
+	edashite: {
+		name: "Edashite",
+		desc: "One of the mysterious Mega Stones. Have Edash hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
 	novaisite: {
 		name: "Novaisite",
 		desc: "One of the mysterious Mega Stones. Have Novais hold it, and this stone will enable it to Mega Evolve in battle.",
@@ -3944,6 +3956,22 @@ export const ItemsText: {[k: string]: ItemText} = {
 	darkolite: {
 		name: "Darkolite",
 		desc: "One of the mysterious Mega Stones. Have Darkole hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	articunite: {
+		name: "Articunite",
+		desc: "One of the mysterious Mega Stones. Have Articuno hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	moltresite: {
+		name: "Moltresite",
+		desc: "One of the mysterious Mega Stones. Have Moltres hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	venustoisitev: {
+		name: "Venustoisite V",
+		desc: "One of the mysterious Mega Stones. Have Venustoise hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	venustoisiteb: {
+		name: "Venustoisite B",
+		desc: "One of the mysterious Mega Stones. Have Venustoise hold it, and this stone will enable it to Mega Evolve in battle.",
 	},
 	vivillonite: {
 		name: "Vivillonite",

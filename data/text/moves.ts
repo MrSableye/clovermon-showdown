@@ -11925,6 +11925,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user gathers spiritual energy and launches it at the foe. Critical hits land more easily.",
 		shortDesc: "The user gathers spiritual energy and launches it at the foe. Critical hits land more easily.",
 	},
+	yamchablast: {
+		name: "Yamcha Blast",
+		desc: "The user gathers spiritual energy and launches it at the foe. Critical hits land more easily.",
+		shortDesc: "The user gathers spiritual energy and launches it at the foe. Critical hits land more easily.",
+	},
 	happyglow: {
 		name: "Happy Glow",
 		desc: "A glow of light that grows more powerful the more the user likes its Trainer.",

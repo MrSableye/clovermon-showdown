@@ -846,10 +846,24 @@ export const Items: {[k: string]: ModdedItemData} = {
 	electirizer: {
 		inherit: true,
 		isNonstandard: null,
+		onBasePower() {},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.num === 466 || pokemon.baseSpecies.num === 125 || pokemon.baseSpecies.num === 239){
+				return this.chainModify(1.5);
+			}
+		},
 	},
 	magmarizer: {
 		inherit: true,
 		isNonstandard: null,
+		onBasePower() {},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.num === 467 || pokemon.baseSpecies.num === 126 || pokemon.baseSpecies.num === 245){
+				return this.chainModify(1.5);
+			}
+		},
 	},
 	reapercloth: {
 		inherit: true,
@@ -1419,6 +1433,8 @@ export const Items: {[k: string]: ModdedItemData} = {
 		desc: "Holder is immune to powder moves and damage from Sandstorm, Hail, Bird Flock, Acid Rain and Blade Rain.",
 		isNonstandard: null,
 	},
+
+	
 	weaknesspolicy: {
 		inherit: true,
 		isNonstandard: null,
@@ -1692,6 +1708,15 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	gachambite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	
+	jgolurkite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	golurkite: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2136,6 +2161,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	frostearite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	snofistite: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3923,10 +3952,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	golurkite: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	nidoqueenite: {
 		inherit: true,
 		isNonstandard: null,
@@ -4055,6 +4080,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	edashite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	superpaper: {
 		inherit: true,
 		isNonstandard: null,
@@ -4104,6 +4133,30 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	freshcream: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	crucibellite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	moltresite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	articunite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	venustoisiteb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	venustoisitev: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	steamercomite: {
 		inherit: true,
 		isNonstandard: null,
 	},

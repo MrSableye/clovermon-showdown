@@ -976,7 +976,7 @@ export const Formats: FormatList = [
 			'Shrink Wrap', 'MeditativeSensitivity','TristarAmoreMio', 'Tail Bite', 'Honor Bind', 'Restrict Beam', 'Shell Smash', 'Boison Berry', 'Celebrate', 
 			'Buzzy Buzz', 'Sizzly Slide', 'Boots of Blinding Speed', 'Sheriff Badge', 'Cosmic Law', 'Undying Spear', 'Eviocicle', 'Eviolate', 'Rule Breaker', 
 			'Abruption + Magma Armor', 'Cold Snap', 'Abyss Nova', 'Acid Trap', 'Pester', 'Secret Ingredient + Vanilluxe', 'Gorgon Eye', 'Shatter Body', 'Pursuit Tackle',
-			'Heaven Power', 'Perdition', 'Geomancy', 'Optimization', 'Preach'
+			'Heaven Power', 'Perdition', 'Geomancy', 'Optimization', 'Preach', 
 		],
 	},
 	
