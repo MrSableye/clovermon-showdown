@@ -16244,10 +16244,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	okinaseasonmega: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
 	jooney: {
 		tier: "Illegal",
 		isNonstandard: "Future",
