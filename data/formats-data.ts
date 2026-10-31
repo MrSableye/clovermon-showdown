@@ -14488,6 +14488,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	steamistmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blackdoor: {
 		tier: "Illegal",
 		isNonstandard: "Future",
