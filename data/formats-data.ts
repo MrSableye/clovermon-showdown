@@ -14476,7 +14476,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	cultulzugmega: {
+	cultulzumega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
