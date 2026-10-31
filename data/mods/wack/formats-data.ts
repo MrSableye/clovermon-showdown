@@ -21322,7 +21322,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NFE",
 		isNonstandard: null,
 	},
-	floweyrstomega: {
+	floweyrstmega: {
 		inherit: true,
 		tier: "UU",
 		isNonstandard: null,

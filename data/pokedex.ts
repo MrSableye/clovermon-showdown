@@ -86312,12 +86312,12 @@ bewilderbeast: {
 		prevo: "Floweyr",
 		evos: ["Asrieldrem"],
 		eggGroups: ["Monster"],
-		otherFormes: ["Floweyrst-Omega"],
-		formeOrder: ["Floweyrst", "Floweyrst-Omega"],
+		otherFormes: ["Floweyrst-Mega"],
+		formeOrder: ["Floweyrst", "Floweyrst-Mega"],
 	},
-	floweyrstomega: {
+	floweyrstmega: {
 		num: 668209,
-		name: "Floweyrst-Omega",
+		name: "Floweyrst-Mega",
 		baseSpecies: "Floweyrst",
 		forme: "Mega",
 		types: ["Fear", "Grass"],

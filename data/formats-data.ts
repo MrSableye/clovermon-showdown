@@ -22220,7 +22220,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	floweyrstomega: {
+	floweyrstmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
