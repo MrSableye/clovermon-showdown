@@ -64914,9 +64914,9 @@ bewilderbeast: {
 	wendigoremega: {
 		num: 666441,
 		name: "Wendigore-Mega",
-		baseSpecies: "Beedrill",
+		baseSpecies: "Wendigore",
 		forme: "Mega",
-		types: ["Bug", "Poison"],
+		types: ["Ice", "Zombie"],
 		baseStats: {hp: 84, atk: 135, def: 95, spa: 105, spd: 110, spe: 117},
 		abilities: {0: "Moxie"},
 		heightm: 1.7,
@@ -72023,7 +72023,7 @@ bewilderbeast: {
 	},
 	tuskact3mega: {
 		num: 667030,
-		name: "Tusk Act 4-Tusk Act 4",
+		name: "Tusk Act 3-Mega",
 		baseSpecies: "Tusk Act 3",
 		forme: "Mega",
 		types: ["Fighting", "Cosmic"],
