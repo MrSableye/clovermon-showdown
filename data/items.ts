@@ -14661,6 +14661,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Steamistite",
 		spritenum: 0,
 		num: 67054,
+		megaStone: "Steamist-Mega",
+		megaEvolves: "Steamist",
+		itemUser: ["Steamist"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
