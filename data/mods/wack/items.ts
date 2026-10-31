@@ -1433,6 +1433,8 @@ export const Items: {[k: string]: ModdedItemData} = {
 		desc: "Holder is immune to powder moves and damage from Sandstorm, Hail, Bird Flock, Acid Rain and Blade Rain.",
 		isNonstandard: null,
 	},
+
+	
 	weaknesspolicy: {
 		inherit: true,
 		isNonstandard: null,
