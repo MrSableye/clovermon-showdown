@@ -952,8 +952,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (!target.setType(type)) return false;
 			this.add('-start', target, 'typechange', type);
 		},
-		isNonstandard: null,
 
+		
 		onAfterHit(target) {
 			if (this.field.getPseudoWeather('cyberspace')) {
 				this.boost({
@@ -963,9 +963,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 					spd: 1,
 					spe: 1,
 				});
+			} else {
+				
 			}
 		},
+		isNonstandard: null,
+
+		
 	},
+
+	
 	conversion2: {
 		inherit: true,
 		pp: 5,
@@ -1267,6 +1274,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	featherdance: { // TODO: Steady Wind interaction
 		inherit: true,
+		onHit(target) {
+			if (this.field.getPseudoWeather('steadywind')) {
+				this.boost({
+					atk: -2,
+					spe: -1,
+				});
+			} else {
+				this.boost({
+					atk: -2,
+				});
+			}
+		},
 		isNonstandard: null,
 	},
 	feint: {
@@ -1416,6 +1435,36 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 95,
 		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1, above: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			if (this.field.getPseudoWeather('steadywind')) {
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability(target, source, move) {
+				if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
+					return;
+				}
+				return false;
+			},
+			onSourceModifyDamage(damage, source, target, move) {
+				if (move.id === 'gust' || move.id === 'twister') {
+					return this.chainModify(2);
+				}
+			},
+		},
 		isNonstandard: null,
 	},
 	flyingpress: {
@@ -3342,7 +3391,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (pokemon.species.name !== 'Chatot') delete move.secondaries;
 		},
 		secondary: {
-			chance: 10,
+			chance: 100,
 			volatileStatus: 'confusion',
 		},
 		flags: {protect: 1, sound: 1, distance: 1},
@@ -3387,6 +3436,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 			this.field.clearTerrain();
 			return success;
+		},
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				if (this.field.getPseudoWeather('steadywind')) {
+					this.boost({
+					spe: -1,
+				});
+				} else {
+					
+				}
+			},
 		},
 		isNonstandard: null,
 	},
@@ -3860,6 +3921,36 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	tailwind: {
 		inherit: true,
+		condition: {
+			duration: 4,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-activate', source, 'ability: Persistent', '[move] Tailwind');
+					return 6;
+				}
+				if (this.field.getPseudoWeather('steadywind')) {
+					this.add('-message', 'The Steady Wind increased its duration a bit!');
+					return 5;
+					
+				}
+				return 4;
+			},
+			onSideStart(side, source) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-sidestart', side, 'move: Tailwind', '[persistent]');
+				} else {
+					this.add('-sidestart', side, 'move: Tailwind');
+				}
+			},
+			onModifySpe(spe, pokemon) {
+				return this.chainModify(2);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 5,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Tailwind');
+			},
+		},
 		pp: 30,
 		isNonstandard: null,
 	},
@@ -5172,6 +5263,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	roost: {
 		inherit: true,
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				if (this.field.getPseudoWeather('steadywind')) {
+					this.boost({spe: 1}, source, source);
+				} else {
+					
+				}
+			},
+			},
 		isNonstandard: null,
 	},
 	rototiller: {
@@ -7442,6 +7543,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	kiblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	yamchablast: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -19090,6 +19195,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 40,
 		priority: 6,
 		flags: {protect: 1, mirror: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('bleed');
+				target.addVolatile('curse');
+				target.addVolatile('block');
+				target.addVolatile('healblock');
+				target.trySetStatus('psn');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Chaos",

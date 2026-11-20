@@ -11450,6 +11450,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Haicawite",
 		spritenum: 0,
 		num: 66665,
+		megaStone: "Haicaw-Mega",
+		megaEvolves: "Haicaw",
+		itemUser: ["Haicaw"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -11593,17 +11600,18 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	snowfistnite: {
-		name: "Snowfistnite",
-		spritenum: 0,
-		num: 66685,
-		isNonstandard: "Future",
-		rating: 1,
-	},
+	
 	capsilite: {
 		name: "Capsilite",
 		spritenum: 0,
 		num: 66686,
+		megaStone: "Capsileau-Mega",
+		megaEvolves: "Capsileau",
+		itemUser: ["Capsileau"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -11632,6 +11640,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Otyashite",
 		spritenum: 0,
 		num: 66696,
+		megaStone: "Otyash-Mega",
+		megaEvolves: "Otyash",
+		itemUser: ["Otyash"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -11646,6 +11661,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Bauminite",
 		spritenum: 0,
 		num: 66698,
+		megaStone: "Baumine-Mega",
+		megaEvolves: "Baumine",
+		itemUser: ["Baumine"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -12009,8 +12031,15 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	mladite: {
 		name: "Mladite",
-		spritenum: 0,
-		num: 66741,
+		spritenum: 577,
+		num: -1,
+		megaStone: "Mladee-Mega",
+		megaEvolves: "Mladee",
+		itemUser: ["Mladee"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -12042,6 +12071,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	
 	panthannonite: {
 		name: "Panthannonite",
 		spritenum: 0,
@@ -12071,7 +12101,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Magma') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12092,7 +12122,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Steam') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12113,7 +12143,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Wood') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12134,7 +12164,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Divine') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12155,7 +12185,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Chaos') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12176,7 +12206,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Paper') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12197,7 +12227,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Light') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12218,7 +12248,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Wind') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12239,7 +12269,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Magic') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12260,7 +12290,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Tech') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12281,7 +12311,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Rubber') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12302,7 +12332,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Fear') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12323,7 +12353,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Cosmic') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12344,7 +12374,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Sound') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12365,7 +12395,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Food') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12386,7 +12416,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Zombie') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12407,7 +12437,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Nuclear') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12428,7 +12458,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Virus') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12449,7 +12479,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Cyber') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12470,7 +12500,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Glass') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12491,7 +12521,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Plastic') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12512,7 +12542,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Fabric') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12533,7 +12563,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Time') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12554,7 +12584,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Paint') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12575,7 +12605,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Crystal') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12596,7 +12626,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Meme') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12617,7 +12647,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Blood') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12638,7 +12668,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Greasy') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12659,7 +12689,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Heart') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -12682,7 +12712,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Paper') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66806,
@@ -12698,7 +12728,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Rubber') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66807,
@@ -12714,7 +12744,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Fear') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66808,
@@ -12730,7 +12760,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Cosmic') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66809,
@@ -12746,7 +12776,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Sound') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66810,
@@ -12762,7 +12792,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Food') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66811,
@@ -12778,7 +12808,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Zombie') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66812,
@@ -12794,7 +12824,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Nuclear') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66813,
@@ -12810,7 +12840,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Cyber') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66814,
@@ -12826,7 +12856,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Virus') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66815,
@@ -12842,7 +12872,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Glass') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66816,
@@ -12858,7 +12888,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Plastic') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66817,
@@ -12874,7 +12904,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Fabric') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66818,
@@ -12890,7 +12920,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Divine') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66819,
@@ -12906,7 +12936,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Time') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 66820,
@@ -12930,7 +12960,14 @@ export const Items: {[itemid: string]: ItemData} = {
 	hypnite: {
 		name: "Hypnite",
 		spritenum: 0,
-		num: 66824,
+		num: -1,
+		megaStone: "Hypno-Mega",
+		megaEvolves: "Hypno",
+		itemUser: ["Hypno"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -12941,7 +12978,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move.type === 'Ogre') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5529, 4096]);
 			}
 		},
 		onTakeItem(item, pokemon, source) {
@@ -13000,7 +13037,14 @@ export const Items: {[itemid: string]: ItemData} = {
 	empoleonite: {
 		name: "Empoleonite",
 		spritenum: 0,
-		num: 66865,
+		num: -1,
+		megaStone: "Empoleon-Mega",
+		megaEvolves: "Empoleon",
+		itemUser: ["Empoleon"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -13014,7 +13058,14 @@ export const Items: {[itemid: string]: ItemData} = {
 	torterrite: {
 		name: "Torterrite",
 		spritenum: 0,
-		num: 66867,
+		num: -1,
+		megaStone: "Torterra-Mega",
+		megaEvolves: "Torterra",
+		itemUser: ["Torterra"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -13092,7 +13143,14 @@ export const Items: {[itemid: string]: ItemData} = {
 	rubberite: {
 		name: "Rubberite",
 		spritenum: 0,
-		num: 66876,
+		num: -1,
+		megaStone: "Rubbero-Mega",
+		megaEvolves: "Rubbero",
+		itemUser: ["Rubbero"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -13176,7 +13234,14 @@ export const Items: {[itemid: string]: ItemData} = {
 	typhlosionite: {
 		name: "Typhlosionite",
 		spritenum: 0,
-		num: 66899,
+		num: -1,
+		megaStone: "Typhlosion-Mega",
+		megaEvolves: "Typhlosion",
+		itemUser: ["Typhlosion"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -13226,6 +13291,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Wendigite",
 		spritenum: 0,
 		num: 66906,
+		megaStone: "Wendigore-Mega",
+		megaEvolves: "Wendigore",
+		itemUser: ["Wendigore"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -13311,6 +13383,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Sloggerothite",
 		spritenum: 0,
 		num: 66917,
+		megaStone: "Sloggeroth-Mega",
+		megaEvolves: "Sloggeroth",
+		itemUser: ["Sloggeroth"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -13374,6 +13453,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Frostearite",
 		spritenum: 0,
 		num: 66933,
+		megaStone: "Frostear-Mega",
+		megaEvolves: "Frostear",
+		itemUser: ["Frostear"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -13381,6 +13467,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Stantlerite",
 		spritenum: 0,
 		num: 66934,
+		megaStone: "Stantler-Mega",
+		megaEvolves: "Stantler",
+		itemUser: ["Stantler"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -13388,6 +13481,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Melonvilite",
 		spritenum: 0,
 		num: 66935,
+		megaStone: "Melonvile-Mega",
+		megaEvolves: "Melonvile",
+		itemUser: ["Melonvile"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -13833,6 +13933,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Novaisite",
 		spritenum: 0,
 		num: 66965,
+		megaStone: "Novais-Mega",
+		megaEvolves: "Novais",
+		itemUser: ["Novais"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -13840,6 +13947,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Darkolite",
 		spritenum: 0,
 		num: 66966,
+		megaStone: "Darkole-Mega",
+		megaEvolves: "Darkole",
+		itemUser: ["Darkole"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14006,6 +14120,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Donphanite",
 		spritenum: 0,
 		num: 66990,
+		megaStone: "Donphan-Mega",
+		megaEvolves: "Donphan",
+		itemUser: ["Donphan"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14055,6 +14176,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Cultulzite",
 		spritenum: 0,
 		num: 66997,
+		megaStone: "Cultulzu-Mega",
+		megaEvolves: "Cultulzu",
+		itemUser: ["Cultulzu"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14083,6 +14211,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Kecleonite",
 		spritenum: 0,
 		num: 67003,
+		megaStone: "Kecleon-Mega",
+		megaEvolves: "Kecleon",
+		itemUser: ["Kecleon"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14111,6 +14246,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Tropilightnite",
 		spritenum: 0,
 		num: 67007,
+		megaStone: "Tropilightning-Mega",
+		megaEvolves: "Tropilightning",
+		itemUser: ["Tropilightning"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14240,6 +14382,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Paintipite",
 		spritenum: 0,
 		num: 67016,
+		megaStone: "Paintip-Mega",
+		megaEvolves: "Paintip",
+		itemUser: ["Paintip"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14254,6 +14403,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Horroruxite",
 		spritenum: 0,
 		num: 67021,
+		megaStone: "Horrorux-Mega",
+		megaEvolves: "Horrorux",
+		itemUser: ["Horrorux"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14261,6 +14417,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Pyramidite",
 		spritenum: 0,
 		num: 67022,
+		megaStone: "Eyeluminid-Mega",
+		megaEvolves: "Eyeluminid",
+		itemUser: ["Eyeluminid"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14408,6 +14571,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Ninetalesite",
 		spritenum: 0,
 		num: 67044,
+		megaStone: "Ninetales-Mega",
+		megaEvolves: "Ninetales",
+		itemUser: ["Ninetales"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14478,6 +14648,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Steamistite",
 		spritenum: 0,
 		num: 67054,
+		megaStone: "Steamist-Mega",
+		megaEvolves: "Steamist",
+		itemUser: ["Steamist"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14547,6 +14724,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Pizzaurexite X",
 		spritenum: 0,
 		num: 67062,
+		megaStone: "Pizzaurex-Mega-X",
+		megaEvolves: "Pizzaurex",
+		itemUser: ["Pizzaurex"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14554,6 +14738,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Tenablerusite",
 		spritenum: 0,
 		num: 67063,
+		megaStone: "Tenablerus-Mega",
+		megaEvolves: "Tenablerus",
+		itemUser: ["Tenablerus"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -14631,6 +14822,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Pizzaurexite Y",
 		spritenum: 0,
 		num: 67078,
+		megaStone: "Pizzaurex-Mega-Y",
+		megaEvolves: "Pizzaurex",
+		itemUser: ["Pizzaurex"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -15776,10 +15974,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		isBerry: true,
 		naturalGift: {
 			basePower: 80,
-			type: "Berry",
+			type: "Zombie",
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (move.type === 'Berry' && target.getMoveHitData(move).typeMod > 0) {
+			if (move.type === 'Zombie' && target.getMoveHitData(move).typeMod > 0) {
 				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
 				if (hitSub) return;
 
@@ -18959,6 +19157,10 @@ export const Items: {[itemid: string]: ItemData} = {
 	graveyardcapsule: {/* TODO when introduced **/
 		name: "Graveyard Capsule",
 		spritenum: 0,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('graveyard');
+			target.useItem();
+		},
 		num: 67351,
 		isNonstandard: "Future",
 		rating: 1,
@@ -19050,10 +19252,18 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		onModifyPriority(priority, source, target, move) {
 			if (move.category === 'Status') {
-				source.useItem();
+				
 				return priority + 1;
+				
+			}
+			
+		},
+		onAfterMoveSecondarySelf(target, source, move) {
+			if (move.category === 'Status') {
+				source.useItem();
 			}
 		},
+		
 		num: 67360,
 		isNonstandard: "Future",
 		rating: 1,
@@ -19158,6 +19368,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Dusknoirite",
 		spritenum: 0,
 		num: 67369,
+		megaStone: "Dusknoir-Mega",
+		megaEvolves: "Dusknoir",
+		itemUser: ["Dusknoir"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -19260,6 +19477,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Steadywind Capsule",
 		spritenum: 0,
 		num: 67380,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('steadywind');
+			target.useItem();
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -19296,6 +19517,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Manaverse Capsule",
 		spritenum: 0,
 		num: 67384,
+		onDamagingHit(damage, target, source, move) {
+			this.field.addPseudoWeather('manaverse');
+			target.useItem();
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -19651,6 +19876,27 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Golurkite",
 		spritenum: 0,
 		num: 67411,
+		megaStone: "Golurk-Mega",
+		megaEvolves: "Golurk",
+		itemUser: ["Golurk"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	jgolurkite: {
+		name: "Jgolurkite",
+		spritenum: 0,
+		num: -1,
+		megaStone: "Jgolurk-Mega",
+		megaEvolves: "Jgolurk",
+		itemUser: ["Jgolurk"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -19658,6 +19904,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Nidoqueenite",
 		spritenum: 0,
 		num: 67412,
+		megaStone: "Nidoqueen-Mega",
+		megaEvolves: "Nidoqueen",
+		itemUser: ["Nidoqueen"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
 		isNonstandard: "Future",
 		rating: 1,
 	},
@@ -20300,7 +20553,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && move.type === 'Heart') {
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		num: 67477,
@@ -20449,6 +20702,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	mechanicrock: {
+		name: "Mechanic Rock",
+		spritenum: 0,
+		num: 67485,
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	hasturite: {
 		name: "Hasturite",
 		spritenum: 577,
@@ -20483,6 +20743,104 @@ export const Items: {[itemid: string]: ItemData} = {
 		megaStone: "Swanaper-Mega",
 		megaEvolves: "Swanaper",
 		itemUser: ["Swanaper"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	moltresite: {
+		name: "Moltresite",
+		spritenum: 577,
+		megaStone: "Moltres-Mega",
+		megaEvolves: "Moltres",
+		itemUser: ["Moltres"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	articunite: {
+		name: "Articunite",
+		spritenum: 577,
+		megaStone: "Articuno-Mega",
+		megaEvolves: "Articuno",
+		itemUser: ["Articuno"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	snofistite: {
+		name: "Snofistite",
+		spritenum: 577,
+		num: -1,
+		megaStone: "Snofistor-Mega",
+		megaEvolves: "Snofistor",
+		itemUser: ["Snofistor"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	venustoisiteb: {
+		name: "Venustoisite B",
+		spritenum: 577,
+		megaStone: "Venustoise-Mega-B",
+		megaEvolves: "Venustoise",
+		itemUser: ["Venustoise"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	venustoisitev: {
+		name: "Venustoisite V",
+		spritenum: 577,
+		megaStone: "Venustoise-Mega-B",
+		megaEvolves: "Venustoise",
+		itemUser: ["Venustoise"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	steamercomite: {
+		name: "Steamercomite",
+		spritenum: 577,
+		megaStone: "Steamercom-Mega",
+		megaEvolves: "Steamercom",
+		itemUser: ["Steamercom"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	edashite: {
+		name: "Edashite",
+		spritenum: 577,
+		megaStone: "Edash-Mega",
+		megaEvolves: "Edash",
+		itemUser: ["Edash"],
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;

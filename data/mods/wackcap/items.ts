@@ -1214,7 +1214,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	safetygoggles: {
 		inherit: true,
 		onImmunity(type, pokemon) {
-			if (type === 'sandstorm' || type === 'hail' || type === 'acidrain' || type === 'bladerain' || type === 'powder') return false;
+			if (type === 'sandstorm' || type === 'hail' || type === 'acidrain' || type === 'bladerain' || type === 'birdflock'|| type === 'powder') return false;
 		},
 		desc: "Holder is immune to powder moves and damage from Sandstorm, Hail, Acid Rain and Blade Rain.",
 		isNonstandard: null,
@@ -1383,7 +1383,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	snowfistnite: {
+	snofistite: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1492,6 +1492,34 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	gachambite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	steamercomite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	moltresite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	articunite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	venustoisiteb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	venustoisitev: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	jgolurkite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	golurkite: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3707,10 +3735,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	golurkite: {
-		inherit: true,
-		isNonstandard: null,
-	},
+	
 	nidoqueenite: {
 		inherit: true,
 		isNonstandard: null,

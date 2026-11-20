@@ -115,6 +115,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	nidoqueen: {
 		inherit: true,
 		baseStats: {hp: 100, atk: 92, def: 90, spa: 75, spd: 88, spe: 76},
+		
 	},
 	nidorino: {
 		inherit: true,
@@ -141,6 +142,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	ninetales: {
 		inherit: true,
 		abilities: {0: "Flash Fire", 1: "Drought", H: "Forewarn"},
+		
 	},
 	jigglypuff: {
 		inherit: true,
@@ -296,6 +298,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	hypno: {
 		inherit: true,
 		baseStats: {hp: 85, atk: 75, def: 70, spa: 75, spd: 115, spe: 67},
+		
 	},
 	krabby: {
 		inherit: true,
@@ -453,7 +456,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	articuno: {
 		inherit: true,
-		abilities: {0: "Snow Warning"},
+		abilities: {0: "Snow Warning", H: "Snow Cloak"},
+		
 	},
 	zapdos: {
 		inherit: true,
@@ -462,6 +466,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	moltres: {
 		inherit: true,
 		abilities: {0: "Bellows", H: "Drought"},
+		
 	},
 	chikorita: {
 		inherit: true,
@@ -486,6 +491,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	typhlosion: {
 		inherit: true,
 		abilities: {0: "Flash Fire", 1: "Blaze", H: "Magma Armor"},
+		
 	},
 	totodile: {
 		inherit: true,
@@ -767,6 +773,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Ground", "Bone"],
 		baseStats: {hp: 90, atk: 125, def: 125, spa: 75, spd: 70, spe: 50},
+		
 	},
 	porygon2: {
 		inherit: true,
@@ -776,6 +783,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Normal", "Fear"],
 		baseStats: {hp: 100, atk: 95, def: 85, spa: 85, spd: 86, spe: 95},
+		
 		abilities: {0: "Intimidate", 1: "Graze"},
 	},
 	smeargle: {
@@ -1192,6 +1200,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		baseStats: {hp: 65, atk: 90, def: 95, spa: 90, spd: 120, spe: 85},
 		abilities: {0: "Color Change", 1: "Protean"},
+		
 	},
 	banette: {
 		inherit: true,
@@ -1339,6 +1348,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	torterra: {
 		inherit: true,
 		abilities: {0: "Battle Armor", 1: "Sap Sipper", H: "Overgrow"},
+		
 	},
 	chimchar: {
 		inherit: true,
@@ -1363,6 +1373,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	empoleon: {
 		inherit: true,
 		abilities: {0: "Torrent", 1: "Defiant"},
+		
 	},
 	starly: {
 		inherit: true,
@@ -1572,6 +1583,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Fire", "Dark"],
 		abilities: {0: "Flame Body", 1: "Mega Launcher", H: "Magma Armor"},
+		otherFormes: ["Magmortar-Mega"],
+		formeOrder: ["Magmortar", "Magmortar-Mega"],
 	},
 	togekiss: {
 		inherit: true,
@@ -1598,6 +1611,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		baseStats: {hp: 70, atk: 100, def: 135, spa: 65, spd: 135, spe: 45},
 		abilities: {0: "Cursed Body", 1: "Shadow Call", H: "Iron Fist"},
+		
 	},
 	froslass: {
 		inherit: true,
@@ -2023,6 +2037,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	golurk: {
 		inherit: true,
 		baseStats: {hp: 105, atk: 130, def: 100, spa: 55, spd: 90, spe: 55},
+		
 		abilities: {0: "Iron Fist", 1: "No Guard", H: "Klutz"},
 	},
 	braviary: {
@@ -3022,6 +3037,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		abilities: {0: "Clear Body", 1: "Infiltrator", H: "Rough Skin"},
 	},
+	glastrier: {
+		inherit: true,
+		baseStats: {hp: 100, atk: 145, def: 60, spa: 65, spd: 80, spe: 130},
+		abilities: {0: "Moxie", H: "Ice Body"},
+	},
+	spectrier: {
+		inherit: true,
+		abilities: {0: "Pride", H: "Cursed Body"},
+	},
 	zacian: {
 		inherit: true,
 		types: ["Fairy", "Steel"],
@@ -3074,6 +3098,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		types: ["Rock", "Fairy"],
 		abilities: {0: "Regenerator", H: "Mold Breaker"},
 	},
+	
 	monohm: {
 		inherit: true,
 		types: ["Electric", "Dragon"],

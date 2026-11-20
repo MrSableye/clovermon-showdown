@@ -157,6 +157,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
 		},
 	},
+	ironfist: {
+		inherit: true,
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['punch']) {
+				this.debug('Iron Fist boost');
+				return this.chainModify(1.3);
+			}
+		},
+		
+		desc: "This Pokemon's punch-based attacks have their power multiplied by 1.3.",
+	},
 	protean: {
 		inherit: true,
 		onPrepareHit(source, target, move) {
@@ -335,7 +347,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		onSourceBasePower(basePower, attacker, defender, move) {
 			if (move.type === 'Fire' || move.type === 'Magma') {
-				return this.chainModify(0.5);
+				return this.chainModify(0.1);
 			}
 		},
 		desc: "The power of Fire and Magma-type attacks against this Pokemon is halved. This Pokemon takes half of the usual burn damage, rounded down.",
@@ -676,6 +688,16 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			this.field.setWeather('hail');
 		},
 		shortDesc: "On switch-in, this Pokemon summons Hail.",
+	},
+
+	filter: {
+		inherit: true,
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Filter neutralize');
+				return this.chainModify(0.5);
+			}
+		},
 	},
 	// Gen5 vanilla abilities
 	anticipation: {

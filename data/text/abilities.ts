@@ -2650,7 +2650,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	fragile: {
 		name: "Fragile",
-		shortDesc: "This Pokemon HP is set to 1 whenever it is hit. Prevents the User from Healing",
+		shortDesc: "This Pokemon's HP is set to 1 whenever it is hit. Prevents the user from healing.",
+		},
+	powdergift: {
+		name: "Powder Gift",
+		shortDesc: "This Pokemon uses Powder when switching in and out. Presently nonfunctional.",
 		},
 	blueblood: {
 		name: "Blue Blood",

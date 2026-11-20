@@ -2424,7 +2424,7 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	snowfistnite: {
+	snofistite: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -2533,6 +2533,34 @@ export const Items: { [k: string]: ModdedItemData } = {
 		isNonstandard: "Past",
 	},
 	gachambite: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	steamercomite: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	moltresite: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	articunite: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	venustoisitev: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	venustoisiteb: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	jgolurkite: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	golurkite: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -4752,10 +4780,7 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	golurkite: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
+	
 	nidoqueenite: {
 		inherit: true,
 		isNonstandard: "Past",

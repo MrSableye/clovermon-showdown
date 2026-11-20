@@ -7774,8 +7774,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const targets = this.sides.flatMap((side) => side.allies(true));
 			for (const target of targets) {
 				if (!target || !target.hp || pokemon === target) continue;
-				if (!target.hasType(['Fire'])) {
-					this.damage(target.baseMaxhp / 12, target, pokemon);
+				if (!target.hasType(['Fire']))
+				if (!target.hasType(['Water'])) {
+					this.damage(target.baseMaxhp / 16, target, pokemon);
 				}
 			}
 		},
@@ -7934,6 +7935,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 	rating: 3,
 	num: 10004,
+	isNonstandard: "Future",
+    },
+	powdergift: {
+		name: "Powder Gift",
+		onSwitchOut(pokemon) {
+			this.add('-ability', pokemon, 'Powder Gift');
+			this.add('-message', `This ability is currently offline and will not function.`);
+			this.add('-message', `Please contact 'Evil Money The Fiend' for customer support for this ability.`);
+		},
+	rating: 3,
 	isNonstandard: "Future",
     },
 	steelyresolve: {
@@ -14752,7 +14763,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const type2 = this.dex.moves.get(pokemon.moveSlots[1].id).type;
 			const types = [type1, type2];			
 			if (pokemon.hasType(types)) return false;
+			if (type1 === type2) {
+				this.add('-start', pokemon, 'typechange', type1, '[from] ability: Malleable');
+				pokemon.setType([type1]);
+			}
+			else {
 			this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Malleable');
+			pokemon.setType([type1,type2]);
+			}
 			
 		},
 		rating: 3.5,
@@ -15741,7 +15759,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	headache: {
 		onModifySpAPriority: -1,
 		onModifySpA(spa, source, target, move) {
-			if (target?.volatiles['confusion']) {
+			if (source?.volatiles['confusion']) {
 				this.debug('Headache - increasing spatk');
 				return this.chainModify(2);
 			}
