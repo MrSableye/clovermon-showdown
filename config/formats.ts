@@ -1135,6 +1135,13 @@ export const Formats: FormatList = [
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
+		name: '[Gen 8 Wack Only] Random Doubles Battle',
+		mod: 'wack',
+		team: 'random',
+		gameType: 'doubles',
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
 		name: '[Gen 8 Wack Only] Pick Your Team Random Battle',
 		mod: 'wack',
 		team: 'random',
