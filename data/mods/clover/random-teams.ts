@@ -265,6 +265,7 @@ export class RandomTeams {
 	}
 
 	randomSets: RandomBattleSets = require('./random-sets.json');
+	useSetLevelInDoubles = false;
 
 	randomSet(species: string | Species, teamDetails: RandomTeamsTypes.TeamDetails = {}, isLead = false, isDoubles = false, isCloveronly = false): RandomTeamsTypes.RandomSet {
 		species = this.dex.species.get(species);
@@ -1512,7 +1513,8 @@ export class RandomTeams {
 		}
 
 		const singlesLevel = randomBattleSet.level || species.randomBattleLevel;
-		let level: number = (!isDoubles ? singlesLevel : species.randomDoubleBattleLevel) || 80;
+		const doublesLevel = (this.useSetLevelInDoubles && randomBattleSet.level) || species.randomDoubleBattleLevel;
+		let level: number = (!isDoubles ? singlesLevel : doublesLevel) || 80;
 
 		// Weaken mons with strong abilities
 		if (['shadowtag', 'arenatrap', 'moody', 'wonderguard'].includes(toID(ability))) {

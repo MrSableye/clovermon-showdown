@@ -5,9 +5,14 @@ import RandomCloverTeams, {RandomBattleSets} from '../clover/random-teams';
 export class RandomCapTeams extends RandomCloverTeams {
 	constructor(format: Format | string, prng: PRNG | PRNGSeed | null) {
 		super(format, prng);
+		// Doubles uses its own set file; only species with doubles sets are eligible
+		if (this.format.gameType === 'doubles') {
+			this.randomSets = require('./random-doubles-sets.json');
+		}
 	}
 
 	randomSets: RandomBattleSets = require('./random-sets.json');
+	useSetLevelInDoubles = true;
 
 	randomTeam() {
 		const seed = this.prng.seed;
